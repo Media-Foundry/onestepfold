@@ -45,9 +45,11 @@ modify the raw layer.
 
 ## Current boundary
 
-The raw layer is complete, but no `catalog_v1`, `processed_v1`, split, or ESMC
-cache has been generated. The hardened deterministic Stage A scanner has passed
-three-entry and 1,000-entry pilots; the next command is a 10,000-entry Gemmi
-catalog audit. Quality thresholds and assembly view selection are still
-selected from full-catalog distributions. PDBFixer-derived branches remain out
-of the primary GT.
+The raw layer and complete Stage A `catalog_v1` are now accepted. The full
+catalog contains 244,406 unique entries with zero non-empty scanner errors and
+zero unresolved SIFTS rows. The catalog-only monomer view contains 84,232
+`monomer_clean` candidates; the detailed full-catalog and candidate
+distributions are recorded in
+`reports/catalog_v1_full_acceptance.md`. No processed coordinate GT or final
+train/validation/test split has been generated yet. PDBFixer-derived branches
+remain out of the primary GT.

@@ -362,3 +362,24 @@ Exact sequence SHA256 is only a lossless candidate index, and same-digest
 buckets are still pairwise-verified. CPU job-array parallelism is acceptable
 for this offline construction step. No split is generated until the catalog
 and Stage B GT are accepted.
+
+## 2026-09-15: Accept full Stage A catalog and exact-SI candidate manifest
+
+Status: the complete 256-shard Stage A scan contains 244,406 entries and
+244,406 unique PDB IDs, with zero non-empty error files, zero partial outputs,
+zero unresolved SIFTS rows, and zero missing assembly-composition records. The
+catalog aggregate shard-manifest hash is
+`8e62a4bdf1ee1ba4967e7b35fb2f3fd7f2de067055dbde9d81f10a113d581cf0`.
+
+The frozen catalog-only monomer policy selects 84,232 `monomer_clean` entries;
+64,674 have initial release on or before 2021-09-30 and 19,558 are later.
+18,427 are also eligible for the zero-small-molecule `monomer_apo_like`
+subset. Full-catalog resolution and sequence-length medians are 2.15 A and
+225 aa; candidate-view medians are 1.90 A and 283 aa. These are descriptive
+statistics only; Stage B completeness and geometry thresholds remain pending.
+
+Strict 100% identity processing has completed on the candidate table. The
+Biopython 1.87 global calculator verified 42,640 same-sequence member pairs,
+forming 41,592 exact sequence groups from 84,232 records. The manifest is an
+exact-sequence grouping artifact, not a near-homology split; all exact groups
+must remain atomic in a later split.

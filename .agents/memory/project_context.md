@@ -97,13 +97,21 @@ subset. Do not start training or make an accuracy claim until the catalog,
 monomer filter, checkpoint, Protenix version, assembly policy, kernel, and
 latency accounting are captured.
 
-Stage A scanner hardening has passed 3-entry, 1,000-entry, and 10,000-entry
-HPC audits with zero parser errors and zero unresolved SIFTS rows. The 10,000
-entry distribution includes substantial solution-NMR/multi-model and hidden
-non-protein-context strata; these remain catalog metadata pending the explicit
-quality/monomer filter decision. The full 244,406-entry job array is the next
-data operation, while coordinate materialization, SI grouping, and ESMC cache
-generation remain gated on catalog acceptance.
+Stage A scanner hardening passed 3-entry, 1,000-entry, and 10,000-entry HPC
+audits with zero parser errors and zero unresolved SIFTS rows. The complete
+244,406-entry catalog is now accepted: all 256 deterministic shards finalized,
+PDB IDs are unique, error files are empty, dates and assembly composition are
+present, and no partial outputs remain. The catalog-only monomer selector
+produced 84,232 `monomer_clean` candidates and 18,427 `monomer_apo_like`
+eligible records. Numeric resolution and coordinate-completeness thresholds
+remain deferred to Stage B materialization.
+
+The exact 100% SI manifest has also been generated for the monomer candidates
+using Biopython global `PairwiseAligner` verification within lossless SHA256
+sequence buckets: 84,232 records form 41,592 exact sequence groups with
+42,640 verified duplicate memberships. No train/validation/test partition has
+been generated yet; Stage B coordinate QA remains the next gate, followed by
+an atomic split over these exact groups.
 
 The monomer training view is now structurally frozen: choose a biological
 assembly with exactly one generated protein chain instance, zero generated
