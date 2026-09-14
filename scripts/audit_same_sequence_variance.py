@@ -130,7 +130,9 @@ def audit(index_root: Path, si_manifest: Path, output: Path) -> dict[str, Any]:
             }
         )
     result = {
-        "pilot_record_count_with_replicate_group": sum(len(value) for value in structures.values()),
+        "pilot_record_count_with_replicate_group": sum(
+            len(value) for value in structures.values() if len(value) >= 2
+        ),
         "exact_groups_with_multiple_pilot_records": len(group_results),
         "compared_pair_count": pair_count,
         "disagreement_pair_count": disagreement_count,
