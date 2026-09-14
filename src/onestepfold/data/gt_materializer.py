@@ -52,6 +52,28 @@ ATOM37_NAMES = (
 ATOM37_INDEX = {name: index for index, name in enumerate(ATOM37_NAMES)}
 BACKBONE_NAMES = frozenset({"N", "CA", "C", "O"})
 STANDARD_AA = frozenset("ACDEFGHIKLMNPQRSTVWY")
+AA_TO_COMP = {
+    "A": "ALA",
+    "R": "ARG",
+    "N": "ASN",
+    "D": "ASP",
+    "C": "CYS",
+    "Q": "GLN",
+    "E": "GLU",
+    "G": "GLY",
+    "H": "HIS",
+    "I": "ILE",
+    "L": "LEU",
+    "K": "LYS",
+    "M": "MET",
+    "F": "PHE",
+    "P": "PRO",
+    "S": "SER",
+    "T": "THR",
+    "W": "TRP",
+    "Y": "TYR",
+    "V": "VAL",
+}
 CANONICAL_ATOMS: dict[str, frozenset[str]] = {
     "A": frozenset("N CA C CB O".split()),
     "R": frozenset("N CA C CB O CG CD NE CZ NH1 NH2".split()),
@@ -293,7 +315,7 @@ def materialize_entry(
         if altloc:
             selected_altlocs.add(altloc)
         comp_ids = sorted({atom["comp_id"] for atom in selected_rows if atom["comp_id"]})
-        comp_id = comp_ids[0] if comp_ids else ("UNK" if not sequence[index] else sequence[index])
+        comp_id = comp_ids[0] if comp_ids else AA_TO_COMP.get(sequence[index], "UNK")
         modified = comp_id not in {
             "ALA",
             "ARG",
