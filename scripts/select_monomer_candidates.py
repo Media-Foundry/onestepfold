@@ -47,6 +47,9 @@ def select(catalog_dir: Path, policy_path: Path, output: Path, summary_output: P
                         "sequence_length": decision["sequence_length"],
                         "experimental_methods": decision["experimental_methods"],
                         "model_count": decision["model_count"],
+                        "resolution_high_angstrom": record["experimental"].get(
+                            "resolution_high_angstrom"
+                        ),
                         "initial_release_date": record["experimental"].get(
                             "initial_release_date"
                         ),
