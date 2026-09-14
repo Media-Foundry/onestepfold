@@ -385,6 +385,7 @@ def materialize_entry(
     qa.update(_geometry_qa(positions, mask, np.ones(length, dtype=np.bool_)))
     chain_record = row.get("chain_record", {})
     hidden = row.get("asu_observations", {})
+    experimental = row.get("experimental", {})
     metadata = {
         "schema_version": "gt_schema_v1",
         "sample_id": f"{row['pdb_id']}.assembly-{row.get('assembly_id') or 'asu'}.model-1",
@@ -418,15 +419,19 @@ def materialize_entry(
         ],
         "chain_pair_interfaces": [],
         "experimental": {
-            "methods": row.get("experimental_methods", []),
-            "resolution_high_angstrom": row.get("resolution_high_angstrom"),
+            "methods": experimental.get("methods", row.get("experimental_methods", [])),
+            "resolution_high_angstrom": experimental.get(
+                "resolution_high_angstrom", row.get("resolution_high_angstrom")
+            ),
             "model_id": 1,
-            "model_count": int(row.get("model_count", 1)),
-            "initial_deposition_date": None,
-            "initial_release_date": row.get("initial_release_date"),
-            "latest_revision_date": None,
-            "r_work": None,
-            "r_free": None,
+            "model_count": int(experimental.get("model_count", row.get("model_count", 1))),
+            "initial_deposition_date": experimental.get("initial_deposition_date"),
+            "initial_release_date": experimental.get(
+                "initial_release_date", row.get("initial_release_date")
+            ),
+            "latest_revision_date": experimental.get("latest_revision_date"),
+            "r_work": experimental.get("r_work"),
+            "r_free": experimental.get("r_free"),
         },
         "hidden_context": {
             "nonprotein_atom_count": int(hidden.get("nonprotein_atom_count", 0)),
@@ -465,7 +470,7 @@ def materialize_entry(
         "residue_index": np.arange(1, length + 1, dtype=np.int32),
         "atom37_positions": positions,
         "atom37_mask": mask,
-        "residue_mask": np.ones(length, dtype=np.bool_),
+        "residue_mask": observed,
         "chain_index": np.zeros(length, dtype=np.int16),
     }
     return arrays, metadata

@@ -6,10 +6,13 @@ from __future__ import annotations
 import argparse
 import collections
 import gzip
+import io
 import json
 import tarfile
 from pathlib import Path
 from typing import Any
+
+import numpy as np
 
 
 def _quantiles(values: list[float]) -> dict[str, float | None]:
@@ -37,15 +40,58 @@ def validate(root: Path) -> dict[str, Any]:
     tar_member_count = 0
     missing_npz = 0
     missing_metadata = 0
+    npz_shape_errors = 0
+    metadata_length_errors = 0
+    nonfinite_valid_atom_count = 0
+    residue_mask_errors = 0
     for path in sorted((root / "shards").glob("*.tar")):
         with tarfile.open(path, "r") as archive:
-            members = {member.name for member in archive if member.isfile()}
+            member_objects = {member.name: member for member in archive if member.isfile()}
+            members = set(member_objects)
         tar_member_count += len(members)
         for name in members:
             if name.endswith(".npz") and name[:-4] + ".json" not in members:
                 missing_metadata += 1
             if name.endswith(".json") and name[:-5] + ".npz" not in members:
                 missing_npz += 1
+        with tarfile.open(path, "r") as archive:
+            for name, member in member_objects.items():
+                if not name.endswith(".npz"):
+                    continue
+                payload = archive.extractfile(member)
+                metadata_member = archive.extractfile(name[:-4] + ".json")
+                if payload is None or metadata_member is None:
+                    continue
+                with np.load(io.BytesIO(payload.read())) as arrays:
+                    required = {
+                        "aatype",
+                        "residue_index",
+                        "atom37_positions",
+                        "atom37_mask",
+                        "residue_mask",
+                        "chain_index",
+                    }
+                    if set(arrays.files) != required:
+                        npz_shape_errors += 1
+                        continue
+                    length = int(arrays["aatype"].shape[0])
+                    if (
+                        arrays["residue_index"].shape != (length,)
+                        or arrays["atom37_positions"].shape != (length, 37, 3)
+                        or arrays["atom37_mask"].shape != (length, 37)
+                        or arrays["residue_mask"].shape != (length,)
+                        or arrays["chain_index"].shape != (length,)
+                    ):
+                        npz_shape_errors += 1
+                    if not np.isfinite(arrays["atom37_positions"][arrays["atom37_mask"]]).all():
+                        nonfinite_valid_atom_count += 1
+                    if not np.array_equal(
+                        arrays["residue_mask"], arrays["atom37_mask"].any(axis=1)
+                    ):
+                        residue_mask_errors += 1
+                    metadata = json.loads(metadata_member.read())
+                    if metadata["chains"][0]["sequence_length"] != length:
+                        metadata_length_errors += 1
 
     qa_values: dict[str, list[float]] = collections.defaultdict(list)
     component_counts: collections.Counter[str] = collections.Counter()
@@ -88,6 +134,10 @@ def validate(root: Path) -> dict[str, Any]:
         "expected_tar_member_count": len(rows) * 2,
         "missing_npz_count": missing_npz,
         "missing_metadata_count": missing_metadata,
+        "npz_shape_error_count": npz_shape_errors,
+        "metadata_length_error_count": metadata_length_errors,
+        "nonfinite_valid_atom_count": nonfinite_valid_atom_count,
+        "residue_mask_error_count": residue_mask_errors,
         "component_counts": dict(sorted(component_counts.items())),
         "stratum_count": len(stratum_counts),
         "modified_residue_structure_count": modified,
