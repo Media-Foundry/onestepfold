@@ -398,8 +398,10 @@ Validation: 32/32 workers completed 10,000/10,000 records with 64 tar shards,
 zero metadata length errors, zero non-finite valid coordinates, zero mask
 inconsistencies, and zero materialization errors. Missing sequence positions
 retain sequence/residue metadata but have `residue_mask=false`; no PDBFixer
-coordinates are used. 8,721 records contain at least one modified/noncanonical
-component and are retained as a side-chain masking stratum.
+coordinates are used. After correcting the canonical three-letter fallback for
+missing residues, 1,845 records contain at least one modified/noncanonical
+component and are retained as a side-chain masking stratum; the earlier 8,721
+count was a fallback-token QA false positive.
 
 The pilot coverage medians are 0.943 observed-residue, 0.942 N/CA/C frame,
 0.942 N/CA/C/O backbone, and 0.934 canonical-heavy-atom coverage. Same-sequence

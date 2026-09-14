@@ -76,7 +76,7 @@ internal missing        0.0000    0.0000    0.0000    0.0288    0.1051
 terminal missing        0.0000    0.0070    0.0333    0.0899    0.2244
 ```
 
-8,721 structures contain at least one observed noncanonical/modified component
+1,845 structures contain at least one observed noncanonical/modified component
 under the pilot detector. This is a metadata/side-chain masking stratum, not a
 reason to discard the entire structure before reviewing the distribution.
 
