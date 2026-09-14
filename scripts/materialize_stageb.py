@@ -19,7 +19,7 @@ from onestepfold.data.gt_materializer import materialize_entry
 
 
 def _raw_path(raw_root: Path, pdb_id: str) -> Path:
-    return raw_root / pdb_id[:2] / f"{pdb_id}.cif.gz"
+    return raw_root / pdb_id[1:3] / f"{pdb_id}.cif.gz"
 
 
 def _add_bytes(archive: tarfile.TarFile, name: str, payload: bytes) -> None:
