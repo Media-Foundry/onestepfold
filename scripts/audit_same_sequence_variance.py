@@ -72,8 +72,6 @@ def audit(index_root: Path, si_manifest: Path, output: Path) -> dict[str, Any]:
                     group_id = group_by_pdb.get(str(row["pdb_id"]))
                     if group_id is None:
                         continue
-                    if int(row.get("member_count", 1)) < 2:
-                        continue
                     shard = str(row["shard"])
                     archive = archive_cache.get(shard)
                     if archive is None:
