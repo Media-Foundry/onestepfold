@@ -3,7 +3,8 @@ from pathlib import Path
 
 import pytest
 
-from fastglycan.gt_catalog import (
+from onestepfold.data.gt_catalog import (
+    _assembly_source,
     chain_instance_id,
     clean_polymer_sequence,
     resolve_sifts_chain,
@@ -37,6 +38,53 @@ def test_sifts_chain_resolves_via_entity_strand_to_label_asym():
     ]
 
 
+def test_sifts_chain_uses_residue_scheme_to_avoid_entity_wide_expansion():
+    entities = [
+        {"_entity_poly.entity_id": "1", "_entity_poly.pdbx_strand_id": "A B"}
+    ]
+    asym = [
+        {"_struct_asym.id": "X", "_struct_asym.entity_id": "1"},
+        {"_struct_asym.id": "Y", "_struct_asym.entity_id": "1"},
+    ]
+    scheme = [
+        {
+            "_pdbx_poly_seq_scheme.pdb_strand_id": "A",
+            "_pdbx_poly_seq_scheme.asym_id": "X",
+            "_pdbx_poly_seq_scheme.entity_id": "1",
+        },
+        {
+            "_pdbx_poly_seq_scheme.pdb_strand_id": "B",
+            "_pdbx_poly_seq_scheme.asym_id": "Y",
+            "_pdbx_poly_seq_scheme.entity_id": "1",
+        },
+    ]
+    assert resolve_sifts_chain("A", entities, asym, scheme) == [
+        {"entity_id": "1", "label_asym_id": "X"}
+    ]
+    assert resolve_sifts_chain("B", entities, asym, scheme) == [
+        {"entity_id": "1", "label_asym_id": "Y"}
+    ]
+    # Without the residue-level mapping, an ambiguous entity is unresolved.
+    assert resolve_sifts_chain("A", entities, asym) == []
+
+
+def test_sifts_chain_uses_unique_auth_label_fallback():
+    entities = [{"_entity_poly.entity_id": "1", "_entity_poly.pdbx_strand_id": "A B"}]
+    asym = [
+        {"_struct_asym.id": "X", "_struct_asym.entity_id": "1"},
+        {"_struct_asym.id": "Y", "_struct_asym.entity_id": "1"},
+    ]
+    assert resolve_sifts_chain("A", entities, asym, auth_to_label={"A": {"X"}}) == [
+        {"entity_id": "1", "label_asym_id": "X"}
+    ]
+
+
+def test_assembly_source_preserves_combined_evidence():
+    assert _assembly_source("author_and_software_defined_assembly", "PISA") == (
+        "author_and_software"
+    )
+
+
 def test_assembly_chain_list_removes_cif_text_delimiters():
     assert split_asym_ids(";A, B;") == ("A", "B")
 
@@ -65,6 +113,8 @@ def test_gt_schema_declares_multichain_identity_fields():
         "asymmetric_unit",
         "biological_assembly",
     ]
+    assert "assembly_author_determined" in schema["required"]
+    assert "assembly_software_determined" in schema["required"]
 
 
 @pytest.mark.skipif(
@@ -74,7 +124,7 @@ def test_gt_schema_declares_multichain_identity_fields():
 def test_scan_entry_smoke(tmp_path):
     import gzip
 
-    from fastglycan.gt_catalog import scan_entry
+    from onestepfold.data.gt_catalog import scan_entry
 
     cif = """data_1abc
 _entry.id 1abc

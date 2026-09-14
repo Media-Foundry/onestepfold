@@ -2,11 +2,12 @@
 
 ## Locked first target
 
-The first research target is a protein multi-chain predictor with this explicit
+The first research target is a protein monomer predictor backed by a
+multi-chain-aware GT catalog with this explicit
 inference contract:
 
 ```text
-protein chain set from one selected PDB structure instance
+single protein chain from a selected monomer view
 MSA disabled
 one Pairformer cycle
 one structure-module network evaluation
@@ -14,10 +15,11 @@ one output sample
 all-atom coordinates and confidence outputs
 ```
 
-Protein chains are modeled jointly. Ligand and RNA entities are retained as
-provenance where present but are not inputs in the first version. The assembly
-policy (asymmetric unit versus a declared biological assembly) is a required
-dataset decision and must be recorded with every shard.
+The GT schema and catalog retain jointly modeled protein chains, assembly copies,
+and inter-chain metadata for a future multimer view. Ligand and RNA entities
+are retained as provenance where present but are not inputs in the first view.
+The assembly policy (asymmetric unit versus a declared biological assembly) is
+a required dataset decision and must be recorded with every shard.
 
 The structure NFE count excludes the sequence conditioner. It must still be
 included in end-to-end latency, peak memory, and throughput. The active
@@ -76,7 +78,7 @@ fused kernels or PyTorch fallbacks were active.
 ## Stage 0A: Protenix compatibility baseline
 
 Run the six settings in `configs/protenix_stage0.toml` on 500-2,000 held-out
-multi-chain protein structure instances, with one paired seed and one sample.
+monomer instances selected from the multi-chain-aware catalog, with one paired seed and one sample.
 Repeat the full matrix on a
 small five-seed subset before interpreting stochastic variance. Use the
 Protenix CLI with
@@ -121,8 +123,9 @@ allowed in the input.
 
 ## Data and metrics
 
-Use multi-chain protein structure instances first, with a declared release
-cutoff and family/cluster separation. UniProt is provenance only; it is not an
+Use monomer instances first, with a declared release cutoff and family/cluster
+separation. The catalog remains multi-chain-aware for future complex views.
+UniProt is provenance only; it is not an
 all-atom structure-label database or input-sequence source. Structure targets
 must come from experimentally resolved PDB entities/chains, with constructs,
 missing residues, mutations, assembly membership, and alternate locations
@@ -133,8 +136,8 @@ training pipeline's complete prepared data is large
 claim generalization from random frame or chain splits.
 
 DCFold's headline one-step results include broader structure tasks. This
-project is multi-chain and MSA-off; compare matched subsets and report protocol
-differences instead of copying a cross-task headline number.
+project's first view is monomer and MSA-off; compare matched subsets and report
+protocol differences instead of copying a cross-task headline number.
 
 Report TM-score, lDDT-Ca, all-atom lDDT, GDT-TS, backbone/side-chain RMSD, bond
 and angle violations, clashes, chirality, Ramachandran outliers, confidence
@@ -143,4 +146,5 @@ all atoms and on C-alpha-only distances; use one fixed implementation and state
 whether hydrogens and stereochemical checks are included.
 
 The first paper-level claim should be “training-efficient, open, MSA-off,
-one-step multi-chain protein folding,” not “we invented one-step folding.”
+one-step monomer folding with a multi-chain-ready GT catalog,” not “we invented
+one-step folding.”

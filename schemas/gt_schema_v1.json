@@ -13,6 +13,8 @@
     "assembly_id",
     "model_id",
     "assembly_definition_source",
+    "assembly_author_determined",
+    "assembly_software_determined",
     "atom_vocabulary",
     "chains",
     "chain_pair_interfaces",
@@ -32,8 +34,16 @@
     "model_id": { "type": "integer", "minimum": 1 },
     "assembly_definition_source": {
       "type": "string",
-      "enum": ["author_determined", "software_determined", "unspecified", "not_applicable"]
+      "enum": [
+        "author_determined",
+        "software_determined",
+        "author_and_software",
+        "unspecified",
+        "not_applicable"
+      ]
     },
+    "assembly_author_determined": { "type": "boolean" },
+    "assembly_software_determined": { "type": "boolean" },
     "atom_vocabulary": { "const": "atom37_heavy_v1" },
     "chains": {
       "type": "array",
@@ -118,6 +128,7 @@
         "source_label_asym_id",
         "auth_asym_ids",
         "entity_id",
+        "entity_category",
         "entity_instance_index",
         "homomer_group_id",
         "operator_path",
@@ -132,6 +143,7 @@
         "source_label_asym_id": { "type": "string", "minLength": 1 },
         "auth_asym_ids": { "type": "array", "items": { "type": "string" } },
         "entity_id": { "type": "string", "minLength": 1 },
+        "entity_category": { "type": "string" },
         "entity_instance_index": { "type": "integer", "minimum": 0 },
         "homomer_group_id": { "type": "string", "minLength": 1 },
         "operator_path": { "type": "array", "items": { "type": "string" } },
@@ -149,27 +161,38 @@
         "chain_j",
         "min_heavy_atom_distance_angstrom",
         "heavy_atom_contact_count",
-        "interface_residue_indices_i",
-        "interface_residue_indices_j"
+        "interface_label_seq_ids_i",
+        "interface_label_seq_ids_j"
       ],
       "properties": {
         "chain_i": { "type": "integer", "minimum": 0 },
         "chain_j": { "type": "integer", "minimum": 0 },
         "min_heavy_atom_distance_angstrom": { "type": ["number", "null"], "minimum": 0.0 },
         "heavy_atom_contact_count": { "type": "integer", "minimum": 0 },
-        "interface_residue_indices_i": { "type": "array", "items": { "type": "integer", "minimum": 1 } },
-        "interface_residue_indices_j": { "type": "array", "items": { "type": "integer", "minimum": 1 } }
+        "interface_label_seq_ids_i": { "type": "array", "items": { "type": "integer", "minimum": 1 } },
+        "interface_label_seq_ids_j": { "type": "array", "items": { "type": "integer", "minimum": 1 } }
       }
     },
     "experimental": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["methods", "resolution_high_angstrom", "model_id", "model_count"],
+      "required": [
+        "methods",
+        "resolution_high_angstrom",
+        "model_id",
+        "model_count",
+        "initial_deposition_date",
+        "initial_release_date",
+        "latest_revision_date"
+      ],
       "properties": {
         "methods": { "type": "array", "items": { "type": "string" } },
         "resolution_high_angstrom": { "type": ["number", "null"], "minimum": 0.0 },
         "model_id": { "type": "integer", "minimum": 1 },
         "model_count": { "type": "integer", "minimum": 1 },
+        "initial_deposition_date": { "type": ["string", "null"] },
+        "initial_release_date": { "type": ["string", "null"] },
+        "latest_revision_date": { "type": ["string", "null"] },
         "r_work": { "type": ["number", "null"], "minimum": 0.0 },
         "r_free": { "type": ["number", "null"], "minimum": 0.0 }
       }
@@ -181,12 +204,22 @@
         "nonprotein_atom_count",
         "nucleic_acid_atom_count",
         "ligand_atom_count",
+        "water_atom_count",
+        "ion_atom_count",
+        "small_molecule_atom_count",
+        "other_polymer_atom_count",
+        "other_nonprotein_atom_count",
         "ligand_bridges_protein_chains"
       ],
       "properties": {
         "nonprotein_atom_count": { "type": "integer", "minimum": 0 },
         "nucleic_acid_atom_count": { "type": "integer", "minimum": 0 },
         "ligand_atom_count": { "type": "integer", "minimum": 0 },
+        "water_atom_count": { "type": "integer", "minimum": 0 },
+        "ion_atom_count": { "type": "integer", "minimum": 0 },
+        "small_molecule_atom_count": { "type": "integer", "minimum": 0 },
+        "other_polymer_atom_count": { "type": "integer", "minimum": 0 },
+        "other_nonprotein_atom_count": { "type": "integer", "minimum": 0 },
         "ligand_bridges_protein_chains": { "type": "boolean" }
       }
     },

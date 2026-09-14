@@ -288,3 +288,49 @@ count, and interface coverage become dataset strata and evaluation dimensions.
 Reason: the intended folding task is joint multi-chain structure prediction;
 single-chain filtering would remove the inter-chain geometry and interface
 supervision that the model is expected to learn.
+
+## 2026-09-14: Harden Stage A before the full scan
+
+Decision: do not start the 244,406-entry catalog scan until the Stage A scanner
+has the corrected chain resolver, entity-aware atom classification, date
+metadata, assembly composition summaries, and deterministic shard execution.
+The authoritative SIFTS chain mapping is now
+`_pdbx_poly_seq_scheme.pdb_strand_id -> asym_id`, with conservative
+`auth_asym_id -> label_asym_id` and unambiguous entity-only fallbacks. Entity
+categories and component IDs distinguish protein, nucleic acid, water, ions,
+small molecules, other polymers, and unknown non-protein atoms; only protein
+entities contribute observed-residue summaries.
+
+The scanner writes ordered, deterministic gzip JSONL shards using SHA256 PDB-ID
+assignment, atomic `.part` files, and a resume check. Stage A also records
+deposition/release/revision dates and uses Gemmi generator metadata to count
+generated assembly chain instances without materializing coordinates. The
+active import path is `onestepfold.data`; `fastglycan.gt_catalog` is only a
+compatibility shim.
+
+This supersedes the earlier wording that made jointly modeled multi-chain
+structures the first training view: the universal catalog and GT contract stay
+multi-chain-aware, while the first materialized training/evaluation view is a
+monomer pool.
+
+Validation: a real HPC pilot over `101m`, `6xu7`, and `7wxm` had zero errors,
+corrected `6xu7` composition (76 protein plus 7 nucleic-acid chains), separate
+water/ion/small-molecule counts, complete date fields, identical repeated
+output SHA256, and successful resume/shard checks. The next gates are 1,000
+and 10,000-entry audits. Coordinate materialization, SI grouping, split
+generation, and ESMC caching remain blocked until the catalog audit is accepted.
+
+The subsequent 1,000-entry HPC pilot (eight workers) completed in about 46
+seconds with 1,000 successes, zero errors, zero unresolved SIFTS rows, complete
+date coverage, and Gemmi assembly composition for every record. This is a
+throughput baseline only; a 10,000-entry distribution audit is still required
+before the full job array.
+
+The 10,000-entry audit then completed with 10,000 successes, zero errors, zero
+unresolved SIFTS rows, complete date/composition coverage, and an approximately
+4.8 MiB catalog shard. Its distribution included 1,191 solution-NMR entries,
+324 entries with 20 models, and smaller theoretical/scattering categories;
+water, small molecules, ions, other non-protein atoms, and nucleic acid atoms
+were present in 7,866, 5,875, 3,346, 466, and 389 entries respectively. The
+scanner is therefore ready for a full job array, but the quality policy must
+stratify these categories before selecting the monomer training view.

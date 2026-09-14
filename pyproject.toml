@@ -13,7 +13,7 @@ authors = [{ name = "OneStepFold research team" }]
 dependencies = []
 
 [project.optional-dependencies]
-data = ["numpy>=2.0"]
+data = ["numpy>=2.0", "gemmi>=0.7"]
 ml = ["numpy>=2.0", "torch>=2.3"]
 esmc = ["numpy>=2.0", "torch>=2.3", "esm"]
 glycoshape = ["glycontact>=0.3.3"]
@@ -23,7 +23,7 @@ dev = ["pytest>=8.0", "ruff>=0.6"]
 fastglycan = "fastglycan.cli:main"
 
 [tool.hatch.build.targets.wheel]
-packages = ["src/fastglycan"]
+packages = ["src/fastglycan", "src/onestepfold"]
 
 [tool.pytest.ini_options]
 addopts = "-q"

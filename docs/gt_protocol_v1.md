@@ -30,6 +30,12 @@ Stage A must not emit full coordinate arrays. It records entry, entity, chain,
 assembly, experimental, missing-observation, alternate-location, and hidden
 context summaries. Stage B is the only stage that materializes coordinates.
 
+For reproducible HPC execution, the scanner supports deterministic SHA256
+PDB-ID sharding with `--shard-id` and `--num-shards`, an optional `--pdb-list`
+manifest, `--limit` for pilots, and `--resume` for completed shards. Use one
+output/error pair per shard; a shard is committed by atomic rename only after
+all of its selected entries have been scanned.
+
 ## Structure instance and assembly views
 
 The training unit is a jointly modeled set of protein chains from one selected
@@ -38,6 +44,13 @@ structure instance. The schema supports both `asymmetric_unit` and
 and `_pdbx_struct_assembly_gen` definitions, including their raw operation
 expressions and asym ID lists. It does not silently choose assembly 1 or
 expand operators during Stage A.
+
+Each assembly record stores independent `author_determined` and
+`software_determined` booleans in addition to the raw details. Both may be
+true for an entry. Stage A also computes a compact assembly composition using
+Gemmi's parsed generators: source asym counts and generated protein,
+nucleic-acid, and other-polymer chain-instance counts, together with total
+polymer counts. No coordinate arrays are written at this stage.
 
 When an assembly is materialized, each generated copy receives a unique
 `assembly_chain_instance_id`, for example `A@1`, `A@2`, and so on. This ID is
@@ -98,6 +111,9 @@ ground truths by default.
 
 Resolution and method fields are descriptive at catalog time. Method-specific
 quality thresholds are selected after seeing the full catalog distribution.
+The catalog also records `initial_deposition_date`, `initial_release_date`, and
+`latest_revision_date` from the PDB database-status and audit-revision
+categories.
 
 ## Multi-chain symmetry and hidden context
 
@@ -106,9 +122,15 @@ The model may permute equivalent homomer chains. `entity_id`,
 training and evaluation code must use permutation-invariant matching for
 equivalent chain instances and may randomize storage order.
 
-Stage A summarizes protein-protein interfaces and protein contacts with
-nucleic-acid or ligand entities. Ligands and RNA/DNA are not model inputs in v1,
-so strong hidden-context cases are flagged rather than silently discarded.
+Stage A classifies non-protein atoms using `_entity.type` and component IDs
+into water, ions, small-molecule/non-polymer, nucleic acid, other polymer, and
+other unknown categories. It summarizes protein-protein interfaces and protein
+contacts with nucleic-acid or ligand entities. Ligands and RNA/DNA are not model
+inputs in v1, so strong hidden-context cases are flagged rather than silently
+discarded.
+
+Interface residue fields are named `interface_label_seq_ids_i/j` because they
+contain one-based PDB `label_seq_id` values, not zero-based tensor indices.
 
 ## Versioning and QA gates
 

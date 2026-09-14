@@ -1,6 +1,7 @@
 # Archived research scope: glycan prototype
 
-The primary project direction moved to one-step protein multi-chain folding on
+The primary project direction moved to one-step protein folding with a
+multi-chain-aware catalog and monomer-first training view on
 2026-09-13. This document remains as the design record for the earlier glycan
 ensemble experiment; see [protein_direction.md](protein_direction.md) for the
 active scope.

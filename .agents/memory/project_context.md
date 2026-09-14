@@ -1,9 +1,10 @@
 # Project context
 
-Updated: 2026-09-13
+Updated: 2026-09-14
 
-The active project is now OneStepFold: a strict, open, MSA-off protein
-multi-chain folding experiment with one Pairformer cycle, one structure-module
+The active project is now OneStepFold: a strict, open, MSA-off protein folding
+experiment with a multi-chain-aware GT catalog and a monomer-first training
+view. The model target remains one Pairformer cycle, one structure-module
 network evaluation, and one output sample. The primary sequence conditioner is frozen
 ESMC-600M with cached per-residue embeddings; ESMC-300M and ESMC-6B are scale
 ablations. The folding core is randomly initialized and trained separately.
@@ -13,8 +14,9 @@ method with native one-step/consistency baselines.
 
 Current scientific boundaries:
 
-- protein multi-chain structures/assemblies are in scope; the first stage models
-  protein chains jointly and does not use ligand or RNA entities as inputs;
+- the catalog is multi-chain-aware, but the first training/evaluation view is a
+  declared monomer pool; a future multimer view reuses the same GT schema;
+  ligand/RNA entities are not model inputs in the first view;
 - MSA disabled by experimental protocol, with ESMC used as the single-sequence
   conditioner;
 - `N_cycle=1`, structure `N_step=1`, `N_sample=1` are the final target, not an
@@ -71,8 +73,9 @@ GT handling constraints:
 
 Multi-chain GT constraints:
 
-- a training example is a selected PDB structure instance containing one or
-  more jointly modeled protein chains, not an isolated chain;
+- the universal GT schema represents a selected PDB structure instance and can
+  contain multiple jointly modeled protein chains; the first training view
+  selects monomer instances from that catalog;
 - the GT record stores one sequence/residue/atom/mask block per chain plus a
   stable `chain_index`, `entity_id`, and label asym ID; total-residue and
   chain-count limits are applied at the instance level;
@@ -82,9 +85,17 @@ Multi-chain GT constraints:
   before shard creation. Asymmetric-unit coordinates and biological-assembly
   coordinates are distinct derived views and must never be silently mixed.
 
-The first implementation milestone is Stage 0: an inference matrix across
-cycles and diffusion steps on a declared low-homology multi-chain protein set,
-with chain-count and total-length strata, a paired fixed-seed run, and a
-five-seed variance subset. Do not start training or make an accuracy claim
-until checkpoint, Protenix version, assembly policy, kernel, and latency
-accounting are captured.
+The first implementation milestone is Stage A: a deterministic catalog scan
+over the fixed entry universe. Stage 0 folding evaluation uses a declared
+low-homology monomer view with a paired fixed-seed run and a five-seed variance
+subset. Do not start training or make an accuracy claim until the catalog,
+monomer filter, checkpoint, Protenix version, assembly policy, kernel, and
+latency accounting are captured.
+
+Stage A scanner hardening has passed 3-entry, 1,000-entry, and 10,000-entry
+HPC audits with zero parser errors and zero unresolved SIFTS rows. The 10,000
+entry distribution includes substantial solution-NMR/multi-model and hidden
+non-protein-context strata; these remain catalog metadata pending the explicit
+quality/monomer filter decision. The full 244,406-entry job array is the next
+data operation, while coordinate materialization, SI grouping, and ESMC cache
+generation remain gated on catalog acceptance.

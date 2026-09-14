@@ -1,7 +1,7 @@
 # OneStepFold
 
-This repository is now focused on a strict, open, MSA-off protein multi-chain
-folding experiment:
+This repository is now focused on a strict, open, MSA-off protein folding
+experiment with a multi-chain-aware catalog and a monomer-first training view:
 
 ```text
 sequence -> one Pairformer cycle -> one all-atom structure-module evaluation
@@ -64,9 +64,9 @@ coordinate materialization.
 
 ## Current evaluation rules
 
-1. MSA-off, jointly modeled protein chains, one paired seed, and one output
-   sample are the default protocol for the first comparison; repeat a small
-   subset across five seeds.
+1. MSA-off, monomer-first training/evaluation, one paired seed, and one output
+   sample are the default protocol for the first comparison; the catalog and GT
+   schema remain multi-chain-aware for the future multimer view.
 2. Report structure-core latency separately from ESM and end-to-end latency.
 3. Report `N_cycle`, structure NFE, seed variance, peak VRAM, and sequence-length
    bins with every quality number.

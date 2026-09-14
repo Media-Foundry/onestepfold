@@ -46,6 +46,8 @@ modify the raw layer.
 ## Current boundary
 
 The raw layer is complete, but no `catalog_v1`, `processed_v1`, split, or ESMC
-cache has been generated. The next command is the Stage A Gemmi catalog scan;
-quality thresholds, assembly view selection, and PDBFixer-derived branches are
-not frozen by this report.
+cache has been generated. The hardened deterministic Stage A scanner has passed
+three-entry and 1,000-entry pilots; the next command is a 10,000-entry Gemmi
+catalog audit. Quality thresholds and assembly view selection are still
+selected from full-catalog distributions. PDBFixer-derived branches remain out
+of the primary GT.
