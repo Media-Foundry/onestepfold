@@ -383,3 +383,27 @@ Biopython 1.87 global calculator verified 42,640 same-sequence member pairs,
 forming 41,592 exact sequence groups from 84,232 records. The manifest is an
 exact-sequence grouping artifact, not a near-homology split; all exact groups
 must remain atomic in a later split.
+
+## 2026-09-15: Run and accept the Stage B 10k materialization pilot
+
+Decision: use an 8,000-record stratified sample plus 2,000 deterministic stress
+cases for the first Stage B audit. Materialize fixed atom37 heavy-atom tensors
+in NPZ tar shards and keep compact chain/residue/provenance/QA metadata in JSON;
+do not duplicate coordinate arrays in the metadata file. The multi-chain-aware
+materializer uses Gemmi assembly operators, while the current candidate view
+contains one selected protein chain per biological assembly.
+
+Validation: 32/32 workers completed 10,000/10,000 records with 64 tar shards,
+20,000 paired tar members, zero index/member mismatches, zero shape errors,
+zero metadata length errors, zero non-finite valid coordinates, zero mask
+inconsistencies, and zero materialization errors. Missing sequence positions
+retain sequence/residue metadata but have `residue_mask=false`; no PDBFixer
+coordinates are used. 8,721 records contain at least one modified/noncanonical
+component and are retained as a side-chain masking stratum.
+
+The pilot coverage medians are 0.943 observed-residue, 0.942 N/CA/C frame,
+0.942 N/CA/C/O backbone, and 0.934 canonical-heavy-atom coverage. Same-sequence
+variance found 3,373 pilot records in 911 exact groups, with 2,462
+representative comparisons and 190 (7.72%) above the fixed RMSD/TM disagreement
+threshold. This supports exact-group-aware record sampling rather than uniform
+PDB-record sampling, but does not by itself freeze quality cutoffs.

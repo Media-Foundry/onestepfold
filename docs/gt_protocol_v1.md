@@ -82,6 +82,13 @@ slots per residue, with `atom_positions[Nres,37,3]` and
 part of the v1 target. An `atom14` view may be derived later, but atom37 is the
 canonical serialized form.
 
+For streaming storage, Stage B serializes the tensor fields in compressed NPZ
+members and stores compact metadata separately in the same tar shard. The
+logical GT record is the combination of those two members; coordinate arrays
+are not duplicated in JSON. `residue_mask` is false when a construct sequence
+position has no observed canonical atom, while its sequence and residue
+metadata remain present.
+
 Missing atoms are not imputed in the primary branch. PDBFixer output, if
 evaluated, is a separate versioned branch with `imputed_mask`; imputed atoms
 are excluded from the default experimental loss. Unknown or modified residue

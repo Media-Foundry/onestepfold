@@ -90,7 +90,7 @@ Multi-chain GT constraints:
   before shard creation. Asymmetric-unit coordinates and biological-assembly
   coordinates are distinct derived views and must never be silently mixed.
 
-The first implementation milestone is Stage A: a deterministic catalog scan
+The first implementation milestone was Stage A: a deterministic catalog scan
 over the fixed entry universe. Stage 0 folding evaluation uses a declared
 low-homology monomer view with a paired fixed-seed run and a five-seed variance
 subset. Do not start training or make an accuracy claim until the catalog,
@@ -112,6 +112,14 @@ sequence buckets: 84,232 records form 41,592 exact sequence groups with
 42,640 verified duplicate memberships. No train/validation/test partition has
 been generated yet; Stage B coordinate QA remains the next gate, followed by
 an atomic split over these exact groups.
+
+Stage B's first 10,000-record pilot (8,000 stratified plus 2,000 stress cases)
+has completed on hpc2. Gemmi materialization produced 64 tar shards with
+10,000/10,000 successful records and zero shape, finite-coordinate, mask, or
+member-pair validation errors. The pilot reports coverage and missingness
+distributions, modified-residue strata, geometry screening counts, and exact-
+sequence structural variance. Numeric quality thresholds and final split
+generation remain pending review of that report; ESMC caching is still blocked.
 
 The monomer training view is now structurally frozen: choose a biological
 assembly with exactly one generated protein chain instance, zero generated
