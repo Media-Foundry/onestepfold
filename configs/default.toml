@@ -1,0 +1,18 @@
+# First experiments are restricted to a fixed atom-level graph.
+[data]
+ensemble_jsonl = "data/ensembles.jsonl"
+split_key = "scaffold_id"
+min_effective_samples = 100
+
+[representation]
+coordinate_space = "selected_glycosidic_torsions"
+angles_unit = "degrees"
+periodic = true
+fixed_ring_conformations = true
+
+[evaluation]
+sample_count_design = 1024
+sample_count_final = 4096
+rare_event_relative_error_target = 0.20
+report_uncertainty = true
+

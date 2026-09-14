@@ -1,0 +1,59 @@
+# Stage 0 is an inference-only quality/cost matrix on the same checkpoint.
+# The command runner must pass --use_default_params false so these overrides win.
+
+[protocol]
+model_name = "protenix_mini_esm_v0.5.0"
+use_msa = false
+use_template = false
+dtype = "bf16"
+sample = 1
+seed = 101
+variance_seeds = [101, 103, 107, 109, 113]
+training_cutoff = "2021-09-30"
+max_length = 768
+
+[[sweep]]
+name = "c4_s5"
+cycles = 4
+steps = 5
+
+[[sweep]]
+name = "c4_s2"
+cycles = 4
+steps = 2
+
+[[sweep]]
+name = "c4_s1"
+cycles = 4
+steps = 1
+
+[[sweep]]
+name = "c2_s2"
+cycles = 2
+steps = 2
+
+[[sweep]]
+name = "c1_s2"
+cycles = 1
+steps = 2
+
+[[sweep]]
+name = "c1_s1"
+cycles = 1
+steps = 1
+
+[evaluation]
+metrics = [
+  "tm_score",
+  "lddt_ca",
+  "lddt_all_atom",
+  "gdt_ts",
+  "backbone_rmsd",
+  "sidechain_rmsd",
+  "bond_length_violations",
+  "bond_angle_violations",
+  "steric_clash_rate",
+  "ramachandran_outlier_rate",
+  "chirality_violations",
+]
+length_bins = ["40-127", "128-255", "256-511", "512-768"]

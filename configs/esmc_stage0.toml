@@ -1,0 +1,39 @@
+# ESMC conditioner smoke test. This is separate from the official Protenix
+# Mini-ESM compatibility baseline because the embedding dimensions differ.
+
+[protocol]
+sequence_conditioner = "esmc_600m"
+conditioner_source = "Biohub/esm"
+conditioner_frozen = true
+use_msa = false
+use_template = false
+dtype = "bf16"
+seed = 101
+cache_format = "npz-v1"
+
+[[conditioner]]
+name = "esmc_300m"
+model_id = "biohub/ESMC-300M"
+
+[[conditioner]]
+name = "esmc_600m"
+model_id = "biohub/ESMC-600M"
+
+[[conditioner]]
+name = "esmc_6b"
+model_id = "biohub/ESMC-6B"
+run_mode = "upper_bound"
+
+[[conditioner]]
+name = "esm3_sm_open"
+model_id = "esm3-sm-open-v1"
+run_mode = "sequence_hidden_state_ablation"
+allow_structure_track = false
+
+[alignment]
+require_residue_count_match = true
+strip_special_tokens = true
+padding = "right"
+
+[evaluation]
+record = ["embedding_shape", "cache_roundtrip", "tokens_per_second", "peak_vram_gb"]
