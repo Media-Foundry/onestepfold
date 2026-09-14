@@ -53,6 +53,11 @@ Current scientific boundaries:
   record the exact ESMC revision and audit sequence overlap when its pretraining
   corpus is available, otherwise report residual representation-contamination
   risk;
+- the authoritative 100% SI calculator is Biopython
+  `Bio.Align.PairwiseAligner` in global mode, with identity defined as matches
+  divided by all global alignment columns including gaps. Exact sequence
+  SHA256 is only a lossless candidate index; it does not replace pairwise
+  verification or introduce near-identity clustering;
 - CUDA-oriented Protenix kernels and unverified ROCm fallback make backend and
   kernel selection part of the benchmark record;
 - existing `src/fastglycan` code is preserved as a legacy prototype and is not
@@ -99,3 +104,11 @@ non-protein-context strata; these remain catalog metadata pending the explicit
 quality/monomer filter decision. The full 244,406-entry job array is the next
 data operation, while coordinate materialization, SI grouping, and ESMC cache
 generation remain gated on catalog acceptance.
+
+The monomer training view is now structurally frozen: choose a biological
+assembly with exactly one generated protein chain instance, zero generated
+nucleic-acid/other-polymer chain instances, a primary X-ray/EM/neutron method,
+one coordinate model, and a 20--1024 residue protein construct. Water, ions,
+and small molecules remain allowed in `monomer_clean`; zero-small-molecule
+records are marked as the `monomer_apo_like` subset. Resolution and coordinate
+completeness thresholds remain pending the full catalog and Stage B audit.

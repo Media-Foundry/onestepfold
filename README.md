@@ -51,7 +51,12 @@ PYTHONPATH=src python scripts/scan_mmcif_catalog.py \
 ```
 
 Stage A does not perform SI grouping, split generation, ESMC embedding, or
-coordinate materialization.
+coordinate materialization. The frozen monomer eligibility policy is documented
+in `docs/monomer_quality_policy_v1.md`; resolution and completeness thresholds
+remain pending full-catalog and Stage B distributions.
+
+The later exact-identity split uses Biopython `Bio.Align.PairwiseAligner` in
+global mode. See `docs/sequence_split_v1.md`; no split has been generated yet.
 
 ## Layout
 

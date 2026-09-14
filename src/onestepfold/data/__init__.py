@@ -13,6 +13,7 @@ from .gt_catalog import (
     split_asym_ids,
     split_strand_ids,
 )
+from .monomer_filter import MonomerPolicy, classify_catalog_record
 
 __all__ = [
     "SCHEMA_VERSION",
@@ -26,4 +27,6 @@ __all__ = [
     "scan_entry",
     "split_asym_ids",
     "split_strand_ids",
+    "MonomerPolicy",
+    "classify_catalog_record",
 ]

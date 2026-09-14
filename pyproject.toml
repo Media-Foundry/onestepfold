@@ -16,8 +16,9 @@ dependencies = []
 data = ["numpy>=2.0", "gemmi>=0.7"]
 ml = ["numpy>=2.0", "torch>=2.3"]
 esmc = ["numpy>=2.0", "torch>=2.3", "esm"]
+split = ["biopython>=1.86"]
 glycoshape = ["glycontact>=0.3.3"]
-dev = ["pytest>=8.0", "ruff>=0.6"]
+dev = ["pytest>=8.0", "ruff>=0.6", "biopython>=1.86"]
 
 [project.scripts]
 fastglycan = "fastglycan.cli:main"

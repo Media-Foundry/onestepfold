@@ -334,3 +334,31 @@ water, small molecules, ions, other non-protein atoms, and nucleic acid atoms
 were present in 7,866, 5,875, 3,346, 466, and 389 entries respectively. The
 scanner is therefore ready for a full job array, but the quality policy must
 stratify these categories before selecting the monomer training view.
+
+## 2026-09-15: Freeze structural monomer eligibility and launch full catalog
+
+Decision: the v1 monomer view is selected from biological assembly composition,
+not ASU chain count. A candidate has exactly one generated protein chain
+instance, zero generated nucleic-acid chain instances, and zero generated other
+polymer chain instances. It also has a primary X-ray, electron-microscopy, or
+neutron method, one coordinate model, and a 20--1024 residue construct.
+Water, ions, and small molecules remain allowed in the primary `monomer_clean`
+view; entries with zero small-molecule atoms are marked `monomer_apo_like`,
+while polymer-context cases remain `contextual`.
+
+Resolution, residue/backbone/heavy-atom completeness, chain breaks, and geometry
+thresholds are intentionally deferred until the full Stage A catalog and Stage
+B materialization distributions are available. The 244,406-entry Stage A scan
+is launched as deterministic 256-shard jobs; only the catalog is generated at
+this stage.
+
+## 2026-09-15: Use Biopython pairwise identity for split construction
+
+Decision: use Biopython `Bio.Align.PairwiseAligner` as the authoritative
+sequence-identity calculator for the later split stage. The mode is global with
+match `+1`, mismatch `-1`, gap-open `-1`, and gap-extend `-1`; identity is
+identical residues divided by all global alignment columns, including gaps.
+Exact sequence SHA256 is only a lossless candidate index, and same-digest
+buckets are still pairwise-verified. CPU job-array parallelism is acceptable
+for this offline construction step. No split is generated until the catalog
+and Stage B GT are accepted.

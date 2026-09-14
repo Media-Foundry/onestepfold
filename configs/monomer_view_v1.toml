@@ -1,0 +1,33 @@
+# Structural eligibility is frozen here. Numeric resolution and completeness
+# thresholds intentionally remain pending until the full catalog and Stage B
+# distributions are available.
+
+[assembly]
+protein_chain_instances = 1
+nucleic_acid_chain_instances = 0
+other_polymer_chain_instances = 0
+
+[method]
+primary = [
+  "X-RAY DIFFRACTION",
+  "ELECTRON MICROSCOPY",
+  "NEUTRON DIFFRACTION",
+]
+
+[models]
+max_models = 1
+
+[sequence]
+min_length = 20
+max_length = 1024
+
+[context]
+allow_water = true
+allow_ions = true
+allow_small_molecules = true
+
+[quality]
+max_resolution = "pending_full_catalog"
+min_residue_coverage = "pending_stage_b_distribution"
+min_backbone_coverage = "pending_stage_b_distribution"
+min_heavy_atom_coverage = "pending_stage_b_distribution"
