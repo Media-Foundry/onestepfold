@@ -34,8 +34,12 @@ def select(catalog_dir: Path, policy_path: Path, output: Path, summary_output: P
                     reason_counts[reason] = reason_counts.get(reason, 0) + 1
                     if classification != "monomer_clean":
                         continue
+                    selected_source = decision["chain_source_label_asym_id"]
                     chain = next(
-                        chain for chain in record["chains"] if chain.get("is_protein")
+                        chain
+                        for chain in record["chains"]
+                        if chain.get("is_protein")
+                        and chain.get("source_label_asym_id") == selected_source
                     )
                     row = {
                         "pdb_id": record["pdb_id"],

@@ -101,7 +101,13 @@ def select(
                 pdb_id = str(record["pdb_id"])
                 if pdb_id not in candidates:
                     continue
-                chain = next(chain for chain in record.get("chains", []) if chain.get("is_protein"))
+                selected_source = candidates[pdb_id]["source_label_asym_id"]
+                chain = next(
+                    chain
+                    for chain in record.get("chains", [])
+                    if chain.get("is_protein")
+                    and chain.get("source_label_asym_id") == selected_source
+                )
                 observations = record.get("asu_observations", {})
                 modified_count = sum(
                     1
