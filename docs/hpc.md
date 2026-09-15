@@ -128,6 +128,8 @@ optional fused layer-normalization extension during the initial compatibility
 run; a fused backend can be added later as a separate performance ablation.
 `slurm_stage0_protenix.sh` remains useful for one-point retries by setting
 `STAGE0_SETTING=c4_s5` (or another frozen name).
+Set `DEPENDENCY=afterok:<smoke-job-id>` when submitting the full sweep before
+the functional smoke has completed; otherwise omit it.
 
 The current CLI runtime is `protenix==1.1.0`; the selected model checkpoint is
 still `protenix_mini_esm_v0.5.0`. Pin both independently and record their

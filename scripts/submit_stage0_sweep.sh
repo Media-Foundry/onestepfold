@@ -15,6 +15,7 @@ KERNEL_BACKEND="${KERNEL_BACKEND:-torch}"
 LAYERNORM_TYPE="${LAYERNORM_TYPE:-torch}"
 PARTITION="${PARTITION:-i64m1tga800ue}"
 TIME_LIMIT="${TIME_LIMIT:-12:00:00}"
+DEPENDENCY="${DEPENDENCY:-}"
 RUN_VARIANCE="${RUN_VARIANCE:-0}"
 VARIANCE_INPUT_JSON="${VARIANCE_INPUT_JSON:-$INPUT_JSON}"
 
@@ -31,6 +32,10 @@ for setting in "${settings[@]}"; do
   if [[ -n "$PROTENIX_ROOT_DIR" ]]; then
     export_args+=",PROTENIX_ROOT_DIR=$PROTENIX_ROOT_DIR"
   fi
+  dependency_args=()
+  if [[ -n "$DEPENDENCY" ]]; then
+    dependency_args+=(--dependency="$DEPENDENCY")
+  fi
 
   sbatch \
     --job-name="onefold-$setting" \
@@ -42,5 +47,6 @@ for setting in "${settings[@]}"; do
     --output="$OUTPUT_ROOT/logs/%j.out" \
     --error="$OUTPUT_ROOT/logs/%j.err" \
     --export="$export_args" \
+    "${dependency_args[@]}" \
     "$REPO_ROOT/scripts/slurm_stage0_protenix.sh"
 done
