@@ -6,8 +6,8 @@ model_name = "protenix_mini_esm_v0.5.0"
 # The v0.5.0 checkpoint is loaded through the modern v1.1.0 CLI.  Keep the
 # runtime package version separate from the model name above.
 protenix_package = "protenix==1.1.0"
-protenix_revision = "required-before-run"
-checkpoint_sha256 = "required-before-run"
+protenix_revision = "pypi-wheel-sha256:074fa0395c9cd980257a868f55fc9ccd0d432440e3f56a8bbdf234d21bcb388e"
+checkpoint_sha256 = "1301bba9ad322518eace60fd244ded7904439f55317e90d402cc7a0c06026664"
 use_msa = false
 use_template = false
 dtype = "bf16"

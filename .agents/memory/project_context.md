@@ -165,5 +165,8 @@ view is `stage0_v1`: 1,024 HQ-valid temporal dev groups, a nested 128-group
 five-seed variance subset, 2,440 remaining HQ-valid frozen-test groups, and a
 separate complete 15-group strict-low-homology exclusion list. The sweep is
 the 3x3 `{1,2,4} cycles x {1,2,5} steps` factorial through length 1024. It
-must run on a fixed declared backend, preferably exclusive `i64m1tga800ue`,
-before any ESMC-conditioned model tuning uses the frozen test.
+must run on a fixed declared backend, preferably `i64m1tga800ue`, with each
+factorial point submitted as an independent one-A800 job before any
+ESMC-conditioned model tuning uses the frozen test. The runtime package is
+Protenix 1.1.0 while the selected model checkpoint remains Mini-ESM v0.5.0;
+their hashes are recorded independently.

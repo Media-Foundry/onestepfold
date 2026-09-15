@@ -45,8 +45,8 @@ The nine inference points are the full factorial:
                   (4,1), (4,2), (4,5)
 ```
 
-No Protenix inference has been claimed yet: the validated HPC compatibility
-environment did not contain the `protenix` CLI at view-freeze time. The runner
-requires a pinned `protenix==1.1.0` installation, the
-`protenix_mini_esm_v0.5.0` checkpoint SHA256, and fixed
-kernel/backend metadata before submission.
+No Protenix inference has been claimed yet. The runtime is pinned to the
+`protenix==1.1.0` wheel (SHA256 recorded in the protocol) and the
+`protenix_mini_esm_v0.5.0` checkpoint (SHA256 recorded in the protocol). A
+compute-node smoke test must still confirm the CUDA extension/backend path
+before the sweep is submitted.

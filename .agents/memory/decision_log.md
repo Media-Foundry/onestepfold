@@ -505,8 +505,18 @@ dev sampling and listed in `frozen_temporal_low_homology_groups_v1`; eight have
 HQ targets and seven remain group-only exclusions because no HQ target exists.
 Repeated generation with the same seed produced identical manifest SHA256s.
 
-The first Protenix runner targets the exclusive `i64m1tga800ue` partition with
-one A800 and records command/environment plus `/usr/bin/time -v` output. The
-current HPC compatibility environment has no Protenix CLI installed, so
-`protenix==0.5.0`, checkpoint SHA256, and fixed kernel/backend metadata remain
-mandatory pre-run fields; no Stage 0 accuracy result is claimed yet.
+The first Protenix runner targets the `i64m1tga800ue` partition with one A800
+per independent factorial-point job and records command/environment plus
+`/usr/bin/time -v` output. The modern `protenix==1.1.0` CLI is used to load the
+`protenix_mini_esm_v0.5.0` checkpoint; the package wheel and checkpoint SHA256
+are pinned separately. A compute-node smoke test and fixed kernel/backend
+metadata are required before the sweep; no Stage 0 accuracy result is claimed
+yet.
+
+## 2026-09-15: Submit Stage 0 points as independent A800 jobs
+
+Decision: do not request all eight A800s on one `i64m1tga800ue` job. Submit
+each of the nine `(cycle, step)` settings as its own one-GPU job with 8 CPUs,
+64G RAM, and a default 12-hour walltime. This matches observed scheduler
+placement and makes a failed setting independently restartable without
+repeating the other eight points.

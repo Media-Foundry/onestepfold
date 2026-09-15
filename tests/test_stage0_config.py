@@ -9,8 +9,8 @@ def test_stage0_protocol_is_explicit() -> None:
     protocol = config["protocol"]
     assert protocol["model_name"] == "protenix_mini_esm_v0.5.0"
     assert protocol["protenix_package"] == "protenix==1.1.0"
-    assert protocol["protenix_revision"] == "required-before-run"
-    assert protocol["checkpoint_sha256"] == "required-before-run"
+    assert protocol["protenix_revision"].startswith("pypi-wheel-sha256:")
+    assert len(protocol["checkpoint_sha256"]) == 64
     assert protocol["use_msa"] is False
     assert protocol["use_template"] is False
     assert protocol["sample"] == 1
