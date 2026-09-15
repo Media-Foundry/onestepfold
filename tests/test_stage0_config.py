@@ -13,6 +13,7 @@ def test_stage0_protocol_is_explicit() -> None:
     assert len(protocol["checkpoint_sha256"]) == 64
     assert protocol["use_msa"] is False
     assert protocol["use_template"] is False
+    assert protocol["kernel_backend"] == "torch"
     assert protocol["sample"] == 1
     assert protocol["variance_seeds"] == [101, 103, 107, 109, 113]
 

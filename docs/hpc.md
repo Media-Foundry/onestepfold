@@ -113,12 +113,16 @@ PROTENIX_BIN=/path/to/protenix \
 PROTENIX_PYTHON=/path/to/python \
 PROTENIX_PYTHONPATH=/path/to/protenix/site \
 PROTENIX_ROOT_DIR=/path/to/protenix/runtime \
+KERNEL_BACKEND=torch \
 scripts/submit_stage0_sweep.sh
 ```
 
 The launcher requests `--gres=gpu:a800:1`, `--cpus-per-task=8`,
 `--mem=64G`, and `--time=12:00:00` for each setting. Override `TIME_LIMIT`
 only after measuring a real run.
+The default fixed backend is the Protenix PyTorch implementation (`torch` for
+both triangle multiplicative update and triangle attention); change it only as
+an explicit matched experiment.
 `slurm_stage0_protenix.sh` remains useful for one-point retries by setting
 `STAGE0_SETTING=c4_s5` (or another frozen name).
 

@@ -8,6 +8,7 @@ PROTENIX_PYTHON="${PROTENIX_PYTHON:-python}"
 PROTENIX_PYTHONPATH="${PROTENIX_PYTHONPATH:-}"
 PROTENIX_ROOT_DIR="${PROTENIX_ROOT_DIR:-}"
 MODEL_NAME="${MODEL_NAME:-protenix_mini_esm_v0.5.0}"
+KERNEL_BACKEND="${KERNEL_BACKEND:-torch}"
 SEED="${SEED:-101}"
 RUN_VARIANCE="${RUN_VARIANCE:-0}"
 VARIANCE_INPUT_JSON="${VARIANCE_INPUT_JSON:-$INPUT_JSON}"
@@ -19,6 +20,10 @@ if [[ -n "$PROTENIX_PYTHONPATH" ]]; then
 fi
 if [[ -n "$PROTENIX_ROOT_DIR" ]]; then
   export PROTENIX_ROOT_DIR
+fi
+if [[ -z "${CUDA_HOME:-}" ]] && command -v nvcc >/dev/null 2>&1; then
+  CUDA_HOME="$(dirname "$(dirname "$(readlink -f "$(command -v nvcc)")")")"
+  export CUDA_HOME
 fi
 
 declare -a SETTINGS=(
@@ -58,6 +63,8 @@ mkdir -p "$OUTPUT_ROOT/meta/$STAGE0_SETTING" "$OUTPUT_ROOT/logs"
   printf 'protenix_pythonpath=%s\n' "${PYTHONPATH:-}"
   printf 'protenix_root_dir=%s\n' "${PROTENIX_ROOT_DIR:-}"
   printf 'model_name=%s\n' "$MODEL_NAME"
+  printf 'kernel_backend=%s\n' "$KERNEL_BACKEND"
+  printf 'cuda_home=%s\n' "${CUDA_HOME:-}"
   printf 'stage0_setting=%s\n' "$STAGE0_SETTING"
   nvidia-smi --query-gpu=name,driver_version,memory.total --format=csv,noheader || true
   "$PROTENIX_PYTHON" - <<'PY'
@@ -80,7 +87,7 @@ run_one() {
   local root="$6"
   mkdir -p "$root"
   cat > "$root/command.txt" <<EOF
-$PROTENIX_BIN pred -i $input_json -o $root -s $seed -n $MODEL_NAME -c $cycles -p $steps -e 1 --use_default_params false --use_msa false --use_template false --dtype bf16
+$PROTENIX_BIN pred -i $input_json -o $root -s $seed -n $MODEL_NAME -c $cycles -p $steps -e 1 --use_default_params false --use_msa false --use_template false --dtype bf16 --trimul_kernel $KERNEL_BACKEND --triatt_kernel $KERNEL_BACKEND --enable_tf32 false
 EOF
   {
     echo "{\"name\":\"$name\",\"seed\":$seed,\"cycles\":$cycles,\"steps\":$steps}"
@@ -95,7 +102,10 @@ EOF
       --use_default_params false \
       --use_msa false \
       --use_template false \
-      --dtype bf16
+      --dtype bf16 \
+      --trimul_kernel "$KERNEL_BACKEND" \
+      --triatt_kernel "$KERNEL_BACKEND" \
+      --enable_tf32 false
   } > "$root/run.log" 2>&1
 }
 
