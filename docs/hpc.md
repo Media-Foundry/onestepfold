@@ -114,6 +114,7 @@ PROTENIX_PYTHON=/path/to/python \
 PROTENIX_PYTHONPATH=/path/to/protenix/site \
 PROTENIX_ROOT_DIR=/path/to/protenix/runtime \
 KERNEL_BACKEND=torch \
+LAYERNORM_TYPE=torch \
 scripts/submit_stage0_sweep.sh
 ```
 
@@ -122,7 +123,9 @@ The launcher requests `--gres=gpu:a800:1`, `--cpus-per-task=8`,
 only after measuring a real run.
 The default fixed backend is the Protenix PyTorch implementation (`torch` for
 both triangle multiplicative update and triangle attention); change it only as
-an explicit matched experiment.
+an explicit matched experiment. `LAYERNORM_TYPE=torch` avoids compiling the
+optional fused layer-normalization extension during the initial compatibility
+run; a fused backend can be added later as a separate performance ablation.
 `slurm_stage0_protenix.sh` remains useful for one-point retries by setting
 `STAGE0_SETTING=c4_s5` (or another frozen name).
 

@@ -4,6 +4,7 @@ set -euo pipefail
 PROTENIX_PYTHON="${PROTENIX_PYTHON:-/hpc2ssd/softwares/anaconda3/envs/af3/bin/python}"
 PROTENIX_SITE="${PROTENIX_SITE:-/hpc2hdd/home/shuang886/Folding/protenix_stage0_pkg/v1_1/site}"
 PROTENIX_ROOT_DIR="${PROTENIX_ROOT_DIR:-/hpc2hdd/home/shuang886/Folding/protenix_stage0_pkg/v1_1/runtime}"
+LAYERNORM_TYPE="${LAYERNORM_TYPE:-torch}"
 
 if command -v module >/dev/null 2>&1; then
   module load cuda >/dev/null 2>&1 || true
@@ -13,6 +14,7 @@ if [[ -z "${CUDA_HOME:-}" ]] && command -v nvcc >/dev/null 2>&1; then
   export CUDA_HOME
 fi
 export PROTENIX_ROOT_DIR
+export LAYERNORM_TYPE
 export PYTHONPATH="$PROTENIX_SITE${PYTHONPATH:+:$PYTHONPATH}"
 
 echo "hostname=$(hostname)"

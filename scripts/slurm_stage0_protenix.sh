@@ -9,6 +9,7 @@ PROTENIX_PYTHONPATH="${PROTENIX_PYTHONPATH:-}"
 PROTENIX_ROOT_DIR="${PROTENIX_ROOT_DIR:-}"
 MODEL_NAME="${MODEL_NAME:-protenix_mini_esm_v0.5.0}"
 KERNEL_BACKEND="${KERNEL_BACKEND:-torch}"
+LAYERNORM_TYPE="${LAYERNORM_TYPE:-torch}"
 SEED="${SEED:-101}"
 RUN_VARIANCE="${RUN_VARIANCE:-0}"
 VARIANCE_INPUT_JSON="${VARIANCE_INPUT_JSON:-$INPUT_JSON}"
@@ -21,6 +22,7 @@ fi
 if [[ -n "$PROTENIX_ROOT_DIR" ]]; then
   export PROTENIX_ROOT_DIR
 fi
+export LAYERNORM_TYPE
 if [[ -z "${CUDA_HOME:-}" ]] && command -v nvcc >/dev/null 2>&1; then
   CUDA_HOME="$(dirname "$(dirname "$(readlink -f "$(command -v nvcc)")")")"
   export CUDA_HOME
@@ -64,6 +66,7 @@ mkdir -p "$OUTPUT_ROOT/meta/$STAGE0_SETTING" "$OUTPUT_ROOT/logs"
   printf 'protenix_root_dir=%s\n' "${PROTENIX_ROOT_DIR:-}"
   printf 'model_name=%s\n' "$MODEL_NAME"
   printf 'kernel_backend=%s\n' "$KERNEL_BACKEND"
+  printf 'layernorm_type=%s\n' "$LAYERNORM_TYPE"
   printf 'cuda_home=%s\n' "${CUDA_HOME:-}"
   printf 'stage0_setting=%s\n' "$STAGE0_SETTING"
   nvidia-smi --query-gpu=name,driver_version,memory.total --format=csv,noheader || true
