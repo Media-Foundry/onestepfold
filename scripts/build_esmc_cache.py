@@ -37,7 +37,7 @@ def _sha256_file(path: Path) -> str:
     return digest.hexdigest()
 
 
-def _load_model(model_id: str, revision: str, device: str):
+def _load_model(model_id: str, revision: str, device: str, local_files_only: bool = False):
     try:
         from esm.models.esmc import EsmcForMaskedLM, EsmcTokenizer
     except ImportError as exc:  # pragma: no cover - HPC-only optional dependency
@@ -47,7 +47,10 @@ def _load_model(model_id: str, revision: str, device: str):
     # Require the current Hugging-Face-compatible Biohub API. The legacy local
     # ESMC loader has a different checkpoint and hidden-state contract.
     model = EsmcForMaskedLM.from_pretrained(
-        model_id, revision=revision, device=device
+        model_id,
+        revision=revision,
+        device=device,
+        local_files_only=local_files_only,
     ).eval()
     return model, EsmcTokenizer()
 
@@ -104,6 +107,7 @@ def build_cache(
     shard_tokens: int = 16384,
     limit: int | None = None,
     code_commit: str | None = None,
+    local_files_only: bool = False,
 ) -> dict[str, Any]:
     groups = _read_groups(groups_path, limit)
     if not groups:
@@ -122,7 +126,7 @@ def build_cache(
     (output_root / "feature_spec.json").write_text(
         json.dumps(spec.as_dict(), indent=2, sort_keys=True) + "\n", encoding="utf-8"
     )
-    model, tokenizer = _load_model(model_id, hf_revision, device)
+    model, tokenizer = _load_model(model_id, hf_revision, device, local_files_only)
     writer_rows: list[dict[str, Any]] = []
     shard_tensors: dict[str, list[torch.Tensor]] = {}
     shard_rows: list[dict[str, Any]] = []
@@ -230,6 +234,7 @@ def build_cache(
         "hf_revision": hf_revision,
         "code_revision": code_revision,
         "code_commit": code_commit,
+        "local_files_only": local_files_only,
         "dtype": "bfloat16",
         "elapsed_seconds": time.monotonic() - started,
         "output": str(output_root),
@@ -258,6 +263,7 @@ def main() -> None:
     parser.add_argument("--batch-tokens", type=int, default=4096)
     parser.add_argument("--shard-tokens", type=int, default=16384)
     parser.add_argument("--limit", type=int, default=None)
+    parser.add_argument("--local-files-only", action="store_true")
     args = parser.parse_args()
     build_cache(
         args.groups,
@@ -271,6 +277,7 @@ def main() -> None:
         args.shard_tokens,
         args.limit,
         args.code_commit,
+        args.local_files_only,
     )
 
 

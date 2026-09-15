@@ -11,18 +11,24 @@ HF_REVISION="${HF_REVISION:?HF_REVISION is required}"
 CODE_REVISION="${CODE_REVISION:?CODE_REVISION is required}"
 LIMIT="${LIMIT:-2000}"
 FEATURE_VARIANT="${FEATURE_VARIANT:-all}"
+LOCAL_FILES_ONLY="${LOCAL_FILES_ONLY:-0}"
 
 export PYTHONPATH="$CODE_ROOT/src${ESM_PYTHONPATH:+:$ESM_PYTHONPATH}${PYTHONPATH:+:$PYTHONPATH}"
 export HF_HOME="${HF_HOME:-/hpc2hdd/home/shuang886/Folding/hf_cache}"
 export TRANSFORMERS_CACHE="${TRANSFORMERS_CACHE:-$HF_HOME/transformers}"
 export HF_HUB_DISABLE_XET="${HF_HUB_DISABLE_XET:-1}"
 
-exec "$ESM_ENV/bin/python" -u "$CODE_ROOT/scripts/build_esmc_cache.py" \
-  --groups "$GROUPS" \
-  --output-root "$OUTPUT_ROOT" \
-  --model-id "$MODEL_ID" \
-  --hf-revision "$HF_REVISION" \
-  --code-revision "$CODE_REVISION" \
-  --code-commit "$CODE_REVISION" \
-  --feature-variant "$FEATURE_VARIANT" \
+args=(
+  --groups "$GROUPS"
+  --output-root "$OUTPUT_ROOT"
+  --model-id "$MODEL_ID"
+  --hf-revision "$HF_REVISION"
+  --code-revision "$CODE_REVISION"
+  --code-commit "$CODE_REVISION"
+  --feature-variant "$FEATURE_VARIANT"
   --limit "$LIMIT"
+)
+if [[ "$LOCAL_FILES_ONLY" == "1" ]]; then
+  args+=(--local-files-only)
+fi
+exec "$ESM_ENV/bin/python" -u "$CODE_ROOT/scripts/build_esmc_cache.py" "${args[@]}"

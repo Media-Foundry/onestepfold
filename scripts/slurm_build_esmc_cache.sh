@@ -13,6 +13,7 @@ CODE_COMMIT="${CODE_COMMIT:-$CODE_REVISION}"
 FEATURE_VARIANT="${FEATURE_VARIANT:-all}"
 BATCH_TOKENS="${BATCH_TOKENS:-4096}"
 SHARD_TOKENS="${SHARD_TOKENS:-16384}"
+LOCAL_FILES_ONLY="${LOCAL_FILES_ONLY:-0}"
 LIMIT="${LIMIT:-}"
 
 export PYTHONPATH="$CODE_ROOT/src${ESM_PYTHONPATH:+:$ESM_PYTHONPATH}${PYTHONPATH:+:$PYTHONPATH}"
@@ -32,5 +33,8 @@ args=(
 )
 if [[ -n "$LIMIT" ]]; then
   args+=(--limit "$LIMIT")
+fi
+if [[ "$LOCAL_FILES_ONLY" == "1" ]]; then
+  args+=(--local-files-only)
 fi
 exec "$ESM_ENV/bin/python" -u "$CODE_ROOT/scripts/build_esmc_cache.py" "${args[@]}"
