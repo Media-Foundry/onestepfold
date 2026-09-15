@@ -4,6 +4,14 @@ set -euo pipefail
 # Submit one independent Slurm job per Stage 0 factorial point.  Keeping each
 # point as a separate one-GPU job makes retries and scheduler placement simple.
 
+if command -v module >/dev/null 2>&1; then
+  module load slurm >/dev/null 2>&1 || true
+fi
+command -v sbatch >/dev/null 2>&1 || {
+  echo "sbatch is unavailable; load the Slurm module before submitting" >&2
+  exit 127
+}
+
 REPO_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 INPUT_JSON="${INPUT_JSON:?INPUT_JSON is required}"
 OUTPUT_ROOT="${OUTPUT_ROOT:?OUTPUT_ROOT is required}"
