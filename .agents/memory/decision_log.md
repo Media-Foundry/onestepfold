@@ -520,3 +520,7 @@ each of the nine `(cycle, step)` settings as its own one-GPU job with 8 CPUs,
 64G RAM, and a default 12-hour walltime. This matches observed scheduler
 placement and makes a failed setting independently restartable without
 repeating the other eight points.
+
+The staged ESM2 conditioner is `esm2_t36_3B_UR50D.pt` with SHA256
+`7de8b4082ba15891959ab368b77ce3886697af1efb16d3c9e9e7b0c5d3f07500`; it is
+stored beside the Mini checkpoint under the pinned Protenix runtime root.

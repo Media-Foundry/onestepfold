@@ -8,6 +8,8 @@ model_name = "protenix_mini_esm_v0.5.0"
 protenix_package = "protenix==1.1.0"
 protenix_revision = "pypi-wheel-sha256:074fa0395c9cd980257a868f55fc9ccd0d432440e3f56a8bbdf234d21bcb388e"
 checkpoint_sha256 = "1301bba9ad322518eace60fd244ded7904439f55317e90d402cc7a0c06026664"
+conditioner_checkpoint = "esm2_t36_3B_UR50D.pt"
+conditioner_checkpoint_sha256 = "7de8b4082ba15891959ab368b77ce3886697af1efb16d3c9e9e7b0c5d3f07500"
 use_msa = false
 use_template = false
 dtype = "bf16"

@@ -11,6 +11,8 @@ def test_stage0_protocol_is_explicit() -> None:
     assert protocol["protenix_package"] == "protenix==1.1.0"
     assert protocol["protenix_revision"].startswith("pypi-wheel-sha256:")
     assert len(protocol["checkpoint_sha256"]) == 64
+    assert protocol["conditioner_checkpoint"] == "esm2_t36_3B_UR50D.pt"
+    assert len(protocol["conditioner_checkpoint_sha256"]) == 64
     assert protocol["use_msa"] is False
     assert protocol["use_template"] is False
     assert protocol["kernel_backend"] == "torch"
