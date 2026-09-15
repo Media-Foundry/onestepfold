@@ -1,0 +1,30 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+CODE_ROOT="${CODE_ROOT:-/hpc2hdd/home/shuang886/Folding/catalog_pilot_code}"
+ESM_ENV="${ESM_ENV:-/hpc2hdd/home/shuang886/Folding/envs/esmc}"
+GROUPS="${GROUPS:-/hpc2hdd/home/shuang886/Folding/splits_v1/groups.jsonl.gz}"
+OUTPUT_ROOT="${OUTPUT_ROOT:?OUTPUT_ROOT is required}"
+MODEL_ID="${MODEL_ID:-biohub/ESMC-600M}"
+HF_REVISION="${HF_REVISION:?HF_REVISION is required}"
+CODE_REVISION="${CODE_REVISION:?CODE_REVISION is required}"
+CODE_COMMIT="${CODE_COMMIT:-$CODE_REVISION}"
+FEATURE_VARIANT="${FEATURE_VARIANT:-all}"
+LIMIT="${LIMIT:-}"
+
+export PYTHONPATH="$CODE_ROOT/src${PYTHONPATH:+:$PYTHONPATH}"
+export HF_HOME="${HF_HOME:-/hpc2hdd/home/shuang886/Folding/hf_cache}"
+export TRANSFORMERS_CACHE="${TRANSFORMERS_CACHE:-$HF_HOME/transformers}"
+args=(
+  --groups "$GROUPS"
+  --output-root "$OUTPUT_ROOT"
+  --model-id "$MODEL_ID"
+  --hf-revision "$HF_REVISION"
+  --code-revision "$CODE_REVISION"
+  --code-commit "$CODE_COMMIT"
+  --feature-variant "$FEATURE_VARIANT"
+)
+if [[ -n "$LIMIT" ]]; then
+  args+=(--limit "$LIMIT")
+fi
+exec "$ESM_ENV/bin/python" -u "$CODE_ROOT/scripts/build_esmc_cache.py" "${args[@]}"

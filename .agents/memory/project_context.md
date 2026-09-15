@@ -147,3 +147,13 @@ residues. Strict identity <0.30 leaves 15 groups (18 records) as the additional
 low-homology test subset; the temporal test remains primary. The split artifacts
 are frozen under `/hpc2hdd/home/shuang886/Folding/splits_v1`; ESMC caching is the
 next data operation.
+
+The ESMC cache contract is versioned in `docs/esmc_cache_v1.md`. The active
+probe/cache model is `biohub/ESMC-600M` at HF revision
+`28aed46fcaf217dfa59f78a589bb449aa3ae5d98`, using Biohub/esm revision
+`bf343ba264b650dff7a073643725f9aaa1fdbe8d`. Cache keys include the sequence
+SHA256, model and both revisions, feature variant, and dtype. The first artifact
+is an all-layer, 2,000-group probe; a full cache is blocked until a contact or
+distance probe selects the representation variant. ESMC special tokens are
+removed only after an explicit `L+2` assertion, and residue features are stored
+as BF16 sharded safetensors.

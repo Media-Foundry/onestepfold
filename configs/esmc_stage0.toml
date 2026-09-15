@@ -9,7 +9,18 @@ use_msa = false
 use_template = false
 dtype = "bf16"
 seed = 101
-cache_format = "npz-v1"
+cache_format = "safetensors-sharded-v1"
+model_id = "biohub/ESMC-600M"
+hf_revision = "28aed46fcaf217dfa59f78a589bb449aa3ae5d98"
+code_repository = "https://github.com/Biohub/esm"
+code_revision = "bf343ba264b650dff7a073643725f9aaa1fdbe8d"
+feature_probe_limit = 2000
+feature_probe_variant = "all"
+feature_variants = ["final", "layers_12_24_36", "all"]
+hidden_dim = 1152
+transformer_layers = 36
+bos_removed = true
+eos_removed = true
 
 [[conditioner]]
 name = "esmc_300m"
@@ -18,6 +29,7 @@ model_id = "biohub/ESMC-300M"
 [[conditioner]]
 name = "esmc_600m"
 model_id = "biohub/ESMC-600M"
+hf_revision = "28aed46fcaf217dfa59f78a589bb449aa3ae5d98"
 
 [[conditioner]]
 name = "esmc_6b"

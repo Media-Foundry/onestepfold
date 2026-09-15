@@ -447,3 +447,19 @@ train-seen if it has a valid pre/on-cutoff member; later records of such a group
 are leakage-excluded rather than test records. Only groups whose valid members
 are all post-cutoff are test candidates. ESMC caching remains downstream of
 this quality/split stage.
+
+## 2026-09-15: Pin ESMC representation cache contract
+
+Decision: use `biohub/ESMC-600M` at HF revision
+`28aed46fcaf217dfa59f78a589bb449aa3ae5d98` with Biohub/esm revision
+`bf343ba264b650dff7a073643725f9aaa1fdbe8d`. Build a 2,000-group all-layer
+probe first, compare final/intermediate/all-layer representations with a small
+structure-aware contact probe, and only then materialize the full 38,400-group
+cache. Store residue-aligned BF16 features in sharded safetensors keyed by
+sequence SHA256 and pinned model revisions.
+
+Reason: Biohub ESMC exposes 36 transformer layers plus an embedding state, and
+the folding representation may not be optimal at the final MLM layer alone.
+Caching all layers for the full corpus would multiply storage by roughly 37, so
+the probe is a cheap, reversible decision gate. ESMC remains a frozen sequence
+representation prior; it is not treated as a structure-coordinate teacher.
