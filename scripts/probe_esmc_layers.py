@@ -42,7 +42,9 @@ def _sample_pairs(
         return None
     delta = positions[valid, None, :] - positions[None, valid, :]
     distances = np.sqrt(np.sum(delta * delta, axis=-1))
-    upper_i, upper_j = np.triu_indices(valid.size, k=3)
+    upper_i, upper_j = np.triu_indices(valid.size, k=1)
+    separated = (valid[upper_j] - valid[upper_i]) >= 3
+    upper_i, upper_j = upper_i[separated], upper_j[separated]
     labels = distances[upper_i, upper_j] < 8.0
     positive = np.flatnonzero(labels)
     negative = np.flatnonzero(~labels)
