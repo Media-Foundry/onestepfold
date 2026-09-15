@@ -77,10 +77,25 @@ fused kernels or PyTorch fallbacks were active.
 
 ## Stage 0A: Protenix compatibility baseline
 
-Run the six settings in `configs/protenix_stage0.toml` on 500-2,000 held-out
-monomer instances selected from the multi-chain-aware catalog, with one paired seed and one sample.
-Repeat the full matrix on a
-small five-seed subset before interpreting stochastic variance. Use the
+Before running the matrix, freeze `temporal_dev_v1` from HQ-valid temporal
+groups using `scripts/select_temporal_dev.py`. The default view contains 1,024
+exact sequence groups, one deterministic HQ target per group, and a fixed
+seed. The remaining HQ-valid temporal groups are written to
+`frozen_temporal_test_v1`; the 15 strict low-homology groups remain in the
+frozen test view and are never used for tuning. Their complete group list is
+also written to `frozen_temporal_low_homology_groups_v1`, including groups
+without an HQ target. The selector preserves joint length, resolution,
+apo-like, and experimental-method strata and records its protocol beside the
+manifests. It also writes a fixed, stratified `temporal_variance_v1` subset
+of 128 groups for the five-seed repeat.
+
+Run the complete 3x3 factorial in `configs/protenix_stage0.toml` on the
+temporal dev view, with one paired seed and one sample. The matrix is
+`(cycles, steps) in {(1,1), (1,2), (1,5), (2,1), (2,2), (2,5), (4,1), (4,2),
+(4,5)}` and includes lengths through 1,024 residues. Repeat the same matrix
+on the fixed 128-group subset with seeds `101, 103, 107, 109, 113` before
+interpreting stochastic variance. Do not inspect or tune against the frozen
+temporal test or strict low-homology view. Use the
 Protenix CLI with
 `--use_default_params false`; otherwise the model defaults can overwrite manual
 cycle/step values. Example:

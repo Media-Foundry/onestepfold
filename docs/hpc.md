@@ -96,3 +96,51 @@ After the probe selects a feature variant, use
 `scripts/slurm_build_esmc_cache.sh` with the same revisions and an independent
 output root. Inspect `feature_spec.json`, `summary.json`, the manifest count,
 and shard checksums before exposing the cache to model training.
+
+## Stage 0A Protenix sweep
+
+The compatibility sweep uses the official `protenix_mini_esm_v0.5.0` checkpoint
+and its ESM2 conditioner. It is independent of the ESMC cache. Prefer an
+exclusive A800 node in `i64m1tga800ue` for the 3x3 matrix; request the full
+node resources and keep the backend fixed across all settings:
+
+```bash
+module load slurm
+sbatch --partition=i64m1tga800ue --gres=gpu:a800:1 \
+  --exclusive --cpus-per-task=64 --mem=1024G --time=07-00:00:00 \
+  --export=ALL,INPUT_JSON=/path/to/temporal_dev_v1.json,\
+OUTPUT_ROOT=/path/to/stage0_runs,PROTENIX_BIN=/path/to/protenix \
+  scripts/slurm_stage0_protenix.sh
+```
+
+The runner must use `--use_default_params false`, `--cycle`, `--step`, and
+`--sample 1` for every point, and must record the pinned Protenix commit,
+checkpoint SHA256, GPU/backend, PyTorch/CUDA versions, seed, peak VRAM, and
+separate sequence/trunk/structure/confidence/end-to-end timings. Do not mix
+ESMC features into this compatibility baseline.
+
+Freeze the Stage 0 views before submitting the GPU array:
+
+```bash
+PYTHONPATH=src python scripts/select_temporal_dev.py \
+  --groups /hpc2hdd/home/shuang886/Folding/splits_v1/groups.jsonl.gz \
+  --quality-index /hpc2hdd/home/shuang886/Folding/quality_v1/quality_index.jsonl.gz \
+  --output-root /hpc2hdd/home/shuang886/Folding/stage0_v1 \
+  --dev-size 1024 --seed 101
+```
+
+The resulting `temporal_dev_v1.jsonl.gz` has 1,024 groups and the frozen
+complement has the remaining HQ-valid groups. The full strict low-homology
+group list is stored separately and is excluded from dev sampling even when a
+group lacks an HQ-valid coordinate target. The same command writes the fixed
+128-group `temporal_variance_v1.jsonl.gz` subset from within dev.
+
+Convert the frozen dev manifest to the Protenix list-of-targets format before
+submitting the GPU job:
+
+```bash
+PYTHONPATH=src python scripts/build_protenix_input.py \
+  --manifest /hpc2hdd/home/shuang886/Folding/stage0_v1/temporal_dev_v1.jsonl.gz \
+  --output /hpc2hdd/home/shuang886/Folding/stage0_v1/temporal_dev_v1.json \
+  --index-output /hpc2hdd/home/shuang886/Folding/stage0_v1/temporal_dev_v1.index.jsonl.gz
+```

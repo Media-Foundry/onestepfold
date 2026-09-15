@@ -486,3 +486,27 @@ the production cache by 37. A pinned-model recomputation of one 327-residue
 sequence matched its cached slice at cosine 0.999992 (maximum absolute error
 0.00387 in float32 comparison after BF16 storage), and eight random cached
 slices were finite with exact residue-by-hidden shape.
+
+## 2026-09-15: Freeze Stage 0A dev/test views and factorial protocol
+
+The Stage 0 compatibility baseline remains official
+`protenix_mini_esm_v0.5.0` with its native ESM2 conditioner; the ESMC cache is
+not used in this baseline. The protocol is now the complete 3x3 factorial over
+cycles `{1,2,4}` and structure steps `{1,2,5}`, one sample, BF16, MSA/template
+off, and maximum length 1024. The anchor is `(4,5)` and the variance seeds are
+`101,103,107,109,113`.
+
+From the 6,711 post-cutoff temporal candidate groups, 3,464 have HQ-valid
+targets. A deterministic joint-stratified selector (length, resolution,
+apo-like, method) froze 1,024 `temporal_dev_v1` groups, a nested 128-group
+`temporal_variance_v1` subset, and 2,440 remaining HQ groups as
+`frozen_temporal_test_v1`. All 15 strict low-homology groups are excluded from
+dev sampling and listed in `frozen_temporal_low_homology_groups_v1`; eight have
+HQ targets and seven remain group-only exclusions because no HQ target exists.
+Repeated generation with the same seed produced identical manifest SHA256s.
+
+The first Protenix runner targets the exclusive `i64m1tga800ue` partition with
+one A800 and records command/environment plus `/usr/bin/time -v` output. The
+current HPC compatibility environment has no Protenix CLI installed, so
+`protenix==0.5.0`, checkpoint SHA256, and fixed kernel/backend metadata remain
+mandatory pre-run fields; no Stage 0 accuracy result is claimed yet.

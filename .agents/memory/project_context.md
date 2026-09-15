@@ -159,3 +159,11 @@ contains all 38,400 quality-valid exact sequence groups and passed an
 independent Slurm validator. ESMC special tokens are removed only after an
 explicit `L+2` assertion, and residue features are stored as BF16 sharded
 safetensors.
+
+Stage 0A is frozen as a compatibility-only Protenix Mini-ESM experiment. Its
+view is `stage0_v1`: 1,024 HQ-valid temporal dev groups, a nested 128-group
+five-seed variance subset, 2,440 remaining HQ-valid frozen-test groups, and a
+separate complete 15-group strict-low-homology exclusion list. The sweep is
+the 3x3 `{1,2,4} cycles x {1,2,5} steps` factorial through length 1024. It
+must run on a fixed declared backend, preferably exclusive `i64m1tga800ue`,
+before any ESMC-conditioned model tuning uses the frozen test.

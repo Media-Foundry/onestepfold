@@ -3,28 +3,44 @@
 
 [protocol]
 model_name = "protenix_mini_esm_v0.5.0"
+protenix_package = "protenix==0.5.0"
+protenix_revision = "required-before-run"
+checkpoint_sha256 = "required-before-run"
 use_msa = false
 use_template = false
 dtype = "bf16"
+tf32 = false
+kernel_backend = "fixed-and-recorded-before-run"
 sample = 1
 seed = 101
 variance_seeds = [101, 103, 107, 109, 113]
 training_cutoff = "2021-09-30"
-max_length = 768
+max_length = 1024
+temporal_dev_groups = 1024
+variance_subset_groups = 128
+temporal_dev_manifest = "temporal_dev_v1.jsonl.gz"
+frozen_temporal_test_manifest = "frozen_temporal_test_v1.jsonl.gz"
+anchor = "c4_s5"
+component_timing_status = "requires-Protenix-internal-hooks"
 
 [[sweep]]
-name = "c4_s5"
-cycles = 4
-steps = 5
+name = "c1_s1"
+cycles = 1
+steps = 1
 
 [[sweep]]
-name = "c4_s2"
-cycles = 4
+name = "c1_s2"
+cycles = 1
 steps = 2
 
 [[sweep]]
-name = "c4_s1"
-cycles = 4
+name = "c1_s5"
+cycles = 1
+steps = 5
+
+[[sweep]]
+name = "c2_s1"
+cycles = 2
 steps = 1
 
 [[sweep]]
@@ -33,14 +49,24 @@ cycles = 2
 steps = 2
 
 [[sweep]]
-name = "c1_s2"
-cycles = 1
+name = "c2_s5"
+cycles = 2
+steps = 5
+
+[[sweep]]
+name = "c4_s1"
+cycles = 4
+steps = 1
+
+[[sweep]]
+name = "c4_s2"
+cycles = 4
 steps = 2
 
 [[sweep]]
-name = "c1_s1"
-cycles = 1
-steps = 1
+name = "c4_s5"
+cycles = 4
+steps = 5
 
 [evaluation]
 metrics = [
@@ -56,4 +82,4 @@ metrics = [
   "ramachandran_outlier_rate",
   "chirality_violations",
 ]
-length_bins = ["40-127", "128-255", "256-511", "512-768"]
+length_bins = ["20-127", "128-255", "256-511", "512-768", "769-1024"]
