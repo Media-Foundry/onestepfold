@@ -11,6 +11,8 @@ HF_REVISION="${HF_REVISION:?HF_REVISION is required}"
 CODE_REVISION="${CODE_REVISION:?CODE_REVISION is required}"
 CODE_COMMIT="${CODE_COMMIT:-$CODE_REVISION}"
 FEATURE_VARIANT="${FEATURE_VARIANT:-all}"
+BATCH_TOKENS="${BATCH_TOKENS:-4096}"
+SHARD_TOKENS="${SHARD_TOKENS:-16384}"
 LIMIT="${LIMIT:-}"
 
 export PYTHONPATH="$CODE_ROOT/src${ESM_PYTHONPATH:+:$ESM_PYTHONPATH}${PYTHONPATH:+:$PYTHONPATH}"
@@ -25,6 +27,8 @@ args=(
   --code-revision "$CODE_REVISION"
   --code-commit "$CODE_COMMIT"
   --feature-variant "$FEATURE_VARIANT"
+  --batch-tokens "$BATCH_TOKENS"
+  --shard-tokens "$SHARD_TOKENS"
 )
 if [[ -n "$LIMIT" ]]; then
   args+=(--limit "$LIMIT")
