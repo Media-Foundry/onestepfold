@@ -8,7 +8,7 @@ def test_stage0_protocol_is_explicit() -> None:
 
     protocol = config["protocol"]
     assert protocol["model_name"] == "protenix_mini_esm_v0.5.0"
-    assert protocol["protenix_package"] == "protenix==0.5.0"
+    assert protocol["protenix_package"] == "protenix==1.1.0"
     assert protocol["protenix_revision"] == "required-before-run"
     assert protocol["checkpoint_sha256"] == "required-before-run"
     assert protocol["use_msa"] is False

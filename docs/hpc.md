@@ -100,18 +100,33 @@ and shard checksums before exposing the cache to model training.
 ## Stage 0A Protenix sweep
 
 The compatibility sweep uses the official `protenix_mini_esm_v0.5.0` checkpoint
-and its ESM2 conditioner. It is independent of the ESMC cache. Prefer an
-exclusive A800 node in `i64m1tga800ue` for the 3x3 matrix; request the full
-node resources and keep the backend fixed across all settings:
+and its ESM2 conditioner. It is independent of the ESMC cache. Submit each of
+the nine factorial points as an independent one-GPU job. This avoids relying on
+an eight-GPU whole-node allocation and makes failed points independently
+restartable; each job has a bounded 12-hour walltime by default:
 
 ```bash
 module load slurm
-sbatch --partition=i64m1tga800ue --gres=gpu:a800:1 \
-  --exclusive --cpus-per-task=64 --mem=1024G --time=07-00:00:00 \
-  --export=ALL,INPUT_JSON=/path/to/temporal_dev_v1.json,\
-OUTPUT_ROOT=/path/to/stage0_runs,PROTENIX_BIN=/path/to/protenix \
-  scripts/slurm_stage0_protenix.sh
+INPUT_JSON=/path/to/temporal_dev_v1.json \
+OUTPUT_ROOT=/path/to/stage0_runs \
+PROTENIX_BIN=/path/to/protenix \
+PROTENIX_PYTHON=/path/to/python \
+PROTENIX_PYTHONPATH=/path/to/protenix/site \
+PROTENIX_ROOT_DIR=/path/to/protenix/runtime \
+scripts/submit_stage0_sweep.sh
 ```
+
+The launcher requests `--gres=gpu:a800:1`, `--cpus-per-task=8`,
+`--mem=64G`, and `--time=12:00:00` for each setting. Override `TIME_LIMIT`
+only after measuring a real run.
+`slurm_stage0_protenix.sh` remains useful for one-point retries by setting
+`STAGE0_SETTING=c4_s5` (or another frozen name).
+
+The current CLI runtime is `protenix==1.1.0`; the selected model checkpoint is
+still `protenix_mini_esm_v0.5.0`. Pin both independently and record their
+checksums. `PROTENIX_PYTHONPATH` is optional when the package is installed in
+the active environment. `PROTENIX_ROOT_DIR` must point to a writable runtime
+root containing the downloaded checkpoint and inference caches.
 
 The runner must use `--use_default_params false`, `--cycle`, `--step`, and
 `--sample 1` for every point, and must record the pinned Protenix commit,

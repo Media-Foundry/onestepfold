@@ -3,7 +3,9 @@
 
 [protocol]
 model_name = "protenix_mini_esm_v0.5.0"
-protenix_package = "protenix==0.5.0"
+# The v0.5.0 checkpoint is loaded through the modern v1.1.0 CLI.  Keep the
+# runtime package version separate from the model name above.
+protenix_package = "protenix==1.1.0"
 protenix_revision = "required-before-run"
 checkpoint_sha256 = "required-before-run"
 use_msa = false
