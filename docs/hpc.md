@@ -57,3 +57,41 @@ find /hpc2hdd/home/shuang886/Folding/catalog_v1 -name 'shard-*.jsonl.gz' | wc -l
 Do not run a second launcher against the same output directory. A full scan is
 accepted only after successful and error counts sum to `244406`, PDB IDs are
 unique, and all error/shard files have been audited.
+
+## ESMC probe and cache
+
+The ESMC operation runs on an A800 node after the GT/split artifacts are
+frozen. The first job writes a 2,000-group all-layer probe; it is intentionally
+separate from the eventual full cache so a layer-selection experiment does not
+force a 37x larger corpus artifact.
+
+The launcher expects the pinned revisions in the cache contract and an ESMC
+runtime environment. On hpc2, the currently validated compatibility runtime is
+the existing CUDA Torch environment plus the pinned Biohub source and its
+dependency directory:
+
+```bash
+module load slurm
+sbatch --job-name=onefold-esmc-probe \
+  --partition=i64m1tga800u --gres=gpu:a800:1 \
+  --cpus-per-task=8 --mem=64G --time=04:00:00 \
+  --export=ALL,CODE_ROOT=/hpc2hdd/home/shuang886/Folding/catalog_pilot_code,\
+ESM_ENV=/hpc2ssd/softwares/anaconda3/envs/af3,\
+GROUPS=/hpc2hdd/home/shuang886/Folding/splits_v1/groups.jsonl.gz,\
+OUTPUT_ROOT=/hpc2hdd/home/shuang886/Folding/esmc_probe_all,\
+HF_REVISION=28aed46fcaf217dfa59f78a589bb449aa3ae5d98,\
+CODE_REVISION=bf343ba264b650dff7a073643725f9aaa1fdbe8d,\
+LIMIT=2000 \
+  /hpc2hdd/home/shuang886/Folding/catalog_pilot_code/scripts/slurm_probe_esmc_layers.sh
+```
+
+For that compatibility environment, prepend
+`/hpc2hdd/home/shuang886/Folding/vendor/esm-bf343ba` and
+`/hpc2hdd/home/shuang886/Folding/esmc_py311_pkgs` to `PYTHONPATH` in the job
+export. The production Python 3.12 environment should use Torch 2.11+ and the
+same Biohub commit; do not mix the two environments in a benchmark table.
+
+After the probe selects a feature variant, use
+`scripts/slurm_build_esmc_cache.sh` with the same revisions and an independent
+output root. Inspect `feature_spec.json`, `summary.json`, the manifest count,
+and shard checksums before exposing the cache to model training.
