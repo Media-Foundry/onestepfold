@@ -15,6 +15,7 @@ FEATURE_VARIANT="${FEATURE_VARIANT:-all}"
 export PYTHONPATH="$CODE_ROOT/src${ESM_PYTHONPATH:+:$ESM_PYTHONPATH}${PYTHONPATH:+:$PYTHONPATH}"
 export HF_HOME="${HF_HOME:-/hpc2hdd/home/shuang886/Folding/hf_cache}"
 export TRANSFORMERS_CACHE="${TRANSFORMERS_CACHE:-$HF_HOME/transformers}"
+export HF_HUB_DISABLE_XET="${HF_HUB_DISABLE_XET:-1}"
 
 exec "$ESM_ENV/bin/python" -u "$CODE_ROOT/scripts/build_esmc_cache.py" \
   --groups "$GROUPS" \

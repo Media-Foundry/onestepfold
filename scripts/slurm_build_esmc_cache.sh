@@ -16,6 +16,7 @@ LIMIT="${LIMIT:-}"
 export PYTHONPATH="$CODE_ROOT/src${ESM_PYTHONPATH:+:$ESM_PYTHONPATH}${PYTHONPATH:+:$PYTHONPATH}"
 export HF_HOME="${HF_HOME:-/hpc2hdd/home/shuang886/Folding/hf_cache}"
 export TRANSFORMERS_CACHE="${TRANSFORMERS_CACHE:-$HF_HOME/transformers}"
+export HF_HUB_DISABLE_XET="${HF_HUB_DISABLE_XET:-1}"
 args=(
   --groups "$GROUPS"
   --output-root "$OUTPUT_ROOT"
