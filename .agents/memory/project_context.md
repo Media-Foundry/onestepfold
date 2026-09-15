@@ -128,3 +128,22 @@ one coordinate model, and a 20--1024 residue protein construct. Water, ions,
 and small molecules remain allowed in `monomer_clean`; zero-small-molecule
 records are marked as the `monomer_apo_like` subset. Resolution and coordinate
 completeness thresholds remain pending the full catalog and Stage B audit.
+
+The full Stage B v1 materialization is now accepted: all 84,232 monomer-clean
+records succeeded across 348 tar shards, with 168,464 expected members and zero
+shape, mask, finite-coordinate, or materialization errors. Full-corpus median
+frame and canonical-heavy-atom coverage are 0.967 and 0.963. The frozen
+`gt_quality_v1` policy yields 78,259 Train-valid records, 45,815 HQ-Eval-valid
+records, and 5,973 rejects. It retains modified residues with unmapped side
+chains masked and records clash density without making it a hard v1 filter.
+
+Quality filtering rebuilt 38,400 exact sequence groups. Initial-release time
+split at 2021-09-30 contains 31,689 train-seen groups (59,959 records), 6,711
+unseen temporal test groups (12,940 records), and 932 leakage-excluded
+post-cutoff same-sequence groups (5,360 records). A Biopython PairwiseAligner
+near-homology audit uses a separate high-gap-cost global scoring policy,
+residue identity, shorter-sequence coverage >=0.70, and at least 50 aligned
+residues. Strict identity <0.30 leaves 15 groups (18 records) as the additional
+low-homology test subset; the temporal test remains primary. The split artifacts
+are frozen under `/hpc2hdd/home/shuang886/Folding/splits_v1`; ESMC caching is the
+next data operation.

@@ -13,17 +13,24 @@ def test_pairwise_identity_uses_global_alignment_columns():
     assert identical.alignment_length == 4
     assert identical.gap_columns == 0
     assert identical.identity == 1.0
+    assert identical.residue_identity == 1.0
+    assert identical.shorter_sequence_coverage == 1.0
+    assert identical.full_length_identity == 1.0
 
     insertion = calculate_pairwise_identity("ACDE", "ACDEx")
     assert insertion.matches == 4
     assert insertion.alignment_length == 5
     assert insertion.gap_columns == 1
     assert insertion.identity == pytest.approx(0.8)
+    assert insertion.residue_identity == 1.0
+    assert insertion.shorter_sequence_coverage == 1.0
+    assert insertion.full_length_identity == pytest.approx(0.8)
 
     mutation = calculate_pairwise_identity("ACDE", "ACXE")
     assert mutation.matches == 3
     assert mutation.alignment_length == 4
     assert mutation.identity == pytest.approx(0.75)
+    assert mutation.shorter_sequence_coverage == 1.0
 
 
 def test_exact_identity_groups_verify_with_biopython():

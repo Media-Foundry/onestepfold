@@ -1,0 +1,29 @@
+[policy]
+version = "gt_quality_v1"
+date_cutoff = "2021-09-30"
+allow_terminal_missing = true
+allow_modified_residues = true
+mask_unmapped_modified_sidechains = true
+clash_density_record_only = true
+
+[train]
+max_resolution_angstrom = 4.5
+min_frame_coverage = 0.80
+min_heavy_atom_coverage = 0.75
+max_internal_missing_fraction = 0.15
+require_finite_coordinates = true
+max_ca_chain_break_count = 0
+max_chirality_violation_count = 0
+max_bond_length_outlier_count = 0
+max_peptide_bond_outlier_count = 0
+
+[hq_eval]
+max_resolution_angstrom = 3.0
+min_frame_coverage = 0.95
+min_heavy_atom_coverage = 0.90
+max_internal_missing_fraction = 0.02
+require_finite_coordinates = true
+max_ca_chain_break_count = 0
+max_chirality_violation_count = 0
+max_bond_length_outlier_count = 0
+max_peptide_bond_outlier_count = 0

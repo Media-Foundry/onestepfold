@@ -1,7 +1,6 @@
 # Monomer View and Quality Policy v1
 
-Status: structural eligibility frozen; numeric quality thresholds remain
-pending full-catalog and Stage B distributions.
+Status: frozen for the v1 full materialization and split build.
 
 ## Monomer definition
 
@@ -42,12 +41,32 @@ table.
 
 ## Quality thresholds
 
-Resolution and coordinate completeness are deliberately not frozen in Stage A.
-The full catalog must first report method/resolution/length distributions.
-Stage B then computes residue coverage, backbone coverage, heavy-atom coverage,
-internal missing runs, terminal missing fractions, chain breaks, and geometry
-validity. Mild missingness is retained with masks; severe incompleteness can be
-filtered after its distribution is visible.
+Stage A remains metadata-only. Stage B applies the following two quality tiers
+to materialized coordinate records. A record that fails Train is rejected from
+the primary pool; a Train record that fails HQ-Eval remains usable for masked
+training but is excluded from the strict evaluation tier.
+
+| Condition | Train v1 | HQ-Eval v1 |
+| --- | ---: | ---: |
+| resolution | <=4.5 A | <=3.0 A |
+| N/CA/C frame coverage | >=0.80 | >=0.95 |
+| canonical heavy-atom coverage | >=0.75 | >=0.90 |
+| internal missing fraction | <=0.15 | <=0.02 |
+| finite coordinates | required | required |
+| unexplained CA chain breaks | 0 | 0 |
+| chirality violations | 0 | 0 |
+| bond/peptide outliers | 0 | 0 |
+
+Terminal missing residues are allowed and remain masked. Modified residues are
+retained; side chains without a canonical atom37 mapping are masked while the
+raw component ID is preserved. Steric clashes are recorded as counts and
+densities, but are not a v1 hard rejection because isolated experimental
+clashes can reflect side-chain uncertainty or modified chemistry.
+
+The policy is encoded in `configs/gt_quality_v1.toml` and applied by
+`scripts/filter_stageb_quality.py`. The full catalog is the source for
+eligibility distributions; the full Stage B materialization is the source for
+coordinate-quality decisions.
 
 The eventual quality policy must preserve the distinction between:
 

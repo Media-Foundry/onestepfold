@@ -21,12 +21,39 @@ class PairwiseIdentity:
     matches: int
     alignment_length: int
     gap_columns: int
+    first_length: int
+    second_length: int
+    aligned_residue_count: int
 
     @property
     def identity(self) -> float:
         if self.alignment_length <= 0:
             return 0.0
         return self.matches / self.alignment_length
+
+    @property
+    def alignment_identity(self) -> float:
+        """Identity among all global alignment columns, including gaps."""
+        return self.identity
+
+    @property
+    def residue_identity(self) -> float:
+        """Identity among aligned residue-residue columns only."""
+        if self.aligned_residue_count <= 0:
+            return 0.0
+        return self.matches / self.aligned_residue_count
+
+    @property
+    def shorter_sequence_coverage(self) -> float:
+        """Fraction of the shorter sequence aligned to residues in the other."""
+        shorter = min(self.first_length, self.second_length)
+        return self.aligned_residue_count / shorter if shorter else 0.0
+
+    @property
+    def full_length_identity(self) -> float:
+        """Identical residue count normalized by the longer input sequence."""
+        longer = max(self.first_length, self.second_length)
+        return self.matches / longer if longer else 0.0
 
 
 def _new_aligner():
@@ -42,6 +69,16 @@ def _new_aligner():
     aligner.match_score = 1.0
     aligner.mismatch_score = -1.0
     aligner.open_gap_score = -1.0
+    aligner.extend_gap_score = -1.0
+    return aligner
+
+
+def _new_homology_aligner():
+    """Build a global aligner whose gap cost does not create motif-only hits."""
+    aligner = _new_aligner()
+    aligner.match_score = 2.0
+    aligner.mismatch_score = -1.0
+    aligner.open_gap_score = -8.0
     aligner.extend_gap_score = -1.0
     return aligner
 
@@ -63,7 +100,7 @@ def calculate_pairwise_identity(
     aligner = aligner or _new_aligner()
     alignment = aligner.align(first, second)[0]
     coordinates = alignment.coordinates
-    matches = alignment_length = gap_columns = 0
+    matches = alignment_length = gap_columns = aligned_residue_count = 0
     for column in range(1, len(coordinates[0])):
         first_start = int(coordinates[0, column - 1])
         first_end = int(coordinates[0, column])
@@ -83,13 +120,21 @@ def calculate_pairwise_identity(
                 )
             )
             alignment_length += first_step
+            aligned_residue_count += first_step
         elif first_step:
             alignment_length += first_step
             gap_columns += first_step
         elif second_step:
             alignment_length += second_step
             gap_columns += second_step
-    return PairwiseIdentity(matches, alignment_length, gap_columns)
+    return PairwiseIdentity(
+        matches,
+        alignment_length,
+        gap_columns,
+        len(first),
+        len(second),
+        aligned_residue_count,
+    )
 
 
 def exact_sequence_digest(sequence: str) -> str:

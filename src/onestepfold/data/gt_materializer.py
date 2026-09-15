@@ -252,7 +252,14 @@ def _geometry_qa(
             peptide = distance(index, "C", index + 1, "N")
             peptide_outliers += int(peptide is not None and not 1.1 <= peptide <= 1.6)
             ca_distance = distance(index, "CA", index + 1, "CA")
-            chain_breaks += int(ca_distance is not None and not 2.8 <= ca_distance <= 4.5)
+            # A long distance across an unobserved sequence position is an
+            # explained gap, not an experimental chain break.
+            chain_breaks += int(
+                residue_mask[index]
+                and residue_mask[index + 1]
+                and ca_distance is not None
+                and not 2.8 <= ca_distance <= 4.5
+            )
     clash_count = 0
     try:
         from scipy.spatial import cKDTree
@@ -378,7 +385,8 @@ def materialize_entry(
         current = current + 1 if value else 0
         longest_internal = max(longest_internal, current)
     expected_count = sum(
-        len(CANONICAL_ATOMS.get(letter, ())) + int(index == length - 1)
+        len(CANONICAL_ATOMS.get(letter, ()))
+        + int(index == length - 1 and letter in CANONICAL_ATOMS)
         for index, letter in enumerate(sequence)
     )
     observed_count = int(mask.sum())
@@ -393,18 +401,27 @@ def materialize_entry(
         "frame_coverage": frame_count / length if length else 0.0,
         "backbone4_coverage": backbone4_count / length if length else 0.0,
         "heavy_atom_coverage": observed_count / expected_count if expected_count else 0.0,
+        "observed_residue_count": int(observed.sum()),
+        "expected_heavy_atom_count": expected_count,
+        "observed_heavy_atom_count": observed_count,
         "terminal_missing_fraction": (leading + trailing) / length if length else 0.0,
         "internal_missing_fraction": int(missing.sum() - leading - trailing) / length
         if length
         else 0.0,
         "longest_internal_missing_run": longest_internal,
         "modified_residue_count": modified_count,
+        "modified_residue_fraction": modified_count / length if length else 0.0,
         "selected_altlocs": sorted(selected_altlocs),
         "finite_coordinate_violation_count": int(
             np.isfinite(positions[mask]).all(axis=1).sum() != int(mask.sum())
         ),
     }
-    qa.update(_geometry_qa(positions, mask, np.ones(length, dtype=np.bool_)))
+    qa.update(_geometry_qa(positions, mask, observed))
+    qa["clash_density"] = (
+        qa["steric_clash_count"] / qa["observed_residue_count"]
+        if qa["observed_residue_count"]
+        else 0.0
+    )
     chain_record = row.get("chain_record", {})
     hidden = row.get("asu_observations", {})
     experimental = row.get("experimental", {})
@@ -416,7 +433,8 @@ def materialize_entry(
         "assembly_id": row.get("assembly_id"),
         "model_id": 1,
         "assembly_definition_source": row.get("assembly_definition_source", "unspecified"),
-        "assembly_author_determined": row.get("assembly_definition_source") == "author_determined",
+        "assembly_author_determined": row.get("assembly_definition_source")
+        in {"author_determined", "author_and_software"},
         "assembly_software_determined": row.get("assembly_definition_source")
         in {"software_determined", "author_and_software"},
         "atom_vocabulary": "atom37_heavy_v1",

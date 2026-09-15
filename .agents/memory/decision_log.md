@@ -409,3 +409,41 @@ variance found 3,373 pilot records in 911 exact groups, with 2,462
 representative comparisons and 190 (7.72%) above the fixed RMSD/TM disagreement
 threshold. This supports exact-group-aware record sampling rather than uniform
 PDB-record sampling, but does not by itself freeze quality cutoffs.
+
+## 2026-09-15: Accept full Stage B and freeze split views
+
+Full materialization succeeded for all 84,232 `monomer_clean` records in 348
+tar shards with 168,464 members, zero errors, zero shape/mask/finite-coordinate
+violations, and zero missing member pairs. The frozen quality policy produced
+78,259 Train-valid records, 45,815 HQ-Eval-valid records, and 5,973 rejects.
+
+Quality-filtered exact groups and the initial-release cutoff (2021-09-30) now
+define the split artifacts: 31,689 train-seen groups / 59,959 records, 6,711
+unseen temporal test groups / 12,940 records, and 932 leakage-excluded
+post-cutoff same-sequence groups / 5,360 records. The near-homology audit uses
+Biopython `PairwiseAligner` with a separate high-gap-cost global scoring policy,
+residue identity, shorter-sequence coverage >=0.70, and at least 50 aligned
+residues. Only 15 groups / 18 records pass the strict <0.30 identity boundary;
+the temporal test remains the primary held-out benchmark. ESMC embeddings are
+not yet cached; they are the next data-layer operation and will be keyed by
+exact sequence SHA256 plus model revision.
+
+## 2026-09-15: Freeze GT quality v1 and launch full Stage B
+
+Decision: apply a two-tier coordinate policy after full materialization. Train
+v1 requires resolution <=4.5 A, N/CA/C frame coverage >=0.80, canonical
+heavy-atom coverage >=0.75, internal missing fraction <=0.15, finite valid
+coordinates, zero unexplained CA breaks, zero chirality violations, and zero
+configured bond/peptide outliers. HQ-Eval v1 tightens these to <=3.0 A,
+0.95/0.90 coverage, and <=0.02 internal missingness. Terminal missingness is
+allowed and remains masked; modified residues are retained with unmapped side
+chains masked. Clash counts and density are recorded only, not hard filters in
+v1.
+
+The 84,232 `monomer_clean` candidates are materialized in full Stage B tar
+shards. The resulting per-record quality index is the authoritative input for
+rebuilding exact-sequence groups and the 2021-09-30 time split. A group is
+train-seen if it has a valid pre/on-cutoff member; later records of such a group
+are leakage-excluded rather than test records. Only groups whose valid members
+are all post-cutoff are test candidates. ESMC caching remains downstream of
+this quality/split stage.

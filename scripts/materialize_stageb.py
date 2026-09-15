@@ -117,6 +117,35 @@ def materialize(
                     "metadata": json_name,
                     "pilot_component": row.get("pilot_component"),
                     "pilot_stratum": row.get("pilot_stratum"),
+                    "sequence": str(row.get("sequence", "")),
+                    "sequence_length": int(
+                        row.get("sequence_length", len(row.get("sequence", "")))
+                    ),
+                    "resolution_high_angstrom": row.get(
+                        "resolution_high_angstrom",
+                        metadata["experimental"].get("resolution_high_angstrom"),
+                    ),
+                    "experimental_methods": row.get(
+                        "experimental_methods", metadata["experimental"].get("methods", [])
+                    ),
+                    "model_count": int(
+                        row.get("model_count", metadata["experimental"].get("model_count", 1))
+                    ),
+                    "initial_deposition_date": row.get(
+                        "initial_deposition_date",
+                        metadata["experimental"].get("initial_deposition_date"),
+                    ),
+                    "initial_release_date": row.get(
+                        "initial_release_date",
+                        metadata["experimental"].get("initial_release_date"),
+                    ),
+                    "latest_revision_date": row.get(
+                        "latest_revision_date",
+                        metadata["experimental"].get("latest_revision_date"),
+                    ),
+                    "assembly_id": row.get("assembly_id"),
+                    "assembly_definition_source": row.get("assembly_definition_source"),
+                    "views": row.get("views", []),
                     "qa": metadata["qa"],
                 }
             )

@@ -1,6 +1,7 @@
 # Sequence Identity Split Protocol v1
 
-Status: method frozen; no train/validation/test partition has been generated.
+Status: method and v1 split manifests generated on the quality-filtered Stage B
+corpus.
 
 ## Authoritative SI calculator
 
@@ -22,6 +23,13 @@ identity group. Empty sequences are invalid split keys. The implementation is
 
 `Bio.Align.PairwiseAligner` is used instead of the deprecated `pairwise2`
 interface. The Biopython version is recorded with the split manifest.
+
+For the separate near-homology audit, identity is calculated among aligned
+residue-residue columns, with shorter-sequence coverage and a minimum of 50
+aligned residues. That audit uses a distinct global scoring policy (match +2,
+mismatch -1, gap open -8, gap extend -1) so unrelated sequences cannot be
+represented as many tiny gap-separated motif matches. The exact-100% manifest
+continues to use the strict scoring policy above.
 
 ## Scaling and CPU execution
 
@@ -45,3 +53,17 @@ Exact-sequence groups are assigned atomically to one split. Near-identical
 sequences, engineered constructs, and small mutations remain eligible records
 and are not removed by this policy. The 100% SI grouping itself does not claim
 family-level separation; any stricter homology boundary is a separate analysis.
+
+## v1 generated views
+
+The quality-filtered exact groups contain 38,400 groups. The 2021-09-30 initial
+release cutoff gives 31,689 train-seen groups (59,959 pre-cutoff records) and
+6,711 unseen temporal test groups (12,940 post-cutoff records). Later records
+whose exact group has a valid pre-cutoff member are written to
+`post_cutoff_same_sequence` (932 groups, 5,360 records), not to test.
+
+The strict low-homology audit compares every temporal test group with all
+31,689 train groups. With residue identity <30%, shorter-sequence coverage
+>=70%, and >=50 aligned residues, 15 groups (18 records) pass. The full
+temporal test remains the primary held-out view; the low-homology subset is a
+small additional stress test rather than a replacement for it.
