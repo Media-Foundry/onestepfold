@@ -77,6 +77,7 @@ sbatch --job-name=onefold-esmc-probe \
   --cpus-per-task=8 --mem=64G --time=04:00:00 \
   --export=ALL,CODE_ROOT=/hpc2hdd/home/shuang886/Folding/catalog_pilot_code,\
 ESM_ENV=/hpc2ssd/softwares/anaconda3/envs/af3,\
+ESM_PYTHONPATH=/hpc2hdd/home/shuang886/Folding/vendor/esm-bf343ba:/hpc2hdd/home/shuang886/Folding/esmc_py311_pkgs,\
 GROUPS=/hpc2hdd/home/shuang886/Folding/splits_v1/groups.jsonl.gz,\
 OUTPUT_ROOT=/hpc2hdd/home/shuang886/Folding/esmc_probe_all,\
 HF_REVISION=28aed46fcaf217dfa59f78a589bb449aa3ae5d98,\
