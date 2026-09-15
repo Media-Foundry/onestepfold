@@ -482,4 +482,7 @@ BF16 feature data. The independent Slurm validator completed successfully in
 BF16 shape checks, and per-shard SHA256 checks. The cache is stored under
 `/hpc2hdd/home/shuang886/Folding/esmc_600m_final_v1`; ESMC all-layer features
 remain available only in the 2,000-group probe artifact to avoid multiplying
-the production cache by 37.
+the production cache by 37. A pinned-model recomputation of one 327-residue
+sequence matched its cached slice at cosine 0.999992 (maximum absolute error
+0.00387 in float32 comparison after BF16 storage), and eight random cached
+slices were finite with exact residue-by-hidden shape.
