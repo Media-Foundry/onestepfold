@@ -145,15 +145,17 @@ near-homology audit uses a separate high-gap-cost global scoring policy,
 residue identity, shorter-sequence coverage >=0.70, and at least 50 aligned
 residues. Strict identity <0.30 leaves 15 groups (18 records) as the additional
 low-homology test subset; the temporal test remains primary. The split artifacts
-are frozen under `/hpc2hdd/home/shuang886/Folding/splits_v1`; ESMC caching is the
-next data operation.
+are frozen under `/hpc2hdd/home/shuang886/Folding/splits_v1`; the validated ESMC
+cache is now the sequence-conditioning artifact for Stage 0.
 
-The ESMC cache contract is versioned in `docs/esmc_cache_v1.md`. The active
-probe/cache model is `biohub/ESMC-600M` at HF revision
+The ESMC cache contract is versioned in `docs/esmc_cache_v1.md`. The production
+cache uses `biohub/ESMC-600M` at HF revision
 `28aed46fcaf217dfa59f78a589bb449aa3ae5d98`, using Biohub/esm revision
-`bf343ba264b650dff7a073643725f9aaa1fdbe8d`. Cache keys include the sequence
-SHA256, model and both revisions, feature variant, and dtype. The first artifact
-is an all-layer, 2,000-group probe; a full cache is blocked until a contact or
-distance probe selects the representation variant. ESMC special tokens are
-removed only after an explicit `L+2` assertion, and residue features are stored
-as BF16 sharded safetensors.
+`bf343ba264b650dff7a073643725f9aaa1fdbe8d`, with the final residue layer as
+the feature variant. Cache keys include the sequence SHA256, model and both
+revisions, feature variant, and dtype. An all-layer, 2,000-group probe remains
+available as an auditable representation diagnostic. The production cache
+contains all 38,400 quality-valid exact sequence groups and passed an
+independent Slurm validator. ESMC special tokens are removed only after an
+explicit `L+2` assertion, and residue features are stored as BF16 sharded
+safetensors.

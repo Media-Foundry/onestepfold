@@ -471,3 +471,15 @@ AUROC 0.706, versus 0.635 for layer 34 and 0.615 for a simple 12/24/36
 concatenation. This is a representation diagnostic rather than a folding claim;
 the final-layer result supports using `feature_variant=final` for the full
 cache while retaining the all-layer probe as an auditable artifact.
+
+## 2026-09-15: Accept the ESMC-600M final-layer cache
+
+The pinned final-layer cache completed on one A800 in 33m47s using local-only
+Hugging Face files. It contains 38,400/38,400 quality-valid exact sequence
+groups, 11,615,845 residue rows, 178 sharded safetensors, and 26.8 GB of
+BF16 feature data. The independent Slurm validator completed successfully in
+1m11s with exact group coverage, unique manifest IDs, model/revision checks,
+BF16 shape checks, and per-shard SHA256 checks. The cache is stored under
+`/hpc2hdd/home/shuang886/Folding/esmc_600m_final_v1`; ESMC all-layer features
+remain available only in the 2,000-group probe artifact to avoid multiplying
+the production cache by 37.
