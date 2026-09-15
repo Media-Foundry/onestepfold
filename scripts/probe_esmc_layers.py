@@ -66,6 +66,24 @@ def _load_cache_rows(cache_root: Path) -> dict[str, dict[str, Any]]:
     return {str(row["group_id"]): row for row in rows}
 
 
+def _load_compact_labels(path: Path) -> dict[str, tuple[np.ndarray, np.ndarray]]:
+    """Load CA labels exported from the HPC GT shards for a local probe."""
+    arrays = np.load(path, allow_pickle=False)
+    group_ids = [str(value) for value in arrays["group_ids"]]
+    lengths = np.asarray(arrays["lengths"], dtype=np.int64)
+    positions = np.asarray(arrays["positions"], dtype=np.float32)
+    masks = np.asarray(arrays["masks"], dtype=bool)
+    if len(group_ids) != len(lengths) or sum(lengths) != len(positions):
+        raise ValueError("compact contact labels have inconsistent lengths")
+    result: dict[str, tuple[np.ndarray, np.ndarray]] = {}
+    offset = 0
+    for group_id, length in zip(group_ids, lengths, strict=True):
+        end = offset + int(length)
+        result[group_id] = (positions[offset:end], masks[offset:end])
+        offset = end
+    return result
+
+
 def _fit_probe(x: np.ndarray, y: np.ndarray, train_mask: np.ndarray) -> float:
     try:
         from sklearn.linear_model import SGDClassifier
@@ -89,6 +107,7 @@ def run_probe(
     output_path: Path,
     limit: int = 500,
     pairs_per_group: int = 128,
+    labels_path: Path | None = None,
 ) -> dict[str, Any]:
     cache_rows = _load_cache_rows(cache_root)
     train_records = _read_jsonl_gz(train_manifest)
@@ -107,11 +126,15 @@ def run_probe(
     train_group_count = max(1, int(round(len(groups) * 0.8)))
     train_groups = {str(row["group_id"]) for row in groups[:train_group_count]}
 
+    compact_labels = _load_compact_labels(labels_path) if labels_path else {}
     samples: list[tuple[str, np.ndarray, np.ndarray, dict[str, Any]]] = []
     for group in groups:
         group_id = str(group["group_id"])
+        label_arrays = compact_labels.get(group_id)
+        if labels_path and label_arrays is None:
+            continue
         pairs = _sample_pairs(
-            *_read_npz(record_by_group[group_id]),
+            *(label_arrays if label_arrays is not None else _read_npz(record_by_group[group_id])),
             pairs_per_group,
             np.random.default_rng(int(group_id[:16], 16)),
         )
@@ -125,29 +148,39 @@ def run_probe(
         for name in samples[0][3]["feature_names"]
         if name.startswith("layer_")
     )
+    # Load each shard once. Keeping the sampled pair features in memory avoids
+    # rereading the same 1.3 GB all-layer shard once per layer.
+    x_by_feature: dict[str, list[np.ndarray]] = {name: [] for name in feature_names}
+    labels_by_feature: dict[str, list[np.ndarray]] = {name: [] for name in feature_names}
+    group_by_feature: dict[str, list[np.ndarray]] = {name: [] for name in feature_names}
+    open_shard: str | None = None
+    tensors: dict[str, np.ndarray] = {}
+    for group_id, pairs, labels, row in samples:
+        if row["shard"] != open_shard:
+            from safetensors.torch import load_file
+
+            tensors = {
+                name: value.float().numpy()
+                for name, value in load_file(str(cache_root / row["shard"])).items()
+            }
+            open_shard = row["shard"]
+        start = int(row["offset_start"])
+        end = int(row["offset_end"])
+        for feature_name in feature_names:
+            hidden = tensors[feature_name][start:end]
+            x_by_feature[feature_name].append(
+                np.abs(hidden[pairs[:, 0]] - hidden[pairs[:, 1]])
+            )
+            labels_by_feature[feature_name].append(labels)
+            group_by_feature[feature_name].append(
+                np.full(labels.shape, group_id, dtype=object)
+            )
+
     results: list[dict[str, Any]] = []
     for feature_name in feature_names:
-        x_parts: list[np.ndarray] = []
-        y_parts: list[np.ndarray] = []
-        group_parts: list[np.ndarray] = []
-        open_shard: str | None = None
-        tensors: dict[str, Any] = {}
-        for group_id, pairs, labels, row in samples:
-            if row["shard"] != open_shard:
-                from safetensors.numpy import load_file
-
-                tensors = load_file(str(cache_root / row["shard"]))
-                open_shard = row["shard"]
-            hidden = np.asarray(tensors[feature_name], dtype=np.float32)
-            start = int(row["offset_start"])
-            h = hidden[start : int(row["offset_end"])]
-            pair_features = np.abs(h[pairs[:, 0]] - h[pairs[:, 1]])
-            x_parts.append(pair_features)
-            y_parts.append(labels)
-            group_parts.append(np.full(labels.shape, group_id, dtype=object))
-        x = np.concatenate(x_parts, axis=0)
-        y = np.concatenate(y_parts, axis=0)
-        group_ids = np.concatenate(group_parts, axis=0)
+        x = np.concatenate(x_by_feature[feature_name], axis=0)
+        y = np.concatenate(labels_by_feature[feature_name], axis=0)
+        group_ids = np.concatenate(group_by_feature[feature_name], axis=0)
         train_mask = np.asarray([group_id in train_groups for group_id in group_ids])
         results.append(
             {
@@ -157,6 +190,24 @@ def run_probe(
                 "positive_fraction": float(y.mean()),
             }
         )
+
+    def fit_combined(name: str, names: tuple[str, ...]) -> None:
+        x = np.concatenate(
+            [np.concatenate(x_by_feature[layer], axis=0) for layer in names], axis=1
+        )
+        y = np.concatenate(labels_by_feature[names[0]], axis=0)
+        group_ids = np.concatenate(group_by_feature[names[0]], axis=0)
+        train_mask = np.asarray([group_id in train_groups for group_id in group_ids])
+        results.append(
+            {
+                "feature": name,
+                "heldout_auroc": _fit_probe(x, y, train_mask),
+                "pairs": int(y.size),
+                "positive_fraction": float(y.mean()),
+            }
+        )
+
+    fit_combined("layers_12_24_36_concat", ("layer_12", "layer_24", "layer_36"))
 
     output = {
         "cache": str(cache_root),
@@ -181,6 +232,7 @@ def main() -> None:
     parser.add_argument("--output", type=Path, required=True)
     parser.add_argument("--limit", type=int, default=500)
     parser.add_argument("--pairs-per-group", type=int, default=128)
+    parser.add_argument("--labels", type=Path, default=None)
     args = parser.parse_args()
     run_probe(
         args.cache_root,
@@ -189,6 +241,7 @@ def main() -> None:
         args.output,
         args.limit,
         args.pairs_per_group,
+        args.labels,
     )
 
 

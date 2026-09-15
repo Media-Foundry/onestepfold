@@ -463,3 +463,11 @@ the folding representation may not be optimal at the final MLM layer alone.
 Caching all layers for the full corpus would multiply storage by roughly 37, so
 the probe is a cheap, reversible decision gate. ESMC remains a frozen sequence
 representation prior; it is not treated as a structure-coordinate teacher.
+
+The local 2,000-group all-layer smoke completed 2,000/2,000 groups and 594,600
+residues in 37 BF16 safetensors shards. A preliminary 500-group,
+group-held-out CA-contact probe (32,000 balanced pairs) scored layer 36 at
+AUROC 0.706, versus 0.635 for layer 34 and 0.615 for a simple 12/24/36
+concatenation. This is a representation diagnostic rather than a folding claim;
+the final-layer result supports using `feature_variant=final` for the full
+cache while retaining the all-layer probe as an auditable artifact.
