@@ -524,3 +524,9 @@ repeating the other eight points.
 The staged ESM2 conditioner is `esm2_t36_3B_UR50D.pt` with SHA256
 `7de8b4082ba15891959ab368b77ce3886697af1efb16d3c9e9e7b0c5d3f07500`; it is
 stored beside the Mini checkpoint under the pinned Protenix runtime root.
+
+The functional gate and full 3x3 sweep were submitted on hpc2 as independent
+one-GPU jobs. The smoke gate is job `12754884`, the one-target functional gate
+is `12755045`, and the nine factorial jobs are `12755102` through `12755110`.
+All full jobs depend on `afterok:12755045`; pending scheduler state is not an
+inference result.
