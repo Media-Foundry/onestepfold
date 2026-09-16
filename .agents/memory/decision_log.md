@@ -757,17 +757,21 @@ structure, not a claim about the signed `L x L x d` residual tensor.
 
 The next work is parallel rather than serial. `select_teacher_pairs.py`
 selects one deterministic quality-valid pre-cutoff train record per exact
-sequence group; a 32-group smoke passed and 16-shard, 16,000-group `c2_s2`
-and `c4_s2` arrays are queued as Slurm jobs `12768788` and `12768789` on
-`emergency_gpu`. The input selector accepts the frozen train-only manifest
+sequence group; a 32-group selector smoke passed and 16-shard, 16,000-group
+`c2_s2` and `c4_s2` arrays are queued as Slurm jobs `12768989` and `12768990`
+on `i64m1tga800ue`. The first queue attempt exposed and fixed zero-padded
+array-shard and Protenix environment propagation issues before any inference
+ran. The input selector accepts the frozen train-only manifest
 which omits an explicit `split` field, while still filtering a combined
 manifest when one is supplied.
 
 The residual overlay now has an opt-in `ONESTEPFOLD_SIGNED_SKETCH=1` path that
 writes deterministic FP16 spatially pooled signed pair sketches and records
-cosines between adjacent residual directions. A 256-target `c4_s2` diagnostic
-is queued as job `12768797`; it is a diagnostic artifact only and does not
-read the frozen temporal test. Coordinate-refiner training remains gated on
+cosines between adjacent residual directions. A one-target A40 debug smoke
+(`12768912`) passed with all three transition sketches and direction cosines;
+the corrected 256-target `c4_s2` diagnostic is queued as `12769005` on the
+debug partition and is a diagnostic artifact only. It does not read the frozen
+temporal test. Coordinate-refiner training remains gated on
 successful teacher-pair QA; no new model claim is made yet.
 
 The first 1B implementation is now in `src/onestepfold/models/coordinate_refiner.py`.
