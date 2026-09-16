@@ -138,12 +138,13 @@ def _install() -> None:
                     **tensor_stats("pair", pair),
                 }
                 if self._onestepfold_residual_cycles:
-                    previous = self._onestepfold_residual_cycles[-1]["_tensors"]
+                    previous = self._onestepfold_residual_cycles[-1].pop("_tensors")
                     current["residual"] = residual_summary(
                         single - previous[0],
                         pair - previous[1],
                         f"c{cycle_index - 1}_to_c{cycle_index}",
                     )
+                    del previous
                 current["_tensors"] = (single.detach().clone(), pair.detach().clone())
                 self._onestepfold_residual_cycles.append(current)
             except Exception as exc:
