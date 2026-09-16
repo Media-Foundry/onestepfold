@@ -118,16 +118,17 @@ has completed on hpc2. Gemmi materialization produced 64 tar shards with
 10,000/10,000 successful records and zero shape, finite-coordinate, mask, or
 member-pair validation errors. The pilot reports coverage and missingness
 distributions, modified-residue strata, geometry screening counts, and exact-
-sequence structural variance. Numeric quality thresholds and final split
-generation remain pending review of that report; ESMC caching is still blocked.
+sequence structural variance. This is the historical pilot milestone; the
+numeric policy, final split, and ESMC cache are superseded by the accepted
+full-corpus milestones below.
 
 The monomer training view is now structurally frozen: choose a biological
 assembly with exactly one generated protein chain instance, zero generated
 nucleic-acid/other-polymer chain instances, a primary X-ray/EM/neutron method,
 one coordinate model, and a 20--1024 residue protein construct. Water, ions,
 and small molecules remain allowed in `monomer_clean`; zero-small-molecule
-records are marked as the `monomer_apo_like` subset. Resolution and coordinate
-completeness thresholds remain pending the full catalog and Stage B audit.
+records are marked as the `monomer_apo_like` subset. The full Stage B audit
+below now freezes the resolution and coordinate-completeness thresholds.
 
 The full Stage B v1 materialization is now accepted: all 84,232 monomer-clean
 records succeeded across 348 tar shards, with 168,464 expected members and zero
