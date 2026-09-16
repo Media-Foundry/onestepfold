@@ -196,3 +196,11 @@ at TM catastrophic risk <=1% improve 2.066 -> 2.031, while joint TM/all-atom
 risk <=1% improves 3.177 -> 3.156. Treat this as a diagnostic result, not a
 novelty claim; retain fixed `c2_s2` and post-cycle-2 reactive convergence as
 baselines, and keep the frozen temporal test untouched.
+
+Stage 0E is complete on `temporal_dev_v1`: an independent c2_s2 run (A800
+job `12761522`) produced 1,024/1,024 two-cycle internal traces with no hook
+errors. The joint c2-to-c4 hard label has 76 positives. At joint risk <=1%,
+the oracle is 2.129 mean cycles, the best current grouped-OOF HGB route is
+2.477, and the existing reactive distance baseline is 2.551. This closes only
+a small oracle gap and uses OOF threshold sweeps, so it is a diagnostic result;
+default to fixed c2_s2 and require nested calibration before frozen-test use.

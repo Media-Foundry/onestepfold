@@ -661,3 +661,26 @@ group coverage. The pinned model revision is
 conditioner ablation; ESMC-600M remains primary. An independent recomputation
 of one 125-residue sequence matched its cached `[125,960]` BF16 slice at cosine
 0.9999932 with maximum absolute error 0.0009766.
+
+## 2026-09-16: Complete Stage 0E c2-to-c4 routing audit
+
+An independent two-cycle `c2_s2` Protenix run completed on A800 job
+`12761522` in 29:56 with 1,024 predictions and zero hook errors. Stage 0E
+labels a target hard when `c2_s2` is worse than `c4_s5` by more than 0.05 in
+TM-style score or all-atom lDDT; 76/1,024 dev targets are hard under this
+joint label. The feature artifact and input checksums are recorded in the
+Stage 0E JSON report.
+
+At joint catastrophe risk <=1%, the GT oracle needs 2.129 mean cycles. The
+best current family-proxy grouped OOF learned policy is HGB with c2 confidence
+and c1-to-c2 trajectory features at 2.477 cycles; c2 confidence plus deltas is
+2.475. The existing reactive c1-to-c2 distance baseline is 2.551 cycles, so
+the learned policy closes only a small part of the oracle gap. A matched-setting
+`c1_s1` to `c2_s2` coordinate-change proxy is weaker at 2.729 cycles and is not
+an in-forward intermediate structure.
+
+This is a positive but diagnostic result, not yet a method claim. Thresholds
+are swept on the same OOF predictions, so the next methodological gate is
+nested calibration or a held-out dev split before any frozen-test evaluation.
+The current default remains fixed `c2_s2`; recycle emulation is not started
+until this calibration is complete.

@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import argparse
+import hashlib
 import json
 from pathlib import Path
 from typing import Any
@@ -81,6 +82,10 @@ def kabsch_rmsd(left: np.ndarray, right: np.ndarray) -> float:
 
 def load_json(path: Path) -> dict[str, Any]:
     return json.loads(path.read_text(encoding="utf-8"))
+
+
+def sha256(path: Path) -> str:
+    return hashlib.sha256(path.read_bytes()).hexdigest()
 
 
 def load_internal(path: Path) -> dict[str, dict[str, Any]]:
@@ -212,6 +217,19 @@ def build(args: argparse.Namespace) -> dict[str, Any]:
         "scope": "temporal_dev_v1 only; frozen temporal test was not read",
         "target_label": "c2_s2 joint TM/all-atom degradation below -0.05 versus c4_s5",
         "feature_definition": "cycle-2 confidence plus c1-to-c2 internal-state trajectory",
+        "coordinate_trajectory_note": (
+            "The coordinate trajectory features compare the standalone c1_s1 and c2_s2 "
+            "settings; they are not saved intermediate coordinates from one c2 forward."
+        ),
+        "inputs": {
+            "base_features": {
+                "path": str(args.base_features),
+                "sha256": sha256(args.base_features),
+            },
+            "c1_eval": {"path": str(args.c1_eval), "sha256": sha256(args.c1_eval)},
+            "c2_eval": {"path": str(args.c2_eval), "sha256": sha256(args.c2_eval)},
+            "c2_internal": {"path": str(args.c2_internal), "sha256": sha256(args.c2_internal)},
+        },
         "records": records,
     }
 

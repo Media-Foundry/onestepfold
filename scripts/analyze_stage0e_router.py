@@ -251,6 +251,29 @@ def analyze(path: Path, seed: int) -> dict[str, Any]:
             routing_curve(records, reactive), "catastrophic_tm_risk"
         ),
     }
+    matched_setting_reactive = np.asarray(
+        [
+            record["features"]["trajectory_coordinate_distance_map_rms_angstrom"]
+            for record in records
+        ]
+    )
+    policies["reactive_c1_s1_to_c2_s2_distance_proxy"] = {
+        "availability": "after_cycle_2",
+        "description": (
+            "Cross-setting c1_s1 to c2_s2 coordinate distance proxy; this is not an "
+            "in-forward intermediate structure."
+        ),
+        "classification": {
+            "auroc": float(roc_auc_score(labels, matched_setting_reactive)),
+            "average_precision": float(average_precision_score(labels, matched_setting_reactive)),
+        },
+        "joint_risk_constrained_points": constrained(
+            routing_curve(records, matched_setting_reactive), "catastrophic_joint_risk"
+        ),
+        "tm_risk_constrained_points": constrained(
+            routing_curve(records, matched_setting_reactive), "catastrophic_tm_risk"
+        ),
+    }
     oracle = oracle_curve(records)
     fixed_c2 = routing_point(records, np.zeros(len(records), dtype=bool), math.inf)
     fixed_c4 = routing_point(records, np.ones(len(records), dtype=bool), math.inf)
@@ -280,6 +303,10 @@ def write_markdown(path: Path, result: dict[str, Any]) -> None:
         (
             "All learned results are family-proxy grouped out-of-fold diagnostics; "
             "frozen temporal test was not read."
+        ),
+        (
+            "The c1_s1 to c2_s2 coordinate feature is a matched-setting proxy, "
+            "not a saved intermediate structure from one c2 forward."
         ),
         "",
         "## Fixed Baselines",
