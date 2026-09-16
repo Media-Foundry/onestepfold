@@ -727,3 +727,8 @@ diagnostic-only backend issue: CUDA `linalg_eigh` does not support BF16 on that
 GPU. Channel covariance is now explicitly accumulated in FP32 before the
 eigendecomposition; model inference remains BF16 and unchanged. A clean smoke
 is required again before the full residual run.
+
+The subsequent A40 run showed the same BF16 limitation inside pooled spatial
+SVD (it dispatches through CUDA eigendecomposition). The pooled spatial
+diagnostic is now also cast to FP32; all residual summaries are analysis-only
+and do not alter Protenix inference.

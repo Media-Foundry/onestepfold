@@ -67,7 +67,7 @@ def _install() -> None:
         total_energy = pair_energy.sum().clamp_min(1e-8)
         pooled_size = min(64, n_token)
         pooled = torch.nn.functional.adaptive_avg_pool2d(
-            pair_norm[None, None], (pooled_size, pooled_size)
+            pair_norm.float()[None, None], (pooled_size, pooled_size)
         )[0, 0]
         singular_values = torch.linalg.svdvals(pooled)
         singular_energy = singular_values.square()
