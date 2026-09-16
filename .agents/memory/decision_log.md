@@ -588,3 +588,17 @@ length was 369.5 residues versus 281.0 outside the tail, and median resolution
 was 2.00 A versus 1.80 A. These are descriptive signals, not causal evidence;
 the next experiment profiles internal model stages and tests representation/
 confidence-based adaptive recycling.
+
+## 2026-09-16: Profile internal Stage 0 model timing
+
+Four independent A800 profiling jobs (`c1_s1`, `c1_s5`, `c4_s1`, `c4_s5`)
+ran on the same 128-target prefix with a runtime-only `sitecustomize` overlay.
+The overlay GPU-synchronizes wrappers around pairformer, diffusion, and the
+confidence head and writes one record per target without changing model code or
+outputs. On the shared-node comparisons, `c1_s5 -> c4_s5` increased median
+pairformer time by approximately `0.585 s` and median model-forward time by
+`0.587 s`; `c4_s1 -> c4_s5` increased median diffusion time by `0.053 s` while
+median pairformer time changed by `0.002 s`. The timing scope excludes model
+load, preprocessing, and output serialization. These results support treating
+recycle/trunk collapse as the primary efficiency target and structure-step
+collapse as a secondary optimization.
