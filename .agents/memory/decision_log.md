@@ -711,3 +711,13 @@ energy within sequence distance <=8 is 0.0027 versus 0.0126. Thus the hard
 tail is not simply a few local side-chain edits; its c2-to-c4 coordinate proxy
 is a broader rearrangement. Hidden-state residual measurements are still
 pending the A800 smoke/full hook.
+
+## 2026-09-16: Fix residual hook shape and failure handling
+
+The first A800 residual smoke reached the model output successfully but exposed
+two hook-only bugs: Protenix's Pairformer hook emits unbatched `[L,C]` and
+`[L,L,C]` tensors, and an exception while summarizing one transition removed
+the previous-cycle tensor before later transitions could use it. The hook now
+normalizes optional batch dimensions and only releases the previous tensor after
+the residual summary succeeds. The original model prediction was unaffected;
+the residual full run remains gated on a clean replacement smoke.

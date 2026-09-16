@@ -41,11 +41,24 @@ def _install() -> None:
             f"{prefix}_normalized_norm_std": math.sqrt(max(0.0, scalar(norm_variance))),
         }
 
+    def strip_optional_batch(single, pair):
+        """Normalize Protenix hook outputs to [L,C] and [L,L,C]."""
+        if single.ndim == 3 and single.shape[0] == 1:
+            single = single[0]
+        if pair.ndim == 4 and pair.shape[0] == 1:
+            pair = pair[0]
+        if single.ndim != 2:
+            raise ValueError(f"unexpected single representation shape: {tuple(single.shape)}")
+        if pair.ndim != 3:
+            raise ValueError(f"unexpected pair representation shape: {tuple(pair.shape)}")
+        return single, pair
+
     def residual_summary(single_delta, pair_delta, transition: str) -> dict[str, float | str]:
-        single_delta = single_delta.detach()
-        pair_delta = pair_delta.detach()
-        single_norm = torch.linalg.vector_norm(single_delta[0], dim=-1)
-        pair_norm = torch.linalg.vector_norm(pair_delta[0], dim=-1)
+        single_delta, pair_delta = strip_optional_batch(
+            single_delta.detach(), pair_delta.detach()
+        )
+        single_norm = torch.linalg.vector_norm(single_delta, dim=-1)
+        pair_norm = torch.linalg.vector_norm(pair_delta, dim=-1)
         pair_energy = pair_norm.square()
         n_token = pair_norm.shape[0]
         row_energy = pair_energy.mean(dim=-1)
@@ -59,7 +72,7 @@ def _install() -> None:
         singular_values = torch.linalg.svdvals(pooled)
         singular_energy = singular_values.square()
         singular_total = singular_energy.sum().clamp_min(1e-8)
-        channel_sample = pair_delta[0].reshape(-1, pair_delta.shape[-1])
+        channel_sample = pair_delta.reshape(-1, pair_delta.shape[-1])
         if channel_sample.shape[0] > 100_000:
             stride = math.ceil(channel_sample.shape[0] / 100_000)
             channel_sample = channel_sample[::stride]
@@ -138,12 +151,16 @@ def _install() -> None:
                     **tensor_stats("pair", pair),
                 }
                 if self._onestepfold_residual_cycles:
-                    previous = self._onestepfold_residual_cycles[-1].pop("_tensors")
+                    previous_entry = self._onestepfold_residual_cycles[-1]
+                    previous = previous_entry.get("_tensors")
+                    if previous is None:
+                        raise RuntimeError("previous cycle representation is unavailable")
                     current["residual"] = residual_summary(
                         single - previous[0],
                         pair - previous[1],
                         f"c{cycle_index - 1}_to_c{cycle_index}",
                     )
+                    previous_entry.pop("_tensors", None)
                     del previous
                 current["_tensors"] = (single.detach().clone(), pair.detach().clone())
                 self._onestepfold_residual_cycles.append(current)
