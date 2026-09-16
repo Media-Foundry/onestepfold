@@ -721,3 +721,9 @@ the previous-cycle tensor before later transitions could use it. The hook now
 normalizes optional batch dimensions and only releases the previous tensor after
 the residual summary succeeds. The original model prediction was unaffected;
 the residual full run remains gated on a clean replacement smoke.
+
+The replacement A40 smoke confirmed the shape fix but found a second
+diagnostic-only backend issue: CUDA `linalg_eigh` does not support BF16 on that
+GPU. Channel covariance is now explicitly accumulated in FP32 before the
+eigendecomposition; model inference remains BF16 and unchanged. A clean smoke
+is required again before the full residual run.

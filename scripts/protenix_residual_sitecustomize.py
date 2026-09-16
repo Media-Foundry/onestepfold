@@ -72,7 +72,8 @@ def _install() -> None:
         singular_values = torch.linalg.svdvals(pooled)
         singular_energy = singular_values.square()
         singular_total = singular_energy.sum().clamp_min(1e-8)
-        channel_sample = pair_delta.reshape(-1, pair_delta.shape[-1])
+        # CUDA eigvalsh has no BF16 implementation on some supported GPUs.
+        channel_sample = pair_delta.float().reshape(-1, pair_delta.shape[-1])
         if channel_sample.shape[0] > 100_000:
             stride = math.ceil(channel_sample.shape[0] / 100_000)
             channel_sample = channel_sample[::stride]
