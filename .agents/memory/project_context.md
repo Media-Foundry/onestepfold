@@ -204,3 +204,13 @@ the oracle is 2.129 mean cycles, the best current grouped-OOF HGB route is
 2.477, and the existing reactive distance baseline is 2.551. This closes only
 a small oracle gap and uses OOF threshold sweeps, so it is a diagnostic result;
 default to fixed c2_s2 and require nested calibration before frozen-test use.
+
+Stage 1A residual characterization is now gated by a clean single-target
+smoke. The runtime hook normalizes Protenix's unbatched `[L,C]`/`[L,L,C]`
+Pairformer outputs, preserves cycle state after diagnostic exceptions, and
+runs SVD/eigendecomposition on detached CPU FP32 tensors for backend
+portability. A four-cycle A40 smoke (`12767861`) produced all three residual
+transitions with zero feature errors. Full temporal-dev `c4_s2` characterization
+is submitted as A800 job `12767871` under
+`/hpc2hdd/home/shuang886/Folding/stage1a/residual_c4s2_v1`; analyze only after
+its JSONL has 1,024 rows and every row has the three required transitions.
