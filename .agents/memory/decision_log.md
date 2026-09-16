@@ -625,6 +625,24 @@ baseline needs 2.920. Therefore a generic classifier is not yet the method;
 future work must test joint-risk targets and genuinely cycle-1 internal state
 features before making a novelty claim.
 
+## 2026-09-16: Complete cycle-1 internal-state router audit
+
+The pinned Protenix cycle-1 hook completed on A800 job `12759723` with
+1,024/1,024 records, one Pairformer-cycle state per target, and zero feature
+errors. It records compact single/pair representation statistics without
+persisting model tensors. The analysis is in
+`reports/stage0d_router_analysis_internal_2026-09-16.{json,md}`; the JSON
+records the feature-file SHA256 for provenance.
+
+Adding these internal statistics to cycle-1 confidence features changes the
+TM-catastrophe (risk <=1%) HGB policy from 2.066 to 2.031 mean cycles. For the
+joint TM/all-atom risk <=1% constraint it changes 3.177 to 3.156 mean cycles;
+the geometry-plus-internal variant is not consistently better. These are
+small, dev-only, out-of-fold diagnostic gains on `temporal_dev_v1`, not a
+method claim. The frozen temporal test remains unread. Stage 0D therefore
+continues to treat predictive risk-aware recycling as the research question,
+with `c2_s2` and reactive convergence retained as strong non-learned baselines.
+
 For sidework, use the two Precision W7900 cards for the pinned ESMC-300M scale
 ablation. Hash-partition the 38,400 exact sequence groups across two independent
 cache writers, merge only manifests, and validate full coverage/checksums. Do

@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import argparse
+import hashlib
 import json
 import math
 from collections import Counter
@@ -51,6 +52,24 @@ GEOMETRY_FEATURES = (
     "ca_pair_q90",
     "ca_contact_fraction_8",
     "ca_contact_fraction_12",
+)
+INTERNAL_FEATURES = (
+    "internal_single_mean",
+    "internal_single_std",
+    "internal_single_abs_mean",
+    "internal_single_normalized_norm_mean",
+    "internal_single_normalized_norm_std",
+    "internal_pair_mean",
+    "internal_pair_std",
+    "internal_pair_abs_mean",
+    "internal_pair_normalized_norm_mean",
+    "internal_pair_normalized_norm_std",
+    "internal_pair_symmetry_abs_mean",
+    "internal_pair_diagonal_mean",
+    "internal_pair_diagonal_std",
+    "internal_pair_diagonal_abs_mean",
+    "internal_pair_diagonal_normalized_norm_mean",
+    "internal_pair_diagonal_normalized_norm_std",
 )
 
 
@@ -217,9 +236,52 @@ def score_summary(labels: np.ndarray, scores: np.ndarray) -> dict[str, float]:
     }
 
 
-def analyze(input_path: Path, seed: int) -> dict[str, Any]:
+def add_internal_features(records: list[dict[str, Any]], path: Path) -> None:
+    feature_rows: dict[str, dict[str, float]] = {}
+    with path.open("r", encoding="utf-8") as handle:
+        for line in handle:
+            row = json.loads(line)
+            sample_name = str(row["sample_name"])
+            if sample_name in feature_rows:
+                raise ValueError(f"duplicate internal feature row: {sample_name}")
+            cycles = row.get("cycles", [])
+            if int(row.get("cycle_count", -1)) != 1 or len(cycles) != 1:
+                raise ValueError(f"expected exactly one cycle for {sample_name}")
+            cycle = cycles[0]
+            if "feature_error" in cycle:
+                raise ValueError(
+                    f"internal feature error for {sample_name}: {cycle['feature_error']}"
+                )
+            features = {
+                f"internal_{key}": float(value)
+                for key, value in cycle.items()
+                if key not in {"cycle_index", "single_shape", "pair_shape"}
+            }
+            if set(features) != set(INTERNAL_FEATURES):
+                missing = sorted(set(INTERNAL_FEATURES) - set(features))
+                extra = sorted(set(features) - set(INTERNAL_FEATURES))
+                raise ValueError(
+                    f"internal feature schema mismatch for {sample_name}: "
+                    f"missing={missing} extra={extra}"
+                )
+            feature_rows[sample_name] = features
+    record_ids = {str(record["group_id"]) for record in records}
+    if set(feature_rows) != record_ids:
+        raise ValueError(
+            f"internal feature coverage mismatch: records={len(record_ids)} "
+            f"features={len(feature_rows)}"
+        )
+    for record in records:
+        record["features"].update(feature_rows[str(record["group_id"])])
+
+
+def analyze(
+    input_path: Path, seed: int, internal_features_path: Path | None = None
+) -> dict[str, Any]:
     payload = json.loads(input_path.read_text(encoding="utf-8"))
     records = payload["records"]
+    if internal_features_path is not None:
+        add_internal_features(records, internal_features_path)
     labels = np.asarray(
         [record["labels"]["hard_c1_vs_c4s1_tm_0p05"] for record in records],
         dtype=np.int64,
@@ -231,6 +293,13 @@ def analyze(input_path: Path, seed: int) -> dict[str, Any]:
             SEQUENCE_FEATURES + CONFIDENCE_FEATURES + GEOMETRY_FEATURES
         ),
     }
+    if internal_features_path is not None:
+        feature_sets["tier_ab_confidence_internal"] = (
+            SEQUENCE_FEATURES + CONFIDENCE_FEATURES + INTERNAL_FEATURES
+        )
+        feature_sets["tier_ab_confidence_geometry_internal"] = (
+            SEQUENCE_FEATURES + CONFIDENCE_FEATURES + GEOMETRY_FEATURES + INTERNAL_FEATURES
+        )
     policies: dict[str, Any] = {}
     fold_manifest: dict[str, Any] | None = None
     for feature_set, names in feature_sets.items():
@@ -314,6 +383,16 @@ def analyze(input_path: Path, seed: int) -> dict[str, Any]:
         "family_proxy_definition": payload["family_proxy_definition"],
         "family_proxy_count": len(family_counts),
         "largest_family_proxy_group": max(family_counts.values()),
+        "internal_features": (
+            {
+                "source": str(internal_features_path),
+                "record_count": len(records),
+                "feature_count": len(INTERNAL_FEATURES),
+                "sha256": hashlib.sha256(internal_features_path.read_bytes()).hexdigest(),
+            }
+            if internal_features_path is not None
+            else None
+        ),
         "cross_validation": fold_manifest,
         "fixed_baselines_vs_c4_s1": fixed,
         "policies": policies,
@@ -420,10 +499,11 @@ def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--input", type=Path, required=True)
     parser.add_argument("--seed", type=int, default=20260916)
+    parser.add_argument("--internal-features", type=Path, default=None)
     parser.add_argument("--output-json", type=Path, required=True)
     parser.add_argument("--output-markdown", type=Path, required=True)
     args = parser.parse_args()
-    result = analyze(args.input, args.seed)
+    result = analyze(args.input, args.seed, args.internal_features)
     args.output_json.parent.mkdir(parents=True, exist_ok=True)
     args.output_json.write_text(
         json.dumps(result, indent=2, sort_keys=True) + "\n", encoding="utf-8"

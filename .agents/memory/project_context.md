@@ -188,3 +188,11 @@ not claim adaptive recycling or early stopping as a new concept. The specific
 question is whether recycle demand can be predicted before paying for the next
 recycle. Clean-Structure MeanFlow is therefore deprioritized until a structure-
 step bottleneck is demonstrated.
+
+The cycle-1 internal-state audit is complete on `temporal_dev_v1` (A800 job
+`12759723`, 1,024 records, zero hook errors). Compact Pairformer single/pair
+statistics provide only a small additional risk-routing signal: HGB mean cycles
+at TM catastrophic risk <=1% improve 2.066 -> 2.031, while joint TM/all-atom
+risk <=1% improves 3.177 -> 3.156. Treat this as a diagnostic result, not a
+novelty claim; retain fixed `c2_s2` and post-cycle-2 reactive convergence as
+baselines, and keep the frozen temporal test untouched.
