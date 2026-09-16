@@ -703,3 +703,11 @@ fraction 0.908, versus 0.747 A and 0.064 for nonhard records. This is strong
 evidence that late recycle correction is concentrated in a small hard tail,
 but it is explicitly a cross-setting coordinate proxy rather than an
 in-forward hidden-state residual.
+
+The expanded coordinate audit adds residual concentration/locality diagnostics.
+For joint-hard targets, the median top-10-residue displacement-energy fraction
+is 0.275 versus 0.676 for nonhard targets, while median pair-distance residual
+energy within sequence distance <=8 is 0.0027 versus 0.0126. Thus the hard
+tail is not simply a few local side-chain edits; its c2-to-c4 coordinate proxy
+is a broader rearrangement. Hidden-state residual measurements are still
+pending the A800 smoke/full hook.
