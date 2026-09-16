@@ -546,3 +546,29 @@ accuracy result. Raw multi-gigabyte CIF/JSON outputs remain on HPC at
 `/hpc2hdd/home/shuang886/Folding/stage0_v1/protenix_runs`; GT-backed TM-score,
 lDDT, RMSD, and geometry evaluation must happen before interpreting the
 factorial quality surface.
+
+## 2026-09-16: Complete Stage 0B GT-backed collapse-surface scoring
+
+All 9,216 Stage 0 predictions were evaluated against their exact sequence-group
+Stage B GT targets. The evaluator reported 9/9 settings with 1,024/1,024
+successful records and no parse or alignment errors. It computes fixed-residue
+Kabsch Cα TM-style score, Cα lDDT, all-heavy-atom lDDT, Kabsch backbone RMSD,
+and sidechain RMSD; the aggregate definition and caveat are documented in
+`reports/stage0_eval_summary_2026-09-16.md`.
+
+The mean Cα TM-style surface was:
+
+```text
+             step=1  step=2  step=5
+cycle=1       0.8809  0.8816  0.8794
+cycle=2       0.8933  0.8944  0.8894
+cycle=4       0.9029  0.9009  0.8990
+```
+
+All-atom lDDT showed the same broad cycle effect but non-monotonic step effect.
+Against the paired `c4_s5` anchor, `c1_s1` had median Delta TM -0.0051 and
+11.5% of targets below -0.05; `c2_s2` was effectively tied (median +0.0002),
+and `c4_s1`/`c4_s2` were slightly above the anchor on this dev view. This is
+evidence to prioritize recycle/trunk collapse and internal structure timing;
+it is not a final temporal-test result and does not yet justify a MeanFlow
+method claim.
