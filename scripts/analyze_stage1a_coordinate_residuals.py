@@ -71,9 +71,25 @@ def analyze(c2_eval: Path, c4_eval: Path) -> dict[str, Any]:
         coord4 = read_ca(Path(row4["prediction_path"]), length)
         aligned_residual, kabsch_rmsd = kabsch(coord2, coord4)
         displacement = np.linalg.norm(aligned_residual, axis=1)
-        distance_rmsd = float(
-            np.sqrt(np.mean((pair_distances(coord2) - pair_distances(coord4)) ** 2))
-        )
+        distance_delta = pair_distances(coord2) - pair_distances(coord4)
+        distance_rmsd = float(np.sqrt(np.mean(distance_delta**2)))
+        pair_index = np.triu_indices(length, k=1)
+        index_distance = pair_index[1] - pair_index[0]
+        distance_energy = distance_delta**2
+        distance_total = max(float(np.sum(distance_energy)), 1e-8)
+        displacement_energy = displacement**2
+        displacement_total = max(float(np.sum(displacement_energy)), 1e-8)
+        active = displacement > 1.0
+        runs = []
+        start = None
+        for position, is_active in enumerate(active):
+            if is_active and start is None:
+                start = position
+            elif not is_active and start is not None:
+                runs.append(position - start)
+                start = None
+        if start is not None:
+            runs.append(length - start)
         c2_tm = float(row2["tm_score_ca"])
         c4_tm = float(row4["tm_score_ca"])
         c2_lddt = float(row2["all_atom_lddt"])
@@ -87,6 +103,21 @@ def analyze(c2_eval: Path, c4_eval: Path) -> dict[str, Any]:
                 "residual_mean": float(np.mean(displacement)),
                 "residual_p90": float(np.quantile(displacement, 0.90)),
                 "residual_active_fraction": float(np.mean(displacement > 1.0)),
+                "residual_top10_energy_fraction": float(
+                    np.sort(displacement_energy)[-max(1, min(10, length)) :].sum()
+                    / displacement_total
+                ),
+                "residual_top25_energy_fraction": float(
+                    np.sort(displacement_energy)[-max(1, min(25, length)) :].sum()
+                    / displacement_total
+                ),
+                "residual_active_run_max": float(max(runs, default=0)),
+                "pair_distance_energy_band_8_fraction": float(
+                    distance_energy[index_distance <= 8].sum() / distance_total
+                ),
+                "pair_distance_energy_band_16_fraction": float(
+                    distance_energy[index_distance <= 16].sum() / distance_total
+                ),
                 "delta_c2_vs_c4_tm": c2_tm - c4_tm,
                 "delta_c2_vs_c4_all_atom_lddt": c2_lddt - c4_lddt,
                 "joint_hard_vs_c4s5": bool(c2_tm - c4_tm < -0.05 or c2_lddt - c4_lddt < -0.05),
@@ -104,6 +135,11 @@ def analyze(c2_eval: Path, c4_eval: Path) -> dict[str, Any]:
                 "residual_mean",
                 "residual_p90",
                 "residual_active_fraction",
+                "residual_top10_energy_fraction",
+                "residual_top25_energy_fraction",
+                "residual_active_run_max",
+                "pair_distance_energy_band_8_fraction",
+                "pair_distance_energy_band_16_fraction",
             )
         },
     }
@@ -121,6 +157,11 @@ def analyze(c2_eval: Path, c4_eval: Path) -> dict[str, Any]:
                     "residual_mean",
                     "residual_p90",
                     "residual_active_fraction",
+                    "residual_top10_energy_fraction",
+                    "residual_top25_energy_fraction",
+                    "residual_active_run_max",
+                    "pair_distance_energy_band_8_fraction",
+                    "pair_distance_energy_band_16_fraction",
                 )
             }
         )
@@ -143,8 +184,8 @@ def write_markdown(path: Path, result: dict[str, Any]) -> None:
         ),
         "",
         "| subgroup | count | Kabsch Cα RMSD median | pair-distance RMSD median | "
-        "residue displacement p90 median | active fraction median |",
-        "| --- | ---: | ---: | ---: | ---: | ---: |",
+        "residue p90 | active fraction | top-10 energy | pair local <=8 |",
+        "| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |",
     ]
     for subgroup in ("all", "hard", "nonhard"):
         data = result[subgroup]
@@ -154,6 +195,8 @@ def write_markdown(path: Path, result: dict[str, Any]) -> None:
             f"{data['pair_distance_rmsd']['median']:.4f} | "
             f"{data['residual_p90']['median']:.4f} | "
             f"{data['residual_active_fraction']['median']:.4f} |"
+            f" {data['residual_top10_energy_fraction']['median']:.4f} |"
+            f" {data['pair_distance_energy_band_8_fraction']['median']:.4f} |"
         )
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text("\n".join(lines) + "\n", encoding="utf-8")
