@@ -52,3 +52,13 @@ At submission they were all `PENDING (Dependency)` on the functional smoke;
 the smoke itself was `PENDING (Priority)`. Each point writes to its own output
 directory under `/hpc2hdd/home/shuang886/Folding/stage0_v1/protenix_runs` and
 can be retried independently with `STAGE0_SETTING=<name>`.
+
+## Completion update (2026-09-16)
+
+The functional gate and all nine factorial jobs completed with exit status 0.
+Each setting produced 1,024 CIF predictions and 1,024 confidence summaries;
+the Protenix logs report an empty error list. Runtime and confidence
+statistics are recorded in
+[`stage0_runtime_summary_2026-09-16.md`](stage0_runtime_summary_2026-09-16.md).
+No TM-score, lDDT, RMSD, or geometry accuracy claim is made here before the
+outputs are evaluated against the frozen GT targets.

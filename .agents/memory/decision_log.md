@@ -530,3 +530,19 @@ one-GPU jobs. The smoke gate is job `12754884`, the one-target functional gate
 is `12755045`, and the nine factorial jobs are `12755102` through `12755110`.
 All full jobs depend on `afterok:12755045`; pending scheduler state is not an
 inference result.
+
+## 2026-09-16: Complete Stage 0A A800 sweep and preserve lightweight results
+
+All nine independent `i64m1tga800ue` jobs completed with exit status 0. Each
+of the 1,024 frozen temporal-dev targets produced one CIF and one confidence
+summary for every `(cycle, step)` setting, for 9,216 predictions total. The
+confidence summaries had zero parse errors and zero `has_clash` flags; peak RSS
+was approximately 17.2 GiB per job. The full machine-readable summary is
+tracked in `reports/stage0_runtime_summary_2026-09-16.{json,csv}` and the
+reproducible parser is `scripts/summarize_stage0_runs.py`.
+
+This result is explicitly a runtime/output-yield checkpoint, not a folding
+accuracy result. Raw multi-gigabyte CIF/JSON outputs remain on HPC at
+`/hpc2hdd/home/shuang886/Folding/stage0_v1/protenix_runs`; GT-backed TM-score,
+lDDT, RMSD, and geometry evaluation must happen before interpreting the
+factorial quality surface.
