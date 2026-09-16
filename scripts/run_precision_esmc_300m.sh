@@ -20,7 +20,7 @@ run_part() {
   local gpu="$2"
   local part
   part="$(printf 'part-%03d' "$index")"
-  HIP_VISIBLE_DEVICES="$gpu" ROCR_VISIBLE_DEVICES="$gpu" \
+  HIP_VISIBLE_DEVICES="$gpu" \
     "$PYTHON" -u "$CODE_ROOT/scripts/build_esmc_cache.py" \
       --groups "$GROUPS_PATH" \
       --output-root "$OUTPUT_ROOT/$part" \
