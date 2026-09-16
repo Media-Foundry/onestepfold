@@ -572,3 +572,19 @@ and `c4_s1`/`c4_s2` were slightly above the anchor on this dev view. This is
 evidence to prioritize recycle/trunk collapse and internal structure timing;
 it is not a final temporal-test result and does not yet justify a MeanFlow
 method claim.
+
+## 2026-09-16: Add paired bootstrap and hard-tail diagnostics
+
+The 1,024-target paired analysis uses `c4_s5` as an anchor and 5,000
+target-level bootstrap resamples. For `c1_s1`, mean Delta TM-style score was
+`-0.0181` (95% bootstrap CI `[-0.0222,-0.0142]`), median Delta was `-0.0051`,
+and 11.5% of targets fell below `-0.05`. For `c2_s2`, mean Delta TM-style
+score was `-0.0047` (CI `[-0.0080,-0.0016]`) and mean Delta all-atom lDDT was
+`-0.0012` (CI `[-0.0023,-0.0002]`). `c4_s2` was above the anchor on mean
+all-atom lDDT by `+0.0071` (CI `[+0.0065,+0.0077]`) on this dev view.
+
+The `c1_s1` Delta-TM `< -0.05` tail contains 118/1,024 targets. Its median
+length was 369.5 residues versus 281.0 outside the tail, and median resolution
+was 2.00 A versus 1.80 A. These are descriptive signals, not causal evidence;
+the next experiment profiles internal model stages and tests representation/
+confidence-based adaptive recycling.
