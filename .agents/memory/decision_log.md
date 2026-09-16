@@ -781,3 +781,14 @@ frame and returns the correction in Cartesian coordinates. Unit tests verify
 rigid-transform consistency and residue/frame masking. It is a benchmark
 component, not an all-atom replacement or a claim that the late residual is
 local.
+
+The 256-target signed-sketch diagnostic (`12769005`) completed on the debug
+A40 node with 256/256 rows and 1,280 sketches. Adjacent residual directions
+are not aligned: pair cosine medians are -0.086 (`c2->c3`) and -0.131
+(`c3->c4`), while single cosine medians are -0.122 and -0.289. The signed
+random-projection spatial sketch has median rank-8 energy about 0.82 for the
+late transitions, substantially below the nonnegative magnitude-map rank-8
+energy around 0.99. Therefore the simple scalar fixed-point extrapolation is
+not promoted as the primary emulator; keep it only as a cheap negative
+baseline, and prioritize a learned global coordinate residual or a richer
+signed latent probe.

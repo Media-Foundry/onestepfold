@@ -1,0 +1,43 @@
+{
+  "residual_file": "/hpc2hdd/home/shuang886/Folding/stage1c/signed_sketch_v1/debug256/c4_s2/seed-101/residual_features.jsonl",
+  "signed_pair_delta_sketch_counts": {
+    "c1_to_c2": 256,
+    "c2_to_c3": 256,
+    "c3_to_c4": 256
+  },
+  "transitions": {
+    "c1_to_c2": {},
+    "c2_to_c3": {
+      "pair_delta_direction_cosine": {
+        "count": 256,
+        "mean": -0.0823294488328088,
+        "median": -0.08611185476183891,
+        "p05": -0.2680581882596016,
+        "p95": 0.08616715110838413
+      },
+      "single_delta_direction_cosine": {
+        "count": 256,
+        "mean": -0.12189987982128514,
+        "median": -0.12235063686966896,
+        "p05": -0.4372071921825409,
+        "p95": 0.15297874063253403
+      }
+    },
+    "c3_to_c4": {
+      "pair_delta_direction_cosine": {
+        "count": 256,
+        "mean": -0.128495094434129,
+        "median": -0.1313665583729744,
+        "p05": -0.4201984256505966,
+        "p95": 0.1945120431482792
+      },
+      "single_delta_direction_cosine": {
+        "count": 256,
+        "mean": -0.29825118612279766,
+        "median": -0.28852252662181854,
+        "p05": -0.5506473183631897,
+        "p95": -0.008313178666867316
+      }
+    }
+  }
+}
