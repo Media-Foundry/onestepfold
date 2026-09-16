@@ -170,3 +170,13 @@ factorial point submitted as an independent one-A800 job before any
 ESMC-conditioned model tuning uses the frozen test. The runtime package is
 Protenix 1.1.0 while the selected model checkpoint remains Mini-ESM v0.5.0;
 their hashes are recorded independently.
+
+Stage 0B/0C scoring and profiling found that quality depends much more strongly
+on recycle depth than on structure diffusion steps. The current method-selection
+stage is Stage 0D: predictive, risk-aware recycling from cycle-1 information,
+compared against fixed depth, an AlphaFold-style reactive convergence signal
+available only after cycle 2, and an oracle compute-quality frontier. This does
+not claim adaptive recycling or early stopping as a new concept. The specific
+question is whether recycle demand can be predicted before paying for the next
+recycle. Clean-Structure MeanFlow is therefore deprioritized until a structure-
+step bottleneck is demonstrated.

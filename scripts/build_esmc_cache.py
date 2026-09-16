@@ -22,10 +22,24 @@ from onestepfold.data.esmc_cache import (
 )
 
 
-def _read_groups(path: Path, limit: int | None) -> list[dict[str, Any]]:
+def _read_groups(
+    path: Path,
+    limit: int | None,
+    partition_count: int = 1,
+    partition_index: int = 0,
+) -> list[dict[str, Any]]:
+    if partition_count < 1:
+        raise ValueError("partition_count must be positive")
+    if not 0 <= partition_index < partition_count:
+        raise ValueError("partition_index must be in [0, partition_count)")
     with gzip.open(path, "rt", encoding="utf-8") as handle:
         rows = [json.loads(line) for line in handle if line.strip()]
     rows.sort(key=lambda row: str(row["group_id"]))
+    rows = [
+        row
+        for row in rows
+        if int(str(row["group_id"])[:16], 16) % partition_count == partition_index
+    ]
     return rows if limit is None else rows[:limit]
 
 
@@ -81,9 +95,7 @@ def _extract_batch(model: Any, tokenizer: Any, sequences: list[str], device: str
     result: list[dict[str, torch.Tensor]] = []
     for batch_index, sequence in enumerate(sequences):
         token_length = (
-            int(attention[batch_index].sum())
-            if attention is not None
-            else len(sequence) + 2
+            int(attention[batch_index].sum()) if attention is not None else len(sequence) + 2
         )
         residue_features: dict[str, torch.Tensor] = {}
         for name, tensor in selected.items():
@@ -108,8 +120,10 @@ def build_cache(
     limit: int | None = None,
     code_commit: str | None = None,
     local_files_only: bool = False,
+    partition_count: int = 1,
+    partition_index: int = 0,
 ) -> dict[str, Any]:
-    groups = _read_groups(groups_path, limit)
+    groups = _read_groups(groups_path, limit, partition_count, partition_index)
     if not groups:
         raise ValueError("no sequence groups selected")
     hidden_dim = 1152 if "600" in model_id else 960 if "300" in model_id else 2560
@@ -147,8 +161,7 @@ def build_cache(
         except ImportError as exc:  # pragma: no cover - HPC-only optional dependency
             raise RuntimeError("safetensors is required for the embedding cache") from exc
         tensors = {
-            name: torch.cat(values, dim=0).contiguous()
-            for name, values in shard_tensors.items()
+            name: torch.cat(values, dim=0).contiguous() for name, values in shard_tensors.items()
         }
         path = output_root / f"shard-{shard_id:05d}.safetensors"
         save_file(
@@ -178,9 +191,7 @@ def build_cache(
         offset_start = shard_residues
         offset_end = offset_start + length
         for name, tensor in features.items():
-            shard_tensors.setdefault(name, []).append(
-                tensor
-            )
+            shard_tensors.setdefault(name, []).append(tensor)
         shard_rows.append(
             {
                 "group_id": group["group_id"],
@@ -235,6 +246,8 @@ def build_cache(
         "code_revision": code_revision,
         "code_commit": code_commit,
         "local_files_only": local_files_only,
+        "partition_count": partition_count,
+        "partition_index": partition_index,
         "dtype": "bfloat16",
         "elapsed_seconds": time.monotonic() - started,
         "output": str(output_root),
@@ -264,6 +277,8 @@ def main() -> None:
     parser.add_argument("--shard-tokens", type=int, default=16384)
     parser.add_argument("--limit", type=int, default=None)
     parser.add_argument("--local-files-only", action="store_true")
+    parser.add_argument("--partition-count", type=int, default=1)
+    parser.add_argument("--partition-index", type=int, default=0)
     args = parser.parse_args()
     build_cache(
         args.groups,
@@ -278,6 +293,8 @@ def main() -> None:
         args.limit,
         args.code_commit,
         args.local_files_only,
+        args.partition_count,
+        args.partition_index,
     )
 
 

@@ -602,3 +602,31 @@ median pairformer time changed by `0.002 s`. The timing scope excludes model
 load, preprocessing, and output serialization. These results support treating
 recycle/trunk collapse as the primary efficiency target and structure-step
 collapse as a secondary optimization.
+
+## 2026-09-16: Advance to predictive, risk-aware recycling
+
+Stage 0D uses only `temporal_dev_v1`; the frozen temporal test remains unread.
+GT oracle routing confirms meaningful target-dependent recycle demand. On the
+practical `c1_s1 -> c2_s2 -> c4_s5` path, jointly requiring TM-style score and
+all-atom lDDT within 0.01 of `c4_s5` needs 2.231 mean cycles, a 44.2% reduction
+from fixed four-cycle inference. The fixed-`s1` joint oracle needs 2.568 mean
+cycles under the same tolerance. These are unattainable upper bounds that
+assume reusable intermediate cycle states, not router results.
+
+The first predictive audit defines hard targets as `c1_s1` TM-style degradation
+below -0.05 versus `c4_s1` (126/1,024 targets). Five-fold out-of-fold evaluation
+groups 784 closest-pre-cutoff-train sequence proxies. Cycle-1 confidence raises
+AUROC from about 0.63 for sequence-only features to 0.87--0.89. At TM
+catastrophic risk <=1%, the best simple learned router uses 2.066 mean cycles,
+versus 2.102 for a pTM threshold and 2.465 for the reactive cycle-1-to-cycle-2
+distance-map convergence baseline. However, joint TM/all-atom risk is harder:
+the learned router needs 3.177 cycles at <=1% joint risk, while the reactive
+baseline needs 2.920. Therefore a generic classifier is not yet the method;
+future work must test joint-risk targets and genuinely cycle-1 internal state
+features before making a novelty claim.
+
+For sidework, use the two Precision W7900 cards for the pinned ESMC-300M scale
+ablation. Hash-partition the 38,400 exact sequence groups across two independent
+cache writers, merge only manifests, and validate full coverage/checksums. Do
+not recompute the already accepted ESMC-600M cache or use ESM3 structure-track
+outputs as teacher labels.

@@ -1,0 +1,1427 @@
+{
+  "cross_validation": {
+    "folds": [
+      {
+        "fold": 1,
+        "train_count": 820,
+        "train_family_proxy_count": 629,
+        "train_positive_count": 101,
+        "validation_count": 204,
+        "validation_family_proxy_count": 155,
+        "validation_positive_count": 25
+      },
+      {
+        "fold": 2,
+        "train_count": 819,
+        "train_family_proxy_count": 626,
+        "train_positive_count": 101,
+        "validation_count": 205,
+        "validation_family_proxy_count": 158,
+        "validation_positive_count": 25
+      },
+      {
+        "fold": 3,
+        "train_count": 817,
+        "train_family_proxy_count": 624,
+        "train_positive_count": 100,
+        "validation_count": 207,
+        "validation_family_proxy_count": 160,
+        "validation_positive_count": 26
+      },
+      {
+        "fold": 4,
+        "train_count": 821,
+        "train_family_proxy_count": 631,
+        "train_positive_count": 101,
+        "validation_count": 203,
+        "validation_family_proxy_count": 153,
+        "validation_positive_count": 25
+      },
+      {
+        "fold": 5,
+        "train_count": 819,
+        "train_family_proxy_count": 626,
+        "train_positive_count": 101,
+        "validation_count": 205,
+        "validation_family_proxy_count": 158,
+        "validation_positive_count": 25
+      }
+    ]
+  },
+  "family_proxy_count": 784,
+  "family_proxy_definition": "closest pre-cutoff train group from the near-homology audit",
+  "fixed_baselines_vs_c4_s1": {
+    "c1_s1": {
+      "all_atom_lddt_risk_0p05": 0.189453125,
+      "catastrophic_joint_risk": 0.2333984375,
+      "catastrophic_tm_risk": 0.123046875,
+      "mean_cycles": 1.0,
+      "mean_delta_all_atom_lddt": -0.028399497707141563,
+      "mean_delta_tm": -0.02196646590164164,
+      "median_delta_tm": -0.0070465803146362305,
+      "route_deep_fraction": 0.0,
+      "threshold": Infinity
+    },
+    "c2_s1": {
+      "all_atom_lddt_risk_0p05": 0.052734375,
+      "catastrophic_joint_risk": 0.0927734375,
+      "catastrophic_tm_risk": 0.0703125,
+      "mean_cycles": 2.0,
+      "mean_delta_all_atom_lddt": -0.010733795934356749,
+      "mean_delta_tm": -0.009536268218653277,
+      "median_delta_tm": -0.0021018385887145996,
+      "route_deep_fraction": 0.0,
+      "threshold": Infinity
+    },
+    "c2_s2": {
+      "all_atom_lddt_risk_0p05": 0.0205078125,
+      "catastrophic_joint_risk": 0.076171875,
+      "catastrophic_tm_risk": 0.0673828125,
+      "mean_cycles": 2.0,
+      "mean_delta_all_atom_lddt": -0.0019204117998015136,
+      "mean_delta_tm": -0.00852028909866931,
+      "median_delta_tm": -0.0009770393371582031,
+      "route_deep_fraction": 0.0,
+      "threshold": Infinity
+    },
+    "c4_s1": {
+      "all_atom_lddt_risk_0p05": 0.0,
+      "catastrophic_joint_risk": 0.0,
+      "catastrophic_tm_risk": 0.0,
+      "mean_cycles": 4.0,
+      "mean_delta_all_atom_lddt": 0.0,
+      "mean_delta_tm": 0.0,
+      "median_delta_tm": 0.0,
+      "route_deep_fraction": 0.0,
+      "threshold": Infinity
+    }
+  },
+  "largest_family_proxy_group": 10,
+  "policies": {
+    "af_style_distance_convergence": {
+      "availability": "after_cycle_2",
+      "classification": {
+        "auroc": 0.9058560924369748,
+        "average_precision": 0.4907489824548851
+      },
+      "joint_risk_constrained_points": {
+        "risk_le_0.00": {
+          "all_atom_lddt_risk_0p05": 0.0,
+          "catastrophic_joint_risk": 0.0,
+          "catastrophic_tm_risk": 0.0,
+          "mean_cycles": 3.798828125,
+          "mean_delta_all_atom_lddt": 0.0001347007928416133,
+          "mean_delta_tm": -1.633648935239762e-05,
+          "median_delta_tm": 0.0,
+          "route_deep_fraction": 0.8994140625,
+          "threshold": 0.2692192494869232
+        },
+        "risk_le_0.01": {
+          "all_atom_lddt_risk_0p05": 0.0087890625,
+          "catastrophic_joint_risk": 0.009765625,
+          "catastrophic_tm_risk": 0.0009765625,
+          "mean_cycles": 2.919921875,
+          "mean_delta_all_atom_lddt": -0.0029825830133631825,
+          "mean_delta_tm": -0.0008094712829915807,
+          "median_delta_tm": 0.0,
+          "route_deep_fraction": 0.4599609375,
+          "threshold": 0.7378738522529602
+        },
+        "risk_le_0.02": {
+          "all_atom_lddt_risk_0p05": 0.013671875,
+          "catastrophic_joint_risk": 0.01953125,
+          "catastrophic_tm_risk": 0.0068359375,
+          "mean_cycles": 2.595703125,
+          "mean_delta_all_atom_lddt": -0.005098397436086088,
+          "mean_delta_tm": -0.002067361245281063,
+          "median_delta_tm": 0.0,
+          "route_deep_fraction": 0.2978515625,
+          "threshold": 1.090489149093628
+        },
+        "risk_le_0.05": {
+          "all_atom_lddt_risk_0p05": 0.0341796875,
+          "catastrophic_joint_risk": 0.0498046875,
+          "catastrophic_tm_risk": 0.0302734375,
+          "mean_cycles": 2.189453125,
+          "mean_delta_all_atom_lddt": -0.00843386907945387,
+          "mean_delta_tm": -0.004167465609498322,
+          "median_delta_tm": -0.0014066994190216064,
+          "route_deep_fraction": 0.0947265625,
+          "threshold": 2.6953248977661133
+        }
+      },
+      "tm_risk_constrained_points": {
+        "risk_le_0.00": {
+          "all_atom_lddt_risk_0p05": 0.0,
+          "catastrophic_joint_risk": 0.0,
+          "catastrophic_tm_risk": 0.0,
+          "mean_cycles": 3.798828125,
+          "mean_delta_all_atom_lddt": 0.0001347007928416133,
+          "mean_delta_tm": -1.633648935239762e-05,
+          "median_delta_tm": 0.0,
+          "route_deep_fraction": 0.8994140625,
+          "threshold": 0.2692192494869232
+        },
+        "risk_le_0.01": {
+          "all_atom_lddt_risk_0p05": 0.01953125,
+          "catastrophic_joint_risk": 0.0263671875,
+          "catastrophic_tm_risk": 0.009765625,
+          "mean_cycles": 2.46484375,
+          "mean_delta_all_atom_lddt": -0.006106426531914622,
+          "mean_delta_tm": -0.002386974127148278,
+          "median_delta_tm": -5.918741226196289e-05,
+          "route_deep_fraction": 0.232421875,
+          "threshold": 1.3123295307159424
+        },
+        "risk_le_0.02": {
+          "all_atom_lddt_risk_0p05": 0.025390625,
+          "catastrophic_joint_risk": 0.0390625,
+          "catastrophic_tm_risk": 0.01953125,
+          "mean_cycles": 2.3203125,
+          "mean_delta_all_atom_lddt": -0.00721752893878147,
+          "mean_delta_tm": -0.0034101210912922397,
+          "median_delta_tm": -0.000731348991394043,
+          "route_deep_fraction": 0.16015625,
+          "threshold": 1.78029203414917
+        },
+        "risk_le_0.05": {
+          "all_atom_lddt_risk_0p05": 0.04296875,
+          "catastrophic_joint_risk": 0.072265625,
+          "catastrophic_tm_risk": 0.0498046875,
+          "mean_cycles": 2.060546875,
+          "mean_delta_all_atom_lddt": -0.00966316886479035,
+          "mean_delta_tm": -0.006235388937056996,
+          "median_delta_tm": -0.0018042325973510742,
+          "route_deep_fraction": 0.0302734375,
+          "threshold": 6.57892370223999
+        }
+      }
+    },
+    "confidence_ptm_threshold": {
+      "availability": "cycle_1",
+      "classification": {
+        "auroc": 0.8986106692120056,
+        "average_precision": 0.4355139921929819
+      },
+      "joint_risk_constrained_points": {
+        "risk_le_0.00": {
+          "all_atom_lddt_risk_0p05": 0.0,
+          "catastrophic_joint_risk": 0.0,
+          "catastrophic_tm_risk": 0.0,
+          "mean_cycles": 3.9560546875,
+          "mean_delta_all_atom_lddt": -2.0322855561971664e-05,
+          "mean_delta_tm": -1.5635101590305567e-05,
+          "median_delta_tm": 0.0,
+          "route_deep_fraction": 0.9853515625,
+          "threshold": -0.9737371206283569
+        },
+        "risk_le_0.01": {
+          "all_atom_lddt_risk_0p05": 0.009765625,
+          "catastrophic_joint_risk": 0.009765625,
+          "catastrophic_tm_risk": 0.0,
+          "mean_cycles": 3.3671875,
+          "mean_delta_all_atom_lddt": -0.0030891196220181882,
+          "mean_delta_tm": -0.0007111707818694413,
+          "median_delta_tm": 0.0,
+          "route_deep_fraction": 0.7890625,
+          "threshold": -0.9371835589408875
+        },
+        "risk_le_0.02": {
+          "all_atom_lddt_risk_0p05": 0.01953125,
+          "catastrophic_joint_risk": 0.01953125,
+          "catastrophic_tm_risk": 0.0,
+          "mean_cycles": 2.86328125,
+          "mean_delta_all_atom_lddt": -0.006081013299990445,
+          "mean_delta_tm": -0.0016583377146162093,
+          "median_delta_tm": 0.0,
+          "route_deep_fraction": 0.62109375,
+          "threshold": -0.9192707538604736
+        },
+        "risk_le_0.05": {
+          "all_atom_lddt_risk_0p05": 0.048828125,
+          "catastrophic_joint_risk": 0.0498046875,
+          "catastrophic_tm_risk": 0.0048828125,
+          "mean_cycles": 2.2333984375,
+          "mean_delta_all_atom_lddt": -0.011844710214063525,
+          "mean_delta_tm": -0.00364798930240795,
+          "median_delta_tm": 0.0,
+          "route_deep_fraction": 0.4111328125,
+          "threshold": -0.8869602084159851
+        }
+      },
+      "tm_risk_constrained_points": {
+        "risk_le_0.00": {
+          "all_atom_lddt_risk_0p05": 0.0361328125,
+          "catastrophic_joint_risk": 0.0361328125,
+          "catastrophic_tm_risk": 0.0,
+          "mean_cycles": 2.40625,
+          "mean_delta_all_atom_lddt": -0.009994322608690709,
+          "mean_delta_tm": -0.002849839278496802,
+          "median_delta_tm": 0.0,
+          "route_deep_fraction": 0.46875,
+          "threshold": -0.8963583707809448
+        },
+        "risk_le_0.01": {
+          "all_atom_lddt_risk_0p05": 0.0625,
+          "catastrophic_joint_risk": 0.0654296875,
+          "catastrophic_tm_risk": 0.009765625,
+          "mean_cycles": 2.1015625,
+          "mean_delta_all_atom_lddt": -0.01332480227574706,
+          "mean_delta_tm": -0.004418070719111711,
+          "median_delta_tm": 0.0,
+          "route_deep_fraction": 0.3671875,
+          "threshold": -0.8789286017417908
+        },
+        "risk_le_0.02": {
+          "all_atom_lddt_risk_0p05": 0.0927734375,
+          "catastrophic_joint_risk": 0.09765625,
+          "catastrophic_tm_risk": 0.01953125,
+          "mean_cycles": 1.779296875,
+          "mean_delta_all_atom_lddt": -0.016968725132755935,
+          "mean_delta_tm": -0.006553324987180531,
+          "median_delta_tm": -0.0022079646587371826,
+          "route_deep_fraction": 0.259765625,
+          "threshold": -0.8464824557304382
+        },
+        "risk_le_0.05": {
+          "all_atom_lddt_risk_0p05": 0.126953125,
+          "catastrophic_joint_risk": 0.1455078125,
+          "catastrophic_tm_risk": 0.0498046875,
+          "mean_cycles": 1.4365234375,
+          "mean_delta_all_atom_lddt": -0.020800772588700056,
+          "mean_delta_tm": -0.010430285823531449,
+          "median_delta_tm": -0.004153311252593994,
+          "route_deep_fraction": 0.1455078125,
+          "threshold": -0.7583318948745728
+        }
+      }
+    },
+    "hist_gradient_boosting_tier_a_sequence": {
+      "availability": "cycle_1",
+      "classification": {
+        "auroc": 0.6318361791635734,
+        "average_precision": 0.26113747612813243
+      },
+      "feature_names": [
+        "log_length",
+        "sequence_entropy",
+        "hydrophobic_fraction",
+        "charged_fraction",
+        "gly_pro_fraction",
+        "cysteine_fraction",
+        "aa_fraction_A",
+        "aa_fraction_C",
+        "aa_fraction_D",
+        "aa_fraction_E",
+        "aa_fraction_F",
+        "aa_fraction_G",
+        "aa_fraction_H",
+        "aa_fraction_I",
+        "aa_fraction_K",
+        "aa_fraction_L",
+        "aa_fraction_M",
+        "aa_fraction_N",
+        "aa_fraction_P",
+        "aa_fraction_Q",
+        "aa_fraction_R",
+        "aa_fraction_S",
+        "aa_fraction_T",
+        "aa_fraction_V",
+        "aa_fraction_W",
+        "aa_fraction_Y"
+      ],
+      "joint_risk_constrained_points": {
+        "risk_le_0.00": {
+          "all_atom_lddt_risk_0p05": 0.0,
+          "catastrophic_joint_risk": 0.0,
+          "catastrophic_tm_risk": 0.0,
+          "mean_cycles": 3.98828125,
+          "mean_delta_all_atom_lddt": -1.2234784662723541e-05,
+          "mean_delta_tm": 1.6158504877239466e-05,
+          "median_delta_tm": 0.0,
+          "route_deep_fraction": 0.99609375,
+          "threshold": 0.0013957140783396257
+        },
+        "risk_le_0.01": {
+          "all_atom_lddt_risk_0p05": 0.0078125,
+          "catastrophic_joint_risk": 0.009765625,
+          "catastrophic_tm_risk": 0.0068359375,
+          "mean_cycles": 3.7919921875,
+          "mean_delta_all_atom_lddt": -0.0014778352342545986,
+          "mean_delta_tm": -0.0010919680062215775,
+          "median_delta_tm": 0.0,
+          "route_deep_fraction": 0.9306640625,
+          "threshold": 0.0049531862290530144
+        },
+        "risk_le_0.02": {
+          "all_atom_lddt_risk_0p05": 0.0146484375,
+          "catastrophic_joint_risk": 0.01953125,
+          "catastrophic_tm_risk": 0.013671875,
+          "mean_cycles": 3.578125,
+          "mean_delta_all_atom_lddt": -0.003083964460529387,
+          "mean_delta_tm": -0.0017082354461308569,
+          "median_delta_tm": 0.0,
+          "route_deep_fraction": 0.859375,
+          "threshold": 0.00862491036436608
+        },
+        "risk_le_0.05": {
+          "all_atom_lddt_risk_0p05": 0.0380859375,
+          "catastrophic_joint_risk": 0.0498046875,
+          "catastrophic_tm_risk": 0.0302734375,
+          "mean_cycles": 3.0126953125,
+          "mean_delta_all_atom_lddt": -0.0075538587116170675,
+          "mean_delta_tm": -0.00524347294413019,
+          "median_delta_tm": 0.0,
+          "route_deep_fraction": 0.6708984375,
+          "threshold": 0.022358085828098378
+        }
+      },
+      "tm_risk_constrained_points": {
+        "risk_le_0.00": {
+          "all_atom_lddt_risk_0p05": 0.0,
+          "catastrophic_joint_risk": 0.0,
+          "catastrophic_tm_risk": 0.0,
+          "mean_cycles": 3.98828125,
+          "mean_delta_all_atom_lddt": -1.2234784662723541e-05,
+          "mean_delta_tm": 1.6158504877239466e-05,
+          "median_delta_tm": 0.0,
+          "route_deep_fraction": 0.99609375,
+          "threshold": 0.0013957140783396257
+        },
+        "risk_le_0.01": {
+          "all_atom_lddt_risk_0p05": 0.0087890625,
+          "catastrophic_joint_risk": 0.0126953125,
+          "catastrophic_tm_risk": 0.009765625,
+          "mean_cycles": 3.7421875,
+          "mean_delta_all_atom_lddt": -0.0018119633896276355,
+          "mean_delta_tm": -0.0011046432482544333,
+          "median_delta_tm": 0.0,
+          "route_deep_fraction": 0.9140625,
+          "threshold": 0.005709124914650213
+        },
+        "risk_le_0.02": {
+          "all_atom_lddt_risk_0p05": 0.0205078125,
+          "catastrophic_joint_risk": 0.029296875,
+          "catastrophic_tm_risk": 0.01953125,
+          "mean_cycles": 3.349609375,
+          "mean_delta_all_atom_lddt": -0.004613174649421126,
+          "mean_delta_tm": -0.0028189753647893667,
+          "median_delta_tm": 0.0,
+          "route_deep_fraction": 0.783203125,
+          "threshold": 0.014280057498818288
+        },
+        "risk_le_0.05": {
+          "all_atom_lddt_risk_0p05": 0.0751953125,
+          "catastrophic_joint_risk": 0.0927734375,
+          "catastrophic_tm_risk": 0.0498046875,
+          "mean_cycles": 2.2568359375,
+          "mean_delta_all_atom_lddt": -0.013832045573508367,
+          "mean_delta_tm": -0.00876633198640775,
+          "median_delta_tm": 0.0,
+          "route_deep_fraction": 0.4189453125,
+          "threshold": 0.06462615151056275
+        }
+      }
+    },
+    "hist_gradient_boosting_tier_ab_confidence": {
+      "availability": "cycle_1",
+      "classification": {
+        "auroc": 0.8810363417824443,
+        "average_precision": 0.43324640757183097
+      },
+      "feature_names": [
+        "log_length",
+        "sequence_entropy",
+        "hydrophobic_fraction",
+        "charged_fraction",
+        "gly_pro_fraction",
+        "cysteine_fraction",
+        "aa_fraction_A",
+        "aa_fraction_C",
+        "aa_fraction_D",
+        "aa_fraction_E",
+        "aa_fraction_F",
+        "aa_fraction_G",
+        "aa_fraction_H",
+        "aa_fraction_I",
+        "aa_fraction_K",
+        "aa_fraction_L",
+        "aa_fraction_M",
+        "aa_fraction_N",
+        "aa_fraction_P",
+        "aa_fraction_Q",
+        "aa_fraction_R",
+        "aa_fraction_S",
+        "aa_fraction_T",
+        "aa_fraction_V",
+        "aa_fraction_W",
+        "aa_fraction_Y",
+        "confidence_plddt",
+        "confidence_ptm",
+        "confidence_gpde",
+        "confidence_ranking_score",
+        "confidence_disorder",
+        "confidence_has_clash"
+      ],
+      "joint_risk_constrained_points": {
+        "risk_le_0.00": {
+          "all_atom_lddt_risk_0p05": 0.0,
+          "catastrophic_joint_risk": 0.0,
+          "catastrophic_tm_risk": 0.0,
+          "mean_cycles": 3.8857421875,
+          "mean_delta_all_atom_lddt": -0.0002916846424341202,
+          "mean_delta_tm": -0.00011439912486821413,
+          "median_delta_tm": 0.0,
+          "route_deep_fraction": 0.9619140625,
+          "threshold": 0.0005131100087587768
+        },
+        "risk_le_0.01": {
+          "all_atom_lddt_risk_0p05": 0.009765625,
+          "catastrophic_joint_risk": 0.009765625,
+          "catastrophic_tm_risk": 0.0,
+          "mean_cycles": 3.1767578125,
+          "mean_delta_all_atom_lddt": -0.00438339781248942,
+          "mean_delta_tm": -0.001243486360181123,
+          "median_delta_tm": 0.0,
+          "route_deep_fraction": 0.7255859375,
+          "threshold": 0.0012737804675677802
+        },
+        "risk_le_0.02": {
+          "all_atom_lddt_risk_0p05": 0.0185546875,
+          "catastrophic_joint_risk": 0.01953125,
+          "catastrophic_tm_risk": 0.0009765625,
+          "mean_cycles": 2.8017578125,
+          "mean_delta_all_atom_lddt": -0.006565935327671468,
+          "mean_delta_tm": -0.002102071011904627,
+          "median_delta_tm": 0.0,
+          "route_deep_fraction": 0.6005859375,
+          "threshold": 0.0020749606264322965
+        },
+        "risk_le_0.05": {
+          "all_atom_lddt_risk_0p05": 0.046875,
+          "catastrophic_joint_risk": 0.0498046875,
+          "catastrophic_tm_risk": 0.0078125,
+          "mean_cycles": 2.1865234375,
+          "mean_delta_all_atom_lddt": -0.011725796211976558,
+          "mean_delta_tm": -0.0039762447704561055,
+          "median_delta_tm": 0.0,
+          "route_deep_fraction": 0.3955078125,
+          "threshold": 0.013578781386102006
+        }
+      },
+      "tm_risk_constrained_points": {
+        "risk_le_0.00": {
+          "all_atom_lddt_risk_0p05": 0.013671875,
+          "catastrophic_joint_risk": 0.013671875,
+          "catastrophic_tm_risk": 0.0,
+          "mean_cycles": 3.1357421875,
+          "mean_delta_all_atom_lddt": -0.004831515776459128,
+          "mean_delta_tm": -0.001402036752551794,
+          "median_delta_tm": 0.0,
+          "route_deep_fraction": 0.7119140625,
+          "threshold": 0.001327363142087647
+        },
+        "risk_le_0.01": {
+          "all_atom_lddt_risk_0p05": 0.0546875,
+          "catastrophic_joint_risk": 0.0576171875,
+          "catastrophic_tm_risk": 0.009765625,
+          "mean_cycles": 2.06640625,
+          "mean_delta_all_atom_lddt": -0.012829168641474098,
+          "mean_delta_tm": -0.004015738668385893,
+          "median_delta_tm": 0.0,
+          "route_deep_fraction": 0.35546875,
+          "threshold": 0.02730133149785844
+        },
+        "risk_le_0.02": {
+          "all_atom_lddt_risk_0p05": 0.0703125,
+          "catastrophic_joint_risk": 0.080078125,
+          "catastrophic_tm_risk": 0.01953125,
+          "mean_cycles": 1.8994140625,
+          "mean_delta_all_atom_lddt": -0.01481917651835829,
+          "mean_delta_tm": -0.005415814957814291,
+          "median_delta_tm": -0.0010393857955932617,
+          "route_deep_fraction": 0.2998046875,
+          "threshold": 0.06314525528773224
+        },
+        "risk_le_0.05": {
+          "all_atom_lddt_risk_0p05": 0.1220703125,
+          "catastrophic_joint_risk": 0.138671875,
+          "catastrophic_tm_risk": 0.0498046875,
+          "mean_cycles": 1.4775390625,
+          "mean_delta_all_atom_lddt": -0.02064989967038855,
+          "mean_delta_tm": -0.010177472271607257,
+          "median_delta_tm": -0.0037897825241088867,
+          "route_deep_fraction": 0.1591796875,
+          "threshold": 0.4144787044094618
+        }
+      }
+    },
+    "hist_gradient_boosting_tier_ab_confidence_geometry": {
+      "availability": "cycle_1",
+      "classification": {
+        "auroc": 0.8849913387775303,
+        "average_precision": 0.4600476004975355
+      },
+      "feature_names": [
+        "log_length",
+        "sequence_entropy",
+        "hydrophobic_fraction",
+        "charged_fraction",
+        "gly_pro_fraction",
+        "cysteine_fraction",
+        "aa_fraction_A",
+        "aa_fraction_C",
+        "aa_fraction_D",
+        "aa_fraction_E",
+        "aa_fraction_F",
+        "aa_fraction_G",
+        "aa_fraction_H",
+        "aa_fraction_I",
+        "aa_fraction_K",
+        "aa_fraction_L",
+        "aa_fraction_M",
+        "aa_fraction_N",
+        "aa_fraction_P",
+        "aa_fraction_Q",
+        "aa_fraction_R",
+        "aa_fraction_S",
+        "aa_fraction_T",
+        "aa_fraction_V",
+        "aa_fraction_W",
+        "aa_fraction_Y",
+        "confidence_plddt",
+        "confidence_ptm",
+        "confidence_gpde",
+        "confidence_ranking_score",
+        "confidence_disorder",
+        "confidence_has_clash",
+        "ca_radius_gyration",
+        "ca_radius_gyration_over_cuberoot_length",
+        "ca_end_to_end_distance",
+        "ca_consecutive_mean",
+        "ca_consecutive_std",
+        "ca_consecutive_max",
+        "ca_break_fraction_4p5",
+        "ca_pair_mean",
+        "ca_pair_std",
+        "ca_pair_q10",
+        "ca_pair_q50",
+        "ca_pair_q90",
+        "ca_contact_fraction_8",
+        "ca_contact_fraction_12"
+      ],
+      "joint_risk_constrained_points": {
+        "risk_le_0.00": {
+          "all_atom_lddt_risk_0p05": 0.0,
+          "catastrophic_joint_risk": 0.0,
+          "catastrophic_tm_risk": 0.0,
+          "mean_cycles": 3.98828125,
+          "mean_delta_all_atom_lddt": -9.089324157685041e-05,
+          "mean_delta_tm": -3.9539707358926535e-05,
+          "median_delta_tm": 0.0,
+          "route_deep_fraction": 0.99609375,
+          "threshold": 0.0003143070028458837
+        },
+        "risk_le_0.01": {
+          "all_atom_lddt_risk_0p05": 0.009765625,
+          "catastrophic_joint_risk": 0.009765625,
+          "catastrophic_tm_risk": 0.0,
+          "mean_cycles": 3.3583984375,
+          "mean_delta_all_atom_lddt": -0.0032829655101522803,
+          "mean_delta_tm": -0.0009015245595946908,
+          "median_delta_tm": 0.0,
+          "route_deep_fraction": 0.7861328125,
+          "threshold": 0.001128347847150216
+        },
+        "risk_le_0.02": {
+          "all_atom_lddt_risk_0p05": 0.0185546875,
+          "catastrophic_joint_risk": 0.01953125,
+          "catastrophic_tm_risk": 0.001953125,
+          "mean_cycles": 3.0654296875,
+          "mean_delta_all_atom_lddt": -0.005202335014473647,
+          "mean_delta_tm": -0.0014749334659427404,
+          "median_delta_tm": 0.0,
+          "route_deep_fraction": 0.6884765625,
+          "threshold": 0.0015548177884299453
+        },
+        "risk_le_0.05": {
+          "all_atom_lddt_risk_0p05": 0.046875,
+          "catastrophic_joint_risk": 0.0498046875,
+          "catastrophic_tm_risk": 0.0087890625,
+          "mean_cycles": 2.171875,
+          "mean_delta_all_atom_lddt": -0.012054102320689708,
+          "mean_delta_tm": -0.004150618915446103,
+          "median_delta_tm": 0.0,
+          "route_deep_fraction": 0.390625,
+          "threshold": 0.01369627911491482
+        }
+      },
+      "tm_risk_constrained_points": {
+        "risk_le_0.00": {
+          "all_atom_lddt_risk_0p05": 0.01171875,
+          "catastrophic_joint_risk": 0.01171875,
+          "catastrophic_tm_risk": 0.0,
+          "mean_cycles": 3.267578125,
+          "mean_delta_all_atom_lddt": -0.003697885840665549,
+          "mean_delta_tm": -0.000988143845461309,
+          "median_delta_tm": 0.0,
+          "route_deep_fraction": 0.755859375,
+          "threshold": 0.0012507704686544573
+        },
+        "risk_le_0.01": {
+          "all_atom_lddt_risk_0p05": 0.05078125,
+          "catastrophic_joint_risk": 0.0546875,
+          "catastrophic_tm_risk": 0.009765625,
+          "mean_cycles": 2.1396484375,
+          "mean_delta_all_atom_lddt": -0.012439246871508658,
+          "mean_delta_tm": -0.0044784286874346435,
+          "median_delta_tm": 0.0,
+          "route_deep_fraction": 0.3798828125,
+          "threshold": 0.017547813067426095
+        },
+        "risk_le_0.02": {
+          "all_atom_lddt_risk_0p05": 0.064453125,
+          "catastrophic_joint_risk": 0.07421875,
+          "catastrophic_tm_risk": 0.01953125,
+          "mean_cycles": 1.9375,
+          "mean_delta_all_atom_lddt": -0.014262274256907403,
+          "mean_delta_tm": -0.005065247270977125,
+          "median_delta_tm": -0.0006660521030426025,
+          "route_deep_fraction": 0.3125,
+          "threshold": 0.04831888647012553
+        },
+        "risk_le_0.05": {
+          "all_atom_lddt_risk_0p05": 0.1240234375,
+          "catastrophic_joint_risk": 0.1396484375,
+          "catastrophic_tm_risk": 0.0498046875,
+          "mean_cycles": 1.451171875,
+          "mean_delta_all_atom_lddt": -0.020905097422655672,
+          "mean_delta_tm": -0.010821632604347542,
+          "median_delta_tm": -0.0038689374923706055,
+          "route_deep_fraction": 0.150390625,
+          "threshold": 0.43200338285704254
+        }
+      }
+    },
+    "length_threshold": {
+      "availability": "cycle_1",
+      "classification": {
+        "auroc": 0.6047256690352458,
+        "average_precision": 0.269394591857199
+      },
+      "joint_risk_constrained_points": {
+        "risk_le_0.00": {
+          "all_atom_lddt_risk_0p05": 0.0,
+          "catastrophic_joint_risk": 0.0,
+          "catastrophic_tm_risk": 0.0,
+          "mean_cycles": 3.9912109375,
+          "mean_delta_all_atom_lddt": -4.223902942612767e-05,
+          "mean_delta_tm": -2.6471854653209448e-05,
+          "median_delta_tm": 0.0,
+          "route_deep_fraction": 0.9970703125,
+          "threshold": 4.060443010546419
+        },
+        "risk_le_0.01": {
+          "all_atom_lddt_risk_0p05": 0.0068359375,
+          "catastrophic_joint_risk": 0.009765625,
+          "catastrophic_tm_risk": 0.0087890625,
+          "mean_cycles": 3.8125,
+          "mean_delta_all_atom_lddt": -0.0012649445561692119,
+          "mean_delta_tm": -0.0014208432548912242,
+          "median_delta_tm": 0.0,
+          "route_deep_fraction": 0.9375,
+          "threshold": 4.762173934797756
+        },
+        "risk_le_0.02": {
+          "all_atom_lddt_risk_0p05": 0.0146484375,
+          "catastrophic_joint_risk": 0.01953125,
+          "catastrophic_tm_risk": 0.0146484375,
+          "mean_cycles": 3.6162109375,
+          "mean_delta_all_atom_lddt": -0.002445306774461642,
+          "mean_delta_tm": -0.002459130817442201,
+          "median_delta_tm": 0.0,
+          "route_deep_fraction": 0.8720703125,
+          "threshold": 4.997212273764115
+        },
+        "risk_le_0.05": {
+          "all_atom_lddt_risk_0p05": 0.037109375,
+          "catastrophic_joint_risk": 0.048828125,
+          "catastrophic_tm_risk": 0.0341796875,
+          "mean_cycles": 3.109375,
+          "mean_delta_all_atom_lddt": -0.005882776575163007,
+          "mean_delta_tm": -0.00507534621283412,
+          "median_delta_tm": 0.0,
+          "route_deep_fraction": 0.703125,
+          "threshold": 5.3230099791384085
+        }
+      },
+      "tm_risk_constrained_points": {
+        "risk_le_0.00": {
+          "all_atom_lddt_risk_0p05": 0.0,
+          "catastrophic_joint_risk": 0.0,
+          "catastrophic_tm_risk": 0.0,
+          "mean_cycles": 3.9912109375,
+          "mean_delta_all_atom_lddt": -4.223902942612767e-05,
+          "mean_delta_tm": -2.6471854653209448e-05,
+          "median_delta_tm": 0.0,
+          "route_deep_fraction": 0.9970703125,
+          "threshold": 4.060443010546419
+        },
+        "risk_le_0.01": {
+          "all_atom_lddt_risk_0p05": 0.0087890625,
+          "catastrophic_joint_risk": 0.01171875,
+          "catastrophic_tm_risk": 0.009765625,
+          "mean_cycles": 3.7890625,
+          "mean_delta_all_atom_lddt": -0.001464634493459016,
+          "mean_delta_tm": -0.0015502540190936998,
+          "median_delta_tm": 0.0,
+          "route_deep_fraction": 0.9296875,
+          "threshold": 4.787491742782046
+        },
+        "risk_le_0.02": {
+          "all_atom_lddt_risk_0p05": 0.0185546875,
+          "catastrophic_joint_risk": 0.0263671875,
+          "catastrophic_tm_risk": 0.01953125,
+          "mean_cycles": 3.490234375,
+          "mean_delta_all_atom_lddt": -0.0030446939927060157,
+          "mean_delta_tm": -0.002891549331252463,
+          "median_delta_tm": 0.0,
+          "route_deep_fraction": 0.830078125,
+          "threshold": 5.10594547390058
+        },
+        "risk_le_0.05": {
+          "all_atom_lddt_risk_0p05": 0.076171875,
+          "catastrophic_joint_risk": 0.091796875,
+          "catastrophic_tm_risk": 0.0498046875,
+          "mean_cycles": 2.447265625,
+          "mean_delta_all_atom_lddt": -0.01236790808616206,
+          "mean_delta_tm": -0.008962568957940675,
+          "median_delta_tm": 0.0,
+          "route_deep_fraction": 0.482421875,
+          "threshold": 5.6937321388027
+        }
+      }
+    },
+    "logistic_tier_a_sequence": {
+      "availability": "cycle_1",
+      "classification": {
+        "auroc": 0.6249337151341606,
+        "average_precision": 0.22486152080247254
+      },
+      "feature_names": [
+        "log_length",
+        "sequence_entropy",
+        "hydrophobic_fraction",
+        "charged_fraction",
+        "gly_pro_fraction",
+        "cysteine_fraction",
+        "aa_fraction_A",
+        "aa_fraction_C",
+        "aa_fraction_D",
+        "aa_fraction_E",
+        "aa_fraction_F",
+        "aa_fraction_G",
+        "aa_fraction_H",
+        "aa_fraction_I",
+        "aa_fraction_K",
+        "aa_fraction_L",
+        "aa_fraction_M",
+        "aa_fraction_N",
+        "aa_fraction_P",
+        "aa_fraction_Q",
+        "aa_fraction_R",
+        "aa_fraction_S",
+        "aa_fraction_T",
+        "aa_fraction_V",
+        "aa_fraction_W",
+        "aa_fraction_Y"
+      ],
+      "joint_risk_constrained_points": {
+        "risk_le_0.00": {
+          "all_atom_lddt_risk_0p05": 0.0,
+          "catastrophic_joint_risk": 0.0,
+          "catastrophic_tm_risk": 0.0,
+          "mean_cycles": 3.958984375,
+          "mean_delta_all_atom_lddt": -9.087874786928296e-05,
+          "mean_delta_tm": -4.2946310713887215e-05,
+          "median_delta_tm": 0.0,
+          "route_deep_fraction": 0.986328125,
+          "threshold": 0.08182942087854589
+        },
+        "risk_le_0.01": {
+          "all_atom_lddt_risk_0p05": 0.0078125,
+          "catastrophic_joint_risk": 0.009765625,
+          "catastrophic_tm_risk": 0.0078125,
+          "mean_cycles": 3.8828125,
+          "mean_delta_all_atom_lddt": -0.0011159051791764796,
+          "mean_delta_tm": -0.0008943977882154286,
+          "median_delta_tm": 0.0,
+          "route_deep_fraction": 0.9609375,
+          "threshold": 0.12806610711545563
+        },
+        "risk_le_0.02": {
+          "all_atom_lddt_risk_0p05": 0.013671875,
+          "catastrophic_joint_risk": 0.01953125,
+          "catastrophic_tm_risk": 0.013671875,
+          "mean_cycles": 3.5576171875,
+          "mean_delta_all_atom_lddt": -0.00292178156087175,
+          "mean_delta_tm": -0.0016695630183676258,
+          "median_delta_tm": 0.0,
+          "route_deep_fraction": 0.8525390625,
+          "threshold": 0.24215819329581822
+        },
+        "risk_le_0.05": {
+          "all_atom_lddt_risk_0p05": 0.0390625,
+          "catastrophic_joint_risk": 0.0498046875,
+          "catastrophic_tm_risk": 0.033203125,
+          "mean_cycles": 2.9306640625,
+          "mean_delta_all_atom_lddt": -0.007941066403873265,
+          "mean_delta_tm": -0.005554109302465804,
+          "median_delta_tm": 0.0,
+          "route_deep_fraction": 0.6435546875,
+          "threshold": 0.3659782336031284
+        }
+      },
+      "mean_abs_standardized_coefficients": {
+        "aa_fraction_A": 0.13983198649751818,
+        "aa_fraction_C": 0.13818267966935083,
+        "aa_fraction_D": 0.07879605256097659,
+        "aa_fraction_E": 0.18105589164493682,
+        "aa_fraction_F": 0.07547891270453552,
+        "aa_fraction_G": 0.08195847892756132,
+        "aa_fraction_H": 0.1688032799139497,
+        "aa_fraction_I": 0.09366712667225363,
+        "aa_fraction_K": 0.10632816964818492,
+        "aa_fraction_L": 0.11914038930944677,
+        "aa_fraction_M": 0.07368480262933215,
+        "aa_fraction_N": 0.20360906294286346,
+        "aa_fraction_P": 0.27963302927967526,
+        "aa_fraction_Q": 0.23573833243317938,
+        "aa_fraction_R": 0.11951518598317779,
+        "aa_fraction_S": 0.19118728667546891,
+        "aa_fraction_T": 0.1430316822022312,
+        "aa_fraction_V": 0.3108673253041969,
+        "aa_fraction_W": 0.11529413629721537,
+        "aa_fraction_Y": 0.1502469948834264,
+        "charged_fraction": 0.061768991691860876,
+        "cysteine_fraction": 0.13818267966935083,
+        "gly_pro_fraction": 0.10735618665575741,
+        "hydrophobic_fraction": 0.18595385406631781,
+        "log_length": 0.5721309438863776,
+        "sequence_entropy": 0.1622603013811558
+      },
+      "tm_risk_constrained_points": {
+        "risk_le_0.00": {
+          "all_atom_lddt_risk_0p05": 0.0009765625,
+          "catastrophic_joint_risk": 0.0009765625,
+          "catastrophic_tm_risk": 0.0,
+          "mean_cycles": 3.9501953125,
+          "mean_delta_all_atom_lddt": -0.000172730244230479,
+          "mean_delta_tm": -6.826547905802727e-05,
+          "median_delta_tm": 0.0,
+          "route_deep_fraction": 0.9833984375,
+          "threshold": 0.09097763698758307
+        },
+        "risk_le_0.01": {
+          "all_atom_lddt_risk_0p05": 0.0087890625,
+          "catastrophic_joint_risk": 0.01171875,
+          "catastrophic_tm_risk": 0.009765625,
+          "mean_cycles": 3.84765625,
+          "mean_delta_all_atom_lddt": -0.0013465336232911795,
+          "mean_delta_tm": -0.0010640908149071038,
+          "median_delta_tm": 0.0,
+          "route_deep_fraction": 0.94921875,
+          "threshold": 0.14575371306060503
+        },
+        "risk_le_0.02": {
+          "all_atom_lddt_risk_0p05": 0.0205078125,
+          "catastrophic_joint_risk": 0.02734375,
+          "catastrophic_tm_risk": 0.01953125,
+          "mean_cycles": 3.4580078125,
+          "mean_delta_all_atom_lddt": -0.0039150295779109,
+          "mean_delta_tm": -0.002707973515498452,
+          "median_delta_tm": 0.0,
+          "route_deep_fraction": 0.8193359375,
+          "threshold": 0.26014663081614525
+        },
+        "risk_le_0.05": {
+          "all_atom_lddt_risk_0p05": 0.0751953125,
+          "catastrophic_joint_risk": 0.0947265625,
+          "catastrophic_tm_risk": 0.0498046875,
+          "mean_cycles": 2.189453125,
+          "mean_delta_all_atom_lddt": -0.014169316011248156,
+          "mean_delta_tm": -0.010192903020652011,
+          "median_delta_tm": 0.0,
+          "route_deep_fraction": 0.396484375,
+          "threshold": 0.4870925877570839
+        }
+      }
+    },
+    "logistic_tier_ab_confidence": {
+      "availability": "cycle_1",
+      "classification": {
+        "auroc": 0.8695602220101106,
+        "average_precision": 0.4658828109241559
+      },
+      "feature_names": [
+        "log_length",
+        "sequence_entropy",
+        "hydrophobic_fraction",
+        "charged_fraction",
+        "gly_pro_fraction",
+        "cysteine_fraction",
+        "aa_fraction_A",
+        "aa_fraction_C",
+        "aa_fraction_D",
+        "aa_fraction_E",
+        "aa_fraction_F",
+        "aa_fraction_G",
+        "aa_fraction_H",
+        "aa_fraction_I",
+        "aa_fraction_K",
+        "aa_fraction_L",
+        "aa_fraction_M",
+        "aa_fraction_N",
+        "aa_fraction_P",
+        "aa_fraction_Q",
+        "aa_fraction_R",
+        "aa_fraction_S",
+        "aa_fraction_T",
+        "aa_fraction_V",
+        "aa_fraction_W",
+        "aa_fraction_Y",
+        "confidence_plddt",
+        "confidence_ptm",
+        "confidence_gpde",
+        "confidence_ranking_score",
+        "confidence_disorder",
+        "confidence_has_clash"
+      ],
+      "joint_risk_constrained_points": {
+        "risk_le_0.00": {
+          "all_atom_lddt_risk_0p05": 0.0,
+          "catastrophic_joint_risk": 0.0,
+          "catastrophic_tm_risk": 0.0,
+          "mean_cycles": 3.9208984375,
+          "mean_delta_all_atom_lddt": -7.777789141982794e-05,
+          "mean_delta_tm": -6.436044350266457e-05,
+          "median_delta_tm": 0.0,
+          "route_deep_fraction": 0.9736328125,
+          "threshold": 0.01648946769040691
+        },
+        "risk_le_0.01": {
+          "all_atom_lddt_risk_0p05": 0.0078125,
+          "catastrophic_joint_risk": 0.009765625,
+          "catastrophic_tm_risk": 0.001953125,
+          "mean_cycles": 3.2294921875,
+          "mean_delta_all_atom_lddt": -0.0029430772410705686,
+          "mean_delta_tm": -0.0009623949881643057,
+          "median_delta_tm": 0.0,
+          "route_deep_fraction": 0.7431640625,
+          "threshold": 0.08169099035589608
+        },
+        "risk_le_0.02": {
+          "all_atom_lddt_risk_0p05": 0.0146484375,
+          "catastrophic_joint_risk": 0.01953125,
+          "catastrophic_tm_risk": 0.0068359375,
+          "mean_cycles": 2.8046875,
+          "mean_delta_all_atom_lddt": -0.005721201421692967,
+          "mean_delta_tm": -0.0020915879285894334,
+          "median_delta_tm": 0.0,
+          "route_deep_fraction": 0.6015625,
+          "threshold": 0.1345396644215079
+        },
+        "risk_le_0.05": {
+          "all_atom_lddt_risk_0p05": 0.0439453125,
+          "catastrophic_joint_risk": 0.0498046875,
+          "catastrophic_tm_risk": 0.0126953125,
+          "mean_cycles": 2.20703125,
+          "mean_delta_all_atom_lddt": -0.010785911785205826,
+          "mean_delta_tm": -0.0037294625653885305,
+          "median_delta_tm": 0.0,
+          "route_deep_fraction": 0.40234375,
+          "threshold": 0.262634001917079
+        }
+      },
+      "mean_abs_standardized_coefficients": {
+        "aa_fraction_A": 0.11609531918877732,
+        "aa_fraction_C": 0.08006769663921098,
+        "aa_fraction_D": 0.0679971669715714,
+        "aa_fraction_E": 0.08385520398896247,
+        "aa_fraction_F": 0.05179255486177712,
+        "aa_fraction_G": 0.25170682490510754,
+        "aa_fraction_H": 0.13539880263970291,
+        "aa_fraction_I": 0.25140642751068676,
+        "aa_fraction_K": 0.09015647120331839,
+        "aa_fraction_L": 0.06887024220261342,
+        "aa_fraction_M": 0.13556900591037685,
+        "aa_fraction_N": 0.17291256729587431,
+        "aa_fraction_P": 0.2594983930721865,
+        "aa_fraction_Q": 0.15991571439538926,
+        "aa_fraction_R": 0.0846140793068016,
+        "aa_fraction_S": 0.38076148817126787,
+        "aa_fraction_T": 0.15972095344689677,
+        "aa_fraction_V": 0.3203182591611004,
+        "aa_fraction_W": 0.08245810730524031,
+        "aa_fraction_Y": 0.21421128904593917,
+        "charged_fraction": 0.08511240289533023,
+        "confidence_disorder": 0.0,
+        "confidence_gpde": 1.8294975110111609,
+        "confidence_has_clash": 0.0,
+        "confidence_plddt": 1.646245160829497,
+        "confidence_ptm": 0.861787394894046,
+        "confidence_ranking_score": 0.8617874424310019,
+        "cysteine_fraction": 0.08006769663921098,
+        "gly_pro_fraction": 0.041551708725451345,
+        "hydrophobic_fraction": 0.08785629003876033,
+        "log_length": 0.4058145951379687,
+        "sequence_entropy": 0.08560196494584746
+      },
+      "tm_risk_constrained_points": {
+        "risk_le_0.00": {
+          "all_atom_lddt_risk_0p05": 0.00390625,
+          "catastrophic_joint_risk": 0.00390625,
+          "catastrophic_tm_risk": 0.0,
+          "mean_cycles": 3.5986328125,
+          "mean_delta_all_atom_lddt": -0.0013351281522773206,
+          "mean_delta_tm": -0.0003485265769995749,
+          "median_delta_tm": 0.0,
+          "route_deep_fraction": 0.8662109375,
+          "threshold": 0.05312547282107055
+        },
+        "risk_le_0.01": {
+          "all_atom_lddt_risk_0p05": 0.0283203125,
+          "catastrophic_joint_risk": 0.0341796875,
+          "catastrophic_tm_risk": 0.009765625,
+          "mean_cycles": 2.400390625,
+          "mean_delta_all_atom_lddt": -0.008932593162171543,
+          "mean_delta_tm": -0.0035123697598464787,
+          "median_delta_tm": 0.0,
+          "route_deep_fraction": 0.466796875,
+          "threshold": 0.21448384108778168
+        },
+        "risk_le_0.02": {
+          "all_atom_lddt_risk_0p05": 0.06640625,
+          "catastrophic_joint_risk": 0.076171875,
+          "catastrophic_tm_risk": 0.01953125,
+          "mean_cycles": 1.8701171875,
+          "mean_delta_all_atom_lddt": -0.01430648411042057,
+          "mean_delta_tm": -0.0055861657310742885,
+          "median_delta_tm": -0.0009304285049438477,
+          "route_deep_fraction": 0.2900390625,
+          "threshold": 0.40619301053972173
+        },
+        "risk_le_0.05": {
+          "all_atom_lddt_risk_0p05": 0.111328125,
+          "catastrophic_joint_risk": 0.1298828125,
+          "catastrophic_tm_risk": 0.0498046875,
+          "mean_cycles": 1.4921875,
+          "mean_delta_all_atom_lddt": -0.01979525198112242,
+          "mean_delta_tm": -0.009599309996701777,
+          "median_delta_tm": -0.0036388635635375977,
+          "route_deep_fraction": 0.1640625,
+          "threshold": 0.6545384643599883
+        }
+      }
+    },
+    "logistic_tier_ab_confidence_geometry": {
+      "availability": "cycle_1",
+      "classification": {
+        "auroc": 0.8707533495952204,
+        "average_precision": 0.4968753709791799
+      },
+      "feature_names": [
+        "log_length",
+        "sequence_entropy",
+        "hydrophobic_fraction",
+        "charged_fraction",
+        "gly_pro_fraction",
+        "cysteine_fraction",
+        "aa_fraction_A",
+        "aa_fraction_C",
+        "aa_fraction_D",
+        "aa_fraction_E",
+        "aa_fraction_F",
+        "aa_fraction_G",
+        "aa_fraction_H",
+        "aa_fraction_I",
+        "aa_fraction_K",
+        "aa_fraction_L",
+        "aa_fraction_M",
+        "aa_fraction_N",
+        "aa_fraction_P",
+        "aa_fraction_Q",
+        "aa_fraction_R",
+        "aa_fraction_S",
+        "aa_fraction_T",
+        "aa_fraction_V",
+        "aa_fraction_W",
+        "aa_fraction_Y",
+        "confidence_plddt",
+        "confidence_ptm",
+        "confidence_gpde",
+        "confidence_ranking_score",
+        "confidence_disorder",
+        "confidence_has_clash",
+        "ca_radius_gyration",
+        "ca_radius_gyration_over_cuberoot_length",
+        "ca_end_to_end_distance",
+        "ca_consecutive_mean",
+        "ca_consecutive_std",
+        "ca_consecutive_max",
+        "ca_break_fraction_4p5",
+        "ca_pair_mean",
+        "ca_pair_std",
+        "ca_pair_q10",
+        "ca_pair_q50",
+        "ca_pair_q90",
+        "ca_contact_fraction_8",
+        "ca_contact_fraction_12"
+      ],
+      "joint_risk_constrained_points": {
+        "risk_le_0.00": {
+          "all_atom_lddt_risk_0p05": 0.0,
+          "catastrophic_joint_risk": 0.0,
+          "catastrophic_tm_risk": 0.0,
+          "mean_cycles": 3.87109375,
+          "mean_delta_all_atom_lddt": -0.0001270977663807571,
+          "mean_delta_tm": -9.538279846310616e-05,
+          "median_delta_tm": 0.0,
+          "route_deep_fraction": 0.95703125,
+          "threshold": 0.01497156771881338
+        },
+        "risk_le_0.01": {
+          "all_atom_lddt_risk_0p05": 0.0087890625,
+          "catastrophic_joint_risk": 0.009765625,
+          "catastrophic_tm_risk": 0.001953125,
+          "mean_cycles": 3.2587890625,
+          "mean_delta_all_atom_lddt": -0.0030040277051739395,
+          "mean_delta_tm": -0.0009288645233027637,
+          "median_delta_tm": 0.0,
+          "route_deep_fraction": 0.7529296875,
+          "threshold": 0.06509485814477767
+        },
+        "risk_le_0.02": {
+          "all_atom_lddt_risk_0p05": 0.0166015625,
+          "catastrophic_joint_risk": 0.01953125,
+          "catastrophic_tm_risk": 0.0048828125,
+          "mean_cycles": 2.8486328125,
+          "mean_delta_all_atom_lddt": -0.005665354576194659,
+          "mean_delta_tm": -0.001999483851250261,
+          "median_delta_tm": 0.0,
+          "route_deep_fraction": 0.6162109375,
+          "threshold": 0.11464933053834993
+        },
+        "risk_le_0.05": {
+          "all_atom_lddt_risk_0p05": 0.044921875,
+          "catastrophic_joint_risk": 0.0498046875,
+          "catastrophic_tm_risk": 0.01171875,
+          "mean_cycles": 2.1865234375,
+          "mean_delta_all_atom_lddt": -0.011015442811185494,
+          "mean_delta_tm": -0.004269670636858791,
+          "median_delta_tm": 0.0,
+          "route_deep_fraction": 0.3955078125,
+          "threshold": 0.24910679738516459
+        }
+      },
+      "mean_abs_standardized_coefficients": {
+        "aa_fraction_A": 0.1866090651805184,
+        "aa_fraction_C": 0.11380161858580765,
+        "aa_fraction_D": 0.054105652469254126,
+        "aa_fraction_E": 0.07746654500324576,
+        "aa_fraction_F": 0.0621262046257699,
+        "aa_fraction_G": 0.25660594268606884,
+        "aa_fraction_H": 0.1271144627228838,
+        "aa_fraction_I": 0.2239207135114664,
+        "aa_fraction_K": 0.126090406241922,
+        "aa_fraction_L": 0.07177374934303106,
+        "aa_fraction_M": 0.12350987299703683,
+        "aa_fraction_N": 0.12743571403345896,
+        "aa_fraction_P": 0.2622733894085283,
+        "aa_fraction_Q": 0.19627447174271279,
+        "aa_fraction_R": 0.07468178944815394,
+        "aa_fraction_S": 0.4209682621756331,
+        "aa_fraction_T": 0.16877166898335427,
+        "aa_fraction_V": 0.3014087963959856,
+        "aa_fraction_W": 0.08148975596962253,
+        "aa_fraction_Y": 0.2208325919028923,
+        "ca_break_fraction_4p5": 0.6930814243668418,
+        "ca_consecutive_max": 0.08691058299997513,
+        "ca_consecutive_mean": 0.42876264706028466,
+        "ca_consecutive_std": 0.2753129110253767,
+        "ca_contact_fraction_12": 0.35022268764536263,
+        "ca_contact_fraction_8": 0.33081624739610166,
+        "ca_end_to_end_distance": 0.06116700745607874,
+        "ca_pair_mean": 0.18005960394071188,
+        "ca_pair_q10": 0.44299154639338256,
+        "ca_pair_q50": 0.2715864179139235,
+        "ca_pair_q90": 0.23378152112144054,
+        "ca_pair_std": 0.36390378269713103,
+        "ca_radius_gyration": 0.06166576778054226,
+        "ca_radius_gyration_over_cuberoot_length": 0.1127403868570586,
+        "charged_fraction": 0.11177116314190357,
+        "confidence_disorder": 0.0,
+        "confidence_gpde": 2.099359120104163,
+        "confidence_has_clash": 0.0,
+        "confidence_plddt": 1.6569301704019221,
+        "confidence_ptm": 0.6815656032820718,
+        "confidence_ranking_score": 0.6815653168997049,
+        "cysteine_fraction": 0.11380161858580765,
+        "gly_pro_fraction": 0.04562125695687631,
+        "hydrophobic_fraction": 0.08963309359897007,
+        "log_length": 1.0915496616480143,
+        "sequence_entropy": 0.0926732474818773
+      },
+      "tm_risk_constrained_points": {
+        "risk_le_0.00": {
+          "all_atom_lddt_risk_0p05": 0.005859375,
+          "catastrophic_joint_risk": 0.005859375,
+          "catastrophic_tm_risk": 0.0,
+          "mean_cycles": 3.373046875,
+          "mean_delta_all_atom_lddt": -0.0024324379628524184,
+          "mean_delta_tm": -0.0006696989294141531,
+          "median_delta_tm": 0.0,
+          "route_deep_fraction": 0.791015625,
+          "threshold": 0.05475808493522033
+        },
+        "risk_le_0.01": {
+          "all_atom_lddt_risk_0p05": 0.03515625,
+          "catastrophic_joint_risk": 0.0400390625,
+          "catastrophic_tm_risk": 0.009765625,
+          "mean_cycles": 2.3125,
+          "mean_delta_all_atom_lddt": -0.009667590842582285,
+          "mean_delta_tm": -0.0037399186403490603,
+          "median_delta_tm": 0.0,
+          "route_deep_fraction": 0.4375,
+          "threshold": 0.21226652532615314
+        },
+        "risk_le_0.02": {
+          "all_atom_lddt_risk_0p05": 0.0615234375,
+          "catastrophic_joint_risk": 0.0703125,
+          "catastrophic_tm_risk": 0.01953125,
+          "mean_cycles": 1.9580078125,
+          "mean_delta_all_atom_lddt": -0.013537513033952564,
+          "mean_delta_tm": -0.005852275324286893,
+          "median_delta_tm": -0.00044229626655578613,
+          "route_deep_fraction": 0.3193359375,
+          "threshold": 0.3382922625524369
+        },
+        "risk_le_0.05": {
+          "all_atom_lddt_risk_0p05": 0.1162109375,
+          "catastrophic_joint_risk": 0.1337890625,
+          "catastrophic_tm_risk": 0.0498046875,
+          "mean_cycles": 1.474609375,
+          "mean_delta_all_atom_lddt": -0.019817959691863507,
+          "mean_delta_tm": -0.00906458504323382,
+          "median_delta_tm": -0.0036986470222473145,
+          "route_deep_fraction": 0.158203125,
+          "threshold": 0.6947570496290301
+        }
+      }
+    },
+    "oracle_c1_hardness": {
+      "availability": "oracle",
+      "classification": {
+        "auroc": 1.0,
+        "average_precision": 0.9999999999999998
+      },
+      "joint_risk_constrained_points": {
+        "risk_le_0.00": {
+          "all_atom_lddt_risk_0p05": 0.0,
+          "catastrophic_joint_risk": 0.0,
+          "catastrophic_tm_risk": 0.0,
+          "mean_cycles": 3.98828125,
+          "mean_delta_all_atom_lddt": 0.0002696920419111848,
+          "mean_delta_tm": 0.0012190190027467906,
+          "median_delta_tm": 0.0,
+          "route_deep_fraction": 0.99609375,
+          "threshold": -0.19345098733901978
+        },
+        "risk_le_0.01": {
+          "all_atom_lddt_risk_0p05": 0.009765625,
+          "catastrophic_joint_risk": 0.009765625,
+          "catastrophic_tm_risk": 0.0,
+          "mean_cycles": 2.6171875,
+          "mean_delta_all_atom_lddt": -0.004238381487084553,
+          "mean_delta_tm": 0.0041273243114119396,
+          "median_delta_tm": 0.0,
+          "route_deep_fraction": 0.5390625,
+          "threshold": 0.005775928497314453
+        },
+        "risk_le_0.02": {
+          "all_atom_lddt_risk_0p05": 0.01953125,
+          "catastrophic_joint_risk": 0.01953125,
+          "catastrophic_tm_risk": 0.0,
+          "mean_cycles": 2.2158203125,
+          "mean_delta_all_atom_lddt": -0.007837457145797089,
+          "mean_delta_tm": 0.0030570692470064387,
+          "median_delta_tm": 0.0,
+          "route_deep_fraction": 0.4052734375,
+          "threshold": 0.010409533977508545
+        },
+        "risk_le_0.05": {
+          "all_atom_lddt_risk_0p05": 0.0498046875,
+          "catastrophic_joint_risk": 0.0498046875,
+          "catastrophic_tm_risk": 0.0,
+          "mean_cycles": 1.71484375,
+          "mean_delta_all_atom_lddt": -0.013877906952984631,
+          "mean_delta_tm": 0.00035685603506863117,
+          "median_delta_tm": -0.0008521378040313721,
+          "route_deep_fraction": 0.23828125,
+          "threshold": 0.0235556960105896
+        }
+      },
+      "tm_risk_constrained_points": {
+        "risk_le_0.00": {
+          "all_atom_lddt_risk_0p05": 0.1103515625,
+          "catastrophic_joint_risk": 0.1103515625,
+          "catastrophic_tm_risk": 0.0,
+          "mean_cycles": 1.369140625,
+          "mean_delta_all_atom_lddt": -0.019442505843471736,
+          "mean_delta_tm": -0.0036768770223716274,
+          "median_delta_tm": -0.0036986470222473145,
+          "route_deep_fraction": 0.123046875,
+          "threshold": 0.050063490867614746
+        },
+        "risk_le_0.01": {
+          "all_atom_lddt_risk_0p05": 0.1181640625,
+          "catastrophic_joint_risk": 0.1201171875,
+          "catastrophic_tm_risk": 0.009765625,
+          "mean_cycles": 1.33984375,
+          "mean_delta_all_atom_lddt": -0.02002185137826018,
+          "mean_delta_tm": -0.00419100200815592,
+          "median_delta_tm": -0.003901064395904541,
+          "route_deep_fraction": 0.11328125,
+          "threshold": 0.05495709180831909
+        },
+        "risk_le_0.02": {
+          "all_atom_lddt_risk_0p05": 0.123046875,
+          "catastrophic_joint_risk": 0.1298828125,
+          "catastrophic_tm_risk": 0.01953125,
+          "mean_cycles": 1.310546875,
+          "mean_delta_all_atom_lddt": -0.020563344500260428,
+          "mean_delta_tm": -0.004749312865897082,
+          "median_delta_tm": -0.004165768623352051,
+          "route_deep_fraction": 0.103515625,
+          "threshold": 0.0589909553527832
+        },
+        "risk_le_0.05": {
+          "all_atom_lddt_risk_0p05": 0.1416015625,
+          "catastrophic_joint_risk": 0.16015625,
+          "catastrophic_tm_risk": 0.0498046875,
+          "mean_cycles": 1.2197265625,
+          "mean_delta_all_atom_lddt": -0.02252377665718086,
+          "mean_delta_tm": -0.006928878268809058,
+          "median_delta_tm": -0.004913210868835449,
+          "route_deep_fraction": 0.0732421875,
+          "threshold": 0.09269392490386963
+        }
+      }
+    }
+  },
+  "positive_count": 126,
+  "positive_fraction": 0.123046875,
+  "scope": "temporal_dev_v1 only; frozen temporal test was not read",
+  "target_count": 1024,
+  "target_label": "c1_s1 TM-style delta versus c4_s1 < -0.05"
+}
