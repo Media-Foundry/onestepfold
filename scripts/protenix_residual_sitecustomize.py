@@ -56,8 +56,8 @@ def _install() -> None:
         return single, pair
 
     def direction_cosine(left, right) -> float:
-        left = left.detach().float().reshape(-1)
-        right = right.detach().float().reshape(-1)
+        left = left.detach().float().cpu().reshape(-1)
+        right = right.detach().float().cpu().reshape(-1)
         denominator = torch.linalg.vector_norm(left) * torch.linalg.vector_norm(right)
         if scalar(denominator) <= 1e-12:
             return float("nan")
