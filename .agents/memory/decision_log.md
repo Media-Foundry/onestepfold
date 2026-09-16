@@ -640,4 +640,6 @@ shard checksum, feature shape, model/revision field, sequence length, and exact
 group coverage. The pinned model revision is
 `f0d413606442e6b433d5e75e9aae3285ca9b137f`; the Biohub/esm revision remains
 `bf343ba264b650dff7a073643725f9aaa1fdbe8d`. Use this cache only for the 300M
-conditioner ablation; ESMC-600M remains primary.
+conditioner ablation; ESMC-600M remains primary. An independent recomputation
+of one 125-residue sequence matched its cached `[125,960]` BF16 slice at cosine
+0.9999932 with maximum absolute error 0.0009766.

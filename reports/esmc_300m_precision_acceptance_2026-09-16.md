@@ -15,11 +15,17 @@ ESMC-600M cache.
 | dtype | BF16 |
 | storage | 21 GB |
 | partition wall times | 840.2 s / 847.4 s |
+| independent round-trip cosine | 0.9999932 |
+| independent round-trip max absolute error | 0.0009766 |
 
 The cache used deterministic two-way SHA256 partitioning. The merged manifest
 references tensors in `part-000/` and `part-001/` without rewriting them. The
 validator checked exact group coverage, sequence lengths, feature/model
 revisions, BF16 tensor shapes, and every shard checksum.
+
+An independent pinned-model recomputation of one 125-residue sequence matched
+its cached `[125,960]` slice at cosine 0.9999932; the maximum absolute BF16
+error was 0.0009766.
 
 Artifacts:
 
