@@ -630,3 +630,14 @@ ablation. Hash-partition the 38,400 exact sequence groups across two independent
 cache writers, merge only manifests, and validate full coverage/checksums. Do
 not recompute the already accepted ESMC-600M cache or use ESM3 structure-track
 outputs as teacher labels.
+
+## 2026-09-16: Accept the Precision ESMC-300M scale-ablation cache
+
+The two W7900 partitions completed in 840.2 and 847.4 seconds. Their merged
+cache contains 38,400/38,400 groups, 11,615,845 residues, and 719 BF16
+safetensors shards occupying 21 GB. The independent validator checked every
+shard checksum, feature shape, model/revision field, sequence length, and exact
+group coverage. The pinned model revision is
+`f0d413606442e6b433d5e75e9aae3285ca9b137f`; the Biohub/esm revision remains
+`bf343ba264b650dff7a073643725f9aaa1fdbe8d`. Use this cache only for the 300M
+conditioner ablation; ESMC-600M remains primary.

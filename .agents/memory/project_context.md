@@ -160,6 +160,14 @@ independent Slurm validator. ESMC special tokens are removed only after an
 explicit `L+2` assertion, and residue features are stored as BF16 sharded
 safetensors.
 
+The ESMC-300M scale-ablation cache is also complete on the two Precision W7900
+cards. It uses HF revision `f0d413606442e6b433d5e75e9aae3285ca9b137f`, the
+same pinned Biohub/esm revision, final-layer BF16 features, and the same 38,400
+groups / 11,615,845 residues. Its two deterministic partitions merge into 719
+validated shards occupying 21 GB under
+`/media/WDisk/Datasets/OneStepFold/esmc_300m_final_v1`. It is an ablation and
+does not replace the primary ESMC-600M cache.
+
 Stage 0A is frozen as a compatibility-only Protenix Mini-ESM experiment. Its
 view is `stage0_v1`: 1,024 HQ-valid temporal dev groups, a nested 128-group
 five-seed variance subset, 2,440 remaining HQ-valid frozen-test groups, and a
