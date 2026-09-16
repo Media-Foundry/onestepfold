@@ -743,3 +743,29 @@ detached CPU FP32 tensors for cross-GPU determinism; Protenix inference remains
 BF16. The short emergency smoke was cancelled after the debug smoke passed.
 Full `c4_s2` residual characterization over `temporal_dev_v1` is submitted as
 A800 job `12767871` with 8 CPUs and 64G RAM.
+
+## 2026-09-17: Close Stage 1A and start parallel residual-emulation branches
+
+The full Stage 1A job `12767871` completed with 1,024/1,024 valid rows and all
+three transitions. The corrected analyzer now recovers sequence length from
+the Stage 0E `features.log_length` field and reports length bands plus partial
+correlations. Pair residual mean remains correlated with c2 all-atom
+degradation after length control (approximately -0.40 for c2-to-c3 and
+c3-to-c4), so raw Frobenius scaling is not the sole explanation. The pooled
+rank-8 result is explicitly interpreted as low-rank spatial magnitude
+structure, not a claim about the signed `L x L x d` residual tensor.
+
+The next work is parallel rather than serial. `select_teacher_pairs.py`
+selects one deterministic quality-valid pre-cutoff train record per exact
+sequence group; a 32-group smoke passed and 16-shard, 16,000-group `c2_s2`
+and `c4_s2` arrays are queued as Slurm jobs `12768788` and `12768789` on
+`emergency_gpu`. The input selector accepts the frozen train-only manifest
+which omits an explicit `split` field, while still filtering a combined
+manifest when one is supplied.
+
+The residual overlay now has an opt-in `ONESTEPFOLD_SIGNED_SKETCH=1` path that
+writes deterministic FP16 spatially pooled signed pair sketches and records
+cosines between adjacent residual directions. A 256-target `c4_s2` diagnostic
+is queued as job `12768797`; it is a diagnostic artifact only and does not
+read the frozen temporal test. Coordinate-refiner training remains gated on
+successful teacher-pair QA; no new model claim is made yet.

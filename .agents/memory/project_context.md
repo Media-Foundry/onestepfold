@@ -205,12 +205,22 @@ the oracle is 2.129 mean cycles, the best current grouped-OOF HGB route is
 a small oracle gap and uses OOF threshold sweeps, so it is a diagnostic result;
 default to fixed c2_s2 and require nested calibration before frozen-test use.
 
-Stage 1A residual characterization is now gated by a clean single-target
-smoke. The runtime hook normalizes Protenix's unbatched `[L,C]`/`[L,L,C]`
-Pairformer outputs, preserves cycle state after diagnostic exceptions, and
-runs SVD/eigendecomposition on detached CPU FP32 tensors for backend
-portability. A four-cycle A40 smoke (`12767861`) produced all three residual
-transitions with zero feature errors. Full temporal-dev `c4_s2` characterization
-is submitted as A800 job `12767871` under
-`/hpc2hdd/home/shuang886/Folding/stage1a/residual_c4s2_v1`; analyze only after
-its JSONL has 1,024 rows and every row has the three required transitions.
+Stage 1A residual characterization passed a clean single-target smoke. The
+runtime hook normalizes Protenix's unbatched `[L,C]`/`[L,L,C]` Pairformer
+outputs, preserves cycle state after diagnostic exceptions, and runs
+SVD/eigendecomposition on detached CPU FP32 tensors for backend portability.
+The full temporal-dev `c4_s2` characterization completed as A800 job
+`12767871` under `/hpc2hdd/home/shuang886/Folding/stage1a/residual_c4s2_v1`;
+it has 1,024 rows, all three transitions, and zero feature errors. The
+length-controlled report is committed under
+`reports/stage1a_residual_analysis_2026-09-17.{json,md}`. Pair residual means
+remain moderately correlated with c2 all-atom degradation after controlling
+for sequence length (about -0.40); the spatial rank-8 statistic is for the
+nonnegative pair-magnitude envelope, not the signed tensor rank.
+
+Stage 1A is a completed characterization gate. Stage 1B teacher data uses
+one deterministic train-valid record per exact sequence group and is split
+into 16 independent Protenix shards for `c2_s2` and `c4_s2`. Stage 1C adds an
+opt-in signed pair sketch and adjacent residual-direction cosines; its
+256-target diagnostic is separate and does not touch frozen temporal test
+data.

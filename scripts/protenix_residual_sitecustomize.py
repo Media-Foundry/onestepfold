@@ -9,6 +9,8 @@ from __future__ import annotations
 
 import json
 import math
+import os
+import re
 from pathlib import Path
 
 
@@ -53,7 +55,55 @@ def _install() -> None:
             raise ValueError(f"unexpected pair representation shape: {tuple(pair.shape)}")
         return single, pair
 
-    def residual_summary(single_delta, pair_delta, transition: str) -> dict[str, float | str]:
+    def direction_cosine(left, right) -> float:
+        left = left.detach().float().reshape(-1)
+        right = right.detach().float().reshape(-1)
+        denominator = torch.linalg.vector_norm(left) * torch.linalg.vector_norm(right)
+        if scalar(denominator) <= 1e-12:
+            return float("nan")
+        return scalar(torch.dot(left, right) / denominator)
+
+    sketch_enabled = os.environ.get("ONESTEPFOLD_SIGNED_SKETCH", "0") == "1"
+    sketch_size = int(os.environ.get("ONESTEPFOLD_SKETCH_SIZE", "64"))
+    sketch_channels = int(os.environ.get("ONESTEPFOLD_SKETCH_CHANNELS", "16"))
+    sketch_projection_cache: dict[int, object] = {}
+
+    def signed_pair_sketch(pair, path: Path) -> None:
+        """Persist a deterministic signed, spatially pooled pair sketch."""
+        import numpy as np
+
+        pair = pair.detach()
+        if pair.ndim == 4 and pair.shape[0] == 1:
+            pair = pair[0]
+        pair = pair.float().cpu()
+        channels = int(pair.shape[-1])
+        projection = sketch_projection_cache.get(channels)
+        if projection is None:
+            generator = torch.Generator(device="cpu").manual_seed(1729 + channels)
+            projection = torch.randn(
+                channels, sketch_channels, generator=generator, dtype=torch.float32
+            ) / math.sqrt(sketch_channels)
+            sketch_projection_cache[channels] = projection
+        projected = pair.reshape(-1, channels) @ projection
+        projected = projected.reshape(pair.shape[0], pair.shape[1], sketch_channels)
+        pooled = torch.nn.functional.adaptive_avg_pool2d(
+            projected.permute(2, 0, 1)[None], (sketch_size, sketch_size)
+        )[0]
+        path.parent.mkdir(parents=True, exist_ok=True)
+        np.savez_compressed(
+            path,
+            sketch=pooled.numpy().astype(np.float16),
+            original_shape=np.asarray(pair.shape, dtype=np.int64),
+            projection_seed=np.asarray([1729 + channels], dtype=np.int64),
+        )
+
+    def residual_summary(
+        single_delta,
+        pair_delta,
+        transition: str,
+        previous_single_delta=None,
+        previous_pair_delta=None,
+    ) -> dict[str, float | str]:
         single_delta, pair_delta = strip_optional_batch(
             single_delta.detach(), pair_delta.detach()
         )
@@ -138,11 +188,19 @@ def _install() -> None:
                 channel_eigenvalues[:16].sum() / channel_total
             ),
         }
+        if previous_single_delta is not None and previous_pair_delta is not None:
+            result["single_delta_direction_cosine"] = direction_cosine(
+                single_delta, previous_single_delta
+            )
+            result["pair_delta_direction_cosine"] = direction_cosine(
+                pair_delta, previous_pair_delta
+            )
         return result
 
     def init_model(self) -> None:
         original_init_model(self)
         self._onestepfold_residual_cycles = []
+        self._onestepfold_previous_delta = None
 
         def pairformer_hook(_module, _inputs, output) -> None:
             try:
@@ -155,18 +213,47 @@ def _install() -> None:
                     **tensor_stats("single", single),
                     **tensor_stats("pair", pair),
                 }
+                sketch_root = Path(self.configs.dump_dir) / "signed_sketches"
+                if sketch_enabled and cycle_index in (2, 4):
+                    sample_name = re.sub(
+                        r"[^A-Za-z0-9_.-]+",
+                        "_",
+                        getattr(self, "_onestepfold_sample_name", "unknown"),
+                    )
+                    state_path = sketch_root / f"{sample_name}_c{cycle_index}_pair_state.npz"
+                    signed_pair_sketch(pair, state_path)
+                    current["signed_pair_state_sketch_path"] = str(state_path)
                 if self._onestepfold_residual_cycles:
                     previous_entry = self._onestepfold_residual_cycles[-1]
                     previous = previous_entry.get("_tensors")
                     if previous is None:
                         raise RuntimeError("previous cycle representation is unavailable")
+                    previous_delta = self._onestepfold_previous_delta
+                    single_delta = single - previous[0]
+                    pair_delta = pair - previous[1]
                     current["residual"] = residual_summary(
-                        single - previous[0],
-                        pair - previous[1],
+                        single_delta,
+                        pair_delta,
                         f"c{cycle_index - 1}_to_c{cycle_index}",
+                        None if previous_delta is None else previous_delta[0],
+                        None if previous_delta is None else previous_delta[1],
                     )
+                    if sketch_enabled:
+                        sample_name = re.sub(
+                            r"[^A-Za-z0-9_.-]+",
+                            "_",
+                            getattr(self, "_onestepfold_sample_name", "unknown"),
+                        )
+                        transition = current["residual"]["transition"]
+                        delta_path = sketch_root / f"{sample_name}_{transition}_pair_delta.npz"
+                        signed_pair_sketch(pair_delta, delta_path)
+                        current["residual"]["signed_pair_delta_sketch_path"] = str(delta_path)
                     previous_entry.pop("_tensors", None)
                     del previous
+                    self._onestepfold_previous_delta = (
+                        single_delta.detach(),
+                        pair_delta.detach(),
+                    )
                 current["_tensors"] = (single.detach().clone(), pair.detach().clone())
                 self._onestepfold_residual_cycles.append(current)
             except Exception as exc:
@@ -184,6 +271,8 @@ def _install() -> None:
 
     def predict(self, data):
         self._onestepfold_residual_cycles = []
+        self._onestepfold_previous_delta = None
+        self._onestepfold_sample_name = str(data.get("sample_name", "unknown"))
         result = original_predict(self, data)
         cycles = []
         for cycle in self._onestepfold_residual_cycles:
@@ -198,6 +287,7 @@ def _install() -> None:
         with output.open("a", encoding="utf-8") as handle:
             handle.write(json.dumps(record, sort_keys=True) + "\n")
         self._onestepfold_residual_cycles = []
+        self._onestepfold_previous_delta = None
         return result
 
     InferenceRunner.init_model = init_model

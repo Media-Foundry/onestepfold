@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import math
 from pathlib import Path
 from typing import Any
 
@@ -85,6 +86,23 @@ def correlation(left: list[float], right: list[float]) -> float | None:
     return float(np.corrcoef(np.asarray(left), np.asarray(right))[0, 1])
 
 
+def partial_correlation(
+    left: list[float], right: list[float], control: list[float]
+) -> float | None:
+    """Correlation after linear residualization against one control variable."""
+    if len(left) < 3 or len(left) != len(right) or len(left) != len(control):
+        return None
+    x = np.asarray(control, dtype=np.float64)
+    design = np.column_stack([np.ones_like(x), x])
+    left_residual = np.asarray(left, dtype=np.float64) - design @ np.linalg.lstsq(
+        design, np.asarray(left, dtype=np.float64), rcond=None
+    )[0]
+    right_residual = np.asarray(right, dtype=np.float64) - design @ np.linalg.lstsq(
+        design, np.asarray(right, dtype=np.float64), rcond=None
+    )[0]
+    return correlation(left_residual.tolist(), right_residual.tolist())
+
+
 def analyze(residual_path: Path, labels_path: Path) -> dict[str, Any]:
     labels = load_labels(labels_path)
     residuals = load_residuals(residual_path)
@@ -144,6 +162,17 @@ def analyze(residual_path: Path, labels_path: Path) -> dict[str, Any]:
         float(labels[group_id]["labels"]["delta_c2s2_vs_c4s5_all_atom_lddt"])
         for group_id in residuals
     ]
+    def sequence_length(group_id: str) -> int:
+        record = labels[group_id]
+        if record.get("sequence_length") is not None:
+            return int(record["sequence_length"])
+        features = record.get("features", {})
+        log_length = features.get("log_length")
+        if log_length is None:
+            raise ValueError(f"missing sequence length for {group_id}")
+        return int(round(math.exp(float(log_length))))
+
+    lengths = [sequence_length(group_id) for group_id in residuals]
     correlations = {}
     for transition in ("c2_to_c3", "c3_to_c4"):
         correlations[transition] = {
@@ -162,9 +191,73 @@ def analyze(residual_path: Path, labels_path: Path) -> dict[str, Any]:
             )
             for field in (
                 "single_delta_fro_norm",
+                "single_delta_residue_norm_mean",
                 "pair_delta_fro_norm",
+                "pair_delta_pair_norm_mean",
                 "pair_delta_pooled_spatial_rank8_energy",
             )
+        }
+        correlations[transition]["length_controlled"] = {
+            field: partial_correlation(
+                [
+                    float(
+                        next(
+                            cycle["residual"][field]
+                            for cycle in residuals[group_id]["cycles"]
+                            if cycle.get("residual", {}).get("transition") == transition
+                        )
+                    )
+                    for group_id in residuals
+                ],
+                c2_delta,
+                lengths,
+            )
+            for field in (
+                "single_delta_fro_norm",
+                "single_delta_residue_norm_mean",
+                "pair_delta_fro_norm",
+                "pair_delta_pair_norm_mean",
+                "pair_delta_pooled_spatial_rank8_energy",
+            )
+        }
+
+    length_bands = ((20, 128), (128, 256), (256, 512), (512, 1025))
+    length_stratified: dict[str, Any] = {}
+    for lower, upper in length_bands:
+        group_ids = [
+            group_id
+            for group_id in residuals
+            if lower <= sequence_length(group_id) < upper
+        ]
+        band_name = f"{lower}_{upper - 1}"
+        length_stratified[band_name] = {
+            "record_count": len(group_ids),
+            "hard_joint_count": sum(
+                bool(labels[group_id]["labels"]["hard_c2_vs_c4s5_joint_0p05"])
+                for group_id in group_ids
+            ),
+            "transitions": {
+                transition: {
+                    field: summarize(
+                        [
+                            float(
+                                next(
+                                    cycle["residual"][field]
+                                    for cycle in residuals[group_id]["cycles"]
+                                    if cycle.get("residual", {}).get("transition") == transition
+                                )
+                            )
+                            for group_id in group_ids
+                        ]
+                    )
+                    for field in (
+                        "single_delta_residue_norm_mean",
+                        "pair_delta_pair_norm_mean",
+                        "pair_delta_pooled_spatial_rank8_energy",
+                    )
+                }
+                for transition in TRANSITIONS
+            },
         }
 
     return {
@@ -178,6 +271,7 @@ def analyze(residual_path: Path, labels_path: Path) -> dict[str, Any]:
         "transitions": summaries,
         "subgroups": subgroup_summary,
         "correlations_with_c2_all_atom_delta": correlations,
+        "length_stratified": length_stratified,
     }
 
 
@@ -234,6 +328,15 @@ def write_markdown(path: Path, result: dict[str, Any]) -> None:
             f"{fields['pair_delta_fro_norm']} | "
             f"{fields['pair_delta_pooled_spatial_rank8_energy']} |"
         )
+    lines.extend(
+        [
+            "",
+            "Length-controlled correlations are reported in the JSON under "
+            "`correlations_with_c2_all_atom_delta.*.length_controlled`; pair "
+            "norm means and residue-normalized single norms are less sensitive "
+            "to the raw L and L^2 scaling than Frobenius norms.",
+        ]
+    )
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text("\n".join(lines) + "\n", encoding="utf-8")
 
