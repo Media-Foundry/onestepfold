@@ -335,8 +335,22 @@ def write_markdown(path: Path, result: dict[str, Any]) -> None:
             "`correlations_with_c2_all_atom_delta.*.length_controlled`; pair "
             "norm means and residue-normalized single norms are less sensitive "
             "to the raw L and L^2 scaling than Frobenius norms.",
+            "",
+            "## Length-Stratified Pair Residual Means",
+            "",
+            "| length band | records | hard | c1->c2 | c2->c3 | c3->c4 |",
+            "| --- | ---: | ---: | ---: | ---: | ---: |",
         ]
     )
+    for band, data in result["length_stratified"].items():
+        medians = [
+            data["transitions"][transition]["pair_delta_pair_norm_mean"]["median"]
+            for transition in TRANSITIONS
+        ]
+        lines.append(
+            f"| {band} | {data['record_count']} | {data['hard_joint_count']} | "
+            f"{medians[0]:.3f} | {medians[1]:.3f} | {medians[2]:.3f} |"
+        )
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text("\n".join(lines) + "\n", encoding="utf-8")
 

@@ -32,3 +32,12 @@ Only compact hook summaries are used; full Pairformer tensors are not stored.
 | c3_to_c4 | -0.08870262049289648 | -0.33306631358150496 | -0.07040802334944138 |
 
 Length-controlled correlations are reported in the JSON under `correlations_with_c2_all_atom_delta.*.length_controlled`; pair norm means and residue-normalized single norms are less sensitive to the raw L and L^2 scaling than Frobenius norms.
+
+## Length-Stratified Pair Residual Means
+
+| length band | records | hard | c1->c2 | c2->c3 | c3->c4 |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| 20_127 | 94 | 7 | 89.067 | 45.863 | 36.913 |
+| 128_255 | 309 | 21 | 82.791 | 41.389 | 33.052 |
+| 256_511 | 505 | 27 | 81.639 | 44.979 | 33.904 |
+| 512_1024 | 116 | 21 | 92.017 | 52.828 | 39.392 |
