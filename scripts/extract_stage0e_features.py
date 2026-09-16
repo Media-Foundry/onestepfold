@@ -38,6 +38,47 @@ def confidence_path(prediction_path: Path) -> Path:
     return prediction_path.with_name(f"{stem}_summary_confidence_sample_0.json")
 
 
+def read_ca(path: Path, length: int) -> np.ndarray:
+    import gemmi
+
+    coordinates = np.full((length, 3), np.nan, dtype=np.float32)
+    structure = gemmi.read_structure(str(path))
+    if len(structure) == 0 or len(structure[0]) == 0:
+        raise ValueError(f"prediction has no model/chain: {path}")
+    chain = next(iter(structure[0]))
+    for fallback_index, residue in enumerate(chain):
+        index = int(residue.seqid.num) - 1
+        if not 0 <= index < length:
+            index = fallback_index
+        atom = next((item for item in residue if str(item.name).strip().upper() == "CA"), None)
+        if atom is None:
+            continue
+        values = np.asarray([atom.pos.x, atom.pos.y, atom.pos.z], dtype=np.float32)
+        if np.isfinite(values).all():
+            coordinates[index] = values
+    if not np.isfinite(coordinates).all():
+        raise ValueError(f"prediction has missing CA coordinates: {path}")
+    return coordinates
+
+
+def pair_distances(coordinates: np.ndarray) -> np.ndarray:
+    from scipy.spatial.distance import pdist
+
+    return np.asarray(pdist(coordinates), dtype=np.float32)
+
+
+def kabsch_rmsd(left: np.ndarray, right: np.ndarray) -> float:
+    left_centered = left - left.mean(axis=0)
+    right_centered = right - right.mean(axis=0)
+    u, _, vt = np.linalg.svd(left_centered.T @ right_centered)
+    rotation = u @ vt
+    if np.linalg.det(rotation) < 0:
+        u[:, -1] *= -1
+        rotation = u @ vt
+    aligned = left_centered @ rotation
+    return float(np.sqrt(np.mean(np.sum((aligned - right_centered) ** 2, axis=1))))
+
+
 def load_json(path: Path) -> dict[str, Any]:
     return json.loads(path.read_text(encoding="utf-8"))
 
@@ -94,12 +135,17 @@ def build(args: argparse.Namespace) -> dict[str, Any]:
     c2_records = {
         str(row["group_id"]): row for row in c2_eval["records"] if row.get("status") == "ok"
     }
+    c1_eval = load_json(args.c1_eval)
+    c1_records = {
+        str(row["group_id"]): row for row in c1_eval["records"] if row.get("status") == "ok"
+    }
     internal = load_internal(args.c2_internal)
     records = []
     for source in base["records"]:
         group_id = str(source["group_id"])
-        if group_id not in c2_records or group_id not in internal:
+        if group_id not in c1_records or group_id not in c2_records or group_id not in internal:
             raise ValueError(f"missing c2 data for {group_id}")
+        c1_record = c1_records[group_id]
         c2_record = c2_records[group_id]
         c2_confidence = confidence_path(Path(c2_record["prediction_path"]))
         features = {
@@ -118,6 +164,17 @@ def build(args: argparse.Namespace) -> dict[str, Any]:
             )
         }
         features.update(confidence_features(c2_confidence, "c2_confidence"))
+        sequence_length = int(round(float(source["features"]["length"])))
+        c1_coordinates = read_ca(Path(c1_record["prediction_path"]), sequence_length)
+        c2_coordinates = read_ca(Path(c2_record["prediction_path"]), sequence_length)
+        c1_distances = pair_distances(c1_coordinates)
+        c2_distances = pair_distances(c2_coordinates)
+        features["trajectory_coordinate_distance_map_rms_angstrom"] = float(
+            np.sqrt(np.mean((c2_distances - c1_distances) ** 2))
+        )
+        features["trajectory_coordinate_kabsch_ca_rmsd_angstrom"] = kabsch_rmsd(
+            c1_coordinates, c2_coordinates
+        )
         for metric_name in ("plddt", "ptm", "gpde", "ranking_score", "disorder", "has_clash"):
             c1_name = f"confidence_{metric_name}"
             c2_name = f"c2_confidence_{metric_name}"
@@ -162,6 +219,7 @@ def build(args: argparse.Namespace) -> dict[str, Any]:
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--base-features", type=Path, required=True)
+    parser.add_argument("--c1-eval", type=Path, required=True)
     parser.add_argument("--c2-eval", type=Path, required=True)
     parser.add_argument("--c2-internal", type=Path, required=True)
     parser.add_argument("--output", type=Path, required=True)

@@ -35,6 +35,10 @@ C2_CONFIDENCE_FEATURES = tuple(
     f"c2_confidence_{name}"
     for name in ("plddt", "ptm", "gpde", "ranking_score", "disorder", "has_clash")
 )
+CONFIDENCE_DELTA_FEATURES = tuple(
+    f"confidence_delta_c2_c1_{name}"
+    for name in ("plddt", "ptm", "gpde", "ranking_score", "disorder", "has_clash")
+)
 TRAJECTORY_FEATURES = tuple(
     f"trajectory_{kind}_{name}"
     for kind in ("delta", "abs_delta", "relative_delta")
@@ -56,6 +60,10 @@ TRAJECTORY_FEATURES = tuple(
         "pair_diagonal_normalized_norm_mean",
         "pair_diagonal_normalized_norm_std",
     )
+)
+COORDINATE_TRAJECTORY_FEATURES = (
+    "trajectory_coordinate_distance_map_rms_angstrom",
+    "trajectory_coordinate_kabsch_ca_rmsd_angstrom",
 )
 
 
@@ -193,7 +201,22 @@ def analyze(path: Path, seed: int) -> dict[str, Any]:
     feature_sets = {
         "tier_a_sequence": SEQUENCE_FEATURES,
         "tier_b_c2_confidence": SEQUENCE_FEATURES + C2_CONFIDENCE_FEATURES,
-        "tier_c_trajectory": SEQUENCE_FEATURES + C2_CONFIDENCE_FEATURES + TRAJECTORY_FEATURES,
+        "tier_b_c2_confidence_delta": (
+            SEQUENCE_FEATURES + C2_CONFIDENCE_FEATURES + CONFIDENCE_DELTA_FEATURES
+        ),
+        "tier_c_trajectory": (
+            SEQUENCE_FEATURES
+            + C2_CONFIDENCE_FEATURES
+            + CONFIDENCE_DELTA_FEATURES
+            + TRAJECTORY_FEATURES
+        ),
+        "tier_c_trajectory_geometry": (
+            SEQUENCE_FEATURES
+            + C2_CONFIDENCE_FEATURES
+            + CONFIDENCE_DELTA_FEATURES
+            + TRAJECTORY_FEATURES
+            + COORDINATE_TRAJECTORY_FEATURES
+        ),
     }
     policies: dict[str, Any] = {}
     folds = None
