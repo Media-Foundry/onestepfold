@@ -732,3 +732,14 @@ The subsequent A40 run showed the same BF16 limitation inside pooled spatial
 SVD (it dispatches through CUDA eigendecomposition). The pooled spatial
 diagnostic is now also cast to FP32; all residual summaries are analysis-only
 and do not alter Protenix inference.
+
+## 2026-09-17: Pass the Stage 1A residual smoke gate
+
+The final single-target smoke (`12767861`) ran on an A40 debug node in 1:27
+with the pinned Mini-ESM runtime and produced one `cycle_count=4` JSONL row with
+all three transitions (`c1_to_c2`, `c2_to_c3`, `c3_to_c4`) and zero
+`feature_error` fields. The diagnostic hook performs its linear algebra on
+detached CPU FP32 tensors for cross-GPU determinism; Protenix inference remains
+BF16. The short emergency smoke was cancelled after the debug smoke passed.
+Full `c4_s2` residual characterization over `temporal_dev_v1` is submitted as
+A800 job `12767871` with 8 CPUs and 64G RAM.
