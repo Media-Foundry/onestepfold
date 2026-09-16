@@ -769,3 +769,11 @@ cosines between adjacent residual directions. A 256-target `c4_s2` diagnostic
 is queued as job `12768797`; it is a diagnostic artifact only and does not
 read the frozen temporal test. Coordinate-refiner training remains gated on
 successful teacher-pair QA; no new model claim is made yet.
+
+The first 1B implementation is now in `src/onestepfold/models/coordinate_refiner.py`.
+`GlobalCoordinateRefiner` is deliberately a C-alpha-only baseline: a small
+global Transformer predicts a bounded correction in a residue-local N/CA/C
+frame and returns the correction in Cartesian coordinates. Unit tests verify
+rigid-transform consistency and residue/frame masking. It is a benchmark
+component, not an all-atom replacement or a claim that the late residual is
+local.
