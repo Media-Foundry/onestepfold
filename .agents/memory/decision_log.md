@@ -684,3 +684,22 @@ are swept on the same OOF predictions, so the next methodological gate is
 nested calibration or a held-out dev split before any frozen-test evaluation.
 The current default remains fixed `c2_s2`; recycle emulation is not started
 until this calibration is complete.
+
+## 2026-09-16: Start Stage 1A recycle residual characterization
+
+The router line is frozen as a diagnostic; Stage 1A asks whether the c2-to-c4
+refinement itself is cheap to approximate. A residual hook was added in
+`scripts/protenix_residual_sitecustomize.py`; it keeps only the previous cycle
+tensor and emits compact single/pair residual norms, sequence-distance
+locality, and pooled spatial/channel low-rank energy. It never serializes full
+`L^2 x d` pair tensors.
+
+Before the hidden-state hook completed, the existing standalone c2_s2 and
+c4_s2 predictions were compared as a coordinate proxy. Across 1,024
+temporal-dev records, median Kabsch C-alpha RMSD was 1.076 A and median
+pair-distance RMSD was 0.752 A. The 76 joint-hard records had medians 5.234 A
+and 3.422 A, with median residue-displacement p90 7.068 A and active-residue
+fraction 0.908, versus 0.747 A and 0.064 for nonhard records. This is strong
+evidence that late recycle correction is concentrated in a small hard tail,
+but it is explicitly a cross-setting coordinate proxy rather than an
+in-forward hidden-state residual.
