@@ -169,6 +169,9 @@ def _install() -> None:
                     {
                         "cycle_index": len(self._onestepfold_residual_cycles) + 1,
                         "feature_error": f"{type(exc).__name__}: {exc}",
+                        "single_shape": list(single.shape),
+                        "pair_shape": list(pair.shape),
+                        "_tensors": (single.detach().clone(), pair.detach().clone()),
                     }
                 )
 
