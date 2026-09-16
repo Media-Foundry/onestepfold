@@ -757,7 +757,9 @@ structure, not a claim about the signed `L x L x d` residual tensor.
 
 The next work is parallel rather than serial. `select_teacher_pairs.py`
 selects one deterministic quality-valid pre-cutoff train record per exact
-sequence group; a 32-group selector smoke passed and 16-shard, 16,000-group
+sequence group; a 32-group end-to-end teacher smoke passed on two debug A40
+jobs (`12769064`/`12769065`) with 32/32 predictions for both settings and
+validator coverage 64/64. The 16-shard, 16,000-group
 `c2_s2` and `c4_s2` arrays are queued as Slurm jobs `12768989` and `12768990`
 on `i64m1tga800ue`. The first queue attempt exposed and fixed zero-padded
 array-shard and Protenix environment propagation issues before any inference
