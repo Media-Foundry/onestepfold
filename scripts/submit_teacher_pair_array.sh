@@ -30,6 +30,6 @@ for setting in c2_s2 c4_s2; do
     --gres=gpu:a800:1 --cpus-per-task=8 --mem=64G --time="$TIME_LIMIT" \
     --output="$OUTPUT_ROOT/logs/%A_%a_${setting}.out" \
     --error="$OUTPUT_ROOT/logs/%A_%a_${setting}.err" \
-    --export="$export_args,SHARD_ID=\${SLURM_ARRAY_TASK_ID}" \
+    --export="$export_args" \
     "$REPO_ROOT/scripts/slurm_teacher_pair.sh"
 done
