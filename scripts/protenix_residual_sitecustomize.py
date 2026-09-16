@@ -57,6 +57,10 @@ def _install() -> None:
         single_delta, pair_delta = strip_optional_batch(
             single_delta.detach(), pair_delta.detach()
         )
+        # Keep diagnostic linear algebra backend-independent. Protenix runs in
+        # BF16 on CUDA, while SVD/eigh support differs across GPU generations.
+        single_delta = single_delta.float().cpu()
+        pair_delta = pair_delta.float().cpu()
         single_norm = torch.linalg.vector_norm(single_delta, dim=-1)
         pair_norm = torch.linalg.vector_norm(pair_delta, dim=-1)
         pair_energy = pair_norm.square()
