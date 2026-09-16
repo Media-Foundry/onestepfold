@@ -171,10 +171,10 @@ def constrained(curve: list[dict[str, Any]], field: str) -> dict[str, dict[str, 
 
 
 def oracle_curve(records: list[dict[str, Any]]) -> list[dict[str, Any]]:
-    # Oracle score is the joint degradation magnitude; highest score is safest c2.
+    # Higher score means a larger joint degradation and therefore routes to c4.
     scores = np.asarray(
         [
-            min(
+            -min(
                 float(record["labels"]["delta_c2s2_vs_c4s5_tm"]),
                 float(record["labels"]["delta_c2s2_vs_c4s5_all_atom_lddt"]),
             )
