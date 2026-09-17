@@ -34,13 +34,17 @@ INPUT_JSON="$INPUT_ROOT/shard-${SHARD_NAME}/input.json"
 OUT="$OUTPUT_ROOT/$SETTING/shard-${SHARD_NAME}/seed-$SEED"
 [[ -s "$INPUT_JSON" ]] || { echo "missing input: $INPUT_JSON" >&2; exit 2; }
 mkdir -p "$OUT"
+WORK_DIR="$OUT/work"
+mkdir -p "$WORK_DIR"
 printf '%s\n' "$PROTENIX_BIN pred -i $INPUT_JSON -o $OUT -s $SEED -n $MODEL_NAME -c $CYCLES -p $STEPS -e 1 --use_default_params false --use_msa false --use_template false --dtype bf16 --trimul_kernel $KERNEL_BACKEND --triatt_kernel $KERNEL_BACKEND --enable_tf32 false" > "$OUT/command.txt"
 
 {
   date --iso-8601=seconds
   hostname
   echo "setting=$SETTING shard=$SHARD_ID"
+  echo "workdir=$WORK_DIR"
   nvidia-smi --query-gpu=name,driver_version,memory.total --format=csv,noheader || true
+  cd "$WORK_DIR"
   /usr/bin/time -v "$PROTENIX_BIN" pred \
     -i "$INPUT_JSON" -o "$OUT" -s "$SEED" -n "$MODEL_NAME" \
     -c "$CYCLES" -p "$STEPS" -e 1 --use_default_params false \
@@ -48,3 +52,10 @@ printf '%s\n' "$PROTENIX_BIN pred -i $INPUT_JSON -o $OUT -s $SEED -n $MODEL_NAME
     --trimul_kernel "$KERNEL_BACKEND" --triatt_kernel "$KERNEL_BACKEND" \
     --enable_tf32 false
 } > "$OUT/run.log" 2>&1
+
+# Protenix reports per-target data errors but may still return exit status 0.
+# Fail the Slurm task so incomplete teacher shards are never mistaken for success.
+if grep -q "ERROR runner.inference: Data error" "$OUT/run.log"; then
+  echo "teacher shard contains Protenix data errors; see $OUT/run.log" >&2
+  exit 1
+fi

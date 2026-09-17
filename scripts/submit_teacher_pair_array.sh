@@ -16,6 +16,7 @@ PARTITION="${PARTITION:-i64m1tga800ue}"
 TIME_LIMIT="${TIME_LIMIT:-08:00:00}"
 SHARD_COUNT="${SHARD_COUNT:-8}"
 SEED="${SEED:-101}"
+ARRAY_SPEC="${ARRAY_SPEC:-0-$((SHARD_COUNT - 1))}"
 
 [[ -s "$INPUT_ROOT/manifest.json" ]] || { echo "missing teacher manifest" >&2; exit 2; }
 mkdir -p "$OUTPUT_ROOT/logs"
@@ -26,7 +27,7 @@ for setting in c2_s2 c4_s2; do
   export_args+=",PROTENIX_ROOT_DIR=$PROTENIX_ROOT_DIR,SEED=$SEED"
   sbatch \
     --job-name="onefold-teacher-${setting}" \
-    --partition="$PARTITION" --array="0-$((SHARD_COUNT - 1))" \
+    --partition="$PARTITION" --array="$ARRAY_SPEC" \
     --gres=gpu:a800:1 --cpus-per-task=8 --mem=64G --time="$TIME_LIMIT" \
     --output="$OUTPUT_ROOT/logs/%A_%a_${setting}.out" \
     --error="$OUTPUT_ROOT/logs/%A_%a_${setting}.err" \
