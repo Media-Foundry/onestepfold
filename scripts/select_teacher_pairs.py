@@ -15,6 +15,8 @@ import json
 from pathlib import Path
 from typing import Any
 
+STANDARD_PROTEIN_ALPHABET = frozenset("ACDEFGHIKLMNPQRSTVWY")
+
 
 def read_jsonl_gz(path: Path) -> list[dict[str, Any]]:
     with gzip.open(path, "rt", encoding="utf-8") as handle:
@@ -66,6 +68,30 @@ def attach_sequences(
     return attached
 
 
+def filter_supported_sequences(
+    rows: list[dict[str, Any]],
+) -> tuple[list[dict[str, Any]], list[dict[str, Any]]]:
+    """Keep sequences representable by Protenix's canonical protein parser."""
+    supported: list[dict[str, Any]] = []
+    excluded: list[dict[str, Any]] = []
+    for row in rows:
+        sequence = str(row["sequence"])
+        unsupported = sorted(set(sequence) - STANDARD_PROTEIN_ALPHABET)
+        if unsupported:
+            excluded.append(
+                {
+                    "group_id": str(row["group_id"]),
+                    "sample_id": str(row.get("sample_id", "")),
+                    "sequence_length": len(sequence),
+                    "unsupported_symbols": unsupported,
+                    "reason": "protenix_canonical_protein_alphabet",
+                }
+            )
+        else:
+            supported.append(row)
+    return supported, excluded
+
+
 def write_jsonl_gz(path: Path, rows: list[dict[str, Any]]) -> None:
     with path.open("wb") as raw:
         with gzip.GzipFile(fileobj=raw, mode="wb", mtime=0) as compressed:
@@ -73,7 +99,12 @@ def write_jsonl_gz(path: Path, rows: list[dict[str, Any]]) -> None:
                 compressed.write((json.dumps(row, sort_keys=True) + "\n").encode("utf-8"))
 
 
-def build_inputs(rows: list[dict[str, Any]], output_root: Path, shard_count: int) -> dict[str, Any]:
+def build_inputs(
+    rows: list[dict[str, Any]],
+    output_root: Path,
+    shard_count: int,
+    excluded: list[dict[str, Any]] | None = None,
+) -> dict[str, Any]:
     output_root.mkdir(parents=True, exist_ok=True)
     buckets: list[list[dict[str, Any]]] = [[] for _ in range(shard_count)]
     for row in rows:
@@ -109,10 +140,13 @@ def build_inputs(rows: list[dict[str, Any]], output_root: Path, shard_count: int
         "shard_count": shard_count,
         "shards": shard_rows,
         "selection": "one deterministic best train-valid record per exact sequence group",
+        "sequence_alphabet": "ACDEFGHIKLMNPQRSTVWY",
+        "excluded_unsupported_sequence_count": len(excluded or []),
     }
     (output_root / "manifest.json").write_text(
         json.dumps(manifest, indent=2, sort_keys=True) + "\n", encoding="utf-8"
     )
+    write_jsonl_gz(output_root / "excluded_unsupported_sequences.jsonl.gz", excluded or [])
     return manifest
 
 
@@ -124,9 +158,12 @@ def main() -> None:
     parser.add_argument("--shard-count", type=int, default=8)
     parser.add_argument("--limit", type=int, default=None)
     args = parser.parse_args()
-    rows = select_records(read_jsonl_gz(args.train_manifest), args.limit)
+    rows = select_records(read_jsonl_gz(args.train_manifest), None)
     rows = attach_sequences(rows, read_jsonl_gz(args.groups_manifest))
-    manifest = build_inputs(rows, args.output_root, args.shard_count)
+    rows, excluded = filter_supported_sequences(rows)
+    if args.limit is not None:
+        rows = rows[: args.limit]
+    manifest = build_inputs(rows, args.output_root, args.shard_count, excluded)
     print(json.dumps(manifest, indent=2, sort_keys=True))
 
 
