@@ -857,3 +857,19 @@ An exhaustive DiamondHill pass loaded all 16,000 pairs, aligned 37,321,433
 atoms, and found zero failures or missing N/CA/C/O atoms. This freezes the
 input contract for the first coordinate-refiner baseline; it does not imply
 backend equivalence or model-quality calibration.
+
+## 2026-09-17: Use hpc3 as the sole OneStepFold training host
+
+Decision: all subsequent OneStepFold training runs on hpc3. DiamondHill keeps
+the accepted source/archive copy of the c2/c4 teacher corpus, while hpc3 uses
+the copy rooted at `/data/user/shuang886/Folding/stage1b/teacher_pairs_v3` and
+the existing `/data/user/shuang886/Folding/esmc_600m_final_v1` cache.
+
+The transfer was copy-only, excluded transient Protenix `work` directories,
+and did not delete or modify the source. The compact teacher output on both
+systems has 64,094 files and 7,608,200,910 bytes with the same relative-path
+and size digest. hpc3 independently found 16,000/16,000 c2 and c4 predictions.
+Its ESMC manifest contains 38,400 exact groups and covers every teacher group
+with zero missing records or sequence-length mismatches. A joint smoke loaded
+one paired CIF example and its `[L,1152]` BF16 ESMC slice successfully. This is
+an infrastructure acceptance, not a coordinate-refiner quality result.

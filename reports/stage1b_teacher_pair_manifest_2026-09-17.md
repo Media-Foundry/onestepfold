@@ -35,3 +35,20 @@ The frozen data artifacts live below
 This acceptance establishes a reproducible coordinate-refiner input contract.
 It does not establish thermodynamic truth, model quality, or backend
 equivalence; those require calibrated held-out evaluation.
+
+## hpc3 training mirror
+
+Per the compute policy for the next stage, training uses hpc3 exclusively. The
+accepted teacher corpus was copied without transient `work` directories to
+`/data/user/shuang886/Folding/stage1b/teacher_pairs_v3`. The destination has
+64,094 files and 7,608,200,910 bytes, and its relative-path/size digest matches
+DiamondHill. A local hpc3 validator found all 16,000 c2 and 16,000 c4
+predictions.
+
+The existing hpc3 ESMC-600M cache was reused rather than recomputed. Its
+38,400-row manifest covers all 16,000 teacher groups with zero missing groups,
+missing shards, or sequence-length mismatches. A joint read smoke loaded a
+517-residue teacher pair, 4,070 aligned atoms, and a finite `[517,1152]` BF16
+ESMC slice. The durable hpc3 acceptance record is
+`output_diamondhill/control/hpc3_training_data_acceptance.json`; the pass marker
+is `hpc3_training_data.PASSED`.
