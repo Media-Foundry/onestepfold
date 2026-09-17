@@ -794,3 +794,18 @@ energy around 0.99. Therefore the simple scalar fixed-point extrapolation is
 not promoted as the primary emulator; keep it only as a cheap negative
 baseline, and prioritize a learned global coordinate residual or a richer
 signed latent probe.
+
+## 2026-09-17: Isolate Protenix teacher-shard working directories
+
+Decision: every Slurm teacher-pair shard must run Protenix from a private
+working directory under its output directory, and the wrapper must return a
+non-zero status when Protenix logs per-target `Data error` messages.
+
+Reason: Protenix's ESM2 featurizer writes a relative `./esm_embeddings`
+directory. Concurrent c2/c4 array tasks sharing a process working directory
+overwrote each other's temporary sequence-to-embedding index. The Protenix
+runner can still exit zero after skipping data-error targets, so Slurm's
+`COMPLETED` state is not sufficient evidence of a complete teacher shard.
+Teacher-pair validation must require matching c2/c4 artifacts and empty data
+error logs. The corrected wrapper is committed as `79da1e8`; formal isolated
+arrays are `12770049` and `12770050`.
