@@ -824,3 +824,36 @@ Protenix Mini's `PROTEIN_1to3` parser raises `KeyError` for these symbols.
 This is a teacher compatibility filter only; the observed GT dataset remains
 unchanged. The corrected v3 input has 16,000 valid groups across 16 shards,
 and arrays `12771048`/`12771049` are the only current formal submissions.
+
+## 2026-09-17: Accept the mixed-source c2/c4 teacher corpus
+
+Decision: accept the consolidated DiamondHill teacher corpus for downstream
+paired analysis. c2 shards 0--11 come from hpc2 array `12771048`, c2 shards
+12--15 come from hpc3 ACD jobs `628767--628770`, and c4 shards 0--15 come from
+DiamondHill. Preserve this mapping in the corpus provenance rather than
+treating the c2 setting as single-backend output.
+
+Reason: uniform validation on DiamondHill found all 16,000 expected group IDs
+in both settings. Exhaustive QA parsed all 32,000 CIF files, checked every
+confidence JSON and expected recycle count, and matched every shard log to its
+expected successes with zero data errors. This establishes completeness and
+artifact integrity; it does not establish numerical equivalence between GPU
+backends. Consolidation was copy-only and did not move or modify EngramFold,
+shared protein data, or Protenix checkpoints.
+
+## 2026-09-17: Freeze the exact-group teacher split and loader contract
+
+Decision: freeze `teacher_pair_manifest_v1` with 14,400 train groups and 1,600
+validation groups. Assignment uses seed 101 and a versioned SHA256 rank over
+the exact-sequence group ID. The 16,000-row teacher pool already contains one
+record per pre-cutoff exact group; the frozen temporal test is not read or
+modified by this split.
+
+The paired loader resolves artifact paths relative to the accepted output
+root, parses c2/c4 lazily, verifies the declared sequence, requires identical
+atom keys, preserves missing backbone atoms as masks, and performs no
+coordinate imputation. It also requires `num_recycles=2` for c2 and 4 for c4.
+An exhaustive DiamondHill pass loaded all 16,000 pairs, aligned 37,321,433
+atoms, and found zero failures or missing N/CA/C/O atoms. This freezes the
+input contract for the first coordinate-refiner baseline; it does not imply
+backend equivalence or model-quality calibration.

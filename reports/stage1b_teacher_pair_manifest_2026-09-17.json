@@ -1,0 +1,57 @@
+{
+  "artifacts": {
+    "loader_qa": {
+      "path": "/media/PM982/onestepfold/stage1b/teacher_pairs_v3/output_diamondhill/control/teacher_pair_manifest_v1.loader_qa.json",
+      "sha256": "8b3f2d542261f3d8a5fcc3f7412c36ebae35a9ddc0f24a7e420eba9bb0ac8a71"
+    },
+    "manifest": {
+      "path": "/media/PM982/onestepfold/stage1b/teacher_pairs_v3/output_diamondhill/control/teacher_pair_manifest_v1.jsonl.gz",
+      "sha256": "084fbc88f8302eb770a021e593ff94b47a76e48cc38b079c96f00c58e7188325"
+    },
+    "summary": {
+      "path": "/media/PM982/onestepfold/stage1b/teacher_pairs_v3/output_diamondhill/control/teacher_pair_manifest_v1.summary.json",
+      "sha256": "619de7418decb4330281ece5669da54fb9bf373890f460f9c445b1d412dd79ac"
+    }
+  },
+  "complete": true,
+  "loader_qa": {
+    "c2_missing_backbone_atom_count": 0,
+    "c4_missing_backbone_atom_count": 0,
+    "failure_count": 0,
+    "total_aligned_atom_count": 37321433,
+    "validated_count": 16000
+  },
+  "record_count": 16000,
+  "schema_version": "teacher_pair_manifest_v1",
+  "seed": 101,
+  "source_counts": {
+    "c2_s2": {
+      "hpc2": 12030,
+      "hpc3": 3970
+    },
+    "c4_s2": {
+      "DiamondHill": 16000
+    }
+  },
+  "split_counts": {
+    "train": 14400,
+    "validation": 1600
+  },
+  "split_length_bands": {
+    "train": {
+      "128-255": 4842,
+      "20-127": 1683,
+      "256-511": 6477,
+      "512-768": 1143,
+      "769-1024": 255
+    },
+    "validation": {
+      "128-255": 539,
+      "20-127": 177,
+      "256-511": 712,
+      "512-768": 147,
+      "769-1024": 25
+    }
+  },
+  "unique_group_count": 16000
+}

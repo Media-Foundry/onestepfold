@@ -23,13 +23,16 @@ esmc = [
 ]
 split = ["biopython>=1.86"]
 glycoshape = ["glycontact>=0.3.3"]
-dev = ["pytest>=8.0", "ruff>=0.6", "biopython>=1.86"]
+dev = ["pytest>=8.0", "ruff>=0.6", "biopython>=1.86", "scikit-learn>=1.4"]
 
 [project.scripts]
 fastglycan = "fastglycan.cli:main"
 
 [tool.hatch.build.targets.wheel]
 packages = ["src/fastglycan", "src/onestepfold"]
+
+[tool.hatch.metadata]
+allow-direct-references = true
 
 [tool.pytest.ini_options]
 addopts = "-q"
