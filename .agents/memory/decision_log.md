@@ -873,3 +873,19 @@ Its ESMC manifest contains 38,400 exact groups and covers every teacher group
 with zero missing records or sequence-length mismatches. A joint smoke loaded
 one paired CIF example and its `[L,1152]` BF16 ESMC slice successfully. This is
 an infrastructure acceptance, not a coordinate-refiner quality result.
+
+## 2026-09-17: Pass the 32-target coordinate-refiner overfit gate
+
+Decision: use frozen ESMC-600M final-layer residue features, c2 backbone
+coordinates, and a c4 C-alpha target rigidly Kabsch-aligned into the c2 frame
+for the first coordinate-refiner training path. Load ESMC ranges lazily from
+their safetensors shards, keep atom/padding masks explicit, and batch by length.
+
+hpc3 H100 job `629419` trained on the 32 shortest records in the frozen train
+split. The aggregate uncorrected c2 baseline C-alpha RMSD was 1.2432 A; the
+best training RMSD was 0.1712 A at epoch 255. The final-to-baseline RMSD ratio
+was 0.1377 and the final-to-initial coordinate-MSE ratio was 0.000612, passing
+the predeclared 0.50 and 0.10 gates. This establishes implementation integrity
+and small-set capacity only. It is not validation evidence and does not justify
+an all-atom or thermodynamic claim. The next gate must select checkpoints only
+with the frozen 1,600-group validation split.

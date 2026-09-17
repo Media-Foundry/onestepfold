@@ -1,0 +1,59 @@
+{
+  "best_epoch": 255,
+  "checkpoint": {
+    "path": "/data/user/shuang886/Folding/stage1b/coordinate_refiner/overfit32_v1/best.pt",
+    "sha256": "ebd9f2c92713ce12ece69734d72c4537f1c4c112e88475a2afd7dbaccda2e814"
+  },
+  "complete": true,
+  "criteria": {
+    "maximum_final_to_c2_baseline_ca_rmsd_ratio": 0.5,
+    "maximum_final_to_initial_coordinate_mse_ratio": 0.1
+  },
+  "final": {
+    "ca_rmsd": 0.17118295352696777,
+    "coordinate_mse": 0.009767867859405336,
+    "final_to_c2_baseline_ca_rmsd_ratio": 0.1377003034135386,
+    "final_to_initial_coordinate_mse_ratio": 0.0006116210115195852
+  },
+  "initial": {
+    "c2_baseline_ca_rmsd": 1.2431559646813182,
+    "random_model_ca_rmsd": 6.92180430940407,
+    "random_model_coordinate_mse": 15.97045829922825
+  },
+  "model": {
+    "dropout": 0.0,
+    "hidden_dim": 128,
+    "input_dim": 1152,
+    "max_delta_angstrom": 8.0,
+    "num_heads": 8,
+    "num_layers": 2
+  },
+  "optimization": {
+    "batch_size": 8,
+    "epochs": 400,
+    "learning_rate": 0.003,
+    "maximum_preclip_gradient_norm": 88.313720703125,
+    "seed": 101
+  },
+  "overfit_pass": true,
+  "runtime": {
+    "device": "NVIDIA H100 80GB HBM3",
+    "elapsed_seconds": 48.49077042983845,
+    "python": "3.12.11",
+    "slurm_elapsed": "00:01:23",
+    "slurm_job": "629419",
+    "slurm_partition": "emergency_acd",
+    "slurm_state": "COMPLETED",
+    "torch": "2.7.1+cu128"
+  },
+  "schema_version": "coordinate-refiner-overfit-v1",
+  "selection": {
+    "count": 32,
+    "length_max": 39,
+    "length_min": 21,
+    "split": "train",
+    "strategy": "shortest",
+    "valid_residue_count": 1069
+  },
+  "target": "c4 CA rigidly Kabsch-aligned into the c2 CA frame"
+}
