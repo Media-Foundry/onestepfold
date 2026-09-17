@@ -809,3 +809,18 @@ runner can still exit zero after skipping data-error targets, so Slurm's
 Teacher-pair validation must require matching c2/c4 artifacts and empty data
 error logs. The corrected wrapper is committed as `79da1e8`; formal isolated
 arrays are `12770049` and `12770050`.
+
+## 2026-09-17: Restrict teacher pairs to Protenix-supported sequences
+
+Decision: teacher-pair generation uses only sequences in the canonical
+20-amino-acid alphabet `ACDEFGHIKLMNPQRSTVWY`. Groups containing `X`, `U`,
+`B`, or `Z` remain in an explicit exclusion manifest and are not silently
+canonicalized.
+
+Reason: the accepted PDB GT contains 171 unsupported-symbol groups in the
+initial 16,000-group input (320 rows were excluded when selecting the corrected
+v3 pool because the selector operates on the full pre-cutoff group table).
+Protenix Mini's `PROTEIN_1to3` parser raises `KeyError` for these symbols.
+This is a teacher compatibility filter only; the observed GT dataset remains
+unchanged. The corrected v3 input has 16,000 valid groups across 16 shards,
+and arrays `12771048`/`12771049` are the only current formal submissions.
