@@ -18,3 +18,15 @@ def test_chemical_feature_path_and_topology_guard(monkeypatch):
     assert g.isfinite().all() and (g.abs()>0).all()
     with pytest.raises(ValueError,match='argmax changed'):
         c.features(sequence_probabilities('AD',dtype=torch.float64))
+
+
+def test_first_boundary_finds_actual_argmax_switch():
+    from fastglycan.models.soft_sequence_chart import first_argmax_boundary
+    q0=torch.tensor([[4.,0.,0.],[0.,4.,0.]])
+    q1=torch.tensor([[0.,4.,0.],[0.,3.,1.]])
+    t=first_argmax_boundary(q0,q1)
+    assert t==.5
+    assert ((q0+(t-1e-4)*(q1-q0)).argmax(-1)==torch.tensor([0,1])).all()
+    assert ((q0+(t+1e-4)*(q1-q0)).argmax(-1)==torch.tensor([1,1])).all()
+    with pytest.raises(ValueError,match='no interior'):
+        first_argmax_boundary(q0,q0)

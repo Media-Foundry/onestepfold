@@ -14,7 +14,7 @@ or by relabeling partial gradients as complete sequence gradients.
 | Hard sequence input rebuilding | native SampleDictToFeatures regenerated from final argmax sequence, exact hard-feature/ESM endpoints, native coordinate replay | First3target pairs complete |
 | Independent noise confirmation | baseline/final hard sequences under103/107 and S1/S2,8coordinate artifacts per arm | First3target pairs complete; practical improvement not guaranteed and first target fails |
 | Geometry guards | separate bond, peptide C–N, chirality and severe atom clash audit, not merely Cα proxy | Implemented/scored first target; final all-run audit pending |
-| Atom-inventory boundary behavior | evaluate identical q in old/new charts at observed argmax changes, aligned Cα RMSD and loss jump | V2 implemented;8BZN observed up to0.922A; not a global continuity proof |
+| Atom-inventory boundary behavior | evaluate identical q in old/new charts at observed argmax changes, aligned Cα RMSD and loss jump | V2 implemented;8BZN observed up to0.922A; finite sensitivity check; separate actual-boundary probe found a nonvanishing~0.184A jump |
 | Deterministic inference | explicit atom-name-keyed noise, no MC dropout, eval/frozen parameters, fixedC4/S1 orS2 | Native replay and repeated gradients tested; independent seed not expected identical |
 | Artifact integrity | sequence_gate_audit validates51updates, cross-scores, logits/sequence,8coordinate sets, CPUloss replay and file hashes | First3target pairs audited locally; final8arm audit pending |
 | Backups and documentation | scoped Git commits; bounded remote snapshots; local result archives | Implementation df8c8eef pushed; final audit/report pending |
@@ -30,3 +30,11 @@ Remaining work for the current implementation batch: finish the already-running
 all failing gates and remaining limitations, and back up the final report. Do not
 launch training or a new method tree to turn this batch's scientific failures into
 passing results.
+
+## Boundary audit correction
+
+An actual first-argmax-crossing test is now complete. At probability separations
+1.05e-3,1.05e-4,1.05e-5, aligned Cα output separations are0.18253,0.18365,0.18378A.
+Thus global smoothness is contradicted for the implemented chart map, rather than
+merely unverified. This scientific rejection is part of the gate result. It does
+not mean the gate implementation must hide the failure or launch training.

@@ -18,7 +18,10 @@ def main():
             handle=Path('/proc')/str(w['pid'])
             if handle.exists():
                 # Verify PID still refers to this worker rather than an unrelated process.
-                command=(handle/'cmdline').read_bytes().replace(b'\0',b' ').decode()
+                try:
+                    command=(handle/'cmdline').read_bytes().replace(b'\0',b' ').decode()
+                except (FileNotFoundError, ProcessLookupError):
+                    command=''  # Worker exited between exists() and reading /proc.
                 if str(folder) in command:live.append(w['pid'])
             report=folder/'report.json'
             if not report.exists() or not json.loads(report.read_text()).get('complete'):

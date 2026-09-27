@@ -109,3 +109,22 @@ it does not infer completion from stale state files and never restarts workers.
 It writes final_audit_v2 only after all eight optimization arms are terminal and
 report completion. Numerical/scientific failures are valid experiment outcomes
 and remain false in the final report. See mini_sequence_gate_completion_audit.md.
+
+## Actual boundary limit probe
+
+The V2 per-update old/new-chart comparison is a finite representation-sensitivity
+test, not by itself a continuity limit. Added check_sequence_chart_boundary.py:
+find the first argmax crossing along saved initial→final logits, evaluate the real
+sequence-to-input mapping on both sides with h=1e-3/1e-4/1e-5, fixed atom-keyed
+noise, and align backbone outputs. This uses native inventories on each side.
+
+On the100-residue S1 arm, atom count switches805→810. Maximum probability
+separation shrinks0.00104767→0.00001049, but aligned Cα RMSD stays
+0.182533→0.183780A. This is evidence of a nonvanishing boundary jump. The current
+chart map therefore fails the global smoothness requirement even where local
+finite differences pass. Do not relabel this as a complete smooth all-atom oracle.
+The four-gate implementation can report this rejection; it does not solve it.
+
+DH boundary_v1 completed on GCD0; source snapshot code_boundary_v1, PID1680704.
+Report copied to reports/mini_sequence_gates_2026-09-28/boundary_v1/report.json.
+No forward FP64, LoRA, distillation or new training was introduced.

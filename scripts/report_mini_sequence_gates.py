@@ -58,6 +58,16 @@ The selected targets are diagnostics, not a prevalence sample. The chart-boundar
 measurements are finite observed jumps, not a proof of global continuity. No model
 weights were trained and no frozen test set was used. Deployment remains rejected.
 '''
+ boundary_path=root/'boundary_v1/report.json'
+ if boundary_path.exists():
+  boundary=json.load(open(boundary_path))
+  if not boundary['complete']:raise ValueError('boundary probe incomplete')
+  content += '\n## Actual atom-inventory boundary probe\n\n'
+  content += 'On the first argmax crossing along the saved100-residue S1 optimization displacement:\n\n'
+  content += '| h | Max probability difference | Aligned Cα RMSD Å | Atom inventories |\n|---:|---:|---:|---|\n'
+  for row in boundary['rows']:
+   content += f"| {row['h']:.0e} | {row['probability_max_difference']:.7f} | {row['aligned_ca_rmsd']:.6f} | {row['atom_counts'][0]} → {row['atom_counts'][1]} |\n"
+  content += '\nThe output difference remains about0.184A while the input difference shrinks100-fold. This observed nonvanishing boundary jump rejects a globally smooth-oracle claim for the current chart implementation. It does not implicate diffusion step count alone.\n'
  (root/'report.md').write_text(content)
 
 if __name__=='__main__':main()

@@ -99,3 +99,15 @@ class SequenceChart:
             rng=np.random.default_rng(int.from_bytes(hashlib.sha256(key).digest()[:8],'little'))
             noise.append(rng.standard_normal(3))
         return torch.tensor(np.asarray(noise),device=self.device,dtype=torch.float32)[None]*2560
+
+
+def first_argmax_boundary(q0,q1):
+    a=q0.double();b=q1.double();winner=a.argmax(-1)
+    margin=a.gather(1,winner[:,None])-a
+    final_margin=b.gather(1,winner[:,None])-b
+    crossings=(margin>0)&(final_margin<0)
+    times=torch.where(crossings,margin/(margin-final_margin).clamp_min(1e-20),torch.inf)
+    t=float(times.min())
+    if not 0<t<1:raise ValueError('no interior argmax crossing on this displacement')
+    return t
+
