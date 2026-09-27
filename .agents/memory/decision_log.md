@@ -1,5 +1,26 @@
 # Decision log
 
+## 2026-09-27 — All-atom 0.90 target and staged tail-recovery protocol
+
+User explicitly clarifies0.90 means observed ALL-ATOM lDDT, not CA or confidence.
+Native~.82 recovery is an intermediate gate, not the ultimate target or proof that
+teacher distillation reaches.90. Concrete implementation plan:
+docs/esmc_quality_recovery_plan_2026-09-27.md. Finish locked continuation first;
+if fixed hard targets still decline, one GT+teacher local-distance retention
+comparison before a separate zero-output nonlinear bridge; MLC separately,
+core depth/Shortcut/MeanFlow deferred. Teacher labels TRAIN-only with GT anchoring,
+no DEV-tail oversampling, no new frozen-test use. Plan is not a launched new
+training recipe; no changes to ongoing continuation.
+
+Added scripts/report_pretrained_fixed_tail.py. CPU655530 COMPLETE0:0; report SHA
+ e358730e25997bcab9fef12163f5be6da10e38558b36fa40451ba3fa696e6fe1
+matches remote/local. Confirms same7 AA targets at initial and both4096 endpoints.
+Fixed CA-tail mean .46683 -> .40792/.39915. At8192-size step2048 re-ranked membership
+differs temporarily (fixedAA .37005 vs re-ranked .36743); final membership identical.
+Final follow-up CPU655531 after report655524; dependency strict reads fail if
+upstream missing. No active polling controller. GPU partition remains acd_u.
+
+
 ## 2026-09-27 — Results collected; fixed continuation resumed on acd_u
 
 User resumed work and authorized next-stage implementation, timely git commit/push,
