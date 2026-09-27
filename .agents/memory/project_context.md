@@ -1,5 +1,93 @@
 # Project context
 
+## 2026-09-27 — User restricted this turn to STRUCTURE PREPARATION ONLY
+
+Do not startTRAIN32 oranymodeltraining underthisrequest. Previouslyprepared
+scratch_train32_rocm entry andscratch_primary batching/LRhelpers remainunfinished
+trainingwork;6batch/schedule tests and1GPU smooth test passed, tmtoolsdependency
+installed inisolatedscratchprimary/deps, butNO TRAIN32launch occurred.
+
+Started CPU-only structurepipeline onDiamondHill:
+/media/PM982/onestepfold/scratch_structure_data_v1_20260927.
+ControllerPID1617246, reuse-rsyncPID1617257; launch.json authoritative.
+Fullselection29769TRAIN+128DEV; reuse8320acceptedHPC3packets (~180GiB) viaDH->HPC3
+pull; prepare21577newTRAIN locally. AllnewrawmmCIF/shardpaths present.
+FrozenfullselectionSHA2ba7f5771dc7f9f1042930aa14e840f523f7b29dd6435018bfc041cdd1726198;
+newSHA b1b8a66b677989be644e48cf65217fa38fd1ac863ccaa8d519dce395253489a1.
+Sixpacket smoke20/257/321/427/1022/1024 passed bothCPUworkers exit0.
+Controller nextchecks178finalESMCshardhashes, launches16CPUworkers, waitsforreuse
+transfer, thenfullfile/metadataacceptance. Acceptance.json onlyafterall29897pass.
+ROCR/HIP/CUDA visibilityempty; noGPUfolding execution oroptimizer.
+Newpackagesinclude smoothlabels; oldacceptedpackagesnotmodified. LargerDEV-primary
+andoldsmoothsidecars stillpending, do notclaimfullmaintrainingreadiness.
+Docs/scratch_structure_preparation_v1.md and reports/scratch_structure_data_v1_20260927
+carrycontroller/selection details. Do notduplicatejobs oroverwritepartiallyprepared
+folders; inspectreportsfirst onresume. Failuresmustnotcause silenttargetdrops.
+
+
+## 2026-09-27 — User-provided DiamondHill feature dataset accepted; main plan reconciled
+
+User identifies /media/PM982/onestepfold/data/esmc_29769_layers_12_24_36_v1_20260927
+as the dataset. All three transfers and destination verifier exited 0. Read
+transfer_acceptance.json: 29,769 groups, 547 shards, 8,830,652 residues;
+all shard hashes and tensor shape/dtype/finite checks passed. Merged manifest SHA256:
+ecbaf57b6b89d6a6fe85ee1684ace62d4f3c4c3e243dbb09f299d6b0792b275d.
+Cross-hardware numerical compatibility and structure training packets remain unaccepted.
+Fixed Biohub HF source confirms hidden_states[36] and last_hidden_state both
+use post-norm norm_x; extraction removes padding/BOS/EOS identically. New layer_36
+is a final-only candidate without re-extraction or extra LayerNorm, subject to
+numerical compatibility checks; TRAIN coverage does not establish DEV coverage.
+Updated primary plan: prioritize DH 8 GCD x micro1 x accum2, compare same-host
+4 GCD x accum4 at global16; retain HPC3 fallback. Reuse prior 4 GCD short-chain
+pretrained DDP evidence, but separately validate scratch/smooth/1024/accumulation/
+tail/true process restart. Budget names now distinguish GCD-hours from H100-hours.
+This handoff updates documents and archives acceptance only; no training launched.
+
+## 2026-09-27 — DiamondHill selected for scratch-main feasibility preflight
+
+User asks whether scratch main can run onDiamondHill. Livecheck8GCD idle, each
+~64GiB, disk~2.8TiB free. Existingfold torch2.12dev/HIP7.14 andprior128/256
+coreforward/backward checkavailable. Candidate8GCD micro1 accum2 keepsglobal16;
+9-real-example tail scalesloss8/9, same1861updates/epoch and50epochLR trajectory.
+NoGPUmemorypooling assumption or8-card speedup claim. Updated mainplan placement.
+Finalcache exists25GiB/178shards butneedsfullhashQA; oldGTtransfer hasonly605
+entries andno data_acceptance.json. Mainlinefinal-only isindependentofMLCtransfer.
+Mustpassscratch+smooth TRAIN32,full-lengthmemory,8rankaccumulation/tail/resume
+andfullpacketacceptance beforeformalmainlaunch. Thisturnchecks/plans placement;
+no newscratchjob submitted yet. ExistingHPC3lockedjobs remainunchanged.
+
+
+## 2026-09-27 — Draft of full scratch primary training
+
+User asks to implement overallprimarytraining iffeasible and FIRST draftaplan.
+Draft delivered in docs/scratch_primary_training_v1.md; thisturn performed
+read-only readinesschecks andplanning, no data merge ornew training job.
+FullTRAIN29769 finalcacheexists, butonly8192TRAIN+128DEV packetsaccepted;
+21577newTRAIN packetsremain (5373<=256aa,16204>256aa). MLC547shards complete
+andmetadata-accepted, notfulltensor/cross-host-accepted; final-onlymainline
+neednot waitforMLC. Preserve allrunninglockedcontinuationjobs.
+
+Proposedmain: randomcore/projection seed101, frozenESMC600M final1152,
+16Pairformer/8structure rawXYZ, c1/s1/K1, oldloss+10smoothlddt. OneTRAIN32
+candidate fitcheck plusfullpacketprep/newtrainer inparallel, thenfull-length
+20–1024/largeatom/pair GPUcheck andbounded200update DDP/resumepreflight.
+Main startsfresh, notfrommemorized4/32 weights. TRAIN32 islearnabilitygate,
+notnewproof ofrelative superiority; matchingbaseline requiredforsuchclaim.
+
+Defaultcandidate4H100/acd_u, micro1*accum4 =>global16.29769 means1860full
+batches+9realexamples intail =>1861updates/epoch; DDP real-sample scalingW/N,
+no drop_last orfakeexposurepadding. ExistingpretrainedDDP andscratch4 runners
+cannot supportthisviaflagsalone; implementationneeded. Preservefull-length,
+validategradient-equivalent memory optimizations ratherthansilentlycrop/drop.
+
+Candidate50epoch researchceiling=93050updates/1488450samples. Firstexecution
+segment atmost5epochs or24h optimization, actualhoursestimatedonlyaftermixed
+lengthpreflight; thisdraftisnotalaunchedjob orconvergenceclaim. Predetermined
+warmup1000/cosine50epoch schedule, uniformscratchlr1e-4,wd1e-4,clip10,dropout0.
+DEV128 remains historical; define largerDEV-primary fromreserveddevpool and
+prepareitslabels/features beforemain. No frozen-test access. Tail-awareselection
+andper-proteinchemistryreported; finalmean.89–.90/P1>=.7remaingoals, notpromises.
+
 ## 2026-09-27 — User authorized rsync of extracted ESMC features to DiamondHill
 
 Target /media/PM982/onestepfold/data/esmc_29769_layers_12_24_36_v1_20260927,
