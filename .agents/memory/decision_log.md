@@ -1,5 +1,33 @@
 # Decision log
 
+## 2026-09-27 — TRAIN4 scratch results accepted; mean benefit with mixed minimum/chemistry
+
+User asks to inspect the first scratch overfit result. Jobs655575/655576/655577
+all COMPLETED0:0; both arms pass predeclared jointgate, exact bestGPUreplay and
+independentCPU acceptance (24saved predictions each). Archived204metadata/GT/
+coordinate files onX570 andcurrentworkspace; allSHA matchHPC3. Review:
+reports/esmc_scratch_overfit_v1_20260927/review.md. ManifestSHA
+6a2a9793146e60273aaf7285b6838acc764cc2b12587037d803169d6891f395e.
+
+Baseline firstjointpass500exposures/2000updates: meanAA .92660098,
+minprotein/noise .91475449, worstnoise pooledRMSD .599833A.
+Smooth firstjointpass550/2200: mean .97369208, min .96150663, RMSD .404129A.
+Do not compare differentstoppingpoints as equalbudget. SAME500exposures:
+smoothmean .93887055 (+.01226957), min .91110703 (-.00364745), RMSD .525493A;
+only3/4targetmeans improve;1YRI drops .93783 -> .91304. All10common nonzero
+checkpointmeans favor smooth, but not uniform tail/chemistry improvement.
+Smooth450failed onlypooledCN .301742>.30;500failed onlypooledCO
+.152456/.150858>.15. No thresholds relaxed. Baseline500 pooledchemistrypasses,
+but4B9P individuallyCN .311061/.307771; avoidclaim allindividualchemistry passes.
+
+This supports TRAIN4 memorization andnewloss fitting benefit, notgeneralization,
+newarchitecture, fasterjointpass orP1>=.7. One trainingseed;twoinference noises.
+Recommend nextcontrolledTRAIN32 with fixedcandidateandmatchedbaseline for
+causal efficiencyclaims; explicitlylock itsgeometrygate (historical32pooled<=1A,
+29/32<=2A differsfrom4all<1A), qualitygate,budget,andper-targetchemistryreporting.
+Thisturn onlyreviewed/archived; no newtraining orDEV/test access, no ESMC
+extractionresume/merge. Existingextractionhandoff remains a separate scope.
+
 ## 2026-09-27 — Extraction running; user-requested handoff
 
 All3 extraction workers passed startup and processed real training sequences.

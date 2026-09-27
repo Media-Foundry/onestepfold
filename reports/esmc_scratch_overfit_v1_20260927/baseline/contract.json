@@ -1,0 +1,866 @@
+{
+  "arm": "raw",
+  "config": {
+    "adam": {
+      "beta1": 0.9,
+      "beta2": 0.95,
+      "lr": 0.0018,
+      "use_adamw": false,
+      "weight_decay": 1e-08
+    },
+    "af3_lr_scheduler": {
+      "decay_every_n_steps": 50000,
+      "decay_factor": 0.95,
+      "lr": 0.0018,
+      "warmup_steps": 10
+    },
+    "atom_permutation": {
+      "global_align_wo_symmetric_atom": false,
+      "permute_by_pocket": true,
+      "test": {
+        "diffusion_sample": true
+      },
+      "train": {
+        "diffusion_sample": false,
+        "mini_rollout": true
+      }
+    },
+    "base_dir": null,
+    "blocks_per_ckpt": 1,
+    "c_atom": 128,
+    "c_atompair": 16,
+    "c_s": 384,
+    "c_s_inputs": 449,
+    "c_token": 384,
+    "c_z": 128,
+    "chain_permutation": {
+      "configs": {
+        "accept_it_as_it_is": false,
+        "enumerate_all_anchor_pairs": false,
+        "find_gt_anchor_first": false,
+        "selection_metric": "aligned_rmsd",
+        "use_center_rmsd": false
+      },
+      "permute_by_pocket": true,
+      "test": {
+        "diffusion_sample": true
+      },
+      "train": {
+        "diffusion_sample": false,
+        "mini_rollout": true
+      }
+    },
+    "checkpoint_interval": -1,
+    "data": {
+      "ccd_components_file": "/data/user/shuang886/Folding/runtime_cache/protenix_v1_1/common/components.cif",
+      "ccd_components_rdkit_mol_file": "/data/user/shuang886/Folding/runtime_cache/protenix_v1_1/common/components.cif.rdkit_mol.pkl",
+      "epoch_size": 10000,
+      "msa": {
+        "enable_prot_msa": true,
+        "enable_rna_msa": true,
+        "max_size": {
+          "test": 16384,
+          "train": 16384
+        },
+        "min_size": {
+          "test": 1,
+          "train": 1
+        },
+        "prot_indexing_methods": [
+          "sequence"
+        ],
+        "prot_msadir_raw_paths": [
+          "/data/user/shuang886/Folding/runtime_cache/protenix_v1_1/mmcif_msa_template"
+        ],
+        "prot_non_pairing_dbs": [
+          "pairing-non_pairing"
+        ],
+        "prot_pairing_dbs": [
+          "pairing"
+        ],
+        "prot_seq_or_filename_to_msadir_jsons": [
+          "/data/user/shuang886/Folding/runtime_cache/protenix_v1_1/common/seq_to_pdb_index.json"
+        ],
+        "rna_indexing_methods": [
+          "sequence"
+        ],
+        "rna_msadir_raw_paths": [
+          "/data/user/shuang886/Folding/runtime_cache/protenix_v1_1/rna_msa/msas"
+        ],
+        "rna_seq_or_filename_to_msadir_jsons": [
+          "/data/user/shuang886/Folding/runtime_cache/protenix_v1_1/rna_msa/rna_sequence_to_pdb_chains.json"
+        ],
+        "sample_cutoff": {
+          "test": 16384,
+          "train": 16384
+        }
+      },
+      "num_dl_workers": 16,
+      "obsolete_release_data_csv": "/data/user/shuang886/Folding/runtime_cache/protenix_v1_1/common/obsolete_release_date.csv",
+      "pdb_cluster_file": "/data/user/shuang886/Folding/runtime_cache/protenix_v1_1/common/clusters-by-entity-40.txt",
+      "posebusters_0925": {
+        "base_info": {
+          "bioassembly_dict_dir": "/data/user/shuang886/Folding/runtime_cache/protenix_v1_1/posebusters_bioassembly",
+          "find_all_pockets": false,
+          "find_pocket": true,
+          "indices_fpath": "/data/user/shuang886/Folding/runtime_cache/protenix_v1_1/indices/posebusters_indices_mainchain_interface.csv",
+          "max_n_token": -1,
+          "mmcif_dir": "/data/user/shuang886/Folding/runtime_cache/protenix_v1_1/posebusters_mmcif",
+          "pdb_list": ""
+        },
+        "constraint": {
+          "enable": false,
+          "fix_seed": false
+        },
+        "cropping_configs": {
+          "crop_size": -1,
+          "method_weights": [
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        "lig_atom_rename": false,
+        "sampler_configs": {
+          "sampler_type": "uniform"
+        },
+        "shuffle_mols": false,
+        "shuffle_sym_ids": false
+      },
+      "recentPDB_1536_sample384_0925": {
+        "base_info": {
+          "bioassembly_dict_dir": "/data/user/shuang886/Folding/runtime_cache/protenix_v1_1/recentPDB_bioassembly",
+          "find_eval_chain_interface": true,
+          "group_by_pdb_id": true,
+          "indices_fpath": "/data/user/shuang886/Folding/runtime_cache/protenix_v1_1/indices/recentPDB_low_homology_maxtoken1536.csv",
+          "max_n_token": -1,
+          "mmcif_dir": "/data/user/shuang886/Folding/runtime_cache/protenix_v1_1/mmcif",
+          "pdb_list": "/data/user/shuang886/Folding/runtime_cache/protenix_v1_1/indices/recentPDB_low_homology_maxtoken1024_sample384_pdb_id.txt",
+          "sort_by_n_token": false
+        },
+        "constraint": {
+          "enable": false,
+          "fix_seed": false
+        },
+        "cropping_configs": {
+          "crop_size": -1,
+          "method_weights": [
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        "lig_atom_rename": false,
+        "sampler_configs": {
+          "sampler_type": "uniform"
+        },
+        "shuffle_mols": false,
+        "shuffle_sym_ids": false
+      },
+      "template": {
+        "enable_prot_template": true,
+        "kalign_binary_path": "/usr/bin/kalign",
+        "obsolete_pdbs_path": "/data/user/shuang886/Folding/runtime_cache/protenix_v1_1/common/obsolete_to_successor.json",
+        "prot_indexing_methods": [
+          "sequence"
+        ],
+        "prot_seq_or_filename_to_templatedir_jsons": [
+          "/data/user/shuang886/Folding/runtime_cache/protenix_v1_1/common/seq_to_pdb_index.json"
+        ],
+        "prot_template_cache_dir": "",
+        "prot_template_mmcif_dir": "/data/user/shuang886/Folding/runtime_cache/protenix_v1_1/mmcif",
+        "prot_template_raw_paths": [
+          "/data/user/shuang886/Folding/runtime_cache/protenix_v1_1/mmcif_msa_template"
+        ],
+        "release_dates_path": "/data/user/shuang886/Folding/runtime_cache/protenix_v1_1/common/release_date_cache.json",
+        "template_dropout_rate": 0.0
+      },
+      "test_ref_pos_augment": true,
+      "test_sets": [
+        "recentPDB_1536_sample384_0925"
+      ],
+      "train_ref_pos_augment": true,
+      "train_sampler": {
+        "sampler_type": "weighted",
+        "train_sample_weights": [
+          1.0
+        ]
+      },
+      "train_sets": [
+        "weightedPDB_before2109_wopb_nometalc_0925"
+      ],
+      "weightedPDB_before2109_wopb_nometalc_0925": {
+        "base_info": {
+          "bioassembly_dict_dir": "/data/user/shuang886/Folding/runtime_cache/protenix_v1_1/mmcif_bioassembly",
+          "exclusion": {
+            "mol_1_type": [
+              "ions"
+            ],
+            "mol_2_type": [
+              "ions"
+            ]
+          },
+          "indices_fpath": "/data/user/shuang886/Folding/runtime_cache/protenix_v1_1/indices/weightedPDB_indices_before_2021-09-30_wo_posebusters_resolution_below_9.csv.gz",
+          "max_n_token": -1,
+          "mmcif_dir": "/data/user/shuang886/Folding/runtime_cache/protenix_v1_1/mmcif",
+          "pdb_list": "",
+          "random_sample_if_failed": true,
+          "use_reference_chains_only": false
+        },
+        "constraint": {
+          "contact": {
+            "distance_type": "center_atom",
+            "group": "complex",
+            "max_distance_range": {
+              "PL": [
+                4,
+                10
+              ],
+              "PP": [
+                6,
+                30
+              ]
+            },
+            "prob": 0.0,
+            "size": 0.3333333333333333
+          },
+          "contact_atom": {
+            "distance_type": "atom",
+            "feature_type": "continuous",
+            "group": "complex",
+            "max_distance_range": {
+              "PL": [
+                2,
+                8
+              ],
+              "PP": [
+                2,
+                12
+              ]
+            },
+            "min_distance": -1,
+            "prob": 0.0,
+            "size": 0.3333333333333333
+          },
+          "enable": false,
+          "fix_seed": false,
+          "pocket": {
+            "distance_type": "center_atom",
+            "group": "complex",
+            "max_distance_range": {
+              "LP": [
+                6,
+                20
+              ],
+              "PP": [
+                6,
+                20
+              ]
+            },
+            "prob": 0.0,
+            "size": 0.3333333333333333,
+            "spec_binder_chain": false
+          },
+          "substructure": {
+            "coord_noise_scale": 0.05,
+            "feature_type": "one_hot",
+            "mol_type_pairs": {
+              "LP": 10,
+              "PL": 10,
+              "PP": 15
+            },
+            "prob": 0.0,
+            "ratios": {
+              "full": [
+                0.0,
+                0.5,
+                1.0
+              ],
+              "partial": 0.3
+            },
+            "size": 0.8,
+            "spec_asym_id": false
+          }
+        },
+        "cropping_configs": {
+          "crop_size": 256,
+          "method_weights": [
+            0.2,
+            0.4,
+            0.4
+          ]
+        },
+        "lig_atom_rename": false,
+        "limits": -1,
+        "sample_weight": 0.5,
+        "sampler_configs": {
+          "alpha_dict": {
+            "ligand": 1,
+            "nuc": 3,
+            "prot": 3
+          },
+          "beta_dict": {
+            "chain": 0.5,
+            "interface": 1
+          },
+          "force_recompute_weight": true,
+          "sampler_type": "weighted"
+        },
+        "shuffle_mols": false,
+        "shuffle_sym_ids": false
+      }
+    },
+    "decay_every_n_steps": 50000,
+    "deterministic": false,
+    "deterministic_seed": false,
+    "diffusion_batch_size": 48,
+    "diffusion_chunk_size": 4,
+    "dtype": "bf16",
+    "dump_dir": "./output",
+    "ema_decay": -1.0,
+    "ema_mutable_param_keywords": [
+      ""
+    ],
+    "enable_diffusion_shared_vars_cache": true,
+    "enable_efficient_fusion": true,
+    "enable_tf32": false,
+    "esm": {
+      "embedding_dim": 1152,
+      "enable": true,
+      "model_name": "esmc_600m_final_cache"
+    },
+    "eval_ema_only": false,
+    "eval_first": false,
+    "eval_interval": null,
+    "eval_only": false,
+    "find_unused_parameters": false,
+    "finetune": {
+      "decay_every_n_steps": 50000,
+      "lr": 0.0018,
+      "lr_scheduler": "cosine_annealing",
+      "max_steps": 20000,
+      "min_lr_ratio": 0.1,
+      "warmup_steps": 1000
+    },
+    "finetune_params_with_substring": [
+      ""
+    ],
+    "grad_clip_norm": 10,
+    "hidden_scale_up": false,
+    "infer_setting": {
+      "chunk_size": 256,
+      "chunk_size_thresholds": {
+        "1024": -1,
+        "1536": 512,
+        "2048": 256,
+        "2560": 128
+      },
+      "dynamic_chunk_size": true,
+      "lddt_metrics_chunk_size": 1,
+      "lddt_metrics_sparse_enable": true,
+      "sample_diffusion_chunk_size": 5
+    },
+    "inference_noise_scheduler": {
+      "rho": 7,
+      "s_max": 160.0,
+      "s_min": 0.0004,
+      "sigma_data": 16.0
+    },
+    "input_json_path": null,
+    "iters_to_accumulate": 1,
+    "load_checkpoint_dir": null,
+    "load_checkpoint_path": "",
+    "load_ema_checkpoint_path": "",
+    "load_params_only": true,
+    "load_step_for_scheduler": false,
+    "load_strict": false,
+    "log_interval": null,
+    "loss": {
+      "diffusion": {
+        "bond": {
+          "eps": 1e-06
+        },
+        "mse": {
+          "eps": 1e-06,
+          "weight_dna": 5.0,
+          "weight_ligand": 10.0,
+          "weight_mse": 0.3333333333333333,
+          "weight_rna": 5.0
+        },
+        "smooth_lddt": {
+          "eps": 1e-06
+        }
+      },
+      "diffusion_bond_chunk_size": 1,
+      "diffusion_chunk_size_outer": 1,
+      "diffusion_lddt_chunk_size": 1,
+      "diffusion_lddt_loss_dense": true,
+      "diffusion_sparse_loss_enable": true,
+      "distogram": {
+        "eps": 1e-06,
+        "max_bin": 21.6875,
+        "min_bin": 2.3125,
+        "no_bins": 64
+      },
+      "pae": {
+        "eps": 1e-06,
+        "max_bin": 32,
+        "min_bin": 0,
+        "no_bins": 64
+      },
+      "pde": {
+        "eps": 1e-06,
+        "max_bin": 32,
+        "min_bin": 0,
+        "no_bins": 64
+      },
+      "plddt": {
+        "eps": 1e-06,
+        "max_bin": 1.0,
+        "min_bin": 0,
+        "no_bins": 50,
+        "normalize": true
+      },
+      "resolution": {
+        "max": 4.0,
+        "min": 0.1
+      },
+      "resolved": {
+        "eps": 1e-06
+      },
+      "weight": {
+        "alpha_bond": 0.0,
+        "alpha_confidence": 0.0001,
+        "alpha_diffusion": 4.0,
+        "alpha_distogram": 0.03,
+        "alpha_except_pae": 1.0,
+        "alpha_pae": 0.0,
+        "smooth_lddt": 1.0
+      }
+    },
+    "loss_metrics_sparse_enable": true,
+    "lr": 0.0018,
+    "lr_scheduler": "af3",
+    "max_atoms_per_token": 24,
+    "max_steps": null,
+    "mc_dropout_apply_rate": 0.0,
+    "mc_dropout_rate": 0.4,
+    "metrics": {
+      "chain_ranker_keys": [
+        "chain_ptm",
+        "chain_plddt"
+      ],
+      "clash": {
+        "af3_clash_threshold": 1.1,
+        "vdw_clash_threshold": 0.75
+      },
+      "complex_ranker_keys": [
+        "plddt",
+        "gpde",
+        "ranking_score"
+      ],
+      "interface_ranker_keys": [
+        "chain_pair_iptm",
+        "chain_pair_iptm_global",
+        "chain_pair_plddt"
+      ],
+      "lddt": {
+        "eps": 1e-06
+      }
+    },
+    "min_lr_ratio": 0.1,
+    "model": {
+      "N_cycle": 1,
+      "N_model_seed": 1,
+      "condition_embedding_drop_rate": 0.0,
+      "confidence_embedding_drop_rate": 0.0,
+      "confidence_head": {
+        "blocks_per_ckpt": 1,
+        "c_s": 384,
+        "c_s_inputs": 449,
+        "c_z": 128,
+        "distance_bin_end": 52.0,
+        "distance_bin_start": 3.25,
+        "distance_bin_step": 1.25,
+        "hidden_scale_up": false,
+        "max_atoms_per_token": 24,
+        "n_blocks": 4,
+        "pairformer_dropout": 0.0,
+        "stop_gradient": true
+      },
+      "constraint_embedder": {
+        "c_constraint_atom_pair": 16,
+        "c_constraint_s": 449,
+        "c_constraint_z": 128,
+        "contact_atom_embedder": {
+          "c_z_input": 2,
+          "enable": false
+        },
+        "contact_embedder": {
+          "c_z_input": 2,
+          "enable": false
+        },
+        "initialize_method": "zero",
+        "pocket_embedder": {
+          "c_s_input": 3,
+          "c_z_input": 1,
+          "enable": false
+        },
+        "substructure_embedder": {
+          "architecture": "transformer",
+          "enable": false,
+          "hidden_dim": 128,
+          "n_classes": 4,
+          "n_layers": 1
+        }
+      },
+      "diffusion_module": {
+        "atom_decoder": {
+          "n_blocks": 1,
+          "n_heads": 4
+        },
+        "atom_encoder": {
+          "n_blocks": 1,
+          "n_heads": 4
+        },
+        "blocks_per_ckpt": 1,
+        "c_atom": 128,
+        "c_atompair": 16,
+        "c_s": 384,
+        "c_s_inputs": 449,
+        "c_token": 768,
+        "c_z": 128,
+        "sigma_data": 16.0,
+        "transformer": {
+          "n_blocks": 8,
+          "n_heads": 16
+        },
+        "use_fine_grained_checkpoint": true
+      },
+      "distogram_head": {
+        "c_z": 128,
+        "no_bins": 64
+      },
+      "input_embedder": {
+        "c_atom": 128,
+        "c_atompair": 16,
+        "c_token": 384
+      },
+      "msa_module": {
+        "blocks_per_ckpt": 1,
+        "c_m": 64,
+        "c_s_inputs": 449,
+        "c_z": 128,
+        "hidden_scale_up": false,
+        "msa_chunk_size": 2048,
+        "msa_dropout": 0.0,
+        "msa_max_size": 16384,
+        "n_blocks": 1,
+        "pair_dropout": 0.0
+      },
+      "pairformer": {
+        "blocks_per_ckpt": 1,
+        "c_s": 384,
+        "c_z": 128,
+        "dropout": 0.0,
+        "hidden_scale_up": false,
+        "n_blocks": 16,
+        "n_heads": 16
+      },
+      "relative_position_encoding": {
+        "c_z": 128,
+        "r_max": 32,
+        "s_max": 2
+      },
+      "template_embedder": {
+        "blocks_per_ckpt": 1,
+        "c": 64,
+        "c_z": 128,
+        "dropout": 0.0,
+        "hidden_scale_up": false,
+        "n_blocks": 0
+      }
+    },
+    "model_name": "onestepfold_esmc600m_capacity_v1",
+    "msa_pair_as_unpair": true,
+    "n_blocks": 48,
+    "need_atom_confidence": false,
+    "no_bins": 64,
+    "num_workers": 0,
+    "project": null,
+    "run_name": null,
+    "sample_diffusion": {
+      "N_sample": 1,
+      "N_sample_mini_rollout": 1,
+      "N_step": 1,
+      "N_step_mini_rollout": 20,
+      "gamma0": 0.0,
+      "gamma_min": 1.0,
+      "noise_scale_lambda": 1.003,
+      "step_scale_eta": 1.0
+    },
+    "seed": 42,
+    "seeds": [
+      101
+    ],
+    "sigma_data": 16.0,
+    "skip_amp": {
+      "confidence_head": false,
+      "loss": true,
+      "sample_diffusion": true,
+      "sample_diffusion_training": true
+    },
+    "skip_load_optimizer": false,
+    "skip_load_scheduler": false,
+    "skip_load_step": false,
+    "sorted_by_ranking_score": true,
+    "test_lig_atom_rename": false,
+    "test_max_n_token": -1,
+    "test_shuffle_mols": false,
+    "test_shuffle_sym_ids": false,
+    "train_confidence_only": false,
+    "train_crop_size": 256,
+    "train_lig_atom_rename": false,
+    "train_noise_sampler": {
+      "p_mean": -1.2,
+      "p_std": 1.5,
+      "sigma_data": 16.0
+    },
+    "train_shuffle_mols": false,
+    "train_shuffle_sym_ids": false,
+    "triangle_attention": "torch",
+    "triangle_multiplicative": "torch",
+    "use_msa": false,
+    "use_rna_msa": false,
+    "use_seeds_in_json": false,
+    "use_template": false,
+    "use_wandb": true,
+    "wandb_id": "",
+    "warmup_steps": 10
+  },
+  "cudnn_tf32": false,
+  "evaluation_every_exposures": 50,
+  "evaluation_seeds": [
+    12345,
+    54321
+  ],
+  "examples": [
+    {
+      "adapter_sha256": "9f758fddd96408edce10f5a698702a314e5994df09875ca76c2a48b4bdb278a9",
+      "articulation_report_sha256": "82b1a7f10bc32f46fe33e11ae0df5e2a5df18c9a2045e1d653d567e862ac960d",
+      "input_path": "/data/user/shuang886/Folding/stage1b/coordinate_refiner/esmc_capacity_32_v2_20260918/5ba6ada7a80f669bdc6a5975db8c3d7c4ffa2b776540fb488c5655117ded7820/inputs.pt",
+      "input_provenance": {
+        "atom_count": 289,
+        "feature_sha256": "7603c068a9e5192357305490b1be53e2a65d642b0a81b401c0d66c5d9dbe5a42",
+        "group_id": "5ba6ada7a80f669bdc6a5975db8c3d7c4ffa2b776540fb488c5655117ded7820",
+        "gt_metadata_sha256": "f9ac12f7b804f64737487ac160abf36b501de96632e2e66cba47cedb94f428f2",
+        "gt_npz_sha256": "2f768260a4a7948e76d0f5c0c518bc8bdc820cf73b0d8e20970bbbf462d57da8",
+        "inputs_sha256": "458a1407aa3fb35a372e2e2d2be82b3e366c59a1269e06769cea4c8ec7086206",
+        "length": 35,
+        "missing_residue_count": 0,
+        "observed_atom_count": 289,
+        "raw_gt_rebuild_exact": true,
+        "sample_id": "1yri.assembly-1.model-1",
+        "sequence": "LSDEDFKAVFGMTRSAFANLPLWKQQHLKKEKGLF",
+        "source_metadata_sha256": "9db075b4d6f6d37b49550421f916bc57d5ce338ce7706c89aee741756b42f31b",
+        "source_mmcif_sha256": "80ed3439f96a33da65fda0b5bc6f8b115681950845b8f7a27414ae2b92f94b4d",
+        "source_shard": "/data/user/shuang886/Folding/processed_stageb_v1/shards/worker-013-shard-0001.tar",
+        "split": "train"
+      },
+      "inventory_sha256": "ef561a1dd70071d01a98e1bf77144dd653dfdfd2aa4c49e7f82d99acc61f1320",
+      "labels_sha256": "f2d4eb2f040e618da177288dc49663d79feade8a87e62ee0bdcb1e30610e1ac8",
+      "parent_index": 0,
+      "reference_sha256": "fc6d6e60c2270d7f6d3017f9cdb98e8f2849673b5c53125239205ba70c9c0378",
+      "selection": {
+        "c2_cif": "c2_s2/shard-0003/seed-101/5ba6ada7a80f669bdc6a5975db8c3d7c4ffa2b776540fb488c5655117ded7820/seed_101/predictions/5ba6ada7a80f669bdc6a5975db8c3d7c4ffa2b776540fb488c5655117ded7820_sample_0.cif",
+        "c2_confidence": "c2_s2/shard-0003/seed-101/5ba6ada7a80f669bdc6a5975db8c3d7c4ffa2b776540fb488c5655117ded7820/seed_101/predictions/5ba6ada7a80f669bdc6a5975db8c3d7c4ffa2b776540fb488c5655117ded7820_summary_confidence_sample_0.json",
+        "c2_source": "hpc3-paired-teacher-v2-pilot512x256",
+        "c4_cif": "c4_s2/shard-0003/seed-101/5ba6ada7a80f669bdc6a5975db8c3d7c4ffa2b776540fb488c5655117ded7820/seed_101/predictions/5ba6ada7a80f669bdc6a5975db8c3d7c4ffa2b776540fb488c5655117ded7820_sample_0.cif",
+        "c4_confidence": "c4_s2/shard-0003/seed-101/5ba6ada7a80f669bdc6a5975db8c3d7c4ffa2b776540fb488c5655117ded7820/seed_101/predictions/5ba6ada7a80f669bdc6a5975db8c3d7c4ffa2b776540fb488c5655117ded7820_summary_confidence_sample_0.json",
+        "c4_source": "hpc3-paired-teacher-v2-pilot512x256",
+        "group_id": "5ba6ada7a80f669bdc6a5975db8c3d7c4ffa2b776540fb488c5655117ded7820",
+        "sample_id": "1yri.assembly-1.model-1",
+        "schema_version": "teacher_pair_manifest_v1",
+        "sequence": "LSDEDFKAVFGMTRSAFANLPLWKQQHLKKEKGLF",
+        "sequence_length": 35,
+        "shard": "shard-0003",
+        "split": "train"
+      },
+      "supervision_sha256": "34da54e9a902dd68c4ff09ee9430acce0040e4c20ab0d13411d10489396dfb02"
+    },
+    {
+      "adapter_sha256": "537983f6b799caa0ed7e3218fde2d419644742fb4c59d6550cdd749f636ef039",
+      "articulation_report_sha256": "82b1a7f10bc32f46fe33e11ae0df5e2a5df18c9a2045e1d653d567e862ac960d",
+      "input_path": "/data/user/shuang886/Folding/stage1b/coordinate_refiner/esmc_capacity_32_v2_20260918/0072dd8add7a9d9ae2c92c66ffd4af7849b91cc6bd4ee4b24e156e77cb83a832/inputs.pt",
+      "input_provenance": {
+        "atom_count": 807,
+        "feature_sha256": "52aa39d5cae352da4078d8e44ac8b2ec3de87a971fd71af379f931bdf9210d43",
+        "group_id": "0072dd8add7a9d9ae2c92c66ffd4af7849b91cc6bd4ee4b24e156e77cb83a832",
+        "gt_metadata_sha256": "85835a19a50a023aad28fe8dae8576e48f201412f37cca43605645ac841d4f7b",
+        "gt_npz_sha256": "5bbd897b37bb569892d4d442c96deb8c0a54f9421048cc6a19f1d0581385578d",
+        "inputs_sha256": "764a02d52ff6b047088a5c7a2352a29b3728cf712475939db48ca877eacf27ec",
+        "length": 105,
+        "missing_residue_count": 0,
+        "observed_atom_count": 807,
+        "raw_gt_rebuild_exact": true,
+        "sample_id": "3ie9.assembly-1.model-1",
+        "sequence": "DKATIPSESPFAAAEVADGAIVVDIAKMKYETPELHVKVGDTVTWINREAMPHNVHFVAGVLGEAALKGPMMKKEQAYSLTFTEAGTYDYHCTPHPFLRGKVVVE",
+        "source_metadata_sha256": "2104d21badb556297b00adac0bc7d328918f725afe064b9edc53aa56482be37d",
+        "source_mmcif_sha256": "6481dbfb597560086d684982ee88815731ce1d690507b638ce33d43cce3c47ac",
+        "source_shard": "/data/user/shuang886/Folding/processed_stageb_v1/shards/worker-011-shard-0002.tar",
+        "split": "train"
+      },
+      "inventory_sha256": "ffecf82bfe1c689b0a043ce7cc59f531ee95c1b2c456f003a2627b8099e1f771",
+      "labels_sha256": "d17791b5a2cfa2b56b4a1ed395a24d43d5cef43ec320a9f1f828e590793821a4",
+      "parent_index": 7,
+      "reference_sha256": "908d0bf449c8fb4182a4b4a53164e228e47e766cd608d1d26c8e35c31efb11d1",
+      "selection": {
+        "c2_cif": "c2_s2/shard-0010/seed-101/0072dd8add7a9d9ae2c92c66ffd4af7849b91cc6bd4ee4b24e156e77cb83a832/seed_101/predictions/0072dd8add7a9d9ae2c92c66ffd4af7849b91cc6bd4ee4b24e156e77cb83a832_sample_0.cif",
+        "c2_confidence": "c2_s2/shard-0010/seed-101/0072dd8add7a9d9ae2c92c66ffd4af7849b91cc6bd4ee4b24e156e77cb83a832/seed_101/predictions/0072dd8add7a9d9ae2c92c66ffd4af7849b91cc6bd4ee4b24e156e77cb83a832_summary_confidence_sample_0.json",
+        "c2_source": "hpc3-paired-teacher-v2-pilot512x256",
+        "c4_cif": "c4_s2/shard-0010/seed-101/0072dd8add7a9d9ae2c92c66ffd4af7849b91cc6bd4ee4b24e156e77cb83a832/seed_101/predictions/0072dd8add7a9d9ae2c92c66ffd4af7849b91cc6bd4ee4b24e156e77cb83a832_sample_0.cif",
+        "c4_confidence": "c4_s2/shard-0010/seed-101/0072dd8add7a9d9ae2c92c66ffd4af7849b91cc6bd4ee4b24e156e77cb83a832/seed_101/predictions/0072dd8add7a9d9ae2c92c66ffd4af7849b91cc6bd4ee4b24e156e77cb83a832_summary_confidence_sample_0.json",
+        "c4_source": "hpc3-paired-teacher-v2-pilot512x256",
+        "group_id": "0072dd8add7a9d9ae2c92c66ffd4af7849b91cc6bd4ee4b24e156e77cb83a832",
+        "sample_id": "3ie9.assembly-1.model-1",
+        "schema_version": "teacher_pair_manifest_v1",
+        "sequence": "DKATIPSESPFAAAEVADGAIVVDIAKMKYETPELHVKVGDTVTWINREAMPHNVHFVAGVLGEAALKGPMMKKEQAYSLTFTEAGTYDYHCTPHPFLRGKVVVE",
+        "sequence_length": 105,
+        "shard": "shard-0010",
+        "split": "train"
+      },
+      "supervision_sha256": "26a87e977eee3639aab3543856ef80a3744459043bc55fe767c886d13083f66e"
+    },
+    {
+      "adapter_sha256": "68e8642ea00c8be69e97ac1423e343bf8530141b3bb4554c6748fc6bb3ab1013",
+      "articulation_report_sha256": "82b1a7f10bc32f46fe33e11ae0df5e2a5df18c9a2045e1d653d567e862ac960d",
+      "input_path": "/data/user/shuang886/Folding/stage1b/coordinate_refiner/esmc_capacity_32_v2_20260918/36e538543c24414069b77ac1a24e0597ea526b6c77eb19f02ef2c671db700f37/inputs.pt",
+      "input_provenance": {
+        "atom_count": 976,
+        "feature_sha256": "923786dcf09c6f5cd9a24ae57d7565521581680385e8fa5cbee734dba38faa59",
+        "group_id": "36e538543c24414069b77ac1a24e0597ea526b6c77eb19f02ef2c671db700f37",
+        "gt_metadata_sha256": "a45df5e3e64da73b1afc609141c873537dd10770efd1e45f346577d3ee62e915",
+        "gt_npz_sha256": "e53cd8260abfea40be9b72b32c652a9cae28bb9dcd64a49a6fcb0d92f18eb1b0",
+        "inputs_sha256": "1daef2ba8a33dbf1fceef6e5790fb0e223f107b88288fa01909213e261963a82",
+        "length": 128,
+        "missing_residue_count": 0,
+        "observed_atom_count": 976,
+        "raw_gt_rebuild_exact": true,
+        "sample_id": "3f7n.assembly-1.model-1",
+        "sequence": "ADKELKFLVVDDESTMRRIVRNLLKELGFNNVEEAEDGVDALNKLQAGGYGFVISDWMMPNMDGLELLKTIRADGAMSALPVLMVTALAKKENIIAAAQAGASGYVVKPFTAATLEEKLNKIFEKLGM",
+        "source_metadata_sha256": "2104d21badb556297b00adac0bc7d328918f725afe064b9edc53aa56482be37d",
+        "source_mmcif_sha256": "fb550b69528ebc8d1c7fd8197c95e4eaef3ee47efb50b5668e70329025dc50fb",
+        "source_shard": "/data/user/shuang886/Folding/processed_stageb_v1/shards/worker-012-shard-0002.tar",
+        "split": "train"
+      },
+      "inventory_sha256": "f0be0738b36b26aee5e986ff81c56dfe20e65c97d99d42962d0de2643e7ed53b",
+      "labels_sha256": "9d825a4a750690c9b2e7667d5bd3a1c2e7361700c8dc4a97cb717fa2629915bc",
+      "parent_index": 15,
+      "reference_sha256": "7c7849b9cee9bf178c650edbf1784cc7555fe3c98faddbee175aada2d20d54ad",
+      "selection": {
+        "c2_cif": "c2_s2/shard-0010/seed-101/36e538543c24414069b77ac1a24e0597ea526b6c77eb19f02ef2c671db700f37/seed_101/predictions/36e538543c24414069b77ac1a24e0597ea526b6c77eb19f02ef2c671db700f37_sample_0.cif",
+        "c2_confidence": "c2_s2/shard-0010/seed-101/36e538543c24414069b77ac1a24e0597ea526b6c77eb19f02ef2c671db700f37/seed_101/predictions/36e538543c24414069b77ac1a24e0597ea526b6c77eb19f02ef2c671db700f37_summary_confidence_sample_0.json",
+        "c2_source": "hpc3-paired-teacher-v2-pilot512x256",
+        "c4_cif": "c4_s2/shard-0010/seed-101/36e538543c24414069b77ac1a24e0597ea526b6c77eb19f02ef2c671db700f37/seed_101/predictions/36e538543c24414069b77ac1a24e0597ea526b6c77eb19f02ef2c671db700f37_sample_0.cif",
+        "c4_confidence": "c4_s2/shard-0010/seed-101/36e538543c24414069b77ac1a24e0597ea526b6c77eb19f02ef2c671db700f37/seed_101/predictions/36e538543c24414069b77ac1a24e0597ea526b6c77eb19f02ef2c671db700f37_summary_confidence_sample_0.json",
+        "c4_source": "hpc3-paired-teacher-v2-pilot512x256",
+        "group_id": "36e538543c24414069b77ac1a24e0597ea526b6c77eb19f02ef2c671db700f37",
+        "sample_id": "3f7n.assembly-1.model-1",
+        "schema_version": "teacher_pair_manifest_v1",
+        "sequence": "ADKELKFLVVDDESTMRRIVRNLLKELGFNNVEEAEDGVDALNKLQAGGYGFVISDWMMPNMDGLELLKTIRADGAMSALPVLMVTALAKKENIIAAAQAGASGYVVKPFTAATLEEKLNKIFEKLGM",
+        "sequence_length": 128,
+        "shard": "shard-0010",
+        "split": "train"
+      },
+      "supervision_sha256": "f3ec6dd66a71b2d9361ab2de31cf582f2544e0b1f9794144ca197a3164bb6065"
+    },
+    {
+      "adapter_sha256": "7cbded58f0176785bd70973ccc48e28a2bf4d88d8be9aa0b1099b2c7b1da293b",
+      "articulation_report_sha256": "82b1a7f10bc32f46fe33e11ae0df5e2a5df18c9a2045e1d653d567e862ac960d",
+      "input_path": "/data/user/shuang886/Folding/stage1b/coordinate_refiner/esmc_capacity_32_v2_20260918/02713dc891a01ad3eb8e81a43a282cbb37d7e12a617c86bff3d91bbd9204dfe8/inputs.pt",
+      "input_provenance": {
+        "atom_count": 1336,
+        "feature_sha256": "0de5eb0e7311e011b9d975c36f93e31422aff7e38ece847ee9629d96ac4bc437",
+        "group_id": "02713dc891a01ad3eb8e81a43a282cbb37d7e12a617c86bff3d91bbd9204dfe8",
+        "gt_metadata_sha256": "dd34424ba3bf208ab576fa959fe335395494e814e4de44a2a0511b54a480178b",
+        "gt_npz_sha256": "6aba0c12360d0f9213cf77b556e939a7ec29b34a078742fe89406e0394bb8c51",
+        "inputs_sha256": "db96162d84127e106e451f042c484836a153508b4cacd001c2b8cef101e95979",
+        "length": 166,
+        "missing_residue_count": 0,
+        "observed_atom_count": 1336,
+        "raw_gt_rebuild_exact": true,
+        "sample_id": "4b9p.assembly-1.model-1",
+        "sequence": "TDLLTKIELQAYNHIRTSETKELQPRIKLINTGNTPITLSEVKIRYYYTKDQVINEIYTCDWSNITSSKITGTVVQMSNPKPNADSYVEIGFTNSAGVLNPGEYVEIISRIGNSYALSLATPPYSEWNYMYDQNSDYSFNNSSSDFVVWDKITVYISGTLYWGIEP",
+        "source_metadata_sha256": "1bb3286c38726657a15e1f6911e1a44622fcbd919787b1741aef9037c2aec84a",
+        "source_mmcif_sha256": "9bcf224b38800fc742b453f59489b0d50fbdf9c310a4bd8f306f1ce7cd09b1af",
+        "source_shard": "/data/user/shuang886/Folding/processed_stageb_v1/shards/worker-015-shard-0003.tar",
+        "split": "train"
+      },
+      "inventory_sha256": "081d4493415ae4dcfc4d08d9b57ba2ca1fc50d9533c34f9912c140901d24cd90",
+      "labels_sha256": "f89647d9b0ba9da87ed98ad457bc11a73d412d199ee16cbacbb05310deebdb8f",
+      "parent_index": 31,
+      "reference_sha256": "abad947bf2bdd4a1ccc2d583d3cf01dbd71acf55fe9fdc59291f02221f0594d2",
+      "selection": {
+        "c2_cif": "c2_s2/shard-0009/seed-101/02713dc891a01ad3eb8e81a43a282cbb37d7e12a617c86bff3d91bbd9204dfe8/seed_101/predictions/02713dc891a01ad3eb8e81a43a282cbb37d7e12a617c86bff3d91bbd9204dfe8_sample_0.cif",
+        "c2_confidence": "c2_s2/shard-0009/seed-101/02713dc891a01ad3eb8e81a43a282cbb37d7e12a617c86bff3d91bbd9204dfe8/seed_101/predictions/02713dc891a01ad3eb8e81a43a282cbb37d7e12a617c86bff3d91bbd9204dfe8_summary_confidence_sample_0.json",
+        "c2_source": "hpc3-paired-teacher-v2-pilot512x256",
+        "c4_cif": "c4_s2/shard-0009/seed-101/02713dc891a01ad3eb8e81a43a282cbb37d7e12a617c86bff3d91bbd9204dfe8/seed_101/predictions/02713dc891a01ad3eb8e81a43a282cbb37d7e12a617c86bff3d91bbd9204dfe8_sample_0.cif",
+        "c4_confidence": "c4_s2/shard-0009/seed-101/02713dc891a01ad3eb8e81a43a282cbb37d7e12a617c86bff3d91bbd9204dfe8/seed_101/predictions/02713dc891a01ad3eb8e81a43a282cbb37d7e12a617c86bff3d91bbd9204dfe8_summary_confidence_sample_0.json",
+        "c4_source": "hpc3-paired-teacher-v2-pilot512x256",
+        "group_id": "02713dc891a01ad3eb8e81a43a282cbb37d7e12a617c86bff3d91bbd9204dfe8",
+        "sample_id": "4b9p.assembly-1.model-1",
+        "schema_version": "teacher_pair_manifest_v1",
+        "sequence": "TDLLTKIELQAYNHIRTSETKELQPRIKLINTGNTPITLSEVKIRYYYTKDQVINEIYTCDWSNITSSKITGTVVQMSNPKPNADSYVEIGFTNSAGVLNPGEYVEIISRIGNSYALSLATPPYSEWNYMYDQNSDYSFNNSSSDFVVWDKITVYISGTLYWGIEP",
+        "sequence_length": 166,
+        "shard": "shard-0009",
+        "split": "train"
+      },
+      "supervision_sha256": "8736c4e9ff807382672b91db519648813213e15d89c64251b1d887e75b71fb33"
+    }
+  ],
+  "folding_checkpoint_load_calls": 0,
+  "frozen_parameter_sha256": "5e20179ac0c445712aa83299a1de0907dede10a407c44a075ada87b581b3da8a",
+  "gpu_name": "NVIDIA H100 80GB HBM3",
+  "indices": [
+    0,
+    7,
+    15,
+    31
+  ],
+  "initial_raw_exact_parent": true,
+  "initial_train_eval_exact": true,
+  "initial_weights_sha256": "baad41b475327b40f3b458d04e7ee85696639776096a12699b661b2b87b908ea",
+  "job_id": "655575",
+  "matmul_tf32": false,
+  "max_exposures": 1000,
+  "minimum_all_atom_lddt": 0.9,
+  "objective_arm": "baseline",
+  "optimizer": {
+    "batch_size": 1,
+    "clip": 10,
+    "lr": 0.0001,
+    "name": "AdamW",
+    "weight_decay": 0.0001
+  },
+  "parent_contract_sha256": "8f0173cb26c6ba73b40d83fd927fc631db48e5b417334bbb6ac88ddd78c88177",
+  "parent_report_sha256": "57c9863836acf674202d7e4100299a1c11c5cca07fb83964d0ebf797c3b86379",
+  "parent_root": "/data/user/shuang886/Folding/stage1b/coordinate_refiner/esmc_articulated_capacity_v1_20260918",
+  "runtime_source_sha256": {
+    "/data/user/shuang886/.conda/envs/fold/lib/python3.12/site-packages/protenix/model/generator.py": "84338db0cda852d859e498c9aee972747a319e4e701cfae271ac882215fe25ae",
+    "/data/user/shuang886/.conda/envs/fold/lib/python3.12/site-packages/protenix/model/modules/fused_ops.py": "89d80eae7d5fd688fac7c2c3f956de943022acd486427047eb1c584b0b58cd23",
+    "/data/user/shuang886/.conda/envs/fold/lib/python3.12/site-packages/protenix/model/modules/pairformer.py": "876b29a323ebf5a9929be0b8efa6b45027108640784a250e3ce446e39ccae2eb",
+    "/data/user/shuang886/.conda/envs/fold/lib/python3.12/site-packages/protenix/model/modules/transformer.py": "4d4d56b0fdf0f0fd6eff2cbcafd4a2f35b24f217746e671cac4e1238ae649ed6",
+    "/data/user/shuang886/.conda/envs/fold/lib/python3.12/site-packages/protenix/model/protenix.py": "c4250bd93d592a11d9019285cfd84b71b26fa6a8aca6944a239fb31e0337e179"
+  },
+  "schema": "scratch-overfit-v1",
+  "selection": "minimum joint normalized score; earliest tie",
+  "size": 4,
+  "smooth_lddt_temperature_angstrom": 0.1,
+  "smooth_lddt_weight": 0.0,
+  "soft_seconds": 7200,
+  "source_manifest_sha256": "7ef22659af1070304132bfdcc9d6d4891533a2e2527477fceb35b2740708facc",
+  "source_root": "/data/user/shuang886/Folding/esmc_scratch_overfit_v1_20260927/code_v1",
+  "torch": "2.7.1+cu128",
+  "training_seed_collisions": 0,
+  "training_seed_sha256": "daaad3c83c192c8f9187373ff47375b70b4bff7211880c4a49897cec637a65f2"
+}
