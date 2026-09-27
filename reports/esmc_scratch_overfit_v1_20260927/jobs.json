@@ -1,0 +1,37 @@
+{
+  "cpu_tests": "655572",
+  "training": {
+    "baseline": {
+      "job_id": "655575",
+      "command": [
+        "sbatch",
+        "--parsable",
+        "--job-name=scratch4-baseline",
+        "--output=/data/user/shuang886/Folding/esmc_scratch_overfit_v1_20260927/baseline-%j.log",
+        "/data/user/shuang886/Folding/esmc_scratch_overfit_v1_20260927/code_v1/scripts/slurm_scratch_overfit.sh"
+      ]
+    },
+    "smooth_lddt": {
+      "job_id": "655576",
+      "command": [
+        "sbatch",
+        "--parsable",
+        "--job-name=scratch4-smooth_lddt",
+        "--output=/data/user/shuang886/Folding/esmc_scratch_overfit_v1_20260927/smooth_lddt-%j.log",
+        "/data/user/shuang886/Folding/esmc_scratch_overfit_v1_20260927/code_v1/scripts/slurm_scratch_overfit.sh"
+      ]
+    }
+  },
+  "report": {
+    "job_id": "655577",
+    "command": [
+      "sbatch",
+      "--parsable",
+      "--dependency=afterany:655575:655576",
+      "--output=/data/user/shuang886/Folding/esmc_scratch_overfit_v1_20260927/report-%j.log",
+      "/data/user/shuang886/Folding/esmc_scratch_overfit_v1_20260927/report.sh"
+    ]
+  },
+  "root": "/data/user/shuang886/Folding/esmc_scratch_overfit_v1_20260927",
+  "code": "/data/user/shuang886/Folding/esmc_scratch_overfit_v1_20260927/code_v1"
+}

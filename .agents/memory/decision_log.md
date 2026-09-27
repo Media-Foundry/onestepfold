@@ -1,5 +1,42 @@
 # Decision log
 
+## 2026-09-27 — Scratch-first plan and bounded TRAIN4 supervision diagnostic
+
+User asks for an overall plan and explicitly says to start step by step with
+an overfitting test from the beginning. New plan: docs/scratch_model_plan_v1.md.
+Retain frozen ESMC600M; no folding checkpoint or coordinate-teacher training.
+This updates the priority of the prior pretrained-tail recovery plan, while
+leaving running locked continuation655518/655519 and their dependencies unchanged.
+
+Old scratch already used a random ESMC projection and passed TRAIN32; do not
+claim simply reinitializing creates a new architecture or repeat the old grid.
+First new variable: add10*smooth-all-atom-lDDT to A+.1F+R+10D, compared with a
+matched baseline. Both use the same random seed101/raw existing16+8 topology,
+TRAIN indices[0,7,15,31], exact initial hash/old-coordinate replay, batch1,
+AdamW1e-4/wd1e-4/clip10, c1/s1/K1, final-only ESMC. One H100 per arm, acd_u.
+Same atom-neighborhood mask/reduction as true lDDT, sigmoid temperature0.1A;
+fixedweight10 is one engineering candidate, not a selected optimum.
+
+Eacharm max1000exposures/protein or2h optimization window, evaluate every50,
+3h Slurm hard limit. Jointgate = old TRAIN4 geometry criteria AND eachprotein's
+AA-lDDT>=.90 at BOTH inference noises. Preserve per-noise scores; no best-of-K.
+No DEV/test access. No automatic TRAIN32 or new-method launch after completion.
+A small fit pass establishes trainability, not generalization/P1>=.7.
+
+Code: train_scratch_overfit.py, validate_scratch_overfit.py,
+report_scratch_overfit.py, smooth_lddt_supervision.py, scratch_overfit.py.
+HPC3 isolatedroot /data/user/shuang886/Folding/esmc_scratch_overfit_v1_20260927,
+source code_v1; CPUtests655572 COMPLETE0:0 (CUDAcase skipped onCPU).
+TRAIN4 baseline655575 and smooth_lddt655576 RUNNING onH100/ACD1-28. Both
+GPU deterministic loss tests and zero-update GPU preflights passed: exact
+random-init/raw-coordinate replay, finite front/head gradients and c1/s1.
+Independent acceptance runs inside each GPU allocation with CUDA hidden;
+CPUreport655577 waits afterany onboth and requires accepted artifacts.
+Source manifest SHA7ef22659af1070304132bfdcc9d6d4891533a2e2527477fceb35b2740708facc;
+all9 new local source/protocol files match. No trained quality claim yet.
+Model constructor, oldlabels/source hashes, finite gradients, true NFE,
+checkpoint replay and independent dense CPU lDDT/smooth-loss checks gate acceptance.
+
 ## 2026-09-27 — All-atom 0.90 target and staged tail-recovery protocol
 
 User explicitly clarifies0.90 means observed ALL-ATOM lDDT, not CA or confidence.
