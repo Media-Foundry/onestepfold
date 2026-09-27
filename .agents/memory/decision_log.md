@@ -1,5 +1,52 @@
 # Decision log
 
+## 2026-09-27 — User requested192 single-thread structure workers
+
+DiamondHill256logical CPUs/128physicalcores,~1TiB RAM. Original16workers each
+~98%CPU despite4auxthreads (~3.2GiB RSS). Userauthorizes192workers ifnointernal
+threadpool multiplication. Migratedwithoutchangingselection/labels: terminateonly
+controller1617246 andits16knownworkers; leaveoldrsync1617257 alive. Retain2677
+completepackets, quarantine16interruptedfolders in scale192/incomplete; theyare
+reprocessed. Immutablecode_v1 andoldlogs retained; code_v2 onlyadds torchinterop1
+and192-wayacceptance. Retainedpreparedhashes boundtooriginalsource inmanifest.
+
+NewcontrollerPID1618918,192children recordedin scale192/launch.json. PyTorch
+intra/inter-op1;OMP/MKL/OpenBLAS/BLIS/NumExpr/Rayon1. Eachworkerandits existing
+threads pinnedtoone logicalCPU;192live/single-core affinities confirmed. CPU
+runtimeinitialization resetone earlyaffinity, soallthreads reboundafterstartup;
+record scale192/affinity_check.json. NoGPUtraining. Startuphealth:166workers had
+progress,sum3545 includingretained, noTracebacks;RAMused555GiB/available452GiB,
+swap~1MiB. SMTandI/O canlimit speedup; no12xpromise.
+
+Remote /media/PM982/onestepfold/scratch_structure_data_v1_20260927/scale192.
+Newcontroller waits192workers thenwaitsoldrsync, runsidempotentrsynctoensure
+complete8320reusedpackets, thenv2full29897acceptance. Inspect scale192/exit.json,
+pipeline_exit.json androotacceptance.json; oldruncontroller isNOTlive. Snapshot
+reports/scratch_structure_data_v1_20260927/scale192. Afterpreparationaccepted,
+analyseformerHPC3cycleandpresentnextplanhere, noautomaticnewtraining.
+
+
+## 2026-09-27 — Requested follow-up AFTER structure preparation acceptance
+
+User explicitly requests this order: (1) finish andaccept currentDiamondHill
+structurepacket preparation; (2) analyse theformer-cycle HPC3 task results;
+(3) present thenext-cycle plan inthisconversation. Do NOT automaticallylaunch
+thenexttrainingcycle. Thisupdates theearlierstructure-onlyscope ONLYto permit
+post-preparation resultanalysis/planning, notnewtraining.
+
+Latestchecked preparation:16CPUworkers haveprogress,1397/21577newpackets,
+noTraceback inworkerlogs; acceptance.json absent. Waitfor actualcompleteacceptance,
+not justworkerprogress. TheninspectHPC3 lockedcontinuation655518/655519 andaudits/
+scores/report655520–655524 plusfixed-tail655531, preserving original4096primary
+and16384extension meanings. Include othercompleted scratch diagnostics onlywith
+clear labels; do notmix pretrained-adaptation results withscratch capacity claims.
+Reviewtrainingfit,DEV AA/CA/TM means,fixedhardtargets/rerankedtails,chemistry,
+equalupdates/equalexposures/cost, andindependentacceptance status. Finallypropose
+onebounded nextcycle consistentwithscratchprimary/final-only/oldsmoothweight10,
+full29769TRAIN andDiamondHill preference; present uncertainties andactualreadiness.
+Reporthere beforeany nextcycletraining launch.
+
+
 ## 2026-09-27 — User restricted this turn to STRUCTURE PREPARATION ONLY
 
 Do not startTRAIN32 oranymodeltraining underthisrequest. Previouslyprepared

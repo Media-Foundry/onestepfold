@@ -16,3 +16,7 @@ DiamondHill工作目录：`/media/PM982/onestepfold/scratch_structure_data_v1_20
 进度：`launch.json`、`new/progress_worker_*.json`、`reuse_transfer.log`；各阶段退出记录为`smoke/exit.json`、`new/exit.json`、`reuse_transfer_exit.json`、`pipeline_exit.json`。最终`acceptance.json`是结构包完成标志，不代表长链显存、训练吞吐或模型质量验收通过。更大的DEV-primary尚未锁定/准备。
 
 源码：`prepare_scratch_structure_data.py`沿用已验收准备实现，只增加显式化学资产路径、已校验包复用及smooth标签；控制器和选择脚本归档在`reports/scratch_structure_data_v1_20260927`。新源码快照独立于任何已有训练作业。
+
+## 并发更新
+
+按用户要求已切换为192个单核绑定CPU worker，PyTorch intra/inter-op、BLAS等线程均限制为1。保留2677个完成包，16个中断包隔离后重做；新控制器位于`scale192/run.py`，原16-worker控制器已停止。校验入口改为code_v2，数据规则和目标数不变。
