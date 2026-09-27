@@ -1,0 +1,42 @@
+[
+  {
+    "partition": 0,
+    "pid": 871414,
+    "command": [
+      "rsync",
+      "-a",
+      "--partial",
+      "--partial-dir=.rsync-partial",
+      "--info=stats2",
+      "-e",
+      "ssh -o BatchMode=yes -o ConnectTimeout=20",
+      "/home/husrcf/Code/onestepfold_runtime/esmc_29769/part-000/",
+      "pc@DiamondHill:/media/PM982/onestepfold/data/esmc_29769_layers_12_24_36_v1_20260927/part-000/"
+    ],
+    "started": 1790487656.7117589
+  },
+  {
+    "partition": 1,
+    "pid": 871415,
+    "command": [
+      "ssh",
+      "-o",
+      "ConnectTimeout=20",
+      "Precision",
+      "rsync -a --partial --partial-dir=.rsync-partial --info=stats2 -e 'ssh -o BatchMode=yes -o ConnectTimeout=20' /media/990Pro/onestepfold/esmc_29769_20260927/part-001/ pc@10.120.16.9:/media/PM982/onestepfold/data/esmc_29769_layers_12_24_36_v1_20260927/part-001/"
+    ],
+    "started": 1790487656.712724
+  },
+  {
+    "partition": 2,
+    "pid": 871416,
+    "command": [
+      "ssh",
+      "-o",
+      "ConnectTimeout=20",
+      "Precision",
+      "rsync -a --partial --partial-dir=.rsync-partial --info=stats2 -e 'ssh -o BatchMode=yes -o ConnectTimeout=20' /media/990Pro/onestepfold/esmc_29769_20260927/part-002/ pc@10.120.16.9:/media/PM982/onestepfold/data/esmc_29769_layers_12_24_36_v1_20260927/part-002/"
+    ],
+    "started": 1790487656.7135499
+  }
+]

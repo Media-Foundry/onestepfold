@@ -1,5 +1,41 @@
 # Decision log
 
+## 2026-09-27 — User authorized rsync of extracted ESMC features to DiamondHill
+
+Target /media/PM982/onestepfold/data/esmc_29769_layers_12_24_36_v1_20260927,
+~58GiB across547 shards,29769 sequences. Hostonline,disk2.9TiB available.
+Threeconcurrentrsync transfers started; X570part000 direct, Precisionpart001/002
+DIRECTto pc@10.120.16.9, noX570relay. Controller unifiedsession15137, childPIDs
+871414/871415/871416. Exactcommands in
+reports/esmc_29769_extraction_2026-09-27/diamondhill/transfer_jobs.json.
+Code, lock, sequencegroups andselectionreport alreadycopied. Partial files retained;
+no source/deletion operation. Never startduplicates withoutchecking these processes.
+
+Controller waits forsuccessfulall3 then runs destinationCPUverification: everyshard
+SHA256, BF16/shape/finite values, residueoffsets andexactdisjoint29769coverage;
+createsmergedrelative-path manifest andtransfer_acceptance.json onlyafterchecks.
+Local transfer_exit.json andverification_exit.json distinguishsuccess fromfailure.
+Atthisentrytransfer is RUNNING, not complete. Cross-device numericalcompatibility
+andlongchainstructurepacketQA stillpending. No training authorized/launched by
+thistransfer handoff. See diamondhill/README.md for recovery andreadiness rules.
+
+
+## 2026-09-27 13:36 HKT — User-requested progress check only
+
+All3 ESMC12/24/36 extraction partitions complete: R9700 9887 groups in856.8s;
+Precision GPU0 9957 in2492.3s, GPU1 9925 in2558.9s.547 shards total.
+Downloaded completion metadata/manifests; verified each manifestSHA, exactunique
+29769-group union, disjoint hash partitions, sequence hashes/lengths andthree layer
+names. See reports/esmc_29769_extraction_2026-09-27/completion/status.json.
+NOT full tensor checksum/finite-value acceptance orcross-device compatibility;
+longchain training packets also not accepted. No new jobs started onthisstatuscheck.
+HPC3 acd_u jobs655518/655519 running, cumulative13072/12560 of16384 at~13:35;
+remainingtraining estimate~52/64min atobservedaverage, scheduler-dependent audit/
+CPUscore/report stillpending. No new quality conclusion fromunscored checkpoints.
+Previousbackup c1fac23f isnow syncedto origin/main. User's earlierstopboundary
+remains: statuscheck does not authorize autonomousnext-stage training.
+
+
 ## 2026-09-27 — TRAIN4 scratch results accepted; mean benefit with mixed minimum/chemistry
 
 User asks to inspect the first scratch overfit result. Jobs655575/655576/655577
