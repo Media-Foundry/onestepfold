@@ -93,3 +93,19 @@ neutral control nearest200residues. This is a diagnostic subset, not a prevalenc
 estimate. Source code_gates_v2; targets locked in gate_cases_v2.json. PIDs1677382,
 1677383,1677384,1677386,1677388,1677391. Each bounded5400seconds. Scope is unchanged;
 no training, no test-set access and no sampler/architecture tuning on the panel.
+
+## Independent artifact acceptance
+
+The final scorer now calls sequence_gate_audit.validate_run. It rejects missing
+updates/cross-scores, malformed logits, sequence mismatches, fewer than3gradient
+directions, overwritten numerical acceptance, missing/duplicate hard-noise records,
+missing coordinates and disagreement between coordinate-recomputed and reported
+loss. It hashes all10required artifacts. Initial100-residue outputs independently
+reproduce the reported hard losses on CPU within1.5e-8. Eleven focused tests pass,
+including tampered artifact/loss/finite-difference acceptance rejection.
+
+A CPU-only finalizer PID1679383 waits on the actual remaining V2 worker PIDs;
+it does not infer completion from stale state files and never restarts workers.
+It writes final_audit_v2 only after all eight optimization arms are terminal and
+report completion. Numerical/scientific failures are valid experiment outcomes
+and remain false in the final report. See mini_sequence_gate_completion_audit.md.

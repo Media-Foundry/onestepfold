@@ -6,13 +6,14 @@ import numpy as np
 from fastglycan.models.soft_sequence_chart import native_sequence_features
 from fastglycan.sequence_gate_metrics import atom_geometry
 from fastglycan.paired_teacher_protocol import write_json,sha256
+from fastglycan.sequence_gate_audit import validate_run
 
 def main():
  p=argparse.ArgumentParser();p.add_argument('--runs',type=Path,nargs='+',required=True);p.add_argument('--out',type=Path,required=True);a=p.parse_args()
  result=dict(complete=True,runs=[],scope='exploratory monomer proxy; not binder-oracle acceptance')
  for folder in a.runs:
-  report=json.load(open(folder/'report.json'))
-  if not report['complete']:raise RuntimeError(f'incomplete {folder}')
+  audit=validate_run(folder)
+  report=audit.pop('report')
   geometry=[]
   for path in sorted(folder.glob('*_seed*_s*.npz')):
    with np.load(path) as d:
@@ -31,7 +32,8 @@ def main():
                  soft_optimization=report['gates']['3_optimization']['soft_loss_decreased'],
                  hard_replay=hard_replay,
                  hard_improves_both_noises_own_sampler=all(hard_improvement[f's{report["opt_s"]}_seed{seed}']<0 for seed in (103,107))),
-      gradient_cosine=report['gradient_cosine'],hard_loss_deltas=hard_improvement,geometry=geometry,
+      artifact_audit=audit,gradient_cosine=report['gradient_cosine'],hard_loss_deltas=hard_improvement,geometry=geometry,
+      chart_boundaries=[dict(update=x['update'],rmsd=x['chart_jump_rmsd'],loss_jump=x['chart_loss_jump'],atom_counts=x['atom_counts']) for x in report['trajectory'] if 'chart_jump_rmsd' in x],
       topology_changes=report['gates']['3_optimization']['topology_changes'],
       global_boundary_continuity='unverified',deployment_accepted=False))
  a.out.mkdir(exist_ok=False);write_json(a.out/'report.json',result)
