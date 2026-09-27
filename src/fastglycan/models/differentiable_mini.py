@@ -143,7 +143,7 @@ def full_recycle_pairformer(
     return s_inputs, s, z
 
 
-def fixed_graph_coordinates(model, features, initial_coordinate, *, steps=1):
+def fixed_graph_coordinates(model, features, initial_coordinate, *, steps=1, stable_euler=False):
     """C4/S1 or S2 with fixed noise, identity rotations and no dropout.
 
     Caller supplies device-resident prepared features (relp and atom caches).
@@ -181,8 +181,11 @@ def fixed_graph_coordinates(model, features, initial_coordinate, *, steps=1):
             chunk_size=None, inplace_safe=False,
             enable_efficient_fusion=model.configs.enable_efficient_fusion)
         # Preserve native Euler arithmetic, including the last step.
-        delta = (x - denoised) / sigma
-        x = x + (next_sigma - sigma) * delta
+        if stable_euler:
+            x = denoised + (next_sigma / sigma) * (x - denoised)
+        else:
+            delta = (x - denoised) / sigma
+            x = x + (next_sigma - sigma) * delta
     return x
 
 
@@ -201,3 +204,17 @@ def directional_check(function, point, direction, steps=(1e-1, 1e-2, 1e-3, 1e-4)
                              absolute_error=abs(analytic-numerical),
                              relative_error=abs(analytic-numerical)/max(abs(analytic),abs(numerical),1e-12)))
     return gradient, rows
+
+
+def prepare_atom_pairs(features):
+    """Native reference-pair preparation without the upstream no_grad guard."""
+    from protenix.model.modules.transformer import rearrange_qk_to_dense_trunk
+    f = dict(features)
+    q, k, pad_info = rearrange_qk_to_dense_trunk(
+        q=[f['ref_pos'], f['ref_space_uid']],
+        k=[f['ref_pos'], f['ref_space_uid']],
+        dim_q=[-2,-1], dim_k=[-2,-1], n_queries=32, n_keys=128, compute_mask=True)
+    f['d_lm'] = q[0][...,None,:] - k[0][...,None,:,:]
+    f['v_lm'] = (q[1][...,None].int() == k[1][...,None,:].int()).unsqueeze(-1)
+    f['pad_info'] = pad_info
+    return f
