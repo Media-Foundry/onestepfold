@@ -1,0 +1,24 @@
+{
+  "locked": true,
+  "parent_lock_sha256": "c95a3fcb211b98ff490483098f970c8284cd9b152843a4cee248d064369c6cfe",
+  "dtype": "fp32",
+  "parameter_dtype": "torch.float32",
+  "panel": "B102 diagnostic only",
+  "n_predictions": 1224,
+  "seeds": [
+    103,
+    107,
+    109,
+    113
+  ],
+  "N_cycle": 4,
+  "steps": [
+    1,
+    2,
+    5
+  ],
+  "initial_noise": "Replay actual raw and first-denoiser noise tensors from controlled BF16 artifacts, exact numeric equality required",
+  "TF32": "Retain historical flags: matmulFalse cuDNNTrue; CLI fp32, not all-op IEEE FP32 claim",
+  "only_change": "Autocast precision with frozen weights and common actual denoiser starting coordinates",
+  "criterion": "Within-setting fp32 minus bf16 quality, tail persistence and costs; no posthoc precision selection using this panel"
+}
