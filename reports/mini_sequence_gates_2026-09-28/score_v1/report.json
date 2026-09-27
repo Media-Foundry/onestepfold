@@ -1,0 +1,170 @@
+{
+  "complete": true,
+  "runs": [
+    {
+      "deployment_accepted": false,
+      "final_sequence": "GAMGLPEEPSSPQESTLKHLSLYEAHLSSYIMYLQTFLVKTKQKVNNKNYPEFTLFDTSKLKKDQTLKSIKTNIAALKNHIDKIKPIAMQIYKKYSKNIP",
+      "gates": {
+        "hard_improves_both_noises_own_sampler": false,
+        "hard_replay": true,
+        "local_gradient_s1": true,
+        "local_gradient_s2": true,
+        "native_replay": true,
+        "soft_optimization": true
+      },
+      "geometry": [
+        {
+          "artifact": "initial_seed103_s1.npz",
+          "bond_rmse": 0.24845104572703358,
+          "chirality_fraction": 1.0,
+          "cn_mae": 0.11776845142746244,
+          "heavy_atom_pairs_below_1A": 13
+        },
+        {
+          "artifact": "initial_seed103_s2.npz",
+          "bond_rmse": 0.21948581066461204,
+          "chirality_fraction": 1.0,
+          "cn_mae": 0.07010441795730403,
+          "heavy_atom_pairs_below_1A": 25
+        },
+        {
+          "artifact": "initial_seed107_s1.npz",
+          "bond_rmse": 0.31704174278052294,
+          "chirality_fraction": 0.9897959183673469,
+          "cn_mae": 0.22912841447244867,
+          "heavy_atom_pairs_below_1A": 25
+        },
+        {
+          "artifact": "initial_seed107_s2.npz",
+          "bond_rmse": 0.22076768894878965,
+          "chirality_fraction": 1.0,
+          "cn_mae": 0.0630908954867909,
+          "heavy_atom_pairs_below_1A": 12
+        },
+        {
+          "artifact": "optimized_seed103_s1.npz",
+          "bond_rmse": 0.25565780148025025,
+          "chirality_fraction": 1.0,
+          "cn_mae": 0.11875324066019818,
+          "heavy_atom_pairs_below_1A": 14
+        },
+        {
+          "artifact": "optimized_seed103_s2.npz",
+          "bond_rmse": 0.2263767023431328,
+          "chirality_fraction": 1.0,
+          "cn_mae": 0.07256345909578998,
+          "heavy_atom_pairs_below_1A": 31
+        },
+        {
+          "artifact": "optimized_seed107_s1.npz",
+          "bond_rmse": 0.34940916446792647,
+          "chirality_fraction": 0.9693877551020408,
+          "cn_mae": 0.25154919872349885,
+          "heavy_atom_pairs_below_1A": 33
+        },
+        {
+          "artifact": "optimized_seed107_s2.npz",
+          "bond_rmse": 0.23064817917807728,
+          "chirality_fraction": 1.0,
+          "cn_mae": 0.07951042322469665,
+          "heavy_atom_pairs_below_1A": 16
+        }
+      ],
+      "global_boundary_continuity": "unverified",
+      "gradient_cosine": -0.7020282745361328,
+      "hard_loss_deltas": {
+        "s1_seed103": -0.0008560217870324516,
+        "s1_seed107": 0.003703442621220507,
+        "s2_seed103": 0.0033478875119597185,
+        "s2_seed107": 0.0011052859281289185
+      },
+      "initial_sequence": "GAMGLPEEPSSPQESTLKALSLYEAHLSSYIMYLQTFLVKTKQKVNNKNYPEFTLFDTSKLKKDQTLKSIKTNIAALKNHIDKIKPIAMQIYKKYSKNIP",
+      "path": "/media/PM982/onestepfold/mini_sequence_gates_v1_20260928/gate_v1_s1",
+      "report_sha256": "d16af00a41f5af34b23dff67e3adabccc8b1f17179433b9c8846591a5318248f",
+      "topology_changes": 5
+    },
+    {
+      "deployment_accepted": false,
+      "final_sequence": "GAMGLPEEPSSPEESPLLALSLYEAHLSSYIMYLQTFLVKTKQKVNNKNYPEFTLFDTSKLKKDQTLKSIKTNIAALKNHIDKIPPIAMQIYKKWSHNIP",
+      "gates": {
+        "hard_improves_both_noises_own_sampler": false,
+        "hard_replay": true,
+        "local_gradient_s1": true,
+        "local_gradient_s2": true,
+        "native_replay": true,
+        "soft_optimization": true
+      },
+      "geometry": [
+        {
+          "artifact": "initial_seed103_s1.npz",
+          "bond_rmse": 0.24845104572703358,
+          "chirality_fraction": 1.0,
+          "cn_mae": 0.11776845142746244,
+          "heavy_atom_pairs_below_1A": 13
+        },
+        {
+          "artifact": "initial_seed103_s2.npz",
+          "bond_rmse": 0.21948581066461204,
+          "chirality_fraction": 1.0,
+          "cn_mae": 0.07010441795730403,
+          "heavy_atom_pairs_below_1A": 25
+        },
+        {
+          "artifact": "initial_seed107_s1.npz",
+          "bond_rmse": 0.31704174278052294,
+          "chirality_fraction": 0.9897959183673469,
+          "cn_mae": 0.22912841447244867,
+          "heavy_atom_pairs_below_1A": 25
+        },
+        {
+          "artifact": "initial_seed107_s2.npz",
+          "bond_rmse": 0.22076768894878965,
+          "chirality_fraction": 1.0,
+          "cn_mae": 0.0630908954867909,
+          "heavy_atom_pairs_below_1A": 12
+        },
+        {
+          "artifact": "optimized_seed103_s1.npz",
+          "bond_rmse": 0.3207914853056967,
+          "chirality_fraction": 0.9897959183673469,
+          "cn_mae": 0.20431410975668132,
+          "heavy_atom_pairs_below_1A": 40
+        },
+        {
+          "artifact": "optimized_seed103_s2.npz",
+          "bond_rmse": 0.2903414759523762,
+          "chirality_fraction": 1.0,
+          "cn_mae": 0.1360690640177789,
+          "heavy_atom_pairs_below_1A": 21
+        },
+        {
+          "artifact": "optimized_seed107_s1.npz",
+          "bond_rmse": 0.36349133877486023,
+          "chirality_fraction": 0.9795918367346939,
+          "cn_mae": 0.23995995343540769,
+          "heavy_atom_pairs_below_1A": 86
+        },
+        {
+          "artifact": "optimized_seed107_s2.npz",
+          "bond_rmse": 0.3022139432224628,
+          "chirality_fraction": 0.9897959183673469,
+          "cn_mae": 0.12848625725463186,
+          "heavy_atom_pairs_below_1A": 36
+        }
+      ],
+      "global_boundary_continuity": "unverified",
+      "gradient_cosine": -0.7020282745361328,
+      "hard_loss_deltas": {
+        "s1_seed103": -0.007933112848893416,
+        "s1_seed107": -0.021495482507390123,
+        "s2_seed103": 0.00860880459807902,
+        "s2_seed107": 0.0014960287911266398
+      },
+      "initial_sequence": "GAMGLPEEPSSPQESTLKALSLYEAHLSSYIMYLQTFLVKTKQKVNNKNYPEFTLFDTSKLKKDQTLKSIKTNIAALKNHIDKIKPIAMQIYKKYSKNIP",
+      "path": "/media/PM982/onestepfold/mini_sequence_gates_v1_20260928/gate_v1_s2",
+      "report_sha256": "a5297cfe60c01dc1ac5ab673836a95cf65da08de2484287a0b4bdeadfeeab27c",
+      "topology_changes": 10
+    }
+  ],
+  "scope": "exploratory monomer proxy; not binder-oracle acceptance"
+}

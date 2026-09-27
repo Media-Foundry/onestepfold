@@ -1,5 +1,10 @@
 # Four sequence gates — 2026-09-28
 
+Final status: all8arms and the dedicated boundary probe completed. Independent
+audit succeeded; model deployment remains rejected. See
+[final requirement audit](mini_sequence_gate_completion_audit.md) and
+[results with curves](../reports/mini_sequence_gates_2026-09-28/report.md).
+
 The user confirmed these four gates: native hard-input replay; sequence-gradient
 numerics; matched S1/S2 optimization; hard-sequence rebuilding with independent
 noise. Retain pretrained Mini-ESM v0.5.0, C4, K1. No adapter training.

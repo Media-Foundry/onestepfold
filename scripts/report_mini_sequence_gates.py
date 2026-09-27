@@ -58,6 +58,15 @@ The selected targets are diagnostics, not a prevalence sample. The chart-boundar
 measurements are finite observed jumps, not a proof of global continuity. No model
 weights were trained and no frozen test set was used. Deployment remains rejected.
 '''
+ content += '\n## All-atom geometry after hardening\n\n'
+ content += 'Proxy improvement is not necessarily a useful design improvement. Values below are initial → optimized; no post-hoc geometry threshold was used to select sequences.\n\n'
+ content += '| Run | Bond RMSE seed103 Å | C–N MAE seed103 Å | Severe atom clashes seed103 | Severe atom clashes seed107 |\n|---|---:|---:|---:|---:|\n'
+ for run in report['runs']:
+  name=Path(run['path']).name;arm=int(name[-1]);geometry={x['artifact']:x for x in run['geometry']}
+  initial=geometry[f'initial_seed103_s{arm}.npz'];optimized=geometry[f'optimized_seed103_s{arm}.npz']
+  initial107=geometry[f'initial_seed107_s{arm}.npz'];optimized107=geometry[f'optimized_seed107_s{arm}.npz']
+  content += f"| {name} | {initial['bond_rmse']:.3f} → {optimized['bond_rmse']:.3f} | {initial['cn_mae']:.3f} → {optimized['cn_mae']:.3f} | {initial['heavy_atom_pairs_below_1A']} → {optimized['heavy_atom_pairs_below_1A']} | {initial107['heavy_atom_pairs_below_1A']} → {optimized107['heavy_atom_pairs_below_1A']} |\n"
+ content += '\nIn particular, S1 contact-proxy gains on8BZN and the neutral control accompany severe all-atom clash increases. They must not be counted as validated design successes. The current contact/CA guard objective is insufficient.\n'
  boundary_path=root/'boundary_v1/report.json'
  if boundary_path.exists():
   boundary=json.load(open(boundary_path))

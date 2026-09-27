@@ -1,0 +1,948 @@
+{
+  "complete": true,
+  "contract": "piecewise native-inventory relaxation; not globally smooth",
+  "deployment_accepted": false,
+  "environment": {
+    "checkpoint_sha256": "1301bba9ad322518eace60fd244ded7904439f55317e90d402cc7a0c06026664",
+    "gpu": "AMD Instinct MI250X / MI250",
+    "hip": "7.14.60850",
+    "source_sha256": {
+      "scripts/run_mini_sequence_gates.py": "ab4c0431f8beba9aaaa8187c86c14ab87835fff03c38fb683770147f6f55ff90",
+      "src/fastglycan/models/soft_esm.py": "23a93ef86f60677875603bb52170e523dc55268de7428ea6dccdfcf68047406a",
+      "src/fastglycan/models/soft_sequence_chart.py": "38b8ce1221c517ed3eaa506f83e31e2e1580c512d5b4fe657a37bac3b5fdb668"
+    },
+    "torch": "2.12.0a0+git78258b9"
+  },
+  "final_sequence": "GAMGLPEEPSSPQESTLKHLSLYEAHLSSYIMYLQTFLVKTKQKVNNKNYPEFTLFDTSKLKKDQTLKSIKTNIAALKNHIDKIKPIAMQIYKKYSKNIP",
+  "gates": {
+    "1_hard_replay": {
+      "atom_count": 805,
+      "coordinate_max_abs": 0.0007390975952148438,
+      "embedding_max_abs": 0.0,
+      "feature_max_abs": 0.0,
+      "passed": true,
+      "sequence": "GAMGLPEEPSSPQESTLKALSLYEAHLSSYIMYLQTFLVKTKQKVNNKNYPEFTLFDTSKLKKDQTLKSIKTNIAALKNHIDKIKPIAMQIYKKYSKNIP"
+    },
+    "2_s1_local_derivative": {
+      "directions": [
+        {
+          "plateau_pass": true,
+          "rows": [
+            {
+              "absolute_error": 2.194583098342356e-07,
+              "analytic": -0.0001171409617834132,
+              "finite_difference": -0.00011692150347357896,
+              "h": 0.3,
+              "pass_tolerance": true,
+              "relative_error": 0.0018734549084546634
+            },
+            {
+              "absolute_error": 3.6379669499016784e-08,
+              "analytic": -0.0001171409617834132,
+              "finite_difference": -0.00011710458211391418,
+              "h": 0.1,
+              "pass_tolerance": true,
+              "relative_error": 0.00031056317914036484
+            },
+            {
+              "absolute_error": 3.951046246303299e-06,
+              "analytic": -0.0001171409617834132,
+              "finite_difference": -0.0001131899155371099,
+              "h": 0.03,
+              "pass_tolerance": true,
+              "relative_error": 0.03372898929759987
+            },
+            {
+              "absolute_error": 1.9319822152178134e-05,
+              "analytic": -0.0001171409617834132,
+              "finite_difference": -9.782113963123507e-05,
+              "h": 0.01,
+              "pass_tolerance": false,
+              "relative_error": 0.16492797957301525
+            },
+            {
+              "absolute_error": 1.0581955751388662e-05,
+              "analytic": -0.0001171409617834132,
+              "finite_difference": -0.00012772291753480186,
+              "h": 0.003,
+              "pass_tolerance": false,
+              "relative_error": 0.08285087716153444
+            }
+          ]
+        },
+        {
+          "plateau_pass": true,
+          "rows": [
+            {
+              "absolute_error": 6.9992546143462e-07,
+              "analytic": -1.1100229942119299e-05,
+              "finite_difference": -1.1800155403553919e-05,
+              "h": 0.3,
+              "pass_tolerance": true,
+              "relative_error": 0.059314935905320325
+            },
+            {
+              "absolute_error": 1.0968300053780847e-07,
+              "analytic": -1.1100229942119299e-05,
+              "finite_difference": -1.1209912942657108e-05,
+              "h": 0.1,
+              "pass_tolerance": true,
+              "relative_error": 0.009784464973000057
+            },
+            {
+              "absolute_error": 1.5358074034886868e-06,
+              "analytic": -1.1100229942119299e-05,
+              "finite_difference": -1.2636037345607986e-05,
+              "h": 0.03,
+              "pass_tolerance": true,
+              "relative_error": 0.12154185378555409
+            },
+            {
+              "absolute_error": 8.478223534119162e-06,
+              "analytic": -1.1100229942119299e-05,
+              "finite_difference": -1.957845347623846e-05,
+              "h": 0.01,
+              "pass_tolerance": false,
+              "relative_error": 0.4330384697856152
+            },
+            {
+              "absolute_error": 6.867060469755596e-06,
+              "analytic": -1.1100229942119299e-05,
+              "finite_difference": -4.233169472363703e-06,
+              "h": 0.003,
+              "pass_tolerance": false,
+              "relative_error": 0.6186412809070612
+            }
+          ]
+        },
+        {
+          "plateau_pass": true,
+          "rows": [
+            {
+              "absolute_error": 4.104847194294752e-07,
+              "analytic": 0.00027895403884176735,
+              "finite_difference": 0.00027936452356119683,
+              "h": 0.3,
+              "pass_tolerance": true,
+              "relative_error": 0.0014693516349063398
+            },
+            {
+              "absolute_error": 3.5230875088565657e-07,
+              "analytic": 0.00027895403884176735,
+              "finite_difference": 0.0002786017300908817,
+              "h": 0.1,
+              "pass_tolerance": true,
+              "relative_error": 0.0012629634342218598
+            },
+            {
+              "absolute_error": 1.9633464927559362e-06,
+              "analytic": 0.00027895403884176735,
+              "finite_difference": 0.0002809173853345233,
+              "h": 0.03,
+              "pass_tolerance": true,
+              "relative_error": 0.00698905299299271
+            },
+            {
+              "absolute_error": 2.2252791688256567e-06,
+              "analytic": 0.00027895403884176735,
+              "finite_difference": 0.000281179318010593,
+              "h": 0.01,
+              "pass_tolerance": true,
+              "relative_error": 0.007914092631598967
+            },
+            {
+              "absolute_error": 2.7785974159894684e-05,
+              "analytic": 0.00027895403884176735,
+              "finite_difference": 0.00030674001300166204,
+              "h": 0.003,
+              "pass_tolerance": false,
+              "relative_error": 0.09058477206149211
+            }
+          ]
+        }
+      ],
+      "finite": true,
+      "max_abs": 0.0023084976710379124,
+      "norm": 0.008809500373899937,
+      "passed": true,
+      "repeat_max_abs": 0.0,
+      "zero_fraction": 0.0
+    },
+    "2_s2_local_derivative": {
+      "directions": [
+        {
+          "plateau_pass": true,
+          "rows": [
+            {
+              "absolute_error": 4.07019438229629e-07,
+              "analytic": 5.6635548780701866e-05,
+              "finite_difference": 5.622852934247224e-05,
+              "h": 0.3,
+              "pass_tolerance": true,
+              "relative_error": 0.007186642435577808
+            },
+            {
+              "absolute_error": 9.869209079409828e-07,
+              "analytic": 5.6635548780701866e-05,
+              "finite_difference": 5.5648627872760884e-05,
+              "h": 0.1,
+              "pass_tolerance": true,
+              "relative_error": 0.01742582051711784
+            },
+            {
+              "absolute_error": 5.524743191969639e-06,
+              "analytic": 5.6635548780701866e-05,
+              "finite_difference": 6.21602919726715e-05,
+              "h": 0.03,
+              "pass_tolerance": false,
+              "relative_error": 0.08887897750542367
+            },
+            {
+              "absolute_error": 3.037521576610269e-06,
+              "analytic": 5.6635548780701866e-05,
+              "finite_difference": 5.35980272040916e-05,
+              "h": 0.01,
+              "pass_tolerance": true,
+              "relative_error": 0.053632773796751514
+            },
+            {
+              "absolute_error": 5.956568180381353e-05,
+              "analytic": 5.6635548780701866e-05,
+              "finite_difference": 0.0001162012305845154,
+              "h": 0.003,
+              "pass_tolerance": false,
+              "relative_error": 0.512608012016622
+            }
+          ]
+        },
+        {
+          "plateau_pass": true,
+          "rows": [
+            {
+              "absolute_error": 2.735246267683514e-07,
+              "analytic": -5.099067197944744e-06,
+              "finite_difference": -5.372591824713095e-06,
+              "h": 0.3,
+              "pass_tolerance": true,
+              "relative_error": 0.050911112493262606
+            },
+            {
+              "absolute_error": 4.909654775490528e-07,
+              "analytic": -5.099067197944744e-06,
+              "finite_difference": -4.608101720395691e-06,
+              "h": 0.1,
+              "pass_tolerance": true,
+              "relative_error": 0.09628535151428164
+            },
+            {
+              "absolute_error": 5.176386694698975e-06,
+              "analytic": -5.099067197944744e-06,
+              "finite_difference": 7.731949675423197e-08,
+              "h": 0.03,
+              "pass_tolerance": false,
+              "relative_error": 1.0151634590705916
+            },
+            {
+              "absolute_error": 5.112220306404255e-07,
+              "analytic": -5.099067197944744e-06,
+              "finite_difference": -5.610289228585169e-06,
+              "h": 0.01,
+              "pass_tolerance": true,
+              "relative_error": 0.0911222237947522
+            },
+            {
+              "absolute_error": 1.135847324331626e-05,
+              "analytic": -5.099067197944744e-06,
+              "finite_difference": -1.6457540441261003e-05,
+              "h": 0.003,
+              "pass_tolerance": false,
+              "relative_error": 0.6901683324951292
+            }
+          ]
+        },
+        {
+          "plateau_pass": true,
+          "rows": [
+            {
+              "absolute_error": 4.95761919298718e-07,
+              "analytic": -5.231525851247776e-05,
+              "finite_difference": -5.2811020431776476e-05,
+              "h": 0.3,
+              "pass_tolerance": true,
+              "relative_error": 0.009387470934010154
+            },
+            {
+              "absolute_error": 1.395131920909346e-07,
+              "analytic": -5.231525851247776e-05,
+              "finite_difference": -5.245477170456869e-05,
+              "h": 0.1,
+              "pass_tolerance": true,
+              "relative_error": 0.0026596854310355013
+            },
+            {
+              "absolute_error": 5.376764366693418e-06,
+              "analytic": -5.231525851247776e-05,
+              "finite_difference": -5.7692022879171176e-05,
+              "h": 0.03,
+              "pass_tolerance": false,
+              "relative_error": 0.09319770911750465
+            },
+            {
+              "absolute_error": 9.155469550896716e-06,
+              "analytic": -5.231525851247776e-05,
+              "finite_difference": -4.315978896158104e-05,
+              "h": 0.01,
+              "pass_tolerance": false,
+              "relative_error": 0.17500572129855838
+            },
+            {
+              "absolute_error": 3.9875222856773515e-05,
+              "analytic": -5.231525851247776e-05,
+              "finite_difference": -9.219048136925127e-05,
+              "h": 0.003,
+              "pass_tolerance": false,
+              "relative_error": 0.4325308021449738
+            }
+          ]
+        }
+      ],
+      "finite": true,
+      "max_abs": 0.0009389322949573398,
+      "norm": 0.0038907984271645546,
+      "passed": true,
+      "repeat_max_abs": 0.0,
+      "zero_fraction": 0.0
+    },
+    "3_optimization": {
+      "soft_loss_decreased": true,
+      "topology_changes": 5,
+      "updates": 50
+    },
+    "4_hard_rebuild_replay": {
+      "atom_count": 810,
+      "coordinate_max_abs": 0.00075531005859375,
+      "embedding_max_abs": 0.0,
+      "feature_max_abs": 0.0,
+      "sequence": "GAMGLPEEPSSPQESTLKHLSLYEAHLSSYIMYLQTFLVKTKQKVNNKNYPEFTLFDTSKLKKDQTLKSIKTNIAALKNHIDKIKPIAMQIYKKYSKNIP"
+    },
+    "4_independent_noise": [
+      {
+        "chain": 0.0317181788072108,
+        "clash": 5.731117452599048e-05,
+        "contact": 0.026720694559594055,
+        "label": "initial",
+        "loss": -0.023491565504346983,
+        "seed": 103,
+        "steps": 1
+      },
+      {
+        "chain": 0.0757871944149865,
+        "clash": 0.0,
+        "contact": 0.025534834860830632,
+        "label": "initial",
+        "loss": -0.01795611541933198,
+        "seed": 103,
+        "steps": 2
+      },
+      {
+        "chain": 0.020338196793553115,
+        "clash": 1.0021295843112594e-05,
+        "contact": 0.02639142826657786,
+        "label": "optimized",
+        "loss": -0.024347587291379435,
+        "seed": 103,
+        "steps": 1
+      },
+      {
+        "chain": 0.10527486151209296,
+        "clash": 0.0,
+        "contact": 0.02513571405858156,
+        "label": "optimized",
+        "loss": -0.014608227907372262,
+        "seed": 103,
+        "steps": 2
+      },
+      {
+        "chain": 0.0736779462277451,
+        "clash": 0.0003856765254149361,
+        "contact": 0.029331446253290903,
+        "label": "initial",
+        "loss": -0.021577975105101458,
+        "seed": 107,
+        "steps": 1
+      },
+      {
+        "chain": 0.05411376441436299,
+        "clash": 3.733624577183615e-08,
+        "contact": 0.026343400289137123,
+        "label": "initial",
+        "loss": -0.02093198651145505,
+        "seed": 107,
+        "steps": 2
+      },
+      {
+        "chain": 0.13512087564047054,
+        "clash": 8.813978098540226e-05,
+        "contact": 0.03147475982891341,
+        "label": "optimized",
+        "loss": -0.01787453248388095,
+        "seed": 107,
+        "steps": 1
+      },
+      {
+        "chain": 0.060051616427771404,
+        "clash": 0.000294648484662682,
+        "contact": 0.02612651071076596,
+        "label": "optimized",
+        "loss": -0.019826700583326133,
+        "seed": 107,
+        "steps": 2
+      }
+    ]
+  },
+  "gradient_cosine": -0.7020282745361328,
+  "group": "92902d4903984aabd2ce6e70aaf20c29c9b29052e67c7121de3d4d237e19837f",
+  "length": 100,
+  "objective": "monomer nonlocal contacts with CA chain/clash penalties; NOT binding affinity",
+  "opt_s": 1,
+  "peak_memory_gib": 12.059279918670654,
+  "remaining_gate": "global chart-boundary continuity, broader targets and actual interface objective unvalidated",
+  "sequence": "GAMGLPEEPSSPQESTLKALSLYEAHLSSYIMYLQTFLVKTKQKVNNKNYPEFTLFDTSKLKKDQTLKSIKTNIAALKNHIDKIKPIAMQIYKKYSKNIP",
+  "stage": "complete",
+  "trajectory": [
+    {
+      "chain": 0.12682659937879026,
+      "clash": 4.7131065817573245e-07,
+      "contact": 0.026132494609586124,
+      "cross_losses": {
+        "1": -0.013449363361048922,
+        "2": -0.004741414917939189
+      },
+      "hard_mutations": 0,
+      "loss": -0.013449363361048922,
+      "sequence": "GAMGLPEEPSSPQESTLKALSLYEAHLSSYIMYLQTFLVKTKQKVNNKNYPEFTLFDTSKLKKDQTLKSIKTNIAALKNHIDKIKPIAMQIYKKYSKNIP",
+      "topology_changed": false,
+      "update": 0
+    },
+    {
+      "chain": 0.3298198929545411,
+      "clash": 0.000250390524029658,
+      "contact": 0.030359287163447966,
+      "hard_mutations": 0,
+      "loss": 0.0028730926560358097,
+      "sequence": "GAMGLPEEPSSPQESTLKALSLYEAHLSSYIMYLQTFLVKTKQKVNNKNYPEFTLFDTSKLKKDQTLKSIKTNIAALKNHIDKIKPIAMQIYKKYSKNIP",
+      "topology_changed": false,
+      "update": 1
+    },
+    {
+      "chain": 0.23482860590488694,
+      "clash": 3.1076378413266593e-07,
+      "contact": 0.025848546623637544,
+      "hard_mutations": 0,
+      "loss": -0.0023653752693647175,
+      "sequence": "GAMGLPEEPSSPQESTLKALSLYEAHLSSYIMYLQTFLVKTKQKVNNKNYPEFTLFDTSKLKKDQTLKSIKTNIAALKNHIDKIKPIAMQIYKKYSKNIP",
+      "topology_changed": false,
+      "update": 2
+    },
+    {
+      "chain": 0.038081014239522655,
+      "clash": 0.00021007129320826045,
+      "contact": 0.027254938659419085,
+      "hard_mutations": 0,
+      "loss": -0.02323676594225856,
+      "sequence": "GAMGLPEEPSSPQESTLKALSLYEAHLSSYIMYLQTFLVKTKQKVNNKNYPEFTLFDTSKLKKDQTLKSIKTNIAALKNHIDKIKPIAMQIYKKYSKNIP",
+      "topology_changed": false,
+      "update": 3
+    },
+    {
+      "chain": 0.040523724284766006,
+      "clash": 0.00029959235823392815,
+      "contact": 0.02739230110912723,
+      "hard_mutations": 0,
+      "loss": -0.023040336322416703,
+      "sequence": "GAMGLPEEPSSPQESTLKALSLYEAHLSSYIMYLQTFLVKTKQKVNNKNYPEFTLFDTSKLKKDQTLKSIKTNIAALKNHIDKIKPIAMQIYKKYSKNIP",
+      "topology_changed": false,
+      "update": 4
+    },
+    {
+      "chain": 0.038534233616448754,
+      "clash": 0.0,
+      "contact": 0.027319509671953447,
+      "hard_mutations": 0,
+      "loss": -0.02346608631030857,
+      "sequence": "GAMGLPEEPSSPQESTLKALSLYEAHLSSYIMYLQTFLVKTKQKVNNKNYPEFTLFDTSKLKKDQTLKSIKTNIAALKNHIDKIKPIAMQIYKKYSKNIP",
+      "topology_changed": false,
+      "update": 5
+    },
+    {
+      "chain": 0.03907308808514227,
+      "clash": 0.0,
+      "contact": 0.027407700211801753,
+      "hard_mutations": 0,
+      "loss": -0.023500391403287527,
+      "sequence": "GAMGLPEEPSSPQESTLKALSLYEAHLSSYIMYLQTFLVKTKQKVNNKNYPEFTLFDTSKLKKDQTLKSIKTNIAALKNHIDKIKPIAMQIYKKYSKNIP",
+      "topology_changed": false,
+      "update": 6
+    },
+    {
+      "chain": 0.04174448409551213,
+      "clash": 0.0,
+      "contact": 0.027572803314631366,
+      "hard_mutations": 0,
+      "loss": -0.023398354905080153,
+      "sequence": "GAMGLPEEPSSPQESTLKALSLYEAHLSSYIMYLQTFLVKTKQKVNNKNYPEFTLFDTSKLKKDQTLKSIKTNIAALKNHIDKIKPIAMQIYKKYSKNIP",
+      "topology_changed": false,
+      "update": 7
+    },
+    {
+      "chain": 0.04281659746627129,
+      "clash": 0.0,
+      "contact": 0.027744867999357437,
+      "hard_mutations": 0,
+      "loss": -0.023463208252730308,
+      "sequence": "GAMGLPEEPSSPQESTLKALSLYEAHLSSYIMYLQTFLVKTKQKVNNKNYPEFTLFDTSKLKKDQTLKSIKTNIAALKNHIDKIKPIAMQIYKKYSKNIP",
+      "topology_changed": false,
+      "update": 8
+    },
+    {
+      "chain": 0.04420424233325725,
+      "clash": 0.0,
+      "contact": 0.027660818196912663,
+      "hard_mutations": 0,
+      "loss": -0.023240393963586937,
+      "sequence": "GAMGLPEEPSSPQESTLKALSLYEAHLSSYIMYLQTFLVKTKQKVNNKNYPEFTLFDTSKLKKDQTLKSIKTNIAALKNHIDKIKPIAMQIYKKYSKNIP",
+      "topology_changed": false,
+      "update": 9
+    },
+    {
+      "chain": 0.05892033940211499,
+      "clash": 5.980638026503085e-05,
+      "contact": 0.027651299878314987,
+      "cross_losses": {
+        "1": -0.021699459557838457,
+        "2": -0.01932318694912107
+      },
+      "hard_mutations": 0,
+      "loss": -0.021699459557838457,
+      "sequence": "GAMGLPEEPSSPQESTLKALSLYEAHLSSYIMYLQTFLVKTKQKVNNKNYPEFTLFDTSKLKKDQTLKSIKTNIAALKNHIDKIKPIAMQIYKKYSKNIP",
+      "topology_changed": false,
+      "update": 10
+    },
+    {
+      "chain": 0.04849752191122457,
+      "clash": 9.07224776744351e-05,
+      "contact": 0.026576583160912663,
+      "hard_mutations": 0,
+      "loss": -0.02163610849211577,
+      "sequence": "GAMGLPEEPSSPQESTLKALSLYEAHLSSYIMYLQTFLVKTKQKVNNKNYPEFTLFDTSKLKKDQTLKSIKTNIAALKNHIDKIKPIAMQIYKKYSKNIP",
+      "topology_changed": false,
+      "update": 11
+    },
+    {
+      "chain": 0.04479603194643533,
+      "clash": 7.9903681728919e-05,
+      "contact": 0.02713043178848419,
+      "hard_mutations": 0,
+      "loss": -0.02257092491211174,
+      "sequence": "GAMGLPEEPSSPQESTLKALSLYEAHLSSYIMYLQTFLVKTKQKVNNKNYPEFTLFDTSKLKKDQTLKSIKTNIAALKNHIDKIKPIAMQIYKKYSKNIP",
+      "topology_changed": false,
+      "update": 12
+    },
+    {
+      "chain": 0.047769472007075826,
+      "clash": 9.099780051051108e-05,
+      "contact": 0.027252879803122857,
+      "hard_mutations": 0,
+      "loss": -0.022384934801904764,
+      "sequence": "GAMGLPEEPSSPQESTLKALSLYEAHLSSYIMYLQTFLVKTKQKVNNKNYPEFTLFDTSKLKKDQTLKSIKTNIAALKNHIDKIKPIAMQIYKKYSKNIP",
+      "topology_changed": false,
+      "update": 13
+    },
+    {
+      "chain": 0.046079844545625644,
+      "clash": 0.00011072627442862613,
+      "contact": 0.027190476567666558,
+      "hard_mutations": 0,
+      "loss": -0.022471765838675366,
+      "sequence": "GAMGLPEEPSSPQESTLKALSLYEAHLSSYIMYLQTFLVKTKQKVNNKNYPEFTLFDTSKLKKDQTLKSIKTNIAALKNHIDKIKPIAMQIYKKYSKNIP",
+      "topology_changed": false,
+      "update": 14
+    },
+    {
+      "chain": 0.04178903608097375,
+      "clash": 0.00014310057840011115,
+      "contact": 0.026972441302582573,
+      "hard_mutations": 0,
+      "loss": -0.022650437116085085,
+      "sequence": "GAMGLPEEPSSPQESTLKALSLYEAHLSSYIMYLQTFLVKTKQKVNNKNYPEFTLFDTSKLKKDQTLKSIKTNIAALKNHIDKIKPIAMQIYKKYSKNIP",
+      "topology_changed": false,
+      "update": 15
+    },
+    {
+      "chain": 0.045102197422810415,
+      "clash": 0.0001951218560611408,
+      "contact": 0.026548114880420103,
+      "hard_mutations": 0,
+      "loss": -0.02184277328207792,
+      "sequence": "GAMGLPEEPSSPQESTLKALSLYEAHLSSYIMYLQTFLVKTKQKVNNKNYPEFTLFDTSKLKKDQTLKSIKTNIAALKNHIDKIKPIAMQIYKKYSKNIP",
+      "topology_changed": false,
+      "update": 16
+    },
+    {
+      "chain": 0.04612250082874483,
+      "clash": 0.00012152837837044662,
+      "contact": 0.027226202986455526,
+      "hard_mutations": 0,
+      "loss": -0.022492424525210598,
+      "sequence": "GAMGLPEEPSSPQESTLKALSLYEAHLSSYIMYLQTFLVKTKQKVNNKNYPEFTLFDTSKLKKDQTLKSIKTNIAALKNHIDKIKPIAMQIYKKYSKNIP",
+      "topology_changed": false,
+      "update": 17
+    },
+    {
+      "chain": 0.04262367445690099,
+      "clash": 0.0001501807402738761,
+      "contact": 0.027287728318266313,
+      "hard_mutations": 0,
+      "loss": -0.022875180132302338,
+      "sequence": "GAMGLPEEPSSPQESTLKALSLYEAHLSSYIMYLQTFLVKTKQKVNNKNYPEFTLFDTSKLKKDQTLKSIKTNIAALKNHIDKIKPIAMQIYKKYSKNIP",
+      "topology_changed": false,
+      "update": 18
+    },
+    {
+      "chain": 0.04524829627365477,
+      "clash": 0.00021562625933764913,
+      "contact": 0.027166684800428446,
+      "hard_mutations": 0,
+      "loss": -0.02242622891372532,
+      "sequence": "GAMGLPEEPSSPQESTLKALSLYEAHLSSYIMYLQTFLVKTKQKVNNKNYPEFTLFDTSKLKKDQTLKSIKTNIAALKNHIDKIKPIAMQIYKKYSKNIP",
+      "topology_changed": false,
+      "update": 19
+    },
+    {
+      "chain": 0.044215423880194234,
+      "clash": 0.00020865832768968885,
+      "contact": 0.0271187289885282,
+      "cross_losses": {
+        "1": -0.022488528272819087,
+        "2": -0.017533544045752157
+      },
+      "hard_mutations": 0,
+      "loss": -0.022488528272819087,
+      "sequence": "GAMGLPEEPSSPQESTLKALSLYEAHLSSYIMYLQTFLVKTKQKVNNKNYPEFTLFDTSKLKKDQTLKSIKTNIAALKNHIDKIKPIAMQIYKKYSKNIP",
+      "topology_changed": false,
+      "update": 20
+    },
+    {
+      "chain": 0.04900345631936356,
+      "clash": 2.3911642404075405e-05,
+      "contact": 0.027360660875479354,
+      "hard_mutations": 0,
+      "loss": -0.022436403601138924,
+      "sequence": "GAMGLPEEPSSPQESTLKALSLYEAHLSSYIMYLQTFLVKTKQKVNNKNYPEFTLFDTSKLKKDQTLKSIKTNIAALKNHIDKIKPIAMQIYKKYSKNIP",
+      "topology_changed": false,
+      "update": 21
+    },
+    {
+      "chain": 0.0368606071299497,
+      "clash": 0.00016646655754462095,
+      "contact": 0.026789783529056647,
+      "hard_mutations": 0,
+      "loss": -0.022937256258517055,
+      "sequence": "GAMGLPEEPSSPQESTLKALSLYEAHLSSYIMYLQTFLVKTKQKVNNKNYPEFTLFDTSKLKKDQTLKSIKTNIAALKNHIDKIKPIAMQIYKKYSKNIP",
+      "topology_changed": false,
+      "update": 22
+    },
+    {
+      "chain": 0.03693350397405066,
+      "clash": 0.00018292510664308224,
+      "contact": 0.026755968165634476,
+      "hard_mutations": 0,
+      "loss": -0.022879692661586327,
+      "sequence": "GAMGLPEEPSSPQESTLKALSLYEAHLSSYIMYLQTFLVKTKQKVNNKNYPEFTLFDTSKLKKDQTLKSIKTNIAALKNHIDKIKPIAMQIYKKYSKNIP",
+      "topology_changed": false,
+      "update": 23
+    },
+    {
+      "chain": 0.043989647423109436,
+      "clash": 0.00014126558840532838,
+      "contact": 0.026917801473940094,
+      "hard_mutations": 1,
+      "loss": -0.02237757114322382,
+      "sequence": "GAMGLPEEPSSPQESTLKRLSLYEAHLSSYIMYLQTFLVKTKQKVNNKNYPEFTLFDTSKLKKDQTLKSIKTNIAALKNHIDKIKPIAMQIYKKYSKNIP",
+      "topology_changed": true,
+      "update": 24
+    },
+    {
+      "chain": 0.04388850369501067,
+      "clash": 0.00013254357721112088,
+      "contact": 0.026947993116468037,
+      "hard_mutations": 1,
+      "loss": -0.022426599169755847,
+      "sequence": "GAMGLPEEPSSPQESTLKRLSLYEAHLSSYIMYLQTFLVKTKQKVNNKNYPEFTLFDTSKLKKDQTLKSIKTNIAALKNHIDKIKPIAMQIYKKYSKNIP",
+      "topology_changed": false,
+      "update": 25
+    },
+    {
+      "chain": 0.04294127975937111,
+      "clash": 0.00010177539171963174,
+      "contact": 0.02698401359939838,
+      "hard_mutations": 1,
+      "loss": -0.022588110231741638,
+      "sequence": "GAMGLPEEPSSPQESTLKRLSLYEAHLSSYIMYLQTFLVKTKQKVNNKNYPEFTLFDTSKLKKDQTLKSIKTNIAALKNHIDKIKPIAMQIYKKYSKNIP",
+      "topology_changed": false,
+      "update": 26
+    },
+    {
+      "chain": 0.042287446625681645,
+      "clash": 6.150033296543012e-05,
+      "contact": 0.02697971374093253,
+      "hard_mutations": 1,
+      "loss": -0.022689468745398934,
+      "sequence": "GAMGLPEEPSSPQESTLKRLSLYEAHLSSYIMYLQTFLVKTKQKVNNKNYPEFTLFDTSKLKKDQTLKSIKTNIAALKNHIDKIKPIAMQIYKKYSKNIP",
+      "topology_changed": false,
+      "update": 27
+    },
+    {
+      "chain": 0.04246834176950126,
+      "clash": 3.30484440537537e-05,
+      "contact": 0.026964914051369273,
+      "hard_mutations": 1,
+      "loss": -0.022685031430365394,
+      "sequence": "GAMGLPEEPSSPQESTLKRLSLYEAHLSSYIMYLQTFLVKTKQKVNNKNYPEFTLFDTSKLKKDQTLKSIKTNIAALKNHIDKIKPIAMQIYKKYSKNIP",
+      "topology_changed": false,
+      "update": 28
+    },
+    {
+      "chain": 0.04436060688030094,
+      "clash": 3.431800394248923e-05,
+      "contact": 0.02711802457521395,
+      "hard_mutations": 1,
+      "loss": -0.022647645883241366,
+      "sequence": "GAMGLPEEPSSPQESTLKRLSLYEAHLSSYIMYLQTFLVKTKQKVNNKNYPEFTLFDTSKLKKDQTLKSIKTNIAALKNHIDKIKPIAMQIYKKYSKNIP",
+      "topology_changed": false,
+      "update": 29
+    },
+    {
+      "chain": 0.046986328600400105,
+      "clash": 3.3495869004488035e-05,
+      "contact": 0.02707126552796582,
+      "cross_losses": {
+        "1": -0.02233913679892132,
+        "2": -0.018545818527887205
+      },
+      "hard_mutations": 1,
+      "loss": -0.02233913679892132,
+      "sequence": "GAMGLPEEPSSPQESTLKRLSLYEAHLSSYIMYLQTFLVKTKQKVNNKNYPEFTLFDTSKLKKDQTLKSIKTNIAALKNHIDKIKPIAMQIYKKYSKNIP",
+      "topology_changed": false,
+      "update": 30
+    },
+    {
+      "chain": 0.041956920920754766,
+      "clash": 3.5316599838219086e-05,
+      "contact": 0.026943557030899536,
+      "hard_mutations": 1,
+      "loss": -0.022712548338985842,
+      "sequence": "GAMGLPEEPSSPQESTLKRLSLYEAHLSSYIMYLQTFLVKTKQKVNNKNYPEFTLFDTSKLKKDQTLKSIKTNIAALKNHIDKIKPIAMQIYKKYSKNIP",
+      "topology_changed": false,
+      "update": 31
+    },
+    {
+      "chain": 0.033105510192996526,
+      "clash": 3.5883043628701273e-05,
+      "contact": 0.026787737734578942,
+      "hard_mutations": 1,
+      "loss": -0.023441303671650586,
+      "sequence": "GAMGLPEEPSSPQESTLKSLSLYEAHLSSYIMYLQTFLVKTKQKVNNKNYPEFTLFDTSKLKKDQTLKSIKTNIAALKNHIDKIKPIAMQIYKKYSKNIP",
+      "topology_changed": true,
+      "update": 32
+    },
+    {
+      "chain": 0.03236535955729227,
+      "clash": 2.831928670050016e-05,
+      "contact": 0.02672274421658868,
+      "hard_mutations": 1,
+      "loss": -0.023457888974158955,
+      "sequence": "GAMGLPEEPSSPQESTLKSLSLYEAHLSSYIMYLQTFLVKTKQKVNNKNYPEFTLFDTSKLKKDQTLKSIKTNIAALKNHIDKIKPIAMQIYKKYSKNIP",
+      "topology_changed": false,
+      "update": 33
+    },
+    {
+      "chain": 0.03292415519664623,
+      "clash": 2.113676112943078e-05,
+      "contact": 0.026663579246902717,
+      "hard_mutations": 1,
+      "loss": -0.02335002696610866,
+      "sequence": "GAMGLPEEPSSPQESTLKSLSLYEAHLSSYIMYLQTFLVKTKQKVNNKNYPEFTLFDTSKLKKDQTLKSIKTNIAALKNHIDKIKPIAMQIYKKYSKNIP",
+      "topology_changed": false,
+      "update": 34
+    },
+    {
+      "chain": 0.03319162044665817,
+      "clash": 1.4019607453217484e-05,
+      "contact": 0.02667408623238514,
+      "hard_mutations": 1,
+      "loss": -0.023340904580266105,
+      "sequence": "GAMGLPEEPSSPQESTLKSLSLYEAHLSSYIMYLQTFLVKTKQKVNNKNYPEFTLFDTSKLKKDQTLKSIKTNIAALKNHIDKIKPIAMQIYKKYSKNIP",
+      "topology_changed": false,
+      "update": 35
+    },
+    {
+      "chain": 0.034181745699925735,
+      "clash": 0.0,
+      "contact": 0.02686574624703928,
+      "hard_mutations": 1,
+      "loss": -0.023447571677046707,
+      "sequence": "GAMGLPEEPSSPQESTLKSLSLYEAHLSSYIMYLQTFLVKTKQKVNNKNYPEFTLFDTSKLKKDQTLKSIKTNIAALKNHIDKIKPIAMQIYKKYSKNIP",
+      "topology_changed": false,
+      "update": 36
+    },
+    {
+      "chain": 0.036208323724135565,
+      "clash": 0.0,
+      "contact": 0.02710583692929467,
+      "hard_mutations": 1,
+      "loss": -0.023485004556881114,
+      "sequence": "GAMGLPEEPSSPQESTLKSLSLYEAHLSSYIMYLQTFLVKTKQKVNNKNYPEFTLFDTSKLKKDQTLKSIKTNIAALKNHIDKIKPIAMQIYKKYSKNIP",
+      "topology_changed": false,
+      "update": 37
+    },
+    {
+      "chain": 0.04793225522991067,
+      "clash": 0.0,
+      "contact": 0.027119068982874108,
+      "hard_mutations": 1,
+      "loss": -0.02232584345988304,
+      "sequence": "GAMGLPEEPSSPQESTLKWLSLYEAHLSSYIMYLQTFLVKTKQKVNNKNYPEFTLFDTSKLKKDQTLKSIKTNIAALKNHIDKIKPIAMQIYKKYSKNIP",
+      "topology_changed": true,
+      "update": 38
+    },
+    {
+      "chain": 0.04715532851768597,
+      "clash": 0.0,
+      "contact": 0.02710802981186318,
+      "hard_mutations": 1,
+      "loss": -0.02239249696009458,
+      "sequence": "GAMGLPEEPSSPQESTLKWLSLYEAHLSSYIMYLQTFLVKTKQKVNNKNYPEFTLFDTSKLKKDQTLKSIKTNIAALKNHIDKIKPIAMQIYKKYSKNIP",
+      "topology_changed": false,
+      "update": 39
+    },
+    {
+      "chain": 0.04210565295892825,
+      "clash": 0.0,
+      "contact": 0.02686795936451609,
+      "cross_losses": {
+        "1": -0.022657394068623264,
+        "2": -0.016434134481848193
+      },
+      "hard_mutations": 1,
+      "loss": -0.022657394068623264,
+      "sequence": "GAMGLPEEPSSPQESTLKWLSLYEAHLSSYIMYLQTFLVKTKQKVNNKNYPEFTLFDTSKLKKDQTLKSIKTNIAALKNHIDKIKPIAMQIYKKYSKNIP",
+      "topology_changed": false,
+      "update": 40
+    },
+    {
+      "chain": 0.03434307622610459,
+      "clash": 0.0,
+      "contact": 0.027021409287137962,
+      "hard_mutations": 1,
+      "loss": -0.0235871016645275,
+      "sequence": "GAMGLPEEPSSPQESTLKSLSLYEAHLSSYIMYLQTFLVKTKQKVNNKNYPEFTLFDTSKLKKDQTLKSIKTNIAALKNHIDKIKPIAMQIYKKYSKNIP",
+      "topology_changed": true,
+      "update": 41
+    },
+    {
+      "chain": 0.03392285284696364,
+      "clash": 0.0,
+      "contact": 0.02695035118751278,
+      "hard_mutations": 1,
+      "loss": -0.023558065902816415,
+      "sequence": "GAMGLPEEPSSPQESTLKSLSLYEAHLSSYIMYLQTFLVKTKQKVNNKNYPEFTLFDTSKLKKDQTLKSIKTNIAALKNHIDKIKPIAMQIYKKYSKNIP",
+      "topology_changed": false,
+      "update": 42
+    },
+    {
+      "chain": 0.034199393195892915,
+      "clash": 0.0,
+      "contact": 0.026915602449607154,
+      "hard_mutations": 1,
+      "loss": -0.02349566313001786,
+      "sequence": "GAMGLPEEPSSPQESTLKSLSLYEAHLSSYIMYLQTFLVKTKQKVNNKNYPEFTLFDTSKLKKDQTLKSIKTNIAALKNHIDKIKPIAMQIYKKYSKNIP",
+      "topology_changed": false,
+      "update": 43
+    },
+    {
+      "chain": 0.03309316358780734,
+      "clash": 0.0,
+      "contact": 0.027000606233179743,
+      "hard_mutations": 1,
+      "loss": -0.02369128987439901,
+      "sequence": "GAMGLPEEPSSPQESTLKSLSLYEAHLSSYIMYLQTFLVKTKQKVNNKNYPEFTLFDTSKLKKDQTLKSIKTNIAALKNHIDKIKPIAMQIYKKYSKNIP",
+      "topology_changed": false,
+      "update": 44
+    },
+    {
+      "chain": 0.03312595725406532,
+      "clash": 0.0,
+      "contact": 0.027099460830037926,
+      "hard_mutations": 1,
+      "loss": -0.023786865104631395,
+      "sequence": "GAMGLPEEPSSPQESTLKSLSLYEAHLSSYIMYLQTFLVKTKQKVNNKNYPEFTLFDTSKLKKDQTLKSIKTNIAALKNHIDKIKPIAMQIYKKYSKNIP",
+      "topology_changed": false,
+      "update": 45
+    },
+    {
+      "chain": 0.03401308102796736,
+      "clash": 0.0,
+      "contact": 0.027211821899051622,
+      "hard_mutations": 1,
+      "loss": -0.023810513796254887,
+      "sequence": "GAMGLPEEPSSPQESTLKSLSLYEAHLSSYIMYLQTFLVKTKQKVNNKNYPEFTLFDTSKLKKDQTLKSIKTNIAALKNHIDKIKPIAMQIYKKYSKNIP",
+      "topology_changed": false,
+      "update": 46
+    },
+    {
+      "chain": 0.040712303167136345,
+      "clash": 1.590570591012305e-07,
+      "contact": 0.027209112239712,
+      "hard_mutations": 1,
+      "loss": -0.023137722865939264,
+      "sequence": "GAMGLPEEPSSPQESTLKHLSLYEAHLSSYIMYLQTFLVKTKQKVNNKNYPEFTLFDTSKLKKDQTLKSIKTNIAALKNHIDKIKPIAMQIYKKYSKNIP",
+      "topology_changed": true,
+      "update": 47
+    },
+    {
+      "chain": 0.038931819640775515,
+      "clash": 0.0,
+      "contact": 0.027164353840749354,
+      "hard_mutations": 1,
+      "loss": -0.0232711718766718,
+      "sequence": "GAMGLPEEPSSPQESTLKHLSLYEAHLSSYIMYLQTFLVKTKQKVNNKNYPEFTLFDTSKLKKDQTLKSIKTNIAALKNHIDKIKPIAMQIYKKYSKNIP",
+      "topology_changed": false,
+      "update": 48
+    },
+    {
+      "chain": 0.03684433408272406,
+      "clash": 5.59739938220445e-07,
+      "contact": 0.02710181741713322,
+      "hard_mutations": 1,
+      "loss": -0.023416824268922595,
+      "sequence": "GAMGLPEEPSSPQESTLKHLSLYEAHLSSYIMYLQTFLVKTKQKVNNKNYPEFTLFDTSKLKKDQTLKSIKTNIAALKNHIDKIKPIAMQIYKKYSKNIP",
+      "topology_changed": false,
+      "update": 49
+    },
+    {
+      "chain": 0.035258515454882636,
+      "clash": 1.8477985119726258e-05,
+      "contact": 0.02702795340198078,
+      "cross_losses": {
+        "1": -0.02348362387137279,
+        "2": -0.01817585240679953
+      },
+      "hard_mutations": 1,
+      "loss": -0.02348362387137279,
+      "sequence": "GAMGLPEEPSSPQESTLKHLSLYEAHLSSYIMYLQTFLVKTKQKVNNKNYPEFTLFDTSKLKKDQTLKSIKTNIAALKNHIDKIKPIAMQIYKKYSKNIP",
+      "topology_changed": false,
+      "update": 50
+    }
+  ]
+}

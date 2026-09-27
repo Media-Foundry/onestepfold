@@ -1,0 +1,1170 @@
+{
+  "complete": true,
+  "contract": "piecewise native-inventory relaxation; not globally smooth",
+  "deployment_accepted": false,
+  "environment": {
+    "checkpoint_sha256": "1301bba9ad322518eace60fd244ded7904439f55317e90d402cc7a0c06026664",
+    "gpu": "AMD Instinct MI250X / MI250",
+    "hip": "7.14.60850",
+    "source_sha256": {
+      "scripts/run_mini_sequence_gates.py": "0968c6dac7ff6268f63dd7be5bac865aef0ff19fca14bbacea31a99df38f0c07",
+      "src/fastglycan/models/soft_esm.py": "23a93ef86f60677875603bb52170e523dc55268de7428ea6dccdfcf68047406a",
+      "src/fastglycan/models/soft_sequence_chart.py": "38b8ce1221c517ed3eaa506f83e31e2e1580c512d5b4fe657a37bac3b5fdb668"
+    },
+    "torch": "2.12.0a0+git78258b9"
+  },
+  "final_sequence": "GPLASSTITVPTPIYQKMDDDAFYETGKDNGGGKSVTQAVTQNFLNSNDQIIANNSDIKSVRKCGYGPNVTKLQPNLNKLTDMQPLANLKNLGWLRLGEGKVKHLSSLFDIRRCKSLSLGHGGSSDMGGLVHLPQLESLYSGNGKITDITVLSRLTKLDTLSLEDNQSSDILPLAGLTKLQNLYLSKCQTCHLGHAAGAKNLDVLEAGSCHCWNKPINYQSNLVVPNGAKNTDGSPVTGEIISDDGDYEKPNVEWHAPEYWNEVHYICYQPVTGGKAKGRCHGRYTSSLKEVHTVSCDVDNTVIKYKVDAGTRITAPKPPTHQGYVPKGWYTEKGGGHEWNFNTDYMSGNDFTLYAVFKAET",
+  "gates": {
+    "1_hard_replay": {
+      "atom_count": 2857,
+      "coordinate_max_abs": 0.0007250308990478516,
+      "embedding_max_abs": 0.0,
+      "feature_max_abs": 0.0,
+      "passed": true,
+      "sequence": "GPLGSETITVPTPIKQIFSDDAFAETIKDNLKKKSVTDAVTQNELNSIDQIIANNSDIKSVQGIQYLPNVTKLFLNGNKLTDIKPLANLKNLGWLFLDENKVKDLSSLKDLKKLKSLSLEHNGISDINGLVHLPQLESLYLGNNKITDITVLSRLTKLDTLSLEDNQISDIVPLAGLTKLQNLYLSKNHISDLRALAGLKNLDVLELFSQECLNKPINHQSNLVVPNTVKNTDGSLVTPEIISDDGDYEKPNVKWHLPEFTNEVSFIFYQPVTIGKAKARFHGRVTQPLKEVYTVSYDVDGTVIKYKVEAGTRITAPKPPTKQGYVFKGWYTEKNGGHEWNFNTDYMSGNDFTLYAVFKAET"
+    },
+    "2_s1_local_derivative": {
+      "directions": [
+        {
+          "plateau_pass": true,
+          "rows": [
+            {
+              "absolute_error": 1.063422906157752e-07,
+              "analytic": 1.499000295325392e-05,
+              "finite_difference": 1.5096345243869696e-05,
+              "h": 0.3,
+              "pass_tolerance": true,
+              "relative_error": 0.007044240768073222
+            },
+            {
+              "absolute_error": 2.532490506247912e-07,
+              "analytic": 1.499000295325392e-05,
+              "finite_difference": 1.473675390262913e-05,
+              "h": 0.1,
+              "pass_tolerance": true,
+              "relative_error": 0.016894529735220484
+            },
+            {
+              "absolute_error": 1.0760391686536597e-06,
+              "analytic": 1.499000295325392e-05,
+              "finite_difference": 1.606604212190758e-05,
+              "h": 0.03,
+              "pass_tolerance": true,
+              "relative_error": 0.06697599573614821
+            },
+            {
+              "absolute_error": 4.351311820519231e-06,
+              "analytic": 1.499000295325392e-05,
+              "finite_difference": 1.063869113273469e-05,
+              "h": 0.01,
+              "pass_tolerance": false,
+              "relative_error": 0.29028091816183926
+            },
+            {
+              "absolute_error": 2.062681091635643e-05,
+              "analytic": 1.499000295325392e-05,
+              "finite_difference": -5.636807963102508e-06,
+              "h": 0.003,
+              "pass_tolerance": false,
+              "relative_error": 1.3760378153814112
+            }
+          ]
+        },
+        {
+          "plateau_pass": true,
+          "rows": [
+            {
+              "absolute_error": 3.1662246385185376e-07,
+              "analytic": -2.085107096568087e-05,
+              "finite_difference": -2.1167693429532723e-05,
+              "h": 0.3,
+              "pass_tolerance": true,
+              "relative_error": 0.014957816018353172
+            },
+            {
+              "absolute_error": 5.278210575874757e-07,
+              "analytic": -2.085107096568087e-05,
+              "finite_difference": -2.0323249908093394e-05,
+              "h": 0.1,
+              "pass_tolerance": true,
+              "relative_error": 0.025313858384359504
+            },
+            {
+              "absolute_error": 1.7872183543431363e-06,
+              "analytic": -2.085107096568087e-05,
+              "finite_difference": -1.9063852611337733e-05,
+              "h": 0.03,
+              "pass_tolerance": true,
+              "relative_error": 0.08571350398666569
+            },
+            {
+              "absolute_error": 6.056338295986592e-06,
+              "analytic": -2.085107096568087e-05,
+              "finite_difference": -1.4794732669694277e-05,
+              "h": 0.01,
+              "pass_tolerance": false,
+              "relative_error": 0.2904569413223341
+            },
+            {
+              "absolute_error": 4.278663214386088e-07,
+              "analytic": -2.085107096568087e-05,
+              "finite_difference": -2.042320464424226e-05,
+              "h": 0.003,
+              "pass_tolerance": true,
+              "relative_error": 0.020520112474934318
+            }
+          ]
+        },
+        {
+          "plateau_pass": true,
+          "rows": [
+            {
+              "absolute_error": 1.2087677352883772e-07,
+              "analytic": -6.667835990053742e-06,
+              "finite_difference": -6.78871276358258e-06,
+              "h": 0.3,
+              "pass_tolerance": true,
+              "relative_error": 0.017805551322965078
+            },
+            {
+              "absolute_error": 1.903546436314273e-07,
+              "analytic": -6.667835990053742e-06,
+              "finite_difference": -6.477481346422315e-06,
+              "h": 0.1,
+              "pass_tolerance": true,
+              "relative_error": 0.028548189234914437
+            },
+            {
+              "absolute_error": 1.1292570958270568e-06,
+              "analytic": -6.667835990053742e-06,
+              "finite_difference": -7.797093085880799e-06,
+              "h": 0.03,
+              "pass_tolerance": true,
+              "relative_error": 0.14483052637552168
+            },
+            {
+              "absolute_error": 1.7776938902483742e-06,
+              "analytic": -6.667835990053742e-06,
+              "finite_difference": -8.445529880302116e-06,
+              "h": 0.01,
+              "pass_tolerance": false,
+              "relative_error": 0.21048932576682589
+            },
+            {
+              "absolute_error": 1.9146202762580624e-05,
+              "analytic": -6.667835990053742e-06,
+              "finite_difference": -2.5814038752634365e-05,
+              "h": 0.003,
+              "pass_tolerance": false,
+              "relative_error": 0.7416972968101213
+            }
+          ]
+        }
+      ],
+      "finite": true,
+      "max_abs": 0.0003039671282749623,
+      "norm": 0.0007710156496614218,
+      "passed": true,
+      "repeat_max_abs": 0.0,
+      "zero_fraction": 0.0
+    },
+    "2_s2_local_derivative": {
+      "directions": [
+        {
+          "plateau_pass": true,
+          "rows": [
+            {
+              "absolute_error": 2.573870794090607e-07,
+              "analytic": 6.418849507470206e-05,
+              "finite_difference": 6.444588215411112e-05,
+              "h": 0.3,
+              "pass_tolerance": true,
+              "relative_error": 0.003993848339193562
+            },
+            {
+              "absolute_error": 8.809863012322334e-07,
+              "analytic": 6.418849507470206e-05,
+              "finite_difference": 6.330750877346983e-05,
+              "h": 0.1,
+              "pass_tolerance": true,
+              "relative_error": 0.013724987635353477
+            },
+            {
+              "absolute_error": 4.579522584664112e-06,
+              "analytic": 6.418849507470206e-05,
+              "finite_difference": 6.876801765936617e-05,
+              "h": 0.03,
+              "pass_tolerance": false,
+              "relative_error": 0.06659378502588525
+            },
+            {
+              "absolute_error": 1.3793910695939187e-05,
+              "analytic": 6.418849507470206e-05,
+              "finite_difference": 5.0394584378762874e-05,
+              "h": 0.01,
+              "pass_tolerance": false,
+              "relative_error": 0.21489693254041778
+            },
+            {
+              "absolute_error": 5.258875638602137e-05,
+              "analytic": 6.418849507470206e-05,
+              "finite_difference": 1.1599738688680694e-05,
+              "h": 0.003,
+              "pass_tolerance": false,
+              "relative_error": 0.8192863273211031
+            }
+          ]
+        },
+        {
+          "plateau_pass": true,
+          "rows": [
+            {
+              "absolute_error": 1.3724435809415702e-06,
+              "analytic": -5.6925111654541e-05,
+              "finite_difference": -5.829755523548257e-05,
+              "h": 0.3,
+              "pass_tolerance": true,
+              "relative_error": 0.0235420434938966
+            },
+            {
+              "absolute_error": 1.8768331556830961e-06,
+              "analytic": -5.6925111654541e-05,
+              "finite_difference": -5.5048278498857905e-05,
+              "h": 0.1,
+              "pass_tolerance": true,
+              "relative_error": 0.03297021474587443
+            },
+            {
+              "absolute_error": 6.7918445824604565e-06,
+              "analytic": -5.6925111654541e-05,
+              "finite_difference": -5.0133267072080545e-05,
+              "h": 0.03,
+              "pass_tolerance": false,
+              "relative_error": 0.11931192377237368
+            },
+            {
+              "absolute_error": 3.282274395061313e-05,
+              "analytic": -5.6925111654541e-05,
+              "finite_difference": -2.4102367703927874e-05,
+              "h": 0.01,
+              "pass_tolerance": false,
+              "relative_error": 0.5765951615484413
+            },
+            {
+              "absolute_error": 1.213103551061582e-06,
+              "analytic": -5.6925111654541e-05,
+              "finite_difference": -5.8138215205602584e-05,
+              "h": 0.003,
+              "pass_tolerance": true,
+              "relative_error": 0.02086585470110337
+            }
+          ]
+        },
+        {
+          "plateau_pass": true,
+          "rows": [
+            {
+              "absolute_error": 2.9310409652384608e-08,
+              "analytic": -2.7728027545660437e-05,
+              "finite_difference": -2.7757337955312822e-05,
+              "h": 0.3,
+              "pass_tolerance": true,
+              "relative_error": 0.0010559517522743757
+            },
+            {
+              "absolute_error": 8.168482311586998e-07,
+              "analytic": -2.7728027545660437e-05,
+              "finite_difference": -2.6911179314501738e-05,
+              "h": 0.1,
+              "pass_tolerance": true,
+              "relative_error": 0.029459298170905788
+            },
+            {
+              "absolute_error": 5.323461626097438e-06,
+              "analytic": -2.7728027545660437e-05,
+              "finite_difference": -3.3051489171757875e-05,
+              "h": 0.03,
+              "pass_tolerance": false,
+              "relative_error": 0.16106571169707765
+            },
+            {
+              "absolute_error": 1.8602228157834757e-06,
+              "analytic": -2.7728027545660437e-05,
+              "finite_difference": -2.9588250361443913e-05,
+              "h": 0.01,
+              "pass_tolerance": true,
+              "relative_error": 0.06287032159926256
+            },
+            {
+              "absolute_error": 9.732283582700613e-05,
+              "analytic": -2.7728027545660437e-05,
+              "finite_difference": -0.00012505086337266658,
+              "h": 0.003,
+              "pass_tolerance": false,
+              "relative_error": 0.7782660047453843
+            }
+          ]
+        }
+      ],
+      "finite": true,
+      "max_abs": 0.0013008519308641553,
+      "norm": 0.003398229368031025,
+      "passed": true,
+      "repeat_max_abs": 0.0,
+      "zero_fraction": 0.0
+    },
+    "3_optimization": {
+      "soft_loss_decreased": true,
+      "topology_changes": 37,
+      "updates": 50
+    },
+    "4_hard_rebuild_replay": {
+      "atom_count": 2784,
+      "coordinate_max_abs": 0.000736236572265625,
+      "embedding_max_abs": 0.0,
+      "feature_max_abs": 0.0,
+      "sequence": "GPLASSTITVPTPIYQKMDDDAFYETGKDNGGGKSVTQAVTQNFLNSNDQIIANNSDIKSVRKCGYGPNVTKLQPNLNKLTDMQPLANLKNLGWLRLGEGKVKHLSSLFDIRRCKSLSLGHGGSSDMGGLVHLPQLESLYSGNGKITDITVLSRLTKLDTLSLEDNQSSDILPLAGLTKLQNLYLSKCQTCHLGHAAGAKNLDVLEAGSCHCWNKPINYQSNLVVPNGAKNTDGSPVTGEIISDDGDYEKPNVEWHAPEYWNEVHYICYQPVTGGKAKGRCHGRYTSSLKEVHTVSCDVDNTVIKYKVDAGTRITAPKPPTHQGYVPKGWYTEKGGGHEWNFNTDYMSGNDFTLYAVFKAET"
+    },
+    "4_independent_noise": [
+      {
+        "chain": 0.04488188541363157,
+        "clash": 1.433244959395935e-12,
+        "contact": 0.019897226246932534,
+        "label": "initial",
+        "loss": -0.015409037704136132,
+        "seed": 103,
+        "steps": 1
+      },
+      {
+        "chain": 0.01532337160916135,
+        "clash": 0.0,
+        "contact": 0.020022993515770113,
+        "label": "initial",
+        "loss": -0.018490656354853977,
+        "seed": 103,
+        "steps": 2
+      },
+      {
+        "chain": 0.12088227782450527,
+        "clash": 0.0003177464699858555,
+        "contact": 0.02584887743558467,
+        "label": "optimized",
+        "loss": -0.013442903183148284,
+        "seed": 103,
+        "steps": 1
+      },
+      {
+        "chain": 0.07719206594609011,
+        "clash": 1.5190135940987354e-05,
+        "contact": 0.022723257581753264,
+        "label": "optimized",
+        "loss": -0.014988860851203267,
+        "seed": 103,
+        "steps": 2
+      },
+      {
+        "chain": 0.03597977297493932,
+        "clash": 2.211030078469955e-05,
+        "contact": 0.020370506538084646,
+        "label": "initial",
+        "loss": -0.016750418939806017,
+        "seed": 107,
+        "steps": 1
+      },
+      {
+        "chain": 0.016884142534478036,
+        "clash": 0.0,
+        "contact": 0.01996474231848942,
+        "label": "initial",
+        "loss": -0.018276328065041616,
+        "seed": 107,
+        "steps": 2
+      },
+      {
+        "chain": 0.11514749099451141,
+        "clash": 0.00014859826764663427,
+        "contact": 0.02503372904070719,
+        "label": "optimized",
+        "loss": -0.013370381673609414,
+        "seed": 107,
+        "steps": 1
+      },
+      {
+        "chain": 0.07416245524000216,
+        "clash": 0.00024237880490722566,
+        "contact": 0.02278161874243388,
+        "label": "optimized",
+        "loss": -0.015122994413526436,
+        "seed": 107,
+        "steps": 2
+      }
+    ]
+  },
+  "gradient_cosine": 0.9521356821060181,
+  "group": "4c8e9b07b26a15147de5dd17b0221f92226aac88e82b8073f1616f893ac89d8d",
+  "length": 362,
+  "objective": "monomer nonlocal contacts with CA chain/clash penalties; NOT binding affinity",
+  "opt_s": 1,
+  "peak_memory_gib": 20.57212257385254,
+  "remaining_gate": "global chart-boundary continuity, broader targets and actual interface objective unvalidated",
+  "sequence": "GPLGSETITVPTPIKQIFSDDAFAETIKDNLKKKSVTDAVTQNELNSIDQIIANNSDIKSVQGIQYLPNVTKLFLNGNKLTDIKPLANLKNLGWLFLDENKVKDLSSLKDLKKLKSLSLEHNGISDINGLVHLPQLESLYLGNNKITDITVLSRLTKLDTLSLEDNQISDIVPLAGLTKLQNLYLSKNHISDLRALAGLKNLDVLELFSQECLNKPINHQSNLVVPNTVKNTDGSLVTPEIISDDGDYEKPNVKWHLPEFTNEVSFIFYQPVTIGKAKARFHGRVTQPLKEVYTVSYDVDGTVIKYKVEAGTRITAPKPPTKQGYVFKGWYTEKNGGHEWNFNTDYMSGNDFTLYAVFKAET",
+  "stage": "complete",
+  "trajectory": [
+    {
+      "chain": 0.02396531916860912,
+      "clash": 4.181995596329628e-08,
+      "contact": 0.01994153187034548,
+      "cross_losses": {
+        "1": -0.017544958133528604,
+        "2": -0.01778265874187803
+      },
+      "hard_mutations": 0,
+      "loss": -0.017544958133528604,
+      "sequence": "GPLGSETITVPTPIKQIFSDDAFAETIKDNLKKKSVTDAVTQNELNSIDQIIANNSDIKSVQGIQYLPNVTKLFLNGNKLTDIKPLANLKNLGWLFLDENKVKDLSSLKDLKKLKSLSLEHNGISDINGLVHLPQLESLYLGNNKITDITVLSRLTKLDTLSLEDNQISDIVPLAGLTKLQNLYLSKNHISDLRALAGLKNLDVLELFSQECLNKPINHQSNLVVPNTVKNTDGSLVTPEIISDDGDYEKPNVKWHLPEFTNEVSFIFYQPVTIGKAKARFHGRVTQPLKEVYTVSYDVDGTVIKYKVEAGTRITAPKPPTKQGYVFKGWYTEKNGGHEWNFNTDYMSGNDFTLYAVFKAET",
+      "topology_changed": false,
+      "update": 0
+    },
+    {
+      "chain": 0.025106725084643552,
+      "clash": 0.0,
+      "contact": 0.019930028192214407,
+      "hard_mutations": 0,
+      "loss": -0.01741935568375005,
+      "sequence": "GPLGSETITVPTPIKQIFSDDAFAETIKDNLKKKSVTDAVTQNELNSIDQIIANNSDIKSVQGIQYLPNVTKLFLNGNKLTDIKPLANLKNLGWLFLDENKVKDLSSLKDLKKLKSLSLEHNGISDINGLVHLPQLESLYLGNNKITDITVLSRLTKLDTLSLEDNQISDIVPLAGLTKLQNLYLSKNHISDLRALAGLKNLDVLELFSQECLNKPINHQSNLVVPNTVKNTDGSLVTPEIISDDGDYEKPNVKWHLPEFTNEVSFIFYQPVTIGKAKARFHGRVTQPLKEVYTVSYDVDGTVIKYKVEAGTRITAPKPPTKQGYVFKGWYTEKNGGHEWNFNTDYMSGNDFTLYAVFKAET",
+      "topology_changed": false,
+      "update": 1
+    },
+    {
+      "chain": 0.02324700289268325,
+      "clash": 0.0,
+      "contact": 0.019942570826381664,
+      "hard_mutations": 0,
+      "loss": -0.01761787053711334,
+      "sequence": "GPLGSETITVPTPIKQIFSDDAFAETIKDNLKKKSVTDAVTQNELNSIDQIIANNSDIKSVQGIQYLPNVTKLFLNGNKLTDIKPLANLKNLGWLFLDENKVKDLSSLKDLKKLKSLSLEHNGISDINGLVHLPQLESLYLGNNKITDITVLSRLTKLDTLSLEDNQISDIVPLAGLTKLQNLYLSKNHISDLRALAGLKNLDVLELFSQECLNKPINHQSNLVVPNTVKNTDGSLVTPEIISDDGDYEKPNVKWHLPEFTNEVSFIFYQPVTIGKAKARFHGRVTQPLKEVYTVSYDVDGTVIKYKVEAGTRITAPKPPTKQGYVFKGWYTEKNGGHEWNFNTDYMSGNDFTLYAVFKAET",
+      "topology_changed": false,
+      "update": 2
+    },
+    {
+      "chain": 0.021165135216936814,
+      "clash": 0.0,
+      "contact": 0.019964309530259208,
+      "hard_mutations": 0,
+      "loss": -0.017847796008565526,
+      "sequence": "GPLGSETITVPTPIKQIFSDDAFAETIKDNLKKKSVTDAVTQNELNSIDQIIANNSDIKSVQGIQYLPNVTKLFLNGNKLTDIKPLANLKNLGWLFLDENKVKDLSSLKDLKKLKSLSLEHNGISDINGLVHLPQLESLYLGNNKITDITVLSRLTKLDTLSLEDNQISDIVPLAGLTKLQNLYLSKNHISDLRALAGLKNLDVLELFSQECLNKPINHQSNLVVPNTVKNTDGSLVTPEIISDDGDYEKPNVKWHLPEFTNEVSFIFYQPVTIGKAKARFHGRVTQPLKEVYTVSYDVDGTVIKYKVEAGTRITAPKPPTKQGYVFKGWYTEKNGGHEWNFNTDYMSGNDFTLYAVFKAET",
+      "topology_changed": false,
+      "update": 3
+    },
+    {
+      "chain": 0.020009946798774412,
+      "clash": 0.0,
+      "contact": 0.019997858599342805,
+      "hard_mutations": 0,
+      "loss": -0.017996863919465363,
+      "sequence": "GPLGSETITVPTPIKQIFSDDAFAETIKDNLKKKSVTDAVTQNELNSIDQIIANNSDIKSVQGIQYLPNVTKLFLNGNKLTDIKPLANLKNLGWLFLDENKVKDLSSLKDLKKLKSLSLEHNGISDINGLVHLPQLESLYLGNNKITDITVLSRLTKLDTLSLEDNQISDIVPLAGLTKLQNLYLSKNHISDLRALAGLKNLDVLELFSQECLNKPINHQSNLVVPNTVKNTDGSLVTPEIISDDGDYEKPNVKWHLPEFTNEVSFIFYQPVTIGKAKARFHGRVTQPLKEVYTVSYDVDGTVIKYKVEAGTRITAPKPPTKQGYVFKGWYTEKNGGHEWNFNTDYMSGNDFTLYAVFKAET",
+      "topology_changed": false,
+      "update": 4
+    },
+    {
+      "chain": 0.01896528195690358,
+      "clash": 0.0,
+      "contact": 0.020051108566128278,
+      "hard_mutations": 0,
+      "loss": -0.01815458037043792,
+      "sequence": "GPLGSETITVPTPIKQIFSDDAFAETIKDNLKKKSVTDAVTQNELNSIDQIIANNSDIKSVQGIQYLPNVTKLFLNGNKLTDIKPLANLKNLGWLFLDENKVKDLSSLKDLKKLKSLSLEHNGISDINGLVHLPQLESLYLGNNKITDITVLSRLTKLDTLSLEDNQISDIVPLAGLTKLQNLYLSKNHISDLRALAGLKNLDVLELFSQECLNKPINHQSNLVVPNTVKNTDGSLVTPEIISDDGDYEKPNVKWHLPEFTNEVSFIFYQPVTIGKAKARFHGRVTQPLKEVYTVSYDVDGTVIKYKVEAGTRITAPKPPTKQGYVFKGWYTEKNGGHEWNFNTDYMSGNDFTLYAVFKAET",
+      "topology_changed": false,
+      "update": 5
+    },
+    {
+      "chain": 0.01727646248928055,
+      "clash": 0.0,
+      "contact": 0.02009644813719541,
+      "hard_mutations": 0,
+      "loss": -0.018368801888267356,
+      "sequence": "GPLGSETITVPTPIKQIFSDDAFAETIKDNLKKKSVTDAVTQNELNSIDQIIANNSDIKSVQGIQYLPNVTKLFLNGNKLTDIKPLANLKNLGWLFLDENKVKDLSSLKDLKKLKSLSLEHNGISDINGLVHLPQLESLYLGNNKITDITVLSRLTKLDTLSLEDNQISDIVPLAGLTKLQNLYLSKNHISDLRALAGLKNLDVLELFSQECLNKPINHQSNLVVPNTVKNTDGSLVTPEIISDDGDYEKPNVKWHLPEFTNEVSFIFYQPVTIGKAKARFHGRVTQPLKEVYTVSYDVDGTVIKYKVEAGTRITAPKPPTKQGYVFKGWYTEKNGGHEWNFNTDYMSGNDFTLYAVFKAET",
+      "topology_changed": false,
+      "update": 6
+    },
+    {
+      "chain": 0.015814603702527946,
+      "clash": 0.0,
+      "contact": 0.02014784060785796,
+      "hard_mutations": 0,
+      "loss": -0.018566380237605165,
+      "sequence": "GPLGSETITVPTPIKQIFSDDAFAETIKDNLKKKSVTDAVTQNELNSIDQIIANNSDIKSVQGIQYLPNVTKLFLNGNKLTDIKPLANLKNLGWLFLDENKVKDLSSLKDLKKLKSLSLEHNGISDINGLVHLPQLESLYLGNNKITDITVLSRLTKLDTLSLEDNQISDIVPLAGLTKLQNLYLSKNHISDLRALAGLKNLDVLELFSQECLNKPINHQSNLVVPNTVKNTDGSLVTPEIISDDGDYEKPNVKWHLPEFTNEVSFIFYQPVTIGKAKARFHGRVTQPLKEVYTVSYDVDGTVIKYKVEAGTRITAPKPPTKQGYVFKGWYTEKNGGHEWNFNTDYMSGNDFTLYAVFKAET",
+      "topology_changed": false,
+      "update": 7
+    },
+    {
+      "chain": 0.015299149952746402,
+      "clash": 0.0,
+      "contact": 0.020181328801351203,
+      "hard_mutations": 0,
+      "loss": -0.018651413806076562,
+      "sequence": "GPLGSETITVPTPIKQIFSDDAFAETIKDNLKKKSVTDAVTQNELNSIDQIIANNSDIKSVQGIQYLPNVTKLFLNGNKLTDIKPLANLKNLGWLFLDENKVKDLSSLKDLKKLKSLSLEHNGISDINGLVHLPQLESLYLGNNKITDITVLSRLTKLDTLSLEDNQISDIVPLAGLTKLQNLYLSKNHISDLRALAGLKNLDVLELFSQECLNKPINHQSNLVVPNTVKNTDGSLVTPEIISDDGDYEKPNVKWHLPEFTNEVSFIFYQPVTIGKAKARFHGRVTQPLKEVYTVSYDVDGTVIKYKVEAGTRITAPKPPTKQGYVFKGWYTEKNGGHEWNFNTDYMSGNDFTLYAVFKAET",
+      "topology_changed": false,
+      "update": 8
+    },
+    {
+      "chain": 0.014681449554402447,
+      "clash": 0.0,
+      "contact": 0.020201301828749157,
+      "hard_mutations": 0,
+      "loss": -0.018733156873308912,
+      "sequence": "GPLGSETITVPTPIKQIFSDDAFAETIKDNLKKKSVTDAVTQNELNSIDQIIANNSDIKSVQGIQYLPNVTKLFLNGNKLTDIKPLANLKNLGWLFLDENKVKDLSSLKDLKKLKSLSLEHNGISDINGLVHLPQLESLYLGNNKITDITVLSRLTKLDTLSLEDNQISDIVPLAGLTKLQNLYLSKNHISDLRALAGLKNLDVLELFSQECLNKPINHQSNLVVPNTVKNTDGSLVTPEIISDDGDYEKPNVKWHLPEFTNEVSFIFYQPVTIGKAKARFHGRVTQPLKEVYTVSYDVDGTVIKYKVEAGTRITAPKPPTKQGYVFKGWYTEKNGGHEWNFNTDYMSGNDFTLYAVFKAET",
+      "topology_changed": false,
+      "update": 9
+    },
+    {
+      "chain": 0.013413056957722252,
+      "clash": 0.0,
+      "contact": 0.020291992857580654,
+      "cross_losses": {
+        "1": -0.01895068716180843,
+        "2": -0.01929953228906387
+      },
+      "hard_mutations": 0,
+      "loss": -0.01895068716180843,
+      "sequence": "GPLGSETITVPTPIKQIFSDDAFAETIKDNLKKKSVTDAVTQNELNSIDQIIANNSDIKSVQGIQYLPNVTKLFLNGNKLTDIKPLANLKNLGWLFLDENKVKDLSSLKDLKKLKSLSLEHNGISDINGLVHLPQLESLYLGNNKITDITVLSRLTKLDTLSLEDNQISDIVPLAGLTKLQNLYLSKNHISDLRALAGLKNLDVLELFSQECLNKPINHQSNLVVPNTVKNTDGSLVTPEIISDDGDYEKPNVKWHLPEFTNEVSFIFYQPVTIGKAKARFHGRVTQPLKEVYTVSYDVDGTVIKYKVEAGTRITAPKPPTKQGYVFKGWYTEKNGGHEWNFNTDYMSGNDFTLYAVFKAET",
+      "topology_changed": false,
+      "update": 10
+    },
+    {
+      "chain": 0.01261313376175163,
+      "clash": 0.0,
+      "contact": 0.0203182414380501,
+      "hard_mutations": 0,
+      "loss": -0.019056928061874936,
+      "sequence": "GPLGSETITVPTPIKQIFSDDAFAETIKDNLKKKSVTDAVTQNELNSIDQIIANNSDIKSVQGIQYLPNVTKLFLNGNKLTDIKPLANLKNLGWLFLDENKVKDLSSLKDLKKLKSLSLEHNGISDINGLVHLPQLESLYLGNNKITDITVLSRLTKLDTLSLEDNQISDIVPLAGLTKLQNLYLSKNHISDLRALAGLKNLDVLELFSQECLNKPINHQSNLVVPNTVKNTDGSLVTPEIISDDGDYEKPNVKWHLPEFTNEVSFIFYQPVTIGKAKARFHGRVTQPLKEVYTVSYDVDGTVIKYKVEAGTRITAPKPPTKQGYVFKGWYTEKNGGHEWNFNTDYMSGNDFTLYAVFKAET",
+      "topology_changed": false,
+      "update": 11
+    },
+    {
+      "chain": 0.012237545851936643,
+      "clash": 0.0,
+      "contact": 0.02055464393331494,
+      "hard_mutations": 0,
+      "loss": -0.019330889348121275,
+      "sequence": "GPLGSETITVPTPIKQIFSDDAFAETIKDNLKKKSVTDAVTQNELNSIDQIIANNSDIKSVQGIQYLPNVTKLFLNGNKLTDIKPLANLKNLGWLFLDENKVKDLSSLKDLKKLKSLSLEHNGISDINGLVHLPQLESLYLGNNKITDITVLSRLTKLDTLSLEDNQISDIVPLAGLTKLQNLYLSKNHISDLRALAGLKNLDVLELFSQECLNKPINHQSNLVVPNTVKNTDGSLVTPEIISDDGDYEKPNVKWHLPEFTNEVSFIFYQPVTIGKAKARFHGRVTQPLKEVYTVSYDVDGTVIKYKVEAGTRITAPKPPTKQGYVFKGWYTEKNGGHEWNFNTDYMSGNDFTLYAVFKAET",
+      "topology_changed": false,
+      "update": 12
+    },
+    {
+      "chain": 0.011384355802317682,
+      "clash": 0.0,
+      "contact": 0.020619422639690396,
+      "hard_mutations": 0,
+      "loss": -0.019480987059458627,
+      "sequence": "GPLGSETITVPTPIKQIFSDDAFAETIKDNLKKKSVTDAVTQNELNSIDQIIANNSDIKSVQGIQYLPNVTKLFLNGNKLTDIKPLANLKNLGWLFLDENKVKDLSSLKDLKKLKSLSLEHNGISDINGLVHLPQLESLYLGNNKITDITVLSRLTKLDTLSLEDNQISDIVPLAGLTKLQNLYLSKNHISDLRALAGLKNLDVLELFSQECLNKPINHQSNLVVPNTVKNTDGSLVTPEIISDDGDYEKPNVKWHLPEFTNEVSFIFYQPVTIGKAKARFHGRVTQPLKEVYTVSYDVDGTVIKYKVEAGTRITAPKPPTKQGYVFKGWYTEKNGGHEWNFNTDYMSGNDFTLYAVFKAET",
+      "topology_changed": false,
+      "update": 13
+    },
+    {
+      "atom_counts": [
+        2857,
+        2856
+      ],
+      "chain": 0.01134177281126712,
+      "chart_jump_rmsd": 0.16775438173642834,
+      "chart_loss_jump": 2.466585121855408e-05,
+      "clash": 0.0,
+      "contact": 0.020657632870150662,
+      "hard_mutations": 3,
+      "loss": -0.01952345558902395,
+      "sequence": "GPLGSETITVPTPIKQIFSDDAFAETIKDNLKKKSVTDAVTQNELNSIDQIIANNSDIKSVLGIQYTPNVTKLFLNGNKLTDIKPLANLKNLGWLFLDENKVKDLSSLKDLKKQKSLSLEHNGISDINGLVHLPQLESLYLGNNKITDITVLSRLTKLDTLSLEDNQISDIVPLAGLTKLQNLYLSKNHISDLRALAGLKNLDVLELFSQECLNKPINHQSNLVVPNTVKNTDGSLVTPEIISDDGDYEKPNVKWHLPEFTNEVSFIFYQPVTIGKAKARFHGRVTQPLKEVYTVSYDVDGTVIKYKVEAGTRITAPKPPTKQGYVFKGWYTEKNGGHEWNFNTDYMSGNDFTLYAVFKAET",
+      "topology_changed": true,
+      "update": 14
+    },
+    {
+      "atom_counts": [
+        2856,
+        2858
+      ],
+      "chain": 0.011716297856706293,
+      "chart_jump_rmsd": 0.20959288842978818,
+      "chart_loss_jump": 1.8191066100455705e-05,
+      "clash": 0.0,
+      "contact": 0.020726209636787087,
+      "hard_mutations": 8,
+      "loss": -0.019554579851116458,
+      "sequence": "GPLGSETITVPTPIKQIFSDDAFAETIKDNLKKKSVTDAVTQNELNSIDQIIANNSDIKSVLHIQYTPNVTKLFLNMNKLTDIKPLANLKNLGWLFLDENKVKDLSSLYDLKKQKSLSLEHNGISDINGLVHLPQLESLSLGNNKITDITVLSRLTKLDTLSLEDNQISDIVPLAGLTKLQNLYLSKNHISDLRALAGLKNLDVLELFSQECLNKPINHQSNLVVPNTVKNTDGSLVTPEIISDDGDYEKPNVKWHLPEFTNEVSFIFYQPVTIGKAKARFHGRVTQPLKEVYTVSYDVDGTVIKYKVGAGTRITAPKPPTKQGYVFKGWYTEKNGGHEWNFNTDYMSGNDFTLYAVFKAET",
+      "topology_changed": true,
+      "update": 15
+    },
+    {
+      "atom_counts": [
+        2858,
+        2851
+      ],
+      "chain": 0.011451668778462971,
+      "chart_jump_rmsd": 0.13118110715261647,
+      "chart_loss_jump": 9.872903375153508e-07,
+      "clash": 0.0,
+      "contact": 0.020763021221981086,
+      "hard_mutations": 11,
+      "loss": -0.019617854344134787,
+      "sequence": "GPLGSETITVPTPIKQIFSDDAFAETIKDNLKKKSVTDAVTQNELNSIDQIIANNSDIKSVLHIQYTPNVTKLFLNMNKLTDIKPLANLKNLGWLFLDENKVKDLSSLYDLKKQKSLSLEHNGISDINGLVHLPQLESLELGNNKITDITVLSRLTKLDTLSLEDNQISDIVPLAGLTKLQNLYLSKNHISDLRALAGLKNLDVLELFSNECLNKPINHQSNLVVPNTVKNTDGSLVTPEIISDDGDYEKPNVKWHLPEFTNEVSFIFYQPVTIGKAKARFHGRVTQPLKEVYTVSYDVDGTVIKYKVGAGTRITAPKPPTKQGYVCKGWYTEKNGGHEWNFNTDYMSGNGFTLYAVFKAET",
+      "topology_changed": true,
+      "update": 16
+    },
+    {
+      "atom_counts": [
+        2851,
+        2849
+      ],
+      "chain": 0.013169153090164235,
+      "chart_jump_rmsd": 0.08915036334145096,
+      "chart_loss_jump": -7.487978881337565e-06,
+      "clash": 0.0,
+      "contact": 0.02075168974667722,
+      "hard_mutations": 12,
+      "loss": -0.0194347744376608,
+      "sequence": "GPLGSETITVPTPIKQIFSDDAFAETIKDNSKKKSVTDAVTQNELNSIDQIIANNSDIKSVLHIQYTPNVTKLFLNHNKLTDIKPLANLKNLGWLFLDENKVKDLSSLYDLKKTKSLSLEHNGISDINGLVHLPQLESLELGNNKITDITVLSRLTKLDTLSLEDNQISDIVPLAGLTKLQNLYLSKNHISDLRALAGLKNLDVLELFSNECLNKPINHQSNLVVPNTVKNTDGSLVTPEIISDDGDYEKPNVKWHLPEFTNEVSFIFYQPVTIGKAKARFHGRVTQPLKEVYTVSYDVDGTVIKYKVGAGTRITAPKPPTKQGYVCKGWYTEKNGGHEWNFNTDYMSGNGFTLYAVFKAET",
+      "topology_changed": true,
+      "update": 17
+    },
+    {
+      "atom_counts": [
+        2849,
+        2840
+      ],
+      "chain": 0.010940906012948066,
+      "chart_jump_rmsd": 0.13846221563456212,
+      "chart_loss_jump": -1.1485759809193308e-05,
+      "clash": 0.0,
+      "contact": 0.02072784994939485,
+      "hard_mutations": 14,
+      "loss": -0.019633759348100042,
+      "sequence": "GPLGSETITVPTPIKQIFSDDAFAETIKDNSKGKSVTDAVTQNELNSIDQIIANNSDIKSVLHIQYTPNVTKLFLNHNKLTDIKPLANLKNLGWLFLDENKVKDLSSLYDLKKTKSLSLEHNGISDINGLVHLPQLESLYLGNNKITDITVLSRLTKLDTLSLEDNQISDIVPLAGLTKLQNLYLSKNHSSDLRALAGLKNLDVLELFSNECLNKPINHQSNLVVPNTVKNTDGSLVTPEIISDDGDYEKPNVKWHLPEFTNEVSFICYQPVTIGKAKARFHGRVTQPLKEVYTVSYDVDGTVIKYKVGAGTRITAPKPPTKQGYVCKGWYTEKNGGHEWNFNTDYMSGNGFTLYAVFKAET",
+      "topology_changed": true,
+      "update": 18
+    },
+    {
+      "atom_counts": [
+        2840,
+        2836
+      ],
+      "chain": 0.011262309409086188,
+      "chart_jump_rmsd": 0.09797433921138562,
+      "chart_loss_jump": -1.58245768038974e-05,
+      "clash": 0.0,
+      "contact": 0.02083829784612956,
+      "hard_mutations": 18,
+      "loss": -0.019712066905220944,
+      "sequence": "GPLGSETITVPTPIKQIFSDDAFAETIKDNSVGKSVTDAVTQNELNSIDQIIANNSDIKSVLHIQYTPNVTKLFLNHNKLTDIKPLANLKNLGWLFLDENKVKDLSSLYDLKKTKSLSLEHNGISDINGLVHLPQLESLYLGNNKITDITVLSRLTKLDTLSLEDNQISDIVPLAGLTKLQNLYLSKNHSSDLRALAGPKNLDVLELFSSECLNKPINHQSNLVVPNTVKNTDGSLVTPEIISDDGDYEKPNVKWHLPEFGNEVSFICYQPVTGGKAKARFHGRVTQPLKEVYTVSYDVDGTVIKYKVGAGTRITAPKPPTKQGYVWKGWYTEKNGGHEWNFNTDYMSGNGFTLYAVFKAET",
+      "topology_changed": true,
+      "update": 19
+    },
+    {
+      "atom_counts": [
+        2836,
+        2824
+      ],
+      "chain": 0.01228094812270112,
+      "chart_jump_rmsd": 0.311968712739546,
+      "chart_loss_jump": -1.708146917196035e-05,
+      "clash": 0.0,
+      "contact": 0.021052094517290672,
+      "cross_losses": {
+        "1": -0.01982399970502056,
+        "2": -0.019920204599617644
+      },
+      "hard_mutations": 25,
+      "loss": -0.01982399970502056,
+      "sequence": "GPLGSETITVPTPIKQIFSDDAFAETIKDNSVGKSVTRAVTQNELNSIDQIIANNSDIKSVLHIQYTPNVTKLFLNHNKLTDIKPLANLKNLGWLFLDENKVKDLSSLYDLKKTKSLSLGHNGISDINGLVHLPQLESLYLGNNKITDITVLSRLTKLDTLSLEDNQISDIVPLAGLTKLQNLYLSKNHSSDLRALAGPKNLDVLELFSSECLNKPNNHQSNLVVPTTVKNTDGSLVTPEIISDDGDYEKPNVKWHLPEFGNEVSCICYQPVTGGKAKGRFHGRVTQPLKEVYTVSEDVDGTVIKYKVGAGTRITAPKPPTKQGYVWKGWYTEKNGGHEWNFNTDYMSGNGFTLYAVFKAET",
+      "topology_changed": true,
+      "update": 20
+    },
+    {
+      "atom_counts": [
+        2824,
+        2821
+      ],
+      "chain": 0.013227489343596851,
+      "chart_jump_rmsd": 0.10102995879153139,
+      "chart_loss_jump": 3.45087921695339e-05,
+      "clash": 0.0,
+      "contact": 0.021048188592085116,
+      "hard_mutations": 27,
+      "loss": -0.01972543965772543,
+      "sequence": "GPLGSETITVPTPIKQIFSDDAFAETIKDNSGGKSVTRAVTQNELNSIDQIIANNSDIKSVRHMQYGPNVTKLFLNHNKLTDIKPLANLKNLGWLFLDENKVKDLSSLYDLKKQKSLSLGHGGISDINGLVHLPQLESLYLGNNKITDITVLSRLTKLDTLSLEDNQISDIVPLAGPTKLQNLYLSKNHSSDLRALAGPKNLDVLELFSSECLNKPNNHQSNLVVPTTVKNTDGSLVTPEIISDDGDYEKPNVKWHLPEFGNEVSCICYQPVTGGKAKGRFHGRVTQPLKEVYTVSYDVDGTVIKYKVGAGTRITAPKPPTKQGYVWKGWYTEKNGGHEWNFNTDYMSGNGFTLYAVFKAET",
+      "topology_changed": true,
+      "update": 21
+    },
+    {
+      "atom_counts": [
+        2821,
+        2827
+      ],
+      "chain": 0.012307433947502359,
+      "chart_jump_rmsd": 0.13194875563823977,
+      "chart_loss_jump": 1.8325344486872647e-05,
+      "clash": 0.0,
+      "contact": 0.02108099920599154,
+      "hard_mutations": 29,
+      "loss": -0.019850255811241304,
+      "sequence": "GPLGSETITVPTPIKQIFSDDAFKETIKDNSGGKSVTRAVTQNELNSIDQIIANNSDIKSVRRMQYGPNVTKLFLNRNKLTDIKPLANLKNLGWLFLDENKVKDLSSLYDLKKQKSLSLGHGGSSDINGLVHLPQLESLYLGNNKITDITVLSRLTKLDTLSLEDNQISDIVPLAGLTKLQNLYLSKNHSSDLRALAGPKNLDVLELFSSHCLNKPNNHQSNLVVPTTVKNTDGSLVTPEIISDDGDYEKPNVKWHLPEFGNEVSCICYQPVTGGKAKGRFHGRVTQPLKEVYTVSYDVDGTVIKYKVGAGTRITAPKPPTKQGYVWKGWYTEKNGGHEWNFNTDYMSGNGFTLYAVFKAET",
+      "topology_changed": true,
+      "update": 22
+    },
+    {
+      "atom_counts": [
+        2827,
+        2817
+      ],
+      "chain": 0.013720556326905086,
+      "chart_jump_rmsd": 0.30430773118907883,
+      "chart_loss_jump": -4.7642179770133325e-05,
+      "clash": 0.0,
+      "contact": 0.021273841731079386,
+      "hard_mutations": 35,
+      "loss": -0.019901786098388878,
+      "sequence": "GPLGSATITVPTPIKQIFSDDAFKETLKDNRGGKSVTRAVTQNELNSIDQIIANNSDIKSVRRMQYGPNVTKLFLNRNKLTDIKPLANLKNLGWLFLGENKVKDLSSLYDLKKQKSLSLGHGGSSDKNGLVHLPQLESLYLGNNKITDITVLSRLTKLDTLSLEDNQISDIVPLAGLTKLQNLYLSKNHSSDLRALAGPKNLDVLELFSSHCLNKPNNHQSNLVVPTTVKNTDGSLVTPEIISDDGDYEKPNVKWHLPEFGNEVSCICYQPVTGGKAKGRFHGRVTGPLKEVYTVSEDVDGTVIKYKVGAGTRITAPKPPTKQGYVWKGWYTEKNGGHEWNFNTDYMSGNGFTLYAVFKAET",
+      "topology_changed": true,
+      "update": 23
+    },
+    {
+      "atom_counts": [
+        2817,
+        2812
+      ],
+      "chain": 0.011546380964215204,
+      "chart_jump_rmsd": 0.11547330955593692,
+      "chart_loss_jump": 4.25750241304923e-06,
+      "clash": 0.0,
+      "contact": 0.0212598775020968,
+      "hard_mutations": 38,
+      "loss": -0.020105239405675282,
+      "sequence": "GPLGSATITVPTPIKQIFSDDAFKETLKDNRGGKSVTRAVTQNELNSIDQIIANNSDIKSVRRMQYTPNVTKLFLNRNKLTDICPLANLKNLGWLFLGENKVKDLSSLYDLKKQKSLSLGHGGSSDKNGLVHLPQLESLYLGNNKITDITVLSRLTKLDTLSLEDNQSSDIVPLAGLTKLQNLYLSKGHSSDLRALAGPKNLDVLELFSSRCLNKPNNHQSNLVVPTTVKNTDGSLVTPEIISDDGDYEKPNVKWHLPEFGNEVSCICYQPVTGGKAKGRNHGRVTGPLKEVYTVSYDVDGTVIKYKVGAGTRITAPKPPTKQGYVWKGWYTEKNGGHEWNFNTDYMSGNGFTLYAVFKAET",
+      "topology_changed": true,
+      "update": 24
+    },
+    {
+      "atom_counts": [
+        2812,
+        2806
+      ],
+      "chain": 0.016027020872475466,
+      "chart_jump_rmsd": 0.1326598639500931,
+      "chart_loss_jump": 2.458526875149386e-05,
+      "clash": 0.0,
+      "contact": 0.021209408468132754,
+      "hard_mutations": 41,
+      "loss": -0.019606706380885207,
+      "sequence": "GPLGSATITVPTPIKQRFSDDAFYETLKDNRGGKSVTRAVTQNELNSIDQIIANNSDIKSVRRMQYAPNVTKLFLNRNKLTDICPLANLKNLGWLFLGENGVKDLSSLYDLKKQKSLSLGHGGSSDKNGLVHLPQLESLYLGNNKITDITVLSRLTKLDTLSLEDNQSSDIVPLAGLTKLQNLYLSKGHSSDLRALAGPKNLDVLELFSSRCLNKPNNHQSNLVVPTTVKNTDGSLVTPEIISDDGDYEKPNVKWHLPEYGNEVSCICYQPVTGGKAKARNHGRVTGSLKEVYTVSYDVDGTVIKYKVGAGTRITAPKPPTKQGYVMKGWYTEKNGGHEWNFNTDYMSGNGFTLYAVFKAET",
+      "topology_changed": true,
+      "update": 25
+    },
+    {
+      "atom_counts": [
+        2806,
+        2803
+      ],
+      "chain": 0.012328266994155113,
+      "chart_jump_rmsd": 0.12936511374393375,
+      "chart_loss_jump": -2.3004765870377614e-05,
+      "clash": 0.0,
+      "contact": 0.02134834348138127,
+      "hard_mutations": 44,
+      "loss": -0.02011551678196576,
+      "sequence": "GPLGSATITVPTPIKQRFSDDAFYETLKDNRGGKSVTRAVTQNELNSIDQIIANNSDIKSVRRMQYAPNVTKLFLNRNKLTDICPLANLKNLGWLFLGENGVKHLSSLYDLKKQKSLSLGHGGSSDKNGLVHLPQLESLYLGNNKITDITVLSRLTKLDTLSLEDNQSSDIVPLAGLTKLQNLYLSKGHSSDLRALAGPKNLDVLEAFSSKCLNKPNNHQSNLVVPTTVKNTDGSLVTPEIISDDGDYEKPNVKWHLPEYGNEVSCINYQPVTGGKAKARNHGRVTGSLKEVHTVSYDVDGTVIKYKVGAGTRITAPKPPTKQGYVMKGWYTEKNGGHEWNFNTDYMSGNGFTLYAVFKAET",
+      "topology_changed": true,
+      "update": 26
+    },
+    {
+      "atom_counts": [
+        2803,
+        2799
+      ],
+      "chain": 0.016391736842902488,
+      "chart_jump_rmsd": 0.19477529761613033,
+      "chart_loss_jump": -3.235675220344958e-05,
+      "clash": 0.0,
+      "contact": 0.02151644714785541,
+      "hard_mutations": 48,
+      "loss": -0.01987727346356516,
+      "sequence": "GPLGSATITVPTPIKQRFSDDAFYETLKDNRGGKSVTRAVTQNELNSIDQIIANNSDIKSVRRMQYAPNVTKLFLNMNKLTDIYPLANLKNLGWLFLGENGVKHLSSLYDAKKQKSLSLGHGGSSDKNGLVHLPQLESLYAGNNKITDITVLSRLTKLDTLSLEDNQISDIVPLAGLTKLQNLYLSKGHSSDLRASAGPKNLDVLEAFSSRCLNKPNNHQSNLVVPNTGKNTDGSLVTPEIICDDGDYEKPNVKWHLPEYGNEVSCINYQPVTGGKAKGRNHGRVTGSLKEVHTVSYDVDGTVIKYKVGAGTRITAPKPPTKQGYVMKGWYTEKNGGHEWNFNTDYMSGNGFTLYAVFKAET",
+      "topology_changed": true,
+      "update": 27
+    },
+    {
+      "atom_counts": [
+        2799,
+        2804
+      ],
+      "chain": 0.014446590500749689,
+      "chart_jump_rmsd": 0.10659847858512941,
+      "chart_loss_jump": 8.295177266751802e-05,
+      "clash": 0.0,
+      "contact": 0.021575895269892235,
+      "hard_mutations": 50,
+      "loss": -0.020131236219817265,
+      "sequence": "GPLGSATITVPTPIKQRFSDDAFYETLKDNRGGKSVTRAVTQNELNSIDQIIANNSDIKSVRRMQYAPNVTKLFLNMNKLTDIYPLANLKNLGWLFLGENGVKHLSSLYDAKRQKSLSLGHGGSSDKNGLVHLPQLESLYAGNNKITDITVLSRLTKLDTLSLEDNQISDIVPLAGLTKLQNLYLSKGHSIDLRASAGPKNLDVLEAFSSRCLNKPNNHQSNLVVPNTVKNTDGSLVTGEIICDDGDYEKPNVKWHSPEYGNEVSCINYQPVTGGKAKGRFHGRVTGSLKEVHTVSYDVDGTVIKYKVGAGTRITAPKPPTKQGYVMKGWYTEKNGGHEWNFNTDYMSGNGFTLYAVFKAET",
+      "topology_changed": true,
+      "update": 28
+    },
+    {
+      "atom_counts": [
+        2804,
+        2809
+      ],
+      "chain": 0.012809283255055851,
+      "chart_jump_rmsd": 0.16765643288011978,
+      "chart_loss_jump": 7.92216349888436e-05,
+      "clash": 0.0,
+      "contact": 0.02146830410914262,
+      "hard_mutations": 53,
+      "loss": -0.020187375783637034,
+      "sequence": "GPLGSITITVPTPIKQRFSDDAFYETLKDNRGGKSVTRAVTQNELNSIDQIIANNSDIKSVRRMQYTPNVTKLFLNMNKLTDICPLANLKNLGWLFLGENKVKHLSSLYDARRQKSLSLGHGGSSDKNGLVHLPQLESLYAGNNKITDITVLSRLTKLDTLSLEDNQISDIVPLAGLTKLQNLYLSKGHSIDLRASAGPKTLDVLEAFSSRCLNKPNNHQSNLVVPNTVKAPDGSLVTGEIICDDGDYEKPNVKWHAPEYGNEVSCINYQPVTGGKAKGRFHGRVTNSLKEVHTVSYDVDGTVIKYKVGAGTRITAPKPPTKQGYVMKGWYTEKNGGHEWNFNTDYMSGNGFTLYAVFKAET",
+      "topology_changed": true,
+      "update": 29
+    },
+    {
+      "atom_counts": [
+        2809,
+        2799
+      ],
+      "chain": 0.011796733760691085,
+      "chart_jump_rmsd": 0.12497275050772202,
+      "chart_loss_jump": -2.754372030202429e-06,
+      "clash": 0.0,
+      "contact": 0.021457860072725495,
+      "cross_losses": {
+        "1": -0.020278186696656385,
+        "2": -0.020334886100446446
+      },
+      "hard_mutations": 56,
+      "loss": -0.020278186696656385,
+      "sequence": "GPLGSITITVPTPIKQRFSDDAFYETLKDNGGGKSVTRAVTQNELNSIDQIIANNSDIKSVRRMQYSPNVTKLFLNMNKLTDICPLANLKNLGWLFLGENKVKHLSSLFDARRQKSLSLGHGGSSDKGGLVHLPQLESLYSGNNKITDITVLSRLTKLDTLSLEDNQSSDIVPLAGLTKLQNLYLSKGHSIHLRASAGPKTLDVLEAFSDRCLNKPNNHQSNLVVPNTVKAPDGSLVTGEIICDDGDYEKPNVKWHAPEYGNEVSCINYQPVTGGKAKGRFHGRVTNSLKEVHTVSYDVDGTVIKYKVGAGTRITAPKPPTKQGYVMKGWYTEKNGGHEWNFNTDYMSGNGFTLYAVFKAET",
+      "topology_changed": true,
+      "update": 30
+    },
+    {
+      "atom_counts": [
+        2799,
+        2790
+      ],
+      "chain": 0.01112300565199733,
+      "chart_jump_rmsd": 0.15225029544305055,
+      "chart_loss_jump": -4.243477185909839e-06,
+      "clash": 0.0,
+      "contact": 0.02148636918632344,
+      "hard_mutations": 59,
+      "loss": -0.020374068621123707,
+      "sequence": "GPLGSITITVPTPIKQRFSDDAFYETLKDNGGGKSVTRAVTQNELNSIDQIIANNSDIKSVRRCQYSPNVTKLFLNMNKLTDICPLANLKNLGWLFLGENKVKHLSSLFDARRQKSLSLGHGGSSDQGGLVHLPQLESLYSGNNKITDITVLSRLTKLDTLSLEDNQSSDIVPLAGLTKLQNLYLSKGSSIHLSRSAGPKTLDVLEAFSDKCLNKPNNHQSNLVVPNTVKAPDGSLVTGEIICDDGDYEKPNVKWHAPEYGNEVSCINYQPVTGGKAKGRFHGRVTSSLKEVHTVSYDVDGTVIKYKVGAGTRITAPKPPTKQGYVMKGWYTEKNGGHEWNFNTDYMSGNGFTLYAVFKAET",
+      "topology_changed": true,
+      "update": 31
+    },
+    {
+      "atom_counts": [
+        2790,
+        2804
+      ],
+      "chain": 0.011828552442850122,
+      "chart_jump_rmsd": 0.3165724828484345,
+      "chart_loss_jump": 2.461267683873808e-05,
+      "clash": 0.0,
+      "contact": 0.02152887928750637,
+      "hard_mutations": 60,
+      "loss": -0.020346024043221358,
+      "sequence": "GPLGSITITVPTPITQKFSDDAFYETLKDNGGGKSVTRAVTQNELNSIDQIIANNSDIKSVRRCQYSPNVTKLFLNWNKLTDICPLANLKNLGWLFLGENKVKHLSSLFDARRQKSLSLGHGGSSDQGGLVHLPQLESLYVGNNKITDITVLSRLTKLDTLSLEDNQSSDIVPLAGLTKLQNLYLSKGSSIHLSRSAGPKTLDVLEAFSGKCWNKPNNHQSNLVVPNTVKATDGSLVTGEIICDDGDYEKPNVKWHAPEYGNEVSCINYQPVTGGKAKGRFHGRVTSSLKEVHTVSYDVDGTVIKYKVTAGTRITAPKPPTKQGYVWKGWYTEKNGGHEWNFNTDYMSGNGFTLYAVFKAET",
+      "topology_changed": true,
+      "update": 32
+    },
+    {
+      "atom_counts": [
+        2804,
+        2803
+      ],
+      "chain": 0.011689593200420987,
+      "chart_jump_rmsd": 0.1428562890792995,
+      "chart_loss_jump": 1.72984074721938e-05,
+      "clash": 0.0,
+      "contact": 0.021543485762847748,
+      "hard_mutations": 61,
+      "loss": -0.02037452644280565,
+      "sequence": "GPLGSVTITVPTPITQKFSDDAFYETLKDNGGGKSVTRAVTQNELNSIDQIIANNSDIKSVRRCQYSPNVTKLFLNWNKLTDICPLANLKNLGWLFLGENKVKHLSSLFDSRRQKSLSLGHGGSSDQGGLVHLPQLESLYVGNNKITDITVLSRLTKLDTLSLEDNQSSDIGPLAGLTKLQNLYLSKGRSCHLSRAAGPKTLDVLEAFSGKCWNKPNNHQSNLVVPNTVKATDGSLVTGEIICDDGDYEKPNVKWHAPEYGNEVSCINYQPVTGGKAKGRFHGRVTSSLKEVHTVSYDVDGTVIKYKVTAGTRITAPKPPTKQGYVWKGWYTEKNGGHEWNFNTDYMSGNGFTLYAVFKAET",
+      "topology_changed": true,
+      "update": 33
+    },
+    {
+      "atom_counts": [
+        2803,
+        2794
+      ],
+      "chain": 0.011288508238715576,
+      "chart_jump_rmsd": 0.16290615858509802,
+      "chart_loss_jump": 6.500980119455643e-05,
+      "clash": 0.0,
+      "contact": 0.02153546956363942,
+      "hard_mutations": 64,
+      "loss": -0.020406618739767863,
+      "sequence": "GPLGSVTITVPTPITQKFSDDAFYETLKDNGGGKSVTQAVTQNELNSIDQIIANNSDIKSVRQCQYSPNVTKLFLNWNKLTDICPLANLKNLGWLFLGENKVKHLSSLFDSRRQKSLSLGHGGSSDQGGLVHLPQLESLYSGNNKITDITVLSRLTKLDTLSLEDNQSSDIGPLAGLTKLQNLYLSKGESCHLSRAAGPKSLDVLEAFSGKCWNKPNNHQSNLVVPNTVKATDGSLVTGEIICDDGDYEKPNVKWHAPEYGNEVHCINYQPVTGGKAKGRFHGRVTSSLKEVHTVSYDVDGTVIKYKVTAGTRITAPKPPTHQGYVWKGWCTEKNGGHEWNFNTDYMSGNGFTLYAVFKAET",
+      "topology_changed": true,
+      "update": 34
+    },
+    {
+      "atom_counts": [
+        2794,
+        2809
+      ],
+      "chain": 0.011136760910806709,
+      "chart_jump_rmsd": 0.18320483300265333,
+      "chart_loss_jump": 8.954100449293234e-08,
+      "clash": 0.0,
+      "contact": 0.0214090176518526,
+      "hard_mutations": 62,
+      "loss": -0.020295341560771927,
+      "sequence": "GPLGSVTITVPTPITQKFSDDAFYETLKDNGGGKSVTQAVTQNELNSIDQIIANNSDIKSVRQCQYSPNVTKLFLNWNKLTDICPLANLKNLGWLFLGENKVKHLSSLFDSRRQKSLSLGHGGSSDQGGLVHLPQLESLYSGNNKITDITVLSRLTKLDTLSLEDNQSSDIGPLAGLTKLQNLYLSKGESCHLSRAAGPKSLDVLEAFSGKCWNKPNNHQSNLVVPNTVKATDGSLVTGEIISDDGDYEKPNVKWHAPEYGNEVHCINYQPVTGGKAKGRFHGRYTSSLKEVHTVSYDVDGTVIKYKVTAGTRITAPKPPTHQGYVWKGWYTEKNGGHEWNFNTDYMSGNDFTLYAVFKAET",
+      "topology_changed": true,
+      "update": 35
+    },
+    {
+      "atom_counts": [
+        2809,
+        2809
+      ],
+      "chain": 0.011012110967406466,
+      "chart_jump_rmsd": 0.05537422224285559,
+      "chart_loss_jump": 1.6109356496610272e-06,
+      "clash": 0.0,
+      "contact": 0.021545255913281533,
+      "hard_mutations": 65,
+      "loss": -0.020444044816540885,
+      "sequence": "GPLGSVTITVPTPITQKFSDDAFYETLKDNGGGKSVTQAVTQNELNSIDQIIANNSDIKSVRQCQYSPNVTKLFLNWNKLTDICPLANLKNLGWLFLGENKVKHLSSLFDSRRQKSKSLGHGGSSDQGGLVHLPQLESLYSGNNKITDITVLSRLTKLDTLSLEDNQSSDIGPLAGLTKLQNLYLSKGESCHLSRAAGPKSLDVLEAFSGKCWNKPNNYQSNLVVPNTVKGTDGSLVTGEIISDDGDYEKPNVKWHAPEYGNEVHCINYQPATGGKAKGRFHGRYTSSLKEVHTVSYDVDGTVIKYKVTAGTRITAPKPPTHQGYVWKGWYTEKNGGHEWNFNTDYMSGNDFTLYAVFKAET",
+      "topology_changed": true,
+      "update": 36
+    },
+    {
+      "atom_counts": [
+        2809,
+        2805
+      ],
+      "chain": 0.010593550545976134,
+      "chart_jump_rmsd": 0.21770393391873202,
+      "chart_loss_jump": 1.7683867238837275e-05,
+      "clash": 0.0,
+      "contact": 0.021535460032980222,
+      "hard_mutations": 69,
+      "loss": -0.02047610497838261,
+      "sequence": "GPLGSVTITVPTPITQKMDDDAFYETLKDNGGGKSVTQAVTQNELNSNDQIIANNSDIKSVRQCGYSPNVTKLFLNWNKLTDICPLANLKNLGWLFLGENKVKHLSSLFDSRRKKSKSLGHGGSSDQGGLVHLPQLESLYSGNNKITDITVLSRLTKLDTLSLEDNQSSDIGPLAGLTKLQNLYLSKGEICHLSRAAGPKSLDVLEAFSCHCWNKPNNYQSNLVVPNTVKGGDGSLVTGEIISDDGDYEKPNVKWHAPEYGNEVHCINYQPATGGKAKGRFHGRYTSSLKEVHTVSYDVDGTVIKYKVTAGTRITAPKPPTHQGYVWKGWYTEKNGGHEWNFNTDYMSGNDFTLYAVFKAET",
+      "topology_changed": true,
+      "update": 37
+    },
+    {
+      "atom_counts": [
+        2805,
+        2797
+      ],
+      "chain": 0.010819960797310152,
+      "chart_jump_rmsd": 0.22636544328557065,
+      "chart_loss_jump": -6.83653332499666e-05,
+      "clash": 0.0,
+      "contact": 0.021710112752421778,
+      "hard_mutations": 71,
+      "loss": -0.020628116672690763,
+      "sequence": "GPLASSTITVPTPITQKMDDDAFYETLKDNGGGKSVTQAVTQNELNSNDQIIANNSDIKSVRKCGYSPNVTKLFLNWNKLTDICPLANLKNLGWLFLGENKVKHLSSLFDSRRKKSLSLGHGGSSDQGGLVHLPQLESLYSGNNKITDITVLSRLTKLDTLSLEDNQSSDIGPLAGLTKLQNLYLSKGETCHLSLAAGPKSLDVLEAFSCHCWNKPNNYQSNLVVPNTVKGGDGSLVTGEIISDDGDYEKPNVKWHAPEYGNEVHCINYQPATGGKAKGRFHGRYTSGLKEVHTVSYDVDGTVIKYKVDAGTRITAPKPPTHTGYVWKGWYTEKNGGHEWNFNTDYMSGNDFTLYAVFKAET",
+      "topology_changed": true,
+      "update": 38
+    },
+    {
+      "atom_counts": [
+        2797,
+        2813
+      ],
+      "chain": 0.010013979863771519,
+      "chart_jump_rmsd": 0.11701120179489378,
+      "chart_loss_jump": 4.83373068138962e-06,
+      "clash": 0.0,
+      "contact": 0.021653024649050424,
+      "hard_mutations": 70,
+      "loss": -0.020651626662673273,
+      "sequence": "GPLASSTITVPTPIFQKMDDDAFYETLKDNGGGKSVTQAVTQNELNSNDQIIANNSDIKSVRKCGYSPNVTKLFLNWNKLTDICPLANLKNLGWLFLGENKVKHLSSLFDSRRKKSLSLGHGGSSDQGGLVHLPQLESLYSGNNKITDITVLSRLTKLDTLSLEDNQSSDIGPLAGLTKLQNLYLSKHETCHLPRAAGPKSLDVLEAFSCHCWNKPNNYQSNLVVPNTVKGGDGSLVTGEIISDDGDYEKPNVKWHAPEYGNEVHCINYQPVTGGKAKGRFHGRYTSGLKEVHTVSYDVDGTVIKYKVDAGTRITAPKPPTHTGYVWKGWYTEKNGGHEWNFNTDYMSGNDFTLYAVFKAET",
+      "topology_changed": true,
+      "update": 39
+    },
+    {
+      "atom_counts": [
+        2813,
+        2798
+      ],
+      "chain": 0.010946605755439412,
+      "chart_jump_rmsd": 0.10149887471274728,
+      "chart_loss_jump": 5.147943328866547e-05,
+      "clash": 0.0,
+      "contact": 0.021697923185437108,
+      "cross_losses": {
+        "1": -0.020603262609893168,
+        "2": -0.020681712526149212
+      },
+      "hard_mutations": 73,
+      "loss": -0.020603262609893168,
+      "sequence": "GPLASSTITVPTPIFQKMDDDAFYETLKDNGGGKSVTQAVTQNELNSNDQIIANNSDIKSVRKCGYSPNVTKLFLNWNKLTDIGPLANLKNLGWLRLGENKVKHLSSLFDSRRKKSLSLGHGGSSDQGGLVHLPQLESLYSGNNKITDITVLSRLTKLDTLSLEDNQSSDIGPLAGLTKLQNLYLSKHQTCHLPRAAGAKSLDVLEAFSCHCWNKPNNYQSNLVVPNTAKGGDGSLVTGEIISDDGDYEKPNVKWHAPEYGNEVHCINYQPVTGGKAKGRFHGRYTSGLKEVHTVSEDVDGTVIKYKVDAGTRITAPKPPTHTGYVLKGWYTEKNGGHEWNFNTDYMSGNDFTLYAVFKAET",
+      "topology_changed": true,
+      "update": 40
+    },
+    {
+      "atom_counts": [
+        2798,
+        2801
+      ],
+      "chain": 0.010507987119899774,
+      "chart_jump_rmsd": 0.09469991679249157,
+      "chart_loss_jump": -1.6795699241924783e-05,
+      "clash": 0.0,
+      "contact": 0.021842865645165372,
+      "hard_mutations": 73,
+      "loss": -0.020792066933175396,
+      "sequence": "GPLASSTITVPTPIFQKMDDDAFYETLKDNGGGKSVTQAVTQNELNSNDQIIANNSDIKSVRKCGYSPNVTKLFLNMNKLTDIGPLANLKNLGWLRLGENKVKHLSSLFDSRRKKSLSLGHGGSSDQGGLVHLPQLESLYSGNNKITDITVLSRLTKLDTLSLEDNQSSDIGPLAGLTKLQNLYLSKHQTCHLPRAAGAKNLDVLEAFSCHCWNKPNNYQSNLVVPNTAKNGDGSPVTGEIISGDGDYEKPNVKWHAPEYGNEVHYINYQPVTGGKAKGRFHGRYTSSLKEVHTVSEDVDGTVIKYKVDAGTRITAPKPPTHTGYVLKGWYTEKNGGHEWNFNTDYMSGNDFTLYAVFKAET",
+      "topology_changed": true,
+      "update": 41
+    },
+    {
+      "atom_counts": [
+        2801,
+        2811
+      ],
+      "chain": 0.011385306734710372,
+      "chart_jump_rmsd": 0.3178368466823033,
+      "chart_loss_jump": 4.047849443741813e-05,
+      "clash": 0.0,
+      "contact": 0.021948369105363137,
+      "hard_mutations": 74,
+      "loss": -0.0208098384318921,
+      "sequence": "GPLASSTITVPTPIFQKMDDDAFYETLKDNGGGKSVTQAVTQNFLNSNDQIIANNSDIKSVRKCGYSPNVTKLFLNMNKLTDIGPLANLKNLGWLRLGENKVKHLSSLFDSRRNKSLSLGHGGSSDQGGLVHLPQLESLYSGNNKITDITVLSRLTKLDTLSLEDNQSSDIGPLAGLTKLQNLYLSKHQTCHLPRAAGAKNLDVLEAFSCHCWNKPNNYQSNLVVANTAKNGDGSPVTGEIISGDGDYEKPNVKWHAPEYWNEVHYINYQPVTGGKAKGRFHGRYTSSLKEVHTVSEDVDGTVIKYKVDAGTRITAPKPPTHQGYVPKGWYTEKNGGHEWNFNTDYMSGNDFTLYAVFKAET",
+      "topology_changed": true,
+      "update": 42
+    },
+    {
+      "atom_counts": [
+        2811,
+        2806
+      ],
+      "chain": 0.01095706243765362,
+      "chart_jump_rmsd": 0.04172545248213772,
+      "chart_loss_jump": 4.32305687341622e-07,
+      "clash": 0.0,
+      "contact": 0.02187941511835772,
+      "hard_mutations": 76,
+      "loss": -0.02078370887459236,
+      "sequence": "GPLASSTITVPTPIFQKMDDDAFYETLKDNGGGKSVTQAVTQNFLNSNDQIIANNSDIKSVRKCGYSPNVTKLFLNMNKLTDIGPLANLKNLGWLRLGENKVKHLSSLFDSRRNKSLSLGHGGSSDQGGLVHLPQLESLYSGNNKITDITVLSRLTKLDTLSLEDNQSSDIGPLAGLTKLQNLYLSKHQTCHLPRAAGAKNLDVLEAFSCHCWNKPNNYQSNLVVANTAKNGDGSPVTGEIISGDGDYEKPNVEWHAPEYWNEVHYINYQPVTGGKAKGRFHGRYTSSLKEVHTVSEDVDGTVIKYKVDAGTRITAPKPPTHGGYVPKGWYTEKNGGHEWNFNTDYMSGNDFTLYAVFKAET",
+      "topology_changed": true,
+      "update": 43
+    },
+    {
+      "atom_counts": [
+        2806,
+        2799
+      ],
+      "chain": 0.011811517774685035,
+      "chart_jump_rmsd": 0.07666814261779317,
+      "chart_loss_jump": 1.4338565800939979e-05,
+      "clash": 0.0,
+      "contact": 0.021856831488346676,
+      "hard_mutations": 79,
+      "loss": -0.02067567971087817,
+      "sequence": "GPLASSTITVPTPIFQKMDDDAFYETLKDNGGGKSVTQAVTQNFLNSNDQIIANNSDIKSVRKCGYSPNVTKLFPNMNKLTDMGPLANLKNLGWLRLGENKVKHLSSLFDSRRNKSLSLGHGGSSDQGGLVHLPQLESLYSGNGKITDITVLSRLTKLDTLSLEDNQSSDIGPLAGLTKLQNLYLSKHQTCHLPRAAGAKNLDVLEAFSCHCWNKPNNYQSNLVVANTAKNTDGSPVTGEIISGDGDYEKPNVEWHAPEYWNEVHHINYQPGTGGKAKGRFHGRYTSSLKEVHTVSEDVDGTVIKYKVDAGTRITAPKPPTHGGYVPKGWYTEKNGGHEWNFNTDYMSGNDFTLYAVFKAET",
+      "topology_changed": true,
+      "update": 44
+    },
+    {
+      "atom_counts": [
+        2799,
+        2802
+      ],
+      "chain": 0.010438437716560181,
+      "chart_jump_rmsd": 0.0916514899047615,
+      "chart_loss_jump": -9.324607612808816e-06,
+      "clash": 0.0,
+      "contact": 0.022028059432828696,
+      "hard_mutations": 78,
+      "loss": -0.020984215661172676,
+      "sequence": "GPLASSTITVPTPIFQKMDDDAFYETLKDNGGGKSVTQAVTQNFLNSNDQIIANNSDIKSVRKCGYGPNVTKLFPNMNKLTDMGPLANLKNLGWLRLGENKVKHLSSLFDIRRNKSLSLGHGGSSDQGGLVHLPQLESLYSGNGKITDITVLSRLTKLDTLSLEDNQSSDIGPLAGLTKLQNLYLSKHQTCHLPRAAGAKNLDVLEAFSCHCWNKPNNYQSNLVVANTAKNTDGSPVTGEIISGDGDYEKPNVEWHAPEYWNEVHHINYQPVTGGKAKGRFHGRYTSSLKEVHTVSEDVDGTVIKYKVDAGTRITAPKPPTHGGYVPKGWYTEKNGGHEWNFNTDYMSGNDFTLYAVFKAET",
+      "topology_changed": true,
+      "update": 45
+    },
+    {
+      "atom_counts": [
+        2802,
+        2793
+      ],
+      "chain": 0.010419671367395423,
+      "chart_jump_rmsd": 0.16670642877313932,
+      "chart_loss_jump": 0.00013601839033408614,
+      "clash": 0.0,
+      "contact": 0.02199926715619995,
+      "hard_mutations": 79,
+      "loss": -0.02095730001946041,
+      "sequence": "GPLASSTITVPTPIFQKMDDDAFYETLKDNGGGKSVTQAVTQNFLNSNDQIIANNSDIKSVRKCGYGPNVTKLFPNLNKLTDMGPLANLKNLGWLRLGENKVKHLSSLFDIRRNKSLSLGHGGSSDMGGLVHLPQLESLYSGNGKITDITVLSRLTKLDTLSLEDNQSSDIGPLAGLTKLQNLYLSKHQTCHLPRAAGAKNLDVLEAFSCHCWNKPNNYQSNLVVANTAKNTDGSPVTGEIISDDGDNEKPNVEWHAPEYWNEVHHICYQPVTGGKAKGRFHGRYTSSLKEVHTVSEDVDGTVIKYKVDAGTRITAPKPPTHGGYVPKGWYTEKNGGHELNFNTDYMSGNDFTLYAVFKAET",
+      "topology_changed": true,
+      "update": 46
+    },
+    {
+      "atom_counts": [
+        2793,
+        2804
+      ],
+      "chain": 0.011203112564100072,
+      "chart_jump_rmsd": 0.19613527603908706,
+      "chart_loss_jump": 2.9746803638666663e-05,
+      "clash": 0.0,
+      "contact": 0.021951873069747885,
+      "hard_mutations": 78,
+      "loss": -0.020831561813337878,
+      "sequence": "GPLASSTITVPTPIFQKMDDDAFYETLKDNGGGKSVTQAVTQNFLNSNDQIIANNSDIKSVRKCGYGPNVTKLFPNLNKLTDIGPLANLKNLGWLRLGENKVKHLSSLFDIRRNKSLSLGHGGSSDMGGLVHLPQLESLYSGNGKITDITVLSRLTKLDTLSLEDAQSSDILPLAGLTKLQNLYLSKHQTCHLPHAAGAKTLDVLEAFSCHCWNKPNNYQSNLVVANTAKNGDGSPVTGEIISDDGDYEKPNVEWHAPEYWNEVHHICYQPVTGGKAKGRFHGRYTSSLKEVHTVSEDVDGTVIKYKVDAGTRITAPKPPTHQGYVPKGWYTEKNGGHEWNFNTDYMSGNDFTLYAVFKAET",
+      "topology_changed": true,
+      "update": 47
+    },
+    {
+      "atom_counts": [
+        2804,
+        2807
+      ],
+      "chain": 0.033940539898672364,
+      "chart_jump_rmsd": 0.15358717384648793,
+      "chart_loss_jump": 0.00010964898106309573,
+      "clash": 0.0,
+      "contact": 0.0219629838806572,
+      "hard_mutations": 81,
+      "loss": -0.01856892989078996,
+      "sequence": "GPLASSTITVPTPIFQKMDDDAFYETLKDNGGGKSVTQAVTQNFLNSNDQIIANNSDIKSVRKCGYGPNVTKLQPNLNKPTDIGPLANLKNLGWLRLGENKVKHLSSLFDIRRCKSLSLGHGGSSDMGGLVHVPQLESLYSGNGKITDITVLSRLTKLDTLSLEDAQSSDILPLAGLTKLQNLYLSKHQTCHLPHAAGAKTLDVLEAFSCHCWNKPNNYQSNLVVANTAKNTDGSPVTGEIISDDGDYEKPNVEWHAPEYWNEVHYICYQPVTGGKAKGRFHGRYTSSLKEVHTVSEDVDNTVIKYKVDAGTRITAPKPPTHQGYVPKGWYTEKNGGHEWNFNTDYMSGNDFTLYAVFKAET",
+      "topology_changed": true,
+      "update": 48
+    },
+    {
+      "atom_counts": [
+        2807,
+        2795
+      ],
+      "chain": 0.011179525466431724,
+      "chart_jump_rmsd": 0.17222729008536966,
+      "chart_loss_jump": 2.05219663879444e-05,
+      "clash": 0.0,
+      "contact": 0.02180805411950996,
+      "hard_mutations": 80,
+      "loss": -0.020690101572866788,
+      "sequence": "GPLASSTITVPTPIYQKMDDDAFYETGKDNGGGKSVTQAVTQNFLNSNDQIIANNSDIKSVRKCGYGPNVTKLQPNLNKPTDIQPLANLKNLGWLRLGENKVKHLSSLFDIRRCKSLSLGHGGSSDMGGLVHLPQLESLYSGNGKITDITVLSRLTKLDTLSLEDNQSSDILPLAGLTKLQNLYLSKCQTCHLGHAAGAKTLDVLEAFSCHCWNKPINYQSNLVVANGAKNTDGSPVTGEIISDDGDYEKPNVEWHAPEYWNEVHYICYQPVTGGKAKGRCHGRYTSSLKEVHTVSCDVDNTVIKYKVDAGTRITAPKPPTHQGYVPKGWYTEKNGGHEWNFNTDYMSGNDFTLYAVFKAET",
+      "topology_changed": true,
+      "update": 49
+    },
+    {
+      "atom_counts": [
+        2795,
+        2784
+      ],
+      "chain": 0.011267880934184956,
+      "chart_jump_rmsd": 0.09225106132822618,
+      "chart_loss_jump": 7.0970119571134305e-06,
+      "clash": 0.0,
+      "contact": 0.02183440330530417,
+      "cross_losses": {
+        "1": -0.020707615211885674,
+        "2": -0.020996585992663505
+      },
+      "hard_mutations": 81,
+      "loss": -0.020707615211885674,
+      "sequence": "GPLASSTITVPTPIYQKMDDDAFYETGKDNGGGKSVTQAVTQNFLNSNDQIIANNSDIKSVRKCGYGPNVTKLQPNLNKLTDMQPLANLKNLGWLRLGEGKVKHLSSLFDIRRCKSLSLGHGGSSDMGGLVHLPQLESLYSGNGKITDITVLSRLTKLDTLSLEDNQSSDILPLAGLTKLQNLYLSKCQTCHLGHAAGAKNLDVLEAGSCHCWNKPINYQSNLVVPNGAKNTDGSPVTGEIISDDGDYEKPNVEWHAPEYWNEVHYICYQPVTGGKAKGRCHGRYTSSLKEVHTVSCDVDNTVIKYKVDAGTRITAPKPPTHQGYVPKGWYTEKGGGHEWNFNTDYMSGNDFTLYAVFKAET",
+      "topology_changed": true,
+      "update": 50
+    }
+  ]
+}
