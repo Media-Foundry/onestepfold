@@ -41,3 +41,11 @@ Initial probe stopped before backward because the native runner removes feature
 keys in place. V2 copies the prepared feature dictionary at entry; original failed
 artifacts retained. Active snapshot code_v2, PID1670561, probe_v2.log and
 short_probe_v2/report.json.
+
+V2 completed on100 residues: both S1/S2 conditioning gradients finite, nonzero,
+and bitwise repeatable. S1 directional finite difference relative errors were
+0.0093/0.0863/0.3797/1.0776 for h=.1/.01/.001/.0001. This is NOT a passed
+finite-difference gate. Native replay max component error was0.00097656A.
+Inspection identified Euler multiply/divide ordering different from native despite
+algebraic equivalence. V3 restores native operation ordering; PID1671213,
+code_v3, short_probe_v3 and probe_v3.log. Its acceptance remains pending.

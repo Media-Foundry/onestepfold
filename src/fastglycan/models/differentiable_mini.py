@@ -181,7 +181,8 @@ def fixed_graph_coordinates(model, features, initial_coordinate, *, steps=1):
             chunk_size=None, inplace_safe=False,
             enable_efficient_fusion=model.configs.enable_efficient_fusion)
         # Preserve native Euler arithmetic, including the last step.
-        x = x + (next_sigma - sigma) * (x - denoised) / sigma
+        delta = (x - denoised) / sigma
+        x = x + (next_sigma - sigma) * delta
     return x
 
 
