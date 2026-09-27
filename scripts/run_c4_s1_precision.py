@@ -31,15 +31,16 @@ def tensor_dtypes(value):
     return []
 
 def main():
-    p=argparse.ArgumentParser();p.add_argument('--root',type=Path,required=True);p.add_argument('--worker',type=int,required=True);a=p.parse_args();root=a.root.resolve()
-    lock=rt.load_json(root/'lock.json');plock=rt.load_json(root/'precision_lock.json');source=Path(__file__).resolve().parents[1]
+    p=argparse.ArgumentParser();p.add_argument('--root',type=Path,required=True);p.add_argument('--worker',type=int,required=True);p.add_argument('--preflight-only',action='store_true');a=p.parse_args();root=a.root.resolve()
+    lock=rt.load_json(root/'lock.json');plock=rt.load_json(root/'precision_lock_v2.json');source=Path(__file__).resolve().parents[1]
     assert sha256(root/'lock.json')==plock['parent_lock_sha256']
-    for rel,digest in rt.load_json(root/'precision_source_manifest.json')['files'].items():assert sha256(source/rel)==digest,rel
+    for rel,digest in rt.load_json(root/'precision_source_manifest_v2.json')['files'].items():assert sha256(source/rel)==digest,rel
     seed=lock['seeds'][a.worker//2];groups=lock['panel_b'][a.worker%2::2]
+    if a.preflight_only:groups=groups[:1]
     reference_folder=root/f'b_{a.worker}';complete=rt.load_json(reference_folder/'complete.json');assert complete['complete'] and sha256(reference_folder/'progress.json')==complete['progress_sha256']
     refs={(r['group_id'],r['setting']):r for r in rt.load_json(reference_folder/'progress.json')['records'] if r['condition']=='controlled'}
     old=Path(lock['old_root']);prep=rt.load_json(old/'repeat/preparation.json');new=rt.load_json(root/'prepare_b/preparation.json')
-    folder=root/f'precision_{a.worker}';folder.mkdir(exist_ok=False);runner=rt.runner_setup(folder/'work');runner.configs.dtype='fp32'
+    folder=root/(f'precision_preflight_v2_{a.worker}' if a.preflight_only else f'precision_v2_{a.worker}');folder.mkdir(exist_ok=False);runner=rt.runner_setup(folder/'work');runner.configs.dtype='fp32'
     assert runner.model.configs.dtype=='fp32'
     assert {p.dtype for p in runner.model.parameters()}=={torch.float32}
     env=rt.environment(runner)
@@ -49,9 +50,12 @@ def main():
     dtypes={};handles=[]
     for name,mod in [('pairformer',runner.model.pairformer_stack),('diffusion',runner.model.diffusion_module)]:
         def hook(module,args,kwargs,name=name):
-            dtypes.setdefault(name,[]).append(dict(autocast_enabled=torch.is_autocast_enabled('cuda'),dtypes=sorted(set(tensor_dtypes((args,kwargs))))))
+            dtypes.setdefault(name,[]).append(dict(autocast_enabled=torch.is_autocast_enabled('cuda'),autocast_dtype=str(torch.get_autocast_dtype('cuda')),dtypes=sorted(set(tensor_dtypes((args,kwargs))))))
         handles.append(mod.register_forward_pre_hook(hook,with_kwargs=True))
-    result=dict(complete=False,seed=seed,worker=a.worker,precision='fp32_cli',records=[],precision_lock_sha256=sha256(root/'precision_lock.json'));start=time.monotonic()
+        def output_hook(module,args,output,name=name):
+            dtypes[name][-1]['output_dtypes']=sorted(set(tensor_dtypes(output)))
+        handles.append(mod.register_forward_hook(output_hook))
+    result=dict(complete=False,seed=seed,worker=a.worker,precision='fp32_cli',records=[],precision_lock_sha256=sha256(root/'precision_lock_v2.json'));start=time.monotonic()
     for index,g in enumerate(groups):
         if g in prep['packets']:pack=rt.verify_packet(old/'repeat/packets'/f'{g}.pt',prep['packets'][g])
         else:pack=rt.verify_packet(root/'prepare_b/packets'/f'{g}.pt',new['packets'][g])
@@ -65,8 +69,10 @@ def main():
             for k in ('initial_coordinate','first_noisy'):assert np.array_equal(control.arrays[k],arrays[k]),(g,s,k,'noise mismatch')
             assert not r['mc_dropout_applied']
             assert len(dtypes['pairformer'])==4 and len(dtypes['diffusion'])==rt.SETTINGS[s][1]
-            assert all(not x['autocast_enabled'] for v in dtypes.values() for x in v)
+            write_json(folder/'latest_dtype_trace.json',dtypes)
+            assert all(not x['autocast_enabled'] or x['autocast_dtype']=='torch.float32' for v in dtypes.values() for x in v)
             assert all('torch.bfloat16' not in x['dtypes'] and 'torch.float16' not in x['dtypes'] for v in dtypes.values() for x in v)
+            assert all(set(x['output_dtypes'])<={'torch.float32'} for v in dtypes.values() for x in v)
             r['dtype_trace']=json.loads(json.dumps(dtypes));r['controlled']=control.record
             hashes.append(control.record['conditioning_sha256'])
             if index==0 and s=='c4_s1':

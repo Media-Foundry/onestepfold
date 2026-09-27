@@ -40,10 +40,10 @@ def summarize(delta):
     return out
 
 def main():
-    p=argparse.ArgumentParser();p.add_argument('--root',type=Path,required=True);p.add_argument('--precision',action='store_true');a=p.parse_args();root=a.root.resolve()
+    p=argparse.ArgumentParser();p.add_argument('--root',type=Path,required=True);p.add_argument('--precision',action='store_true');p.add_argument('--precision-prefix',default='precision_');a=p.parse_args();root=a.root.resolve()
     lock=json.loads((root/'lock.json').read_text());manifest=json.loads((root/'manifest.json').read_text());old=Path(lock['old_root'])
     names=[f'a_{i}' for i in range(16)]+[f'b_{i}' for i in range(8)]
-    if a.precision:names += [f'precision_{i}' for i in range(8)]
+    if a.precision:names += [f'{a.precision_prefix}{i}' for i in range(8)]
     with concurrent.futures.ProcessPoolExecutor(max_workers=8) as ex:chunks=list(ex.map(score_folder,[(str(root),n,manifest) for n in names]))
     records=[r for chunk in chunks for r in chunk]
     for i in range(16):
