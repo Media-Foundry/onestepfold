@@ -1,0 +1,550 @@
+{
+  "comparisons": {
+    "esm25_36": {
+      "fields": {
+        "hidden": {
+          "absolute_l2_error": 1.030306995524502e-05,
+          "actual_norm": 1.8135645370631865,
+          "cosine": 0.9999999999838429,
+          "elements": 501760,
+          "low_reference_norm": false,
+          "max_absolute_error": 5.545368624571001e-07,
+          "reference_norm": 1.813564230706589,
+          "relative_l2_error": 5.6811166545950264e-06,
+          "zero_reference": false
+        }
+      },
+      "low_norm_annotation_threshold": 1e-10,
+      "total": {
+        "absolute_l2_error": 1.030306995524502e-05,
+        "actual_norm": 1.8135645370631865,
+        "cosine": 0.9999999999838429,
+        "elements": 501760,
+        "low_reference_norm": false,
+        "max_absolute_error": 5.545368624571001e-07,
+        "reference_norm": 1.813564230706589,
+        "relative_l2_error": 5.6811166545950264e-06,
+        "zero_reference": false
+      }
+    },
+    "initialization": {
+      "fields": {
+        "esm_token_embedding": {
+          "absolute_l2_error": 5.692844779375e-05,
+          "actual_norm": 122.98767057239215,
+          "cosine": 0.9999999999998701,
+          "elements": 496640,
+          "low_reference_norm": false,
+          "max_absolute_error": 3.979597801517798e-06,
+          "reference_norm": 122.98766984344762,
+          "relative_l2_error": 4.6287931030984535e-07,
+          "zero_reference": false
+        },
+        "ref_atom_name_chars": {
+          "absolute_l2_error": 1.5148894331083338e-06,
+          "actual_norm": 3.940788608105215,
+          "cosine": 0.999999999999936,
+          "elements": 393472,
+          "low_reference_norm": false,
+          "max_absolute_error": 2.223804738132884e-07,
+          "reference_norm": 3.940789040826848,
+          "relative_l2_error": 3.844127197406342e-07,
+          "zero_reference": false
+        },
+        "ref_charge": {
+          "absolute_l2_error": 1.1933215826442766e-07,
+          "actual_norm": 0.3181909324577711,
+          "cosine": 0.9999999999999322,
+          "elements": 1537,
+          "low_reference_norm": false,
+          "max_absolute_error": 5.92755446532367e-08,
+          "reference_norm": 0.3181909371937801,
+          "relative_l2_error": 3.750331776160981e-07,
+          "zero_reference": false
+        },
+        "ref_element": {
+          "absolute_l2_error": 9.14147885593747e-07,
+          "actual_norm": 2.410314382672393,
+          "cosine": 0.9999999999999559,
+          "elements": 196736,
+          "low_reference_norm": false,
+          "max_absolute_error": 1.8555550965193568e-07,
+          "reference_norm": 2.410314703790221,
+          "relative_l2_error": 3.7926494999024364e-07,
+          "zero_reference": false
+        },
+        "ref_mask": {
+          "absolute_l2_error": 5.035143478347794e-07,
+          "actual_norm": 1.4549938091642054,
+          "cosine": 0.9999999999999415,
+          "elements": 1537,
+          "low_reference_norm": false,
+          "max_absolute_error": 2.109787900494986e-07,
+          "reference_norm": 1.4549937268024962,
+          "relative_l2_error": 3.4605946304751836e-07,
+          "zero_reference": false
+        },
+        "ref_pos": {
+          "absolute_l2_error": 4.812799112532852e-09,
+          "actual_norm": 0.011944271631386925,
+          "cosine": 0.9999999999999265,
+          "elements": 4611,
+          "low_reference_norm": false,
+          "max_absolute_error": 1.6775591870493711e-09,
+          "reference_norm": 0.011944272602214744,
+          "relative_l2_error": 4.0293781570595166e-07,
+          "zero_reference": false
+        },
+        "restype": {
+          "absolute_l2_error": 4.621589518742378e-06,
+          "actual_norm": 15.386083431160968,
+          "cosine": 0.9999999999999571,
+          "elements": 6208,
+          "low_reference_norm": false,
+          "max_absolute_error": 2.976487937900174e-06,
+          "reference_norm": 15.386084405220842,
+          "relative_l2_error": 3.0037463704372826e-07,
+          "zero_reference": false
+        }
+      },
+      "identity_fields": [
+        "esm_token_embedding",
+        "restype",
+        "ref_pos",
+        "ref_charge",
+        "ref_mask",
+        "ref_element",
+        "ref_atom_name_chars"
+      ],
+      "low_norm_annotation_threshold": 1e-10,
+      "total": {
+        "absolute_l2_error": 5.714547754864024e-05,
+        "actual_norm": 124.04134996673729,
+        "cosine": 0.9999999999997713,
+        "elements": 1100741,
+        "low_reference_norm": false,
+        "max_absolute_error": 3.979597801517798e-06,
+        "reference_norm": 124.04134938384045,
+        "relative_l2_error": 4.6069700009313907e-07,
+        "zero_reference": false
+      },
+      "without_explicit_identity": {
+        "fields": {
+          "esm_token_embedding": {
+            "absolute_l2_error": 5.692844779375e-05,
+            "actual_norm": 122.98767057239215,
+            "cosine": 0.9999999999998701,
+            "elements": 496640,
+            "low_reference_norm": false,
+            "max_absolute_error": 3.979597801517798e-06,
+            "reference_norm": 122.98766984344762,
+            "relative_l2_error": 4.6287931030984535e-07,
+            "zero_reference": false
+          },
+          "ref_atom_name_chars": {
+            "absolute_l2_error": 1.5148894331083338e-06,
+            "actual_norm": 3.9290067918388143,
+            "cosine": 0.9999999999999313,
+            "elements": 393472,
+            "low_reference_norm": false,
+            "max_absolute_error": 2.223804738132884e-07,
+            "reference_norm": 3.9290072260366142,
+            "relative_l2_error": 3.8556544845973177e-07,
+            "zero_reference": false
+          },
+          "ref_charge": {
+            "absolute_l2_error": 1.1933215826442766e-07,
+            "actual_norm": 0.31293127157354284,
+            "cosine": 0.9999999999999242,
+            "elements": 1537,
+            "low_reference_norm": false,
+            "max_absolute_error": 5.92755446532367e-08,
+            "reference_norm": 0.31293127634862916,
+            "relative_l2_error": 3.813366297444893e-07,
+            "zero_reference": false
+          },
+          "ref_element": {
+            "absolute_l2_error": 9.14147885593747e-07,
+            "actual_norm": 2.407671621020953,
+            "cosine": 0.9999999999999197,
+            "elements": 196736,
+            "low_reference_norm": false,
+            "max_absolute_error": 1.8555550965193568e-07,
+            "reference_norm": 2.407671942602969,
+            "relative_l2_error": 3.796812470246459e-07,
+            "zero_reference": false
+          },
+          "ref_mask": {
+            "absolute_l2_error": 5.035143478347739e-07,
+            "actual_norm": 1.451407872082201,
+            "cosine": 0.9999999999999409,
+            "elements": 1537,
+            "low_reference_norm": false,
+            "max_absolute_error": 2.109787900494986e-07,
+            "reference_norm": 1.451407788917064,
+            "relative_l2_error": 3.469144589684613e-07,
+            "zero_reference": false
+          },
+          "ref_pos": {
+            "absolute_l2_error": 4.812799112532774e-09,
+            "actual_norm": 0.011942535920380007,
+            "cosine": 0.9999999999999234,
+            "elements": 4611,
+            "low_reference_norm": false,
+            "max_absolute_error": 1.6775591870493711e-09,
+            "reference_norm": 0.011942536892135773,
+            "relative_l2_error": 4.0299637807290586e-07,
+            "zero_reference": false
+          },
+          "restype": {
+            "absolute_l2_error": 4.621589518742378e-06,
+            "actual_norm": 15.386083431160968,
+            "cosine": 0.9999999999999571,
+            "elements": 6208,
+            "low_reference_norm": false,
+            "max_absolute_error": 2.976487937900174e-06,
+            "reference_norm": 15.386084405220842,
+            "relative_l2_error": 3.0037463704372826e-07,
+            "zero_reference": false
+          }
+        },
+        "low_norm_annotation_threshold": 1e-10,
+        "total": {
+          "absolute_l2_error": 5.714547754864024e-05,
+          "actual_norm": 124.04086950112288,
+          "cosine": 0.9999999999997483,
+          "elements": 1100741,
+          "low_reference_norm": false,
+          "max_absolute_error": 3.979597801517798e-06,
+          "reference_norm": 124.04086891822455,
+          "relative_l2_error": 4.6069878457812235e-07,
+          "zero_reference": false
+        }
+      }
+    },
+    "recycle1": {
+      "fields": {
+        "esm_token_embedding": {
+          "absolute_l2_error": 0.0,
+          "actual_norm": 0.0,
+          "cosine": null,
+          "elements": 496640,
+          "low_reference_norm": true,
+          "max_absolute_error": 0.0,
+          "reference_norm": 0.0,
+          "relative_l2_error": null,
+          "zero_reference": true
+        },
+        "ref_atom_name_chars": {
+          "absolute_l2_error": 0.0,
+          "actual_norm": 0.3298317218211098,
+          "cosine": 1.0000000000000413,
+          "elements": 393472,
+          "low_reference_norm": false,
+          "max_absolute_error": 0.0,
+          "reference_norm": 0.3298317218211098,
+          "relative_l2_error": 0.0,
+          "zero_reference": false
+        },
+        "ref_charge": {
+          "absolute_l2_error": 0.0,
+          "actual_norm": 0.057639963290215715,
+          "cosine": 1.0,
+          "elements": 1537,
+          "low_reference_norm": false,
+          "max_absolute_error": 0.0,
+          "reference_norm": 0.057639963290215715,
+          "relative_l2_error": 0.0,
+          "zero_reference": false
+        },
+        "ref_element": {
+          "absolute_l2_error": 0.0,
+          "actual_norm": 0.12708677503839663,
+          "cosine": 0.99999999999998,
+          "elements": 196736,
+          "low_reference_norm": false,
+          "max_absolute_error": 0.0,
+          "reference_norm": 0.12708677503839663,
+          "relative_l2_error": 0.0,
+          "zero_reference": false
+        },
+        "ref_mask": {
+          "absolute_l2_error": 0.0,
+          "actual_norm": 0.11367110339448575,
+          "cosine": 0.9999999999999992,
+          "elements": 1537,
+          "low_reference_norm": false,
+          "max_absolute_error": 0.0,
+          "reference_norm": 0.11367110339448575,
+          "relative_l2_error": 0.0,
+          "zero_reference": false
+        },
+        "ref_pos": {
+          "absolute_l2_error": 0.0,
+          "actual_norm": 0.0002186709780550637,
+          "cosine": 0.9999999999999999,
+          "elements": 4611,
+          "low_reference_norm": false,
+          "max_absolute_error": 0.0,
+          "reference_norm": 0.0002186709780550637,
+          "relative_l2_error": 0.0,
+          "zero_reference": false
+        },
+        "restype": {
+          "absolute_l2_error": 0.0,
+          "actual_norm": 0.0,
+          "cosine": null,
+          "elements": 6208,
+          "low_reference_norm": true,
+          "max_absolute_error": 0.0,
+          "reference_norm": 0.0,
+          "relative_l2_error": null,
+          "zero_reference": true
+        },
+        "s": {
+          "absolute_l2_error": 1.3213503349535761e-11,
+          "actual_norm": 5.345874758915807e-06,
+          "cosine": 0.9999999999970278,
+          "elements": 74496,
+          "low_reference_norm": false,
+          "max_absolute_error": 2.271414965748136e-12,
+          "reference_norm": 5.345872642513021e-06,
+          "relative_l2_error": 2.4717205652180063e-06,
+          "zero_reference": false
+        },
+        "s_init": {
+          "absolute_l2_error": 1.1050387541690419e-10,
+          "actual_norm": 0.004340756453551475,
+          "cosine": 0.9999999999999866,
+          "elements": 74496,
+          "low_reference_norm": false,
+          "max_absolute_error": 7.241950230685648e-12,
+          "reference_norm": 0.004340756455797961,
+          "relative_l2_error": 2.5457285277846867e-08,
+          "zero_reference": false
+        },
+        "s_inputs": {
+          "absolute_l2_error": 1.2151883461705743e-05,
+          "actual_norm": 4.708898205861111,
+          "cosine": 0.9999999999986519,
+          "elements": 87106,
+          "low_reference_norm": false,
+          "max_absolute_error": 1.1697222574991173e-06,
+          "reference_norm": 4.7089075754085625,
+          "relative_l2_error": 2.580616261225174e-06,
+          "zero_reference": false
+        },
+        "z": {
+          "absolute_l2_error": 0.0062011611513509675,
+          "actual_norm": 2537.126473719336,
+          "cosine": 0.9999999999985922,
+          "elements": 4817408,
+          "low_reference_norm": false,
+          "max_absolute_error": 0.0002820873005333624,
+          "reference_norm": 2537.131016607097,
+          "relative_l2_error": 2.4441627613081546e-06,
+          "zero_reference": false
+        },
+        "z_init": {
+          "absolute_l2_error": 1.992208814966862e-06,
+          "actual_norm": 0.8043590723057368,
+          "cosine": 0.9999999999986288,
+          "elements": 4817408,
+          "low_reference_norm": false,
+          "max_absolute_error": 7.946394596849982e-08,
+          "reference_norm": 0.8043604834235909,
+          "relative_l2_error": 2.476761173656176e-06,
+          "zero_reference": false
+        }
+      },
+      "identity_fields": [
+        "s_init",
+        "z_init",
+        "s_inputs",
+        "esm_token_embedding",
+        "restype",
+        "ref_pos",
+        "ref_charge",
+        "ref_mask",
+        "ref_element",
+        "ref_atom_name_chars"
+      ],
+      "low_norm_annotation_threshold": 1e-10,
+      "total": {
+        "absolute_l2_error": 0.006201173377840834,
+        "actual_norm": 2537.1309988926077,
+        "cosine": 0.9999999999776218,
+        "elements": 10971655,
+        "low_reference_norm": false,
+        "max_absolute_error": 0.0002820873005333624,
+        "reference_norm": 2537.1355417901027,
+        "relative_l2_error": 2.4441632209627756e-06,
+        "zero_reference": false
+      },
+      "without_explicit_identity": {
+        "fields": {
+          "esm_token_embedding": {
+            "absolute_l2_error": 0.0,
+            "actual_norm": 0.0,
+            "cosine": null,
+            "elements": 496640,
+            "low_reference_norm": true,
+            "max_absolute_error": 0.0,
+            "reference_norm": 0.0,
+            "relative_l2_error": null,
+            "zero_reference": true
+          },
+          "ref_atom_name_chars": {
+            "absolute_l2_error": 0.0,
+            "actual_norm": 0.0,
+            "cosine": null,
+            "elements": 393472,
+            "low_reference_norm": true,
+            "max_absolute_error": 0.0,
+            "reference_norm": 0.0,
+            "relative_l2_error": null,
+            "zero_reference": true
+          },
+          "ref_charge": {
+            "absolute_l2_error": 0.0,
+            "actual_norm": 0.0,
+            "cosine": null,
+            "elements": 1537,
+            "low_reference_norm": true,
+            "max_absolute_error": 0.0,
+            "reference_norm": 0.0,
+            "relative_l2_error": null,
+            "zero_reference": true
+          },
+          "ref_element": {
+            "absolute_l2_error": 0.0,
+            "actual_norm": 0.0,
+            "cosine": null,
+            "elements": 196736,
+            "low_reference_norm": true,
+            "max_absolute_error": 0.0,
+            "reference_norm": 0.0,
+            "relative_l2_error": null,
+            "zero_reference": true
+          },
+          "ref_mask": {
+            "absolute_l2_error": 0.0,
+            "actual_norm": 0.0,
+            "cosine": null,
+            "elements": 1537,
+            "low_reference_norm": true,
+            "max_absolute_error": 0.0,
+            "reference_norm": 0.0,
+            "relative_l2_error": null,
+            "zero_reference": true
+          },
+          "ref_pos": {
+            "absolute_l2_error": 0.0,
+            "actual_norm": 0.0,
+            "cosine": null,
+            "elements": 4611,
+            "low_reference_norm": true,
+            "max_absolute_error": 0.0,
+            "reference_norm": 0.0,
+            "relative_l2_error": null,
+            "zero_reference": true
+          },
+          "restype": {
+            "absolute_l2_error": 0.0,
+            "actual_norm": 0.0,
+            "cosine": null,
+            "elements": 6208,
+            "low_reference_norm": true,
+            "max_absolute_error": 0.0,
+            "reference_norm": 0.0,
+            "relative_l2_error": null,
+            "zero_reference": true
+          },
+          "s": {
+            "absolute_l2_error": 1.3213503349535761e-11,
+            "actual_norm": 5.345874758915807e-06,
+            "cosine": 0.9999999999970278,
+            "elements": 74496,
+            "low_reference_norm": false,
+            "max_absolute_error": 2.271414965748136e-12,
+            "reference_norm": 5.345872642513021e-06,
+            "relative_l2_error": 2.4717205652180063e-06,
+            "zero_reference": false
+          },
+          "s_init": {
+            "absolute_l2_error": 1.1050387541690419e-10,
+            "actual_norm": 3.400826440351807e-08,
+            "cosine": 0.999994722019917,
+            "elements": 74496,
+            "low_reference_norm": false,
+            "max_absolute_error": 7.241950230685648e-12,
+            "reference_norm": 3.400967103165065e-08,
+            "relative_l2_error": 0.003249189776462854,
+            "zero_reference": false
+          },
+          "s_inputs": {
+            "absolute_l2_error": 1.2151883461705743e-05,
+            "actual_norm": 4.739434240020833,
+            "cosine": 0.9999999999987115,
+            "elements": 87106,
+            "low_reference_norm": false,
+            "max_absolute_error": 1.1697222574991173e-06,
+            "reference_norm": 4.739443715426066,
+            "relative_l2_error": 2.5639894028392985e-06,
+            "zero_reference": false
+          },
+          "z": {
+            "absolute_l2_error": 0.0062011611513509675,
+            "actual_norm": 2537.126473719336,
+            "cosine": 0.9999999999985922,
+            "elements": 4817408,
+            "low_reference_norm": false,
+            "max_absolute_error": 0.0002820873005333624,
+            "reference_norm": 2537.131016607097,
+            "relative_l2_error": 2.4441627613081546e-06,
+            "zero_reference": false
+          },
+          "z_init": {
+            "absolute_l2_error": 1.992208814966862e-06,
+            "actual_norm": 0.8033341479313234,
+            "cosine": 0.9999999999986439,
+            "elements": 4817408,
+            "low_reference_norm": false,
+            "max_absolute_error": 7.946394596849982e-08,
+            "reference_norm": 0.8033355702689736,
+            "relative_l2_error": 2.4799210799290622e-06,
+            "zero_reference": false
+          }
+        },
+        "low_norm_annotation_threshold": 1e-10,
+        "total": {
+          "absolute_l2_error": 0.006201173377840834,
+          "actual_norm": 2537.1310275996084,
+          "cosine": 0.9999999999788013,
+          "elements": 10971655,
+          "low_reference_norm": false,
+          "max_absolute_error": 0.0002820873005333624,
+          "reference_norm": 2537.1355704973685,
+          "relative_l2_error": 2.4441631933074764e-06,
+          "zero_reference": false
+        }
+      }
+    }
+  },
+  "complete": true,
+  "scope": "fixed output cotangent full VJP, not full Jacobian",
+  "sources": {
+    "esm25_36": {
+      "path": "/media/PM982/onestepfold/mini_esm_segment_precision_v1_20260928/run/precision_baseline.pt",
+      "sha256": "820fcb0b0f671cbc9d1f759f237fc7abe4f4ee11f9474be23de42bbb5b96c8e9"
+    },
+    "initialization": {
+      "path": "/media/PM982/onestepfold/mini_pairformer_precision_v1_20260928/run/precision_baseline.pt",
+      "sha256": "8e0f3b7701a83d35bdd26946083cc54e9656e8c2132929009b9f7c33ed5482f7"
+    },
+    "recycle1": {
+      "path": "/media/PM982/onestepfold/mini_recycle1_composite_v1_20260928/run/precision_baseline.pt",
+      "sha256": "e3601b1b32e1328597b2b0a18175187d18d07af933b0c4aa5d8961abf3bdc645"
+    }
+  }
+}

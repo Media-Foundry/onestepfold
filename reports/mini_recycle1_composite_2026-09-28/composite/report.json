@@ -1,0 +1,305 @@
+{
+  "archived_gradient_max_abs": 0.0,
+  "baseline_sha256": "382a1aabd7e64fc9c6db2f96333e8e59875f273945a6dae3be5923bc0d80ad59",
+  "complete": true,
+  "directions": [
+    {
+      "analytic": -0.00010207000444120908,
+      "artifact": "direction0.pt",
+      "artifact_sha256": "4c98dedb9bca832e6b0be82d89005b669192acaed5fb5bd1cb1f34e0e402127c",
+      "boundaries": [
+        {
+          "comparison": {
+            "absolute_error": 1.9811835105042305e-08,
+            "left": -0.00010208981627631412,
+            "passed": true,
+            "relative_error": 0.00019406279517067613,
+            "right": -0.00010207000444120908,
+            "tolerance": 6.1044908138157065e-06
+          },
+          "name": "early",
+          "primal_exact": true,
+          "projection": -0.00010208981627631412
+        },
+        {
+          "comparison": {
+            "absolute_error": 1.985767060188508e-08,
+            "left": -0.00010208986211181097,
+            "passed": true,
+            "relative_error": 0.00019451168011311976,
+            "right": -0.00010207000444120908,
+            "tolerance": 6.1044931055905484e-06
+          },
+          "name": "initialization",
+          "primal_exact": true,
+          "projection": -0.00010208986211181097
+        },
+        {
+          "comparison": {
+            "absolute_error": 1.991800983153734e-08,
+            "left": -0.00010208992245104062,
+            "passed": true,
+            "relative_error": 0.00019510260516741447,
+            "right": -0.00010207000444120908,
+            "tolerance": 6.104496122552031e-06
+          },
+          "name": "recycle1",
+          "primal_exact": true,
+          "projection": -0.00010208992245104062
+        },
+        {
+          "comparison": {
+            "absolute_error": 1.993466741124475e-08,
+            "left": -0.00010208993910862033,
+            "passed": true,
+            "relative_error": 0.00019526573906597123,
+            "right": -0.00010207000444120908,
+            "tolerance": 6.104496955431017e-06
+          },
+          "name": "recycle2",
+          "primal_exact": true,
+          "projection": -0.00010208993910862033
+        },
+        {
+          "comparison": {
+            "absolute_error": 1.996235740451451e-08,
+            "left": -0.0001020899667986136,
+            "passed": true,
+            "relative_error": 0.0001955369173926071,
+            "right": -0.00010207000444120908,
+            "tolerance": 6.10449833993068e-06
+          },
+          "name": "recycle3",
+          "primal_exact": true,
+          "projection": -0.0001020899667986136
+        },
+        {
+          "comparison": {
+            "absolute_error": 1.998370364991026e-08,
+            "left": -0.00010208998814485899,
+            "passed": true,
+            "relative_error": 0.00019574596895392617,
+            "right": -0.00010207000444120908,
+            "tolerance": 6.10449940724295e-06
+          },
+          "name": "recycle4",
+          "primal_exact": true,
+          "projection": -0.00010208998814485899
+        }
+      ],
+      "composition": {
+        "error": "Trying to use forward AD with _scaled_dot_product_efficient_attention that does not support it because it has not been implemented yet.\nPlease file an issue to PyTorch at https://github.com/pytorch/pytorch/issues/new?template=feature-request.yml so that we can prioritize its implementation or submit a PR adding the implementation to derivatives.yaml",
+        "supported": false
+      },
+      "direction": 0,
+      "full_jvp": {
+        "error": "Trying to use forward AD with _scaled_dot_product_efficient_attention that does not support it because it has not been implemented yet.\nPlease file an issue to PyTorch at https://github.com/pytorch/pytorch/issues/new?template=feature-request.yml so that we can prioritize its implementation or submit a PR adding the implementation to derivatives.yaml",
+        "supported": false
+      }
+    },
+    {
+      "analytic": 4.607144478344609e-05,
+      "artifact": "direction1.pt",
+      "artifact_sha256": "cd40e4118c517d1bc48d6e1ae8cebe165eb17962fb6f09711addf283784731af",
+      "boundaries": [
+        {
+          "comparison": {
+            "absolute_error": 1.5379320826694248e-09,
+            "left": 4.606990685136342e-05,
+            "passed": true,
+            "relative_error": 3.338145981525672e-05,
+            "right": 4.607144478344609e-05,
+            "tolerance": 3.303572239172305e-06
+          },
+          "name": "early",
+          "primal_exact": true,
+          "projection": 4.606990685136342e-05
+        },
+        {
+          "comparison": {
+            "absolute_error": 1.5568138082185643e-09,
+            "left": 4.606988796963787e-05,
+            "passed": true,
+            "relative_error": 3.379129557443231e-05,
+            "right": 4.607144478344609e-05,
+            "tolerance": 3.303572239172305e-06
+          },
+          "name": "initialization",
+          "primal_exact": true,
+          "projection": 4.606988796963787e-05
+        },
+        {
+          "comparison": {
+            "absolute_error": 1.5924044899942548e-09,
+            "left": 4.6069852378956096e-05,
+            "passed": true,
+            "relative_error": 3.4563806224857546e-05,
+            "right": 4.607144478344609e-05,
+            "tolerance": 3.303572239172305e-06
+          },
+          "name": "recycle1",
+          "primal_exact": true,
+          "projection": 4.6069852378956096e-05
+        },
+        {
+          "comparison": {
+            "absolute_error": 1.562115944003838e-09,
+            "left": 4.6069882667502086e-05,
+            "passed": true,
+            "relative_error": 3.3906380651755054e-05,
+            "right": 4.607144478344609e-05,
+            "tolerance": 3.303572239172305e-06
+          },
+          "name": "recycle2",
+          "primal_exact": true,
+          "projection": 4.6069882667502086e-05
+        },
+        {
+          "comparison": {
+            "absolute_error": 1.5618038523359536e-09,
+            "left": 4.6069882979593754e-05,
+            "passed": true,
+            "relative_error": 3.3899606571425014e-05,
+            "right": 4.607144478344609e-05,
+            "tolerance": 3.303572239172305e-06
+          },
+          "name": "recycle3",
+          "primal_exact": true,
+          "projection": 4.6069882979593754e-05
+        },
+        {
+          "comparison": {
+            "absolute_error": 1.5431473721259589e-09,
+            "left": 4.6069901636073964e-05,
+            "passed": true,
+            "relative_error": 3.349465985665e-05,
+            "right": 4.607144478344609e-05,
+            "tolerance": 3.303572239172305e-06
+          },
+          "name": "recycle4",
+          "primal_exact": true,
+          "projection": 4.6069901636073964e-05
+        }
+      ],
+      "composition": {
+        "error": "Trying to use forward AD with _scaled_dot_product_efficient_attention that does not support it because it has not been implemented yet.\nPlease file an issue to PyTorch at https://github.com/pytorch/pytorch/issues/new?template=feature-request.yml so that we can prioritize its implementation or submit a PR adding the implementation to derivatives.yaml",
+        "supported": false
+      },
+      "direction": 1,
+      "full_jvp": {
+        "error": "Trying to use forward AD with _scaled_dot_product_efficient_attention that does not support it because it has not been implemented yet.\nPlease file an issue to PyTorch at https://github.com/pytorch/pytorch/issues/new?template=feature-request.yml so that we can prioritize its implementation or submit a PR adding the implementation to derivatives.yaml",
+        "supported": false
+      }
+    },
+    {
+      "analytic": 1.5792444328471058e-05,
+      "artifact": "direction2.pt",
+      "artifact_sha256": "065594b9b4c6a96e0ce585320bf7d8a091711188ac80d5f79a74a699d06a09e5",
+      "boundaries": [
+        {
+          "comparison": {
+            "absolute_error": 2.5355986204687213e-08,
+            "left": 1.5817800314675745e-05,
+            "passed": true,
+            "relative_error": 0.0016030033064181463,
+            "right": 1.5792444328471058e-05,
+            "tolerance": 1.7908900157337871e-06
+          },
+          "name": "early",
+          "primal_exact": true,
+          "projection": 1.5817800314675745e-05
+        },
+        {
+          "comparison": {
+            "absolute_error": 2.5359529823078692e-08,
+            "left": 1.5817803858294136e-05,
+            "passed": true,
+            "relative_error": 0.00160322697450704,
+            "right": 1.5792444328471058e-05,
+            "tolerance": 1.7908901929147067e-06
+          },
+          "name": "initialization",
+          "primal_exact": true,
+          "projection": 1.5817803858294136e-05
+        },
+        {
+          "comparison": {
+            "absolute_error": 2.5310785186296474e-08,
+            "left": 1.5817755113657354e-05,
+            "passed": true,
+            "relative_error": 0.0016001502744496692,
+            "right": 1.5792444328471058e-05,
+            "tolerance": 1.7908877556828676e-06
+          },
+          "name": "recycle1",
+          "primal_exact": true,
+          "projection": 1.5817755113657354e-05
+        },
+        {
+          "comparison": {
+            "absolute_error": 2.5308823798433504e-08,
+            "left": 1.581775315226949e-05,
+            "passed": true,
+            "relative_error": 0.0016000264737221707,
+            "right": 1.5792444328471058e-05,
+            "tolerance": 1.7908876576134745e-06
+          },
+          "name": "recycle2",
+          "primal_exact": true,
+          "projection": 1.581775315226949e-05
+        },
+        {
+          "comparison": {
+            "absolute_error": 2.532032328569206e-08,
+            "left": 1.581776465175675e-05,
+            "passed": true,
+            "relative_error": 0.0016007523087581115,
+            "right": 1.5792444328471058e-05,
+            "tolerance": 1.7908882325878374e-06
+          },
+          "name": "recycle3",
+          "primal_exact": true,
+          "projection": 1.581776465175675e-05
+        },
+        {
+          "comparison": {
+            "absolute_error": 2.5321136028631417e-08,
+            "left": 1.581776546449969e-05,
+            "passed": true,
+            "relative_error": 0.0016008036081620026,
+            "right": 1.5792444328471058e-05,
+            "tolerance": 1.7908882732249844e-06
+          },
+          "name": "recycle4",
+          "primal_exact": true,
+          "projection": 1.581776546449969e-05
+        }
+      ],
+      "composition": {
+        "error": "Trying to use forward AD with _scaled_dot_product_efficient_attention that does not support it because it has not been implemented yet.\nPlease file an issue to PyTorch at https://github.com/pytorch/pytorch/issues/new?template=feature-request.yml so that we can prioritize its implementation or submit a PR adding the implementation to derivatives.yaml",
+        "supported": false
+      },
+      "direction": 2,
+      "full_jvp": {
+        "error": "Trying to use forward AD with _scaled_dot_product_efficient_attention that does not support it because it has not been implemented yet.\nPlease file an issue to PyTorch at https://github.com/pytorch/pytorch/issues/new?template=feature-request.yml so that we can prioritize its implementation or submit a PR adding the implementation to derivatives.yaml",
+        "supported": false
+      }
+    }
+  ],
+  "elapsed_seconds": 89.79233784787357,
+  "gradient_finite": true,
+  "gradient_norm": 0.009895850904285908,
+  "input_sha256": {
+    "/media/PM982/onestepfold/mini_esm_interface_v1_20260928/control/baseline.pt": "39b7e9842ac312921a9ded73195ac33a3fc52d6fd02180770d220e7372d57ff2",
+    "/media/PM982/onestepfold/mini_interface_decomposition_v1_20260928/control/baseline.pt": "210aa32b5ae2199ec8cfcdf6273e6403f2d316e859ecf60d4b6953987c353807",
+    "/media/PM982/onestepfold/mini_near_hard_gradient_v1_20260928/control_a1_s1/baseline.npz": "e5a2a86f347e6922bdf1151654b03af53b7b4c02c7dfed050460d08191a49a18",
+    "/media/PM982/onestepfold/mini_pairformer_precision_v1_20260928/run/coarse_baseline.pt": "15bcd15b2e99ea5289b7a0ca8ababe1339dba0cdfc4ffb5d742f417aae7203db"
+  },
+  "model_deployment_accepted": false,
+  "native_archive_exact": true,
+  "native_archive_max_abs": 0.0,
+  "peak_memory_gib": 14.770552635192871,
+  "reference_kind": "native FP32 trajectory, true forward AD; not full FP64 model",
+  "source_sha256": "804ea44392ea3cb721dde6b47bbba1e76a896f92051d2874fa85d5f1043fa467",
+  "stage": "complete"
+}
