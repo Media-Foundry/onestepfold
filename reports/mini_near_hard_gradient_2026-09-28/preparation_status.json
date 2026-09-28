@@ -1,7 +1,11 @@
 {
-  "status": "implementation_ready_remote_transfer_incomplete",
+  "status": "complete_audited",
   "tests_passed": 14,
   "remote_root": "/media/PM982/onestepfold/mini_near_hard_gradient_v1_20260928",
-  "remote_jobs_submitted": false,
-  "reason": "SSH connection to resolved IP10.120.16.9 timed out during source transfer; stopped local transfer chain before launch to avoid incomplete submission"
+  "remote_jobs_submitted": true,
+  "reason": "All eight workers exited zero; CPU audit replayed 256 coordinate arrays; local verification matched 152 artifact hashes. Scientific gates remain failed.",
+  "controller_pid": 1751767,
+  "remote_jobs_complete": true,
+  "independent_cpu_audit_passed": true,
+  "model_deployment_accepted": false
 }

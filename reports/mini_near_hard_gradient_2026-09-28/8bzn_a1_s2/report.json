@@ -1,0 +1,1345 @@
+{
+  "actual_non_native_mass_mean": 0.0010000003276218195,
+  "actual_probability_max_error": 1.2874603272372553e-08,
+  "alpha": 0.001,
+  "atom_cache_builder_checks": 68,
+  "baseline_sha256": "c5c9692fa8849b0964079424effb9f0ae7b2da9dd5f464e009b28e2d9be39151",
+  "case": "8bzn",
+  "complete": true,
+  "derivative_space": "FP32 logits q;temperature1; full live ERC",
+  "directions": [
+    {
+      "index": 0,
+      "rows": [
+        {
+          "coordinate_delta_norm": 0.0029985259008604476,
+          "coordinate_delta_rms": 5.710700993126987e-05,
+          "coordinate_file": "direction0_h0.npz",
+          "coordinate_sha256": "79201e17d06d63f7248527b7b51353bbb7df9e20025203551150a5c80659a2ea",
+          "h": 0.3,
+          "objectives": {
+            "new": {
+              "linearized": {
+                "absolute_error": 4.6159183318152004e-06,
+                "analytic": 1.4413454135985945e-06,
+                "finite_difference": 6.057263745413795e-06,
+                "h": 0.3,
+                "informative_pass": false,
+                "loss_minus": 0.0,
+                "loss_plus": 3.634358247248277e-06,
+                "nonzero_response": true,
+                "numerator": 3.634358247248277e-06,
+                "pass_tolerance": false,
+                "relative_error": 0.76204677983687,
+                "relative_only_pass": false,
+                "relative_term_dominates": false
+              },
+              "nonlinear": {
+                "absolute_error": 4.599151054188407e-06,
+                "analytic": 1.4413454135985945e-06,
+                "finite_difference": 6.040496467787001e-06,
+                "h": 0.3,
+                "informative_pass": false,
+                "loss_minus": 0.17970670715827858,
+                "loss_plus": 0.17971033145615925,
+                "nonzero_response": true,
+                "numerator": 3.6242978806722004e-06,
+                "pass_tolerance": false,
+                "relative_error": 0.761386266628073,
+                "relative_only_pass": false,
+                "relative_term_dominates": false
+              }
+            },
+            "old": {
+              "linearized": {
+                "absolute_error": 8.483918573283143e-08,
+                "analytic": 3.092400566066387e-07,
+                "finite_difference": 2.244008708738073e-07,
+                "h": 0.3,
+                "informative_pass": false,
+                "loss_minus": 0.0,
+                "loss_plus": 1.3464052252428436e-07,
+                "nonzero_response": true,
+                "numerator": 1.3464052252428436e-07,
+                "pass_tolerance": true,
+                "relative_error": 0.2743473360592126,
+                "relative_only_pass": false,
+                "relative_term_dominates": false
+              },
+              "nonlinear": {
+                "absolute_error": 9.248920853809112e-08,
+                "analytic": 3.092400566066387e-07,
+                "finite_difference": 2.167508480685476e-07,
+                "h": 0.3,
+                "informative_pass": false,
+                "loss_minus": -0.03122599551297687,
+                "loss_plus": -0.031225865462468028,
+                "nonzero_response": true,
+                "numerator": 1.3005050884112856e-07,
+                "pass_tolerance": true,
+                "relative_error": 0.29908547279739944,
+                "relative_only_pass": false,
+                "relative_term_dominates": false
+              }
+            }
+          },
+          "probability_delta_max_abs": 3.7610530853271484e-05,
+          "probability_delta_norm": 0.00014759334586525558,
+          "probability_min": 5.0928221753565595e-05,
+          "probability_sum_max_error": 2.110245986841619e-07
+        },
+        {
+          "coordinate_delta_norm": 0.0012581317832168113,
+          "coordinate_delta_rms": 2.3961155119050796e-05,
+          "coordinate_file": "direction0_h1.npz",
+          "coordinate_sha256": "f4227581859fc0e99089b77e77b367708e043bf8152eb25fe3f0372f83b24a12",
+          "h": 0.1,
+          "objectives": {
+            "new": {
+              "linearized": {
+                "absolute_error": 5.88799719211215e-06,
+                "analytic": 1.4413454135985945e-06,
+                "finite_difference": -4.4466517785135556e-06,
+                "h": 0.1,
+                "informative_pass": false,
+                "loss_minus": 0.0,
+                "loss_plus": -8.893303557027111e-07,
+                "nonzero_response": true,
+                "numerator": -8.893303557027111e-07,
+                "pass_tolerance": false,
+                "relative_error": 1.3241417330143206,
+                "relative_only_pass": false,
+                "relative_term_dominates": false
+              },
+              "nonlinear": {
+                "absolute_error": 5.904436483787868e-06,
+                "analytic": 1.4413454135985945e-06,
+                "finite_difference": -4.4630910701892734e-06,
+                "h": 0.1,
+                "informative_pass": false,
+                "loss_minus": 0.17970825529518522,
+                "loss_plus": 0.17970736267697118,
+                "nonzero_response": true,
+                "numerator": -8.926182140378547e-07,
+                "pass_tolerance": false,
+                "relative_error": 1.3229477935652945,
+                "relative_only_pass": false,
+                "relative_term_dominates": false
+              }
+            },
+            "old": {
+              "linearized": {
+                "absolute_error": 8.499342141292712e-07,
+                "analytic": 3.092400566066387e-07,
+                "finite_difference": -5.406941575226325e-07,
+                "h": 0.1,
+                "informative_pass": false,
+                "loss_minus": 0.0,
+                "loss_plus": -1.081388315045265e-07,
+                "nonzero_response": true,
+                "numerator": -1.081388315045265e-07,
+                "pass_tolerance": true,
+                "relative_error": 1.571931566679994,
+                "relative_only_pass": false,
+                "relative_term_dominates": false
+              },
+              "nonlinear": {
+                "absolute_error": 8.636827455718175e-07,
+                "analytic": 3.092400566066387e-07,
+                "finite_difference": -5.544426889651788e-07,
+                "h": 0.1,
+                "informative_pass": false,
+                "loss_minus": -0.03122589868829569,
+                "loss_plus": -0.031226009576833483,
+                "nonzero_response": true,
+                "numerator": -1.1088853779303576e-07,
+                "pass_tolerance": true,
+                "relative_error": 1.5577493630294046,
+                "relative_only_pass": false,
+                "relative_term_dominates": false
+              }
+            }
+          },
+          "probability_delta_max_abs": 1.2516975402832031e-05,
+          "probability_delta_norm": 4.915275753249338e-05,
+          "probability_min": 5.2057548600714654e-05,
+          "probability_sum_max_error": 1.998778316192329e-07
+        },
+        {
+          "coordinate_delta_norm": 0.0013362636173906563,
+          "coordinate_delta_rms": 2.544917809355094e-05,
+          "coordinate_file": "direction0_h2.npz",
+          "coordinate_sha256": "739645aaeb8db7be006daa5dd23da8f2bd2b348f7400d4641b9197c2710cb1a6",
+          "h": 0.03,
+          "objectives": {
+            "new": {
+              "linearized": {
+                "absolute_error": 2.0213803702952224e-05,
+                "analytic": 1.4413454135985945e-06,
+                "finite_difference": 2.1655149116550818e-05,
+                "h": 0.03,
+                "informative_pass": false,
+                "loss_minus": 0.0,
+                "loss_plus": 1.299308946993049e-06,
+                "nonzero_response": true,
+                "numerator": 1.299308946993049e-06,
+                "pass_tolerance": false,
+                "relative_error": 0.9334409841354088,
+                "relative_only_pass": false,
+                "relative_term_dominates": true
+              },
+              "nonlinear": {
+                "absolute_error": 2.0453390324264713e-05,
+                "analytic": 1.4413454135985945e-06,
+                "finite_difference": 2.1894735737863307e-05,
+                "h": 0.03,
+                "informative_pass": false,
+                "loss_minus": 0.17970659775799974,
+                "loss_plus": 0.179707911442144,
+                "nonzero_response": true,
+                "numerator": 1.3136841442717984e-06,
+                "pass_tolerance": false,
+                "relative_error": 0.9341693167318742,
+                "relative_only_pass": false,
+                "relative_term_dominates": true
+              }
+            },
+            "old": {
+              "linearized": {
+                "absolute_error": 3.3306987541066595e-07,
+                "analytic": 3.092400566066387e-07,
+                "finite_difference": 6.423099320173047e-07,
+                "h": 0.03,
+                "informative_pass": false,
+                "loss_minus": 0.0,
+                "loss_plus": 3.853859592103828e-08,
+                "nonzero_response": true,
+                "numerator": 3.853859592103828e-08,
+                "pass_tolerance": true,
+                "relative_error": 0.5185500936667636,
+                "relative_only_pass": false,
+                "relative_term_dominates": false
+              },
+              "nonlinear": {
+                "absolute_error": 4.3710812387372194e-07,
+                "analytic": 3.092400566066387e-07,
+                "finite_difference": 7.463481804803607e-07,
+                "h": 0.03,
+                "informative_pass": false,
+                "loss_minus": -0.03122603045395516,
+                "loss_plus": -0.03122598567306433,
+                "nonzero_response": true,
+                "numerator": 4.478089082882164e-08,
+                "pass_tolerance": true,
+                "relative_error": 0.5856624767174923,
+                "relative_only_pass": false,
+                "relative_term_dominates": false
+              }
+            }
+          },
+          "probability_delta_max_abs": 3.6954879760742188e-06,
+          "probability_delta_norm": 1.456859693077081e-05,
+          "probability_min": 5.2458712161751464e-05,
+          "probability_sum_max_error": 1.7745696823112667e-07
+        },
+        {
+          "coordinate_delta_norm": 0.001917122436443991,
+          "coordinate_delta_rms": 3.65116506034018e-05,
+          "coordinate_file": "direction0_h3.npz",
+          "coordinate_sha256": "3633858e109750eb47118fa54a6b0d6b5f35a1642e995d7b7fc4e76155f8dadc",
+          "h": 0.01,
+          "objectives": {
+            "new": {
+              "linearized": {
+                "absolute_error": 3.072835218408133e-05,
+                "analytic": 1.4413454135985945e-06,
+                "finite_difference": -2.9287006770482737e-05,
+                "h": 0.01,
+                "informative_pass": false,
+                "loss_minus": 0.0,
+                "loss_plus": -5.857401354096547e-07,
+                "nonzero_response": true,
+                "numerator": -5.857401354096547e-07,
+                "pass_tolerance": false,
+                "relative_error": 1.0492145006450873,
+                "relative_only_pass": false,
+                "relative_term_dominates": true
+              },
+              "nonlinear": {
+                "absolute_error": 2.9914227775172898e-05,
+                "analytic": 1.4413454135985945e-06,
+                "finite_difference": -2.8472882361574303e-05,
+                "h": 0.01,
+                "informative_pass": false,
+                "loss_minus": 0.17970800592919023,
+                "loss_plus": 0.179707436471543,
+                "nonzero_response": true,
+                "numerator": -5.694576472314861e-07,
+                "pass_tolerance": false,
+                "relative_error": 1.05062168962366,
+                "relative_only_pass": false,
+                "relative_term_dominates": true
+              }
+            },
+            "old": {
+              "linearized": {
+                "absolute_error": 1.5597680225609997e-05,
+                "analytic": 3.092400566066387e-07,
+                "finite_difference": 1.5906920282216636e-05,
+                "h": 0.01,
+                "informative_pass": false,
+                "loss_minus": 0.0,
+                "loss_plus": 3.181384056443327e-07,
+                "nonzero_response": true,
+                "numerator": 3.181384056443327e-07,
+                "pass_tolerance": false,
+                "relative_error": 0.9805594011210104,
+                "relative_only_pass": false,
+                "relative_term_dominates": false
+              },
+              "nonlinear": {
+                "absolute_error": 1.622167299692269e-05,
+                "analytic": 3.092400566066387e-07,
+                "finite_difference": 1.6530913053529328e-05,
+                "h": 0.01,
+                "informative_pass": false,
+                "loss_minus": -0.031226131691717743,
+                "loss_plus": -0.031225801073456672,
+                "nonzero_response": true,
+                "numerator": 3.3061826107058656e-07,
+                "pass_tolerance": false,
+                "relative_error": 0.981293225872928,
+                "relative_only_pass": false,
+                "relative_term_dominates": false
+              }
+            }
+          },
+          "probability_delta_max_abs": 1.1920928955078125e-06,
+          "probability_delta_norm": 4.498903044184109e-06,
+          "probability_min": 5.257388693280518e-05,
+          "probability_sum_max_error": 1.7202182789333165e-07
+        },
+        {
+          "coordinate_delta_norm": 0.0010292266396362926,
+          "coordinate_delta_rms": 1.9601650235661157e-05,
+          "coordinate_file": "direction0_h4.npz",
+          "coordinate_sha256": "3053a9ac62f0b33a17aedda215cc3f060ca892d97101772dd6970477dd227d60",
+          "h": 0.003,
+          "objectives": {
+            "new": {
+              "linearized": {
+                "absolute_error": 4.789070233656209e-05,
+                "analytic": 1.4413454135985945e-06,
+                "finite_difference": 4.9332047750160686e-05,
+                "h": 0.003,
+                "informative_pass": false,
+                "loss_minus": 0.0,
+                "loss_plus": 2.959922865009641e-07,
+                "nonzero_response": true,
+                "numerator": 2.959922865009641e-07,
+                "pass_tolerance": false,
+                "relative_error": 0.9707827775384835,
+                "relative_only_pass": false,
+                "relative_term_dominates": true
+              },
+              "nonlinear": {
+                "absolute_error": 4.6387477405353024e-05,
+                "analytic": 1.4413454135985945e-06,
+                "finite_difference": 4.782882281895162e-05,
+                "h": 0.003,
+                "informative_pass": false,
+                "loss_minus": 0.1797071112549231,
+                "loss_plus": 0.17970739822786003,
+                "nonzero_response": true,
+                "numerator": 2.8697293691370973e-07,
+                "pass_tolerance": false,
+                "relative_error": 0.9698645015986578,
+                "relative_only_pass": false,
+                "relative_term_dominates": true
+              }
+            },
+            "old": {
+              "linearized": {
+                "absolute_error": 2.6758745489182464e-05,
+                "analytic": 3.092400566066387e-07,
+                "finite_difference": -2.6449505432575825e-05,
+                "h": 0.003,
+                "informative_pass": false,
+                "loss_minus": 0.0,
+                "loss_plus": -1.5869703259545494e-07,
+                "nonzero_response": true,
+                "numerator": -1.5869703259545494e-07,
+                "pass_tolerance": false,
+                "relative_error": 1.011691714137905,
+                "relative_only_pass": false,
+                "relative_term_dominates": true
+              },
+              "nonlinear": {
+                "absolute_error": 2.8390311041897602e-05,
+                "analytic": 3.092400566066387e-07,
+                "finite_difference": -2.8081070985290963e-05,
+                "h": 0.003,
+                "informative_pass": false,
+                "loss_minus": -0.03122587140689809,
+                "loss_plus": -0.031226039893324002,
+                "nonzero_response": true,
+                "numerator": -1.6848642591174579e-07,
+                "pass_tolerance": false,
+                "relative_error": 1.0110124025101686,
+                "relative_only_pass": false,
+                "relative_term_dominates": true
+              }
+            }
+          },
+          "probability_delta_max_abs": 2.384185791015625e-07,
+          "probability_delta_norm": 1.5768645753171944e-06,
+          "probability_min": 5.261429032543674e-05,
+          "probability_sum_max_error": 1.200169208459556e-07
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "rows": [
+        {
+          "coordinate_delta_norm": 0.0033451795719240942,
+          "coordinate_delta_rms": 6.370903882502133e-05,
+          "coordinate_file": "direction1_h0.npz",
+          "coordinate_sha256": "6eb3832e412844e68830708fa9cbb852b32b413234917c7c1f91b507842297d3",
+          "h": 0.3,
+          "objectives": {
+            "new": {
+              "linearized": {
+                "absolute_error": 2.4338235435262157e-06,
+                "analytic": -3.5603358111694443e-06,
+                "finite_difference": -1.1265122676432288e-06,
+                "h": 0.3,
+                "informative_pass": false,
+                "loss_minus": 0.0,
+                "loss_plus": -6.759073605859372e-07,
+                "nonzero_response": true,
+                "numerator": -6.759073605859372e-07,
+                "pass_tolerance": false,
+                "relative_error": 0.6835938160357943,
+                "relative_only_pass": false,
+                "relative_term_dominates": false
+              },
+              "nonlinear": {
+                "absolute_error": 2.4426497449244096e-06,
+                "analytic": -3.5603358111694443e-06,
+                "finite_difference": -1.1176860662450347e-06,
+                "h": 0.3,
+                "informative_pass": false,
+                "loss_minus": 0.1797080734392888,
+                "loss_plus": 0.17970740282764905,
+                "nonzero_response": true,
+                "numerator": -6.706116397470208e-07,
+                "pass_tolerance": false,
+                "relative_error": 0.6860728522465092,
+                "relative_only_pass": false,
+                "relative_term_dominates": false
+              }
+            },
+            "old": {
+              "linearized": {
+                "absolute_error": 1.4725924807081424e-07,
+                "analytic": 2.3472376907357382e-07,
+                "finite_difference": 8.746452100275959e-08,
+                "h": 0.3,
+                "informative_pass": false,
+                "loss_minus": 0.0,
+                "loss_plus": 5.247871260165575e-08,
+                "nonzero_response": true,
+                "numerator": 5.247871260165575e-08,
+                "pass_tolerance": true,
+                "relative_error": 0.6273725437011709,
+                "relative_only_pass": false,
+                "relative_term_dominates": false
+              },
+              "nonlinear": {
+                "absolute_error": 1.3756774104181533e-07,
+                "analytic": 2.3472376907357382e-07,
+                "finite_difference": 9.715602803175849e-08,
+                "h": 0.3,
+                "informative_pass": false,
+                "loss_minus": -0.031225902613625508,
+                "loss_plus": -0.03122584432000869,
+                "nonzero_response": true,
+                "numerator": 5.8293616819055094e-08,
+                "pass_tolerance": true,
+                "relative_error": 0.5860835550859569,
+                "relative_only_pass": false,
+                "relative_term_dominates": false
+              }
+            }
+          },
+          "probability_delta_max_abs": 3.832578659057617e-05,
+          "probability_delta_norm": 0.0001596467963271589,
+          "probability_min": 5.1023038395214826e-05,
+          "probability_sum_max_error": 2.3621396394446492e-07
+        },
+        {
+          "coordinate_delta_norm": 0.002985776593840447,
+          "coordinate_delta_rms": 5.686419902128272e-05,
+          "coordinate_file": "direction1_h1.npz",
+          "coordinate_sha256": "041cdd0bfa00161292189097f6d7b0533261bf4bc27ee91d6d6f66dad1cb46f2",
+          "h": 0.1,
+          "objectives": {
+            "new": {
+              "linearized": {
+                "absolute_error": 2.094286779617838e-05,
+                "analytic": -3.5603358111694443e-06,
+                "finite_difference": -2.4503203607347822e-05,
+                "h": 0.1,
+                "informative_pass": false,
+                "loss_minus": 0.0,
+                "loss_plus": -4.9006407214695645e-06,
+                "nonzero_response": true,
+                "numerator": -4.9006407214695645e-06,
+                "pass_tolerance": false,
+                "relative_error": 0.8546991704341143,
+                "relative_only_pass": false,
+                "relative_term_dominates": true
+              },
+              "nonlinear": {
+                "absolute_error": 2.0990153802164727e-05,
+                "analytic": -3.5603358111694443e-06,
+                "finite_difference": -2.455048961333417e-05,
+                "h": 0.1,
+                "informative_pass": false,
+                "loss_minus": 0.17970839477417766,
+                "loss_plus": 0.179703484676255,
+                "nonzero_response": true,
+                "numerator": -4.910097922666834e-06,
+                "pass_tolerance": false,
+                "relative_error": 0.8549790302660315,
+                "relative_only_pass": false,
+                "relative_term_dominates": true
+              }
+            },
+            "old": {
+              "linearized": {
+                "absolute_error": 4.086961785258366e-07,
+                "analytic": 2.3472376907357382e-07,
+                "finite_difference": -1.7397240945226278e-07,
+                "h": 0.1,
+                "informative_pass": false,
+                "loss_minus": 0.0,
+                "loss_plus": -3.4794481890452556e-08,
+                "nonzero_response": true,
+                "numerator": -3.4794481890452556e-08,
+                "pass_tolerance": true,
+                "relative_error": 1.7411793451464703,
+                "relative_only_pass": false,
+                "relative_term_dominates": false
+              },
+              "nonlinear": {
+                "absolute_error": 4.679850755245341e-07,
+                "analytic": 2.3472376907357382e-07,
+                "finite_difference": -2.3326130645096033e-07,
+                "h": 0.1,
+                "informative_pass": false,
+                "loss_minus": -0.031225850882624424,
+                "loss_plus": -0.031225897534885715,
+                "nonzero_response": true,
+                "numerator": -4.6652261290192065e-08,
+                "pass_tolerance": true,
+                "relative_error": 1.9937694310704634,
+                "relative_only_pass": false,
+                "relative_term_dominates": false
+              }
+            }
+          },
+          "probability_delta_max_abs": 1.2874603271484375e-05,
+          "probability_delta_norm": 5.319345198976829e-05,
+          "probability_min": 5.208984293858521e-05,
+          "probability_sum_max_error": 1.8861464923247695e-07
+        },
+        {
+          "coordinate_delta_norm": 0.0008702978771680456,
+          "coordinate_delta_rms": 1.657484749434276e-05,
+          "coordinate_file": "direction1_h2.npz",
+          "coordinate_sha256": "0be16d50d984f7aeef269e7a1a3d3031e6255f7a92913da41fa6e95e944593d4",
+          "h": 0.03,
+          "objectives": {
+            "new": {
+              "linearized": {
+                "absolute_error": 2.3184562230936324e-05,
+                "analytic": -3.5603358111694443e-06,
+                "finite_difference": 1.962422641976688e-05,
+                "h": 0.03,
+                "informative_pass": false,
+                "loss_minus": 0.0,
+                "loss_plus": 1.177453585186013e-06,
+                "nonzero_response": true,
+                "numerator": 1.177453585186013e-06,
+                "pass_tolerance": false,
+                "relative_error": 1.1814255367326594,
+                "relative_only_pass": false,
+                "relative_term_dominates": false
+              },
+              "nonlinear": {
+                "absolute_error": 2.389862660203243e-05,
+                "analytic": -3.5603358111694443e-06,
+                "finite_difference": 2.0338290790862988e-05,
+                "h": 0.03,
+                "informative_pass": false,
+                "loss_minus": 0.17970655218805648,
+                "loss_plus": 0.17970777248550393,
+                "nonzero_response": true,
+                "numerator": 1.2202974474517791e-06,
+                "pass_tolerance": false,
+                "relative_error": 1.1750558022687398,
+                "relative_only_pass": false,
+                "relative_term_dominates": true
+              }
+            },
+            "old": {
+              "linearized": {
+                "absolute_error": 1.1075722231523875e-06,
+                "analytic": 2.3472376907357382e-07,
+                "finite_difference": 1.3422959922259614e-06,
+                "h": 0.03,
+                "informative_pass": false,
+                "loss_minus": 0.0,
+                "loss_plus": 8.053775953355768e-08,
+                "nonzero_response": true,
+                "numerator": 8.053775953355768e-08,
+                "pass_tolerance": false,
+                "relative_error": 0.825132630632141,
+                "relative_only_pass": false,
+                "relative_term_dominates": false
+              },
+              "nonlinear": {
+                "absolute_error": 1.5134986316821355e-06,
+                "analytic": 2.3472376907357382e-07,
+                "finite_difference": 1.7482224007557094e-06,
+                "h": 0.03,
+                "informative_pass": false,
+                "loss_minus": -0.031226114477041704,
+                "loss_plus": -0.03122600958369766,
+                "nonzero_response": true,
+                "numerator": 1.0489334404534256e-07,
+                "pass_tolerance": false,
+                "relative_error": 0.8657357502271398,
+                "relative_only_pass": false,
+                "relative_term_dominates": false
+              }
+            }
+          },
+          "probability_delta_max_abs": 3.814697265625e-06,
+          "probability_delta_norm": 1.5922568219705393e-05,
+          "probability_min": 5.246846558293328e-05,
+          "probability_sum_max_error": 1.865701051428914e-07
+        },
+        {
+          "coordinate_delta_norm": 0.0006967494927903321,
+          "coordinate_delta_rms": 1.3269613643479595e-05,
+          "coordinate_file": "direction1_h3.npz",
+          "coordinate_sha256": "546a10ded7b054f2c6fa78c54f47b7d8597bbb0be3536e3720666a0aacca84d0",
+          "h": 0.01,
+          "objectives": {
+            "new": {
+              "linearized": {
+                "absolute_error": 2.400599227220065e-05,
+                "analytic": -3.5603358111694443e-06,
+                "finite_difference": -2.7566328083370093e-05,
+                "h": 0.01,
+                "informative_pass": false,
+                "loss_minus": 0.0,
+                "loss_plus": -5.513265616674018e-07,
+                "nonzero_response": true,
+                "numerator": -5.513265616674018e-07,
+                "pass_tolerance": false,
+                "relative_error": 0.8708447566755442,
+                "relative_only_pass": false,
+                "relative_term_dominates": true
+              },
+              "nonlinear": {
+                "absolute_error": 2.3928531499018627e-05,
+                "analytic": -3.5603358111694443e-06,
+                "finite_difference": -2.748886731018807e-05,
+                "h": 0.01,
+                "informative_pass": false,
+                "loss_minus": 0.1797090209096809,
+                "loss_plus": 0.1797084711323347,
+                "nonzero_response": true,
+                "numerator": -5.497773462037614e-07,
+                "pass_tolerance": false,
+                "relative_error": 0.8704808106134699,
+                "relative_only_pass": false,
+                "relative_term_dominates": true
+              }
+            },
+            "old": {
+              "linearized": {
+                "absolute_error": 3.600369628184879e-06,
+                "analytic": 2.3472376907357382e-07,
+                "finite_difference": 3.835093397258453e-06,
+                "h": 0.01,
+                "informative_pass": false,
+                "loss_minus": 0.0,
+                "loss_plus": 7.670186794516906e-08,
+                "nonzero_response": true,
+                "numerator": 7.670186794516906e-08,
+                "pass_tolerance": false,
+                "relative_error": 0.9387958141407018,
+                "relative_only_pass": false,
+                "relative_term_dominates": false
+              },
+              "nonlinear": {
+                "absolute_error": 3.1653733783352243e-06,
+                "analytic": 2.3472376907357382e-07,
+                "finite_difference": 3.400097147408798e-06,
+                "h": 0.01,
+                "informative_pass": false,
+                "loss_minus": -0.031225879176601173,
+                "loss_plus": -0.031225811174658225,
+                "nonzero_response": true,
+                "numerator": 6.800194294817596e-08,
+                "pass_tolerance": false,
+                "relative_error": 0.9309655698360101,
+                "relative_only_pass": false,
+                "relative_term_dominates": false
+              }
+            }
+          },
+          "probability_delta_max_abs": 1.1920928955078125e-06,
+          "probability_delta_norm": 4.7591392088833e-06,
+          "probability_min": 5.2577146561816335e-05,
+          "probability_sum_max_error": 1.9610888557508588e-07
+        },
+        {
+          "coordinate_delta_norm": 0.0015710815930767674,
+          "coordinate_delta_rms": 2.9921293030326844e-05,
+          "coordinate_file": "direction1_h4.npz",
+          "coordinate_sha256": "b5134a944196a0bef26bdc41ec0947f5ad24da60b745b1ccaf4bfc76f1469e63",
+          "h": 0.003,
+          "objectives": {
+            "new": {
+              "linearized": {
+                "absolute_error": 0.00025947440294007566,
+                "analytic": -3.5603358111694443e-06,
+                "finite_difference": -0.0002630347387512451,
+                "h": 0.003,
+                "informative_pass": false,
+                "loss_minus": 0.0,
+                "loss_plus": -1.5782084325074706e-06,
+                "nonzero_response": true,
+                "numerator": -1.5782084325074706e-06,
+                "pass_tolerance": false,
+                "relative_error": 0.986464389349969,
+                "relative_only_pass": false,
+                "relative_term_dominates": true
+              },
+              "nonlinear": {
+                "absolute_error": 0.0002612298479681704,
+                "analytic": -3.5603358111694443e-06,
+                "finite_difference": -0.00026479018377933983,
+                "h": 0.003,
+                "informative_pass": false,
+                "loss_minus": 0.17970828143324874,
+                "loss_plus": 0.17970669269214606,
+                "nonzero_response": true,
+                "numerator": -1.588741102676039e-06,
+                "pass_tolerance": false,
+                "relative_error": 0.9865541246267029,
+                "relative_only_pass": false,
+                "relative_term_dominates": true
+              }
+            },
+            "old": {
+              "linearized": {
+                "absolute_error": 4.986117260358912e-05,
+                "analytic": 2.3472376907357382e-07,
+                "finite_difference": 5.0095896372662694e-05,
+                "h": 0.003,
+                "informative_pass": false,
+                "loss_minus": 0.0,
+                "loss_plus": 3.0057537823597615e-07,
+                "nonzero_response": true,
+                "numerator": 3.0057537823597615e-07,
+                "pass_tolerance": false,
+                "relative_error": 0.9953145110464244,
+                "relative_only_pass": false,
+                "relative_term_dominates": true
+              },
+              "nonlinear": {
+                "absolute_error": 4.859334361139413e-05,
+                "analytic": 2.3472376907357382e-07,
+                "finite_difference": 4.882806738046771e-05,
+                "h": 0.003,
+                "informative_pass": false,
+                "loss_minus": -0.031226165694369718,
+                "loss_plus": -0.031225872725965435,
+                "nonzero_response": true,
+                "numerator": 2.9296840428280624e-07,
+                "pass_tolerance": false,
+                "relative_error": 0.9951928515367071,
+                "relative_only_pass": false,
+                "relative_term_dominates": true
+              }
+            }
+          },
+          "probability_delta_max_abs": 2.384185791015625e-07,
+          "probability_delta_norm": 1.6310066061766235e-06,
+          "probability_min": 5.261523983790539e-05,
+          "probability_sum_max_error": 1.1113661457784474e-07
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "rows": [
+        {
+          "coordinate_delta_norm": 0.006812829564439271,
+          "coordinate_delta_rms": 0.00012975053024715874,
+          "coordinate_file": "direction2_h0.npz",
+          "coordinate_sha256": "7c244d6b2f67079c5b00c9dd8fab7bc657c584154f343e335ae18b25092f1489",
+          "h": 0.3,
+          "objectives": {
+            "new": {
+              "linearized": {
+                "absolute_error": 1.5021158620943922e-07,
+                "analytic": 4.346717383674216e-06,
+                "finite_difference": 4.496928969883655e-06,
+                "h": 0.3,
+                "informative_pass": false,
+                "loss_minus": 0.0,
+                "loss_plus": 2.6981573819301927e-06,
+                "nonzero_response": true,
+                "numerator": 2.6981573819301927e-06,
+                "pass_tolerance": true,
+                "relative_error": 0.03340314850766378,
+                "relative_only_pass": true,
+                "relative_term_dominates": false
+              },
+              "nonlinear": {
+                "absolute_error": 1.3106696361933357e-07,
+                "analytic": 4.346717383674216e-06,
+                "finite_difference": 4.477784347293549e-06,
+                "h": 0.3,
+                "informative_pass": false,
+                "loss_minus": 0.17970619964508375,
+                "loss_plus": 0.17970888631569212,
+                "nonzero_response": true,
+                "numerator": 2.6866706083761294e-06,
+                "pass_tolerance": true,
+                "relative_error": 0.029270494837151485,
+                "relative_only_pass": true,
+                "relative_term_dominates": false
+              }
+            },
+            "old": {
+              "linearized": {
+                "absolute_error": 5.741467746690503e-07,
+                "analytic": -7.327468360609947e-07,
+                "finite_difference": -1.306893610730045e-06,
+                "h": 0.3,
+                "informative_pass": false,
+                "loss_minus": 0.0,
+                "loss_plus": -7.841361664380269e-07,
+                "nonzero_response": true,
+                "numerator": -7.841361664380269e-07,
+                "pass_tolerance": true,
+                "relative_error": 0.439321739700239,
+                "relative_only_pass": false,
+                "relative_term_dominates": false
+              },
+              "nonlinear": {
+                "absolute_error": 5.665414080166618e-07,
+                "analytic": -7.327468360609947e-07,
+                "finite_difference": -1.2992882440776565e-06,
+                "h": 0.3,
+                "informative_pass": false,
+                "loss_minus": -0.031225653487391813,
+                "loss_plus": -0.03122643306033826,
+                "nonzero_response": true,
+                "numerator": -7.795729464465939e-07,
+                "pass_tolerance": true,
+                "relative_error": 0.43603981687592375,
+                "relative_only_pass": false,
+                "relative_term_dominates": false
+              }
+            }
+          },
+          "probability_delta_max_abs": 3.4749507904052734e-05,
+          "probability_delta_norm": 0.00014285123171008842,
+          "probability_min": 5.1152255764463916e-05,
+          "probability_sum_max_error": 2.0980223780497909e-07
+        },
+        {
+          "coordinate_delta_norm": 0.0016642341141992131,
+          "coordinate_delta_rms": 3.1695385409297407e-05,
+          "coordinate_file": "direction2_h1.npz",
+          "coordinate_sha256": "8f7d480df68dcc166862844f52afb70f207ac64c7bf842d4dc788d7a42e174e3",
+          "h": 0.1,
+          "objectives": {
+            "new": {
+              "linearized": {
+                "absolute_error": 1.3672460801215345e-07,
+                "analytic": 4.346717383674216e-06,
+                "finite_difference": 4.209992775662062e-06,
+                "h": 0.1,
+                "informative_pass": false,
+                "loss_minus": 0.0,
+                "loss_plus": 8.419985551324124e-07,
+                "nonzero_response": true,
+                "numerator": 8.419985551324124e-07,
+                "pass_tolerance": true,
+                "relative_error": 0.03145468084161068,
+                "relative_only_pass": true,
+                "relative_term_dominates": false
+              },
+              "nonlinear": {
+                "absolute_error": 1.4360509240641915e-07,
+                "analytic": 4.346717383674216e-06,
+                "finite_difference": 4.2031122912677965e-06,
+                "h": 0.1,
+                "informative_pass": false,
+                "loss_minus": 0.1797078838351944,
+                "loss_plus": 0.17970872445765265,
+                "nonzero_response": true,
+                "numerator": 8.406224582535593e-07,
+                "pass_tolerance": true,
+                "relative_error": 0.03303759589840918,
+                "relative_only_pass": true,
+                "relative_term_dominates": false
+              }
+            },
+            "old": {
+              "linearized": {
+                "absolute_error": 5.741156091339086e-07,
+                "analytic": -7.327468360609947e-07,
+                "finite_difference": -1.5863122692708607e-07,
+                "h": 0.1,
+                "informative_pass": false,
+                "loss_minus": 0.0,
+                "loss_plus": -3.1726245385417214e-08,
+                "nonzero_response": true,
+                "numerator": -3.1726245385417214e-08,
+                "pass_tolerance": true,
+                "relative_error": 0.7835115498009719,
+                "relative_only_pass": false,
+                "relative_term_dominates": false
+              },
+              "nonlinear": {
+                "absolute_error": 5.941180966009719e-07,
+                "analytic": -7.327468360609947e-07,
+                "finite_difference": -1.3862873946002274e-07,
+                "h": 0.1,
+                "informative_pass": false,
+                "loss_minus": -0.031225766579081007,
+                "loss_plus": -0.0312257943048289,
+                "nonzero_response": true,
+                "numerator": -2.772574789200455e-08,
+                "pass_tolerance": true,
+                "relative_error": 0.8108095011296874,
+                "relative_only_pass": false,
+                "relative_term_dominates": false
+              }
+            }
+          },
+          "probability_delta_max_abs": 1.1801719665527344e-05,
+          "probability_delta_norm": 4.763985472970136e-05,
+          "probability_min": 5.2133800636511296e-05,
+          "probability_sum_max_error": 1.830121618695557e-07
+        },
+        {
+          "coordinate_delta_norm": 0.001309127394131528,
+          "coordinate_delta_rms": 2.493236796004117e-05,
+          "coordinate_file": "direction2_h2.npz",
+          "coordinate_sha256": "87fb733c7965c29c478322dc3687002c8a069ef7c8f35833ea5ca3ec540b79d2",
+          "h": 0.03,
+          "objectives": {
+            "new": {
+              "linearized": {
+                "absolute_error": 1.0334908303281065e-05,
+                "analytic": 4.346717383674216e-06,
+                "finite_difference": -5.98819091960685e-06,
+                "h": 0.03,
+                "informative_pass": false,
+                "loss_minus": 0.0,
+                "loss_plus": -3.59291455176411e-07,
+                "nonzero_response": true,
+                "numerator": -3.59291455176411e-07,
+                "pass_tolerance": false,
+                "relative_error": 1.7258815629010698,
+                "relative_only_pass": false,
+                "relative_term_dominates": false
+              },
+              "nonlinear": {
+                "absolute_error": 1.0332294355241979e-05,
+                "analytic": 4.346717383674216e-06,
+                "finite_difference": -5.985576971567763e-06,
+                "h": 0.03,
+                "informative_pass": false,
+                "loss_minus": 0.1797084841663544,
+                "loss_plus": 0.1797081250317361,
+                "nonzero_response": true,
+                "numerator": -3.591346182940658e-07,
+                "pass_tolerance": false,
+                "relative_error": 1.7261985610278952,
+                "relative_only_pass": false,
+                "relative_term_dominates": false
+              }
+            },
+            "old": {
+              "linearized": {
+                "absolute_error": 3.528776370479608e-08,
+                "analytic": -7.327468360609947e-07,
+                "finite_difference": -6.974590723561986e-07,
+                "h": 0.03,
+                "informative_pass": false,
+                "loss_minus": 0.0,
+                "loss_plus": -4.184754434137191e-08,
+                "nonzero_response": true,
+                "numerator": -4.184754434137191e-08,
+                "pass_tolerance": true,
+                "relative_error": 0.04815819320966497,
+                "relative_only_pass": true,
+                "relative_term_dominates": false
+              },
+              "nonlinear": {
+                "absolute_error": 1.501855128049043e-08,
+                "analytic": -7.327468360609947e-07,
+                "finite_difference": -7.477653873414851e-07,
+                "h": 0.03,
+                "informative_pass": false,
+                "loss_minus": -0.031225833040292583,
+                "loss_plus": -0.031225877906215824,
+                "nonzero_response": true,
+                "numerator": -4.48659232404891e-08,
+                "pass_tolerance": true,
+                "relative_error": 0.020084576706452778,
+                "relative_only_pass": true,
+                "relative_term_dominates": false
+              }
+            }
+          },
+          "probability_delta_max_abs": 3.5762786865234375e-06,
+          "probability_delta_norm": 1.4118760728894987e-05,
+          "probability_min": 5.248177330940962e-05,
+          "probability_sum_max_error": 1.6727062757126987e-07
+        },
+        {
+          "coordinate_delta_norm": 0.0017005726259608145,
+          "coordinate_delta_rms": 3.2387453385585965e-05,
+          "coordinate_file": "direction2_h3.npz",
+          "coordinate_sha256": "c0f270139cd17a426701d11cd057ff58a20a88fa8e5e2c2d25bf166b53821c4e",
+          "h": 0.01,
+          "objectives": {
+            "new": {
+              "linearized": {
+                "absolute_error": 5.205908391541019e-05,
+                "analytic": 4.346717383674216e-06,
+                "finite_difference": 5.6405801299084404e-05,
+                "h": 0.01,
+                "informative_pass": false,
+                "loss_minus": 0.0,
+                "loss_plus": 1.1281160259816882e-06,
+                "nonzero_response": true,
+                "numerator": 1.1281160259816882e-06,
+                "pass_tolerance": false,
+                "relative_error": 0.9229384693849785,
+                "relative_only_pass": false,
+                "relative_term_dominates": true
+              },
+              "nonlinear": {
+                "absolute_error": 5.1949994554345557e-05,
+                "analytic": 4.346717383674216e-06,
+                "finite_difference": 5.629671193801977e-05,
+                "h": 0.01,
+                "informative_pass": false,
+                "loss_minus": 0.179707173494392,
+                "loss_plus": 0.17970829942863076,
+                "nonzero_response": true,
+                "numerator": 1.1259342387603954e-06,
+                "pass_tolerance": false,
+                "relative_error": 0.9227891428462152,
+                "relative_only_pass": false,
+                "relative_term_dominates": true
+              }
+            },
+            "old": {
+              "linearized": {
+                "absolute_error": 1.9721871418697096e-05,
+                "analytic": -7.327468360609947e-07,
+                "finite_difference": -2.045461825475809e-05,
+                "h": 0.01,
+                "informative_pass": false,
+                "loss_minus": 0.0,
+                "loss_plus": -4.090923650951618e-07,
+                "nonzero_response": true,
+                "numerator": -4.090923650951618e-07,
+                "pass_tolerance": false,
+                "relative_error": 0.964176948846721,
+                "relative_only_pass": false,
+                "relative_term_dominates": true
+              },
+              "nonlinear": {
+                "absolute_error": 1.9128849598822617e-05,
+                "analytic": -7.327468360609947e-07,
+                "finite_difference": -1.986159643488361e-05,
+                "h": 0.01,
+                "informative_pass": false,
+                "loss_minus": -0.0312258162755639,
+                "loss_plus": -0.0312262135074926,
+                "nonzero_response": true,
+                "numerator": -3.972319286976722e-07,
+                "pass_tolerance": false,
+                "relative_error": 0.9631073545138574,
+                "relative_only_pass": false,
+                "relative_term_dominates": false
+              }
+            }
+          },
+          "probability_delta_max_abs": 1.1920928955078125e-06,
+          "probability_delta_norm": 4.430413716764756e-06,
+          "probability_min": 5.258160308585502e-05,
+          "probability_sum_max_error": 1.5216937754303217e-07
+        },
+        {
+          "coordinate_delta_norm": 0.0013351500379493843,
+          "coordinate_delta_rms": 2.542796994184089e-05,
+          "coordinate_file": "direction2_h4.npz",
+          "coordinate_sha256": "f92d1bb1f263857be4396ebdb704e76f54f4565e0f851e28f368881c5f81f4bb",
+          "h": 0.003,
+          "objectives": {
+            "new": {
+              "linearized": {
+                "absolute_error": 7.477170661829597e-05,
+                "analytic": 4.346717383674216e-06,
+                "finite_difference": -7.042498923462175e-05,
+                "h": 0.003,
+                "informative_pass": false,
+                "loss_minus": 0.0,
+                "loss_plus": -4.2254993540773054e-07,
+                "nonzero_response": true,
+                "numerator": -4.2254993540773054e-07,
+                "pass_tolerance": false,
+                "relative_error": 1.0617212360401374,
+                "relative_only_pass": false,
+                "relative_term_dominates": true
+              },
+              "nonlinear": {
+                "absolute_error": 7.455661380815216e-05,
+                "analytic": 4.346717383674216e-06,
+                "finite_difference": -7.020989642447795e-05,
+                "h": 0.003,
+                "informative_pass": false,
+                "loss_minus": 0.17970769929867877,
+                "loss_plus": 0.17970727803930023,
+                "nonzero_response": true,
+                "numerator": -4.212593785468677e-07,
+                "pass_tolerance": false,
+                "relative_error": 1.0619103232597673,
+                "relative_only_pass": false,
+                "relative_term_dominates": true
+              }
+            },
+            "old": {
+              "linearized": {
+                "absolute_error": 1.4410465002871158e-05,
+                "analytic": -7.327468360609947e-07,
+                "finite_difference": -1.5143211838932152e-05,
+                "h": 0.003,
+                "informative_pass": false,
+                "loss_minus": 0.0,
+                "loss_plus": -9.085927103359291e-08,
+                "nonzero_response": true,
+                "numerator": -9.085927103359291e-08,
+                "pass_tolerance": false,
+                "relative_error": 0.9516121913993733,
+                "relative_only_pass": false,
+                "relative_term_dominates": false
+              },
+              "nonlinear": {
+                "absolute_error": 1.534060702421413e-05,
+                "analytic": -7.327468360609947e-07,
+                "finite_difference": -1.6073353860275124e-05,
+                "h": 0.003,
+                "informative_pass": false,
+                "loss_minus": -0.031225970628116138,
+                "loss_plus": -0.0312260670682393,
+                "nonzero_response": true,
+                "numerator": -9.644012316165074e-08,
+                "pass_tolerance": false,
+                "relative_error": 0.9544123247437513,
+                "relative_only_pass": false,
+                "relative_term_dominates": false
+              }
+            }
+          },
+          "probability_delta_max_abs": 2.384185791015625e-07,
+          "probability_delta_norm": 1.5337200790212825e-06,
+          "probability_min": 5.261659680400044e-05,
+          "probability_sum_max_error": 1.2820237316191196e-07
+        }
+      ]
+    }
+  ],
+  "elapsed_seconds": 86.72658619401045,
+  "full_forward_calls": 34,
+  "geometry": {
+    "atom_count": 919,
+    "bond_rmse": 0.2869366705417633,
+    "chirality_fraction": 0.9910714285714285,
+    "max_penetration": 2.847867250442505,
+    "peptide_mae": 0.13597875833511353,
+    "severe_pairs": 10,
+    "severe_pairs_per_atom": 0.01088139281828074
+  },
+  "geometry_gate": {
+    "accepted": false,
+    "reasons": [
+      "bond_rmse_absolute",
+      "max_penetration_absolute",
+      "severe_pairs_per_atom_regression"
+    ]
+  },
+  "grad_no_grad_exact": true,
+  "grad_no_grad_max_abs": 0.0,
+  "gradient_stats": {
+    "new": {
+      "finite": true,
+      "max_abs": 4.932993761030957e-05,
+      "norm": 0.00019582583627197891,
+      "repeat_max_abs": 0.0,
+      "zero_fraction": 0.0
+    },
+    "old": {
+      "finite": true,
+      "max_abs": 5.153462097950978e-06,
+      "norm": 2.1827363525517285e-05,
+      "repeat_max_abs": 0.0,
+      "zero_fraction": 0.0
+    }
+  },
+  "gradients_sha256": "0444849a88d4d02ed006c853a4d369d92bfc29cb94beca00ace2e0f1cd627b20",
+  "hard_geometry": {
+    "atom_count": 919,
+    "bond_rmse": 0.28620076179504395,
+    "chirality_fraction": 0.9910714285714285,
+    "max_penetration": 2.843067169189453,
+    "peptide_mae": 0.13583216071128845,
+    "severe_pairs": 7,
+    "severe_pairs_per_atom": 0.007616974972796518
+  },
+  "hard_geometry_gate": {
+    "accepted": false,
+    "reasons": [
+      "bond_rmse_absolute",
+      "max_penetration_absolute"
+    ]
+  },
+  "input_trace": {
+    "esm_output": {
+      "cosine_to_hard": 0.9999998190387095,
+      "delta_norm": 0.10196892848890314,
+      "max_abs": 0.006078600883483887,
+      "relative_rms": 0.0006017933296632057,
+      "rms": 0.00018025730201207387
+    },
+    "projected_delta_cosine_to_sinputs_delta": 0.9980073418818609,
+    "projected_esm": {
+      "cosine_to_hard": 0.9999982633567919,
+      "delta_norm": 0.36301922759678745,
+      "max_abs": 0.017590045928955078,
+      "relative_rms": 0.001877502059174003,
+      "rms": 0.0015323269906663524
+    },
+    "s_inputs": {
+      "cosine_to_hard": 0.9999983480253212,
+      "delta_norm": 0.363942185833401,
+      "max_abs": 0.017934322357177734,
+      "relative_rms": 0.0018345737855011764,
+      "rms": 0.0015362228554297243
+    },
+    "token_embedding": {
+      "cosine_to_hard": 0.9999999495574585,
+      "delta_norm": 0.05032137378285793,
+      "max_abs": 0.0006736516952514648,
+      "relative_rms": 0.0010025917651077982,
+      "rms": 8.895646160120448e-05
+    }
+  },
+  "lock_sha256": "eaef520b948d1cfbc11b05090b50d1213d5b056dd90200d9971be81569371db3",
+  "model_deployment_accepted": false,
+  "near_hard_ca_rmsd": 0.02774293661551444,
+  "peak_memory_gib": 12.839860439300537,
+  "point_losses": {
+    "new": 0.17970770110733628,
+    "old": -0.031226106853491562
+  },
+  "repeated_forward_exact": true,
+  "stage": "complete",
+  "steps": 2,
+  "summary": {
+    "new": {
+      "linearized": {
+        "informative_direction_plateaus": [
+          false,
+          false,
+          false
+        ],
+        "informative_passed": false,
+        "label": "fail",
+        "original_direction_plateaus": [
+          false,
+          false,
+          true
+        ],
+        "original_passed": false
+      },
+      "nonlinear": {
+        "informative_direction_plateaus": [
+          false,
+          false,
+          false
+        ],
+        "informative_passed": false,
+        "label": "fail",
+        "original_direction_plateaus": [
+          false,
+          false,
+          true
+        ],
+        "original_passed": false
+      }
+    },
+    "old": {
+      "linearized": {
+        "informative_direction_plateaus": [
+          false,
+          false,
+          false
+        ],
+        "informative_passed": false,
+        "label": "pass_low_signal_or_absolute_tolerance_assisted",
+        "original_direction_plateaus": [
+          true,
+          true,
+          true
+        ],
+        "original_passed": true
+      },
+      "nonlinear": {
+        "informative_direction_plateaus": [
+          false,
+          false,
+          false
+        ],
+        "informative_passed": false,
+        "label": "pass_low_signal_or_absolute_tolerance_assisted",
+        "original_direction_plateaus": [
+          true,
+          true,
+          true
+        ],
+        "original_passed": true
+      }
+    }
+  },
+  "topology_sha256": "23b9acbb91180973455046f47cf15937f718a23cf66d3b58af249bff4d3ff600"
+}

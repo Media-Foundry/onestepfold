@@ -1,0 +1,994 @@
+{
+  "artifact_sha256": {
+    "8bzn_a0_s1/baseline.npz": "91d7dee3e2fcbda261418702f55ad2acf912f962d00e208b0acc52b8deeb67c2",
+    "8bzn_a0_s1/direction0_h0.npz": "d09bdf7a83c92bf2cdcd7b5a09f98a11c838ddde4731378aae9fea5aafcd2c32",
+    "8bzn_a0_s1/direction0_h1.npz": "4d1f32fc1c1b768b677f9b195b9ad321d6292221fe420ea6a165abc5159aee21",
+    "8bzn_a0_s1/direction0_h2.npz": "a5c3f7d78b9e4dc594cd2727bbb92521817c567b3fc8841a4b96b68229899154",
+    "8bzn_a0_s1/direction0_h3.npz": "0fc6c324087dad6c025391810943ef295cebd3aa79a1249edeea9e7069220bcf",
+    "8bzn_a0_s1/direction0_h4.npz": "3ec50447e75bcd2409b5d3eb34a67ae33d522e7fc06b50aadee654dd91d0948c",
+    "8bzn_a0_s1/direction1_h0.npz": "235997f2765e30406b477aa301990d7ecc1be2abd619c9df79d0a995dc1130a1",
+    "8bzn_a0_s1/direction1_h1.npz": "f01655e4fd1ee6f099e0d6c815f6d1b4e80a3d21af76b66a392990924bb066e6",
+    "8bzn_a0_s1/direction1_h2.npz": "b5bab8259bfbcf1f262101f3809cf9e3ffeca3f542ada374f5856e33159647d0",
+    "8bzn_a0_s1/direction1_h3.npz": "a98fa587b72cab1270767fb77f776462be1c49911a36c45fcb60646124618fcd",
+    "8bzn_a0_s1/direction1_h4.npz": "5bc3db23db7324e5113f9d49dee65b83f9dfad77854030ba7d4004b598b6ca32",
+    "8bzn_a0_s1/direction2_h0.npz": "3b37f89d004c2d2127bdc9532182238f18c918c57eb0b9ddfb6c3c2748cfe1f4",
+    "8bzn_a0_s1/direction2_h1.npz": "cd297fd0f5ca9b5ecc7cf7c0021cad10c57cb68903b70eb72316ed4936978198",
+    "8bzn_a0_s1/direction2_h2.npz": "8971487b330cfe2465ccbc664e8a8bb3935ef9cd3316c02b27905cc737ede76a",
+    "8bzn_a0_s1/direction2_h3.npz": "9ef535410629952e3fbf66ef2298f23a4651c095da9cc2306733a4514172c06e",
+    "8bzn_a0_s1/direction2_h4.npz": "a342b47daa290694a7dce8d9fc270945e693f43538ba34508bd942541018278d",
+    "8bzn_a0_s1/gradients.pt": "a60a225d882b001b463bc98b4f819735e6daadb15d3998ed9caf3a92c0ef475e",
+    "8bzn_a0_s1/report.json": "272dcb61949411d5ea6096711b9fb5a8f74c523c34a35bc389ce87e687db7413",
+    "8bzn_a0_s1/topology.pt": "23b9acbb91180973455046f47cf15937f718a23cf66d3b58af249bff4d3ff600",
+    "8bzn_a0_s2/baseline.npz": "dc5f4b53853258783bf0654fd7a8302b0d82a7243d02aa7b847572bbcdf9abfd",
+    "8bzn_a0_s2/direction0_h0.npz": "90c157770114b84603334b8b0d7fe02dbe728f46f156afe0eec07b916365ee03",
+    "8bzn_a0_s2/direction0_h1.npz": "c7ac4f65475f5681a0aa60beb4a1c5551594b8de4dea489355391f84c7558b3b",
+    "8bzn_a0_s2/direction0_h2.npz": "cf679bae5749dcdfd97f1988aea9afbf610fb93119d8d557d013c597b5e1d2f7",
+    "8bzn_a0_s2/direction0_h3.npz": "78caf7f9b3bafdae5a1db18624b693b93a5922ae6f2c1b5f1bb4f0226529b0a9",
+    "8bzn_a0_s2/direction0_h4.npz": "ab12c586c9bfbdc62f864e395b606697aa6813967471f571de158118359b4bce",
+    "8bzn_a0_s2/direction1_h0.npz": "7f33212038e380171c326672c91658f7e6d2572bca40b1848249490e81a3b471",
+    "8bzn_a0_s2/direction1_h1.npz": "841aadafa68cfd3b934f4bf8ca3fad697180f9f3aed285fd5e90e50168fd8935",
+    "8bzn_a0_s2/direction1_h2.npz": "3a35e09175e672f1580d2cb879ada892b66f235711833634272482df4e71f194",
+    "8bzn_a0_s2/direction1_h3.npz": "f8239a91d13147b6cf2995d97180f94680efc08ec3581a8b4ece7a036123f2e9",
+    "8bzn_a0_s2/direction1_h4.npz": "080b90f4cb1c9f5836e205f099b858a424c300d5d0492fea9f6d062f0704eea3",
+    "8bzn_a0_s2/direction2_h0.npz": "5e4ff43f8514457a0e7e49ebb6b120fb9022641610a33543638b9c2b18d6f12d",
+    "8bzn_a0_s2/direction2_h1.npz": "bffc4341d519fa7439c98ef6a7694ec21bcae8d7dae5606bfd0f8c7de269e923",
+    "8bzn_a0_s2/direction2_h2.npz": "ed420b87d10763cf3aa75893e5afd0a1f6961adc1e18e9e5edea3d0656edac84",
+    "8bzn_a0_s2/direction2_h3.npz": "7ed1a4a6f84e68fcde89f558bd1716d4b6e25557db2e0b2ec1b0c3fbe44fecf8",
+    "8bzn_a0_s2/direction2_h4.npz": "68d8c1323c0535d16f14d2bcec88a3d0e3406536ddc8ca5553cc276509b0a819",
+    "8bzn_a0_s2/gradients.pt": "4aa8326141ba9005c65128fedc2be8e20f60c00ccf3d79deac861e8f542d4941",
+    "8bzn_a0_s2/report.json": "b375ee66a6430fd2dcabbfcf4e091505fb796175f8afb9253ec6d338fdf4770a",
+    "8bzn_a0_s2/topology.pt": "23b9acbb91180973455046f47cf15937f718a23cf66d3b58af249bff4d3ff600",
+    "8bzn_a1_s1/baseline.npz": "b5383dd139917fbf1c866b20d27a4b4cae99e929ce6341bc73145f9002ad2d06",
+    "8bzn_a1_s1/direction0_h0.npz": "b2d9f9f81c6d1c5f674804e13d8cc124f27f9a32081c8d581066c348535901c6",
+    "8bzn_a1_s1/direction0_h1.npz": "da3cf8bd30978eefa8e9fc082fa40046091c12b17b330b82b44c68fce560fdeb",
+    "8bzn_a1_s1/direction0_h2.npz": "11c045366b4ac55776292c765d8b9a832d0f3d6dfe94b4631518373d98d919c4",
+    "8bzn_a1_s1/direction0_h3.npz": "c000cebd371e1ff8bf41c23e326121275aae393d09a5b04881584649d8b9c97a",
+    "8bzn_a1_s1/direction0_h4.npz": "f9f9afedbec5cbfa97e76fb8d7adb1a6c1763e82f09ee66483b00a2b202b6442",
+    "8bzn_a1_s1/direction1_h0.npz": "3209c5ceaa503b075c06fbd0368e2b57b587ea17745b7600645861f8caa7e721",
+    "8bzn_a1_s1/direction1_h1.npz": "2c6e635a1aa3f11ef5385abc97ee64a7f8471c140c832110800ceabe2c2e5f48",
+    "8bzn_a1_s1/direction1_h2.npz": "b5d1b44349da0ec4216366c4e6c082fae5cef4a159d97e82211606b6d81f6c6a",
+    "8bzn_a1_s1/direction1_h3.npz": "0c5b1b0a7ae5ed98a408e293886124f208a31bf8775967b2c3047b5bef87e116",
+    "8bzn_a1_s1/direction1_h4.npz": "cc0821b27c517e81be5013d02375478a6b565bead1ea2eab8555b71ed8499b25",
+    "8bzn_a1_s1/direction2_h0.npz": "dcaa9b47d6c33434c12a59074917eaa95f696ebf8688be01580f78ed44acc237",
+    "8bzn_a1_s1/direction2_h1.npz": "a7513a792be244ac6996ee1c93bb32f3f2c8155b641c78d5ee4ac400541335a4",
+    "8bzn_a1_s1/direction2_h2.npz": "d9ae580d122528382633b4cd5d0e94a4161c229899517c91ca14ab7ab82aedc0",
+    "8bzn_a1_s1/direction2_h3.npz": "b1c78e7abf8e408617cb21562ee585a16aac27ee45838aaea905dc98eae52a38",
+    "8bzn_a1_s1/direction2_h4.npz": "03345ee0211e5a33c932b3610445a9a4c2c005828bc48645cd2f98afa10d3070",
+    "8bzn_a1_s1/gradients.pt": "a72ed8e08dc603289f819b24fcccd4f06314d08432e7b18e5aeb1530086051c0",
+    "8bzn_a1_s1/report.json": "206fdc59c7ee9b76c4ad7862a320a10dcb100a9f7282a58ff6df25cc0d6896ba",
+    "8bzn_a1_s1/topology.pt": "23b9acbb91180973455046f47cf15937f718a23cf66d3b58af249bff4d3ff600",
+    "8bzn_a1_s2/baseline.npz": "c5c9692fa8849b0964079424effb9f0ae7b2da9dd5f464e009b28e2d9be39151",
+    "8bzn_a1_s2/direction0_h0.npz": "79201e17d06d63f7248527b7b51353bbb7df9e20025203551150a5c80659a2ea",
+    "8bzn_a1_s2/direction0_h1.npz": "f4227581859fc0e99089b77e77b367708e043bf8152eb25fe3f0372f83b24a12",
+    "8bzn_a1_s2/direction0_h2.npz": "739645aaeb8db7be006daa5dd23da8f2bd2b348f7400d4641b9197c2710cb1a6",
+    "8bzn_a1_s2/direction0_h3.npz": "3633858e109750eb47118fa54a6b0d6b5f35a1642e995d7b7fc4e76155f8dadc",
+    "8bzn_a1_s2/direction0_h4.npz": "3053a9ac62f0b33a17aedda215cc3f060ca892d97101772dd6970477dd227d60",
+    "8bzn_a1_s2/direction1_h0.npz": "6eb3832e412844e68830708fa9cbb852b32b413234917c7c1f91b507842297d3",
+    "8bzn_a1_s2/direction1_h1.npz": "041cdd0bfa00161292189097f6d7b0533261bf4bc27ee91d6d6f66dad1cb46f2",
+    "8bzn_a1_s2/direction1_h2.npz": "0be16d50d984f7aeef269e7a1a3d3031e6255f7a92913da41fa6e95e944593d4",
+    "8bzn_a1_s2/direction1_h3.npz": "546a10ded7b054f2c6fa78c54f47b7d8597bbb0be3536e3720666a0aacca84d0",
+    "8bzn_a1_s2/direction1_h4.npz": "b5134a944196a0bef26bdc41ec0947f5ad24da60b745b1ccaf4bfc76f1469e63",
+    "8bzn_a1_s2/direction2_h0.npz": "7c244d6b2f67079c5b00c9dd8fab7bc657c584154f343e335ae18b25092f1489",
+    "8bzn_a1_s2/direction2_h1.npz": "8f7d480df68dcc166862844f52afb70f207ac64c7bf842d4dc788d7a42e174e3",
+    "8bzn_a1_s2/direction2_h2.npz": "87fb733c7965c29c478322dc3687002c8a069ef7c8f35833ea5ca3ec540b79d2",
+    "8bzn_a1_s2/direction2_h3.npz": "c0f270139cd17a426701d11cd057ff58a20a88fa8e5e2c2d25bf166b53821c4e",
+    "8bzn_a1_s2/direction2_h4.npz": "f92d1bb1f263857be4396ebdb704e76f54f4565e0f851e28f368881c5f81f4bb",
+    "8bzn_a1_s2/gradients.pt": "0444849a88d4d02ed006c853a4d369d92bfc29cb94beca00ace2e0f1cd627b20",
+    "8bzn_a1_s2/report.json": "df70d2c78e68c7c1c437d17569e3c9163f0b4f340f8f8bbd9dea3176026a1705",
+    "8bzn_a1_s2/topology.pt": "23b9acbb91180973455046f47cf15937f718a23cf66d3b58af249bff4d3ff600",
+    "control_a0_s1/baseline.npz": "60367b03c036488823761aa2e9a8d90c8ecf510b72440d83b671b81e8a642854",
+    "control_a0_s1/direction0_h0.npz": "40c07391f5d9b5cf55f26de05085e0424903191728f56e74c48f616169248317",
+    "control_a0_s1/direction0_h1.npz": "1011ceb5360268c423bc21fd2c8fe890b12191bc8fee373dda165e55e7119379",
+    "control_a0_s1/direction0_h2.npz": "abc565238243ce27b491c32e6d0bc9972146b962c5bac1fdc900315f38e43489",
+    "control_a0_s1/direction0_h3.npz": "654167d5f33f609765b9f8b397fda72af71900c701ea0a17af147593f5fa9f06",
+    "control_a0_s1/direction0_h4.npz": "2d75daef90b270cf22ba9b7524209c8a5e523ae3b715e87e73be31dd47c95a40",
+    "control_a0_s1/direction1_h0.npz": "1ce6b5ebab6d634c044c14b6d504aa6081ae10f84bfa080e57535e27a2b25362",
+    "control_a0_s1/direction1_h1.npz": "1afdfa32b087f55cd7b0886efdb250a8167f5f1416e1372458f11cf22881ca22",
+    "control_a0_s1/direction1_h2.npz": "a0df4e307cbfa9fc0a6799098b9477c76b0834b61cb322efe46323ac32ba41aa",
+    "control_a0_s1/direction1_h3.npz": "7ab41b4d2c8f64edac42de8f33c89cc441a8dec75ff43f5add62c714a354eed8",
+    "control_a0_s1/direction1_h4.npz": "25784b8baac267b2ae922ca6fbc8ca3ddce8974296064b2d4bf9afde5adf7fe7",
+    "control_a0_s1/direction2_h0.npz": "118c0134f95d50f8434252b1274ff3db7b860460f35f71d9a3977492d35156bc",
+    "control_a0_s1/direction2_h1.npz": "ca34fdec6b3b337e1e38b289ac3b6f55aa15f79e0a83233f17fdf050a82392ea",
+    "control_a0_s1/direction2_h2.npz": "1d4876dd564ae387d59d9ccca1b6832461b065df5079a6819b04a92ee480bb45",
+    "control_a0_s1/direction2_h3.npz": "61e74a8ebf4f12472ae5eefa5cbedf8f3d75194f1cb72c7647036438453ee79f",
+    "control_a0_s1/direction2_h4.npz": "f95238d5420fac20eec886018129681b6fedde3c6b3f5007e255953b94b0aa06",
+    "control_a0_s1/gradients.pt": "cfcbe6bbd854f06b47a2ff1df5fadf10e06304bca99fdc9c1cee45e931e04886",
+    "control_a0_s1/report.json": "80de7a559a37b4bc64181136c9789967a78fb91ac08cdbcfceecf5f37b0afd75",
+    "control_a0_s1/topology.pt": "c727ac859f19bbf487122a30c0838b85a361f6634033988cede5a7acd4a80e29",
+    "control_a0_s2/baseline.npz": "b0a757f500ad406c4be14a976e634c2dd1cdfbf42f73244916e5682103877a46",
+    "control_a0_s2/direction0_h0.npz": "9cac336546fb44a8d7ed2e3f0a45e01c4697c317933b835f2bddd4ea80883245",
+    "control_a0_s2/direction0_h1.npz": "631364ce3a7b64e23ac423f04a589178f3c87c63c212e1031a058e276be47c7f",
+    "control_a0_s2/direction0_h2.npz": "da1ccc3457496d64eefb2ce3316524cb2ee94efeddc7222959e157272acbd547",
+    "control_a0_s2/direction0_h3.npz": "0bbe34eb6892f832bd6cfcc075c2a4217c1aad23af39f7aec2705f750ee7dd10",
+    "control_a0_s2/direction0_h4.npz": "7b25dc6214b652034219a7cd10468868ec41cca3bb39b47e76207a7476afc901",
+    "control_a0_s2/direction1_h0.npz": "8803e99bf4bd7a12a26033920b15c37e41c3a9676da3da515963b88f5696eb57",
+    "control_a0_s2/direction1_h1.npz": "686bd8b53d72216aefa65b59c0d1247c07fb5b818c442307e219a42c9408fe12",
+    "control_a0_s2/direction1_h2.npz": "d5d603a987a3fdeaede190fa6b344a09ee7904e2496bcb57274e66e88a3f58f1",
+    "control_a0_s2/direction1_h3.npz": "240d7146354cf63fc1a382b5d35d82da238a2f7b6c57954dc3b4951d7bc9543d",
+    "control_a0_s2/direction1_h4.npz": "368351510cd7157adc1481a8fa8882893538a337ee405db87fbb1f52adab1b1a",
+    "control_a0_s2/direction2_h0.npz": "b7351b9ebeb28200c3d99fd8bc3a6ce7933b692c51955bba84a145e00b5f0fc7",
+    "control_a0_s2/direction2_h1.npz": "b4b4b5fb2bf28221b34e407344fcfc832ea52ad7396245b9c568c13587a01f1e",
+    "control_a0_s2/direction2_h2.npz": "66b700107db6049e251586972bad44ca330d9f570e1e255e094210356a325357",
+    "control_a0_s2/direction2_h3.npz": "945447e36f9a7d9a9199fecf57261c2db300fb3d8193bfbe66919d11852b5ff0",
+    "control_a0_s2/direction2_h4.npz": "41c94a070ae194570855c5ba2490e713fa27935245974d1cc806074667693c86",
+    "control_a0_s2/gradients.pt": "c0c2918a49e4550284397e0853018580551c6411d4b5b896f53103d5fe309f69",
+    "control_a0_s2/report.json": "c3869f06cbe0f6e43db3eb720687b28c9a804debaff0a72b7a5049425cd8aed6",
+    "control_a0_s2/topology.pt": "c727ac859f19bbf487122a30c0838b85a361f6634033988cede5a7acd4a80e29",
+    "control_a1_s1/baseline.npz": "e5a2a86f347e6922bdf1151654b03af53b7b4c02c7dfed050460d08191a49a18",
+    "control_a1_s1/direction0_h0.npz": "79a29dec69e3cb28a3aeca5e4c70cb65fa18d291fe7f901d2153b079fdd4e88a",
+    "control_a1_s1/direction0_h1.npz": "6cb391686f33da2ff31daefaa63ee522cf30a4b6a08613ad9520a405f6dd2230",
+    "control_a1_s1/direction0_h2.npz": "656564e2a4e2d7c549c6d113d1012076bfe5afad9a3987a026971d39963bdac8",
+    "control_a1_s1/direction0_h3.npz": "06852c177201a7adb56a50723df39df6a976841f4e3539e8f05147cfdbf03204",
+    "control_a1_s1/direction0_h4.npz": "144fa8fd5e1e307855e16f518ac2a0da50131ed4fa9b7dcebc001b76af29b5fb",
+    "control_a1_s1/direction1_h0.npz": "0eb1ef72edb3b94288f3370001d90753a4064b12a6c63cfac6dc696433037373",
+    "control_a1_s1/direction1_h1.npz": "555868659e430b6dc6f2552d44a2481ec3aeb1a4389f1a681e0098ab9793832f",
+    "control_a1_s1/direction1_h2.npz": "66cc9f782108e175edaa4c9126092f3ecb00591b817ba8b58336566241ad96d7",
+    "control_a1_s1/direction1_h3.npz": "0e2a23d1eb8a152dbba54e07f99e4264e61237672fea4924eac16850b849851b",
+    "control_a1_s1/direction1_h4.npz": "8eabb879749173259f6aad26d00e1ea1d8d20e6114acddd7a6a7022e27e4ea98",
+    "control_a1_s1/direction2_h0.npz": "4512c474f545a13be796f46a04c9832aefb8b2277d6a29e0b4bbb2d80235dfa0",
+    "control_a1_s1/direction2_h1.npz": "048ee09876040ff04fbae6e983db7a8eaf2b69759989925bae144bd7c5b33457",
+    "control_a1_s1/direction2_h2.npz": "3cd384aef6a69cb6febed61469b0ffec237a96b8c667d5e0803e52f6eb5ad287",
+    "control_a1_s1/direction2_h3.npz": "3ee7c8c4725dd05752b74deed7e5909b6297e5cba0b5b307dfbe776de5f70d9a",
+    "control_a1_s1/direction2_h4.npz": "5d9331e8312091f3e76bbc414d03e76b3d5691ca71b22e39a7a0dcc1e4b937ad",
+    "control_a1_s1/gradients.pt": "56517b9e68d6f178955cccc3a7c69c948fba56cc8e3a3e27ed4c2c0b630f8f37",
+    "control_a1_s1/report.json": "fa99378b2028e859f814b7d32368f065393480a6231bc6436c74910cc79861de",
+    "control_a1_s1/topology.pt": "c727ac859f19bbf487122a30c0838b85a361f6634033988cede5a7acd4a80e29",
+    "control_a1_s2/baseline.npz": "ac3d16d1c051aefbe5ccf890b28b83689cedd2c6b477d1a21250a2448a23a50d",
+    "control_a1_s2/direction0_h0.npz": "99ef8e71304dae5948d1e5c74ee41d52f056bcbfe2e7f23f44f6fdec8a06e63e",
+    "control_a1_s2/direction0_h1.npz": "982aed942f22db5769f639b76789c96ba0317b25131e50a59fa1c08bd0f3d711",
+    "control_a1_s2/direction0_h2.npz": "c4796cec68e93ffad0298417c1cb2e954cf306ca84c7f91d7fe842683c871a0a",
+    "control_a1_s2/direction0_h3.npz": "8e364d307039bc2ba5de826ec60b682a0f4cf2ece59ada259ed304ce42ca0b6e",
+    "control_a1_s2/direction0_h4.npz": "1602bfd2382e967d705ee647d984b23c641e9e1159502d0c7f640c97e08f73e2",
+    "control_a1_s2/direction1_h0.npz": "6cffcb5d9326f7f3695e80d1451d10edabe70fae34797c30b0883e29011499ab",
+    "control_a1_s2/direction1_h1.npz": "dea16d8ff11e33d53f3cecdcd4720320b737bd8036fbccb4b6705cd1eeec2afb",
+    "control_a1_s2/direction1_h2.npz": "aa3197d96b823bb31d683ce3d6ff610cd973631eb1bcc487bcd33a023c024876",
+    "control_a1_s2/direction1_h3.npz": "71082a101b541fff0777b785636409adc9a6b2819e20c2af77c678316eb6a626",
+    "control_a1_s2/direction1_h4.npz": "d2f3e99a2e2f3e2e063d6c9dd7df7a0e1b1c59075c99ea72771a526fc6a4bf8b",
+    "control_a1_s2/direction2_h0.npz": "b717986d130795fc5c6036309cf01029add56611ab10eb877493b034bc9665ab",
+    "control_a1_s2/direction2_h1.npz": "202804fc7ca18d3716365b605d1eb77908c57a31ca79a9ae91e271a8196aeb09",
+    "control_a1_s2/direction2_h2.npz": "c1e340bb73803f544c01b6aa240cc5df0c6c95627e70c2626b2561d979c48a11",
+    "control_a1_s2/direction2_h3.npz": "0e8bf2230a78ce90d27db420e617737823ebdd2202d05fe8729ee32793ea4c82",
+    "control_a1_s2/direction2_h4.npz": "09f31f1fa04fa71f575f8c3772e1d58b6e3d21dacd5b8ff3b5c13b2fbba37149",
+    "control_a1_s2/gradients.pt": "c30518afd79891d0ad810cf8cdf4561dcf7a52c5d0b0f9c10c1218d76a20b2f3",
+    "control_a1_s2/report.json": "1c6d14ae567881c339a9d20824431ee28ea6435669ba298dd62a3294020ec0f4",
+    "control_a1_s2/topology.pt": "c727ac859f19bbf487122a30c0838b85a361f6634033988cede5a7acd4a80e29"
+  },
+  "complete": true,
+  "coordinate_records": 256,
+  "max_geometry_replay_difference": 1.437779673096884e-07,
+  "max_loss_replay_difference": 3.8339176972046474e-08,
+  "model_deployment_accepted": false,
+  "runs": [
+    {
+      "alpha": 0.0001,
+      "geometry_gate": {
+        "accepted": false,
+        "reasons": [
+          "bond_rmse_absolute",
+          "peptide_mae_absolute",
+          "max_penetration_absolute"
+        ]
+      },
+      "grad_no_grad_exact": true,
+      "gradient_stats": {
+        "new": {
+          "finite": true,
+          "max_abs": 1.2535718269646168e-05,
+          "norm": 3.7770645576529205e-05,
+          "repeat_max_abs": 0.0,
+          "zero_fraction": 0.0
+        },
+        "old": {
+          "finite": true,
+          "max_abs": 7.784797162457835e-07,
+          "norm": 1.4265348227127106e-06,
+          "repeat_max_abs": 0.0,
+          "zero_fraction": 0.0
+        }
+      },
+      "hard_geometry_gate": {
+        "accepted": false,
+        "reasons": [
+          "bond_rmse_absolute",
+          "peptide_mae_absolute",
+          "max_penetration_absolute"
+        ]
+      },
+      "name": "8bzn_a0_s1",
+      "near_hard_ca_rmsd": 0.0029804961135710736,
+      "repeated_forward_exact": true,
+      "steps": 1,
+      "summary": {
+        "new": {
+          "linearized": {
+            "informative_direction_plateaus": [
+              false,
+              false,
+              false
+            ],
+            "informative_passed": false,
+            "label": "fail",
+            "original_direction_plateaus": [
+              false,
+              false,
+              false
+            ],
+            "original_passed": false
+          },
+          "nonlinear": {
+            "informative_direction_plateaus": [
+              false,
+              false,
+              false
+            ],
+            "informative_passed": false,
+            "label": "fail",
+            "original_direction_plateaus": [
+              false,
+              false,
+              false
+            ],
+            "original_passed": false
+          }
+        },
+        "old": {
+          "linearized": {
+            "informative_direction_plateaus": [
+              false,
+              false,
+              false
+            ],
+            "informative_passed": false,
+            "label": "pass_low_signal_or_absolute_tolerance_assisted",
+            "original_direction_plateaus": [
+              true,
+              true,
+              true
+            ],
+            "original_passed": true
+          },
+          "nonlinear": {
+            "informative_direction_plateaus": [
+              false,
+              false,
+              false
+            ],
+            "informative_passed": false,
+            "label": "pass_low_signal_or_absolute_tolerance_assisted",
+            "original_direction_plateaus": [
+              true,
+              true,
+              true
+            ],
+            "original_passed": true
+          }
+        }
+      }
+    },
+    {
+      "alpha": 0.0001,
+      "geometry_gate": {
+        "accepted": false,
+        "reasons": [
+          "bond_rmse_absolute",
+          "max_penetration_absolute"
+        ]
+      },
+      "grad_no_grad_exact": true,
+      "gradient_stats": {
+        "new": {
+          "finite": true,
+          "max_abs": 4.362493200460449e-06,
+          "norm": 1.6924290321185254e-05,
+          "repeat_max_abs": 0.0,
+          "zero_fraction": 0.0
+        },
+        "old": {
+          "finite": true,
+          "max_abs": 5.663486035700771e-07,
+          "norm": 2.4489829684171127e-06,
+          "repeat_max_abs": 0.0,
+          "zero_fraction": 0.0
+        }
+      },
+      "hard_geometry_gate": {
+        "accepted": false,
+        "reasons": [
+          "bond_rmse_absolute",
+          "max_penetration_absolute"
+        ]
+      },
+      "name": "8bzn_a0_s2",
+      "near_hard_ca_rmsd": 0.0027528184189439,
+      "repeated_forward_exact": true,
+      "steps": 2,
+      "summary": {
+        "new": {
+          "linearized": {
+            "informative_direction_plateaus": [
+              false,
+              false,
+              false
+            ],
+            "informative_passed": false,
+            "label": "fail",
+            "original_direction_plateaus": [
+              false,
+              false,
+              false
+            ],
+            "original_passed": false
+          },
+          "nonlinear": {
+            "informative_direction_plateaus": [
+              false,
+              false,
+              false
+            ],
+            "informative_passed": false,
+            "label": "fail",
+            "original_direction_plateaus": [
+              false,
+              false,
+              false
+            ],
+            "original_passed": false
+          }
+        },
+        "old": {
+          "linearized": {
+            "informative_direction_plateaus": [
+              false,
+              false,
+              false
+            ],
+            "informative_passed": false,
+            "label": "fail",
+            "original_direction_plateaus": [
+              false,
+              false,
+              true
+            ],
+            "original_passed": false
+          },
+          "nonlinear": {
+            "informative_direction_plateaus": [
+              false,
+              false,
+              false
+            ],
+            "informative_passed": false,
+            "label": "fail",
+            "original_direction_plateaus": [
+              false,
+              false,
+              true
+            ],
+            "original_passed": false
+          }
+        }
+      }
+    },
+    {
+      "alpha": 0.001,
+      "geometry_gate": {
+        "accepted": false,
+        "reasons": [
+          "bond_rmse_absolute",
+          "peptide_mae_absolute",
+          "max_penetration_absolute",
+          "max_penetration_regression"
+        ]
+      },
+      "grad_no_grad_exact": true,
+      "gradient_stats": {
+        "new": {
+          "finite": true,
+          "max_abs": 0.00012737888027913868,
+          "norm": 0.00039117259439080954,
+          "repeat_max_abs": 0.0,
+          "zero_fraction": 0.0
+        },
+        "old": {
+          "finite": true,
+          "max_abs": 7.937410373415332e-06,
+          "norm": 1.4534663023368921e-05,
+          "repeat_max_abs": 0.0,
+          "zero_fraction": 0.0
+        }
+      },
+      "hard_geometry_gate": {
+        "accepted": false,
+        "reasons": [
+          "bond_rmse_absolute",
+          "peptide_mae_absolute",
+          "max_penetration_absolute"
+        ]
+      },
+      "name": "8bzn_a1_s1",
+      "near_hard_ca_rmsd": 0.0300737239312245,
+      "repeated_forward_exact": true,
+      "steps": 1,
+      "summary": {
+        "new": {
+          "linearized": {
+            "informative_direction_plateaus": [
+              false,
+              false,
+              false
+            ],
+            "informative_passed": false,
+            "label": "fail",
+            "original_direction_plateaus": [
+              false,
+              false,
+              false
+            ],
+            "original_passed": false
+          },
+          "nonlinear": {
+            "informative_direction_plateaus": [
+              false,
+              false,
+              false
+            ],
+            "informative_passed": false,
+            "label": "fail",
+            "original_direction_plateaus": [
+              false,
+              false,
+              false
+            ],
+            "original_passed": false
+          }
+        },
+        "old": {
+          "linearized": {
+            "informative_direction_plateaus": [
+              false,
+              false,
+              false
+            ],
+            "informative_passed": false,
+            "label": "fail",
+            "original_direction_plateaus": [
+              true,
+              false,
+              true
+            ],
+            "original_passed": false
+          },
+          "nonlinear": {
+            "informative_direction_plateaus": [
+              false,
+              false,
+              false
+            ],
+            "informative_passed": false,
+            "label": "fail",
+            "original_direction_plateaus": [
+              true,
+              false,
+              true
+            ],
+            "original_passed": false
+          }
+        }
+      }
+    },
+    {
+      "alpha": 0.001,
+      "geometry_gate": {
+        "accepted": false,
+        "reasons": [
+          "bond_rmse_absolute",
+          "max_penetration_absolute",
+          "severe_pairs_per_atom_regression"
+        ]
+      },
+      "grad_no_grad_exact": true,
+      "gradient_stats": {
+        "new": {
+          "finite": true,
+          "max_abs": 4.932993761030957e-05,
+          "norm": 0.00019582583627197891,
+          "repeat_max_abs": 0.0,
+          "zero_fraction": 0.0
+        },
+        "old": {
+          "finite": true,
+          "max_abs": 5.153462097950978e-06,
+          "norm": 2.1827363525517285e-05,
+          "repeat_max_abs": 0.0,
+          "zero_fraction": 0.0
+        }
+      },
+      "hard_geometry_gate": {
+        "accepted": false,
+        "reasons": [
+          "bond_rmse_absolute",
+          "max_penetration_absolute"
+        ]
+      },
+      "name": "8bzn_a1_s2",
+      "near_hard_ca_rmsd": 0.02774293661551444,
+      "repeated_forward_exact": true,
+      "steps": 2,
+      "summary": {
+        "new": {
+          "linearized": {
+            "informative_direction_plateaus": [
+              false,
+              false,
+              false
+            ],
+            "informative_passed": false,
+            "label": "fail",
+            "original_direction_plateaus": [
+              false,
+              false,
+              true
+            ],
+            "original_passed": false
+          },
+          "nonlinear": {
+            "informative_direction_plateaus": [
+              false,
+              false,
+              false
+            ],
+            "informative_passed": false,
+            "label": "fail",
+            "original_direction_plateaus": [
+              false,
+              false,
+              true
+            ],
+            "original_passed": false
+          }
+        },
+        "old": {
+          "linearized": {
+            "informative_direction_plateaus": [
+              false,
+              false,
+              false
+            ],
+            "informative_passed": false,
+            "label": "pass_low_signal_or_absolute_tolerance_assisted",
+            "original_direction_plateaus": [
+              true,
+              true,
+              true
+            ],
+            "original_passed": true
+          },
+          "nonlinear": {
+            "informative_direction_plateaus": [
+              false,
+              false,
+              false
+            ],
+            "informative_passed": false,
+            "label": "pass_low_signal_or_absolute_tolerance_assisted",
+            "original_direction_plateaus": [
+              true,
+              true,
+              true
+            ],
+            "original_passed": true
+          }
+        }
+      }
+    },
+    {
+      "alpha": 0.0001,
+      "geometry_gate": {
+        "accepted": false,
+        "reasons": [
+          "max_penetration_absolute"
+        ]
+      },
+      "grad_no_grad_exact": true,
+      "gradient_stats": {
+        "new": {
+          "finite": true,
+          "max_abs": 6.679241778329015e-05,
+          "norm": 0.0001152510303654708,
+          "repeat_max_abs": 0.0,
+          "zero_fraction": 0.0
+        },
+        "old": {
+          "finite": true,
+          "max_abs": 4.618344064510893e-06,
+          "norm": 8.022007023100741e-06,
+          "repeat_max_abs": 0.0,
+          "zero_fraction": 0.0
+        }
+      },
+      "hard_geometry_gate": {
+        "accepted": false,
+        "reasons": [
+          "max_penetration_absolute"
+        ]
+      },
+      "name": "control_a0_s1",
+      "near_hard_ca_rmsd": 0.012947718956145297,
+      "repeated_forward_exact": true,
+      "steps": 1,
+      "summary": {
+        "new": {
+          "linearized": {
+            "informative_direction_plateaus": [
+              false,
+              false,
+              false
+            ],
+            "informative_passed": false,
+            "label": "fail",
+            "original_direction_plateaus": [
+              false,
+              false,
+              false
+            ],
+            "original_passed": false
+          },
+          "nonlinear": {
+            "informative_direction_plateaus": [
+              false,
+              false,
+              false
+            ],
+            "informative_passed": false,
+            "label": "fail",
+            "original_direction_plateaus": [
+              false,
+              false,
+              false
+            ],
+            "original_passed": false
+          }
+        },
+        "old": {
+          "linearized": {
+            "informative_direction_plateaus": [
+              false,
+              false,
+              false
+            ],
+            "informative_passed": false,
+            "label": "fail",
+            "original_direction_plateaus": [
+              true,
+              false,
+              false
+            ],
+            "original_passed": false
+          },
+          "nonlinear": {
+            "informative_direction_plateaus": [
+              false,
+              false,
+              false
+            ],
+            "informative_passed": false,
+            "label": "fail",
+            "original_direction_plateaus": [
+              true,
+              false,
+              false
+            ],
+            "original_passed": false
+          }
+        }
+      }
+    },
+    {
+      "alpha": 0.0001,
+      "geometry_gate": {
+        "accepted": false,
+        "reasons": [
+          "max_penetration_absolute"
+        ]
+      },
+      "grad_no_grad_exact": true,
+      "gradient_stats": {
+        "new": {
+          "finite": true,
+          "max_abs": 0.00032006175024434924,
+          "norm": 0.000549764430616051,
+          "repeat_max_abs": 0.0,
+          "zero_fraction": 0.0
+        },
+        "old": {
+          "finite": true,
+          "max_abs": 2.252961394333397e-06,
+          "norm": 4.280881512386259e-06,
+          "repeat_max_abs": 0.0,
+          "zero_fraction": 0.0
+        }
+      },
+      "hard_geometry_gate": {
+        "accepted": false,
+        "reasons": [
+          "max_penetration_absolute"
+        ]
+      },
+      "name": "control_a0_s2",
+      "near_hard_ca_rmsd": 0.03293747813951153,
+      "repeated_forward_exact": true,
+      "steps": 2,
+      "summary": {
+        "new": {
+          "linearized": {
+            "informative_direction_plateaus": [
+              false,
+              false,
+              false
+            ],
+            "informative_passed": false,
+            "label": "fail",
+            "original_direction_plateaus": [
+              false,
+              false,
+              false
+            ],
+            "original_passed": false
+          },
+          "nonlinear": {
+            "informative_direction_plateaus": [
+              false,
+              false,
+              false
+            ],
+            "informative_passed": false,
+            "label": "fail",
+            "original_direction_plateaus": [
+              false,
+              false,
+              false
+            ],
+            "original_passed": false
+          }
+        },
+        "old": {
+          "linearized": {
+            "informative_direction_plateaus": [
+              false,
+              false,
+              false
+            ],
+            "informative_passed": false,
+            "label": "fail",
+            "original_direction_plateaus": [
+              true,
+              false,
+              false
+            ],
+            "original_passed": false
+          },
+          "nonlinear": {
+            "informative_direction_plateaus": [
+              false,
+              false,
+              false
+            ],
+            "informative_passed": false,
+            "label": "fail",
+            "original_direction_plateaus": [
+              true,
+              false,
+              false
+            ],
+            "original_passed": false
+          }
+        }
+      }
+    },
+    {
+      "alpha": 0.001,
+      "geometry_gate": {
+        "accepted": false,
+        "reasons": [
+          "max_penetration_absolute",
+          "chirality_regression"
+        ]
+      },
+      "grad_no_grad_exact": true,
+      "gradient_stats": {
+        "new": {
+          "finite": true,
+          "max_abs": 0.005743812769651413,
+          "norm": 0.009896288625895977,
+          "repeat_max_abs": 0.0,
+          "zero_fraction": 0.0
+        },
+        "old": {
+          "finite": true,
+          "max_abs": 7.021226792858215e-06,
+          "norm": 1.8901559087680653e-05,
+          "repeat_max_abs": 0.0,
+          "zero_fraction": 0.0
+        }
+      },
+      "hard_geometry_gate": {
+        "accepted": false,
+        "reasons": [
+          "max_penetration_absolute"
+        ]
+      },
+      "name": "control_a1_s1",
+      "near_hard_ca_rmsd": 0.15658856776854407,
+      "repeated_forward_exact": true,
+      "steps": 1,
+      "summary": {
+        "new": {
+          "linearized": {
+            "informative_direction_plateaus": [
+              false,
+              false,
+              false
+            ],
+            "informative_passed": false,
+            "label": "fail",
+            "original_direction_plateaus": [
+              false,
+              false,
+              false
+            ],
+            "original_passed": false
+          },
+          "nonlinear": {
+            "informative_direction_plateaus": [
+              false,
+              false,
+              false
+            ],
+            "informative_passed": false,
+            "label": "fail",
+            "original_direction_plateaus": [
+              false,
+              false,
+              false
+            ],
+            "original_passed": false
+          }
+        },
+        "old": {
+          "linearized": {
+            "informative_direction_plateaus": [
+              false,
+              false,
+              false
+            ],
+            "informative_passed": false,
+            "label": "fail",
+            "original_direction_plateaus": [
+              false,
+              false,
+              false
+            ],
+            "original_passed": false
+          },
+          "nonlinear": {
+            "informative_direction_plateaus": [
+              false,
+              false,
+              false
+            ],
+            "informative_passed": false,
+            "label": "fail",
+            "original_direction_plateaus": [
+              false,
+              false,
+              false
+            ],
+            "original_passed": false
+          }
+        }
+      }
+    },
+    {
+      "alpha": 0.001,
+      "geometry_gate": {
+        "accepted": false,
+        "reasons": [
+          "max_penetration_absolute"
+        ]
+      },
+      "grad_no_grad_exact": true,
+      "gradient_stats": {
+        "new": {
+          "finite": true,
+          "max_abs": 0.002142413053661585,
+          "norm": 0.003676546039059758,
+          "repeat_max_abs": 0.0,
+          "zero_fraction": 0.0
+        },
+        "old": {
+          "finite": true,
+          "max_abs": 1.961037196451798e-05,
+          "norm": 3.623407974373549e-05,
+          "repeat_max_abs": 0.0,
+          "zero_fraction": 0.0
+        }
+      },
+      "hard_geometry_gate": {
+        "accepted": false,
+        "reasons": [
+          "max_penetration_absolute"
+        ]
+      },
+      "name": "control_a1_s2",
+      "near_hard_ca_rmsd": 0.2991387565508052,
+      "repeated_forward_exact": true,
+      "steps": 2,
+      "summary": {
+        "new": {
+          "linearized": {
+            "informative_direction_plateaus": [
+              false,
+              false,
+              false
+            ],
+            "informative_passed": false,
+            "label": "fail",
+            "original_direction_plateaus": [
+              false,
+              false,
+              false
+            ],
+            "original_passed": false
+          },
+          "nonlinear": {
+            "informative_direction_plateaus": [
+              false,
+              false,
+              false
+            ],
+            "informative_passed": false,
+            "label": "fail",
+            "original_direction_plateaus": [
+              false,
+              false,
+              false
+            ],
+            "original_passed": false
+          }
+        },
+        "old": {
+          "linearized": {
+            "informative_direction_plateaus": [
+              false,
+              false,
+              false
+            ],
+            "informative_passed": false,
+            "label": "fail",
+            "original_direction_plateaus": [
+              false,
+              false,
+              false
+            ],
+            "original_passed": false
+          },
+          "nonlinear": {
+            "informative_direction_plateaus": [
+              false,
+              false,
+              false
+            ],
+            "informative_passed": false,
+            "label": "fail",
+            "original_direction_plateaus": [
+              false,
+              false,
+              false
+            ],
+            "original_passed": false
+          }
+        }
+      }
+    }
+  ]
+}
