@@ -1,0 +1,35 @@
+{
+  "early_root": "/media/PM982/onestepfold/mini_esm_interface_v1_20260928",
+  "late_root": "/media/PM982/onestepfold/mini_interface_decomposition_v1_20260928",
+  "near_root": "/media/PM982/onestepfold/mini_near_hard_gradient_v1_20260928",
+  "input_sha256": {
+    "/media/PM982/onestepfold/mini_esm_interface_v1_20260928/control/baseline.pt": "39b7e9842ac312921a9ded73195ac33a3fc52d6fd02180770d220e7372d57ff2",
+    "/media/PM982/onestepfold/mini_esm_interface_v1_20260928/control/report.json": "e938fe80b13e61baf19c658c1e112db27be2d4bf43608e203754dbc033c46bdc",
+    "/media/PM982/onestepfold/mini_interface_decomposition_v1_20260928/control/baseline.pt": "210aa32b5ae2199ec8cfcdf6273e6403f2d316e859ecf60d4b6953987c353807",
+    "/media/PM982/onestepfold/mini_interface_decomposition_v1_20260928/control/report.json": "0900d6f9877443a54d3be6376648c744d9d79f9b2da77d64870340ea5efb1bc2"
+  },
+  "source_sha256": {
+    "scripts/run_near_hard_gradient.py": "e3e7f630b1008a480cb5642033ef621a2cd36dc53d3872150e14667737a3efbc",
+    "src/fastglycan/near_hard_diagnostics.py": "3cf45186223847a5d9e451c440156d31d506ac15ac4bad14a3f139ce71e57ebc",
+    "src/fastglycan/input_interpolation.py": "00a70b08f17e5d91ebd180554942d6c7753bff0e3abb2b3ec3e59b225851781c",
+    "src/fastglycan/conditioning_diagnostics.py": "50b2ceaae7ce5480425dcd11707934f00997dd1251584755d00c2120b5b8a33b",
+    "src/fastglycan/models/soft_sequence_chart.py": "919480f82e7453aec25f79e3a30db920d4fec1f7bf6b2972b3ab1d615246df0b",
+    "src/fastglycan/models/soft_esm.py": "23a93ef86f60677875603bb52170e523dc55268de7428ea6dccdfcf68047406a",
+    "src/fastglycan/models/differentiable_mini.py": "d81096c18ee442a7f35b42fa0b49da05135229a3f989d93785c28e32c8479e21",
+    "src/fastglycan/hybrid_geometry.py": "dbac578ed4b0ac44540942fb63256e17d33db6296e35b85a9c7111f728046672",
+    "src/fastglycan/hybrid_proposals.py": "c3b020f193ed83e80289e76f1b28c09ba4969c6fd23755ea91a3b82e4b451cba",
+    "src/fastglycan/sequence_gate_metrics.py": "a831c7e46a774a03b48563afd6f3a15cd3cf02e1edb5c935e4e49e6f76227129",
+    "src/fastglycan/interface_decomposition.py": "76093176d5e4ff0686adae64090397dff6a0c4aec2811832a3622de9d8b88217",
+    "scripts/run_interface_decomposition.py": "a72f982b095b61fe32a971f1bc0f70b67898ccb27f9ef649f922d7cb0b70f630",
+    "src/fastglycan/esm_interface_diagnostics.py": "77793f599cb4fe5f0621874f6c700017df53100f6914d0155f3af98b21aee5ea",
+    "scripts/run_esm_interface_diagnostic.py": "d4589696d414947690908d27410b327f02977a71f83a548dff7c5ae7f369ea76",
+    "scripts/launch_esm_interface_diagnostic.py": "3a1c63c29f9c44492c6f2536b6024ccd1143c9d4789bf5b5ff0745c7fadd86d5",
+    "src/fastglycan/esm_precision_reference.py": "fbc93eb52c4e5435a021ae9c25bb5c555aed206c5a532a4d53050abee38133fc",
+    "scripts/run_esm_segment_precision.py": "2746b9bddb76e46706673c482e374b30d03c32d8f4185181ff7c8c87593cc0de",
+    "scripts/launch_esm_segment_precision.py": "3c5a583302977531b7c06825b9453d99a81adfe74204e28abf9fd6c0b13f4525",
+    "src/fastglycan/pairformer_precision.py": "de3c60aae56e8a67ca88771775772564dbb66fb860b36cefaba871105ff630b4",
+    "scripts/run_pairformer_precision.py": "21c949a8e11e61da70bcb3ab42ca5478351f6e57598b0cbe12a8150ca6887266",
+    "scripts/launch_pairformer_precision.py": "8fe347ed167b4cc55077a1895e4a13bae55208d71cc545f3ce408e4d998b90d0"
+  },
+  "protocol_sha256": "2c2d695f18a8ed597e3c7e381f2cb58c394a981d72c3b87f7e6f718be0202e6b"
+}

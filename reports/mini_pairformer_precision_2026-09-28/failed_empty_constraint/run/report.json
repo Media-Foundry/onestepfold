@@ -1,0 +1,1379 @@
+{
+  "coarse_rows": [],
+  "complete": false,
+  "lock_sha256": "9dd47673adf477ac13e86e22f990580901f6083a764014ce07546b8a67c8e43d",
+  "precision_rows": [],
+  "runtime": {
+    "allow_tf32": false,
+    "device": "AMD Instinct MI250X / MI250",
+    "hip": "7.14.60850",
+    "matmul_precision": "highest",
+    "msa_blocks": 1,
+    "norms": {
+      "confidence_head.input_strunk_ln": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "confidence_head.pae_ln": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "confidence_head.pairformer_stack.blocks.0.attention_pair_bias.layernorm_a": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "confidence_head.pairformer_stack.blocks.0.attention_pair_bias.layernorm_z": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "confidence_head.pairformer_stack.blocks.0.pair_transition.layernorm1": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "confidence_head.pairformer_stack.blocks.0.single_transition.layernorm1": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "confidence_head.pairformer_stack.blocks.0.tri_att_end.layer_norm": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "confidence_head.pairformer_stack.blocks.0.tri_att_start.layer_norm": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "confidence_head.pairformer_stack.blocks.0.tri_mul_in.layer_norm_in": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "confidence_head.pairformer_stack.blocks.0.tri_mul_in.layer_norm_out": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "confidence_head.pairformer_stack.blocks.0.tri_mul_out.layer_norm_in": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "confidence_head.pairformer_stack.blocks.0.tri_mul_out.layer_norm_out": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "confidence_head.pairformer_stack.blocks.1.attention_pair_bias.layernorm_a": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "confidence_head.pairformer_stack.blocks.1.attention_pair_bias.layernorm_z": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "confidence_head.pairformer_stack.blocks.1.pair_transition.layernorm1": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "confidence_head.pairformer_stack.blocks.1.single_transition.layernorm1": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "confidence_head.pairformer_stack.blocks.1.tri_att_end.layer_norm": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "confidence_head.pairformer_stack.blocks.1.tri_att_start.layer_norm": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "confidence_head.pairformer_stack.blocks.1.tri_mul_in.layer_norm_in": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "confidence_head.pairformer_stack.blocks.1.tri_mul_in.layer_norm_out": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "confidence_head.pairformer_stack.blocks.1.tri_mul_out.layer_norm_in": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "confidence_head.pairformer_stack.blocks.1.tri_mul_out.layer_norm_out": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "confidence_head.pairformer_stack.blocks.2.attention_pair_bias.layernorm_a": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "confidence_head.pairformer_stack.blocks.2.attention_pair_bias.layernorm_z": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "confidence_head.pairformer_stack.blocks.2.pair_transition.layernorm1": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "confidence_head.pairformer_stack.blocks.2.single_transition.layernorm1": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "confidence_head.pairformer_stack.blocks.2.tri_att_end.layer_norm": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "confidence_head.pairformer_stack.blocks.2.tri_att_start.layer_norm": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "confidence_head.pairformer_stack.blocks.2.tri_mul_in.layer_norm_in": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "confidence_head.pairformer_stack.blocks.2.tri_mul_in.layer_norm_out": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "confidence_head.pairformer_stack.blocks.2.tri_mul_out.layer_norm_in": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "confidence_head.pairformer_stack.blocks.2.tri_mul_out.layer_norm_out": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "confidence_head.pairformer_stack.blocks.3.attention_pair_bias.layernorm_a": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "confidence_head.pairformer_stack.blocks.3.attention_pair_bias.layernorm_z": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "confidence_head.pairformer_stack.blocks.3.pair_transition.layernorm1": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "confidence_head.pairformer_stack.blocks.3.single_transition.layernorm1": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "confidence_head.pairformer_stack.blocks.3.tri_att_end.layer_norm": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "confidence_head.pairformer_stack.blocks.3.tri_att_start.layer_norm": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "confidence_head.pairformer_stack.blocks.3.tri_mul_in.layer_norm_in": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "confidence_head.pairformer_stack.blocks.3.tri_mul_in.layer_norm_out": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "confidence_head.pairformer_stack.blocks.3.tri_mul_out.layer_norm_in": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "confidence_head.pairformer_stack.blocks.3.tri_mul_out.layer_norm_out": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "confidence_head.pde_ln": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "confidence_head.plddt_ln": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "confidence_head.resolved_ln": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "diffusion_module.atom_attention_decoder.atom_transformer.diffusion_transformer.blocks.0.attention_pair_bias.layernorm_a": {
+        "class_name": "protenix.model.modules.primitives.AdaptiveLayerNorm",
+        "eps": null
+      },
+      "diffusion_module.atom_attention_decoder.atom_transformer.diffusion_transformer.blocks.0.attention_pair_bias.layernorm_a.layernorm_a": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "diffusion_module.atom_attention_decoder.atom_transformer.diffusion_transformer.blocks.0.attention_pair_bias.layernorm_a.layernorm_s": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "diffusion_module.atom_attention_decoder.atom_transformer.diffusion_transformer.blocks.0.attention_pair_bias.layernorm_kv": {
+        "class_name": "protenix.model.modules.primitives.AdaptiveLayerNorm",
+        "eps": null
+      },
+      "diffusion_module.atom_attention_decoder.atom_transformer.diffusion_transformer.blocks.0.attention_pair_bias.layernorm_kv.layernorm_a": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "diffusion_module.atom_attention_decoder.atom_transformer.diffusion_transformer.blocks.0.attention_pair_bias.layernorm_kv.layernorm_s": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "diffusion_module.atom_attention_decoder.atom_transformer.diffusion_transformer.blocks.0.attention_pair_bias.layernorm_z": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "diffusion_module.atom_attention_decoder.atom_transformer.diffusion_transformer.blocks.0.conditioned_transition_block.adaln": {
+        "class_name": "protenix.model.modules.primitives.AdaptiveLayerNorm",
+        "eps": null
+      },
+      "diffusion_module.atom_attention_decoder.atom_transformer.diffusion_transformer.blocks.0.conditioned_transition_block.adaln.layernorm_a": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "diffusion_module.atom_attention_decoder.atom_transformer.diffusion_transformer.blocks.0.conditioned_transition_block.adaln.layernorm_s": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "diffusion_module.atom_attention_decoder.layernorm_q": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "diffusion_module.atom_attention_encoder.atom_transformer.diffusion_transformer.blocks.0.attention_pair_bias.layernorm_a": {
+        "class_name": "protenix.model.modules.primitives.AdaptiveLayerNorm",
+        "eps": null
+      },
+      "diffusion_module.atom_attention_encoder.atom_transformer.diffusion_transformer.blocks.0.attention_pair_bias.layernorm_a.layernorm_a": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "diffusion_module.atom_attention_encoder.atom_transformer.diffusion_transformer.blocks.0.attention_pair_bias.layernorm_a.layernorm_s": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "diffusion_module.atom_attention_encoder.atom_transformer.diffusion_transformer.blocks.0.attention_pair_bias.layernorm_kv": {
+        "class_name": "protenix.model.modules.primitives.AdaptiveLayerNorm",
+        "eps": null
+      },
+      "diffusion_module.atom_attention_encoder.atom_transformer.diffusion_transformer.blocks.0.attention_pair_bias.layernorm_kv.layernorm_a": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "diffusion_module.atom_attention_encoder.atom_transformer.diffusion_transformer.blocks.0.attention_pair_bias.layernorm_kv.layernorm_s": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "diffusion_module.atom_attention_encoder.atom_transformer.diffusion_transformer.blocks.0.attention_pair_bias.layernorm_z": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "diffusion_module.atom_attention_encoder.atom_transformer.diffusion_transformer.blocks.0.conditioned_transition_block.adaln": {
+        "class_name": "protenix.model.modules.primitives.AdaptiveLayerNorm",
+        "eps": null
+      },
+      "diffusion_module.atom_attention_encoder.atom_transformer.diffusion_transformer.blocks.0.conditioned_transition_block.adaln.layernorm_a": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "diffusion_module.atom_attention_encoder.atom_transformer.diffusion_transformer.blocks.0.conditioned_transition_block.adaln.layernorm_s": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "diffusion_module.atom_attention_encoder.layernorm_s": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "diffusion_module.atom_attention_encoder.layernorm_z": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "diffusion_module.diffusion_conditioning.layernorm_n": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "diffusion_module.diffusion_conditioning.layernorm_s": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "diffusion_module.diffusion_conditioning.layernorm_z": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "diffusion_module.diffusion_conditioning.transition_s1.layernorm1": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "diffusion_module.diffusion_conditioning.transition_s2.layernorm1": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "diffusion_module.diffusion_conditioning.transition_z1.layernorm1": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "diffusion_module.diffusion_conditioning.transition_z2.layernorm1": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "diffusion_module.diffusion_transformer.blocks.0.attention_pair_bias.layernorm_a": {
+        "class_name": "protenix.model.modules.primitives.AdaptiveLayerNorm",
+        "eps": null
+      },
+      "diffusion_module.diffusion_transformer.blocks.0.attention_pair_bias.layernorm_a.layernorm_a": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "diffusion_module.diffusion_transformer.blocks.0.attention_pair_bias.layernorm_a.layernorm_s": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "diffusion_module.diffusion_transformer.blocks.0.attention_pair_bias.layernorm_z": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "diffusion_module.diffusion_transformer.blocks.0.conditioned_transition_block.adaln": {
+        "class_name": "protenix.model.modules.primitives.AdaptiveLayerNorm",
+        "eps": null
+      },
+      "diffusion_module.diffusion_transformer.blocks.0.conditioned_transition_block.adaln.layernorm_a": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "diffusion_module.diffusion_transformer.blocks.0.conditioned_transition_block.adaln.layernorm_s": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "diffusion_module.diffusion_transformer.blocks.1.attention_pair_bias.layernorm_a": {
+        "class_name": "protenix.model.modules.primitives.AdaptiveLayerNorm",
+        "eps": null
+      },
+      "diffusion_module.diffusion_transformer.blocks.1.attention_pair_bias.layernorm_a.layernorm_a": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "diffusion_module.diffusion_transformer.blocks.1.attention_pair_bias.layernorm_a.layernorm_s": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "diffusion_module.diffusion_transformer.blocks.1.attention_pair_bias.layernorm_z": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "diffusion_module.diffusion_transformer.blocks.1.conditioned_transition_block.adaln": {
+        "class_name": "protenix.model.modules.primitives.AdaptiveLayerNorm",
+        "eps": null
+      },
+      "diffusion_module.diffusion_transformer.blocks.1.conditioned_transition_block.adaln.layernorm_a": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "diffusion_module.diffusion_transformer.blocks.1.conditioned_transition_block.adaln.layernorm_s": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "diffusion_module.diffusion_transformer.blocks.2.attention_pair_bias.layernorm_a": {
+        "class_name": "protenix.model.modules.primitives.AdaptiveLayerNorm",
+        "eps": null
+      },
+      "diffusion_module.diffusion_transformer.blocks.2.attention_pair_bias.layernorm_a.layernorm_a": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "diffusion_module.diffusion_transformer.blocks.2.attention_pair_bias.layernorm_a.layernorm_s": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "diffusion_module.diffusion_transformer.blocks.2.attention_pair_bias.layernorm_z": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "diffusion_module.diffusion_transformer.blocks.2.conditioned_transition_block.adaln": {
+        "class_name": "protenix.model.modules.primitives.AdaptiveLayerNorm",
+        "eps": null
+      },
+      "diffusion_module.diffusion_transformer.blocks.2.conditioned_transition_block.adaln.layernorm_a": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "diffusion_module.diffusion_transformer.blocks.2.conditioned_transition_block.adaln.layernorm_s": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "diffusion_module.diffusion_transformer.blocks.3.attention_pair_bias.layernorm_a": {
+        "class_name": "protenix.model.modules.primitives.AdaptiveLayerNorm",
+        "eps": null
+      },
+      "diffusion_module.diffusion_transformer.blocks.3.attention_pair_bias.layernorm_a.layernorm_a": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "diffusion_module.diffusion_transformer.blocks.3.attention_pair_bias.layernorm_a.layernorm_s": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "diffusion_module.diffusion_transformer.blocks.3.attention_pair_bias.layernorm_z": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "diffusion_module.diffusion_transformer.blocks.3.conditioned_transition_block.adaln": {
+        "class_name": "protenix.model.modules.primitives.AdaptiveLayerNorm",
+        "eps": null
+      },
+      "diffusion_module.diffusion_transformer.blocks.3.conditioned_transition_block.adaln.layernorm_a": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "diffusion_module.diffusion_transformer.blocks.3.conditioned_transition_block.adaln.layernorm_s": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "diffusion_module.diffusion_transformer.blocks.4.attention_pair_bias.layernorm_a": {
+        "class_name": "protenix.model.modules.primitives.AdaptiveLayerNorm",
+        "eps": null
+      },
+      "diffusion_module.diffusion_transformer.blocks.4.attention_pair_bias.layernorm_a.layernorm_a": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "diffusion_module.diffusion_transformer.blocks.4.attention_pair_bias.layernorm_a.layernorm_s": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "diffusion_module.diffusion_transformer.blocks.4.attention_pair_bias.layernorm_z": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "diffusion_module.diffusion_transformer.blocks.4.conditioned_transition_block.adaln": {
+        "class_name": "protenix.model.modules.primitives.AdaptiveLayerNorm",
+        "eps": null
+      },
+      "diffusion_module.diffusion_transformer.blocks.4.conditioned_transition_block.adaln.layernorm_a": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "diffusion_module.diffusion_transformer.blocks.4.conditioned_transition_block.adaln.layernorm_s": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "diffusion_module.diffusion_transformer.blocks.5.attention_pair_bias.layernorm_a": {
+        "class_name": "protenix.model.modules.primitives.AdaptiveLayerNorm",
+        "eps": null
+      },
+      "diffusion_module.diffusion_transformer.blocks.5.attention_pair_bias.layernorm_a.layernorm_a": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "diffusion_module.diffusion_transformer.blocks.5.attention_pair_bias.layernorm_a.layernorm_s": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "diffusion_module.diffusion_transformer.blocks.5.attention_pair_bias.layernorm_z": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "diffusion_module.diffusion_transformer.blocks.5.conditioned_transition_block.adaln": {
+        "class_name": "protenix.model.modules.primitives.AdaptiveLayerNorm",
+        "eps": null
+      },
+      "diffusion_module.diffusion_transformer.blocks.5.conditioned_transition_block.adaln.layernorm_a": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "diffusion_module.diffusion_transformer.blocks.5.conditioned_transition_block.adaln.layernorm_s": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "diffusion_module.diffusion_transformer.blocks.6.attention_pair_bias.layernorm_a": {
+        "class_name": "protenix.model.modules.primitives.AdaptiveLayerNorm",
+        "eps": null
+      },
+      "diffusion_module.diffusion_transformer.blocks.6.attention_pair_bias.layernorm_a.layernorm_a": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "diffusion_module.diffusion_transformer.blocks.6.attention_pair_bias.layernorm_a.layernorm_s": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "diffusion_module.diffusion_transformer.blocks.6.attention_pair_bias.layernorm_z": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "diffusion_module.diffusion_transformer.blocks.6.conditioned_transition_block.adaln": {
+        "class_name": "protenix.model.modules.primitives.AdaptiveLayerNorm",
+        "eps": null
+      },
+      "diffusion_module.diffusion_transformer.blocks.6.conditioned_transition_block.adaln.layernorm_a": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "diffusion_module.diffusion_transformer.blocks.6.conditioned_transition_block.adaln.layernorm_s": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "diffusion_module.diffusion_transformer.blocks.7.attention_pair_bias.layernorm_a": {
+        "class_name": "protenix.model.modules.primitives.AdaptiveLayerNorm",
+        "eps": null
+      },
+      "diffusion_module.diffusion_transformer.blocks.7.attention_pair_bias.layernorm_a.layernorm_a": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "diffusion_module.diffusion_transformer.blocks.7.attention_pair_bias.layernorm_a.layernorm_s": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "diffusion_module.diffusion_transformer.blocks.7.attention_pair_bias.layernorm_z": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "diffusion_module.diffusion_transformer.blocks.7.conditioned_transition_block.adaln": {
+        "class_name": "protenix.model.modules.primitives.AdaptiveLayerNorm",
+        "eps": null
+      },
+      "diffusion_module.diffusion_transformer.blocks.7.conditioned_transition_block.adaln.layernorm_a": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "diffusion_module.diffusion_transformer.blocks.7.conditioned_transition_block.adaln.layernorm_s": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "diffusion_module.layernorm_a": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "diffusion_module.layernorm_s": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "diffusion_module.normalize": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "input_embedder.atom_attention_encoder.atom_transformer.diffusion_transformer.blocks.0.attention_pair_bias.layernorm_a": {
+        "class_name": "protenix.model.modules.primitives.AdaptiveLayerNorm",
+        "eps": null
+      },
+      "input_embedder.atom_attention_encoder.atom_transformer.diffusion_transformer.blocks.0.attention_pair_bias.layernorm_a.layernorm_a": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "input_embedder.atom_attention_encoder.atom_transformer.diffusion_transformer.blocks.0.attention_pair_bias.layernorm_a.layernorm_s": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "input_embedder.atom_attention_encoder.atom_transformer.diffusion_transformer.blocks.0.attention_pair_bias.layernorm_kv": {
+        "class_name": "protenix.model.modules.primitives.AdaptiveLayerNorm",
+        "eps": null
+      },
+      "input_embedder.atom_attention_encoder.atom_transformer.diffusion_transformer.blocks.0.attention_pair_bias.layernorm_kv.layernorm_a": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "input_embedder.atom_attention_encoder.atom_transformer.diffusion_transformer.blocks.0.attention_pair_bias.layernorm_kv.layernorm_s": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "input_embedder.atom_attention_encoder.atom_transformer.diffusion_transformer.blocks.0.attention_pair_bias.layernorm_z": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "input_embedder.atom_attention_encoder.atom_transformer.diffusion_transformer.blocks.0.conditioned_transition_block.adaln": {
+        "class_name": "protenix.model.modules.primitives.AdaptiveLayerNorm",
+        "eps": null
+      },
+      "input_embedder.atom_attention_encoder.atom_transformer.diffusion_transformer.blocks.0.conditioned_transition_block.adaln.layernorm_a": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "input_embedder.atom_attention_encoder.atom_transformer.diffusion_transformer.blocks.0.conditioned_transition_block.adaln.layernorm_s": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "input_embedder.atom_attention_encoder.atom_transformer.diffusion_transformer.blocks.1.attention_pair_bias.layernorm_a": {
+        "class_name": "protenix.model.modules.primitives.AdaptiveLayerNorm",
+        "eps": null
+      },
+      "input_embedder.atom_attention_encoder.atom_transformer.diffusion_transformer.blocks.1.attention_pair_bias.layernorm_a.layernorm_a": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "input_embedder.atom_attention_encoder.atom_transformer.diffusion_transformer.blocks.1.attention_pair_bias.layernorm_a.layernorm_s": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "input_embedder.atom_attention_encoder.atom_transformer.diffusion_transformer.blocks.1.attention_pair_bias.layernorm_kv": {
+        "class_name": "protenix.model.modules.primitives.AdaptiveLayerNorm",
+        "eps": null
+      },
+      "input_embedder.atom_attention_encoder.atom_transformer.diffusion_transformer.blocks.1.attention_pair_bias.layernorm_kv.layernorm_a": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "input_embedder.atom_attention_encoder.atom_transformer.diffusion_transformer.blocks.1.attention_pair_bias.layernorm_kv.layernorm_s": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "input_embedder.atom_attention_encoder.atom_transformer.diffusion_transformer.blocks.1.attention_pair_bias.layernorm_z": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "input_embedder.atom_attention_encoder.atom_transformer.diffusion_transformer.blocks.1.conditioned_transition_block.adaln": {
+        "class_name": "protenix.model.modules.primitives.AdaptiveLayerNorm",
+        "eps": null
+      },
+      "input_embedder.atom_attention_encoder.atom_transformer.diffusion_transformer.blocks.1.conditioned_transition_block.adaln.layernorm_a": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "input_embedder.atom_attention_encoder.atom_transformer.diffusion_transformer.blocks.1.conditioned_transition_block.adaln.layernorm_s": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "input_embedder.atom_attention_encoder.atom_transformer.diffusion_transformer.blocks.2.attention_pair_bias.layernorm_a": {
+        "class_name": "protenix.model.modules.primitives.AdaptiveLayerNorm",
+        "eps": null
+      },
+      "input_embedder.atom_attention_encoder.atom_transformer.diffusion_transformer.blocks.2.attention_pair_bias.layernorm_a.layernorm_a": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "input_embedder.atom_attention_encoder.atom_transformer.diffusion_transformer.blocks.2.attention_pair_bias.layernorm_a.layernorm_s": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "input_embedder.atom_attention_encoder.atom_transformer.diffusion_transformer.blocks.2.attention_pair_bias.layernorm_kv": {
+        "class_name": "protenix.model.modules.primitives.AdaptiveLayerNorm",
+        "eps": null
+      },
+      "input_embedder.atom_attention_encoder.atom_transformer.diffusion_transformer.blocks.2.attention_pair_bias.layernorm_kv.layernorm_a": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "input_embedder.atom_attention_encoder.atom_transformer.diffusion_transformer.blocks.2.attention_pair_bias.layernorm_kv.layernorm_s": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "input_embedder.atom_attention_encoder.atom_transformer.diffusion_transformer.blocks.2.attention_pair_bias.layernorm_z": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "input_embedder.atom_attention_encoder.atom_transformer.diffusion_transformer.blocks.2.conditioned_transition_block.adaln": {
+        "class_name": "protenix.model.modules.primitives.AdaptiveLayerNorm",
+        "eps": null
+      },
+      "input_embedder.atom_attention_encoder.atom_transformer.diffusion_transformer.blocks.2.conditioned_transition_block.adaln.layernorm_a": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "input_embedder.atom_attention_encoder.atom_transformer.diffusion_transformer.blocks.2.conditioned_transition_block.adaln.layernorm_s": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "layernorm_s": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "layernorm_z_cycle": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "msa_module.blocks.0.outer_product_mean_msa.layer_norm": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "msa_module.blocks.0.pair_stack.pair_transition.layernorm1": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "msa_module.blocks.0.pair_stack.tri_att_end.layer_norm": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "msa_module.blocks.0.pair_stack.tri_att_start.layer_norm": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "msa_module.blocks.0.pair_stack.tri_mul_in.layer_norm_in": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "msa_module.blocks.0.pair_stack.tri_mul_in.layer_norm_out": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "msa_module.blocks.0.pair_stack.tri_mul_out.layer_norm_in": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "msa_module.blocks.0.pair_stack.tri_mul_out.layer_norm_out": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "pairformer_stack.blocks.0.attention_pair_bias.layernorm_a": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "pairformer_stack.blocks.0.attention_pair_bias.layernorm_z": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "pairformer_stack.blocks.0.pair_transition.layernorm1": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "pairformer_stack.blocks.0.single_transition.layernorm1": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "pairformer_stack.blocks.0.tri_att_end.layer_norm": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "pairformer_stack.blocks.0.tri_att_start.layer_norm": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "pairformer_stack.blocks.0.tri_mul_in.layer_norm_in": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "pairformer_stack.blocks.0.tri_mul_in.layer_norm_out": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "pairformer_stack.blocks.0.tri_mul_out.layer_norm_in": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "pairformer_stack.blocks.0.tri_mul_out.layer_norm_out": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "pairformer_stack.blocks.1.attention_pair_bias.layernorm_a": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "pairformer_stack.blocks.1.attention_pair_bias.layernorm_z": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "pairformer_stack.blocks.1.pair_transition.layernorm1": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "pairformer_stack.blocks.1.single_transition.layernorm1": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "pairformer_stack.blocks.1.tri_att_end.layer_norm": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "pairformer_stack.blocks.1.tri_att_start.layer_norm": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "pairformer_stack.blocks.1.tri_mul_in.layer_norm_in": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "pairformer_stack.blocks.1.tri_mul_in.layer_norm_out": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "pairformer_stack.blocks.1.tri_mul_out.layer_norm_in": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "pairformer_stack.blocks.1.tri_mul_out.layer_norm_out": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "pairformer_stack.blocks.10.attention_pair_bias.layernorm_a": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "pairformer_stack.blocks.10.attention_pair_bias.layernorm_z": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "pairformer_stack.blocks.10.pair_transition.layernorm1": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "pairformer_stack.blocks.10.single_transition.layernorm1": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "pairformer_stack.blocks.10.tri_att_end.layer_norm": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "pairformer_stack.blocks.10.tri_att_start.layer_norm": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "pairformer_stack.blocks.10.tri_mul_in.layer_norm_in": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "pairformer_stack.blocks.10.tri_mul_in.layer_norm_out": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "pairformer_stack.blocks.10.tri_mul_out.layer_norm_in": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "pairformer_stack.blocks.10.tri_mul_out.layer_norm_out": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "pairformer_stack.blocks.11.attention_pair_bias.layernorm_a": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "pairformer_stack.blocks.11.attention_pair_bias.layernorm_z": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "pairformer_stack.blocks.11.pair_transition.layernorm1": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "pairformer_stack.blocks.11.single_transition.layernorm1": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "pairformer_stack.blocks.11.tri_att_end.layer_norm": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "pairformer_stack.blocks.11.tri_att_start.layer_norm": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "pairformer_stack.blocks.11.tri_mul_in.layer_norm_in": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "pairformer_stack.blocks.11.tri_mul_in.layer_norm_out": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "pairformer_stack.blocks.11.tri_mul_out.layer_norm_in": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "pairformer_stack.blocks.11.tri_mul_out.layer_norm_out": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "pairformer_stack.blocks.12.attention_pair_bias.layernorm_a": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "pairformer_stack.blocks.12.attention_pair_bias.layernorm_z": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "pairformer_stack.blocks.12.pair_transition.layernorm1": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "pairformer_stack.blocks.12.single_transition.layernorm1": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "pairformer_stack.blocks.12.tri_att_end.layer_norm": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "pairformer_stack.blocks.12.tri_att_start.layer_norm": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "pairformer_stack.blocks.12.tri_mul_in.layer_norm_in": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "pairformer_stack.blocks.12.tri_mul_in.layer_norm_out": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "pairformer_stack.blocks.12.tri_mul_out.layer_norm_in": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "pairformer_stack.blocks.12.tri_mul_out.layer_norm_out": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "pairformer_stack.blocks.13.attention_pair_bias.layernorm_a": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "pairformer_stack.blocks.13.attention_pair_bias.layernorm_z": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "pairformer_stack.blocks.13.pair_transition.layernorm1": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "pairformer_stack.blocks.13.single_transition.layernorm1": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "pairformer_stack.blocks.13.tri_att_end.layer_norm": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "pairformer_stack.blocks.13.tri_att_start.layer_norm": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "pairformer_stack.blocks.13.tri_mul_in.layer_norm_in": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "pairformer_stack.blocks.13.tri_mul_in.layer_norm_out": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "pairformer_stack.blocks.13.tri_mul_out.layer_norm_in": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "pairformer_stack.blocks.13.tri_mul_out.layer_norm_out": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "pairformer_stack.blocks.14.attention_pair_bias.layernorm_a": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "pairformer_stack.blocks.14.attention_pair_bias.layernorm_z": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "pairformer_stack.blocks.14.pair_transition.layernorm1": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "pairformer_stack.blocks.14.single_transition.layernorm1": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "pairformer_stack.blocks.14.tri_att_end.layer_norm": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "pairformer_stack.blocks.14.tri_att_start.layer_norm": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "pairformer_stack.blocks.14.tri_mul_in.layer_norm_in": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "pairformer_stack.blocks.14.tri_mul_in.layer_norm_out": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "pairformer_stack.blocks.14.tri_mul_out.layer_norm_in": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "pairformer_stack.blocks.14.tri_mul_out.layer_norm_out": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "pairformer_stack.blocks.15.attention_pair_bias.layernorm_a": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "pairformer_stack.blocks.15.attention_pair_bias.layernorm_z": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "pairformer_stack.blocks.15.pair_transition.layernorm1": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "pairformer_stack.blocks.15.single_transition.layernorm1": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "pairformer_stack.blocks.15.tri_att_end.layer_norm": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "pairformer_stack.blocks.15.tri_att_start.layer_norm": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "pairformer_stack.blocks.15.tri_mul_in.layer_norm_in": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "pairformer_stack.blocks.15.tri_mul_in.layer_norm_out": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "pairformer_stack.blocks.15.tri_mul_out.layer_norm_in": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "pairformer_stack.blocks.15.tri_mul_out.layer_norm_out": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "pairformer_stack.blocks.2.attention_pair_bias.layernorm_a": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "pairformer_stack.blocks.2.attention_pair_bias.layernorm_z": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "pairformer_stack.blocks.2.pair_transition.layernorm1": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "pairformer_stack.blocks.2.single_transition.layernorm1": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "pairformer_stack.blocks.2.tri_att_end.layer_norm": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "pairformer_stack.blocks.2.tri_att_start.layer_norm": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "pairformer_stack.blocks.2.tri_mul_in.layer_norm_in": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "pairformer_stack.blocks.2.tri_mul_in.layer_norm_out": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "pairformer_stack.blocks.2.tri_mul_out.layer_norm_in": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "pairformer_stack.blocks.2.tri_mul_out.layer_norm_out": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "pairformer_stack.blocks.3.attention_pair_bias.layernorm_a": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "pairformer_stack.blocks.3.attention_pair_bias.layernorm_z": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "pairformer_stack.blocks.3.pair_transition.layernorm1": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "pairformer_stack.blocks.3.single_transition.layernorm1": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "pairformer_stack.blocks.3.tri_att_end.layer_norm": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "pairformer_stack.blocks.3.tri_att_start.layer_norm": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "pairformer_stack.blocks.3.tri_mul_in.layer_norm_in": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "pairformer_stack.blocks.3.tri_mul_in.layer_norm_out": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "pairformer_stack.blocks.3.tri_mul_out.layer_norm_in": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "pairformer_stack.blocks.3.tri_mul_out.layer_norm_out": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "pairformer_stack.blocks.4.attention_pair_bias.layernorm_a": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "pairformer_stack.blocks.4.attention_pair_bias.layernorm_z": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "pairformer_stack.blocks.4.pair_transition.layernorm1": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "pairformer_stack.blocks.4.single_transition.layernorm1": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "pairformer_stack.blocks.4.tri_att_end.layer_norm": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "pairformer_stack.blocks.4.tri_att_start.layer_norm": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "pairformer_stack.blocks.4.tri_mul_in.layer_norm_in": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "pairformer_stack.blocks.4.tri_mul_in.layer_norm_out": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "pairformer_stack.blocks.4.tri_mul_out.layer_norm_in": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "pairformer_stack.blocks.4.tri_mul_out.layer_norm_out": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "pairformer_stack.blocks.5.attention_pair_bias.layernorm_a": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "pairformer_stack.blocks.5.attention_pair_bias.layernorm_z": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "pairformer_stack.blocks.5.pair_transition.layernorm1": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "pairformer_stack.blocks.5.single_transition.layernorm1": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "pairformer_stack.blocks.5.tri_att_end.layer_norm": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "pairformer_stack.blocks.5.tri_att_start.layer_norm": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "pairformer_stack.blocks.5.tri_mul_in.layer_norm_in": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "pairformer_stack.blocks.5.tri_mul_in.layer_norm_out": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "pairformer_stack.blocks.5.tri_mul_out.layer_norm_in": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "pairformer_stack.blocks.5.tri_mul_out.layer_norm_out": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "pairformer_stack.blocks.6.attention_pair_bias.layernorm_a": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "pairformer_stack.blocks.6.attention_pair_bias.layernorm_z": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "pairformer_stack.blocks.6.pair_transition.layernorm1": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "pairformer_stack.blocks.6.single_transition.layernorm1": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "pairformer_stack.blocks.6.tri_att_end.layer_norm": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "pairformer_stack.blocks.6.tri_att_start.layer_norm": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "pairformer_stack.blocks.6.tri_mul_in.layer_norm_in": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "pairformer_stack.blocks.6.tri_mul_in.layer_norm_out": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "pairformer_stack.blocks.6.tri_mul_out.layer_norm_in": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "pairformer_stack.blocks.6.tri_mul_out.layer_norm_out": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "pairformer_stack.blocks.7.attention_pair_bias.layernorm_a": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "pairformer_stack.blocks.7.attention_pair_bias.layernorm_z": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "pairformer_stack.blocks.7.pair_transition.layernorm1": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "pairformer_stack.blocks.7.single_transition.layernorm1": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "pairformer_stack.blocks.7.tri_att_end.layer_norm": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "pairformer_stack.blocks.7.tri_att_start.layer_norm": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "pairformer_stack.blocks.7.tri_mul_in.layer_norm_in": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "pairformer_stack.blocks.7.tri_mul_in.layer_norm_out": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "pairformer_stack.blocks.7.tri_mul_out.layer_norm_in": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "pairformer_stack.blocks.7.tri_mul_out.layer_norm_out": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "pairformer_stack.blocks.8.attention_pair_bias.layernorm_a": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "pairformer_stack.blocks.8.attention_pair_bias.layernorm_z": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "pairformer_stack.blocks.8.pair_transition.layernorm1": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "pairformer_stack.blocks.8.single_transition.layernorm1": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "pairformer_stack.blocks.8.tri_att_end.layer_norm": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "pairformer_stack.blocks.8.tri_att_start.layer_norm": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "pairformer_stack.blocks.8.tri_mul_in.layer_norm_in": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "pairformer_stack.blocks.8.tri_mul_in.layer_norm_out": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "pairformer_stack.blocks.8.tri_mul_out.layer_norm_in": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "pairformer_stack.blocks.8.tri_mul_out.layer_norm_out": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "pairformer_stack.blocks.9.attention_pair_bias.layernorm_a": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "pairformer_stack.blocks.9.attention_pair_bias.layernorm_z": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "pairformer_stack.blocks.9.pair_transition.layernorm1": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "pairformer_stack.blocks.9.single_transition.layernorm1": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "pairformer_stack.blocks.9.tri_att_end.layer_norm": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "pairformer_stack.blocks.9.tri_att_start.layer_norm": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "pairformer_stack.blocks.9.tri_mul_in.layer_norm_in": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "pairformer_stack.blocks.9.tri_mul_in.layer_norm_out": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "pairformer_stack.blocks.9.tri_mul_out.layer_norm_in": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "pairformer_stack.blocks.9.tri_mul_out.layer_norm_out": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "template_embedder.layernorm_v": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      },
+      "template_embedder.layernorm_z": {
+        "class_name": "protenix.model.triangular.layers.OpenFoldLayerNorm",
+        "eps": 1e-05
+      }
+    },
+    "pairformer_blocks": 16,
+    "sources": {
+      "protenix.model.modules.pairformer": {
+        "path": "/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/model/modules/pairformer.py",
+        "sha256": "876b29a323ebf5a9929be0b8efa6b45027108640784a250e3ce446e39ccae2eb"
+      },
+      "protenix.model.modules.primitives": {
+        "path": "/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/model/modules/primitives.py",
+        "sha256": "48474abdd5b37a70f5d2579c0c2f1b2d2e6876961db7100f0eb9ebfad0198363"
+      },
+      "protenix.model.triangular.layers": {
+        "path": "/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/model/triangular/layers.py",
+        "sha256": "1928d7fcb21750ce613949461ecd8ab5ff2323c19761be5b2d6f24064c3c1bbd"
+      }
+    },
+    "template_blocks": 0,
+    "torch": "2.12.0a0+git78258b9",
+    "triangle_attention": "torch",
+    "triangle_multiplicative": "torch"
+  },
+  "stage": "baseline_replay_and_adjoint"
+}

@@ -1,0 +1,45 @@
+2026-09-28 16:18:19,986 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/runner/batch_inference.py:403] INFO runner.batch_inference: Inference by Protenix: model_size: mini, with_feature: esm, model_version: v0.5.0, dtype: bf16
+2026-09-28 16:18:19,986 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/runner/batch_inference.py:408] INFO runner.batch_inference: Triangle_multiplicative kernel: torch, Triangle_attention kernel: torch
+2026-09-28 16:18:19,986 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/runner/batch_inference.py:412] INFO runner.batch_inference: enable_diffusion_shared_vars_cache: True, enable_efficient_fusion: True, enable_tf32: False
+2026-09-28 16:18:19,986 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/runner/inference.py:246] INFO runner.inference: Distributed environment: world size: 1, global rank: 0, local rank: 0
+2026-09-28 16:18:19,986 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/runner/inference.py:98] INFO root: LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+2026-09-28 16:18:19,986 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/runner/inference.py:127] INFO root: Finished environment initialization.
+2026-09-28 16:18:38,566 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/runner/inference.py:246] INFO runner.inference: Loading from /media/PM982/onestepfold/protenix_stage0_pkg/v1_1/runtime/checkpoint/protenix_mini_esm_v0.5.0.pt, strict: False
+2026-09-28 16:18:38,834 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/runner/inference.py:246] INFO runner.inference: Sampled key: module.input_embedder.atom_attention_encoder.linear_no_bias_ref_pos.weight
+2026-09-28 16:18:38,869 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/runner/inference.py:246] INFO runner.inference: Finish loading checkpoint.
+2026-09-28 16:18:38,871 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/runner/inference.py:246] INFO runner.inference: Model parameters: 135.22M
+2026-09-28 16:19:12,211 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/data/constraint/constraint_featurizer.py:392] INFO protenix.data.constraint.constraint_featurizer: Loaded constraint feature: #atom contact:0 #contact:0 #pocket:0
+2026-09-28 16:19:12,339 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/data/constraint/constraint_featurizer.py:392] INFO protenix.data.constraint.constraint_featurizer: Loaded constraint feature: #atom contact:0 #contact:0 #pocket:0
+2026-09-28 16:19:12,482 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/data/constraint/constraint_featurizer.py:392] INFO protenix.data.constraint.constraint_featurizer: Loaded constraint feature: #atom contact:0 #contact:0 #pocket:0
+2026-09-28 16:19:12,904 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/data/constraint/constraint_featurizer.py:392] INFO protenix.data.constraint.constraint_featurizer: Loaded constraint feature: #atom contact:0 #contact:0 #pocket:0
+2026-09-28 16:19:13,084 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/data/constraint/constraint_featurizer.py:392] INFO protenix.data.constraint.constraint_featurizer: Loaded constraint feature: #atom contact:0 #contact:0 #pocket:0
+2026-09-28 16:19:13,244 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/data/constraint/constraint_featurizer.py:392] INFO protenix.data.constraint.constraint_featurizer: Loaded constraint feature: #atom contact:0 #contact:0 #pocket:0
+2026-09-28 16:19:13,379 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/data/constraint/constraint_featurizer.py:392] INFO protenix.data.constraint.constraint_featurizer: Loaded constraint feature: #atom contact:0 #contact:0 #pocket:0
+2026-09-28 16:19:13,553 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/data/constraint/constraint_featurizer.py:392] INFO protenix.data.constraint.constraint_featurizer: Loaded constraint feature: #atom contact:0 #contact:0 #pocket:0
+2026-09-28 16:19:13,713 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/data/constraint/constraint_featurizer.py:392] INFO protenix.data.constraint.constraint_featurizer: Loaded constraint feature: #atom contact:0 #contact:0 #pocket:0
+2026-09-28 16:19:13,876 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/data/constraint/constraint_featurizer.py:392] INFO protenix.data.constraint.constraint_featurizer: Loaded constraint feature: #atom contact:0 #contact:0 #pocket:0
+2026-09-28 16:19:14,033 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/data/constraint/constraint_featurizer.py:392] INFO protenix.data.constraint.constraint_featurizer: Loaded constraint feature: #atom contact:0 #contact:0 #pocket:0
+2026-09-28 16:19:14,193 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/data/constraint/constraint_featurizer.py:392] INFO protenix.data.constraint.constraint_featurizer: Loaded constraint feature: #atom contact:0 #contact:0 #pocket:0
+2026-09-28 16:19:14,348 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/data/constraint/constraint_featurizer.py:392] INFO protenix.data.constraint.constraint_featurizer: Loaded constraint feature: #atom contact:0 #contact:0 #pocket:0
+2026-09-28 16:19:14,501 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/data/constraint/constraint_featurizer.py:392] INFO protenix.data.constraint.constraint_featurizer: Loaded constraint feature: #atom contact:0 #contact:0 #pocket:0
+2026-09-28 16:19:14,684 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/data/constraint/constraint_featurizer.py:392] INFO protenix.data.constraint.constraint_featurizer: Loaded constraint feature: #atom contact:0 #contact:0 #pocket:0
+2026-09-28 16:19:14,852 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/data/constraint/constraint_featurizer.py:392] INFO protenix.data.constraint.constraint_featurizer: Loaded constraint feature: #atom contact:0 #contact:0 #pocket:0
+2026-09-28 16:19:14,987 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/data/constraint/constraint_featurizer.py:392] INFO protenix.data.constraint.constraint_featurizer: Loaded constraint feature: #atom contact:0 #contact:0 #pocket:0
+2026-09-28 16:19:15,132 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/data/constraint/constraint_featurizer.py:392] INFO protenix.data.constraint.constraint_featurizer: Loaded constraint feature: #atom contact:0 #contact:0 #pocket:0
+2026-09-28 16:19:15,314 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/data/constraint/constraint_featurizer.py:392] INFO protenix.data.constraint.constraint_featurizer: Loaded constraint feature: #atom contact:0 #contact:0 #pocket:0
+2026-09-28 16:19:15,554 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/data/constraint/constraint_featurizer.py:392] INFO protenix.data.constraint.constraint_featurizer: Loaded constraint feature: #atom contact:0 #contact:0 #pocket:0
+2026-09-28 16:19:15,738 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/data/constraint/constraint_featurizer.py:392] INFO protenix.data.constraint.constraint_featurizer: Loaded constraint feature: #atom contact:0 #contact:0 #pocket:0
+train scheduler 16.0
+inference scheduler 16.0
+Diffusion Module has 16.0
+Try to load ESM language model from  /media/PM982/onestepfold/protenix_stage0_pkg/v1_1/runtime/checkpoint/esm2_t36_3B_UR50D.pt
+Traceback (most recent call last):
+  File "/media/PM982/onestepfold/mini_pairformer_precision_v1_20260928/code/scripts/run_pairformer_precision.py", line 109, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/media/PM982/onestepfold/mini_pairformer_precision_v1_20260928/code/scripts/run_pairformer_precision.py", line 35, in main
+    norms={n:dict(class_name=type(m).__module__+'.'+type(m).__name__,eps=m.eps) for n,m in model.named_modules() if 'LayerNorm' in type(m).__name__},
+                                                                         ^^^^^
+  File "/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1967, in __getattr__
+    raise AttributeError(
+AttributeError: 'AdaptiveLayerNorm' object has no attribute 'eps'
