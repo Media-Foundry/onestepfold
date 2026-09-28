@@ -1,0 +1,156 @@
+[
+  {
+    "case": "initial100",
+    "steps": 1,
+    "gcd": 0,
+    "pid": 1731391,
+    "command": [
+      "timeout",
+      "--kill-after=30",
+      "7200",
+      "/home/pc/anaconda3/envs/fold/bin/python",
+      "/media/PM982/onestepfold/mini_hybrid_v1_20260928/code_v2/scripts/run_mini_hybrid_pilot.py",
+      "--root",
+      "/media/PM982/onestepfold/mini_hybrid_v1_20260928",
+      "--case",
+      "initial100",
+      "--steps",
+      "1"
+    ]
+  },
+  {
+    "case": "8bzn",
+    "steps": 1,
+    "gcd": 1,
+    "pid": 1731554,
+    "command": [
+      "timeout",
+      "--kill-after=30",
+      "7200",
+      "/home/pc/anaconda3/envs/fold/bin/python",
+      "/media/PM982/onestepfold/mini_hybrid_v1_20260928/code_v2/scripts/run_mini_hybrid_pilot.py",
+      "--root",
+      "/media/PM982/onestepfold/mini_hybrid_v1_20260928",
+      "--case",
+      "8bzn",
+      "--steps",
+      "1"
+    ]
+  },
+  {
+    "case": "control",
+    "steps": 1,
+    "gcd": 2,
+    "pid": 1731555,
+    "command": [
+      "timeout",
+      "--kill-after=30",
+      "7200",
+      "/home/pc/anaconda3/envs/fold/bin/python",
+      "/media/PM982/onestepfold/mini_hybrid_v1_20260928/code_v2/scripts/run_mini_hybrid_pilot.py",
+      "--root",
+      "/media/PM982/onestepfold/mini_hybrid_v1_20260928",
+      "--case",
+      "control",
+      "--steps",
+      "1"
+    ]
+  },
+  {
+    "case": "9qr4",
+    "steps": 1,
+    "gcd": 3,
+    "pid": 1731557,
+    "command": [
+      "timeout",
+      "--kill-after=30",
+      "7200",
+      "/home/pc/anaconda3/envs/fold/bin/python",
+      "/media/PM982/onestepfold/mini_hybrid_v1_20260928/code_v2/scripts/run_mini_hybrid_pilot.py",
+      "--root",
+      "/media/PM982/onestepfold/mini_hybrid_v1_20260928",
+      "--case",
+      "9qr4",
+      "--steps",
+      "1"
+    ]
+  },
+  {
+    "case": "confirmation1",
+    "steps": 1,
+    "gcd": 4,
+    "pid": 1731558,
+    "command": [
+      "timeout",
+      "--kill-after=30",
+      "7200",
+      "/home/pc/anaconda3/envs/fold/bin/python",
+      "/media/PM982/onestepfold/mini_hybrid_v1_20260928/code_v2/scripts/run_mini_hybrid_pilot.py",
+      "--root",
+      "/media/PM982/onestepfold/mini_hybrid_v1_20260928",
+      "--case",
+      "confirmation1",
+      "--steps",
+      "1"
+    ]
+  },
+  {
+    "case": "confirmation2",
+    "steps": 1,
+    "gcd": 5,
+    "pid": 1731560,
+    "command": [
+      "timeout",
+      "--kill-after=30",
+      "7200",
+      "/home/pc/anaconda3/envs/fold/bin/python",
+      "/media/PM982/onestepfold/mini_hybrid_v1_20260928/code_v2/scripts/run_mini_hybrid_pilot.py",
+      "--root",
+      "/media/PM982/onestepfold/mini_hybrid_v1_20260928",
+      "--case",
+      "confirmation2",
+      "--steps",
+      "1"
+    ]
+  },
+  {
+    "case": "8bzn",
+    "steps": 2,
+    "gcd": 6,
+    "pid": 1731562,
+    "command": [
+      "timeout",
+      "--kill-after=30",
+      "7200",
+      "/home/pc/anaconda3/envs/fold/bin/python",
+      "/media/PM982/onestepfold/mini_hybrid_v1_20260928/code_v2/scripts/run_mini_hybrid_pilot.py",
+      "--root",
+      "/media/PM982/onestepfold/mini_hybrid_v1_20260928",
+      "--case",
+      "8bzn",
+      "--steps",
+      "2",
+      "--derivatives-only"
+    ]
+  },
+  {
+    "case": "control",
+    "steps": 2,
+    "gcd": 7,
+    "pid": 1731564,
+    "command": [
+      "timeout",
+      "--kill-after=30",
+      "7200",
+      "/home/pc/anaconda3/envs/fold/bin/python",
+      "/media/PM982/onestepfold/mini_hybrid_v1_20260928/code_v2/scripts/run_mini_hybrid_pilot.py",
+      "--root",
+      "/media/PM982/onestepfold/mini_hybrid_v1_20260928",
+      "--case",
+      "control",
+      "--steps",
+      "2",
+      "--derivatives-only"
+    ]
+  }
+]

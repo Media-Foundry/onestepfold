@@ -1,0 +1,271 @@
+{
+  "block_rms": [
+    0.8158579468727112,
+    216.9083709716797,
+    32.0467643737793
+  ],
+  "case": "8bzn",
+  "complete": true,
+  "direction": "independent Gaussian blocks scaled by conditioning RMS, no global normalization",
+  "dtype": "float32",
+  "objectives": {
+    "new": {
+      "directions": [
+        {
+          "plateau_pass": true,
+          "rows": [
+            {
+              "absolute_error": 0.016429029750754998,
+              "analytic": -0.44447983256489415,
+              "finite_difference": -0.46090886231564915,
+              "h": 0.03,
+              "passed": true
+            },
+            {
+              "absolute_error": 0.16506683448381626,
+              "analytic": -0.44447983256489415,
+              "finite_difference": -0.6095466670487104,
+              "h": 0.01,
+              "passed": false
+            },
+            {
+              "absolute_error": 0.018337633605230885,
+              "analytic": -0.44447983256489415,
+              "finite_difference": -0.42614219895966327,
+              "h": 0.003,
+              "passed": true
+            },
+            {
+              "absolute_error": 0.0050963638385432275,
+              "analytic": -0.44447983256489415,
+              "finite_difference": -0.4393834687263509,
+              "h": 0.001,
+              "passed": true
+            },
+            {
+              "absolute_error": 0.00859322435904164,
+              "analytic": -0.44447983256489415,
+              "finite_difference": -0.4358866082058525,
+              "h": 0.0003,
+              "passed": true
+            }
+          ]
+        },
+        {
+          "plateau_pass": false,
+          "rows": [
+            {
+              "absolute_error": 0.6671019228281071,
+              "analytic": 0.15927487212500469,
+              "finite_difference": -0.5078270507031024,
+              "h": 0.03,
+              "passed": false
+            },
+            {
+              "absolute_error": 0.22749985325334443,
+              "analytic": 0.15927487212500469,
+              "finite_difference": -0.06822498112833975,
+              "h": 0.01,
+              "passed": false
+            },
+            {
+              "absolute_error": 0.0745664937526268,
+              "analytic": 0.15927487212500469,
+              "finite_difference": 0.08470837837237788,
+              "h": 0.003,
+              "passed": false
+            },
+            {
+              "absolute_error": 0.028061461855112158,
+              "analytic": 0.15927487212500469,
+              "finite_difference": 0.13121341026989253,
+              "h": 0.001,
+              "passed": false
+            },
+            {
+              "absolute_error": 0.0036322892242101057,
+              "analytic": 0.15927487212500469,
+              "finite_difference": 0.15564258290079458,
+              "h": 0.0003,
+              "passed": true
+            }
+          ]
+        },
+        {
+          "plateau_pass": false,
+          "rows": [
+            {
+              "absolute_error": 0.6249441018157758,
+              "analytic": -0.06759228961122526,
+              "finite_difference": -0.6925363914270011,
+              "h": 0.03,
+              "passed": false
+            },
+            {
+              "absolute_error": 0.10399064575761613,
+              "analytic": -0.06759228961122526,
+              "finite_difference": -0.1715829353688414,
+              "h": 0.01,
+              "passed": false
+            },
+            {
+              "absolute_error": 0.012965128126692677,
+              "analytic": -0.06759228961122526,
+              "finite_difference": -0.08055741773791794,
+              "h": 0.003,
+              "passed": false
+            },
+            {
+              "absolute_error": 0.004651990075103474,
+              "analytic": -0.06759228961122526,
+              "finite_difference": -0.07224427968632874,
+              "h": 0.001,
+              "passed": false
+            },
+            {
+              "absolute_error": 0.002098282506361404,
+              "analytic": -0.06759228961122526,
+              "finite_difference": -0.06969057211758667,
+              "h": 0.0003,
+              "passed": true
+            }
+          ]
+        }
+      ],
+      "passed": false
+    },
+    "old": {
+      "directions": [
+        {
+          "plateau_pass": true,
+          "rows": [
+            {
+              "absolute_error": 0.0750930035821506,
+              "analytic": -0.09922274953884358,
+              "finite_difference": -0.17431575312099418,
+              "h": 0.03,
+              "passed": false
+            },
+            {
+              "absolute_error": 0.029243078856140803,
+              "analytic": -0.09922274953884358,
+              "finite_difference": -0.12846582839498438,
+              "h": 0.01,
+              "passed": false
+            },
+            {
+              "absolute_error": 0.003090446005114461,
+              "analytic": -0.09922274953884358,
+              "finite_difference": -0.10231319554395804,
+              "h": 0.003,
+              "passed": true
+            },
+            {
+              "absolute_error": 0.00040603668757810407,
+              "analytic": -0.09922274953884358,
+              "finite_difference": -0.09962878622642168,
+              "h": 0.001,
+              "passed": true
+            },
+            {
+              "absolute_error": 0.00032825536399709587,
+              "analytic": -0.09922274953884358,
+              "finite_difference": -0.09955100490284068,
+              "h": 0.0003,
+              "passed": true
+            }
+          ]
+        },
+        {
+          "plateau_pass": true,
+          "rows": [
+            {
+              "absolute_error": 0.001921352307583779,
+              "analytic": 0.12851088291062363,
+              "finite_difference": 0.12658953060303985,
+              "h": 0.03,
+              "passed": true
+            },
+            {
+              "absolute_error": 0.0013535148458672097,
+              "analytic": 0.12851088291062363,
+              "finite_difference": 0.12715736806475642,
+              "h": 0.01,
+              "passed": true
+            },
+            {
+              "absolute_error": 4.994981176928426e-05,
+              "analytic": 0.12851088291062363,
+              "finite_difference": 0.12846093309885434,
+              "h": 0.003,
+              "passed": true
+            },
+            {
+              "absolute_error": 0.00010193229542942994,
+              "analytic": 0.12851088291062363,
+              "finite_difference": 0.1284089506151942,
+              "h": 0.001,
+              "passed": true
+            },
+            {
+              "absolute_error": 0.0006229610825422838,
+              "analytic": 0.12851088291062363,
+              "finite_difference": 0.1291338439931659,
+              "h": 0.0003,
+              "passed": true
+            }
+          ]
+        },
+        {
+          "plateau_pass": true,
+          "rows": [
+            {
+              "absolute_error": 0.010487753070767353,
+              "analytic": -0.0860455523993245,
+              "finite_difference": -0.09653330547009185,
+              "h": 0.03,
+              "passed": false
+            },
+            {
+              "absolute_error": 0.006193270397021347,
+              "analytic": -0.0860455523993245,
+              "finite_difference": -0.07985228200230315,
+              "h": 0.01,
+              "passed": false
+            },
+            {
+              "absolute_error": 0.0010049563646546272,
+              "analytic": -0.0860455523993245,
+              "finite_difference": -0.08504059603466987,
+              "h": 0.003,
+              "passed": true
+            },
+            {
+              "absolute_error": 0.00030789290211526155,
+              "analytic": -0.0860455523993245,
+              "finite_difference": -0.08573765949720924,
+              "h": 0.001,
+              "passed": true
+            },
+            {
+              "absolute_error": 3.944994646074007e-05,
+              "analytic": -0.0860455523993245,
+              "finite_difference": -0.08608500234578524,
+              "h": 0.0003,
+              "passed": true
+            }
+          ]
+        }
+      ],
+      "passed": true
+    }
+  },
+  "old_unit_direction_gate_unchanged": true,
+  "relative_h": [
+    0.03,
+    0.01,
+    0.003,
+    0.001,
+    0.0003
+  ]
+}

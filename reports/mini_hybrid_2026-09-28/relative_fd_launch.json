@@ -1,0 +1,32 @@
+[
+  {
+    "case": "8bzn",
+    "pid": 1733251,
+    "gcd": 0,
+    "command": [
+      "timeout",
+      "1800",
+      "/home/pc/anaconda3/envs/fold/bin/python",
+      "/media/PM982/onestepfold/mini_hybrid_v1_20260928/code_v2/scripts/check_relative_conditioning_fd.py",
+      "--root",
+      "/media/PM982/onestepfold/mini_hybrid_v1_20260928",
+      "--case",
+      "8bzn"
+    ]
+  },
+  {
+    "case": "control",
+    "pid": 1733252,
+    "gcd": 1,
+    "command": [
+      "timeout",
+      "1800",
+      "/home/pc/anaconda3/envs/fold/bin/python",
+      "/media/PM982/onestepfold/mini_hybrid_v1_20260928/code_v2/scripts/check_relative_conditioning_fd.py",
+      "--root",
+      "/media/PM982/onestepfold/mini_hybrid_v1_20260928",
+      "--case",
+      "control"
+    ]
+  }
+]
