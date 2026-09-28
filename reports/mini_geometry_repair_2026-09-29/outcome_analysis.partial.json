@@ -1,0 +1,437 @@
+{
+  "absolute_pass": 3,
+  "arms": {},
+  "cases": [
+    {
+      "absolute_failures": [],
+      "case": 0,
+      "chirality": {
+        "centres": 179,
+        "raw_wrong": 0,
+        "repaired_wrong": 0,
+        "rows": []
+      },
+      "collision_pairs": {
+        "raw": 19,
+        "repaired": 0,
+        "shared": 0
+      },
+      "force_diagnostic_met": true,
+      "force_rms_vector": 9.927951035588448,
+      "index": 0,
+      "preservation": {
+        "accepted": true,
+        "ca_aligned_rms": 0.580989880309331,
+        "ca_distance_rms": 0.5213700477580504,
+        "ca_rms": 0.5812655843503146,
+        "heavy_rms": 0.7919557925602899,
+        "max_displacement": 4.189736863517955
+      },
+      "raw_absolute_failures": [
+        "max_penetration"
+      ],
+      "raw_geometry": {
+        "atom_count": 1537,
+        "bond_rmse": 0.23665107786655426,
+        "chirality_fraction": 1.0,
+        "max_penetration": 3.2283902168273926,
+        "peptide_mae": 0.12794777750968933,
+        "severe_pairs": 19,
+        "severe_pairs_per_atom": 0.01236174365647365
+      },
+      "repaired_geometry": {
+        "atom_count": 1537,
+        "bond_rmse": 0.041206538677215576,
+        "chirality_fraction": 1.0,
+        "max_penetration": 0.489762544631958,
+        "peptide_mae": 0.005944713484495878,
+        "severe_pairs": 0,
+        "severe_pairs_per_atom": 0.0
+      },
+      "report_sha256": "e8187477fc759592ad3deb178e609129a99f92ade14ba367a2ec6bff21b269e1",
+      "seconds": 398.3354529619992,
+      "seed": 211,
+      "success": true,
+      "task_change_from_own_raw": -0.006636115629941666
+    },
+    {
+      "absolute_failures": [],
+      "case": 1,
+      "chirality": {
+        "centres": 179,
+        "raw_wrong": 1,
+        "repaired_wrong": 0,
+        "rows": [
+          {
+            "amino_acid": "Y",
+            "chain": "A",
+            "kind": "corrected",
+            "raw_ratio": -0.020254427696529523,
+            "repaired_ratio": 0.9792487874120652,
+            "residue": 22
+          }
+        ]
+      },
+      "collision_pairs": {
+        "raw": 8,
+        "repaired": 0,
+        "shared": 0
+      },
+      "force_diagnostic_met": true,
+      "force_rms_vector": 8.18955703747644,
+      "index": 0,
+      "preservation": {
+        "accepted": true,
+        "ca_aligned_rms": 0.5457756546486294,
+        "ca_distance_rms": 0.5235948325076177,
+        "ca_rms": 0.5468185997221248,
+        "heavy_rms": 0.7493134386670244,
+        "max_displacement": 3.565257997117822
+      },
+      "raw_absolute_failures": [
+        "max_penetration"
+      ],
+      "raw_geometry": {
+        "atom_count": 1537,
+        "bond_rmse": 0.2410806566476822,
+        "chirality_fraction": 0.994413407821229,
+        "max_penetration": 2.9790918827056885,
+        "peptide_mae": 0.1256459653377533,
+        "severe_pairs": 8,
+        "severe_pairs_per_atom": 0.00520494469746259
+      },
+      "repaired_geometry": {
+        "atom_count": 1537,
+        "bond_rmse": 0.04139365628361702,
+        "chirality_fraction": 1.0,
+        "max_penetration": 0.5777182579040527,
+        "peptide_mae": 0.005915289279073477,
+        "severe_pairs": 0,
+        "severe_pairs_per_atom": 0.0
+      },
+      "report_sha256": "7380d8c7c3efc9109111133628b293b9260b556286f57c6f226c8e9bc4b7c939",
+      "seconds": 404.12791102400115,
+      "seed": 200003,
+      "success": true,
+      "task_change_from_own_raw": -0.006115370749967042
+    },
+    {
+      "absolute_failures": [
+        "chirality_fraction"
+      ],
+      "case": 2,
+      "chirality": {
+        "centres": 179,
+        "raw_wrong": 1,
+        "repaired_wrong": 2,
+        "rows": [
+          {
+            "amino_acid": "H",
+            "chain": "A",
+            "kind": "new_flip",
+            "raw_ratio": 0.8275823269605632,
+            "repaired_ratio": -0.9249758814059152,
+            "residue": 41
+          },
+          {
+            "amino_acid": "L",
+            "chain": "A",
+            "kind": "new_flip",
+            "raw_ratio": 0.442038218118249,
+            "repaired_ratio": -0.5854563466129472,
+            "residue": 163
+          },
+          {
+            "amino_acid": "K",
+            "chain": "A",
+            "kind": "corrected",
+            "raw_ratio": -0.05746400111233704,
+            "repaired_ratio": 0.6665513028395713,
+            "residue": 194
+          }
+        ]
+      },
+      "collision_pairs": {
+        "raw": 10,
+        "repaired": 0,
+        "shared": 0
+      },
+      "force_diagnostic_met": true,
+      "force_rms_vector": 9.868247126535662,
+      "index": 0,
+      "preservation": {
+        "accepted": true,
+        "ca_aligned_rms": 0.6128467611943885,
+        "ca_distance_rms": 0.5488853836050248,
+        "ca_rms": 0.6134483549163645,
+        "heavy_rms": 0.7542955679745761,
+        "max_displacement": 3.786914988974553
+      },
+      "raw_absolute_failures": [
+        "max_penetration"
+      ],
+      "raw_geometry": {
+        "atom_count": 1537,
+        "bond_rmse": 0.23656019568443298,
+        "chirality_fraction": 0.994413407821229,
+        "max_penetration": 3.0358574390411377,
+        "peptide_mae": 0.13359300792217255,
+        "severe_pairs": 10,
+        "severe_pairs_per_atom": 0.006506180871828237
+      },
+      "repaired_geometry": {
+        "atom_count": 1537,
+        "bond_rmse": 0.04221820831298828,
+        "chirality_fraction": 0.9888268156424581,
+        "max_penetration": 0.5839872360229492,
+        "peptide_mae": 0.00660235108807683,
+        "severe_pairs": 0,
+        "severe_pairs_per_atom": 0.0
+      },
+      "report_sha256": "39a3ac10f89cc9ca315cfafbd0aa52054748b7f237c1dac58404c1844a8deb3f",
+      "seconds": 323.21851147800044,
+      "seed": 200009,
+      "success": true,
+      "task_change_from_own_raw": -0.00794751886887523
+    },
+    {
+      "absolute_failures": [
+        "chirality_fraction"
+      ],
+      "case": 3,
+      "chirality": {
+        "centres": 179,
+        "raw_wrong": 0,
+        "repaired_wrong": 2,
+        "rows": [
+          {
+            "amino_acid": "S",
+            "chain": "A",
+            "kind": "new_flip",
+            "raw_ratio": 0.04764251351591995,
+            "repaired_ratio": -0.8884584937890284,
+            "residue": 117
+          },
+          {
+            "amino_acid": "Q",
+            "chain": "A",
+            "kind": "new_flip",
+            "raw_ratio": 0.15473938238815801,
+            "repaired_ratio": -0.9134739169783654,
+            "residue": 191
+          }
+        ]
+      },
+      "collision_pairs": {
+        "raw": 12,
+        "repaired": 0,
+        "shared": 0
+      },
+      "force_diagnostic_met": false,
+      "force_rms_vector": 10.053337098235584,
+      "index": 1,
+      "preservation": {
+        "accepted": true,
+        "ca_aligned_rms": 0.5721705719080613,
+        "ca_distance_rms": 0.5195216738559223,
+        "ca_rms": 0.5728168680820435,
+        "heavy_rms": 0.7659769567001776,
+        "max_displacement": 3.6366668404408897
+      },
+      "raw_absolute_failures": [
+        "max_penetration"
+      ],
+      "raw_geometry": {
+        "atom_count": 1534,
+        "bond_rmse": 0.23394440114498138,
+        "chirality_fraction": 1.0,
+        "max_penetration": 2.796574592590332,
+        "peptide_mae": 0.13286924362182617,
+        "severe_pairs": 12,
+        "severe_pairs_per_atom": 0.007822685788787484
+      },
+      "repaired_geometry": {
+        "atom_count": 1534,
+        "bond_rmse": 0.041019245982170105,
+        "chirality_fraction": 0.9888268156424581,
+        "max_penetration": 0.5262229442596436,
+        "peptide_mae": 0.005883755628019571,
+        "severe_pairs": 0,
+        "severe_pairs_per_atom": 0.0
+      },
+      "report_sha256": "cc77c31c35afa395885c86fad60fec2d3606673009a3f5f53864bada2dbc741a",
+      "seconds": 429.69771617900005,
+      "seed": 211,
+      "success": true,
+      "task_change_from_own_raw": -0.007766220403720048
+    },
+    {
+      "absolute_failures": [
+        "chirality_fraction"
+      ],
+      "case": 4,
+      "chirality": {
+        "centres": 179,
+        "raw_wrong": 0,
+        "repaired_wrong": 3,
+        "rows": [
+          {
+            "amino_acid": "H",
+            "chain": "A",
+            "kind": "new_flip",
+            "raw_ratio": 0.4655921499505627,
+            "repaired_ratio": -0.7135477474941606,
+            "residue": 189
+          },
+          {
+            "amino_acid": "Q",
+            "chain": "A",
+            "kind": "new_flip",
+            "raw_ratio": 0.5226010777454297,
+            "repaired_ratio": -0.9811059060608297,
+            "residue": 191
+          },
+          {
+            "amino_acid": "K",
+            "chain": "A",
+            "kind": "new_flip",
+            "raw_ratio": 0.2608419388185321,
+            "repaired_ratio": -0.887848122279686,
+            "residue": 194
+          }
+        ]
+      },
+      "collision_pairs": {
+        "raw": 5,
+        "repaired": 0,
+        "shared": 0
+      },
+      "force_diagnostic_met": true,
+      "force_rms_vector": 9.51143327609858,
+      "index": 1,
+      "preservation": {
+        "accepted": true,
+        "ca_aligned_rms": 0.5854490460007146,
+        "ca_distance_rms": 0.5289737687282768,
+        "ca_rms": 0.5864039201516863,
+        "heavy_rms": 0.767790572076407,
+        "max_displacement": 4.017208495797987
+      },
+      "raw_absolute_failures": [
+        "max_penetration"
+      ],
+      "raw_geometry": {
+        "atom_count": 1534,
+        "bond_rmse": 0.23922909796237946,
+        "chirality_fraction": 1.0,
+        "max_penetration": 2.780648946762085,
+        "peptide_mae": 0.12882252037525177,
+        "severe_pairs": 5,
+        "severe_pairs_per_atom": 0.003259452411994785
+      },
+      "repaired_geometry": {
+        "atom_count": 1534,
+        "bond_rmse": 0.041077375411987305,
+        "chirality_fraction": 0.9832402234636871,
+        "max_penetration": 0.5410234928131104,
+        "peptide_mae": 0.005989419296383858,
+        "severe_pairs": 0,
+        "severe_pairs_per_atom": 0.0
+      },
+      "report_sha256": "4f6770616c0bf7c56ac13b4bce4abc35cf7133de26451d4be65d8c3deb61ca10",
+      "seconds": 519.8078726690001,
+      "seed": 200003,
+      "success": true,
+      "task_change_from_own_raw": -0.006272935760568726
+    },
+    {
+      "absolute_failures": [],
+      "case": 5,
+      "chirality": {
+        "centres": 179,
+        "raw_wrong": 1,
+        "repaired_wrong": 0,
+        "rows": [
+          {
+            "amino_acid": "K",
+            "chain": "A",
+            "kind": "corrected",
+            "raw_ratio": -0.07580932695805397,
+            "repaired_ratio": 0.9583810893874549,
+            "residue": 194
+          }
+        ]
+      },
+      "collision_pairs": {
+        "raw": 12,
+        "repaired": 0,
+        "shared": 0
+      },
+      "force_diagnostic_met": true,
+      "force_rms_vector": 9.23787904432838,
+      "index": 1,
+      "preservation": {
+        "accepted": true,
+        "ca_aligned_rms": 0.5591349246670042,
+        "ca_distance_rms": 0.49473839582777995,
+        "ca_rms": 0.5603887813103469,
+        "heavy_rms": 0.7285922776328657,
+        "max_displacement": 3.6826505820305764
+      },
+      "raw_absolute_failures": [
+        "max_penetration"
+      ],
+      "raw_geometry": {
+        "atom_count": 1534,
+        "bond_rmse": 0.24015675485134125,
+        "chirality_fraction": 0.994413407821229,
+        "max_penetration": 2.981041193008423,
+        "peptide_mae": 0.1332387626171112,
+        "severe_pairs": 12,
+        "severe_pairs_per_atom": 0.007822685788787484
+      },
+      "repaired_geometry": {
+        "atom_count": 1534,
+        "bond_rmse": 0.04118725284934044,
+        "chirality_fraction": 1.0,
+        "max_penetration": 0.5360846519470215,
+        "peptide_mae": 0.005886714905500412,
+        "severe_pairs": 0,
+        "severe_pairs_per_atom": 0.0
+      },
+      "report_sha256": "da604dac630383d3ba6637a8e2401f533adba651a134606fffdb41c649ca5def",
+      "seconds": 331.09445632400093,
+      "seed": 200009,
+      "success": true,
+      "task_change_from_own_raw": -0.010892406894311146
+    }
+  ],
+  "chirality_transition_counts": {
+    "corrected": 3,
+    "new_flip": 7
+  },
+  "classifier_sha256": "0d3d92ecbf1a4100482635ebe1850c4ed00768261fc0afadddf8b14dcb121f27",
+  "complete": false,
+  "expected": 99,
+  "failure_counts": {
+    "chirality_fraction": 3
+  },
+  "joint_pass": 3,
+  "lock_sha256": "f36879b679c9ce9f699d559d83a20862349a109e0ccd1e6b0f6838d9bfdc5e56",
+  "new_flip_residue_counts": {
+    "A:117:S": 1,
+    "A:163:L": 1,
+    "A:189:H": 1,
+    "A:191:Q": 2,
+    "A:194:K": 1,
+    "A:41:H": 1
+  },
+  "pending": 93,
+  "preserved": 6,
+  "processed": 6,
+  "scope": "same-parent development batch; no independent-protein prevalence",
+  "source_sha256": "329c90c077a74457d995fc14b058a95cd1b2ce9ae7bd897ea1c6999a45f70a5b",
+  "structures_with_new_CA_flip": 3,
+  "successful": 6,
+  "zero_severe": 6
+}

@@ -1,3 +1,18 @@
+## 2026-09-29 — Existing repair batch live; automatic outcome analysis attached
+
+No new experiments or parameter changes. Verified live controller39918 plusfour
+CPUworkers. Partial analysis6/99: all6 finite,zero severeclashes,preservationpass;
+absolute/jointgeometry3/6,other3failchirality.3structures have7newCA flips total,
+3old flips corrected. This is a completion-order subset,notprevalence.
+New offlineanalysis computes CA-centre new/corrected/persistent transitions,
+namedpair overlap,geometryfailure reasons and finalcandidate distributions;
+originallocked pipelineunchanged. Ninefocusedtests pass. Separate collector
+finish_repair_analysis.py waitsfororiginalfinalreport, runsanalysisonce thenstops;
+8hcollectiondeadline doesnotkillrepair. No automaticretry/restart/nextmethod.
+RootDiamondHill:/media/PM982/onestepfold/geometry_repair_v1_20260929.
+Expectedfinal:outcome_analysis.json/.md alongsideoriginalreport.json.
+Goalremainsactive/incomplete pendingfinalbatch; respectuser's boundedtonightscope.
+
 ## 2026-09-29 — C4/S5 collision control COMPLETE; repair first positive
 
 User requested original C4/S5 and bounded stopping tonight (no endless debugging).

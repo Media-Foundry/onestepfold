@@ -1,6 +1,14 @@
-# Geometry repair v1 — running; two cases audited
+# Geometry repair v1 — running; six-case partial analysis
 
-Latest update: cases000/002 completed and independently audited. Both remove
+Latest partial analysis: 6/99 complete, all6 with zero severe collisions and
+preserved structure;3/6 pass absolute geometry,3/6 fail chirality. Across these
+cases,7 new CA-centre flips and3 corrected flips. This is a completion-order
+subset, not a rate estimate. An independent lightweight collector is attached:
+when the original full report appears, it runs `summarize_repair_outcomes.py`
+exactly once, writes `outcome_analysis.json/.md`, then stops. It never launches
+repair/inference or alters parameters. Nine focused tests pass.
+
+Earlier update: cases000/002 completed and independently audited. Both remove
 all severe overlaps and meet displacement bounds; case000 passes absolute geometry,
 but case002 flips H41/L163 and fails chirality (.988827<.99). Controller has advanced
 to four parallel workers. Full99 results remain pending; no tuning/retry/expansion.
