@@ -1,0 +1,95 @@
+{
+  "case": "8bzn",
+  "complete": true,
+  "coordinate_sha256": "c43d4839a7faadfa25100d169b2985f11af5897bb29d7e56317c8784f922252d",
+  "lock_sha256": "bd41546fc5bbe924d5484dae1ef2eea7725a6a8abd3f349033004db82e206e54",
+  "metadata": {
+    "s": {
+      "equal": true,
+      "original_stride": [
+        384,
+        1
+      ],
+      "packed_stride": [
+        384,
+        1
+      ],
+      "shape": [
+        125,
+        384
+      ]
+    },
+    "s_inputs": {
+      "equal": true,
+      "original_stride": [
+        449,
+        1
+      ],
+      "packed_stride": [
+        449,
+        1
+      ],
+      "shape": [
+        125,
+        449
+      ]
+    },
+    "z": {
+      "equal": true,
+      "original_stride": [
+        16000,
+        128,
+        1
+      ],
+      "packed_stride": [
+        16000,
+        128,
+        1
+      ],
+      "shape": [
+        125,
+        125,
+        128
+      ]
+    }
+  },
+  "packed_repeat_exact": true,
+  "relative_to_packed_grad": {
+    "contiguous_no_grad": {
+      "exact": false,
+      "max_abs": 4.649162292480469e-05,
+      "rms": 9.357121174901981e-06
+    },
+    "original_grad": {
+      "exact": false,
+      "max_abs": 4.649162292480469e-05,
+      "rms": 9.357121174901981e-06
+    },
+    "original_no_grad": {
+      "exact": false,
+      "max_abs": 4.649162292480469e-05,
+      "rms": 9.357121174901981e-06
+    },
+    "packed_grad": {
+      "exact": true,
+      "max_abs": 0.0,
+      "rms": 0.0
+    },
+    "packed_no_grad": {
+      "exact": true,
+      "max_abs": 0.0,
+      "rms": 0.0
+    },
+    "packed_no_grad_repeat": {
+      "exact": true,
+      "max_abs": 0.0,
+      "rms": 0.0
+    },
+    "packed_requires_grad_no_grad": {
+      "exact": true,
+      "max_abs": 0.0,
+      "rms": 0.0
+    }
+  },
+  "source_sha256": "d51d2f95fa595b09c977e9a2791a8b1e9633b2524701794aa61890995b49cd8c"
+}
