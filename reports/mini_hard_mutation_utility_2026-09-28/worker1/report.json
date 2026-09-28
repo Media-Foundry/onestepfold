@@ -1,8 +1,532 @@
 {
+  "candidate_sha256": "b08f6bb6eaf3fc62d43b757853ac4f352f9ae077f3c718541dce155f4e1fcdfb",
   "complete": false,
   "lock_sha256": "8e695a6645decfa35441508dbd0e45c9f707dc663c7674c15c0d5d743c144a7a",
   "mode": "evaluate",
-  "results": [],
-  "stage": "load",
+  "results": [
+    {
+      "index": 1,
+      "seconds": 13.874532690999985,
+      "sequence": "AVPSEPKTVYVICLRESGSTVYPNEVSAQMQDAANSVKAVHGLKRFVNLHFVLYTTEYSCPSGNADEGLDGFTASLKANPKAEGYDDQIYFLIRWGTWDNNILGISWLDSYNVNTASDFKASGMSTTQLMYPGVMAHELGHILGARHADDPKDLMYSKYTGYLFHLSEENMYRIAKNLGWEIADGDWSHPQFEK",
+      "topology_file": "sequence1_topology.pt",
+      "topology_sha256": "cf2d107cb85ce7db3d602faa09acea23ee3454848b9d1b280cda284d5a93e142",
+      "values": {
+        "200003": {
+          "coordinate_file": "sequence1_noise200003.npz",
+          "coordinate_sha256": "cc347c36dc142db77387d66e0a2537bf730c5f838b8bce284d549f36c49ef5a8",
+          "geometry": {
+            "atom_count": 1534,
+            "bond_rmse": 0.23922909796237946,
+            "chirality_fraction": 1.0,
+            "max_penetration": 2.780648946762085,
+            "peptide_mae": 0.12882250547409058,
+            "severe_pairs": 5,
+            "severe_pairs_per_atom": 0.003259452411994785
+          },
+          "geometry_terms": {
+            "bond": 0.058723293244838715,
+            "chirality": 2.0837369447690435e-05,
+            "clash": 0.00868217833340168,
+            "peptide": 0.04652620106935501
+          },
+          "task": -0.031141751264596285,
+          "task_components": {
+            "chain": 0.09293144467771881,
+            "clash": 5.0510169752424705e-05,
+            "contact": 0.04048540590212059
+          },
+          "total": 0.12932028992624367
+        },
+        "200009": {
+          "coordinate_file": "sequence1_noise200009.npz",
+          "coordinate_sha256": "3cd9b9f951494ab3a910a0f032013c1d7d548e042c5f99266580b75548bcbd01",
+          "geometry": {
+            "atom_count": 1534,
+            "bond_rmse": 0.24015675485134125,
+            "chirality_fraction": 0.9944134078212291,
+            "max_penetration": 2.981041193008423,
+            "peptide_mae": 0.1332387626171112,
+            "severe_pairs": 12,
+            "severe_pairs_per_atom": 0.007822685788787484
+          },
+          "geometry_terms": {
+            "bond": 0.05872609466314316,
+            "chirality": 0.0005248133093118668,
+            "clash": 0.015986258164048195,
+            "peptide": 0.05013979226350784
+          },
+          "task": -0.02616854452173201,
+          "task_components": {
+            "chain": 0.12853000705027917,
+            "clash": 1.2821600109178462e-05,
+            "contact": 0.03903436682686911
+          },
+          "total": 0.14892835549870298
+        },
+        "211": {
+          "coordinate_file": "sequence1_noise211.npz",
+          "coordinate_sha256": "9a62c8cfc42bf7024dd27ce4d3252e3def3da943179402e71f2a3f5451e61b69",
+          "geometry": {
+            "atom_count": 1534,
+            "bond_rmse": 0.23394441604614258,
+            "chirality_fraction": 1.0,
+            "max_penetration": 2.796574592590332,
+            "peptide_mae": 0.13286925852298737,
+            "severe_pairs": 12,
+            "severe_pairs_per_atom": 0.007822685788787484
+          },
+          "geometry_terms": {
+            "bond": 0.05523873493075371,
+            "chirality": 0.00014112473581917584,
+            "clash": 0.014832199551165104,
+            "peptide": 0.05108172073960304
+          },
+          "task": -0.03051008310948087,
+          "task_components": {
+            "chain": 0.10031912321692925,
+            "clash": 5.774616665128033e-06,
+            "contact": 0.040547770047838924
+          },
+          "total": 0.14175251779917167
+        }
+      }
+    },
+    {
+      "index": 5,
+      "seconds": 1.192885036000007,
+      "sequence": "AVPSEPKTVYVICLRESGSTVYPNEVSAQMQDAANSVDAVHGLKRFVNLHFVLYTTEYSCPSGNADEGLDGFTASLKANPKAEGYDDQIYFLIRWGTWDNNILGISWLDSYNVNTASDFKASGMSTTQLMYPGVMAHELGHILGARHADDPKDLMYSKYTGYLFHLSEENMYRIAKNLGWEIADGDWSHPQFEK",
+      "topology_file": "sequence5_topology.pt",
+      "topology_sha256": "48426f1cfec2b99ee5cebcfe54b24a8123ff049a10cd68f6ec004cb97ac2fe87",
+      "values": {
+        "200003": {
+          "coordinate_file": "sequence5_noise200003.npz",
+          "coordinate_sha256": "c139ab6652450a0c388b956315809843bef42ae45590e583af578c8d20a3a9b7",
+          "geometry": {
+            "atom_count": 1533,
+            "bond_rmse": 0.24190756678581238,
+            "chirality_fraction": 1.0,
+            "max_penetration": 3.010554075241089,
+            "peptide_mae": 0.12421442568302155,
+            "severe_pairs": 10,
+            "severe_pairs_per_atom": 0.006523157208088715
+          },
+          "geometry_terms": {
+            "bond": 0.061163075268268585,
+            "chirality": 0.00016971454897429794,
+            "clash": 0.019453903660178185,
+            "peptide": 0.039574358612298965
+          },
+          "task": -0.03293139916154432,
+          "task_components": {
+            "chain": 0.0781378767527662,
+            "clash": 1.847003272932428e-05,
+            "contact": 0.04076365686955027
+          },
+          "total": 0.12686823990129525
+        },
+        "200009": {
+          "coordinate_file": "sequence5_noise200009.npz",
+          "coordinate_sha256": "0d92131e94bd2eebdd6b3f115a8876c736ac982d6c040a5c6f7315e3b0e0f951",
+          "geometry": {
+            "atom_count": 1533,
+            "bond_rmse": 0.23841282725334167,
+            "chirality_fraction": 1.0,
+            "max_penetration": 3.0313405990600586,
+            "peptide_mae": 0.12398321181535721,
+            "severe_pairs": 16,
+            "severe_pairs_per_atom": 0.010437051532941943
+          },
+          "geometry_terms": {
+            "bond": 0.059368398040533066,
+            "chirality": 0.00011869212903548032,
+            "clash": 0.02542743645608425,
+            "peptide": 0.038727495819330215
+          },
+          "task": -0.02873248581909745,
+          "task_components": {
+            "chain": 0.10511442733268404,
+            "clash": 7.183222294767389e-05,
+            "contact": 0.039315760775313534
+          },
+          "total": 0.13354207874271498
+        },
+        "211": {
+          "coordinate_file": "sequence5_noise211.npz",
+          "coordinate_sha256": "b217452bd9e2e071e32d686764eed71945495ff6ae64876156070516dc6e5139",
+          "geometry": {
+            "atom_count": 1533,
+            "bond_rmse": 0.23972457647323608,
+            "chirality_fraction": 1.0,
+            "max_penetration": 3.17922043800354,
+            "peptide_mae": 0.135366752743721,
+            "severe_pairs": 28,
+            "severe_pairs_per_atom": 0.0182648401826484
+          },
+          "geometry_terms": {
+            "bond": 0.058532342314720154,
+            "chirality": 8.780967618804425e-05,
+            "clash": 0.034303195774555206,
+            "peptide": 0.049840133637189865
+          },
+          "task": -0.0321742292282421,
+          "task_components": {
+            "chain": 0.0863320397102255,
+            "clash": 6.951022002884606e-05,
+            "contact": 0.040876943419293495
+          },
+          "total": 0.1603591380706506
+        }
+      }
+    },
+    {
+      "index": 9,
+      "seconds": 1.1842380530000014,
+      "sequence": "AVPSEPKTVYVICLRESGSTVYPNEVSAQMQDAANSVTAVHGLKRFVNLHFVLYTTEYSCPSGNADEGLDGFTASLKANPKAEGYDDQIYFLIRWGTWDNNILGISWLDSYNVNTASDFKASGMSTTQLMYPGVMAHELGHILGARHADDPKDLMYSKYTGYLFHLSEENMYRIAKNLGWEIADGDWSHPQFEK",
+      "topology_file": "sequence9_topology.pt",
+      "topology_sha256": "d7020ce7e9c0ee6f4ce9cca7095ae329018510593bc6f44b8abe71496826fb89",
+      "values": {
+        "200003": {
+          "coordinate_file": "sequence9_noise200003.npz",
+          "coordinate_sha256": "559f92bb733c7e86d5b01d77ae4cd2934bbea8b041746c0eac0af01e1f1187e1",
+          "geometry": {
+            "atom_count": 1532,
+            "bond_rmse": 0.23637737333774567,
+            "chirality_fraction": 0.9944134078212291,
+            "max_penetration": 2.9148614406585693,
+            "peptide_mae": 0.12560737133026123,
+            "severe_pairs": 5,
+            "severe_pairs_per_atom": 0.0032637075718015664
+          },
+          "geometry_terms": {
+            "bond": 0.0579523928463459,
+            "chirality": 0.0002842325484380126,
+            "clash": 0.011661377735435963,
+            "peptide": 0.04099356755614281
+          },
+          "task": -0.03190205965784703,
+          "task_components": {
+            "chain": 0.08655211421092973,
+            "clash": 2.061639830392877e-05,
+            "contact": 0.04057788747724393
+          },
+          "total": 0.11975569254736323
+        },
+        "200009": {
+          "coordinate_file": "sequence9_noise200009.npz",
+          "coordinate_sha256": "ac9966b301d8c672bee4b1fe2a0731eed3cede11fe3ba55242035c3d8a22fad4",
+          "geometry": {
+            "atom_count": 1532,
+            "bond_rmse": 0.23491185903549194,
+            "chirality_fraction": 1.0,
+            "max_penetration": 2.9814305305480957,
+            "peptide_mae": 0.1251821666955948,
+            "severe_pairs": 13,
+            "severe_pairs_per_atom": 0.008485639686684074
+          },
+          "geometry_terms": {
+            "bond": 0.057668786495923996,
+            "chirality": 0.0003337080415803939,
+            "clash": 0.01759137399494648,
+            "peptide": 0.03738795965909958
+          },
+          "task": -0.03096291928848508,
+          "task_components": {
+            "chain": 0.08429382853653958,
+            "clash": 6.245718031376922e-05,
+            "contact": 0.039454759322452806
+          },
+          "total": 0.11913990213035583
+        },
+        "211": {
+          "coordinate_file": "sequence9_noise211.npz",
+          "coordinate_sha256": "7d9af816c63596cb594a0f54b0e7fc0341e794f7d252dda4e71f8d9e26135067",
+          "geometry": {
+            "atom_count": 1532,
+            "bond_rmse": 0.2339792400598526,
+            "chirality_fraction": 1.0,
+            "max_penetration": 2.9049339294433594,
+            "peptide_mae": 0.13393597304821014,
+            "severe_pairs": 10,
+            "severe_pairs_per_atom": 0.006527415143603133
+          },
+          "geometry_terms": {
+            "bond": 0.05564046651124954,
+            "chirality": 0.00015128398081287742,
+            "clash": 0.013646116480231285,
+            "peptide": 0.04834340512752533
+          },
+          "task": -0.03229284684995466,
+          "task_components": {
+            "chain": 0.0838138538363951,
+            "clash": 5.1841916985678505e-05,
+            "contact": 0.04072607415057985
+          },
+          "total": 0.133710803193467
+        }
+      }
+    },
+    {
+      "index": 13,
+      "seconds": 1.187653255000015,
+      "sequence": "AVPSEPKTVYVICLRESGSTVYPNEVSAQMQDAANSVMAVHGLKRFVNLHFVLYTTEYSCPSGNADEGLDGFTASLKANPKAEGYDDQIYFLIRWGTWDNNILGISWLDSYNVNTASDFKASGMSTTQLMYPGVMAHELGHILGARHADDPKDLMYSKYTGYLFHLSEENMYRIAKNLGWEIADGDWSHPQFEK",
+      "topology_file": "sequence13_topology.pt",
+      "topology_sha256": "6b190ffb97181233a1e443deb27253826f90652f8a25e43ff579c062289c28c3",
+      "values": {
+        "200003": {
+          "coordinate_file": "sequence13_noise200003.npz",
+          "coordinate_sha256": "71246deabd57c06bc241277935e4f2b3f94bf1948ced8a93203a2ed5a451668a",
+          "geometry": {
+            "atom_count": 1533,
+            "bond_rmse": 0.24408476054668427,
+            "chirality_fraction": 1.0,
+            "max_penetration": 2.964434862136841,
+            "peptide_mae": 0.11318449676036835,
+            "severe_pairs": 30,
+            "severe_pairs_per_atom": 0.019569471624266144
+          },
+          "geometry_terms": {
+            "bond": 0.06388882547616959,
+            "chirality": 0.00012660988431889564,
+            "clash": 0.03697459399700165,
+            "peptide": 0.028682325035333633
+          },
+          "task": -0.03213775211524414,
+          "task_components": {
+            "chain": 0.0809346340225258,
+            "clash": 0.00012496027018591788,
+            "contact": 0.040356175787682635
+          },
+          "total": 0.12611563940545814
+        },
+        "200009": {
+          "coordinate_file": "sequence13_noise200009.npz",
+          "coordinate_sha256": "6ecafc78637a7c50ab7a4171820fb14b98c0e0004860796c465565cc6e7b694a",
+          "geometry": {
+            "atom_count": 1533,
+            "bond_rmse": 0.246432363986969,
+            "chirality_fraction": 0.9944134078212291,
+            "max_penetration": 2.965212345123291,
+            "peptide_mae": 0.1231783926486969,
+            "severe_pairs": 22,
+            "severe_pairs_per_atom": 0.014350945857795172
+          },
+          "geometry_terms": {
+            "bond": 0.06439414620399475,
+            "chirality": 0.0002911844931077212,
+            "clash": 0.023547571152448654,
+            "peptide": 0.03446457162499428
+          },
+          "task": -0.029769717023239363,
+          "task_components": {
+            "chain": 0.09611537170217327,
+            "clash": 0.0002359139683546812,
+            "contact": 0.03961716816181137
+          },
+          "total": 0.12715938048254175
+        },
+        "211": {
+          "coordinate_file": "sequence13_noise211.npz",
+          "coordinate_sha256": "cf92904df2820d1625f3cc21977853b9732d3cdd5996273f747ea27c3e824f68",
+          "geometry": {
+            "atom_count": 1533,
+            "bond_rmse": 0.24973046779632568,
+            "chirality_fraction": 1.0,
+            "max_penetration": 3.202011823654175,
+            "peptide_mae": 0.10988520085811615,
+            "severe_pairs": 24,
+            "severe_pairs_per_atom": 0.015655577299412915
+          },
+          "geometry_terms": {
+            "bond": 0.06706368923187256,
+            "chirality": 0.00010138748621102422,
+            "clash": 0.031737521290779114,
+            "peptide": 0.028697533532977104
+          },
+          "task": -0.032643721408792375,
+          "task_components": {
+            "chain": 0.08167446667691809,
+            "clash": 0.0002071944001856194,
+            "contact": 0.04101836247666981
+          },
+          "total": 0.12357283367705571
+        }
+      }
+    },
+    {
+      "index": 17,
+      "seconds": 1.1803302309999992,
+      "sequence": "AVPSEPKTVYVICLRESGSTVYPNEVSAQMQDAANSVYAVHGLKRFVNLHMVLYTTEYSCPSGNADEGLDGFTASLKANPKAEGYDDQIYFLIRWGTWDNNILGISWLDSYNVNTASDFKASGMSTTQLMYPGVMAHELGHILGARHADDPKDLMYSKYTGYLFHLSEENMYRIAKNLGWEIADGDWSHPQFEK",
+      "topology_file": "sequence17_topology.pt",
+      "topology_sha256": "edeb07127fa0cf5b65f8eaf8131af2f49a18eb9ebaee785776837d476562911e",
+      "values": {
+        "200003": {
+          "coordinate_file": "sequence17_noise200003.npz",
+          "coordinate_sha256": "11dbb504557337608e76ae695a88aa8cd51030283d6fd762c06623e0fb168e8e",
+          "geometry": {
+            "atom_count": 1534,
+            "bond_rmse": 0.2891955077648163,
+            "chirality_fraction": 0.9888268156424581,
+            "max_penetration": 2.9845898151397705,
+            "peptide_mae": 0.17458780109882355,
+            "severe_pairs": 15,
+            "severe_pairs_per_atom": 0.009778357235984355
+          },
+          "geometry_terms": {
+            "bond": 0.08476589620113373,
+            "chirality": 0.0010182576952502131,
+            "clash": 0.026791205629706383,
+            "peptide": 0.07551737129688263
+          },
+          "task": -0.021945839702989682,
+          "task_components": {
+            "chain": 0.19826680267583635,
+            "clash": 0.0005064023536387091,
+            "contact": 0.04227892232421203
+          },
+          "total": 0.24084965625775534
+        },
+        "200009": {
+          "coordinate_file": "sequence17_noise200009.npz",
+          "coordinate_sha256": "11cdbd87ae0095b17c12f21c43ed4b902d64675cd28d6b6af00d9f432ede47de",
+          "geometry": {
+            "atom_count": 1534,
+            "bond_rmse": 0.28350144624710083,
+            "chirality_fraction": 0.9832402234636872,
+            "max_penetration": 3.062730073928833,
+            "peptide_mae": 0.1710176169872284,
+            "severe_pairs": 27,
+            "severe_pairs_per_atom": 0.017601043024771838
+          },
+          "geometry_terms": {
+            "bond": 0.08219312131404877,
+            "chirality": 0.0014622324379161,
+            "clash": 0.03280804306268692,
+            "peptide": 0.06732142716646194
+          },
+          "task": -0.020895145094841815,
+          "task_components": {
+            "chain": 0.2049671251180333,
+            "clash": 0.0005369604507297123,
+            "contact": 0.04192881805737486
+          },
+          "total": 0.22904132010822176
+        },
+        "211": {
+          "coordinate_file": "sequence17_noise211.npz",
+          "coordinate_sha256": "229784c98482e91c310b91d9fb5d1f16a2e463a385799e5002b5fbcfcec1c70a",
+          "geometry": {
+            "atom_count": 1534,
+            "bond_rmse": 0.2850184738636017,
+            "chirality_fraction": 0.9888268156424581,
+            "max_penetration": 2.847081184387207,
+            "peptide_mae": 0.18351411819458008,
+            "severe_pairs": 26,
+            "severe_pairs_per_atom": 0.01694915254237288
+          },
+          "geometry_terms": {
+            "bond": 0.08074240386486053,
+            "chirality": 0.001227176864631474,
+            "clash": 0.030647162348031998,
+            "peptide": 0.08477170020341873
+          },
+          "task": -0.020766261817190563,
+          "task_components": {
+            "chain": 0.2249375569814017,
+            "clash": 0.00036031841614085776,
+            "contact": 0.04362033593147159
+          },
+          "total": 0.260412140169645
+        }
+      }
+    },
+    {
+      "index": 21,
+      "seconds": 1.2094274629999973,
+      "sequence": "AVPSEPKTVYVICLRESGSTVYPNEVSAQMQDAVNSVYAVHGLKRFVNLHFVLYTTEYSCPSGNADEGLDGFTASLKANPKAEGYDDQIYFLIRWGTWDNNILGISWLDSYNVNTASDFKASGMSTTQLMYPGVMAHELGHILGARHADDPKDLMYSKYTGYLFHLSEENMYRIAKNLGWEIADGDWSHPQFEK",
+      "topology_file": "sequence21_topology.pt",
+      "topology_sha256": "b3c3b0e447f542ce3db899b98a386e706293b0b4b168dd1a26be58d7a47c5b2b",
+      "values": {
+        "200003": {
+          "coordinate_file": "sequence21_noise200003.npz",
+          "coordinate_sha256": "52b7fdf5092f26f4e8fafb7650961f2827a8b21a9d325ee4e22e998bc7a780b5",
+          "geometry": {
+            "atom_count": 1539,
+            "bond_rmse": 0.24960461258888245,
+            "chirality_fraction": 1.0,
+            "max_penetration": 3.117929220199585,
+            "peptide_mae": 0.14124029874801636,
+            "severe_pairs": 13,
+            "severe_pairs_per_atom": 0.008447043534762833
+          },
+          "geometry_terms": {
+            "bond": 0.06444811820983887,
+            "chirality": 0.00015965641068760306,
+            "clash": 0.014304373413324356,
+            "peptide": 0.046849325299263
+          },
+          "task": -0.029992079376911868,
+          "task_components": {
+            "chain": 0.10531280613154967,
+            "clash": 0.0001704635384889876,
+            "contact": 0.04069382352855582
+          },
+          "total": 0.14249099412691488
+        },
+        "200009": {
+          "coordinate_file": "sequence21_noise200009.npz",
+          "coordinate_sha256": "8442b5d7e332f09321bf972fbe482a341cb5af9b541429b2d364731548936681",
+          "geometry": {
+            "atom_count": 1539,
+            "bond_rmse": 0.24198250472545624,
+            "chirality_fraction": 1.0,
+            "max_penetration": 2.4098258018493652,
+            "peptide_mae": 0.13080114126205444,
+            "severe_pairs": 6,
+            "severe_pairs_per_atom": 0.003898635477582846
+          },
+          "geometry_terms": {
+            "bond": 0.061092328280210495,
+            "chirality": 0.0001222306163981557,
+            "clash": 0.006470404099673033,
+            "peptide": 0.040285374969244
+          },
+          "task": -0.02948070482184459,
+          "task_components": {
+            "chain": 0.10198964769639708,
+            "clash": 4.949088449373037e-05,
+            "contact": 0.03972916047597803
+          },
+          "total": 0.11867722362089797
+        },
+        "211": {
+          "coordinate_file": "sequence21_noise211.npz",
+          "coordinate_sha256": "34a33ee59f00e809f4a2e6a81b7157f5be7fe9d02ac09dade8c2cf1fc916c1e0",
+          "geometry": {
+            "atom_count": 1539,
+            "bond_rmse": 0.2617489993572235,
+            "chirality_fraction": 1.0,
+            "max_penetration": 3.0100300312042236,
+            "peptide_mae": 0.1535416841506958,
+            "severe_pairs": 29,
+            "severe_pairs_per_atom": 0.018843404808317088
+          },
+          "geometry_terms": {
+            "bond": 0.07004877179861069,
+            "chirality": 0.0005416657077148557,
+            "clash": 0.0328039787709713,
+            "peptide": 0.05744851753115654
+          },
+          "task": -0.027986414389138008,
+          "task_components": {
+            "chain": 0.13472468459133502,
+            "clash": 0.0004941861177669976,
+            "contact": 0.04195306896603851
+          },
+          "total": 0.1898717043872104
+        }
+      }
+    }
+  ],
+  "stage": "sequence25",
   "worker": 1
 }

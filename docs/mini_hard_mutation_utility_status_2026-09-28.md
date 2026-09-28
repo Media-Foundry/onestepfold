@@ -30,3 +30,12 @@ retains all deltas, per-noise decisions and both-confirmation endpoint counts,
 separating task+nonregression from unchanged full hard_accept. It also audits
 all stored coordinate/geometry scores and proposal ranking on CPU.
 Four focused tests passed; all scripts compiled. Deployment remains rejected.
+
+## Recovery after host reboot
+
+Reconnected: host uptime was approximately one minute; no old worker process or
+hard coordinate file survived. All four saved worker reports were still at load
+with zero completed sequences. Archived these under attempts/reboot_interrupted.
+Candidate hash remains unchanged. Restarted only hard evaluation on GCD2–5,
+staggering model loads by20s. A detached controller automatically runs the CPU
+scorer after all four workers exit successfully. No gradient or candidate rerun.

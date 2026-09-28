@@ -1,3 +1,13 @@
+## 2026-09-28 — Hard mutation evaluation RECOVERED after reboot
+
+DiamondHill reconnected with uptime~1min. Old workers absent; all4 reports at
+load with0 results and0 coordinatefiles. Preserved interrupted run under
+attempts/reboot_interrupted. Candidate hash unchanged; no gradient/proposal
+rerun. Detached recovery controller restarts only99hardpredictions onGCD2–5,
+20s stagger, then automatically CPUscore if allworkers succeed. Firstworker
+entered sequence0; laterworkers loading. Root and protocol unchanged.
+Recovery script:scripts/recover_mutation_evaluation.py. No new candidate/seed.
+
 ## 2026-09-28 — Hard mutation utility batch SUBMITTED, outcomes pending
 
 One control alpha.001/C4S1,16gradient+16random(RNG6271), zero overlap,
