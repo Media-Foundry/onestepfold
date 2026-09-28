@@ -7,13 +7,13 @@ p=argparse.ArgumentParser();p.add_argument('--root',type=Path,required=True);roo
 parent=r['cases'][0];target=next(c for c in r['cases'] if c['sequence'][37]=='T' and sum(a!=b for a,b in zip(c['sequence'],parent['sequence']))==1)
 def pairkey(x):return tuple(sorted((a['chain'],a['residue'],a['name']) for a in [x['a'],x['b']]))
 with (out/'parent_y38t_pairs.tsv').open('w') as f:
- w=csv.writer(f,delimiter='\t');w.writerow(['sequence','noise','atom_a','atom_b','distance_A','penetration_A','bond_graph_distance','severe','maximum','min_distance_to_res38_CA_A'])
+ w=csv.writer(f,delimiter='\t',lineterminator='\n');w.writerow(['sequence','noise','atom_a','atom_b','distance_A','penetration_A','bond_graph_distance','severe','maximum','min_distance_to_res38_CA_A'])
  for name,case in [('parent',parent),('Y38T',target)]:
   for seed,v in case['values'].items():
    for x in v['pairs']:
     atoms=[f"{a['chain']}:{a['amino_acid']}{a['residue']}:{a['name']}" for a in [x['a'],x['b']]];w.writerow([name,seed,*atoms,x['distance'],x['penetration'],x['graph_distance'],x['severe'],x['is_maximum'],x['distance_to_res38_ca_min']])
 with (out/'y38_ranking.tsv').open('w') as f:
- w=csv.writer(f,delimiter='\t');w.writerow(['substitution','original_rank','local_score','noise','delta_total','delta_task','delta_bond','delta_peptide','delta_clash','delta_chirality'])
+ w=csv.writer(f,delimiter='\t',lineterminator='\n');w.writerow(['substitution','original_rank','local_score','noise','delta_total','delta_task','delta_bond','delta_peptide','delta_clash','delta_chirality'])
  for x in r['ranking']['rows']:
   for seed,v in x['deltas'].items():w.writerow([x['substitution'],x['original_gradient_rank'],x['score'],seed,*[v[k] for k in ['total','task','bond','peptide','clash','chirality']]])
 summary=dict(scope='posthoc selected-candidate reanalysis, no inference or gate changes',regions={},parent_y38t={})
