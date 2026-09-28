@@ -1,3 +1,18 @@
+## 2026-09-28 — Hard mutation utility COMPLETE, stop batch
+
+Recovered afterhostreboot; all4workers exit0,99hardpredictions andCPUauditdone.
+Frozen16gradient+16random,controlonly,noadditionalcandidate/seed. BOTHconfirm
+noises utility(taskimprovement+geometrynonregression):gradient1/16,random0/16.
+Fullhardaccept0/16botharms. Gradientmean taskdelta+0.00053495 vsrandom+0.00278479;
+bothmeans worsen, medians-0.00016116 vs+0.00096734. OnlyutilitycandidateY38T:
+confirmdeltas-.000181095/-.001326579,stillfailsabsolute maxpenetration.
+Small descriptive localsignal,not generaladvantage orvaliddesign;15gradient
+proposalsatY38. Nativehardgeometry remainsblocker;deploymentrejected.
+99CPUcoordinatechecks maxerror2.38419e-7. Recoveredbatch136.625s inclloading;
+proposal8.393s excludesfailedpreflights/setup. ALLJOBSFINISHED,doNOTrestart.
+Report:docs/mini_hard_mutation_utility_findings_2026-09-28.md.
+Remoteartifactrootunchanged.Noextraexperimentswithoutnewdecision.
+
 ## 2026-09-28 — Hard mutation evaluation RECOVERED after reboot
 
 DiamondHill reconnected with uptime~1min. Old workers absent; all4 reports at

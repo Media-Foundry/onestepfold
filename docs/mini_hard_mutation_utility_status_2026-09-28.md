@@ -1,3 +1,5 @@
+**Current status: COMPLETE. All99 predictions and CPU audit finished; see [findings](mini_hard_mutation_utility_findings_2026-09-28.md). Earlier status entries below are historical.**
+
 # Hard mutation utility: frozen batch and execution status
 
 Protocol: [mini_hard_mutation_utility_v1.md](mini_hard_mutation_utility_v1.md).
