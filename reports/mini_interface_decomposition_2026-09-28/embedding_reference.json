@@ -1,0 +1,374 @@
+{
+  "allow_tf32": false,
+  "arithmetic_dtypes": [
+    "torch.float32",
+    "torch.float64"
+  ],
+  "cases": {
+    "8bzn": [
+      {
+        "checks": {
+          "torch.float32": {
+            "formula_vs_fp64_relative_l2": 5.68849461909846e-05,
+            "jvp_projection": 0.0010733568306886933,
+            "jvp_vjp_absolute_difference": 1.0653842008774561e-07,
+            "jvp_vs_formula_relative_l2": 0.0001427820509300517
+          },
+          "torch.float64": {
+            "formula_vs_fp64_relative_l2": 0.0,
+            "jvp_projection": 0.0010732590618852396,
+            "jvp_vjp_absolute_difference": 1.1319070680748666e-16,
+            "jvp_vs_formula_relative_l2": 2.762246805974451e-13
+          }
+        },
+        "direction": 0,
+        "rows": [
+          {
+            "fp32_arithmetic_vs_rounded_fp64_relative_l2": 0.012751817175395497,
+            "fp32_fd_relative_l2": 0.012752459317283823,
+            "fp64_fd_relative_l2": 4.1631648616206116e-05,
+            "fp64_rounded_q_fd_relative_l2": 4.3083392194619236e-05,
+            "h": 0.3,
+            "tangent_norm": 0.0010732590618850366
+          },
+          {
+            "fp32_arithmetic_vs_rounded_fp64_relative_l2": 0.03652650863218569,
+            "fp32_fd_relative_l2": 0.036526552219754115,
+            "fp64_fd_relative_l2": 4.625653891383583e-06,
+            "fp64_rounded_q_fd_relative_l2": 3.9088516535146804e-05,
+            "h": 0.1,
+            "tangent_norm": 0.0010732590618850366
+          },
+          {
+            "fp32_arithmetic_vs_rounded_fp64_relative_l2": 0.11972643471701457,
+            "fp32_fd_relative_l2": 0.11973331429457551,
+            "fp64_fd_relative_l2": 4.162885419625815e-07,
+            "fp64_rounded_q_fd_relative_l2": 0.0001347669634444081,
+            "h": 0.03,
+            "tangent_norm": 0.0010732590618850366
+          },
+          {
+            "fp32_arithmetic_vs_rounded_fp64_relative_l2": 0.3172654653796529,
+            "fp32_fd_relative_l2": 0.31726345756030044,
+            "fp64_fd_relative_l2": 4.6226700458211715e-08,
+            "fp64_rounded_q_fd_relative_l2": 0.00040296588287012426,
+            "h": 0.01,
+            "tangent_norm": 0.0010732590618850366
+          },
+          {
+            "fp32_arithmetic_vs_rounded_fp64_relative_l2": 0.7009937146458668,
+            "fp32_fd_relative_l2": 0.7009918479416241,
+            "fp64_fd_relative_l2": 4.938545466681927e-09,
+            "fp64_rounded_q_fd_relative_l2": 0.0013663446742745455,
+            "h": 0.003,
+            "tangent_norm": 0.0010732590618850366
+          }
+        ]
+      },
+      {
+        "checks": {
+          "torch.float32": {
+            "formula_vs_fp64_relative_l2": 5.167846259431549e-05,
+            "jvp_projection": 0.0011813624035735847,
+            "jvp_vjp_absolute_difference": 1.1403763878386e-07,
+            "jvp_vs_formula_relative_l2": 0.00013537926658722897
+          },
+          "torch.float64": {
+            "formula_vs_fp64_relative_l2": 0.0,
+            "jvp_projection": 0.0011812624391035545,
+            "jvp_vjp_absolute_difference": 1.3942839938163587e-16,
+            "jvp_vs_formula_relative_l2": 2.0773563816207211e-13
+          }
+        },
+        "direction": 1,
+        "rows": [
+          {
+            "fp32_arithmetic_vs_rounded_fp64_relative_l2": 0.011629352762961249,
+            "fp32_fd_relative_l2": 0.011634063141582626,
+            "fp64_fd_relative_l2": 4.916191680353818e-05,
+            "fp64_rounded_q_fd_relative_l2": 5.141376120848169e-05,
+            "h": 0.3,
+            "tangent_norm": 0.0011812624391033919
+          },
+          {
+            "fp32_arithmetic_vs_rounded_fp64_relative_l2": 0.034139264211879704,
+            "fp32_fd_relative_l2": 0.03414052886554294,
+            "fp64_fd_relative_l2": 5.4623142123253535e-06,
+            "fp64_rounded_q_fd_relative_l2": 3.963742989953852e-05,
+            "h": 0.1,
+            "tangent_norm": 0.0011812624391033919
+          },
+          {
+            "fp32_arithmetic_vs_rounded_fp64_relative_l2": 0.11340522903725662,
+            "fp32_fd_relative_l2": 0.1134120620734612,
+            "fp64_fd_relative_l2": 4.915902574474514e-07,
+            "fp64_rounded_q_fd_relative_l2": 0.00012930210101951434,
+            "h": 0.03,
+            "tangent_norm": 0.0011812624391033919
+          },
+          {
+            "fp32_arithmetic_vs_rounded_fp64_relative_l2": 0.30564244757137,
+            "fp32_fd_relative_l2": 0.3056474147726379,
+            "fp64_fd_relative_l2": 5.4591389336494556e-08,
+            "fp64_rounded_q_fd_relative_l2": 0.0003624293186209228,
+            "h": 0.01,
+            "tangent_norm": 0.0011812624391033919
+          },
+          {
+            "fp32_arithmetic_vs_rounded_fp64_relative_l2": 0.6485479509500667,
+            "fp32_fd_relative_l2": 0.6484533477358669,
+            "fp64_fd_relative_l2": 5.258674158192135e-09,
+            "fp64_rounded_q_fd_relative_l2": 0.0012607789253362084,
+            "h": 0.003,
+            "tangent_norm": 0.0011812624391033919
+          }
+        ]
+      },
+      {
+        "checks": {
+          "torch.float32": {
+            "formula_vs_fp64_relative_l2": 5.4502812695444796e-05,
+            "jvp_projection": 0.0010406293334209499,
+            "jvp_vjp_absolute_difference": 6.868701854685633e-08,
+            "jvp_vs_formula_relative_l2": 0.00012645111536107524
+          },
+          "torch.float64": {
+            "formula_vs_fp64_relative_l2": 0.0,
+            "jvp_projection": 0.0010405599738283,
+            "jvp_vjp_absolute_difference": 1.4354836763708079e-16,
+            "jvp_vs_formula_relative_l2": 2.308797884972402e-13
+          }
+        },
+        "direction": 2,
+        "rows": [
+          {
+            "fp32_arithmetic_vs_rounded_fp64_relative_l2": 0.013320956615973878,
+            "fp32_fd_relative_l2": 0.013318798785832822,
+            "fp64_fd_relative_l2": 3.965270638053672e-05,
+            "fp64_rounded_q_fd_relative_l2": 4.265507275440895e-05,
+            "h": 0.3,
+            "tangent_norm": 0.001040559973828138
+          },
+          {
+            "fp32_arithmetic_vs_rounded_fp64_relative_l2": 0.038308374038168606,
+            "fp32_fd_relative_l2": 0.03830955653514404,
+            "fp64_fd_relative_l2": 4.4057795307911215e-06,
+            "fp64_rounded_q_fd_relative_l2": 4.479448872375367e-05,
+            "h": 0.1,
+            "tangent_norm": 0.001040559973828138
+          },
+          {
+            "fp32_arithmetic_vs_rounded_fp64_relative_l2": 0.11436667851990963,
+            "fp32_fd_relative_l2": 0.11437035261769682,
+            "fp64_fd_relative_l2": 3.9652083032200354e-07,
+            "fp64_rounded_q_fd_relative_l2": 0.0001377977150157038,
+            "h": 0.03,
+            "tangent_norm": 0.001040559973828138
+          },
+          {
+            "fp32_arithmetic_vs_rounded_fp64_relative_l2": 0.3173134456419457,
+            "fp32_fd_relative_l2": 0.3173148948170233,
+            "fp64_fd_relative_l2": 4.4050374337240915e-08,
+            "fp64_rounded_q_fd_relative_l2": 0.00041485958944935083,
+            "h": 0.01,
+            "tangent_norm": 0.001040559973828138
+          },
+          {
+            "fp32_arithmetic_vs_rounded_fp64_relative_l2": 0.7514455557590239,
+            "fp32_fd_relative_l2": 0.751505790399753,
+            "fp64_fd_relative_l2": 4.621130300681529e-09,
+            "fp64_rounded_q_fd_relative_l2": 0.0014656434546644408,
+            "h": 0.003,
+            "tangent_norm": 0.001040559973828138
+          }
+        ]
+      }
+    ],
+    "control": [
+      {
+        "checks": {
+          "torch.float32": {
+            "formula_vs_fp64_relative_l2": 5.8750540519549554e-05,
+            "jvp_projection": 0.0011004248719429335,
+            "jvp_vjp_absolute_difference": 8.478237246241013e-08,
+            "jvp_vs_formula_relative_l2": 0.00011906217403927508
+          },
+          "torch.float64": {
+            "formula_vs_fp64_relative_l2": 0.0,
+            "jvp_projection": 0.0011003495617617676,
+            "jvp_vjp_absolute_difference": 1.5243882545146192e-16,
+            "jvp_vs_formula_relative_l2": 2.41105093672307e-13
+          }
+        },
+        "direction": 0,
+        "rows": [
+          {
+            "fp32_arithmetic_vs_rounded_fp64_relative_l2": 0.01430111537786337,
+            "fp32_fd_relative_l2": 0.014298595292400167,
+            "fp64_fd_relative_l2": 2.6587770717309246e-05,
+            "fp64_rounded_q_fd_relative_l2": 3.216013354800037e-05,
+            "h": 0.3,
+            "tangent_norm": 0.0011003495617616145
+          },
+          {
+            "fp32_arithmetic_vs_rounded_fp64_relative_l2": 0.044039121511350345,
+            "fp32_fd_relative_l2": 0.04404203277080015,
+            "fp64_fd_relative_l2": 2.9541724509667075e-06,
+            "fp64_rounded_q_fd_relative_l2": 5.011373140624994e-05,
+            "h": 0.1,
+            "tangent_norm": 0.0011003495617616145
+          },
+          {
+            "fp32_arithmetic_vs_rounded_fp64_relative_l2": 0.14448800603327897,
+            "fp32_fd_relative_l2": 0.14448555070848074,
+            "fp64_fd_relative_l2": 2.6587305343388537e-07,
+            "fp64_rounded_q_fd_relative_l2": 0.00016956426406342272,
+            "h": 0.03,
+            "tangent_norm": 0.0011003495617616145
+          },
+          {
+            "fp32_arithmetic_vs_rounded_fp64_relative_l2": 0.3496717264760399,
+            "fp32_fd_relative_l2": 0.34967141719009676,
+            "fp64_fd_relative_l2": 2.9565948529411604e-08,
+            "fp64_rounded_q_fd_relative_l2": 0.0005116071260796853,
+            "h": 0.01,
+            "tangent_norm": 0.0011003495617616145
+          },
+          {
+            "fp32_arithmetic_vs_rounded_fp64_relative_l2": 0.8213993112952124,
+            "fp32_fd_relative_l2": 0.8214316701619193,
+            "fp64_fd_relative_l2": 3.8554946064738365e-09,
+            "fp64_rounded_q_fd_relative_l2": 0.0016239568282188938,
+            "h": 0.003,
+            "tangent_norm": 0.0011003495617616145
+          }
+        ]
+      },
+      {
+        "checks": {
+          "torch.float32": {
+            "formula_vs_fp64_relative_l2": 4.978148241163322e-05,
+            "jvp_projection": 0.0010485554485298756,
+            "jvp_vjp_absolute_difference": 7.373666281989405e-08,
+            "jvp_vs_formula_relative_l2": 0.00011089474829688195
+          },
+          "torch.float64": {
+            "formula_vs_fp64_relative_l2": 0.0,
+            "jvp_projection": 0.0010485001701966146,
+            "jvp_vjp_absolute_difference": 1.4137996329210978e-16,
+            "jvp_vs_formula_relative_l2": 2.1270451344164145e-13
+          }
+        },
+        "direction": 1,
+        "rows": [
+          {
+            "fp32_arithmetic_vs_rounded_fp64_relative_l2": 0.015721712303997302,
+            "fp32_fd_relative_l2": 0.015724381105611095,
+            "fp64_fd_relative_l2": 3.039395047306432e-05,
+            "fp64_rounded_q_fd_relative_l2": 3.466462988621235e-05,
+            "h": 0.3,
+            "tangent_norm": 0.0010485001701964675
+          },
+          {
+            "fp32_arithmetic_vs_rounded_fp64_relative_l2": 0.046956076913814586,
+            "fp32_fd_relative_l2": 0.046956094328120895,
+            "fp64_fd_relative_l2": 3.3770517446159116e-06,
+            "fp64_rounded_q_fd_relative_l2": 5.079069600380664e-05,
+            "h": 0.1,
+            "tangent_norm": 0.0010485001701964675
+          },
+          {
+            "fp32_arithmetic_vs_rounded_fp64_relative_l2": 0.1361880365648713,
+            "fp32_fd_relative_l2": 0.13618042343491266,
+            "fp64_fd_relative_l2": 3.039247892979385e-07,
+            "fp64_rounded_q_fd_relative_l2": 0.00017970312523848687,
+            "h": 0.03,
+            "tangent_norm": 0.0010485001701964675
+          },
+          {
+            "fp32_arithmetic_vs_rounded_fp64_relative_l2": 0.3678809959753652,
+            "fp32_fd_relative_l2": 0.3678762823416359,
+            "fp64_fd_relative_l2": 3.383476192390931e-08,
+            "fp64_rounded_q_fd_relative_l2": 0.0005269152837446242,
+            "h": 0.01,
+            "tangent_norm": 0.0010485001701964675
+          },
+          {
+            "fp32_arithmetic_vs_rounded_fp64_relative_l2": 0.8666624236080762,
+            "fp32_fd_relative_l2": 0.8666242901891689,
+            "fp64_fd_relative_l2": 4.164147598582979e-09,
+            "fp64_rounded_q_fd_relative_l2": 0.0016665685001536546,
+            "h": 0.003,
+            "tangent_norm": 0.0010485001701964675
+          }
+        ]
+      },
+      {
+        "checks": {
+          "torch.float32": {
+            "formula_vs_fp64_relative_l2": 5.5611169595697085e-05,
+            "jvp_projection": 0.0011114150443539573,
+            "jvp_vjp_absolute_difference": 8.506893893500157e-08,
+            "jvp_vs_formula_relative_l2": 0.00012641795219652267
+          },
+          "torch.float64": {
+            "formula_vs_fp64_relative_l2": 0.0,
+            "jvp_projection": 0.0011113437090793247,
+            "jvp_vjp_absolute_difference": 1.220811646218678e-16,
+            "jvp_vs_formula_relative_l2": 2.4299656311469774e-13
+          }
+        },
+        "direction": 2,
+        "rows": [
+          {
+            "fp32_arithmetic_vs_rounded_fp64_relative_l2": 0.014303261888854486,
+            "fp32_fd_relative_l2": 0.01430710450680755,
+            "fp64_fd_relative_l2": 2.5681680409689352e-05,
+            "fp64_rounded_q_fd_relative_l2": 3.0252561423644547e-05,
+            "h": 0.3,
+            "tangent_norm": 0.0011113437090791564
+          },
+          {
+            "fp32_arithmetic_vs_rounded_fp64_relative_l2": 0.04251890125937206,
+            "fp32_fd_relative_l2": 0.042517916543520766,
+            "fp64_fd_relative_l2": 2.8534963581845515e-06,
+            "fp64_rounded_q_fd_relative_l2": 4.973483370139529e-05,
+            "h": 0.1,
+            "tangent_norm": 0.0011113437090791564
+          },
+          {
+            "fp32_arithmetic_vs_rounded_fp64_relative_l2": 0.13552509553850062,
+            "fp32_fd_relative_l2": 0.1355267680058966,
+            "fp64_fd_relative_l2": 2.5680957742246254e-07,
+            "fp64_rounded_q_fd_relative_l2": 0.00016387473065837232,
+            "h": 0.03,
+            "tangent_norm": 0.0011113437090791564
+          },
+          {
+            "fp32_arithmetic_vs_rounded_fp64_relative_l2": 0.33701561203765135,
+            "fp32_fd_relative_l2": 0.33701869737679085,
+            "fp64_fd_relative_l2": 2.8554334393446264e-08,
+            "fp64_rounded_q_fd_relative_l2": 0.0004830454534890472,
+            "h": 0.01,
+            "tangent_norm": 0.0011113437090791564
+          },
+          {
+            "fp32_arithmetic_vs_rounded_fp64_relative_l2": 0.7839178953210175,
+            "fp32_fd_relative_l2": 0.7839681414804597,
+            "fp64_fd_relative_l2": 3.7099206057536546e-09,
+            "fp64_rounded_q_fd_relative_l2": 0.0015752180583809203,
+            "h": 0.003,
+            "tangent_norm": 0.0011113437090791564
+          }
+        ]
+      }
+    ]
+  },
+  "checkpoint_dtype": "torch.float16",
+  "complete": true,
+  "device": "AMD Instinct MI250X / MI250",
+  "matmul_precision": "highest",
+  "scope": "Only softmax and residue-token embedding GEMM; actual FP32 weights promoted for FP64 reference, not higher-precision pretrained weights; no Transformer",
+  "source_sha256": "c6f31cd43ca606dbce01c96b8f96ab9f99ae1d2b5ae7457f01f3311ce2d8a2ff",
+  "weights_sha256": "ac069fd60b9ef1017276d9b018db66c424ae60a60719dce1ab1b93b750462398"
+}

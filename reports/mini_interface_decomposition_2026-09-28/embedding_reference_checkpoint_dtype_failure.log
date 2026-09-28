@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "/media/PM982/onestepfold/mini_interface_decomposition_v1_20260928/code/scripts/check_embedding_numeric_reference.py", line 33, in <module>
+    fd32=((qp.softmax(-1)@w32).double()-(qm.softmax(-1)@w32).double())/(2*h)
+           ~~~~~~~~~~~~~~^~~~
+RuntimeError: expected mat1 and mat2 to have the same dtype, but got: float != c10::Half
