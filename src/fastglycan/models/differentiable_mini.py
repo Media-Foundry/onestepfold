@@ -171,9 +171,17 @@ def fixed_graph_coordinates(model, features, initial_coordinate, *, steps=1, sta
         raise ValueError("first diagnostic requires FP32")
     if any(m.training for m in model.modules()):
         raise ValueError("all modules must be in eval mode")
-    s_inputs, s, z = full_recycle_pairformer(
+    conditioning = full_recycle_pairformer(
         model, features, N_cycle=4, inplace_safe=False, chunk_size=None,
         mc_dropout=False)
+    return diffusion_from_conditioning(model, features, initial_coordinate, conditioning,
+                                       steps=steps, stable_euler=stable_euler)
+
+
+def diffusion_from_conditioning(model, features, initial_coordinate, conditioning,
+                                *, steps=1, stable_euler=True):
+    """Isolated denoising segment. Caller must recompute conditioning for q probes."""
+    s_inputs, s, z = conditioning
     module = model.diffusion_module
     pair_z = module.diffusion_conditioning.prepare_cache(features['relp'], z, False)
     names = ('ref_pos', 'ref_charge', 'ref_mask', 'ref_element',

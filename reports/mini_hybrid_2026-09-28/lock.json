@@ -1,0 +1,71 @@
+{
+  "locked": true,
+  "cases": {
+    "initial100": {
+      "group": "92902d4903984aabd2ce6e70aaf20c29c9b29052e67c7121de3d4d237e19837f",
+      "sequence": "GAMGLPEEPSSPQESTLKALSLYEAHLSSYIMYLQTFLVKTKQKVNNKNYPEFTLFDTSKLKKDQTLKSIKTNIAALKNHIDKIKPIAMQIYKKYSKNIP",
+      "panel": "development",
+      "length": 100
+    },
+    "8bzn": {
+      "group": "16e8e27f13b39561bd3c96ed6efecb57cbf1f11dcf9bc3e60f7ad0380c182e19",
+      "sequence": "TMGNSTVLSFCAFAVDAAKAYKDYLASGGQPITNCVKMLCTHTGTGQAITVTPEANMDQESFGGASCCLYCRCHIDHPNPKGFCDLKGKYVQIPTICANDPVGFTLKNTVCTVCGMWKGYGCSCD",
+      "panel": "development",
+      "length": 125
+    },
+    "control": {
+      "group": "fcd3a3ed47527946dde1b9b7da023762a4327849c634b32eec0d404cee80b1d5",
+      "sequence": "AVPSEPKTVYVICLRESGSTVYPNEVSAQMQDAANSVYAVHGLKRFVNLHFVLYTTEYSCPSGNADEGLDGFTASLKANPKAEGYDDQIYFLIRWGTWDNNILGISWLDSYNVNTASDFKASGMSTTQLMYPGVMAHELGHILGARHADDPKDLMYSKYTGYLFHLSEENMYRIAKNLGWEIADGDWSHPQFEK",
+      "panel": "development",
+      "length": 194
+    },
+    "9qr4": {
+      "group": "4c8e9b07b26a15147de5dd17b0221f92226aac88e82b8073f1616f893ac89d8d",
+      "sequence": "GPLGSETITVPTPIKQIFSDDAFAETIKDNLKKKSVTDAVTQNELNSIDQIIANNSDIKSVQGIQYLPNVTKLFLNGNKLTDIKPLANLKNLGWLFLDENKVKDLSSLKDLKKLKSLSLEHNGISDINGLVHLPQLESLYLGNNKITDITVLSRLTKLDTLSLEDNQISDIVPLAGLTKLQNLYLSKNHISDLRALAGLKNLDVLELFSQECLNKPINHQSNLVVPNTVKNTDGSLVTPEIISDDGDYEKPNVKWHLPEFTNEVSFIFYQPVTIGKAKARFHGRVTQPLKEVYTVSYDVDGTVIKYKVEAGTRITAPKPPTKQGYVFKGWYTEKNGGHEWNFNTDYMSGNDFTLYAVFKAET",
+      "panel": "development",
+      "length": 362
+    },
+    "confirmation1": {
+      "group": "f1430179649ab2120773e7aef3e7d2e42d56d4bf08fa75603c80074441eb1e59",
+      "sequence": "MAHHHHHHPLFIILFGPPGSGKGTVSHLLVKEYGFVHLSAGNLLREEVLKKSPLGRRCAEIMSEGSLIPDELVVDLVCNRLSEQAVQKHGILLDGFPRNLRQAEVLTARGFKFDMMIFLDVSPEILLDRCLSRRLDPVTGRIYNLKSDPPSPEVADRLQIRSDDTKEKHERRMQIYNSQKATLIAHYSDIIIEINADPEIKVVFKELQKKINKRLQ",
+      "panel": "new_objective_confirmation",
+      "length": 216
+    },
+    "confirmation2": {
+      "group": "c7573415d9614469cd628cd9215e3d5d53c8d1ef317559a04a806e45a14b12d2",
+      "sequence": "VCDSGNKEYMGIEVYVEATLDEPLRQTTCESEIHKYGASVSNGGLNISVDLLNCFLNFHTVGVYTNRDTVYAKFASLDPWTTEPMNSMTHDDLVKLTEECIVDIYLKCEVDKTKDFMKTNDNRLKPRDFKTVPPSNVGSMIELQSDYCVNDVTAYVKIYDECGNIKQHSIPTLRDYFTTKNGQPRKILKKKIDNC",
+      "panel": "new_objective_confirmation",
+      "length": 195
+    }
+  },
+  "geometry_rules": {
+    "bond_rmse_max": 0.25,
+    "peptide_mae_max": 0.15,
+    "chirality_fraction_min": 0.99,
+    "severe_pairs_per_atom_max": 0.02,
+    "max_penetration_max": 2.0,
+    "bond_regression_max": 0.01,
+    "peptide_regression_max": 0.01,
+    "severe_rate_regression_max": 0.002,
+    "penetration_regression_max": 0.05,
+    "chirality_regression_max": 0.0
+  },
+  "candidate_budget": 8,
+  "random_proposal_seed": 271,
+  "evaluation_seeds": [
+    211,
+    223
+  ],
+  "protocol_sha256": "c2fd1efa30c0792c847a5eda3bdf76c3cfc24c6bb50842710e5a2fc459b5feee",
+  "source_sha256": {
+    "scripts/run_mini_hybrid_pilot.py": "ba76585b1f803330ee8a50ef45686b0292635e05eee801f7d8809fc0f363c667",
+    "src/fastglycan/models/differentiable_mini.py": "d81096c18ee442a7f35b42fa0b49da05135229a3f989d93785c28e32c8479e21",
+    "src/fastglycan/models/soft_esm.py": "23a93ef86f60677875603bb52170e523dc55268de7428ea6dccdfcf68047406a",
+    "src/fastglycan/models/soft_sequence_chart.py": "38b8ce1221c517ed3eaa506f83e31e2e1580c512d5b4fe657a37bac3b5fdb668",
+    "src/fastglycan/hybrid_geometry.py": "dbac578ed4b0ac44540942fb63256e17d33db6296e35b85a9c7111f728046672",
+    "src/fastglycan/hybrid_proposals.py": "c3b020f193ed83e80289e76f1b28c09ba4969c6fd23755ea91a3b82e4b451cba",
+    "src/fastglycan/sequence_gate_metrics.py": "332020d7ef1134682979f5214ea97b79c94e812b400cef5863237af1c20f6677"
+  },
+  "reference_source": "/media/PM982/onestepfold/mini_sequence_gates_v1_20260928/code_gates_v2/src/fastglycan/models/differentiable_mini.py",
+  "reference_source_sha256": "5ee2c0f8bab3e23b5392d07eb2bbfa7534fb27d674f1b164785beecc01aa44f4"
+}
