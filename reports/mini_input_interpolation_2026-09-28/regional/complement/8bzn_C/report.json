@@ -1,0 +1,414 @@
+{
+  "baseline_cache_checks": [
+    {
+      "checked_fields": [
+        "ref_pos",
+        "ref_charge",
+        "ref_mask",
+        "ref_element",
+        "ref_atom_name_chars",
+        "d_lm",
+        "v_lm"
+      ],
+      "encoder": "input_atom_encoder"
+    },
+    {
+      "checked_fields": [
+        "ref_pos",
+        "ref_charge",
+        "ref_mask",
+        "ref_element",
+        "ref_atom_name_chars",
+        "d_lm",
+        "v_lm"
+      ],
+      "encoder": "diffusion_atom_encoder"
+    }
+  ],
+  "case": "8bzn",
+  "complete": true,
+  "cycles": 4,
+  "graph_fixed": true,
+  "lock_sha256": "afe2da4125d920866f49f0ff787712d45e2144c5dd4369c8a73b44b8f205d85e",
+  "model_precision": "fp32",
+  "noise_seed": 211,
+  "packet_sha256": "1af1670aa89f8976dcbb700e8b1c6b282cd946b921ef05ce167d86739fac93d9",
+  "region": "complement",
+  "rows": [
+    {
+      "aa_aligned_rmsd": 3.027431649998638e-15,
+      "alpha": 0.0,
+      "ca_aligned_rmsd": 7.824979078688749e-15,
+      "cache_checks": [
+        {
+          "checked_fields": [
+            "ref_pos",
+            "ref_charge",
+            "ref_mask",
+            "ref_element",
+            "ref_atom_name_chars",
+            "d_lm",
+            "v_lm"
+          ],
+          "encoder": "input_atom_encoder"
+        },
+        {
+          "checked_fields": [
+            "ref_pos",
+            "ref_charge",
+            "ref_mask",
+            "ref_element",
+            "ref_atom_name_chars",
+            "d_lm",
+            "v_lm"
+          ],
+          "encoder": "diffusion_atom_encoder"
+        }
+      ],
+      "conditioning": {
+        "s": {
+          "max_abs": 0.0,
+          "relative_rms": 0.0,
+          "rms": 0.0
+        },
+        "s_inputs": {
+          "max_abs": 0.0,
+          "relative_rms": 0.0,
+          "rms": 0.0
+        },
+        "z": {
+          "max_abs": 0.0,
+          "relative_rms": 0.0,
+          "rms": 0.0
+        }
+      },
+      "coordinate_file": "alpha_00.npz",
+      "coordinate_max_abs_from_hard": 0.0,
+      "coordinate_sha256": "e9e3637ce66b59e8cba2729d129c09ab83fbd77803e082c1a8c1d99ab9307499",
+      "fields": {
+        "d_lm": {
+          "max_abs": 0.0,
+          "relative_rms": 0.0,
+          "rms": 0.0
+        },
+        "esm_token_embedding": {
+          "max_abs": 0.0,
+          "relative_rms": 0.0,
+          "rms": 0.0
+        },
+        "profile": {
+          "max_abs": 0.0,
+          "relative_rms": 0.0,
+          "rms": 0.0
+        },
+        "ref_atom_name_chars": {
+          "max_abs": 0.0,
+          "relative_rms": 0.0,
+          "rms": 0.0
+        },
+        "ref_charge": {
+          "max_abs": 0.0,
+          "relative_rms": 0.0,
+          "rms": 0.0
+        },
+        "ref_element": {
+          "max_abs": 0.0,
+          "relative_rms": 0.0,
+          "rms": 0.0
+        },
+        "ref_mask": {
+          "max_abs": 0.0,
+          "relative_rms": 0.0,
+          "rms": 0.0
+        },
+        "ref_pos": {
+          "max_abs": 0.0,
+          "relative_rms": 0.0,
+          "rms": 0.0
+        },
+        "restype": {
+          "max_abs": 0.0,
+          "relative_rms": 0.0,
+          "rms": 0.0
+        }
+      },
+      "geometry": {
+        "atom_count": 919,
+        "bond_rmse": 0.28777065873146057,
+        "chirality_fraction": 0.9910714285714285,
+        "max_penetration": 2.8206357955932617,
+        "peptide_mae": 0.17983844876289368,
+        "severe_pairs": 8,
+        "severe_pairs_per_atom": 0.008705114254624592
+      },
+      "legacy_softmax": false,
+      "min_nonbond_distance": 0.5793642401695251,
+      "ref_intra_bond_ratio_quantiles": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "ref_mask_range": [
+        1.0,
+        1.0
+      ],
+      "tracked_distance": 6.266584873199463
+    },
+    {
+      "aa_aligned_rmsd": 0.5716852600967074,
+      "alpha": 0.2,
+      "ca_aligned_rmsd": 0.32139946418076154,
+      "cache_checks": [
+        {
+          "checked_fields": [
+            "ref_pos",
+            "ref_charge",
+            "ref_mask",
+            "ref_element",
+            "ref_atom_name_chars",
+            "d_lm",
+            "v_lm"
+          ],
+          "encoder": "input_atom_encoder"
+        },
+        {
+          "checked_fields": [
+            "ref_pos",
+            "ref_charge",
+            "ref_mask",
+            "ref_element",
+            "ref_atom_name_chars",
+            "d_lm",
+            "v_lm"
+          ],
+          "encoder": "diffusion_atom_encoder"
+        }
+      ],
+      "conditioning": {
+        "s": {
+          "max_abs": 5.8258056640625,
+          "relative_rms": 0.0018237118449209672,
+          "rms": 0.3954574008636299
+        },
+        "s_inputs": {
+          "max_abs": 0.5114209651947021,
+          "relative_rms": 0.014736554523978759,
+          "rms": 0.012339995288790172
+        },
+        "z": {
+          "max_abs": 24.482818603515625,
+          "relative_rms": 0.03366982839955848,
+          "rms": 1.0583096270857564
+        }
+      },
+      "coordinate_file": "alpha_01.npz",
+      "coordinate_max_abs_from_hard": 5.61550760269165,
+      "coordinate_sha256": "e618bc321c33c8c8cd3c2732b6cebf35e03cc42773036b82047cc6be111e8403",
+      "fields": {
+        "d_lm": {
+          "max_abs": 1.6610708236694336,
+          "relative_rms": 0.1819260125352733,
+          "rms": 0.3270939803207102
+        },
+        "esm_token_embedding": {
+          "max_abs": 0.0,
+          "relative_rms": 0.0,
+          "rms": 0.0
+        },
+        "profile": {
+          "max_abs": 0.0,
+          "relative_rms": 0.0,
+          "rms": 0.0
+        },
+        "ref_atom_name_chars": {
+          "max_abs": 0.19999998807907104,
+          "relative_rms": 0.09560339047887384,
+          "rms": 0.01195042380985923
+        },
+        "ref_charge": {
+          "max_abs": 0.19999998807907104,
+          "relative_rms": 0.19148541013784706,
+          "rms": 0.021881070059052814
+        },
+        "ref_element": {
+          "max_abs": 0.19999998807907104,
+          "relative_rms": 0.09560339047887383,
+          "rms": 0.008450225714004637
+        },
+        "ref_mask": {
+          "max_abs": 0.19999998807907104,
+          "relative_rms": 0.09560338788661875,
+          "rms": 0.09560338788661875
+        },
+        "ref_pos": {
+          "max_abs": 1.066904067993164,
+          "relative_rms": 0.1810759512018415,
+          "rms": 0.23443117154982343
+        },
+        "restype": {
+          "max_abs": 0.0,
+          "relative_rms": 0.0,
+          "rms": 0.0
+        }
+      },
+      "geometry": {
+        "atom_count": 919,
+        "bond_rmse": 0.4283091723918915,
+        "chirality_fraction": 0.9910714285714285,
+        "max_penetration": 2.925464630126953,
+        "peptide_mae": 0.18634584546089172,
+        "severe_pairs": 11,
+        "severe_pairs_per_atom": 0.011969532100108813
+      },
+      "legacy_softmax": false,
+      "min_nonbond_distance": 0.3245352506637573,
+      "ref_intra_bond_ratio_quantiles": [
+        0.660541296005249,
+        0.7484556436538696,
+        0.8080227971076965,
+        0.8871398568153381,
+        1.0
+      ],
+      "ref_mask_range": [
+        0.800000011920929,
+        1.0
+      ],
+      "tracked_distance": 6.3741254806518555
+    },
+    {
+      "aa_aligned_rmsd": 0.7421699740462356,
+      "alpha": 0.2581586628392633,
+      "ca_aligned_rmsd": 0.43671635808172254,
+      "cache_checks": [
+        {
+          "checked_fields": [
+            "ref_pos",
+            "ref_charge",
+            "ref_mask",
+            "ref_element",
+            "ref_atom_name_chars",
+            "d_lm",
+            "v_lm"
+          ],
+          "encoder": "input_atom_encoder"
+        },
+        {
+          "checked_fields": [
+            "ref_pos",
+            "ref_charge",
+            "ref_mask",
+            "ref_element",
+            "ref_atom_name_chars",
+            "d_lm",
+            "v_lm"
+          ],
+          "encoder": "diffusion_atom_encoder"
+        }
+      ],
+      "conditioning": {
+        "s": {
+          "max_abs": 7.22607421875,
+          "relative_rms": 0.002315034650707832,
+          "rms": 0.501996841457064
+        },
+        "s_inputs": {
+          "max_abs": 0.6389539241790771,
+          "relative_rms": 0.018440676784447784,
+          "rms": 0.015441727866029641
+        },
+        "z": {
+          "max_abs": 31.717254638671875,
+          "relative_rms": 0.044417454977409045,
+          "rms": 1.3961288918792516
+        }
+      },
+      "coordinate_file": "alpha_02.npz",
+      "coordinate_max_abs_from_hard": 7.026646614074707,
+      "coordinate_sha256": "6a74427e759f2fd92f9e334172668ae5238cb98e46e2cbaca11e84a81fd4a32b",
+      "fields": {
+        "d_lm": {
+          "max_abs": 2.144099235534668,
+          "relative_rms": 0.23482891332750314,
+          "rms": 0.42221078164832143
+        },
+        "esm_token_embedding": {
+          "max_abs": 0.0,
+          "relative_rms": 0.0,
+          "rms": 0.0
+        },
+        "profile": {
+          "max_abs": 0.0,
+          "relative_rms": 0.0,
+          "rms": 0.0
+        },
+        "ref_atom_name_chars": {
+          "max_abs": 0.25815868377685547,
+          "relative_rms": 0.1234042321931746,
+          "rms": 0.015425529024146825
+        },
+        "ref_charge": {
+          "max_abs": 0.25815868377685547,
+          "relative_rms": 0.24716812195065782,
+          "rms": 0.028243942913841365
+        },
+        "ref_element": {
+          "max_abs": 0.25815868377685547,
+          "relative_rms": 0.12340423219317459,
+          "rms": 0.010907496176364127
+        },
+        "ref_mask": {
+          "max_abs": 0.25815868377685547,
+          "relative_rms": 0.12340423219317355,
+          "rms": 0.12340423219317355
+        },
+        "ref_pos": {
+          "max_abs": 1.377152919769287,
+          "relative_rms": 0.2337316599757899,
+          "rms": 0.30260223134397185
+        },
+        "restype": {
+          "max_abs": 0.0,
+          "relative_rms": 0.0,
+          "rms": 0.0
+        }
+      },
+      "geometry": {
+        "atom_count": 919,
+        "bond_rmse": 0.4504756033420563,
+        "chirality_fraction": 0.9910714285714285,
+        "max_penetration": 2.7111971378326416,
+        "peptide_mae": 0.1872694492340088,
+        "severe_pairs": 11,
+        "severe_pairs_per_atom": 0.011969532100108813
+      },
+      "legacy_softmax": false,
+      "min_nonbond_distance": 0.5095667839050293,
+      "ref_intra_bond_ratio_quantiles": [
+        0.5729784369468689,
+        0.6789652109146118,
+        0.7522270679473877,
+        0.8575137853622437,
+        1.0
+      ],
+      "ref_mask_range": [
+        0.7418413162231445,
+        1.0
+      ],
+      "tracked_distance": 6.416778564453125
+    }
+  ],
+  "sources": "C",
+  "steps": 1,
+  "tracked_atoms": [
+    [
+      42,
+      "CE1"
+    ],
+    [
+      43,
+      "OG1"
+    ]
+  ]
+}

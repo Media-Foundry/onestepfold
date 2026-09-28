@@ -1,0 +1,12 @@
+{
+  "scope": "follow-up trigger only, not deployment acceptance; recorded before inspecting scan outputs",
+  "case": "8bzn",
+  "alpha": "last analytical alpha",
+  "tracked_pair": [
+    "HIS42 CE1",
+    "THR43 OG1"
+  ],
+  "pattern": "tracked distance < 0.1 Angstrom",
+  "trigger": "ERC meets pattern and none of E/R/C meets pattern at final alpha",
+  "action": "run ER/EC/RC on same grid for both existing targets; otherwise no extra combination batch"
+}

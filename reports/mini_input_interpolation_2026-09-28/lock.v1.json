@@ -1,0 +1,44 @@
+{
+  "cases": {
+    "8bzn": {
+      "group": "16e8e27f13b39561bd3c96ed6efecb57cbf1f11dcf9bc3e60f7ad0380c182e19",
+      "sequence": "TMGNSTVLSFCAFAVDAAKAYKDYLASGGQPITNCVKMLCTHTGTGQAITVTPEANMDQESFGGASCCLYCRCHIDHPNPKGFCDLKGKYVQIPTICANDPVGFTLKNTVCTVCGMWKGYGCSCD",
+      "panel": "development",
+      "length": 125
+    },
+    "control": {
+      "group": "fcd3a3ed47527946dde1b9b7da023762a4327849c634b32eec0d404cee80b1d5",
+      "sequence": "AVPSEPKTVYVICLRESGSTVYPNEVSAQMQDAANSVYAVHGLKRFVNLHFVLYTTEYSCPSGNADEGLDGFTASLKANPKAEGYDDQIYFLIRWGTWDNNILGISWLDSYNVNTASDFKASGMSTTQLMYPGVMAHELGHILGARHADDPKDLMYSKYTGYLFHLSEENMYRIAKNLGWEIADGDWSHPQFEK",
+      "panel": "development",
+      "length": 194
+    }
+  },
+  "alphas": [
+    0.0,
+    0.0001,
+    0.001,
+    0.01,
+    0.05,
+    0.1,
+    0.2,
+    0.2581586628392633
+  ],
+  "sources": [
+    "E",
+    "R",
+    "C",
+    "ERC"
+  ],
+  "noise_seed": 211,
+  "protocol_sha256": "bec6b7a3b91fa39c02694a31e86c53aa43f0957d56adf06ab5c5082bc6eff9af",
+  "source_sha256": {
+    "scripts/prepare_input_interpolation.py": "e005f35164322f40517b54a1605a7bcc2f3a46f9daffe21155211e772684de9b",
+    "scripts/run_input_interpolation.py": "061b9f35fac168155fc4ce2a15cc822ac51b94f5ac698bf9ac30b0c48e0a1ec8",
+    "src/fastglycan/input_interpolation.py": "00a70b08f17e5d91ebd180554942d6c7753bff0e3abb2b3ec3e59b225851781c",
+    "src/fastglycan/models/soft_sequence_chart.py": "919480f82e7453aec25f79e3a30db920d4fec1f7bf6b2972b3ab1d615246df0b",
+    "src/fastglycan/models/soft_esm.py": "23a93ef86f60677875603bb52170e523dc55268de7428ea6dccdfcf68047406a",
+    "src/fastglycan/models/differentiable_mini.py": "d81096c18ee442a7f35b42fa0b49da05135229a3f989d93785c28e32c8479e21",
+    "src/fastglycan/hybrid_geometry.py": "dbac578ed4b0ac44540942fb63256e17d33db6296e35b85a9c7111f728046672",
+    "src/fastglycan/hybrid_proposals.py": "c3b020f193ed83e80289e76f1b28c09ba4969c6fd23755ea91a3b82e4b451cba"
+  }
+}
