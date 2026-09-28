@@ -1,3 +1,20 @@
+## 2026-09-28 — Hard mutation utility batch SUBMITTED, outcomes pending
+
+One control alpha.001/C4S1,16gradient+16random(RNG6271), zero overlap,
+33native sequences × noises211/200003/200009 =99 hard forwards. Candidate
+manifest hash b08f6bb6eaf3fc62d43b757853ac4f352f9ae077f3c718541dce155f4e1fcdfb.
+15gradient candidates concentrate onY38; oneR45P. Do not diversify/rerank.
+Preproposal hand-FP32 softmax chain check failed; independent nativepullback
+exact and FP64formula within conservative FP32roundoffbound. Preservefailure;
+actualgp used directly, nearhardcoordinates archiveexact. InterveningROCm
+launchfailure archived. Frozenmanifest submitted to4GCD(2–5),PIDs1855646–9.
+Latestretrievedstatus loading; subsequentSSHstalled. Do NOT resubmit unknownjobs.
+RootDiamondHill:/media/PM982/onestepfold/mini_hard_mutation_utility_v1_20260928.
+Next collectexit/workerreports, runscore_hard_mutation_utility.py CPUaudit,
+reportseparate task+nonregression vsfullaccept onBOTHconfirmationnoises.
+Stopafterbatch, no extra seeds/candidates/training/thresholdchanges.
+Docs:docs/mini_hard_mutation_utility_status_2026-09-28.md.
+
 ## 2026-09-28 — Recycle1 and original-q composition COMPLETE
 
 User-approved bounded follow-up reused archived endpoints (no reselection).

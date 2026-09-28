@@ -1,0 +1,44 @@
+{
+  "sequence": "AVPSEPKTVYVICLRESGSTVYPNEVSAQMQDAANSVYAVHGLKRFVNLHFVLYTTEYSCPSGNADEGLDGFTASLKANPKAEGYDDQIYFLIRWGTWDNNILGISWLDSYNVNTASDFKASGMSTTQLMYPGVMAHELGHILGARHADDPKDLMYSKYTGYLFHLSEENMYRIAKNLGWEIADGDWSHPQFEK",
+  "alpha": 0.001,
+  "logits_source": "/media/PM982/onestepfold/mini_esm_interface_v1_20260928/control/baseline.pt",
+  "logits_source_sha256": "39b7e9842ac312921a9ded73195ac33a3fc52d6fd02180770d220e7372d57ff2",
+  "coordinate_source": "/media/PM982/onestepfold/mini_near_hard_gradient_v1_20260928/control_a1_s1/baseline.npz",
+  "coordinate_source_sha256": "e5a2a86f347e6922bdf1151654b03af53b7b4c02c7dfed050460d08191a49a18",
+  "candidate_budget": 16,
+  "random_proposal_seed": 6271,
+  "evaluation_seeds": [
+    211,
+    200003,
+    200009
+  ],
+  "confirmation_seeds": [
+    200003,
+    200009
+  ],
+  "workers": 4,
+  "geometry_rules": {
+    "bond_rmse_max": 0.25,
+    "peptide_mae_max": 0.15,
+    "chirality_fraction_min": 0.99,
+    "severe_pairs_per_atom_max": 0.02,
+    "max_penetration_max": 2.0,
+    "bond_regression_max": 0.01,
+    "peptide_regression_max": 0.01,
+    "severe_rate_regression_max": 0.002,
+    "penetration_regression_max": 0.05,
+    "chirality_regression_max": 0.0
+  },
+  "source_sha256": {
+    "scripts/run_hard_mutation_utility.py": "be06f99c5ddc2c9d19a161464575051df2bc59f2059873c7c589558d1d94ba03",
+    "scripts/launch_hard_mutation_utility.py": "f9387edfd9c20ab445d7cbd07df6a7d771c4bc47c7f19c30ffaf03298e13c688",
+    "src/fastglycan/mutation_utility.py": "684b20dc58b4707b159d6d9d65312779573a3c2f4c349d0362143124b73a7c08",
+    "src/fastglycan/hybrid_proposals.py": "c3b020f193ed83e80289e76f1b28c09ba4969c6fd23755ea91a3b82e4b451cba",
+    "src/fastglycan/hybrid_geometry.py": "dbac578ed4b0ac44540942fb63256e17d33db6296e35b85a9c7111f728046672",
+    "src/fastglycan/models/soft_esm.py": "23a93ef86f60677875603bb52170e523dc55268de7428ea6dccdfcf68047406a",
+    "src/fastglycan/models/soft_sequence_chart.py": "919480f82e7453aec25f79e3a30db920d4fec1f7bf6b2972b3ab1d615246df0b",
+    "src/fastglycan/models/differentiable_mini.py": "d81096c18ee442a7f35b42fa0b49da05135229a3f989d93785c28e32c8479e21",
+    "src/fastglycan/sequence_gate_metrics.py": "a831c7e46a774a03b48563afd6f3a15cd3cf02e1edb5c935e4e49e6f76227129"
+  },
+  "protocol_sha256": "82b6d36cc2abe2d34a5ba3cc4b3816b7444cbbc7fc4d3feef0b3b135f0fab52d"
+}
