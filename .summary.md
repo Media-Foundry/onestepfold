@@ -1,3 +1,20 @@
+## 2026-09-28 — Existing hard-batch reanalysis COMPLETE (CPU only)
+
+No new predictions/candidates/training/gate changes. All33 native CCD topology
+rebuilds exact; atom mapping/radii/193peptide bonds verified; independent<=3bond
+exclusion sets match. All99 maximum/severe collision metrics reproduced.
+Parent/Y38T maxpairs DIFFER for all3noises; sharedsevere pairs1/1/0. Y38T
+confirmmaxpairsM171:CE-Q191:N(.335A),V21:C-Y22:CG(.419A),graphdist63/4.
+Y38T seriouscount10→13 under200009 stillwithinpresetnonregressiontolerance.
+No evidence found for checked scoring/topology mapping error; coordinates overlap.
+Selected15Y38 scoring vs hardtotal Spearman:-.568dev,-.600/-.496confirm,
+-.657confirmationmean (task-.711). Lower/lower shouldpositive: selected-range
+hardranking mismatch, not backward defect or fullspace inference. KeepY38Tweak
+localutility, no generaladvantage/accepteddesign. Stopbatch unchanged.
+Report:docs/mini_hard_mutation_reanalysis_2026-09-28.md; namedpair/rankingTSVs
+andhashedJSON inreports/mini_hard_mutation_utility_2026-09-28/reanalysis/.
+6focusedtests passed. No ESM/PF/diffusion runs in reanalysis.
+
 ## 2026-09-28 — Hard mutation utility COMPLETE, stop batch
 
 Recovered afterhostreboot; all4workers exit0,99hardpredictions andCPUauditdone.
