@@ -1,3 +1,18 @@
+## 2026-09-29 — Restrained geometry repair v1 authorized and locked
+
+User approved advancing beyond the closed mutation batch. New development-only
+intervention uniformly repairs all99 archived hard structures (33 sequences/3noises),
+no new predictions/substitutions/training. Independent Amber ff14SB+GBn2 OpenMM
+CPU minimization, original-heavy harmonic k1000kJ/mol/nm2,2000 iterations,tol10;
+no task loss in repair. Original topology/identity preserved; OXT/H auxiliary only.
+Old geometry/utility gates unchanged; new raw-frame CA<=1A/heavy<=2A preservation
+limits locked before outcomes. Compare repaired candidate against repaired parent,
+both confirmation noises; failures retained, no tuning/reranking. Full batch CPU4
+workers/2threads, isolated OpenMM8.6.1/PDBFixer1.12.0 dependencies.8tests pass.
+Protocol:docs/mini_geometry_repair_v1.md. DiamondHill root:
+/media/PM982/onestepfold/geometry_repair_v1_20260929. Initial case executing;
+scientific outcomes pending. This is not a differentiable one-step deployment.
+
 ## 2026-09-28 — Existing hard-batch reanalysis COMPLETE (CPU only)
 
 No new predictions/candidates/training/gate changes. All33 native CCD topology
