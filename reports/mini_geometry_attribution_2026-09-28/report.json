@@ -1,0 +1,5324 @@
+{
+  "cases": [
+    {
+      "atom_count": 805,
+      "baselines": {
+        "211": {
+          "all_atoms": {
+            "max_penetration": 3.1019870161122007,
+            "pair_count": 320434,
+            "severe_pairs": 11
+          },
+          "coordinate_sha256": "18a06d7cdbd658529fb07a0858e743a592370156e52d698ff47d21704b42cdfe",
+          "excluding_terminal10": {
+            "max_penetration": 0.6395744099030019,
+            "pair_count": 207726,
+            "severe_pairs": 0
+          },
+          "observed_atoms": {
+            "max_penetration": 3.0704580096470315,
+            "pair_count": 296102,
+            "severe_pairs": 7
+          },
+          "observed_bond_geometry": {
+            "bond_rmse": 0.2332282238638746,
+            "chirality_fraction": 0.9894736842105263,
+            "observed_bonds": 789,
+            "observed_chiral_centres": 95,
+            "observed_peptides": 95,
+            "peptide_mae": 0.10692275320345682
+          },
+          "severe_touching_terminal10": 11,
+          "severe_touching_unobserved": 4,
+          "top_pairs": [
+            {
+              "both_observed": false,
+              "distance": 0.29801298388779923,
+              "first": {
+                "atom": "CA",
+                "chain": "A",
+                "experimentally_observed": false,
+                "index": 1,
+                "residue": 1,
+                "residue_name": "GLY"
+              },
+              "penetration": 3.1019870161122007,
+              "second": {
+                "atom": "CD2",
+                "chain": "A",
+                "experimentally_observed": true,
+                "index": 28,
+                "residue": 5,
+                "residue_name": "LEU"
+              }
+            },
+            {
+              "both_observed": true,
+              "distance": 0.32954199035296833,
+              "experimental_distance": 5.7092840043131226,
+              "first": {
+                "atom": "C",
+                "chain": "A",
+                "experimentally_observed": true,
+                "index": 6,
+                "residue": 2,
+                "residue_name": "ALA"
+              },
+              "penetration": 3.0704580096470315,
+              "second": {
+                "atom": "C",
+                "chain": "A",
+                "experimentally_observed": true,
+                "index": 19,
+                "residue": 4,
+                "residue_name": "GLY"
+              }
+            },
+            {
+              "both_observed": true,
+              "distance": 0.48644789419383777,
+              "experimental_distance": 5.9037632287002015,
+              "first": {
+                "atom": "O",
+                "chain": "A",
+                "experimentally_observed": true,
+                "index": 7,
+                "residue": 2,
+                "residue_name": "ALA"
+              },
+              "penetration": 2.733552105806162,
+              "second": {
+                "atom": "C",
+                "chain": "A",
+                "experimentally_observed": true,
+                "index": 19,
+                "residue": 4,
+                "residue_name": "GLY"
+              }
+            },
+            {
+              "both_observed": false,
+              "distance": 0.8321494099234108,
+              "first": {
+                "atom": "CA",
+                "chain": "A",
+                "experimentally_observed": false,
+                "index": 1,
+                "residue": 1,
+                "residue_name": "GLY"
+              },
+              "penetration": 2.5678505900765893,
+              "second": {
+                "atom": "CD1",
+                "chain": "A",
+                "experimentally_observed": true,
+                "index": 27,
+                "residue": 5,
+                "residue_name": "LEU"
+              }
+            },
+            {
+              "both_observed": true,
+              "distance": 0.6994156166825198,
+              "experimental_distance": 11.75902631194552,
+              "first": {
+                "atom": "N",
+                "chain": "A",
+                "experimentally_observed": true,
+                "index": 4,
+                "residue": 2,
+                "residue_name": "ALA"
+              },
+              "penetration": 2.55058438331748,
+              "second": {
+                "atom": "CD2",
+                "chain": "A",
+                "experimentally_observed": true,
+                "index": 28,
+                "residue": 5,
+                "residue_name": "LEU"
+              }
+            },
+            {
+              "both_observed": true,
+              "distance": 0.7170605649209519,
+              "experimental_distance": 5.719015496033757,
+              "first": {
+                "atom": "O",
+                "chain": "A",
+                "experimentally_observed": true,
+                "index": 7,
+                "residue": 2,
+                "residue_name": "ALA"
+              },
+              "penetration": 2.502939435079048,
+              "second": {
+                "atom": "CA",
+                "chain": "A",
+                "experimentally_observed": true,
+                "index": 18,
+                "residue": 4,
+                "residue_name": "GLY"
+              }
+            },
+            {
+              "both_observed": false,
+              "distance": 0.9921387272589492,
+              "first": {
+                "atom": "CA",
+                "chain": "A",
+                "experimentally_observed": false,
+                "index": 1,
+                "residue": 1,
+                "residue_name": "GLY"
+              },
+              "penetration": 2.4078612727410507,
+              "second": {
+                "atom": "CG",
+                "chain": "A",
+                "experimentally_observed": true,
+                "index": 26,
+                "residue": 5,
+                "residue_name": "LEU"
+              }
+            },
+            {
+              "both_observed": true,
+              "distance": 0.885962286644032,
+              "experimental_distance": 11.837456007063428,
+              "first": {
+                "atom": "N",
+                "chain": "A",
+                "experimentally_observed": true,
+                "index": 4,
+                "residue": 2,
+                "residue_name": "ALA"
+              },
+              "penetration": 2.364037713355968,
+              "second": {
+                "atom": "CG",
+                "chain": "A",
+                "experimentally_observed": true,
+                "index": 26,
+                "residue": 5,
+                "residue_name": "LEU"
+              }
+            },
+            {
+              "both_observed": false,
+              "distance": 0.8986506263027374,
+              "first": {
+                "atom": "N",
+                "chain": "A",
+                "experimentally_observed": false,
+                "index": 0,
+                "residue": 1,
+                "residue_name": "GLY"
+              },
+              "penetration": 2.3513493736972624,
+              "second": {
+                "atom": "CD2",
+                "chain": "A",
+                "experimentally_observed": true,
+                "index": 28,
+                "residue": 5,
+                "residue_name": "LEU"
+              }
+            },
+            {
+              "both_observed": true,
+              "distance": 0.8995655971877442,
+              "experimental_distance": 5.15842192184861,
+              "first": {
+                "atom": "N",
+                "chain": "A",
+                "experimentally_observed": true,
+                "index": 9,
+                "residue": 3,
+                "residue_name": "MET"
+              },
+              "penetration": 2.350434402812256,
+              "second": {
+                "atom": "C",
+                "chain": "A",
+                "experimentally_observed": true,
+                "index": 19,
+                "residue": 4,
+                "residue_name": "GLY"
+              }
+            },
+            {
+              "both_observed": true,
+              "distance": 1.076278121444469,
+              "experimental_distance": 5.571436752456089,
+              "first": {
+                "atom": "C",
+                "chain": "A",
+                "experimentally_observed": true,
+                "index": 6,
+                "residue": 2,
+                "residue_name": "ALA"
+              },
+              "penetration": 2.323721878555531,
+              "second": {
+                "atom": "CA",
+                "chain": "A",
+                "experimentally_observed": true,
+                "index": 18,
+                "residue": 4,
+                "residue_name": "GLY"
+              }
+            },
+            {
+              "both_observed": true,
+              "distance": 1.002918302237264,
+              "experimental_distance": 13.308152691137733,
+              "first": {
+                "atom": "N",
+                "chain": "A",
+                "experimentally_observed": true,
+                "index": 4,
+                "residue": 2,
+                "residue_name": "ALA"
+              },
+              "penetration": 2.247081697762736,
+              "second": {
+                "atom": "CD1",
+                "chain": "A",
+                "experimentally_observed": true,
+                "index": 27,
+                "residue": 5,
+                "residue_name": "LEU"
+              }
+            }
+          ]
+        },
+        "223": {
+          "all_atoms": {
+            "max_penetration": 2.7593005956766548,
+            "pair_count": 320434,
+            "severe_pairs": 4
+          },
+          "coordinate_sha256": "d8ba7bcaa7c4aae8f16f5d3d937ea4ab7468fef1522751eb9ca5ecfa8b603b5f",
+          "excluding_terminal10": {
+            "max_penetration": 0.9026456385186146,
+            "pair_count": 207726,
+            "severe_pairs": 0
+          },
+          "observed_atoms": {
+            "max_penetration": 2.6420518081239597,
+            "pair_count": 296102,
+            "severe_pairs": 1
+          },
+          "observed_bond_geometry": {
+            "bond_rmse": 0.23322608686278726,
+            "chirality_fraction": 1.0,
+            "observed_bonds": 789,
+            "observed_chiral_centres": 95,
+            "observed_peptides": 95,
+            "peptide_mae": 0.0947503020087412
+          },
+          "severe_touching_terminal10": 4,
+          "severe_touching_unobserved": 3,
+          "top_pairs": [
+            {
+              "both_observed": false,
+              "distance": 0.3406994043233455,
+              "first": {
+                "atom": "N",
+                "chain": "A",
+                "experimentally_observed": false,
+                "index": 0,
+                "residue": 1,
+                "residue_name": "GLY"
+              },
+              "penetration": 2.7593005956766548,
+              "second": {
+                "atom": "N",
+                "chain": "A",
+                "experimentally_observed": true,
+                "index": 45,
+                "residue": 8,
+                "residue_name": "GLU"
+              }
+            },
+            {
+              "both_observed": true,
+              "distance": 0.6079481918760402,
+              "experimental_distance": 5.15842192184861,
+              "first": {
+                "atom": "N",
+                "chain": "A",
+                "experimentally_observed": true,
+                "index": 9,
+                "residue": 3,
+                "residue_name": "MET"
+              },
+              "penetration": 2.6420518081239597,
+              "second": {
+                "atom": "C",
+                "chain": "A",
+                "experimentally_observed": true,
+                "index": 19,
+                "residue": 4,
+                "residue_name": "GLY"
+              }
+            },
+            {
+              "both_observed": false,
+              "distance": 0.6772544892174884,
+              "first": {
+                "atom": "CA",
+                "chain": "A",
+                "experimentally_observed": false,
+                "index": 1,
+                "residue": 1,
+                "residue_name": "GLY"
+              },
+              "penetration": 2.5727455107825117,
+              "second": {
+                "atom": "N",
+                "chain": "A",
+                "experimentally_observed": true,
+                "index": 45,
+                "residue": 8,
+                "residue_name": "GLU"
+              }
+            },
+            {
+              "both_observed": true,
+              "distance": 1.0059611430449988,
+              "experimental_distance": 5.571436752456089,
+              "first": {
+                "atom": "C",
+                "chain": "A",
+                "experimentally_observed": true,
+                "index": 6,
+                "residue": 2,
+                "residue_name": "ALA"
+              },
+              "penetration": 2.3940388569550013,
+              "second": {
+                "atom": "CA",
+                "chain": "A",
+                "experimentally_observed": true,
+                "index": 18,
+                "residue": 4,
+                "residue_name": "GLY"
+              }
+            },
+            {
+              "both_observed": true,
+              "distance": 1.0438533556541854,
+              "experimental_distance": 5.7092840043131226,
+              "first": {
+                "atom": "C",
+                "chain": "A",
+                "experimentally_observed": true,
+                "index": 6,
+                "residue": 2,
+                "residue_name": "ALA"
+              },
+              "penetration": 2.3561466443458148,
+              "second": {
+                "atom": "C",
+                "chain": "A",
+                "experimentally_observed": true,
+                "index": 19,
+                "residue": 4,
+                "residue_name": "GLY"
+              }
+            },
+            {
+              "both_observed": false,
+              "distance": 0.9943167326631774,
+              "first": {
+                "atom": "C",
+                "chain": "A",
+                "experimentally_observed": false,
+                "index": 2,
+                "residue": 1,
+                "residue_name": "GLY"
+              },
+              "penetration": 2.225683267336822,
+              "second": {
+                "atom": "O",
+                "chain": "A",
+                "experimentally_observed": true,
+                "index": 24,
+                "residue": 5,
+                "residue_name": "LEU"
+              }
+            },
+            {
+              "both_observed": true,
+              "distance": 1.1011105487758277,
+              "experimental_distance": 4.817874917752669,
+              "first": {
+                "atom": "N",
+                "chain": "A",
+                "experimentally_observed": true,
+                "index": 9,
+                "residue": 3,
+                "residue_name": "MET"
+              },
+              "penetration": 2.1488894512241723,
+              "second": {
+                "atom": "CA",
+                "chain": "A",
+                "experimentally_observed": true,
+                "index": 18,
+                "residue": 4,
+                "residue_name": "GLY"
+              }
+            },
+            {
+              "both_observed": true,
+              "distance": 1.1267034144014454,
+              "experimental_distance": 4.351151837717714,
+              "first": {
+                "atom": "CA",
+                "chain": "A",
+                "experimentally_observed": true,
+                "index": 10,
+                "residue": 3,
+                "residue_name": "MET"
+              },
+              "penetration": 2.093296585598554,
+              "second": {
+                "atom": "O",
+                "chain": "A",
+                "experimentally_observed": true,
+                "index": 20,
+                "residue": 4,
+                "residue_name": "GLY"
+              }
+            },
+            {
+              "both_observed": true,
+              "distance": 1.2029932592161436,
+              "experimental_distance": 4.644033825711713,
+              "first": {
+                "atom": "O",
+                "chain": "A",
+                "experimentally_observed": true,
+                "index": 24,
+                "residue": 5,
+                "residue_name": "LEU"
+              },
+              "penetration": 2.017006740783856,
+              "second": {
+                "atom": "CA",
+                "chain": "A",
+                "experimentally_observed": true,
+                "index": 37,
+                "residue": 7,
+                "residue_name": "GLU"
+              }
+            },
+            {
+              "both_observed": true,
+              "distance": 1.2498775725195568,
+              "experimental_distance": 7.216182999099226,
+              "first": {
+                "atom": "CB",
+                "chain": "A",
+                "experimentally_observed": true,
+                "index": 8,
+                "residue": 2,
+                "residue_name": "ALA"
+              },
+              "penetration": 2.000122427480443,
+              "second": {
+                "atom": "N",
+                "chain": "A",
+                "experimentally_observed": true,
+                "index": 21,
+                "residue": 5,
+                "residue_name": "LEU"
+              }
+            },
+            {
+              "both_observed": false,
+              "distance": 1.2710084516505151,
+              "first": {
+                "atom": "N",
+                "chain": "A",
+                "experimentally_observed": false,
+                "index": 0,
+                "residue": 1,
+                "residue_name": "GLY"
+              },
+              "penetration": 1.9789915483494849,
+              "second": {
+                "atom": "CA",
+                "chain": "A",
+                "experimentally_observed": true,
+                "index": 46,
+                "residue": 8,
+                "residue_name": "GLU"
+              }
+            },
+            {
+              "both_observed": true,
+              "distance": 1.277853809199851,
+              "experimental_distance": 7.707568287665261,
+              "first": {
+                "atom": "CA",
+                "chain": "A",
+                "experimentally_observed": true,
+                "index": 5,
+                "residue": 2,
+                "residue_name": "ALA"
+              },
+              "penetration": 1.972146190800149,
+              "second": {
+                "atom": "N",
+                "chain": "A",
+                "experimentally_observed": true,
+                "index": 21,
+                "residue": 5,
+                "residue_name": "LEU"
+              }
+            }
+          ]
+        }
+      },
+      "case": "initial100",
+      "exclusions_exact": true,
+      "expected_peptide_bonds": 99,
+      "experimental": {
+        "all_atoms": {
+          "max_penetration": 0.5558725807069953,
+          "pair_count": 296102,
+          "severe_pairs": 0
+        },
+        "excluding_terminal10": {
+          "max_penetration": 0.5558725807069953,
+          "pair_count": 207726,
+          "severe_pairs": 0
+        },
+        "observed_atoms": {
+          "max_penetration": 0.5558725807069953,
+          "pair_count": 296102,
+          "severe_pairs": 0
+        },
+        "severe_touching_terminal10": 0,
+        "severe_touching_unobserved": 0,
+        "top_pairs": [
+          {
+            "both_observed": true,
+            "distance": 2.4841274192930047,
+            "experimental_distance": 2.4841274192930047,
+            "first": {
+              "atom": "OD2",
+              "chain": "A",
+              "experimentally_observed": true,
+              "index": 512,
+              "residue": 64,
+              "residue_name": "ASP"
+            },
+            "penetration": 0.5558725807069953,
+            "second": {
+              "atom": "OG1",
+              "chain": "A",
+              "experimentally_observed": true,
+              "index": 527,
+              "residue": 66,
+              "residue_name": "THR"
+            }
+          },
+          {
+            "both_observed": true,
+            "distance": 2.6741884217638896,
+            "experimental_distance": 2.6741884217638896,
+            "first": {
+              "atom": "O",
+              "chain": "A",
+              "experimentally_observed": true,
+              "index": 379,
+              "residue": 49,
+              "residue_name": "ASN"
+            },
+            "penetration": 0.5458115782361102,
+            "second": {
+              "atom": "C",
+              "chain": "A",
+              "experimentally_observed": true,
+              "index": 386,
+              "residue": 50,
+              "residue_name": "TYR"
+            }
+          },
+          {
+            "both_observed": true,
+            "distance": 2.7506699251416675,
+            "experimental_distance": 2.7506699251416675,
+            "first": {
+              "atom": "N",
+              "chain": "A",
+              "experimentally_observed": true,
+              "index": 670,
+              "residue": 85,
+              "residue_name": "LYS"
+            },
+            "penetration": 0.4993300748583325,
+            "second": {
+              "atom": "CD",
+              "chain": "A",
+              "experimentally_observed": true,
+              "index": 685,
+              "residue": 86,
+              "residue_name": "PRO"
+            }
+          },
+          {
+            "both_observed": true,
+            "distance": 2.8151569561228746,
+            "experimental_distance": 2.8151569561228746,
+            "first": {
+              "atom": "O",
+              "chain": "A",
+              "experimentally_observed": true,
+              "index": 525,
+              "residue": 66,
+              "residue_name": "THR"
+            },
+            "penetration": 0.4048430438771251,
+            "second": {
+              "atom": "C",
+              "chain": "A",
+              "experimentally_observed": true,
+              "index": 531,
+              "residue": 67,
+              "residue_name": "LEU"
+            }
+          },
+          {
+            "both_observed": true,
+            "distance": 2.8308882865202913,
+            "experimental_distance": 2.8308882865202913,
+            "first": {
+              "atom": "O",
+              "chain": "A",
+              "experimentally_observed": true,
+              "index": 362,
+              "residue": 47,
+              "residue_name": "ASN"
+            },
+            "penetration": 0.3891117134797084,
+            "second": {
+              "atom": "C",
+              "chain": "A",
+              "experimentally_observed": true,
+              "index": 369,
+              "residue": 48,
+              "residue_name": "LYS"
+            }
+          },
+          {
+            "both_observed": true,
+            "distance": 2.659959925678312,
+            "experimental_distance": 2.659959925678312,
+            "first": {
+              "atom": "O",
+              "chain": "A",
+              "experimentally_observed": true,
+              "index": 540,
+              "residue": 68,
+              "residue_name": "LYS"
+            },
+            "penetration": 0.38004007432168807,
+            "second": {
+              "atom": "OG1",
+              "chain": "A",
+              "experimentally_observed": true,
+              "index": 574,
+              "residue": 72,
+              "residue_name": "THR"
+            }
+          },
+          {
+            "both_observed": true,
+            "distance": 2.6749916556655986,
+            "experimental_distance": 2.6749916556655986,
+            "first": {
+              "atom": "O",
+              "chain": "A",
+              "experimentally_observed": true,
+              "index": 289,
+              "residue": 38,
+              "residue_name": "LEU"
+            },
+            "penetration": 0.36500834433440144,
+            "second": {
+              "atom": "OH",
+              "chain": "A",
+              "experimentally_observed": true,
+              "index": 395,
+              "residue": 50,
+              "residue_name": "TYR"
+            }
+          },
+          {
+            "both_observed": true,
+            "distance": 2.6814844141076812,
+            "experimental_distance": 2.6814844141076812,
+            "first": {
+              "atom": "OD1",
+              "chain": "A",
+              "experimentally_observed": true,
+              "index": 455,
+              "residue": 57,
+              "residue_name": "ASP"
+            },
+            "penetration": 0.3585155858923188,
+            "second": {
+              "atom": "OG",
+              "chain": "A",
+              "experimentally_observed": true,
+              "index": 469,
+              "residue": 59,
+              "residue_name": "SER"
+            }
+          },
+          {
+            "both_observed": true,
+            "distance": 2.8723969129054283,
+            "experimental_distance": 2.8723969129054283,
+            "first": {
+              "atom": "O",
+              "chain": "A",
+              "experimentally_observed": true,
+              "index": 630,
+              "residue": 80,
+              "residue_name": "HIS"
+            },
+            "penetration": 0.34760308709457144,
+            "second": {
+              "atom": "C",
+              "chain": "A",
+              "experimentally_observed": true,
+              "index": 639,
+              "residue": 81,
+              "residue_name": "ILE"
+            }
+          },
+          {
+            "both_observed": true,
+            "distance": 2.8734909672699303,
+            "experimental_distance": 2.8734909672699303,
+            "first": {
+              "atom": "O",
+              "chain": "A",
+              "experimentally_observed": true,
+              "index": 739,
+              "residue": 93,
+              "residue_name": "LYS"
+            },
+            "penetration": 0.3465090327300695,
+            "second": {
+              "atom": "C",
+              "chain": "A",
+              "experimentally_observed": true,
+              "index": 747,
+              "residue": 94,
+              "residue_name": "LYS"
+            }
+          },
+          {
+            "both_observed": true,
+            "distance": 3.055577375415192,
+            "experimental_distance": 3.055577375415192,
+            "first": {
+              "atom": "C",
+              "chain": "A",
+              "experimentally_observed": true,
+              "index": 241,
+              "residue": 33,
+              "residue_name": "TYR"
+            },
+            "penetration": 0.3444226245848081,
+            "second": {
+              "atom": "CD1",
+              "chain": "A",
+              "experimentally_observed": true,
+              "index": 245,
+              "residue": 33,
+              "residue_name": "TYR"
+            }
+          },
+          {
+            "both_observed": true,
+            "distance": 3.065312282343027,
+            "experimental_distance": 3.065312282343027,
+            "first": {
+              "atom": "CD2",
+              "chain": "A",
+              "experimentally_observed": true,
+              "index": 293,
+              "residue": 38,
+              "residue_name": "LEU"
+            },
+            "penetration": 0.3346877176569727,
+            "second": {
+              "atom": "CD1",
+              "chain": "A",
+              "experimentally_observed": true,
+              "index": 723,
+              "residue": 91,
+              "residue_name": "ILE"
+            }
+          }
+        ]
+      },
+      "experimental_geometry": {
+        "bond_rmse": 0.037184350485547045,
+        "chirality_fraction": 1.0,
+        "observed_bonds": 789,
+        "observed_chiral_centres": 95,
+        "observed_peptides": 95,
+        "peptide_mae": 0.0061394802328570966
+      },
+      "group": "92902d4903984aabd2ce6e70aaf20c29c9b29052e67c7121de3d4d237e19837f",
+      "gt_npz": "7qdv.assembly-1.model-1.npz",
+      "gt_payload_sha256": "e5d05b4458af76bfc93b6139473894b2d465cfbdfef125a599b2b4912ce5d6f4",
+      "observed_atom_count": 774,
+      "pdb": "7qdv",
+      "peptide_bonds": 99
+    },
+    {
+      "atom_count": 919,
+      "baselines": {
+        "211": {
+          "all_atoms": {
+            "max_penetration": 2.8206352790983664,
+            "pair_count": 418170,
+            "severe_pairs": 8
+          },
+          "coordinate_sha256": "2602aef0894d04c189bf2ec4243462b4bd0b108bee4ffb634a86190491050236",
+          "excluding_terminal10": {
+            "max_penetration": 2.6353072149329924,
+            "pair_count": 292242,
+            "severe_pairs": 5
+          },
+          "observed_atoms": {
+            "max_penetration": 2.8206352790983664,
+            "pair_count": 402761,
+            "severe_pairs": 8
+          },
+          "observed_bond_geometry": {
+            "bond_rmse": 0.2808569352402236,
+            "chirality_fraction": 0.990990990990991,
+            "observed_bonds": 922,
+            "observed_chiral_centres": 111,
+            "observed_peptides": 123,
+            "peptide_mae": 0.17808313606902693
+          },
+          "severe_touching_terminal10": 3,
+          "severe_touching_unobserved": 0,
+          "top_pairs": [
+            {
+              "both_observed": true,
+              "distance": 0.5793647209016335,
+              "experimental_distance": 9.043685538970898,
+              "first": {
+                "atom": "CE",
+                "chain": "A",
+                "experimentally_observed": true,
+                "index": 14,
+                "residue": 2,
+                "residue_name": "MET"
+              },
+              "penetration": 2.8206352790983664,
+              "second": {
+                "atom": "CE2",
+                "chain": "A",
+                "experimentally_observed": true,
+                "index": 70,
+                "residue": 10,
+                "residue_name": "PHE"
+              }
+            },
+            {
+              "both_observed": true,
+              "distance": 0.8214501886955945,
+              "experimental_distance": 9.682547783654782,
+              "first": {
+                "atom": "SD",
+                "chain": "A",
+                "experimentally_observed": true,
+                "index": 13,
+                "residue": 2,
+                "residue_name": "MET"
+              },
+              "penetration": 2.6785498113044053,
+              "second": {
+                "atom": "CE2",
+                "chain": "A",
+                "experimentally_observed": true,
+                "index": 70,
+                "residue": 10,
+                "residue_name": "PHE"
+              }
+            },
+            {
+              "both_observed": true,
+              "distance": 0.7462728966160218,
+              "experimental_distance": 8.562728754282952,
+              "first": {
+                "atom": "CE",
+                "chain": "A",
+                "experimentally_observed": true,
+                "index": 14,
+                "residue": 2,
+                "residue_name": "MET"
+              },
+              "penetration": 2.653727103383978,
+              "second": {
+                "atom": "CD2",
+                "chain": "A",
+                "experimentally_observed": true,
+                "index": 68,
+                "residue": 10,
+                "residue_name": "PHE"
+              }
+            },
+            {
+              "both_observed": true,
+              "distance": 0.9646927850670078,
+              "experimental_distance": 5.477816786855705,
+              "first": {
+                "atom": "SG",
+                "chain": "A",
+                "experimentally_observed": true,
+                "index": 77,
+                "residue": 11,
+                "residue_name": "CYS"
+              },
+              "penetration": 2.6353072149329924,
+              "second": {
+                "atom": "SG",
+                "chain": "A",
+                "experimentally_observed": true,
+                "index": 524,
+                "residue": 73,
+                "residue_name": "CYS"
+              }
+            },
+            {
+              "both_observed": true,
+              "distance": 0.6955913201663004,
+              "experimental_distance": 9.440390323165051,
+              "first": {
+                "atom": "N",
+                "chain": "A",
+                "experimentally_observed": true,
+                "index": 296,
+                "residue": 42,
+                "residue_name": "HIS"
+              },
+              "penetration": 2.5544086798336996,
+              "second": {
+                "atom": "CD",
+                "chain": "A",
+                "experimentally_observed": true,
+                "index": 377,
+                "residue": 53,
+                "residue_name": "PRO"
+              }
+            },
+            {
+              "both_observed": true,
+              "distance": 0.6221934140148319,
+              "experimental_distance": 9.201544708843477,
+              "first": {
+                "atom": "N",
+                "chain": "A",
+                "experimentally_observed": true,
+                "index": 296,
+                "residue": 42,
+                "residue_name": "HIS"
+              },
+              "penetration": 2.477806585985168,
+              "second": {
+                "atom": "N",
+                "chain": "A",
+                "experimentally_observed": true,
+                "index": 371,
+                "residue": 53,
+                "residue_name": "PRO"
+              }
+            },
+            {
+              "both_observed": true,
+              "distance": 1.0407758969688639,
+              "experimental_distance": 9.28374362202953,
+              "first": {
+                "atom": "SD",
+                "chain": "A",
+                "experimentally_observed": true,
+                "index": 13,
+                "residue": 2,
+                "residue_name": "MET"
+              },
+              "penetration": 2.4592241030311364,
+              "second": {
+                "atom": "CD2",
+                "chain": "A",
+                "experimentally_observed": true,
+                "index": 68,
+                "residue": 10,
+                "residue_name": "PHE"
+              }
+            },
+            {
+              "both_observed": true,
+              "distance": 0.9524169009037556,
+              "experimental_distance": 10.320192264462575,
+              "first": {
+                "atom": "O",
+                "chain": "A",
+                "experimentally_observed": true,
+                "index": 299,
+                "residue": 42,
+                "residue_name": "HIS"
+              },
+              "penetration": 2.2675830990962442,
+              "second": {
+                "atom": "CA",
+                "chain": "A",
+                "experimentally_observed": true,
+                "index": 372,
+                "residue": 53,
+                "residue_name": "PRO"
+              }
+            },
+            {
+              "both_observed": true,
+              "distance": 1.1631577699878743,
+              "experimental_distance": 10.101146536041663,
+              "first": {
+                "atom": "C",
+                "chain": "A",
+                "experimentally_observed": true,
+                "index": 291,
+                "residue": 41,
+                "residue_name": "THR"
+              },
+              "penetration": 2.2368422300121256,
+              "second": {
+                "atom": "CD",
+                "chain": "A",
+                "experimentally_observed": true,
+                "index": 377,
+                "residue": 53,
+                "residue_name": "PRO"
+              }
+            },
+            {
+              "both_observed": true,
+              "distance": 0.9978759438917273,
+              "experimental_distance": 3.8433543827249785,
+              "first": {
+                "atom": "O",
+                "chain": "A",
+                "experimentally_observed": true,
+                "index": 102,
+                "residue": 15,
+                "residue_name": "VAL"
+              },
+              "penetration": 2.2221240561082727,
+              "second": {
+                "atom": "CB",
+                "chain": "A",
+                "experimentally_observed": true,
+                "index": 110,
+                "residue": 16,
+                "residue_name": "ASP"
+              }
+            },
+            {
+              "both_observed": true,
+              "distance": 1.2348429804340788,
+              "experimental_distance": 9.365619716775113,
+              "first": {
+                "atom": "C",
+                "chain": "A",
+                "experimentally_observed": true,
+                "index": 298,
+                "residue": 42,
+                "residue_name": "HIS"
+              },
+              "penetration": 2.165157019565921,
+              "second": {
+                "atom": "CA",
+                "chain": "A",
+                "experimentally_observed": true,
+                "index": 372,
+                "residue": 53,
+                "residue_name": "PRO"
+              }
+            },
+            {
+              "both_observed": true,
+              "distance": 1.2386379749581107,
+              "experimental_distance": 9.135970835801102,
+              "first": {
+                "atom": "CB",
+                "chain": "A",
+                "experimentally_observed": true,
+                "index": 300,
+                "residue": 42,
+                "residue_name": "HIS"
+              },
+              "penetration": 2.161362025041889,
+              "second": {
+                "atom": "CB",
+                "chain": "A",
+                "experimentally_observed": true,
+                "index": 375,
+                "residue": 53,
+                "residue_name": "PRO"
+              }
+            }
+          ]
+        },
+        "223": {
+          "all_atoms": {
+            "max_penetration": 2.9658870569465146,
+            "pair_count": 418170,
+            "severe_pairs": 15
+          },
+          "coordinate_sha256": "ee16cfd2a7987b83562ad29b2999f3f5a5a3cd41f6138f5c26a0d104c51ef41d",
+          "excluding_terminal10": {
+            "max_penetration": 2.9658870569465146,
+            "pair_count": 292242,
+            "severe_pairs": 9
+          },
+          "observed_atoms": {
+            "max_penetration": 2.9658870569465146,
+            "pair_count": 402761,
+            "severe_pairs": 15
+          },
+          "observed_bond_geometry": {
+            "bond_rmse": 0.28024341447009204,
+            "chirality_fraction": 1.0,
+            "observed_bonds": 922,
+            "observed_chiral_centres": 111,
+            "observed_peptides": 123,
+            "peptide_mae": 0.14336587721587893
+          },
+          "severe_touching_terminal10": 6,
+          "severe_touching_unobserved": 0,
+          "top_pairs": [
+            {
+              "both_observed": true,
+              "distance": 0.4341129430534856,
+              "experimental_distance": 9.365619716775113,
+              "first": {
+                "atom": "C",
+                "chain": "A",
+                "experimentally_observed": true,
+                "index": 298,
+                "residue": 42,
+                "residue_name": "HIS"
+              },
+              "penetration": 2.9658870569465146,
+              "second": {
+                "atom": "CA",
+                "chain": "A",
+                "experimentally_observed": true,
+                "index": 372,
+                "residue": 53,
+                "residue_name": "PRO"
+              }
+            },
+            {
+              "both_observed": true,
+              "distance": 0.47361258670003203,
+              "experimental_distance": 9.850398165878701,
+              "first": {
+                "atom": "CG",
+                "chain": "A",
+                "experimentally_observed": true,
+                "index": 301,
+                "residue": 42,
+                "residue_name": "HIS"
+              },
+              "penetration": 2.9263874132999677,
+              "second": {
+                "atom": "CG",
+                "chain": "A",
+                "experimentally_observed": true,
+                "index": 376,
+                "residue": 53,
+                "residue_name": "PRO"
+              }
+            },
+            {
+              "both_observed": true,
+              "distance": 0.6120214158563148,
+              "experimental_distance": 9.135970835801102,
+              "first": {
+                "atom": "CB",
+                "chain": "A",
+                "experimentally_observed": true,
+                "index": 300,
+                "residue": 42,
+                "residue_name": "HIS"
+              },
+              "penetration": 2.7879785841436853,
+              "second": {
+                "atom": "CB",
+                "chain": "A",
+                "experimentally_observed": true,
+                "index": 375,
+                "residue": 53,
+                "residue_name": "PRO"
+              }
+            },
+            {
+              "both_observed": true,
+              "distance": 0.8369983419729975,
+              "experimental_distance": 5.477816786855705,
+              "first": {
+                "atom": "SG",
+                "chain": "A",
+                "experimentally_observed": true,
+                "index": 77,
+                "residue": 11,
+                "residue_name": "CYS"
+              },
+              "penetration": 2.7630016580270027,
+              "second": {
+                "atom": "SG",
+                "chain": "A",
+                "experimentally_observed": true,
+                "index": 524,
+                "residue": 73,
+                "residue_name": "CYS"
+              }
+            },
+            {
+              "both_observed": true,
+              "distance": 0.6818492479777251,
+              "experimental_distance": 10.414952082473183,
+              "first": {
+                "atom": "CB",
+                "chain": "A",
+                "experimentally_observed": true,
+                "index": 300,
+                "residue": 42,
+                "residue_name": "HIS"
+              },
+              "penetration": 2.7181507520222747,
+              "second": {
+                "atom": "CG",
+                "chain": "A",
+                "experimentally_observed": true,
+                "index": 376,
+                "residue": 53,
+                "residue_name": "PRO"
+              }
+            },
+            {
+              "both_observed": true,
+              "distance": 0.6970077951637434,
+              "experimental_distance": 11.484255408823405,
+              "first": {
+                "atom": "CA",
+                "chain": "A",
+                "experimentally_observed": true,
+                "index": 1,
+                "residue": 1,
+                "residue_name": "THR"
+              },
+              "penetration": 2.7029922048362565,
+              "second": {
+                "atom": "CB",
+                "chain": "A",
+                "experimentally_observed": true,
+                "index": 226,
+                "residue": 32,
+                "residue_name": "ILE"
+              }
+            },
+            {
+              "both_observed": true,
+              "distance": 0.813796291398337,
+              "experimental_distance": 5.090616402840695,
+              "first": {
+                "atom": "CA",
+                "chain": "A",
+                "experimentally_observed": true,
+                "index": 8,
+                "residue": 2,
+                "residue_name": "MET"
+              },
+              "penetration": 2.586203708601663,
+              "second": {
+                "atom": "CG2",
+                "chain": "A",
+                "experimentally_observed": true,
+                "index": 46,
+                "residue": 7,
+                "residue_name": "VAL"
+              }
+            },
+            {
+              "both_observed": true,
+              "distance": 0.9572269351441423,
+              "experimental_distance": 8.635061630637795,
+              "first": {
+                "atom": "CA",
+                "chain": "A",
+                "experimentally_observed": true,
+                "index": 297,
+                "residue": 42,
+                "residue_name": "HIS"
+              },
+              "penetration": 2.4427730648558574,
+              "second": {
+                "atom": "CA",
+                "chain": "A",
+                "experimentally_observed": true,
+                "index": 372,
+                "residue": 53,
+                "residue_name": "PRO"
+              }
+            },
+            {
+              "both_observed": true,
+              "distance": 0.7836595292538167,
+              "experimental_distance": 9.201806489803309,
+              "first": {
+                "atom": "O",
+                "chain": "A",
+                "experimentally_observed": true,
+                "index": 299,
+                "residue": 42,
+                "residue_name": "HIS"
+              },
+              "penetration": 2.436340470746183,
+              "second": {
+                "atom": "C",
+                "chain": "A",
+                "experimentally_observed": true,
+                "index": 373,
+                "residue": 53,
+                "residue_name": "PRO"
+              }
+            },
+            {
+              "both_observed": true,
+              "distance": 0.8365785030717515,
+              "experimental_distance": 12.940336669983278,
+              "first": {
+                "atom": "N",
+                "chain": "A",
+                "experimentally_observed": true,
+                "index": 0,
+                "residue": 1,
+                "residue_name": "THR"
+              },
+              "penetration": 2.4134214969282484,
+              "second": {
+                "atom": "CB",
+                "chain": "A",
+                "experimentally_observed": true,
+                "index": 226,
+                "residue": 32,
+                "residue_name": "ILE"
+              }
+            },
+            {
+              "both_observed": true,
+              "distance": 0.8097161370672347,
+              "experimental_distance": 10.268619108121932,
+              "first": {
+                "atom": "OG1",
+                "chain": "A",
+                "experimentally_observed": true,
+                "index": 5,
+                "residue": 1,
+                "residue_name": "THR"
+              },
+              "penetration": 2.410283862932765,
+              "second": {
+                "atom": "CA",
+                "chain": "A",
+                "experimentally_observed": true,
+                "index": 223,
+                "residue": 32,
+                "residue_name": "ILE"
+              }
+            },
+            {
+              "both_observed": true,
+              "distance": 1.0174819499661865,
+              "experimental_distance": 4.035691956878699,
+              "first": {
+                "atom": "CB",
+                "chain": "A",
+                "experimentally_observed": true,
+                "index": 11,
+                "residue": 2,
+                "residue_name": "MET"
+              },
+              "penetration": 2.3825180500338137,
+              "second": {
+                "atom": "CG2",
+                "chain": "A",
+                "experimentally_observed": true,
+                "index": 46,
+                "residue": 7,
+                "residue_name": "VAL"
+              }
+            }
+          ]
+        }
+      },
+      "case": "8bzn",
+      "exclusions_exact": true,
+      "expected_peptide_bonds": 124,
+      "experimental": {
+        "all_atoms": {
+          "max_penetration": 0.5803520646647944,
+          "pair_count": 402761,
+          "severe_pairs": 0
+        },
+        "excluding_terminal10": {
+          "max_penetration": 0.5803520646647944,
+          "pair_count": 287668,
+          "severe_pairs": 0
+        },
+        "observed_atoms": {
+          "max_penetration": 0.5803520646647944,
+          "pair_count": 402761,
+          "severe_pairs": 0
+        },
+        "severe_touching_terminal10": 0,
+        "severe_touching_unobserved": 0,
+        "top_pairs": [
+          {
+            "both_observed": true,
+            "distance": 2.4596479353352056,
+            "experimental_distance": 2.4596479353352056,
+            "first": {
+              "atom": "OG1",
+              "chain": "A",
+              "experimentally_observed": true,
+              "index": 355,
+              "residue": 50,
+              "residue_name": "THR"
+            },
+            "penetration": 0.5803520646647944,
+            "second": {
+              "atom": "O",
+              "chain": "A",
+              "experimentally_observed": true,
+              "index": 367,
+              "residue": 52,
+              "residue_name": "THR"
+            }
+          },
+          {
+            "both_observed": true,
+            "distance": 2.7508636114380853,
+            "experimental_distance": 2.7508636114380853,
+            "first": {
+              "atom": "C",
+              "chain": "A",
+              "experimentally_observed": true,
+              "index": 394,
+              "residue": 56,
+              "residue_name": "ASN"
+            },
+            "penetration": 0.4691363885619144,
+            "second": {
+              "atom": "OD1",
+              "chain": "A",
+              "experimentally_observed": true,
+              "index": 398,
+              "residue": 56,
+              "residue_name": "ASN"
+            }
+          },
+          {
+            "both_observed": true,
+            "distance": 2.5817372709115,
+            "experimental_distance": 2.5817372709115,
+            "first": {
+              "atom": "OG",
+              "chain": "A",
+              "experimentally_observed": true,
+              "index": 439,
+              "residue": 61,
+              "residue_name": "SER"
+            },
+            "penetration": 0.4582627290885002,
+            "second": {
+              "atom": "OE1",
+              "chain": "A",
+              "experimentally_observed": true,
+              "index": 677,
+              "residue": 92,
+              "residue_name": "GLN"
+            }
+          },
+          {
+            "both_observed": true,
+            "distance": 2.61176819541177,
+            "experimental_distance": 2.61176819541177,
+            "first": {
+              "atom": "O",
+              "chain": "A",
+              "experimentally_observed": true,
+              "index": 673,
+              "residue": 92,
+              "residue_name": "GLN"
+            },
+            "penetration": 0.4582318045882303,
+            "second": {
+              "atom": "NE1",
+              "chain": "A",
+              "experimentally_observed": true,
+              "index": 857,
+              "residue": 117,
+              "residue_name": "TRP"
+            }
+          },
+          {
+            "both_observed": true,
+            "distance": 2.5953402030052155,
+            "experimental_distance": 2.5953402030052155,
+            "first": {
+              "atom": "O",
+              "chain": "A",
+              "experimentally_observed": true,
+              "index": 170,
+              "residue": 24,
+              "residue_name": "TYR"
+            },
+            "penetration": 0.44465979699478453,
+            "second": {
+              "atom": "OG",
+              "chain": "A",
+              "experimentally_observed": true,
+              "index": 197,
+              "residue": 27,
+              "residue_name": "SER"
+            }
+          },
+          {
+            "both_observed": true,
+            "distance": 2.626433976374276,
+            "experimental_distance": 2.626433976374276,
+            "first": {
+              "atom": "NZ",
+              "chain": "A",
+              "experimentally_observed": true,
+              "index": 132,
+              "residue": 19,
+              "residue_name": "LYS"
+            },
+            "penetration": 0.44356602362572417,
+            "second": {
+              "atom": "OD2",
+              "chain": "A",
+              "experimentally_observed": true,
+              "index": 166,
+              "residue": 23,
+              "residue_name": "ASP"
+            }
+          },
+          {
+            "both_observed": true,
+            "distance": 2.781001383092695,
+            "experimental_distance": 2.781001383092695,
+            "first": {
+              "atom": "O",
+              "chain": "A",
+              "experimentally_observed": true,
+              "index": 97,
+              "residue": 14,
+              "residue_name": "ALA"
+            },
+            "penetration": 0.4389986169073046,
+            "second": {
+              "atom": "C",
+              "chain": "A",
+              "experimentally_observed": true,
+              "index": 101,
+              "residue": 15,
+              "residue_name": "VAL"
+            }
+          },
+          {
+            "both_observed": true,
+            "distance": 2.6384804391744767,
+            "experimental_distance": 2.6384804391744767,
+            "first": {
+              "atom": "OD1",
+              "chain": "A",
+              "experimentally_observed": true,
+              "index": 398,
+              "residue": 56,
+              "residue_name": "ASN"
+            },
+            "penetration": 0.43151956082552356,
+            "second": {
+              "atom": "N",
+              "chain": "A",
+              "experimentally_observed": true,
+              "index": 408,
+              "residue": 58,
+              "residue_name": "ASP"
+            }
+          },
+          {
+            "both_observed": true,
+            "distance": 2.657035154262828,
+            "experimental_distance": 2.657035154262828,
+            "first": {
+              "atom": "N",
+              "chain": "A",
+              "experimentally_observed": true,
+              "index": 811,
+              "residue": 111,
+              "residue_name": "CYS"
+            },
+            "penetration": 0.4129648457371724,
+            "second": {
+              "atom": "O",
+              "chain": "A",
+              "experimentally_observed": true,
+              "index": 844,
+              "residue": 116,
+              "residue_name": "MET"
+            }
+          },
+          {
+            "both_observed": true,
+            "distance": 2.659212376114879,
+            "experimental_distance": 2.659212376114879,
+            "first": {
+              "atom": "O",
+              "chain": "A",
+              "experimentally_observed": true,
+              "index": 428,
+              "residue": 60,
+              "residue_name": "GLU"
+            },
+            "penetration": 0.41078762388512136,
+            "second": {
+              "atom": "N",
+              "chain": "A",
+              "experimentally_observed": true,
+              "index": 679,
+              "residue": 93,
+              "residue_name": "ILE"
+            }
+          },
+          {
+            "both_observed": true,
+            "distance": 2.8097990373053525,
+            "experimental_distance": 2.8097990373053525,
+            "first": {
+              "atom": "O",
+              "chain": "A",
+              "experimentally_observed": true,
+              "index": 682,
+              "residue": 93,
+              "residue_name": "ILE"
+            },
+            "penetration": 0.41020096269464723,
+            "second": {
+              "atom": "C",
+              "chain": "A",
+              "experimentally_observed": true,
+              "index": 689,
+              "residue": 94,
+              "residue_name": "PRO"
+            }
+          },
+          {
+            "both_observed": true,
+            "distance": 2.8111698253477693,
+            "experimental_distance": 2.8111698253477693,
+            "first": {
+              "atom": "O",
+              "chain": "A",
+              "experimentally_observed": true,
+              "index": 757,
+              "residue": 104,
+              "residue_name": "PHE"
+            },
+            "penetration": 0.4088301746522305,
+            "second": {
+              "atom": "C",
+              "chain": "A",
+              "experimentally_observed": true,
+              "index": 767,
+              "residue": 105,
+              "residue_name": "THR"
+            }
+          }
+        ]
+      },
+      "experimental_geometry": {
+        "bond_rmse": 0.0342773364013664,
+        "chirality_fraction": 1.0,
+        "observed_bonds": 922,
+        "observed_chiral_centres": 111,
+        "observed_peptides": 123,
+        "peptide_mae": 0.006146973314081358
+      },
+      "group": "16e8e27f13b39561bd3c96ed6efecb57cbf1f11dcf9bc3e60f7ad0380c182e19",
+      "gt_npz": "8bzn.assembly-1.model-1.npz",
+      "gt_payload_sha256": "c0d5cb345716129e374de901cc467a9ff517b3b66b412ef570ef7b0c34ff22da",
+      "observed_atom_count": 902,
+      "pdb": "8bzn",
+      "peptide_bonds": 124
+    },
+    {
+      "atom_count": 1537,
+      "baselines": {
+        "211": {
+          "all_atoms": {
+            "max_penetration": 3.2283875141964,
+            "pair_count": 1174301,
+            "severe_pairs": 19
+          },
+          "coordinate_sha256": "c85aa0453f7fb7403740b1693f16931c3b966410a05d2ca701b654aa526d50b4",
+          "excluding_terminal10": {
+            "max_penetration": 2.324884771670307,
+            "pair_count": 936433,
+            "severe_pairs": 2
+          },
+          "observed_atoms": {
+            "max_penetration": 3.2283875141964,
+            "pair_count": 1172769,
+            "severe_pairs": 19
+          },
+          "observed_bond_geometry": {
+            "bond_rmse": 0.2357027749151122,
+            "chirality_fraction": 1.0,
+            "observed_bonds": 1580,
+            "observed_chiral_centres": 179,
+            "observed_peptides": 193,
+            "peptide_mae": 0.12794874314551272
+          },
+          "severe_touching_terminal10": 17,
+          "severe_touching_unobserved": 0,
+          "top_pairs": [
+            {
+              "both_observed": true,
+              "distance": 0.17161248580359995,
+              "experimental_distance": 30.8299061946287,
+              "first": {
+                "atom": "C",
+                "chain": "A",
+                "experimentally_observed": true,
+                "index": 269,
+                "residue": 37,
+                "residue_name": "VAL"
+              },
+              "penetration": 3.2283875141964,
+              "second": {
+                "atom": "CB",
+                "chain": "A",
+                "experimentally_observed": true,
+                "index": 1531,
+                "residue": 194,
+                "residue_name": "LYS"
+              }
+            },
+            {
+              "both_observed": true,
+              "distance": 0.3487814203703875,
+              "experimental_distance": 19.784699266392852,
+              "first": {
+                "atom": "CB",
+                "chain": "A",
+                "experimentally_observed": true,
+                "index": 316,
+                "residue": 43,
+                "residue_name": "LEU"
+              },
+              "penetration": 3.0512185796296123,
+              "second": {
+                "atom": "CA",
+                "chain": "A",
+                "experimentally_observed": true,
+                "index": 1508,
+                "residue": 192,
+                "residue_name": "PHE"
+              }
+            },
+            {
+              "both_observed": true,
+              "distance": 0.4326773028194692,
+              "experimental_distance": 32.43103692516049,
+              "first": {
+                "atom": "CA",
+                "chain": "A",
+                "experimentally_observed": true,
+                "index": 268,
+                "residue": 37,
+                "residue_name": "VAL"
+              },
+              "penetration": 2.967322697180531,
+              "second": {
+                "atom": "CG",
+                "chain": "A",
+                "experimentally_observed": true,
+                "index": 1532,
+                "residue": 194,
+                "residue_name": "LYS"
+              }
+            },
+            {
+              "both_observed": true,
+              "distance": 0.6060960809426531,
+              "experimental_distance": 16.433813465383984,
+              "first": {
+                "atom": "CA",
+                "chain": "A",
+                "experimentally_observed": true,
+                "index": 313,
+                "residue": 43,
+                "residue_name": "LEU"
+              },
+              "penetration": 2.793903919057347,
+              "second": {
+                "atom": "C",
+                "chain": "A",
+                "experimentally_observed": true,
+                "index": 1500,
+                "residue": 191,
+                "residue_name": "GLN"
+              }
+            },
+            {
+              "both_observed": true,
+              "distance": 0.7594946315927535,
+              "experimental_distance": 20.93010194659608,
+              "first": {
+                "atom": "CD1",
+                "chain": "A",
+                "experimentally_observed": true,
+                "index": 318,
+                "residue": 43,
+                "residue_name": "LEU"
+              },
+              "penetration": 2.640505368407246,
+              "second": {
+                "atom": "CG",
+                "chain": "A",
+                "experimentally_observed": true,
+                "index": 1512,
+                "residue": 192,
+                "residue_name": "PHE"
+              }
+            },
+            {
+              "both_observed": true,
+              "distance": 0.7992709316953308,
+              "experimental_distance": 21.900883794853634,
+              "first": {
+                "atom": "CD1",
+                "chain": "A",
+                "experimentally_observed": true,
+                "index": 318,
+                "residue": 43,
+                "residue_name": "LEU"
+              },
+              "penetration": 2.600729068304669,
+              "second": {
+                "atom": "CB",
+                "chain": "A",
+                "experimentally_observed": true,
+                "index": 1511,
+                "residue": 192,
+                "residue_name": "PHE"
+              }
+            },
+            {
+              "both_observed": true,
+              "distance": 0.6429606889310585,
+              "experimental_distance": 11.657654254838626,
+              "first": {
+                "atom": "O",
+                "chain": "A",
+                "experimentally_observed": true,
+                "index": 311,
+                "residue": 42,
+                "residue_name": "GLY"
+              },
+              "penetration": 2.5770393110689414,
+              "second": {
+                "atom": "C",
+                "chain": "A",
+                "experimentally_observed": true,
+                "index": 1493,
+                "residue": 190,
+                "residue_name": "PRO"
+              }
+            },
+            {
+              "both_observed": true,
+              "distance": 0.6455617173001199,
+              "experimental_distance": 15.960652872260383,
+              "first": {
+                "atom": "CA",
+                "chain": "A",
+                "experimentally_observed": true,
+                "index": 313,
+                "residue": 43,
+                "residue_name": "LEU"
+              },
+              "penetration": 2.5744382826998797,
+              "second": {
+                "atom": "O",
+                "chain": "A",
+                "experimentally_observed": true,
+                "index": 1501,
+                "residue": 191,
+                "residue_name": "GLN"
+              }
+            },
+            {
+              "both_observed": true,
+              "distance": 0.8395341959504942,
+              "experimental_distance": 32.91939309190902,
+              "first": {
+                "atom": "CG2",
+                "chain": "A",
+                "experimentally_observed": true,
+                "index": 273,
+                "residue": 37,
+                "residue_name": "VAL"
+              },
+              "penetration": 2.560465804049506,
+              "second": {
+                "atom": "CD",
+                "chain": "A",
+                "experimentally_observed": true,
+                "index": 1533,
+                "residue": 194,
+                "residue_name": "LYS"
+              }
+            },
+            {
+              "both_observed": true,
+              "distance": 0.7477458369548191,
+              "experimental_distance": 20.13481351978885,
+              "first": {
+                "atom": "O",
+                "chain": "A",
+                "experimentally_observed": true,
+                "index": 301,
+                "residue": 41,
+                "residue_name": "HIS"
+              },
+              "penetration": 2.4722541630451804,
+              "second": {
+                "atom": "CG",
+                "chain": "A",
+                "experimentally_observed": true,
+                "index": 1523,
+                "residue": 193,
+                "residue_name": "GLU"
+              }
+            },
+            {
+              "both_observed": true,
+              "distance": 0.8715981259761779,
+              "experimental_distance": 18.918488880519483,
+              "first": {
+                "atom": "CB",
+                "chain": "A",
+                "experimentally_observed": true,
+                "index": 316,
+                "residue": 43,
+                "residue_name": "LEU"
+              },
+              "penetration": 2.378401874023822,
+              "second": {
+                "atom": "N",
+                "chain": "A",
+                "experimentally_observed": true,
+                "index": 1507,
+                "residue": 192,
+                "residue_name": "PHE"
+              }
+            },
+            {
+              "both_observed": true,
+              "distance": 1.0239326692691635,
+              "experimental_distance": 17.531435547661275,
+              "first": {
+                "atom": "CB",
+                "chain": "A",
+                "experimentally_observed": true,
+                "index": 1336,
+                "residue": 171,
+                "residue_name": "MET"
+              },
+              "penetration": 2.3760673307308364,
+              "second": {
+                "atom": "CE1",
+                "chain": "A",
+                "experimentally_observed": true,
+                "index": 1489,
+                "residue": 189,
+                "residue_name": "HIS"
+              }
+            }
+          ]
+        },
+        "223": {
+          "all_atoms": {
+            "max_penetration": 2.442656844802522,
+            "pair_count": 1174301,
+            "severe_pairs": 3
+          },
+          "coordinate_sha256": "134025fd82e8ee1a65f8a2ff477c194ec69181da5eded4073f9cd45f916bbce0",
+          "excluding_terminal10": {
+            "max_penetration": 2.3371988982694027,
+            "pair_count": 936433,
+            "severe_pairs": 1
+          },
+          "observed_atoms": {
+            "max_penetration": 2.442656844802522,
+            "pair_count": 1172769,
+            "severe_pairs": 3
+          },
+          "observed_bond_geometry": {
+            "bond_rmse": 0.2416516626808499,
+            "chirality_fraction": 0.994413407821229,
+            "observed_bonds": 1580,
+            "observed_chiral_centres": 179,
+            "observed_peptides": 193,
+            "peptide_mae": 0.12423236067717562
+          },
+          "severe_touching_terminal10": 2,
+          "severe_touching_unobserved": 0,
+          "top_pairs": [
+            {
+              "both_observed": true,
+              "distance": 0.9573431551974779,
+              "experimental_distance": 20.93010194659608,
+              "first": {
+                "atom": "CD1",
+                "chain": "A",
+                "experimentally_observed": true,
+                "index": 318,
+                "residue": 43,
+                "residue_name": "LEU"
+              },
+              "penetration": 2.442656844802522,
+              "second": {
+                "atom": "CG",
+                "chain": "A",
+                "experimentally_observed": true,
+                "index": 1512,
+                "residue": 192,
+                "residue_name": "PHE"
+              }
+            },
+            {
+              "both_observed": true,
+              "distance": 1.0541004257227529,
+              "experimental_distance": 9.224154509891358,
+              "first": {
+                "atom": "CZ",
+                "chain": "A",
+                "experimentally_observed": true,
+                "index": 1517,
+                "residue": 192,
+                "residue_name": "PHE"
+              },
+              "penetration": 2.3458995742772473,
+              "second": {
+                "atom": "CE",
+                "chain": "A",
+                "experimentally_observed": true,
+                "index": 1534,
+                "residue": 194,
+                "residue_name": "LYS"
+              }
+            },
+            {
+              "both_observed": true,
+              "distance": 1.0628011017305972,
+              "experimental_distance": 7.528214948765704,
+              "first": {
+                "atom": "C",
+                "chain": "A",
+                "experimentally_observed": true,
+                "index": 1253,
+                "residue": 162,
+                "residue_name": "TYR"
+              },
+              "penetration": 2.3371988982694027,
+              "second": {
+                "atom": "CZ",
+                "chain": "A",
+                "experimentally_observed": true,
+                "index": 1281,
+                "residue": 164,
+                "residue_name": "PHE"
+              }
+            },
+            {
+              "both_observed": true,
+              "distance": 1.0791782064969062,
+              "experimental_distance": 8.63575423659299,
+              "first": {
+                "atom": "CE2",
+                "chain": "A",
+                "experimentally_observed": true,
+                "index": 1516,
+                "residue": 192,
+                "residue_name": "PHE"
+              },
+              "penetration": 2.320821793503094,
+              "second": {
+                "atom": "CE",
+                "chain": "A",
+                "experimentally_observed": true,
+                "index": 1534,
+                "residue": 194,
+                "residue_name": "LYS"
+              }
+            },
+            {
+              "both_observed": true,
+              "distance": 0.921622539172941,
+              "experimental_distance": 4.0084104659987725,
+              "first": {
+                "atom": "O",
+                "chain": "A",
+                "experimentally_observed": true,
+                "index": 151,
+                "residue": 21,
+                "residue_name": "VAL"
+              },
+              "penetration": 2.2983774608270586,
+              "second": {
+                "atom": "CB",
+                "chain": "A",
+                "experimentally_observed": true,
+                "index": 159,
+                "residue": 22,
+                "residue_name": "TYR"
+              }
+            },
+            {
+              "both_observed": true,
+              "distance": 1.1199043268547635,
+              "experimental_distance": 4.129555135694502,
+              "first": {
+                "atom": "C",
+                "chain": "A",
+                "experimentally_observed": true,
+                "index": 1265,
+                "residue": 163,
+                "residue_name": "LEU"
+              },
+              "penetration": 2.2800956731452366,
+              "second": {
+                "atom": "CD1",
+                "chain": "A",
+                "experimentally_observed": true,
+                "index": 1277,
+                "residue": 164,
+                "residue_name": "PHE"
+              }
+            },
+            {
+              "both_observed": true,
+              "distance": 0.9490536052637938,
+              "experimental_distance": 29.655535460479843,
+              "first": {
+                "atom": "O",
+                "chain": "A",
+                "experimentally_observed": true,
+                "index": 270,
+                "residue": 37,
+                "residue_name": "VAL"
+              },
+              "penetration": 2.270946394736206,
+              "second": {
+                "atom": "CA",
+                "chain": "A",
+                "experimentally_observed": true,
+                "index": 1528,
+                "residue": 194,
+                "residue_name": "LYS"
+              }
+            },
+            {
+              "both_observed": true,
+              "distance": 1.2118027003109626,
+              "experimental_distance": 3.7324560464368246,
+              "first": {
+                "atom": "C",
+                "chain": "A",
+                "experimentally_observed": true,
+                "index": 150,
+                "residue": 21,
+                "residue_name": "VAL"
+              },
+              "penetration": 2.1881972996890373,
+              "second": {
+                "atom": "CG",
+                "chain": "A",
+                "experimentally_observed": true,
+                "index": 160,
+                "residue": 22,
+                "residue_name": "TYR"
+              }
+            },
+            {
+              "both_observed": true,
+              "distance": 1.0502400418954743,
+              "experimental_distance": 4.145386572255682,
+              "first": {
+                "atom": "O",
+                "chain": "A",
+                "experimentally_observed": true,
+                "index": 151,
+                "residue": 21,
+                "residue_name": "VAL"
+              },
+              "penetration": 2.1697599581045255,
+              "second": {
+                "atom": "CG",
+                "chain": "A",
+                "experimentally_observed": true,
+                "index": 160,
+                "residue": 22,
+                "residue_name": "TYR"
+              }
+            },
+            {
+              "both_observed": true,
+              "distance": 1.2310735603205296,
+              "experimental_distance": 3.467540059072536,
+              "first": {
+                "atom": "C",
+                "chain": "A",
+                "experimentally_observed": true,
+                "index": 1265,
+                "residue": 163,
+                "residue_name": "LEU"
+              },
+              "penetration": 2.1689264396794705,
+              "second": {
+                "atom": "CG",
+                "chain": "A",
+                "experimentally_observed": true,
+                "index": 1276,
+                "residue": 164,
+                "residue_name": "PHE"
+              }
+            },
+            {
+              "both_observed": true,
+              "distance": 1.2751078364683686,
+              "experimental_distance": 8.492427069565666,
+              "first": {
+                "atom": "CD1",
+                "chain": "A",
+                "experimentally_observed": true,
+                "index": 1513,
+                "residue": 192,
+                "residue_name": "PHE"
+              },
+              "penetration": 2.1248921635316314,
+              "second": {
+                "atom": "CD",
+                "chain": "A",
+                "experimentally_observed": true,
+                "index": 1533,
+                "residue": 194,
+                "residue_name": "LYS"
+              }
+            },
+            {
+              "both_observed": true,
+              "distance": 1.1445400450057275,
+              "experimental_distance": 14.11790382850604,
+              "first": {
+                "atom": "CA",
+                "chain": "A",
+                "experimentally_observed": true,
+                "index": 309,
+                "residue": 42,
+                "residue_name": "GLY"
+              },
+              "penetration": 2.1054599549942727,
+              "second": {
+                "atom": "N",
+                "chain": "A",
+                "experimentally_observed": true,
+                "index": 1498,
+                "residue": 191,
+                "residue_name": "GLN"
+              }
+            }
+          ]
+        }
+      },
+      "case": "control",
+      "exclusions_exact": true,
+      "expected_peptide_bonds": 193,
+      "experimental": {
+        "all_atoms": {
+          "max_penetration": 0.7018763751822799,
+          "pair_count": 1172769,
+          "severe_pairs": 0
+        },
+        "excluding_terminal10": {
+          "max_penetration": 0.7018763751822799,
+          "pair_count": 935065,
+          "severe_pairs": 0
+        },
+        "observed_atoms": {
+          "max_penetration": 0.7018763751822799,
+          "pair_count": 1172769,
+          "severe_pairs": 0
+        },
+        "severe_touching_terminal10": 0,
+        "severe_touching_unobserved": 0,
+        "top_pairs": [
+          {
+            "both_observed": true,
+            "distance": 2.33812362481772,
+            "experimental_distance": 2.33812362481772,
+            "first": {
+              "atom": "O",
+              "chain": "A",
+              "experimentally_observed": true,
+              "index": 108,
+              "residue": 15,
+              "residue_name": "ARG"
+            },
+            "penetration": 0.7018763751822799,
+            "second": {
+              "atom": "OG1",
+              "chain": "A",
+              "experimentally_observed": true,
+              "index": 427,
+              "residue": 55,
+              "residue_name": "THR"
+            }
+          },
+          {
+            "both_observed": true,
+            "distance": 2.406619438725066,
+            "experimental_distance": 2.406619438725066,
+            "first": {
+              "atom": "OG",
+              "chain": "A",
+              "experimentally_observed": true,
+              "index": 481,
+              "residue": 62,
+              "residue_name": "SER"
+            },
+            "penetration": 0.6333805612749339,
+            "second": {
+              "atom": "OE1",
+              "chain": "A",
+              "experimentally_observed": true,
+              "index": 514,
+              "residue": 67,
+              "residue_name": "GLU"
+            }
+          },
+          {
+            "both_observed": true,
+            "distance": 2.456357626899927,
+            "experimental_distance": 2.456357626899927,
+            "first": {
+              "atom": "O",
+              "chain": "A",
+              "experimentally_observed": true,
+              "index": 1105,
+              "residue": 143,
+              "residue_name": "LEU"
+            },
+            "penetration": 0.6136423731000731,
+            "second": {
+              "atom": "ND2",
+              "chain": "A",
+              "experimentally_observed": true,
+              "index": 1392,
+              "residue": 177,
+              "residue_name": "ASN"
+            }
+          },
+          {
+            "both_observed": true,
+            "distance": 2.47630255099952,
+            "experimental_distance": 2.47630255099952,
+            "first": {
+              "atom": "NE2",
+              "chain": "A",
+              "experimentally_observed": true,
+              "index": 217,
+              "residue": 29,
+              "residue_name": "GLN"
+            },
+            "penetration": 0.5936974490004805,
+            "second": {
+              "atom": "O",
+              "chain": "A",
+              "experimentally_observed": true,
+              "index": 1013,
+              "residue": 131,
+              "residue_name": "TYR"
+            }
+          },
+          {
+            "both_observed": true,
+            "distance": 2.5142141506207434,
+            "experimental_distance": 2.5142141506207434,
+            "first": {
+              "atom": "ND1",
+              "chain": "A",
+              "experimentally_observed": true,
+              "index": 1090,
+              "residue": 141,
+              "residue_name": "HIS"
+            },
+            "penetration": 0.5557858493792569,
+            "second": {
+              "atom": "O",
+              "chain": "A",
+              "experimentally_observed": true,
+              "index": 1117,
+              "residue": 145,
+              "residue_name": "ALA"
+            }
+          },
+          {
+            "both_observed": true,
+            "distance": 2.5210475137993837,
+            "experimental_distance": 2.5210475137993837,
+            "first": {
+              "atom": "N",
+              "chain": "A",
+              "experimentally_observed": true,
+              "index": 105,
+              "residue": 15,
+              "residue_name": "ARG"
+            },
+            "penetration": 0.5489524862006165,
+            "second": {
+              "atom": "O",
+              "chain": "A",
+              "experimentally_observed": true,
+              "index": 413,
+              "residue": 54,
+              "residue_name": "TYR"
+            }
+          },
+          {
+            "both_observed": true,
+            "distance": 2.544944249554112,
+            "experimental_distance": 2.544944249554112,
+            "first": {
+              "atom": "O",
+              "chain": "A",
+              "experimentally_observed": true,
+              "index": 814,
+              "residue": 105,
+              "residue_name": "ILE"
+            },
+            "penetration": 0.5250557504458881,
+            "second": {
+              "atom": "N",
+              "chain": "A",
+              "experimentally_observed": true,
+              "index": 957,
+              "residue": 124,
+              "residue_name": "MET"
+            }
+          },
+          {
+            "both_observed": true,
+            "distance": 2.5200471268259603,
+            "experimental_distance": 2.5200471268259603,
+            "first": {
+              "atom": "OH",
+              "chain": "A",
+              "experimentally_observed": true,
+              "index": 456,
+              "residue": 58,
+              "residue_name": "TYR"
+            },
+            "penetration": 0.5199528731740397,
+            "second": {
+              "atom": "O",
+              "chain": "A",
+              "experimentally_observed": true,
+              "index": 519,
+              "residue": 68,
+              "residue_name": "GLY"
+            }
+          },
+          {
+            "both_observed": true,
+            "distance": 2.5509329659252007,
+            "experimental_distance": 2.5509329659252007,
+            "first": {
+              "atom": "N",
+              "chain": "A",
+              "experimentally_observed": true,
+              "index": 653,
+              "residue": 87,
+              "residue_name": "ASP"
+            },
+            "penetration": 0.5190670340747996,
+            "second": {
+              "atom": "OD1",
+              "chain": "A",
+              "experimentally_observed": true,
+              "index": 659,
+              "residue": 87,
+              "residue_name": "ASP"
+            }
+          },
+          {
+            "both_observed": true,
+            "distance": 2.555437571142755,
+            "experimental_distance": 2.555437571142755,
+            "first": {
+              "atom": "O",
+              "chain": "A",
+              "experimentally_observed": true,
+              "index": 1083,
+              "residue": 140,
+              "residue_name": "GLY"
+            },
+            "penetration": 0.5145624288572455,
+            "second": {
+              "atom": "N",
+              "chain": "A",
+              "experimentally_observed": true,
+              "index": 1114,
+              "residue": 145,
+              "residue_name": "ALA"
+            }
+          },
+          {
+            "both_observed": true,
+            "distance": 2.5699873658370818,
+            "experimental_distance": 2.5699873658370818,
+            "first": {
+              "atom": "ND1",
+              "chain": "A",
+              "experimentally_observed": true,
+              "index": 1059,
+              "residue": 137,
+              "residue_name": "HIS"
+            },
+            "penetration": 0.5000126341629185,
+            "second": {
+              "atom": "O",
+              "chain": "A",
+              "experimentally_observed": true,
+              "index": 1188,
+              "residue": 154,
+              "residue_name": "LEU"
+            }
+          },
+          {
+            "both_observed": true,
+            "distance": 2.590190436820239,
+            "experimental_distance": 2.590190436820239,
+            "first": {
+              "atom": "N",
+              "chain": "A",
+              "experimentally_observed": true,
+              "index": 97,
+              "residue": 14,
+              "residue_name": "LEU"
+            },
+            "penetration": 0.4798095631797614,
+            "second": {
+              "atom": "O",
+              "chain": "A",
+              "experimentally_observed": true,
+              "index": 693,
+              "residue": 91,
+              "residue_name": "PHE"
+            }
+          }
+        ]
+      },
+      "experimental_geometry": {
+        "bond_rmse": 0.03599906788168503,
+        "chirality_fraction": 1.0,
+        "observed_bonds": 1580,
+        "observed_chiral_centres": 179,
+        "observed_peptides": 193,
+        "peptide_mae": 0.0031294749657935182
+      },
+      "group": "fcd3a3ed47527946dde1b9b7da023762a4327849c634b32eec0d404cee80b1d5",
+      "gt_npz": "9xvw.assembly-1.model-1.npz",
+      "gt_payload_sha256": "1792e9982adafed78da0fc12aa2f7951eb2bc0a5764b94e6a8fd1d530c3be9ac",
+      "observed_atom_count": 1536,
+      "pdb": "9xvw",
+      "peptide_bonds": 193
+    },
+    {
+      "atom_count": 2857,
+      "baselines": {
+        "211": {
+          "all_atoms": {
+            "max_penetration": 2.599487246920172,
+            "pair_count": 4068480,
+            "severe_pairs": 5
+          },
+          "coordinate_sha256": "03a342a454c1e7beccfd80b37195b9eb2218c1bae4ed44e614c7d75da3a39a13",
+          "excluding_terminal10": {
+            "max_penetration": 0.7464738730641813,
+            "pair_count": 3657270,
+            "severe_pairs": 0
+          },
+          "observed_atoms": {
+            "max_penetration": 0.7464738730641813,
+            "pair_count": 3980536,
+            "severe_pairs": 0
+          },
+          "observed_bond_geometry": {
+            "bond_rmse": 0.1810616740079014,
+            "chirality_fraction": 1.0,
+            "observed_bonds": 2881,
+            "observed_chiral_centres": 338,
+            "observed_peptides": 356,
+            "peptide_mae": 0.08043066561592857
+          },
+          "severe_touching_terminal10": 5,
+          "severe_touching_unobserved": 5,
+          "top_pairs": [
+            {
+              "both_observed": false,
+              "distance": 0.6205127530798275,
+              "first": {
+                "atom": "C",
+                "chain": "A",
+                "experimentally_observed": false,
+                "index": 2,
+                "residue": 1,
+                "residue_name": "GLY"
+              },
+              "penetration": 2.599487246920172,
+              "second": {
+                "atom": "O",
+                "chain": "A",
+                "experimentally_observed": false,
+                "index": 7,
+                "residue": 2,
+                "residue_name": "PRO"
+              }
+            },
+            {
+              "both_observed": false,
+              "distance": 0.8435953033491808,
+              "first": {
+                "atom": "CA",
+                "chain": "A",
+                "experimentally_observed": false,
+                "index": 1,
+                "residue": 1,
+                "residue_name": "GLY"
+              },
+              "penetration": 2.5564046966508194,
+              "second": {
+                "atom": "C",
+                "chain": "A",
+                "experimentally_observed": false,
+                "index": 6,
+                "residue": 2,
+                "residue_name": "PRO"
+              }
+            },
+            {
+              "both_observed": false,
+              "distance": 0.7595215790483794,
+              "first": {
+                "atom": "CA",
+                "chain": "A",
+                "experimentally_observed": false,
+                "index": 1,
+                "residue": 1,
+                "residue_name": "GLY"
+              },
+              "penetration": 2.4604784209516204,
+              "second": {
+                "atom": "O",
+                "chain": "A",
+                "experimentally_observed": false,
+                "index": 7,
+                "residue": 2,
+                "residue_name": "PRO"
+              }
+            },
+            {
+              "both_observed": false,
+              "distance": 0.810294236768316,
+              "first": {
+                "atom": "O",
+                "chain": "A",
+                "experimentally_observed": false,
+                "index": 3,
+                "residue": 1,
+                "residue_name": "GLY"
+              },
+              "penetration": 2.409705763231684,
+              "second": {
+                "atom": "C",
+                "chain": "A",
+                "experimentally_observed": false,
+                "index": 6,
+                "residue": 2,
+                "residue_name": "PRO"
+              }
+            },
+            {
+              "both_observed": false,
+              "distance": 0.8899732680545323,
+              "first": {
+                "atom": "N",
+                "chain": "A",
+                "experimentally_observed": false,
+                "index": 4,
+                "residue": 2,
+                "residue_name": "PRO"
+              },
+              "penetration": 2.3600267319454677,
+              "second": {
+                "atom": "CA",
+                "chain": "A",
+                "experimentally_observed": false,
+                "index": 12,
+                "residue": 3,
+                "residue_name": "LEU"
+              }
+            },
+            {
+              "both_observed": false,
+              "distance": 1.098761785192528,
+              "first": {
+                "atom": "CA",
+                "chain": "A",
+                "experimentally_observed": false,
+                "index": 5,
+                "residue": 2,
+                "residue_name": "PRO"
+              },
+              "penetration": 2.301238214807472,
+              "second": {
+                "atom": "C",
+                "chain": "A",
+                "experimentally_observed": false,
+                "index": 13,
+                "residue": 3,
+                "residue_name": "LEU"
+              }
+            },
+            {
+              "both_observed": false,
+              "distance": 1.025017160319551,
+              "first": {
+                "atom": "CG",
+                "chain": "A",
+                "experimentally_observed": false,
+                "index": 9,
+                "residue": 2,
+                "residue_name": "PRO"
+              },
+              "penetration": 2.224982839680449,
+              "second": {
+                "atom": "ND2",
+                "chain": "A",
+                "experimentally_observed": true,
+                "index": 672,
+                "residue": 88,
+                "residue_name": "ASN"
+              }
+            },
+            {
+              "both_observed": false,
+              "distance": 1.191522997604707,
+              "first": {
+                "atom": "CD",
+                "chain": "A",
+                "experimentally_observed": false,
+                "index": 10,
+                "residue": 2,
+                "residue_name": "PRO"
+              },
+              "penetration": 2.208477002395293,
+              "second": {
+                "atom": "CA",
+                "chain": "A",
+                "experimentally_observed": false,
+                "index": 12,
+                "residue": 3,
+                "residue_name": "LEU"
+              }
+            },
+            {
+              "both_observed": false,
+              "distance": 1.195174846212831,
+              "first": {
+                "atom": "CD",
+                "chain": "A",
+                "experimentally_observed": false,
+                "index": 10,
+                "residue": 2,
+                "residue_name": "PRO"
+              },
+              "penetration": 2.204825153787169,
+              "second": {
+                "atom": "CB",
+                "chain": "A",
+                "experimentally_observed": false,
+                "index": 15,
+                "residue": 3,
+                "residue_name": "LEU"
+              }
+            },
+            {
+              "both_observed": false,
+              "distance": 1.0988477726273134,
+              "first": {
+                "atom": "CB",
+                "chain": "A",
+                "experimentally_observed": false,
+                "index": 8,
+                "residue": 2,
+                "residue_name": "PRO"
+              },
+              "penetration": 2.1511522273726866,
+              "second": {
+                "atom": "ND2",
+                "chain": "A",
+                "experimentally_observed": true,
+                "index": 672,
+                "residue": 88,
+                "residue_name": "ASN"
+              }
+            },
+            {
+              "both_observed": false,
+              "distance": 1.1030648769644378,
+              "first": {
+                "atom": "N",
+                "chain": "A",
+                "experimentally_observed": false,
+                "index": 0,
+                "residue": 1,
+                "residue_name": "GLY"
+              },
+              "penetration": 2.146935123035562,
+              "second": {
+                "atom": "C",
+                "chain": "A",
+                "experimentally_observed": false,
+                "index": 6,
+                "residue": 2,
+                "residue_name": "PRO"
+              }
+            },
+            {
+              "both_observed": false,
+              "distance": 1.165631281136377,
+              "first": {
+                "atom": "O",
+                "chain": "A",
+                "experimentally_observed": false,
+                "index": 7,
+                "residue": 2,
+                "residue_name": "PRO"
+              },
+              "penetration": 2.054368718863623,
+              "second": {
+                "atom": "C",
+                "chain": "A",
+                "experimentally_observed": false,
+                "index": 13,
+                "residue": 3,
+                "residue_name": "LEU"
+              }
+            }
+          ]
+        },
+        "223": {
+          "all_atoms": {
+            "max_penetration": 3.078593060073912,
+            "pair_count": 4068480,
+            "severe_pairs": 19
+          },
+          "coordinate_sha256": "03baa20d9bd7012c783c8ae4fbb8c41d7375730a1b1912ea9c6289689e3527b7",
+          "excluding_terminal10": {
+            "max_penetration": 2.518337063533943,
+            "pair_count": 3657270,
+            "severe_pairs": 1
+          },
+          "observed_atoms": {
+            "max_penetration": 2.518337063533943,
+            "pair_count": 3980536,
+            "severe_pairs": 1
+          },
+          "observed_bond_geometry": {
+            "bond_rmse": 0.3312126102222018,
+            "chirality_fraction": 0.9970414201183432,
+            "observed_bonds": 2881,
+            "observed_chiral_centres": 338,
+            "observed_peptides": 356,
+            "peptide_mae": 0.214701643346144
+          },
+          "severe_touching_terminal10": 18,
+          "severe_touching_unobserved": 18,
+          "top_pairs": [
+            {
+              "both_observed": false,
+              "distance": 0.32140693992608754,
+              "first": {
+                "atom": "CA",
+                "chain": "A",
+                "experimentally_observed": false,
+                "index": 5,
+                "residue": 2,
+                "residue_name": "PRO"
+              },
+              "penetration": 3.078593060073912,
+              "second": {
+                "atom": "C",
+                "chain": "A",
+                "experimentally_observed": false,
+                "index": 21,
+                "residue": 4,
+                "residue_name": "GLY"
+              }
+            },
+            {
+              "both_observed": false,
+              "distance": 0.47043651503793404,
+              "first": {
+                "atom": "C",
+                "chain": "A",
+                "experimentally_observed": false,
+                "index": 2,
+                "residue": 1,
+                "residue_name": "GLY"
+              },
+              "penetration": 2.779563484962066,
+              "second": {
+                "atom": "N",
+                "chain": "A",
+                "experimentally_observed": false,
+                "index": 11,
+                "residue": 3,
+                "residue_name": "LEU"
+              }
+            },
+            {
+              "both_observed": false,
+              "distance": 0.6938939012561014,
+              "first": {
+                "atom": "C",
+                "chain": "A",
+                "experimentally_observed": false,
+                "index": 2,
+                "residue": 1,
+                "residue_name": "GLY"
+              },
+              "penetration": 2.7061060987438985,
+              "second": {
+                "atom": "CA",
+                "chain": "A",
+                "experimentally_observed": false,
+                "index": 12,
+                "residue": 3,
+                "residue_name": "LEU"
+              }
+            },
+            {
+              "both_observed": false,
+              "distance": 0.5871682336892291,
+              "first": {
+                "atom": "CA",
+                "chain": "A",
+                "experimentally_observed": false,
+                "index": 5,
+                "residue": 2,
+                "residue_name": "PRO"
+              },
+              "penetration": 2.6328317663107708,
+              "second": {
+                "atom": "O",
+                "chain": "A",
+                "experimentally_observed": false,
+                "index": 22,
+                "residue": 4,
+                "residue_name": "GLY"
+              }
+            },
+            {
+              "both_observed": false,
+              "distance": 0.6434998161628441,
+              "first": {
+                "atom": "N",
+                "chain": "A",
+                "experimentally_observed": false,
+                "index": 4,
+                "residue": 2,
+                "residue_name": "PRO"
+              },
+              "penetration": 2.6065001838371558,
+              "second": {
+                "atom": "C",
+                "chain": "A",
+                "experimentally_observed": false,
+                "index": 13,
+                "residue": 3,
+                "residue_name": "LEU"
+              }
+            },
+            {
+              "both_observed": false,
+              "distance": 0.6501449679339161,
+              "first": {
+                "atom": "CA",
+                "chain": "A",
+                "experimentally_observed": false,
+                "index": 5,
+                "residue": 2,
+                "residue_name": "PRO"
+              },
+              "penetration": 2.599855032066084,
+              "second": {
+                "atom": "N",
+                "chain": "A",
+                "experimentally_observed": true,
+                "index": 23,
+                "residue": 5,
+                "residue_name": "SER"
+              }
+            },
+            {
+              "both_observed": false,
+              "distance": 0.6386372979159696,
+              "first": {
+                "atom": "O",
+                "chain": "A",
+                "experimentally_observed": false,
+                "index": 7,
+                "residue": 2,
+                "residue_name": "PRO"
+              },
+              "penetration": 2.5813627020840304,
+              "second": {
+                "atom": "C",
+                "chain": "A",
+                "experimentally_observed": false,
+                "index": 13,
+                "residue": 3,
+                "residue_name": "LEU"
+              }
+            },
+            {
+              "both_observed": false,
+              "distance": 0.6783947930358194,
+              "first": {
+                "atom": "C",
+                "chain": "A",
+                "experimentally_observed": false,
+                "index": 2,
+                "residue": 1,
+                "residue_name": "GLY"
+              },
+              "penetration": 2.5416052069641806,
+              "second": {
+                "atom": "O",
+                "chain": "A",
+                "experimentally_observed": false,
+                "index": 7,
+                "residue": 2,
+                "residue_name": "PRO"
+              }
+            },
+            {
+              "both_observed": true,
+              "distance": 0.7316629364660573,
+              "experimental_distance": 4.096712023538881,
+              "first": {
+                "atom": "NE1",
+                "chain": "A",
+                "experimentally_observed": true,
+                "index": 1979,
+                "residue": 255,
+                "residue_name": "TRP"
+              },
+              "penetration": 2.518337063533943,
+              "second": {
+                "atom": "CZ3",
+                "chain": "A",
+                "experimentally_observed": true,
+                "index": 1983,
+                "residue": 255,
+                "residue_name": "TRP"
+              }
+            },
+            {
+              "both_observed": false,
+              "distance": 0.7152353389863985,
+              "first": {
+                "atom": "O",
+                "chain": "A",
+                "experimentally_observed": false,
+                "index": 3,
+                "residue": 1,
+                "residue_name": "GLY"
+              },
+              "penetration": 2.5047646610136014,
+              "second": {
+                "atom": "C",
+                "chain": "A",
+                "experimentally_observed": false,
+                "index": 13,
+                "residue": 3,
+                "residue_name": "LEU"
+              }
+            },
+            {
+              "both_observed": false,
+              "distance": 0.5378254785310355,
+              "first": {
+                "atom": "O",
+                "chain": "A",
+                "experimentally_observed": false,
+                "index": 3,
+                "residue": 1,
+                "residue_name": "GLY"
+              },
+              "penetration": 2.5021745214689646,
+              "second": {
+                "atom": "O",
+                "chain": "A",
+                "experimentally_observed": false,
+                "index": 7,
+                "residue": 2,
+                "residue_name": "PRO"
+              }
+            },
+            {
+              "both_observed": false,
+              "distance": 0.5704597761158934,
+              "first": {
+                "atom": "O",
+                "chain": "A",
+                "experimentally_observed": false,
+                "index": 3,
+                "residue": 1,
+                "residue_name": "GLY"
+              },
+              "penetration": 2.499540223884107,
+              "second": {
+                "atom": "N",
+                "chain": "A",
+                "experimentally_observed": false,
+                "index": 11,
+                "residue": 3,
+                "residue_name": "LEU"
+              }
+            }
+          ]
+        }
+      },
+      "case": "9qr4",
+      "exclusions_exact": true,
+      "expected_peptide_bonds": 361,
+      "experimental": {
+        "all_atoms": {
+          "max_penetration": 0.6613061510291902,
+          "pair_count": 3980536,
+          "severe_pairs": 0
+        },
+        "excluding_terminal10": {
+          "max_penetration": 0.6613061510291902,
+          "pair_count": 3657270,
+          "severe_pairs": 0
+        },
+        "observed_atoms": {
+          "max_penetration": 0.6613061510291902,
+          "pair_count": 3980536,
+          "severe_pairs": 0
+        },
+        "severe_touching_terminal10": 0,
+        "severe_touching_unobserved": 0,
+        "top_pairs": [
+          {
+            "both_observed": true,
+            "distance": 2.40869384897081,
+            "experimental_distance": 2.40869384897081,
+            "first": {
+              "atom": "NH2",
+              "chain": "A",
+              "experimentally_observed": true,
+              "index": 2454,
+              "residue": 313,
+              "residue_name": "ARG"
+            },
+            "penetration": 0.6613061510291902,
+            "second": {
+              "atom": "OD1",
+              "chain": "A",
+              "experimentally_observed": true,
+              "index": 2702,
+              "residue": 343,
+              "residue_name": "ASN"
+            }
+          },
+          {
+            "both_observed": true,
+            "distance": 2.4589781516742875,
+            "experimental_distance": 2.4589781516742875,
+            "first": {
+              "atom": "OD1",
+              "chain": "A",
+              "experimentally_observed": true,
+              "index": 1810,
+              "residue": 233,
+              "residue_name": "ASP"
+            },
+            "penetration": 0.5810218483257126,
+            "second": {
+              "atom": "OG",
+              "chain": "A",
+              "experimentally_observed": true,
+              "index": 1821,
+              "residue": 235,
+              "residue_name": "SER"
+            }
+          },
+          {
+            "both_observed": true,
+            "distance": 2.496757220655285,
+            "experimental_distance": 2.496757220655285,
+            "first": {
+              "atom": "OE1",
+              "chain": "A",
+              "experimentally_observed": true,
+              "index": 1929,
+              "residue": 249,
+              "residue_name": "GLU"
+            },
+            "penetration": 0.5732427793447155,
+            "second": {
+              "atom": "NZ",
+              "chain": "A",
+              "experimentally_observed": true,
+              "index": 1970,
+              "residue": 254,
+              "residue_name": "LYS"
+            }
+          },
+          {
+            "both_observed": true,
+            "distance": 2.5687194751526006,
+            "experimental_distance": 2.5687194751526006,
+            "first": {
+              "atom": "OE1",
+              "chain": "A",
+              "experimentally_observed": true,
+              "index": 183,
+              "residue": 25,
+              "residue_name": "GLU"
+            },
+            "penetration": 0.5012805248473997,
+            "second": {
+              "atom": "NZ",
+              "chain": "A",
+              "experimentally_observed": true,
+              "index": 208,
+              "residue": 28,
+              "residue_name": "LYS"
+            }
+          },
+          {
+            "both_observed": true,
+            "distance": 2.7266829250133298,
+            "experimental_distance": 2.7266829250133298,
+            "first": {
+              "atom": "O",
+              "chain": "A",
+              "experimentally_observed": true,
+              "index": 1925,
+              "residue": 249,
+              "residue_name": "GLU"
+            },
+            "penetration": 0.49331707498667,
+            "second": {
+              "atom": "C",
+              "chain": "A",
+              "experimentally_observed": true,
+              "index": 1933,
+              "residue": 250,
+              "residue_name": "LYS"
+            }
+          },
+          {
+            "both_observed": true,
+            "distance": 2.5941680488419476,
+            "experimental_distance": 2.5941680488419476,
+            "first": {
+              "atom": "NZ",
+              "chain": "A",
+              "experimentally_observed": true,
+              "index": 870,
+              "residue": 112,
+              "residue_name": "LYS"
+            },
+            "penetration": 0.47583195115805266,
+            "second": {
+              "atom": "O",
+              "chain": "A",
+              "experimentally_observed": true,
+              "index": 1016,
+              "residue": 132,
+              "residue_name": "HIS"
+            }
+          },
+          {
+            "both_observed": true,
+            "distance": 2.764248808356398,
+            "experimental_distance": 2.764248808356398,
+            "first": {
+              "atom": "O",
+              "chain": "A",
+              "experimentally_observed": true,
+              "index": 457,
+              "residue": 61,
+              "residue_name": "VAL"
+            },
+            "penetration": 0.45575119164360167,
+            "second": {
+              "atom": "C",
+              "chain": "A",
+              "experimentally_observed": true,
+              "index": 463,
+              "residue": 62,
+              "residue_name": "GLN"
+            }
+          },
+          {
+            "both_observed": true,
+            "distance": 2.765192689261076,
+            "experimental_distance": 2.765192689261076,
+            "first": {
+              "atom": "C",
+              "chain": "A",
+              "experimentally_observed": true,
+              "index": 2335,
+              "residue": 298,
+              "residue_name": "ASP"
+            },
+            "penetration": 0.45480731073892366,
+            "second": {
+              "atom": "OD1",
+              "chain": "A",
+              "experimentally_observed": true,
+              "index": 2339,
+              "residue": 298,
+              "residue_name": "ASP"
+            }
+          },
+          {
+            "both_observed": true,
+            "distance": 2.7757574034535732,
+            "experimental_distance": 2.7757574034535732,
+            "first": {
+              "atom": "O",
+              "chain": "A",
+              "experimentally_observed": true,
+              "index": 1153,
+              "residue": 149,
+              "residue_name": "ILE"
+            },
+            "penetration": 0.4442425965464265,
+            "second": {
+              "atom": "C",
+              "chain": "A",
+              "experimentally_observed": true,
+              "index": 1160,
+              "residue": 150,
+              "residue_name": "THR"
+            }
+          },
+          {
+            "both_observed": true,
+            "distance": 2.5968923072189884,
+            "experimental_distance": 2.5968923072189884,
+            "first": {
+              "atom": "O",
+              "chain": "A",
+              "experimentally_observed": true,
+              "index": 327,
+              "residue": 44,
+              "residue_name": "GLU"
+            },
+            "penetration": 0.4431076927810116,
+            "second": {
+              "atom": "OG",
+              "chain": "A",
+              "experimentally_observed": true,
+              "index": 354,
+              "residue": 47,
+              "residue_name": "SER"
+            }
+          },
+          {
+            "both_observed": true,
+            "distance": 2.7772129058796087,
+            "experimental_distance": 2.7772129058796087,
+            "first": {
+              "atom": "C",
+              "chain": "A",
+              "experimentally_observed": true,
+              "index": 1806,
+              "residue": 233,
+              "residue_name": "ASP"
+            },
+            "penetration": 0.4427870941203911,
+            "second": {
+              "atom": "OD1",
+              "chain": "A",
+              "experimentally_observed": true,
+              "index": 1810,
+              "residue": 233,
+              "residue_name": "ASP"
+            }
+          },
+          {
+            "both_observed": true,
+            "distance": 2.779462728897212,
+            "experimental_distance": 2.779462728897212,
+            "first": {
+              "atom": "O",
+              "chain": "A",
+              "experimentally_observed": true,
+              "index": 1879,
+              "residue": 243,
+              "residue_name": "SER"
+            },
+            "penetration": 0.44053727110278773,
+            "second": {
+              "atom": "C",
+              "chain": "A",
+              "experimentally_observed": true,
+              "index": 1884,
+              "residue": 244,
+              "residue_name": "ASP"
+            }
+          }
+        ]
+      },
+      "experimental_geometry": {
+        "bond_rmse": 0.037944092847718255,
+        "chirality_fraction": 1.0,
+        "observed_bonds": 2881,
+        "observed_chiral_centres": 338,
+        "observed_peptides": 356,
+        "peptide_mae": 0.005226595524983922
+      },
+      "group": "4c8e9b07b26a15147de5dd17b0221f92226aac88e82b8073f1616f893ac89d8d",
+      "gt_npz": "9qr4.assembly-1.model-1.npz",
+      "gt_payload_sha256": "75e6a9acd2dbae86b9b1bc2b200c8fc50f76a14828de3fafdcd83f20bbdb5839",
+      "observed_atom_count": 2826,
+      "pdb": "9qr4",
+      "peptide_bonds": 361
+    },
+    {
+      "atom_count": 1734,
+      "baselines": {
+        "211": {
+          "all_atoms": {
+            "max_penetration": 2.8236324626649663,
+            "pair_count": 1495708,
+            "severe_pairs": 18
+          },
+          "coordinate_sha256": "6b2291ddbb426f74d9257fa4e2571a299c82153c37129d87da8d335a146339a1",
+          "excluding_terminal10": {
+            "max_penetration": 1.670903677236338,
+            "pair_count": 1205235,
+            "severe_pairs": 0
+          },
+          "observed_atoms": {
+            "max_penetration": 2.741904977362463,
+            "pair_count": 1380412,
+            "severe_pairs": 3
+          },
+          "observed_bond_geometry": {
+            "bond_rmse": 0.42595110509387224,
+            "chirality_fraction": 0.9949238578680203,
+            "observed_bonds": 1694,
+            "observed_chiral_centres": 197,
+            "observed_peptides": 208,
+            "peptide_mae": 0.23538264364146363
+          },
+          "severe_touching_terminal10": 18,
+          "severe_touching_unobserved": 15,
+          "top_pairs": [
+            {
+              "both_observed": false,
+              "distance": 0.42636753733503385,
+              "first": {
+                "atom": "CA",
+                "chain": "A",
+                "experimentally_observed": false,
+                "index": 34,
+                "residue": 5,
+                "residue_name": "HIS"
+              },
+              "penetration": 2.8236324626649663,
+              "second": {
+                "atom": "NE2",
+                "chain": "A",
+                "experimentally_observed": false,
+                "index": 62,
+                "residue": 7,
+                "residue_name": "HIS"
+              }
+            },
+            {
+              "both_observed": false,
+              "distance": 0.6231642249840285,
+              "first": {
+                "atom": "CG",
+                "chain": "A",
+                "experimentally_observed": false,
+                "index": 18,
+                "residue": 3,
+                "residue_name": "HIS"
+              },
+              "penetration": 2.7768357750159716,
+              "second": {
+                "atom": "CA",
+                "chain": "A",
+                "experimentally_observed": false,
+                "index": 24,
+                "residue": 4,
+                "residue_name": "HIS"
+              }
+            },
+            {
+              "both_observed": true,
+              "distance": 0.5080950226375373,
+              "experimental_distance": 6.311321308921893,
+              "first": {
+                "atom": "C",
+                "chain": "A",
+                "experimentally_observed": true,
+                "index": 1682,
+                "residue": 211,
+                "residue_name": "ILE"
+              },
+              "penetration": 2.741904977362463,
+              "second": {
+                "atom": "N",
+                "chain": "A",
+                "experimentally_observed": true,
+                "index": 1724,
+                "residue": 216,
+                "residue_name": "GLN"
+              }
+            },
+            {
+              "both_observed": false,
+              "distance": 0.6818798709874566,
+              "first": {
+                "atom": "CB",
+                "chain": "A",
+                "experimentally_observed": false,
+                "index": 37,
+                "residue": 5,
+                "residue_name": "HIS"
+              },
+              "penetration": 2.718120129012543,
+              "second": {
+                "atom": "CE1",
+                "chain": "A",
+                "experimentally_observed": false,
+                "index": 61,
+                "residue": 7,
+                "residue_name": "HIS"
+              }
+            },
+            {
+              "both_observed": false,
+              "distance": 0.7088485658460432,
+              "first": {
+                "atom": "CA",
+                "chain": "A",
+                "experimentally_observed": false,
+                "index": 34,
+                "residue": 5,
+                "residue_name": "HIS"
+              },
+              "penetration": 2.691151434153957,
+              "second": {
+                "atom": "CE1",
+                "chain": "A",
+                "experimentally_observed": false,
+                "index": 61,
+                "residue": 7,
+                "residue_name": "HIS"
+              }
+            },
+            {
+              "both_observed": false,
+              "distance": 0.5437735800609352,
+              "first": {
+                "atom": "O",
+                "chain": "A",
+                "experimentally_observed": false,
+                "index": 3,
+                "residue": 1,
+                "residue_name": "MET"
+              },
+              "penetration": 2.6762264199390646,
+              "second": {
+                "atom": "C",
+                "chain": "A",
+                "experimentally_observed": false,
+                "index": 15,
+                "residue": 3,
+                "residue_name": "HIS"
+              }
+            },
+            {
+              "both_observed": false,
+              "distance": 0.44558020403074244,
+              "first": {
+                "atom": "O",
+                "chain": "A",
+                "experimentally_observed": false,
+                "index": 16,
+                "residue": 3,
+                "residue_name": "HIS"
+              },
+              "penetration": 2.5944197959692574,
+              "second": {
+                "atom": "O",
+                "chain": "A",
+                "experimentally_observed": false,
+                "index": 26,
+                "residue": 4,
+                "residue_name": "HIS"
+              }
+            },
+            {
+              "both_observed": false,
+              "distance": 0.9351386605824504,
+              "first": {
+                "atom": "CA",
+                "chain": "A",
+                "experimentally_observed": false,
+                "index": 44,
+                "residue": 6,
+                "residue_name": "HIS"
+              },
+              "penetration": 2.4648613394175496,
+              "second": {
+                "atom": "CE1",
+                "chain": "A",
+                "experimentally_observed": false,
+                "index": 51,
+                "residue": 6,
+                "residue_name": "HIS"
+              }
+            },
+            {
+              "both_observed": false,
+              "distance": 0.7665903637905593,
+              "first": {
+                "atom": "CB",
+                "chain": "A",
+                "experimentally_observed": false,
+                "index": 4,
+                "residue": 1,
+                "residue_name": "MET"
+              },
+              "penetration": 2.4534096362094404,
+              "second": {
+                "atom": "O",
+                "chain": "A",
+                "experimentally_observed": true,
+                "index": 265,
+                "residue": 34,
+                "residue_name": "GLY"
+              }
+            },
+            {
+              "both_observed": false,
+              "distance": 0.8304402884525702,
+              "first": {
+                "atom": "O",
+                "chain": "A",
+                "experimentally_observed": false,
+                "index": 16,
+                "residue": 3,
+                "residue_name": "HIS"
+              },
+              "penetration": 2.3895597115474296,
+              "second": {
+                "atom": "CD2",
+                "chain": "A",
+                "experimentally_observed": false,
+                "index": 60,
+                "residue": 7,
+                "residue_name": "HIS"
+              }
+            },
+            {
+              "both_observed": true,
+              "distance": 0.6875520302805982,
+              "experimental_distance": 5.345934203568246,
+              "first": {
+                "atom": "O",
+                "chain": "A",
+                "experimentally_observed": true,
+                "index": 1683,
+                "residue": 211,
+                "residue_name": "ILE"
+              },
+              "penetration": 2.382447969719402,
+              "second": {
+                "atom": "N",
+                "chain": "A",
+                "experimentally_observed": true,
+                "index": 1724,
+                "residue": 216,
+                "residue_name": "GLN"
+              }
+            },
+            {
+              "both_observed": false,
+              "distance": 1.0376455854138893,
+              "first": {
+                "atom": "CA",
+                "chain": "A",
+                "experimentally_observed": false,
+                "index": 34,
+                "residue": 5,
+                "residue_name": "HIS"
+              },
+              "penetration": 2.3623544145861106,
+              "second": {
+                "atom": "CD2",
+                "chain": "A",
+                "experimentally_observed": false,
+                "index": 60,
+                "residue": 7,
+                "residue_name": "HIS"
+              }
+            }
+          ]
+        },
+        "223": {
+          "all_atoms": {
+            "max_penetration": 2.8957937968925984,
+            "pair_count": 1495708,
+            "severe_pairs": 10
+          },
+          "coordinate_sha256": "649aecdffdb013a220e5e1d4e7c6a781df2be4fe8f18b7f287b377bbf53191a2",
+          "excluding_terminal10": {
+            "max_penetration": 1.4752830974464104,
+            "pair_count": 1205235,
+            "severe_pairs": 0
+          },
+          "observed_atoms": {
+            "max_penetration": 2.2162990203802857,
+            "pair_count": 1380412,
+            "severe_pairs": 0
+          },
+          "observed_bond_geometry": {
+            "bond_rmse": 0.293676325265942,
+            "chirality_fraction": 0.9898477157360406,
+            "observed_bonds": 1694,
+            "observed_chiral_centres": 197,
+            "observed_peptides": 208,
+            "peptide_mae": 0.1878733056462525
+          },
+          "severe_touching_terminal10": 10,
+          "severe_touching_unobserved": 10,
+          "top_pairs": [
+            {
+              "both_observed": false,
+              "distance": 0.5042062031074017,
+              "first": {
+                "atom": "C",
+                "chain": "A",
+                "experimentally_observed": false,
+                "index": 35,
+                "residue": 5,
+                "residue_name": "HIS"
+              },
+              "penetration": 2.8957937968925984,
+              "second": {
+                "atom": "CE1",
+                "chain": "A",
+                "experimentally_observed": false,
+                "index": 61,
+                "residue": 7,
+                "residue_name": "HIS"
+              }
+            },
+            {
+              "both_observed": false,
+              "distance": 0.6761030781047281,
+              "first": {
+                "atom": "CB",
+                "chain": "A",
+                "experimentally_observed": false,
+                "index": 17,
+                "residue": 3,
+                "residue_name": "HIS"
+              },
+              "penetration": 2.723896921895272,
+              "second": {
+                "atom": "C",
+                "chain": "A",
+                "experimentally_observed": true,
+                "index": 243,
+                "residue": 32,
+                "residue_name": "GLU"
+              }
+            },
+            {
+              "both_observed": false,
+              "distance": 0.7974186829735008,
+              "first": {
+                "atom": "SD",
+                "chain": "A",
+                "experimentally_observed": false,
+                "index": 6,
+                "residue": 1,
+                "residue_name": "MET"
+              },
+              "penetration": 2.702581317026499,
+              "second": {
+                "atom": "CB",
+                "chain": "A",
+                "experimentally_observed": true,
+                "index": 254,
+                "residue": 33,
+                "residue_name": "TYR"
+              }
+            },
+            {
+              "both_observed": false,
+              "distance": 0.6685157334232719,
+              "first": {
+                "atom": "CA",
+                "chain": "A",
+                "experimentally_observed": false,
+                "index": 24,
+                "residue": 4,
+                "residue_name": "HIS"
+              },
+              "penetration": 2.5814842665767284,
+              "second": {
+                "atom": "NE2",
+                "chain": "A",
+                "experimentally_observed": false,
+                "index": 52,
+                "residue": 6,
+                "residue_name": "HIS"
+              }
+            },
+            {
+              "both_observed": false,
+              "distance": 0.8497703577444888,
+              "first": {
+                "atom": "CD2",
+                "chain": "A",
+                "experimentally_observed": false,
+                "index": 50,
+                "residue": 6,
+                "residue_name": "HIS"
+              },
+              "penetration": 2.550229642255511,
+              "second": {
+                "atom": "C",
+                "chain": "A",
+                "experimentally_observed": false,
+                "index": 55,
+                "residue": 7,
+                "residue_name": "HIS"
+              }
+            },
+            {
+              "both_observed": false,
+              "distance": 0.7372722388512276,
+              "first": {
+                "atom": "C",
+                "chain": "A",
+                "experimentally_observed": false,
+                "index": 35,
+                "residue": 5,
+                "residue_name": "HIS"
+              },
+              "penetration": 2.5127277611487724,
+              "second": {
+                "atom": "NE2",
+                "chain": "A",
+                "experimentally_observed": false,
+                "index": 62,
+                "residue": 7,
+                "residue_name": "HIS"
+              }
+            },
+            {
+              "both_observed": false,
+              "distance": 0.8929447679722723,
+              "first": {
+                "atom": "CD2",
+                "chain": "A",
+                "experimentally_observed": false,
+                "index": 50,
+                "residue": 6,
+                "residue_name": "HIS"
+              },
+              "penetration": 2.5070552320277275,
+              "second": {
+                "atom": "CA",
+                "chain": "A",
+                "experimentally_observed": false,
+                "index": 54,
+                "residue": 7,
+                "residue_name": "HIS"
+              }
+            },
+            {
+              "both_observed": false,
+              "distance": 0.6967723837878087,
+              "first": {
+                "atom": "N",
+                "chain": "A",
+                "experimentally_observed": false,
+                "index": 0,
+                "residue": 1,
+                "residue_name": "MET"
+              },
+              "penetration": 2.4032276162121913,
+              "second": {
+                "atom": "NE2",
+                "chain": "A",
+                "experimentally_observed": true,
+                "index": 293,
+                "residue": 37,
+                "residue_name": "HIS"
+              }
+            },
+            {
+              "both_observed": false,
+              "distance": 1.0274547668109564,
+              "first": {
+                "atom": "CE",
+                "chain": "A",
+                "experimentally_observed": false,
+                "index": 7,
+                "residue": 1,
+                "residue_name": "MET"
+              },
+              "penetration": 2.3725452331890438,
+              "second": {
+                "atom": "CG",
+                "chain": "A",
+                "experimentally_observed": true,
+                "index": 255,
+                "residue": 33,
+                "residue_name": "TYR"
+              }
+            },
+            {
+              "both_observed": false,
+              "distance": 1.1092937584369118,
+              "first": {
+                "atom": "C",
+                "chain": "A",
+                "experimentally_observed": false,
+                "index": 10,
+                "residue": 2,
+                "residue_name": "ALA"
+              },
+              "penetration": 2.290706241563088,
+              "second": {
+                "atom": "CD2",
+                "chain": "A",
+                "experimentally_observed": false,
+                "index": 40,
+                "residue": 5,
+                "residue_name": "HIS"
+              }
+            },
+            {
+              "both_observed": false,
+              "distance": 1.126419444714119,
+              "first": {
+                "atom": "C",
+                "chain": "A",
+                "experimentally_observed": false,
+                "index": 45,
+                "residue": 6,
+                "residue_name": "HIS"
+              },
+              "penetration": 2.273580555285881,
+              "second": {
+                "atom": "CD2",
+                "chain": "A",
+                "experimentally_observed": false,
+                "index": 60,
+                "residue": 7,
+                "residue_name": "HIS"
+              }
+            },
+            {
+              "both_observed": false,
+              "distance": 0.99730049864073,
+              "first": {
+                "atom": "N",
+                "chain": "A",
+                "experimentally_observed": false,
+                "index": 0,
+                "residue": 1,
+                "residue_name": "MET"
+              },
+              "penetration": 2.25269950135927,
+              "second": {
+                "atom": "CE1",
+                "chain": "A",
+                "experimentally_observed": true,
+                "index": 292,
+                "residue": 37,
+                "residue_name": "HIS"
+              }
+            }
+          ]
+        }
+      },
+      "case": "confirmation1",
+      "exclusions_exact": true,
+      "expected_peptide_bonds": 215,
+      "experimental": {
+        "all_atoms": {
+          "max_penetration": 0.5285600313434053,
+          "pair_count": 1380412,
+          "severe_pairs": 0
+        },
+        "excluding_terminal10": {
+          "max_penetration": 0.5285600313434053,
+          "pair_count": 1205235,
+          "severe_pairs": 0
+        },
+        "observed_atoms": {
+          "max_penetration": 0.5285600313434053,
+          "pair_count": 1380412,
+          "severe_pairs": 0
+        },
+        "severe_touching_terminal10": 0,
+        "severe_touching_unobserved": 0,
+        "top_pairs": [
+          {
+            "both_observed": true,
+            "distance": 2.5114399686565947,
+            "experimental_distance": 2.5114399686565947,
+            "first": {
+              "atom": "OE1",
+              "chain": "A",
+              "experimentally_observed": true,
+              "index": 368,
+              "residue": 47,
+              "residue_name": "GLU"
+            },
+            "penetration": 0.5285600313434053,
+            "second": {
+              "atom": "OG",
+              "chain": "A",
+              "experimentally_observed": true,
+              "index": 408,
+              "residue": 52,
+              "residue_name": "SER"
+            }
+          },
+          {
+            "both_observed": true,
+            "distance": 2.7977515194865217,
+            "experimental_distance": 2.7977515194865217,
+            "first": {
+              "atom": "O",
+              "chain": "A",
+              "experimentally_observed": true,
+              "index": 406,
+              "residue": 52,
+              "residue_name": "SER"
+            },
+            "penetration": 0.4222484805134781,
+            "second": {
+              "atom": "C",
+              "chain": "A",
+              "experimentally_observed": true,
+              "index": 411,
+              "residue": 53,
+              "residue_name": "PRO"
+            }
+          },
+          {
+            "both_observed": true,
+            "distance": 2.8007708812928196,
+            "experimental_distance": 2.8007708812928196,
+            "first": {
+              "atom": "O",
+              "chain": "A",
+              "experimentally_observed": true,
+              "index": 1186,
+              "residue": 151,
+              "residue_name": "SER"
+            },
+            "penetration": 0.41922911870718016,
+            "second": {
+              "atom": "C",
+              "chain": "A",
+              "experimentally_observed": true,
+              "index": 1191,
+              "residue": 152,
+              "residue_name": "PRO"
+            }
+          },
+          {
+            "both_observed": true,
+            "distance": 2.8060916916012517,
+            "experimental_distance": 2.8060916916012517,
+            "first": {
+              "atom": "C",
+              "chain": "A",
+              "experimentally_observed": true,
+              "index": 1068,
+              "residue": 136,
+              "residue_name": "ASP"
+            },
+            "penetration": 0.41390830839874804,
+            "second": {
+              "atom": "OD1",
+              "chain": "A",
+              "experimentally_observed": true,
+              "index": 1072,
+              "residue": 136,
+              "residue_name": "ASP"
+            }
+          },
+          {
+            "both_observed": true,
+            "distance": 2.8094484358781475,
+            "experimental_distance": 2.8094484358781475,
+            "first": {
+              "atom": "O",
+              "chain": "A",
+              "experimentally_observed": true,
+              "index": 1579,
+              "residue": 199,
+              "residue_name": "GLU"
+            },
+            "penetration": 0.41055156412185223,
+            "second": {
+              "atom": "C",
+              "chain": "A",
+              "experimentally_observed": true,
+              "index": 1587,
+              "residue": 200,
+              "residue_name": "ILE"
+            }
+          },
+          {
+            "both_observed": true,
+            "distance": 2.8114048597780257,
+            "experimental_distance": 2.8114048597780257,
+            "first": {
+              "atom": "C",
+              "chain": "A",
+              "experimentally_observed": true,
+              "index": 1550,
+              "residue": 195,
+              "residue_name": "ASN"
+            },
+            "penetration": 0.4085951402219741,
+            "second": {
+              "atom": "OD1",
+              "chain": "A",
+              "experimentally_observed": true,
+              "index": 1554,
+              "residue": 195,
+              "residue_name": "ASN"
+            }
+          },
+          {
+            "both_observed": true,
+            "distance": 2.8133521546534648,
+            "experimental_distance": 2.8133521546534648,
+            "first": {
+              "atom": "O",
+              "chain": "A",
+              "experimentally_observed": true,
+              "index": 453,
+              "residue": 58,
+              "residue_name": "CYS"
+            },
+            "penetration": 0.406647845346535,
+            "second": {
+              "atom": "C",
+              "chain": "A",
+              "experimentally_observed": true,
+              "index": 458,
+              "residue": 59,
+              "residue_name": "ALA"
+            }
+          },
+          {
+            "both_observed": true,
+            "distance": 2.813773813942735,
+            "experimental_distance": 2.813773813942735,
+            "first": {
+              "atom": "O",
+              "chain": "A",
+              "experimentally_observed": true,
+              "index": 1208,
+              "residue": 154,
+              "residue_name": "VAL"
+            },
+            "penetration": 0.4062261860572649,
+            "second": {
+              "atom": "C",
+              "chain": "A",
+              "experimentally_observed": true,
+              "index": 1214,
+              "residue": 155,
+              "residue_name": "ALA"
+            }
+          },
+          {
+            "both_observed": true,
+            "distance": 2.8457353792477056,
+            "experimental_distance": 2.8457353792477056,
+            "first": {
+              "atom": "N",
+              "chain": "A",
+              "experimentally_observed": true,
+              "index": 1561,
+              "residue": 197,
+              "residue_name": "ASP"
+            },
+            "penetration": 0.4042646207522944,
+            "second": {
+              "atom": "CD",
+              "chain": "A",
+              "experimentally_observed": true,
+              "index": 1575,
+              "residue": 198,
+              "residue_name": "PRO"
+            }
+          },
+          {
+            "both_observed": true,
+            "distance": 2.8186527497405414,
+            "experimental_distance": 2.8186527497405414,
+            "first": {
+              "atom": "O",
+              "chain": "A",
+              "experimentally_observed": true,
+              "index": 562,
+              "residue": 73,
+              "residue_name": "VAL"
+            },
+            "penetration": 0.4013472502594584,
+            "second": {
+              "atom": "C",
+              "chain": "A",
+              "experimentally_observed": true,
+              "index": 568,
+              "residue": 74,
+              "residue_name": "VAL"
+            }
+          },
+          {
+            "both_observed": true,
+            "distance": 2.8208506186345375,
+            "experimental_distance": 2.8208506186345375,
+            "first": {
+              "atom": "O",
+              "chain": "A",
+              "experimentally_observed": true,
+              "index": 530,
+              "residue": 69,
+              "residue_name": "PRO"
+            },
+            "penetration": 0.3991493813654623,
+            "second": {
+              "atom": "C",
+              "chain": "A",
+              "experimentally_observed": true,
+              "index": 536,
+              "residue": 70,
+              "residue_name": "ASP"
+            }
+          },
+          {
+            "both_observed": true,
+            "distance": 2.823335321391589,
+            "experimental_distance": 2.823335321391589,
+            "first": {
+              "atom": "O",
+              "chain": "A",
+              "experimentally_observed": true,
+              "index": 537,
+              "residue": 70,
+              "residue_name": "ASP"
+            },
+            "penetration": 0.3966646786084107,
+            "second": {
+              "atom": "C",
+              "chain": "A",
+              "experimentally_observed": true,
+              "index": 544,
+              "residue": 71,
+              "residue_name": "GLU"
+            }
+          }
+        ]
+      },
+      "experimental_geometry": {
+        "bond_rmse": 0.04011519056198002,
+        "chirality_fraction": 1.0,
+        "observed_bonds": 1694,
+        "observed_chiral_centres": 197,
+        "observed_peptides": 208,
+        "peptide_mae": 0.0044307057842533065
+      },
+      "group": "f1430179649ab2120773e7aef3e7d2e42d56d4bf08fa75603c80074441eb1e59",
+      "gt_npz": "37ap.assembly-1.model-1.npz",
+      "gt_payload_sha256": "d2405cd8e5bb5372cac4eb39bdaab3785e253d1b3ca37aba77def455fb9651a2",
+      "observed_atom_count": 1666,
+      "pdb": "37ap",
+      "peptide_bonds": 215
+    },
+    {
+      "atom_count": 1554,
+      "baselines": {
+        "211": {
+          "all_atoms": {
+            "max_penetration": 3.075141887434845,
+            "pair_count": 1200537,
+            "severe_pairs": 138
+          },
+          "coordinate_sha256": "0c7a3a5e5f37654da2f631c2a533abb4c981dc2274475253ea3cf36b23c705d2",
+          "excluding_terminal10": {
+            "max_penetration": 3.075141887434845,
+            "pair_count": 965396,
+            "severe_pairs": 103
+          },
+          "observed_atoms": {
+            "max_penetration": 3.075141887434845,
+            "pair_count": 1192800,
+            "severe_pairs": 135
+          },
+          "observed_bond_geometry": {
+            "bond_rmse": 0.3688703460476568,
+            "chirality_fraction": 0.9946236559139785,
+            "observed_bonds": 1578,
+            "observed_chiral_centres": 186,
+            "observed_peptides": 194,
+            "peptide_mae": 0.21779940025531366
+          },
+          "severe_touching_terminal10": 35,
+          "severe_touching_unobserved": 3,
+          "top_pairs": [
+            {
+              "both_observed": true,
+              "distance": 0.17485811256515482,
+              "experimental_distance": 6.4009620456839,
+              "first": {
+                "atom": "NE2",
+                "chain": "A",
+                "experimentally_observed": true,
+                "index": 1320,
+                "residue": 167,
+                "residue_name": "GLN"
+              },
+              "penetration": 3.075141887434845,
+              "second": {
+                "atom": "CA",
+                "chain": "A",
+                "experimentally_observed": true,
+                "index": 1322,
+                "residue": 168,
+                "residue_name": "HIS"
+              }
+            },
+            {
+              "both_observed": true,
+              "distance": 0.37227520925524193,
+              "experimental_distance": 5.237784301136305,
+              "first": {
+                "atom": "CA",
+                "chain": "A",
+                "experimentally_observed": true,
+                "index": 992,
+                "residue": 126,
+                "residue_name": "PRO"
+              },
+              "penetration": 3.0277247907447578,
+              "second": {
+                "atom": "CG",
+                "chain": "A",
+                "experimentally_observed": true,
+                "index": 1022,
+                "residue": 129,
+                "residue_name": "PHE"
+              }
+            },
+            {
+              "both_observed": true,
+              "distance": 0.2581503956289529,
+              "experimental_distance": 5.016106703913668,
+              "first": {
+                "atom": "CD",
+                "chain": "A",
+                "experimentally_observed": true,
+                "index": 1318,
+                "residue": 167,
+                "residue_name": "GLN"
+              },
+              "penetration": 2.991849604371047,
+              "second": {
+                "atom": "N",
+                "chain": "A",
+                "experimentally_observed": true,
+                "index": 1321,
+                "residue": 168,
+                "residue_name": "HIS"
+              }
+            },
+            {
+              "both_observed": true,
+              "distance": 0.409313111338268,
+              "experimental_distance": 9.661583579686665,
+              "first": {
+                "atom": "C",
+                "chain": "A",
+                "experimentally_observed": true,
+                "index": 814,
+                "residue": 105,
+                "residue_name": "TYR"
+              },
+              "penetration": 2.990686888661732,
+              "second": {
+                "atom": "CA",
+                "chain": "A",
+                "experimentally_observed": true,
+                "index": 1113,
+                "residue": 142,
+                "residue_name": "GLU"
+              }
+            },
+            {
+              "both_observed": true,
+              "distance": 0.4992312001676684,
+              "experimental_distance": 12.876213698724532,
+              "first": {
+                "atom": "CG",
+                "chain": "A",
+                "experimentally_observed": true,
+                "index": 1403,
+                "residue": 177,
+                "residue_name": "PHE"
+              },
+              "penetration": 2.9007687998323313,
+              "second": {
+                "atom": "CZ",
+                "chain": "A",
+                "experimentally_observed": true,
+                "index": 1468,
+                "residue": 185,
+                "residue_name": "ARG"
+              }
+            },
+            {
+              "both_observed": true,
+              "distance": 0.5095280789623783,
+              "experimental_distance": 30.092500881931112,
+              "first": {
+                "atom": "CG2",
+                "chain": "A",
+                "experimentally_observed": true,
+                "index": 1343,
+                "residue": 170,
+                "residue_name": "ILE"
+              },
+              "penetration": 2.8904719210376215,
+              "second": {
+                "atom": "CB",
+                "chain": "A",
+                "experimentally_observed": true,
+                "index": 1535,
+                "residue": 193,
+                "residue_name": "ASP"
+              }
+            },
+            {
+              "both_observed": true,
+              "distance": 0.3645539228334993,
+              "experimental_distance": 13.139989554779307,
+              "first": {
+                "atom": "CB",
+                "chain": "A",
+                "experimentally_observed": true,
+                "index": 1402,
+                "residue": 177,
+                "residue_name": "PHE"
+              },
+              "penetration": 2.8854460771665007,
+              "second": {
+                "atom": "NH2",
+                "chain": "A",
+                "experimentally_observed": true,
+                "index": 1470,
+                "residue": 185,
+                "residue_name": "ARG"
+              }
+            },
+            {
+              "both_observed": true,
+              "distance": 0.5186450452186707,
+              "experimental_distance": 29.143781179314388,
+              "first": {
+                "atom": "CG1",
+                "chain": "A",
+                "experimentally_observed": true,
+                "index": 1342,
+                "residue": 170,
+                "residue_name": "ILE"
+              },
+              "penetration": 2.881354954781329,
+              "second": {
+                "atom": "CA",
+                "chain": "A",
+                "experimentally_observed": true,
+                "index": 1532,
+                "residue": 193,
+                "residue_name": "ASP"
+              }
+            },
+            {
+              "both_observed": true,
+              "distance": 0.3539980099080753,
+              "experimental_distance": 6.71218151600879,
+              "first": {
+                "atom": "O",
+                "chain": "A",
+                "experimentally_observed": true,
+                "index": 1491,
+                "residue": 188,
+                "residue_name": "LEU"
+              },
+              "penetration": 2.8660019900919247,
+              "second": {
+                "atom": "CD",
+                "chain": "A",
+                "experimentally_observed": true,
+                "index": 1520,
+                "residue": 191,
+                "residue_name": "LYS"
+              }
+            },
+            {
+              "both_observed": true,
+              "distance": 0.3614830153630411,
+              "experimental_distance": 16.086785752637972,
+              "first": {
+                "atom": "C",
+                "chain": "A",
+                "experimentally_observed": true,
+                "index": 783,
+                "residue": 101,
+                "residue_name": "ILE"
+              },
+              "penetration": 2.8585169846369585,
+              "second": {
+                "atom": "OD1",
+                "chain": "A",
+                "experimentally_observed": true,
+                "index": 1077,
+                "residue": 136,
+                "residue_name": "ASN"
+              }
+            },
+            {
+              "both_observed": true,
+              "distance": 0.2162298106865571,
+              "experimental_distance": 14.680777821824757,
+              "first": {
+                "atom": "N",
+                "chain": "A",
+                "experimentally_observed": true,
+                "index": 789,
+                "residue": 102,
+                "residue_name": "VAL"
+              },
+              "penetration": 2.853770189313443,
+              "second": {
+                "atom": "O",
+                "chain": "A",
+                "experimentally_observed": true,
+                "index": 1068,
+                "residue": 135,
+                "residue_name": "SER"
+              }
+            },
+            {
+              "both_observed": true,
+              "distance": 0.5851281488524399,
+              "experimental_distance": 6.5374174501899445,
+              "first": {
+                "atom": "CA",
+                "chain": "A",
+                "experimentally_observed": true,
+                "index": 992,
+                "residue": 126,
+                "residue_name": "PRO"
+              },
+              "penetration": 2.81487185114756,
+              "second": {
+                "atom": "CD2",
+                "chain": "A",
+                "experimentally_observed": true,
+                "index": 1024,
+                "residue": 129,
+                "residue_name": "PHE"
+              }
+            }
+          ]
+        },
+        "223": {
+          "all_atoms": {
+            "max_penetration": 3.13352506981164,
+            "pair_count": 1200537,
+            "severe_pairs": 131
+          },
+          "coordinate_sha256": "051b2b151b7187044a157130b39307db4f5dd5b6985e377b47bf42d368bd3da5",
+          "excluding_terminal10": {
+            "max_penetration": 3.13352506981164,
+            "pair_count": 965396,
+            "severe_pairs": 103
+          },
+          "observed_atoms": {
+            "max_penetration": 3.13352506981164,
+            "pair_count": 1192800,
+            "severe_pairs": 127
+          },
+          "observed_bond_geometry": {
+            "bond_rmse": 0.3843218623688321,
+            "chirality_fraction": 0.9946236559139785,
+            "observed_bonds": 1578,
+            "observed_chiral_centres": 186,
+            "observed_peptides": 194,
+            "peptide_mae": 0.25557719078983476
+          },
+          "severe_touching_terminal10": 28,
+          "severe_touching_unobserved": 4,
+          "top_pairs": [
+            {
+              "both_observed": true,
+              "distance": 0.26647493018835994,
+              "experimental_distance": 14.94840660873916,
+              "first": {
+                "atom": "C",
+                "chain": "A",
+                "experimentally_observed": true,
+                "index": 579,
+                "residue": 75,
+                "residue_name": "ALA"
+              },
+              "penetration": 3.13352506981164,
+              "second": {
+                "atom": "CE",
+                "chain": "A",
+                "experimentally_observed": true,
+                "index": 662,
+                "residue": 85,
+                "residue_name": "MET"
+              }
+            },
+            {
+              "both_observed": true,
+              "distance": 0.2852974087786898,
+              "experimental_distance": 9.694914966921338,
+              "first": {
+                "atom": "CG",
+                "chain": "A",
+                "experimentally_observed": true,
+                "index": 837,
+                "residue": 107,
+                "residue_name": "LYS"
+              },
+              "penetration": 3.11470259122131,
+              "second": {
+                "atom": "CD",
+                "chain": "A",
+                "experimentally_observed": true,
+                "index": 1135,
+                "residue": 144,
+                "residue_name": "GLN"
+              }
+            },
+            {
+              "both_observed": true,
+              "distance": 0.28681896918438327,
+              "experimental_distance": 8.493823790488232,
+              "first": {
+                "atom": "CB",
+                "chain": "A",
+                "experimentally_observed": true,
+                "index": 836,
+                "residue": 107,
+                "residue_name": "LYS"
+              },
+              "penetration": 3.1131810308156167,
+              "second": {
+                "atom": "CG",
+                "chain": "A",
+                "experimentally_observed": true,
+                "index": 1134,
+                "residue": 144,
+                "residue_name": "GLN"
+              }
+            },
+            {
+              "both_observed": true,
+              "distance": 0.3071381587169682,
+              "experimental_distance": 18.019168648027502,
+              "first": {
+                "atom": "CB",
+                "chain": "A",
+                "experimentally_observed": true,
+                "index": 570,
+                "residue": 74,
+                "residue_name": "PHE"
+              },
+              "penetration": 3.0928618412830318,
+              "second": {
+                "atom": "C",
+                "chain": "A",
+                "experimentally_observed": true,
+                "index": 1046,
+                "residue": 132,
+                "residue_name": "VAL"
+              }
+            },
+            {
+              "both_observed": true,
+              "distance": 0.3764212250809576,
+              "experimental_distance": 8.086671025690725,
+              "first": {
+                "atom": "CD",
+                "chain": "A",
+                "experimentally_observed": true,
+                "index": 1429,
+                "residue": 180,
+                "residue_name": "LYS"
+              },
+              "penetration": 3.0235787749190424,
+              "second": {
+                "atom": "CB",
+                "chain": "A",
+                "experimentally_observed": true,
+                "index": 1436,
+                "residue": 181,
+                "residue_name": "ASN"
+              }
+            },
+            {
+              "both_observed": true,
+              "distance": 0.4096529243806372,
+              "experimental_distance": 5.932767155079986,
+              "first": {
+                "atom": "CG",
+                "chain": "A",
+                "experimentally_observed": true,
+                "index": 1428,
+                "residue": 180,
+                "residue_name": "LYS"
+              },
+              "penetration": 2.9903470756193626,
+              "second": {
+                "atom": "CA",
+                "chain": "A",
+                "experimentally_observed": true,
+                "index": 1433,
+                "residue": 181,
+                "residue_name": "ASN"
+              }
+            },
+            {
+              "both_observed": true,
+              "distance": 0.5174621752724801,
+              "experimental_distance": 15.158059457344592,
+              "first": {
+                "atom": "C",
+                "chain": "A",
+                "experimentally_observed": true,
+                "index": 579,
+                "residue": 75,
+                "residue_name": "ALA"
+              },
+              "penetration": 2.98253782472752,
+              "second": {
+                "atom": "SD",
+                "chain": "A",
+                "experimentally_observed": true,
+                "index": 661,
+                "residue": 85,
+                "residue_name": "MET"
+              }
+            },
+            {
+              "both_observed": true,
+              "distance": 0.42100384036313043,
+              "experimental_distance": 14.99438773677805,
+              "first": {
+                "atom": "C",
+                "chain": "A",
+                "experimentally_observed": true,
+                "index": 1209,
+                "residue": 154,
+                "residue_name": "ALA"
+              },
+              "penetration": 2.9789961596368695,
+              "second": {
+                "atom": "CD",
+                "chain": "A",
+                "experimentally_observed": true,
+                "index": 1520,
+                "residue": 191,
+                "residue_name": "LYS"
+              }
+            },
+            {
+              "both_observed": true,
+              "distance": 0.27820754523923696,
+              "experimental_distance": 8.632001495560282,
+              "first": {
+                "atom": "CA",
+                "chain": "A",
+                "experimentally_observed": true,
+                "index": 1387,
+                "residue": 176,
+                "residue_name": "TYR"
+              },
+              "penetration": 2.941792454760763,
+              "second": {
+                "atom": "O",
+                "chain": "A",
+                "experimentally_observed": true,
+                "index": 1474,
+                "residue": 186,
+                "residue_name": "LYS"
+              }
+            },
+            {
+              "both_observed": true,
+              "distance": 0.27843816489818873,
+              "experimental_distance": 10.435699259105634,
+              "first": {
+                "atom": "CG",
+                "chain": "A",
+                "experimentally_observed": true,
+                "index": 837,
+                "residue": 107,
+                "residue_name": "LYS"
+              },
+              "penetration": 2.941561835101811,
+              "second": {
+                "atom": "OE1",
+                "chain": "A",
+                "experimentally_observed": true,
+                "index": 1136,
+                "residue": 144,
+                "residue_name": "GLN"
+              }
+            },
+            {
+              "both_observed": true,
+              "distance": 0.31780674242848084,
+              "experimental_distance": 4.607580279258044,
+              "first": {
+                "atom": "CG",
+                "chain": "A",
+                "experimentally_observed": true,
+                "index": 1428,
+                "residue": 180,
+                "residue_name": "LYS"
+              },
+              "penetration": 2.932193257571519,
+              "second": {
+                "atom": "N",
+                "chain": "A",
+                "experimentally_observed": true,
+                "index": 1432,
+                "residue": 181,
+                "residue_name": "ASN"
+              }
+            },
+            {
+              "both_observed": true,
+              "distance": 0.49041297392333866,
+              "experimental_distance": 9.445817789546654,
+              "first": {
+                "atom": "CE",
+                "chain": "A",
+                "experimentally_observed": true,
+                "index": 1430,
+                "residue": 180,
+                "residue_name": "LYS"
+              },
+              "penetration": 2.9095870260766614,
+              "second": {
+                "atom": "CB",
+                "chain": "A",
+                "experimentally_observed": true,
+                "index": 1436,
+                "residue": 181,
+                "residue_name": "ASN"
+              }
+            }
+          ]
+        }
+      },
+      "case": "confirmation2",
+      "exclusions_exact": true,
+      "expected_peptide_bonds": 194,
+      "experimental": {
+        "all_atoms": {
+          "max_penetration": 1.56325090660429,
+          "pair_count": 1192800,
+          "severe_pairs": 0
+        },
+        "excluding_terminal10": {
+          "max_penetration": 1.56325090660429,
+          "pair_count": 959843,
+          "severe_pairs": 0
+        },
+        "observed_atoms": {
+          "max_penetration": 1.56325090660429,
+          "pair_count": 1192800,
+          "severe_pairs": 0
+        },
+        "severe_touching_terminal10": 0,
+        "severe_touching_unobserved": 0,
+        "top_pairs": [
+          {
+            "both_observed": true,
+            "distance": 2.03674909339571,
+            "experimental_distance": 2.03674909339571,
+            "first": {
+              "atom": "SG",
+              "chain": "A",
+              "experimentally_observed": true,
+              "index": 406,
+              "residue": 54,
+              "residue_name": "CYS"
+            },
+            "penetration": 1.56325090660429,
+            "second": {
+              "atom": "SG",
+              "chain": "A",
+              "experimentally_observed": true,
+              "index": 780,
+              "residue": 100,
+              "residue_name": "CYS"
+            }
+          },
+          {
+            "both_observed": true,
+            "distance": 2.042545429592887,
+            "experimental_distance": 2.042545429592887,
+            "first": {
+              "atom": "SG",
+              "chain": "A",
+              "experimentally_observed": true,
+              "index": 846,
+              "residue": 108,
+              "residue_name": "CYS"
+            },
+            "penetration": 1.557454570407113,
+            "second": {
+              "atom": "SG",
+              "chain": "A",
+              "experimentally_observed": true,
+              "index": 1169,
+              "residue": 148,
+              "residue_name": "CYS"
+            }
+          },
+          {
+            "both_observed": true,
+            "distance": 2.044716488104107,
+            "experimental_distance": 2.044716488104107,
+            "first": {
+              "atom": "SG",
+              "chain": "A",
+              "experimentally_observed": true,
+              "index": 12,
+              "residue": 2,
+              "residue_name": "CYS"
+            },
+            "penetration": 1.555283511895893,
+            "second": {
+              "atom": "SG",
+              "chain": "A",
+              "experimentally_observed": true,
+              "index": 1282,
+              "residue": 162,
+              "residue_name": "CYS"
+            }
+          },
+          {
+            "both_observed": true,
+            "distance": 2.0540739198473807,
+            "experimental_distance": 2.0540739198473807,
+            "first": {
+              "atom": "SG",
+              "chain": "A",
+              "experimentally_observed": true,
+              "index": 224,
+              "residue": 29,
+              "residue_name": "CYS"
+            },
+            "penetration": 1.5459260801526193,
+            "second": {
+              "atom": "SG",
+              "chain": "A",
+              "experimentally_observed": true,
+              "index": 1552,
+              "residue": 195,
+              "residue_name": "CYS"
+            }
+          },
+          {
+            "both_observed": true,
+            "distance": 1.9698403093670507,
+            "experimental_distance": 1.9698403093670507,
+            "first": {
+              "atom": "NZ",
+              "chain": "A",
+              "experimentally_observed": true,
+              "index": 990,
+              "residue": 125,
+              "residue_name": "LYS"
+            },
+            "penetration": 1.1301596906329494,
+            "second": {
+              "atom": "NH2",
+              "chain": "A",
+              "experimentally_observed": true,
+              "index": 1008,
+              "residue": 127,
+              "residue_name": "ARG"
+            }
+          },
+          {
+            "both_observed": true,
+            "distance": 2.1320546961220863,
+            "experimental_distance": 2.1320546961220863,
+            "first": {
+              "atom": "O",
+              "chain": "A",
+              "experimentally_observed": true,
+              "index": 502,
+              "residue": 66,
+              "residue_name": "ASN"
+            },
+            "penetration": 0.9079453038779137,
+            "second": {
+              "atom": "OG1",
+              "chain": "A",
+              "experimentally_observed": true,
+              "index": 937,
+              "residue": 119,
+              "residue_name": "THR"
+            }
+          },
+          {
+            "both_observed": true,
+            "distance": 2.1746485739995505,
+            "experimental_distance": 2.1746485739995505,
+            "first": {
+              "atom": "O",
+              "chain": "A",
+              "experimentally_observed": true,
+              "index": 1093,
+              "residue": 139,
+              "residue_name": "SER"
+            },
+            "penetration": 0.8653514260004496,
+            "second": {
+              "atom": "OG",
+              "chain": "A",
+              "experimentally_observed": true,
+              "index": 1095,
+              "residue": 139,
+              "residue_name": "SER"
+            }
+          },
+          {
+            "both_observed": true,
+            "distance": 2.4003801958197086,
+            "experimental_distance": 2.4003801958197086,
+            "first": {
+              "atom": "OG",
+              "chain": "A",
+              "experimentally_observed": true,
+              "index": 315,
+              "residue": 41,
+              "residue_name": "SER"
+            },
+            "penetration": 0.6396198041802914,
+            "second": {
+              "atom": "OE2",
+              "chain": "A",
+              "experimentally_observed": true,
+              "index": 855,
+              "residue": 109,
+              "residue_name": "GLU"
+            }
+          },
+          {
+            "both_observed": true,
+            "distance": 2.4266831204184727,
+            "experimental_distance": 2.4266831204184727,
+            "first": {
+              "atom": "OH",
+              "chain": "A",
+              "experimentally_observed": true,
+              "index": 116,
+              "residue": 15,
+              "residue_name": "TYR"
+            },
+            "penetration": 0.6133168795815274,
+            "second": {
+              "atom": "OE1",
+              "chain": "A",
+              "experimentally_observed": true,
+              "index": 131,
+              "residue": 17,
+              "residue_name": "GLU"
+            }
+          },
+          {
+            "both_observed": true,
+            "distance": 2.6728819310461036,
+            "experimental_distance": 2.6728819310461036,
+            "first": {
+              "atom": "O",
+              "chain": "A",
+              "experimentally_observed": true,
+              "index": 1089,
+              "residue": 138,
+              "residue_name": "GLY"
+            },
+            "penetration": 0.5471180689538961,
+            "second": {
+              "atom": "C",
+              "chain": "A",
+              "experimentally_observed": true,
+              "index": 1092,
+              "residue": 139,
+              "residue_name": "SER"
+            }
+          },
+          {
+            "both_observed": true,
+            "distance": 2.9582066352668837,
+            "experimental_distance": 2.9582066352668837,
+            "first": {
+              "atom": "SG",
+              "chain": "A",
+              "experimentally_observed": true,
+              "index": 12,
+              "residue": 2,
+              "residue_name": "CYS"
+            },
+            "penetration": 0.5417933647331163,
+            "second": {
+              "atom": "CB",
+              "chain": "A",
+              "experimentally_observed": true,
+              "index": 1281,
+              "residue": 162,
+              "residue_name": "CYS"
+            }
+          },
+          {
+            "both_observed": true,
+            "distance": 2.5367369337425134,
+            "experimental_distance": 2.5367369337425134,
+            "first": {
+              "atom": "O",
+              "chain": "A",
+              "experimentally_observed": true,
+              "index": 30,
+              "residue": 5,
+              "residue_name": "GLY"
+            },
+            "penetration": 0.5332630662574869,
+            "second": {
+              "atom": "NE2",
+              "chain": "A",
+              "experimentally_observed": true,
+              "index": 701,
+              "residue": 90,
+              "residue_name": "HIS"
+            }
+          }
+        ]
+      },
+      "experimental_geometry": {
+        "bond_rmse": 0.038442199859773506,
+        "chirality_fraction": 1.0,
+        "observed_bonds": 1578,
+        "observed_chiral_centres": 186,
+        "observed_peptides": 194,
+        "peptide_mae": 0.003835284648311265
+      },
+      "group": "c7573415d9614469cd628cd9215e3d5d53c8d1ef317559a04a806e45a14b12d2",
+      "gt_npz": "8jc6.assembly-1.model-1.npz",
+      "gt_payload_sha256": "4e0dd92768e93746ab1a350677cf07a5a24a39463897066475d014d7eb55d172",
+      "observed_atom_count": 1549,
+      "pdb": "8jc6",
+      "peptide_bonds": 194
+    }
+  ],
+  "complete": true,
+  "lock_sha256": "bd41546fc5bbe924d5484dae1ef2eea7725a6a8abd3f349033004db82e206e54",
+  "scope": "six existing development cases only; no new inference or policy changes"
+}

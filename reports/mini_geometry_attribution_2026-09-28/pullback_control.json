@@ -1,0 +1,673 @@
+{
+  "base_losses": {
+    "new_fp32": 0.4252539702061618,
+    "new_loss_fp64": 0.4252539633409616,
+    "old_fp32": -0.02808770443554427,
+    "old_loss_fp64": -0.0280877020809533
+  },
+  "block_rms": [
+    1.0867923498153687,
+    219.79896545410156,
+    28.169057846069336
+  ],
+  "case": "control",
+  "complete": true,
+  "directions": [
+    {
+      "index": 0,
+      "rows": [
+        {
+          "h": 0.01,
+          "values": {
+            "new_fp32": {
+              "analytic": -0.14263613502477746,
+              "curvature_remainder": 0.02997743152257884,
+              "linear_pass": true,
+              "linearized_coordinate_fd": -0.14070362068945255,
+              "objective_fd": -0.11072618916687371,
+              "objective_pass": false
+            },
+            "new_loss_fp64": {
+              "analytic": -0.142635982545605,
+              "curvature_remainder": 0.029978441264151057,
+              "linear_pass": true,
+              "linearized_coordinate_fd": -0.1407035693604517,
+              "objective_fd": -0.11072512809630064,
+              "objective_pass": false
+            },
+            "old_fp32": {
+              "analytic": -0.00030778922765407717,
+              "curvature_remainder": 4.935801637546977e-05,
+              "linear_pass": false,
+              "linearized_coordinate_fd": -0.00024659730227563625,
+              "objective_fd": -0.00019723928590016648,
+              "objective_pass": false
+            },
+            "old_loss_fp64": {
+              "analytic": -0.00030778014982794997,
+              "curvature_remainder": 4.928863475127127e-05,
+              "linear_pass": false,
+              "linearized_coordinate_fd": -0.00024659233344736815,
+              "objective_fd": -0.00019730369869609687,
+              "objective_pass": false
+            }
+          }
+        },
+        {
+          "h": 0.003,
+          "values": {
+            "new_fp32": {
+              "analytic": -0.14263613502477746,
+              "curvature_remainder": 0.0031260511147330194,
+              "linear_pass": true,
+              "linearized_coordinate_fd": -0.14192625004937404,
+              "objective_fd": -0.13880019893464102,
+              "objective_pass": true
+            },
+            "new_loss_fp64": {
+              "analytic": -0.142635982545605,
+              "curvature_remainder": 0.003128332002194867,
+              "linear_pass": true,
+              "linearized_coordinate_fd": -0.14192619849397664,
+              "objective_fd": -0.13879786649178177,
+              "objective_pass": true
+            },
+            "old_fp32": {
+              "analytic": -0.00030778922765407717,
+              "curvature_remainder": 3.242686430470008e-06,
+              "linear_pass": false,
+              "linearized_coordinate_fd": -0.00026727566760652906,
+              "objective_fd": -0.00026403298117605906,
+              "objective_pass": false
+            },
+            "old_loss_fp64": {
+              "analytic": -0.00030778014982794997,
+              "curvature_remainder": 2.9647561147977744e-06,
+              "linear_pass": false,
+              "linearized_coordinate_fd": -0.000267270659212609,
+              "objective_fd": -0.0002643059030978112,
+              "objective_pass": false
+            }
+          }
+        },
+        {
+          "h": 0.001,
+          "values": {
+            "new_fp32": {
+              "analytic": -0.14263613502477746,
+              "curvature_remainder": 0.0002323041780024071,
+              "linear_pass": true,
+              "linearized_coordinate_fd": -0.14228361611961798,
+              "objective_fd": -0.14205131194161558,
+              "objective_pass": true
+            },
+            "new_loss_fp64": {
+              "analytic": -0.142635982545605,
+              "curvature_remainder": 0.00022750138192290104,
+              "linear_pass": true,
+              "linearized_coordinate_fd": -0.1422835644788965,
+              "objective_fd": -0.1420560630969736,
+              "objective_pass": true
+            },
+            "old_fp32": {
+              "analytic": -0.00030778922765407717,
+              "curvature_remainder": -8.810345871390277e-07,
+              "linear_pass": false,
+              "linearized_coordinate_fd": -0.0002679994512354506,
+              "objective_fd": -0.0002688804858225896,
+              "objective_pass": false
+            },
+            "old_loss_fp64": {
+              "analytic": -0.00030778014982794997,
+              "curvature_remainder": -6.404117825712513e-08,
+              "linear_pass": false,
+              "linearized_coordinate_fd": -0.000267994458377086,
+              "objective_fd": -0.0002680584995553431,
+              "objective_pass": false
+            }
+          }
+        },
+        {
+          "h": 0.0003,
+          "values": {
+            "new_fp32": {
+              "analytic": -0.14263613502477746,
+              "curvature_remainder": -4.461149168077938e-06,
+              "linear_pass": true,
+              "linearized_coordinate_fd": -0.1468050225676833,
+              "objective_fd": -0.14680948371685137,
+              "objective_pass": true
+            },
+            "new_loss_fp64": {
+              "analytic": -0.142635982545605,
+              "curvature_remainder": 1.1338436998270529e-05,
+              "linear_pass": true,
+              "linearized_coordinate_fd": -0.14680497052698666,
+              "objective_fd": -0.14679363208998839,
+              "objective_pass": true
+            },
+            "old_fp32": {
+              "analytic": -0.00030778922765407717,
+              "curvature_remainder": -8.914724635167846e-07,
+              "linear_pass": false,
+              "linearized_coordinate_fd": -0.0001721924159330153,
+              "objective_fd": -0.00017308388839653208,
+              "objective_pass": false
+            },
+            "old_loss_fp64": {
+              "analytic": -0.00030778014982794997,
+              "curvature_remainder": -2.8927835068505436e-07,
+              "linear_pass": false,
+              "linearized_coordinate_fd": -0.00017218745938508105,
+              "objective_fd": -0.0001724767377357661,
+              "objective_pass": false
+            }
+          }
+        },
+        {
+          "h": 0.0001,
+          "values": {
+            "new_fp32": {
+              "analytic": -0.14263613502477746,
+              "curvature_remainder": -7.687265084915795e-05,
+              "linear_pass": true,
+              "linearized_coordinate_fd": -0.13777109171098773,
+              "objective_fd": -0.13784796436183688,
+              "objective_pass": true
+            },
+            "new_loss_fp64": {
+              "analytic": -0.142635982545605,
+              "curvature_remainder": -1.5103802668448019e-05,
+              "linear_pass": true,
+              "linearized_coordinate_fd": -0.13777104169774967,
+              "objective_fd": -0.13778614550041812,
+              "objective_pass": true
+            },
+            "old_fp32": {
+              "analytic": -0.00030778922765407717,
+              "curvature_remainder": -2.8541694819745125e-06,
+              "linear_pass": false,
+              "linearized_coordinate_fd": -0.0005863525878433201,
+              "objective_fd": -0.0005892067573252946,
+              "objective_pass": false
+            },
+            "old_loss_fp64": {
+              "analytic": -0.00030778014982794997,
+              "curvature_remainder": -2.4965054388603053e-07,
+              "linear_pass": false,
+              "linearized_coordinate_fd": -0.0005863474722416955,
+              "objective_fd": -0.0005865971227855815,
+              "objective_pass": false
+            }
+          }
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "rows": [
+        {
+          "h": 0.01,
+          "values": {
+            "new_fp32": {
+              "analytic": -0.005659443536171649,
+              "curvature_remainder": 0.030724275530133238,
+              "linear_pass": false,
+              "linearized_coordinate_fd": -0.0016345002849441626,
+              "objective_fd": 0.029089775245189076,
+              "objective_pass": false
+            },
+            "new_loss_fp64": {
+              "analytic": -0.005659019358842415,
+              "curvature_remainder": 0.030723575415511073,
+              "linear_pass": false,
+              "linearized_coordinate_fd": -0.0016344288210673463,
+              "objective_fd": 0.029089146594443727,
+              "objective_pass": false
+            },
+            "old_fp32": {
+              "analytic": 0.04390715840409112,
+              "curvature_remainder": -0.00016816185414334633,
+              "linear_pass": true,
+              "linearized_coordinate_fd": 0.04389282371035192,
+              "objective_fd": 0.043724661856208574,
+              "objective_pass": true
+            },
+            "old_loss_fp64": {
+              "analytic": 0.04390713004118028,
+              "curvature_remainder": -0.0001681604078465418,
+              "linear_pass": true,
+              "linearized_coordinate_fd": 0.043892817626099645,
+              "objective_fd": 0.0437246572182531,
+              "objective_pass": true
+            }
+          }
+        },
+        {
+          "h": 0.003,
+          "values": {
+            "new_fp32": {
+              "analytic": -0.005659443536171649,
+              "curvature_remainder": 0.0031154161769599473,
+              "linear_pass": false,
+              "linearized_coordinate_fd": -0.005350230897805397,
+              "objective_fd": -0.0022348147208454496,
+              "objective_pass": false
+            },
+            "new_loss_fp64": {
+              "analytic": -0.005659019358842415,
+              "curvature_remainder": 0.003118444590013536,
+              "linear_pass": false,
+              "linearized_coordinate_fd": -0.005350159271901966,
+              "objective_fd": -0.0022317146818884304,
+              "objective_pass": false
+            },
+            "old_fp32": {
+              "analytic": 0.04390715840409112,
+              "curvature_remainder": -1.6410480738950073e-05,
+              "linear_pass": true,
+              "linearized_coordinate_fd": 0.04387962333223279,
+              "objective_fd": 0.04386321285149384,
+              "objective_pass": true
+            },
+            "old_loss_fp64": {
+              "analytic": 0.04390713004118028,
+              "curvature_remainder": -1.659126281229606e-05,
+              "linear_pass": true,
+              "linearized_coordinate_fd": 0.0438796172478232,
+              "objective_fd": 0.043863025985010906,
+              "objective_pass": true
+            }
+          }
+        },
+        {
+          "h": 0.001,
+          "values": {
+            "new_fp32": {
+              "analytic": -0.005659443536171649,
+              "curvature_remainder": 0.0004310474512063678,
+              "linear_pass": false,
+              "linearized_coordinate_fd": -0.006462994337376626,
+              "objective_fd": -0.0060319468861702585,
+              "objective_pass": false
+            },
+            "new_loss_fp64": {
+              "analytic": -0.005659019358842415,
+              "curvature_remainder": 0.00042983589351641704,
+              "linear_pass": false,
+              "linearized_coordinate_fd": -0.006462922408799976,
+              "objective_fd": -0.006033086515283559,
+              "objective_pass": false
+            },
+            "old_fp32": {
+              "analytic": 0.04390715840409112,
+              "curvature_remainder": 2.702954144950809e-07,
+              "linear_pass": true,
+              "linearized_coordinate_fd": 0.04385185736061756,
+              "objective_fd": 0.04385212765603205,
+              "objective_pass": true
+            },
+            "old_loss_fp64": {
+              "analytic": 0.04390713004118028,
+              "curvature_remainder": -2.1962731316937933e-07,
+              "linear_pass": true,
+              "linearized_coordinate_fd": 0.04385185125968384,
+              "objective_fd": 0.04385163163237067,
+              "objective_pass": true
+            }
+          }
+        },
+        {
+          "h": 0.0003,
+          "values": {
+            "new_fp32": {
+              "analytic": -0.005659443536171649,
+              "curvature_remainder": 0.00011176364555376406,
+              "linear_pass": false,
+              "linearized_coordinate_fd": -0.0012687206765659154,
+              "objective_fd": -0.0011569570310121513,
+              "objective_pass": false
+            },
+            "new_loss_fp64": {
+              "analytic": -0.005659019358842415,
+              "curvature_remainder": 5.6301442423004836e-05,
+              "linear_pass": false,
+              "linearized_coordinate_fd": -0.0012686499028413678,
+              "objective_fd": -0.001212348460418363,
+              "objective_pass": false
+            },
+            "old_fp32": {
+              "analytic": 0.04390715840409112,
+              "curvature_remainder": 3.695618902843645e-07,
+              "linear_pass": true,
+              "linearized_coordinate_fd": 0.04398368457319078,
+              "objective_fd": 0.043984054135081066,
+              "objective_pass": true
+            },
+            "old_loss_fp64": {
+              "analytic": 0.04390713004118028,
+              "curvature_remainder": 1.0254529506023569e-06,
+              "linear_pass": true,
+              "linearized_coordinate_fd": 0.04398367850286588,
+              "objective_fd": 0.04398470395581648,
+              "objective_pass": true
+            }
+          }
+        },
+        {
+          "h": 0.0001,
+          "values": {
+            "new_fp32": {
+              "analytic": -0.005659443536171649,
+              "curvature_remainder": 0.00010571286203719943,
+              "linear_pass": false,
+              "linearized_coordinate_fd": -0.007396653705322498,
+              "objective_fd": -0.0072909408432852985,
+              "objective_pass": false
+            },
+            "new_loss_fp64": {
+              "analytic": -0.005659019358842415,
+              "curvature_remainder": 2.7219187582860904e-05,
+              "linear_pass": false,
+              "linearized_coordinate_fd": -0.007396587105980124,
+              "objective_fd": -0.007369367918397263,
+              "objective_pass": false
+            },
+            "old_fp32": {
+              "analytic": 0.04390715840409112,
+              "curvature_remainder": -3.3278961133753615e-06,
+              "linear_pass": true,
+              "linearized_coordinate_fd": 0.0434737601845028,
+              "objective_fd": 0.04347043228838943,
+              "objective_pass": true
+            },
+            "old_loss_fp64": {
+              "analytic": 0.04390713004118028,
+              "curvature_remainder": 9.757225416726079e-07,
+              "linear_pass": true,
+              "linearized_coordinate_fd": 0.04347375393115858,
+              "objective_fd": 0.04347472965370025,
+              "objective_pass": true
+            }
+          }
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "rows": [
+        {
+          "h": 0.01,
+          "values": {
+            "new_fp32": {
+              "analytic": -0.23311511478392724,
+              "curvature_remainder": -0.0039822137637952615,
+              "linear_pass": true,
+              "linearized_coordinate_fd": -0.2375903224586,
+              "objective_fd": -0.24157253622239527,
+              "objective_pass": true
+            },
+            "new_loss_fp64": {
+              "analytic": -0.23311535495838315,
+              "curvature_remainder": -0.0039820657268678505,
+              "linear_pass": true,
+              "linearized_coordinate_fd": -0.23759036569255834,
+              "objective_fd": -0.2415724314194262,
+              "objective_pass": true
+            },
+            "old_fp32": {
+              "analytic": 0.0034624327332392095,
+              "curvature_remainder": -0.00016189701821123052,
+              "linear_pass": false,
+              "linearized_coordinate_fd": 0.0031655915574101603,
+              "objective_fd": 0.0030036945391989298,
+              "objective_pass": false
+            },
+            "old_loss_fp64": {
+              "analytic": 0.0034623891149287364,
+              "curvature_remainder": -0.00016194141646287165,
+              "linear_pass": false,
+              "linearized_coordinate_fd": 0.0031655907323896258,
+              "objective_fd": 0.003003649315926754,
+              "objective_pass": false
+            }
+          }
+        },
+        {
+          "h": 0.003,
+          "values": {
+            "new_fp32": {
+              "analytic": -0.23311511478392724,
+              "curvature_remainder": -0.0005710764880913766,
+              "linear_pass": true,
+              "linearized_coordinate_fd": -0.23286287034116762,
+              "objective_fd": -0.233433946829259,
+              "objective_pass": true
+            },
+            "new_loss_fp64": {
+              "analytic": -0.23311535495838315,
+              "curvature_remainder": -0.0005618676104919285,
+              "linear_pass": true,
+              "linearized_coordinate_fd": -0.2328629138257762,
+              "objective_fd": -0.23342478143626813,
+              "objective_pass": true
+            },
+            "old_fp32": {
+              "analytic": 0.0034624327332392095,
+              "curvature_remainder": -1.5136205837545588e-05,
+              "linear_pass": true,
+              "linearized_coordinate_fd": 0.0034467129000714993,
+              "objective_fd": 0.0034315766942339537,
+              "objective_pass": true
+            },
+            "old_loss_fp64": {
+              "analytic": 0.0034623891149287364,
+              "curvature_remainder": -1.4809000283460931e-05,
+              "linear_pass": true,
+              "linearized_coordinate_fd": 0.0034467120539042675,
+              "objective_fd": 0.0034319030536208066,
+              "objective_pass": true
+            }
+          }
+        },
+        {
+          "h": 0.001,
+          "values": {
+            "new_fp32": {
+              "analytic": -0.23311511478392724,
+              "curvature_remainder": -0.0001344490322600922,
+              "linear_pass": true,
+              "linearized_coordinate_fd": -0.2321729408399449,
+              "objective_fd": -0.232307389872205,
+              "objective_pass": true
+            },
+            "new_loss_fp64": {
+              "analytic": -0.23311535495838315,
+              "curvature_remainder": -0.00010842789807197217,
+              "linear_pass": true,
+              "linearized_coordinate_fd": -0.2321729842634005,
+              "objective_fd": -0.23228141216147247,
+              "objective_pass": true
+            },
+            "old_fp32": {
+              "analytic": 0.0034624327332392095,
+              "curvature_remainder": -1.8195955431687255e-06,
+              "linear_pass": true,
+              "linearized_coordinate_fd": 0.0035210653401522973,
+              "objective_fd": 0.0035192457446091285,
+              "objective_pass": true
+            },
+            "old_loss_fp64": {
+              "analytic": 0.0034623891149287364,
+              "curvature_remainder": -2.422004214252399e-06,
+              "linear_pass": true,
+              "linearized_coordinate_fd": 0.003521064534317258,
+              "objective_fd": 0.0035186425301030055,
+              "objective_pass": true
+            }
+          }
+        },
+        {
+          "h": 0.0003,
+          "values": {
+            "new_fp32": {
+              "analytic": -0.23311511478392724,
+              "curvature_remainder": 6.517970218594682e-05,
+              "linear_pass": true,
+              "linearized_coordinate_fd": -0.23658824164116543,
+              "objective_fd": -0.23652306193897948,
+              "objective_pass": true
+            },
+            "new_loss_fp64": {
+              "analytic": -0.23311535495838315,
+              "curvature_remainder": 2.902887398475995e-05,
+              "linear_pass": true,
+              "linearized_coordinate_fd": -0.2365882843183792,
+              "objective_fd": -0.23655925544439443,
+              "objective_pass": true
+            },
+            "old_fp32": {
+              "analytic": 0.0034624327332392095,
+              "curvature_remainder": 4.075718274217967e-06,
+              "linear_pass": true,
+              "linearized_coordinate_fd": 0.003478400559497887,
+              "objective_fd": 0.0034824762777721048,
+              "objective_pass": true
+            },
+            "old_loss_fp64": {
+              "analytic": 0.0034623891149287364,
+              "curvature_remainder": -7.851595346872187e-07,
+              "linear_pass": true,
+              "linearized_coordinate_fd": 0.003478399692873828,
+              "objective_fd": 0.0034776145333391406,
+              "objective_pass": true
+            }
+          }
+        },
+        {
+          "h": 0.0001,
+          "values": {
+            "new_fp32": {
+              "analytic": -0.23311511478392724,
+              "curvature_remainder": -8.631418098203891e-05,
+              "linear_pass": true,
+              "linearized_coordinate_fd": -0.2290613790096746,
+              "objective_fd": -0.22914769319065664,
+              "objective_pass": true
+            },
+            "new_loss_fp64": {
+              "analytic": -0.23311535495838315,
+              "curvature_remainder": 4.338917740015491e-06,
+              "linear_pass": true,
+              "linearized_coordinate_fd": -0.2290614230903303,
+              "objective_fd": -0.2290570841725903,
+              "objective_pass": true
+            },
+            "old_fp32": {
+              "analytic": 0.0034624327332392095,
+              "curvature_remainder": 2.791775886719708e-06,
+              "linear_pass": false,
+              "linearized_coordinate_fd": 0.0041265386868696834,
+              "objective_fd": 0.004129330462756403,
+              "objective_pass": false
+            },
+            "old_loss_fp64": {
+              "analytic": 0.0034623891149287364,
+              "curvature_remainder": 2.905141677014833e-07,
+              "linear_pass": false,
+              "linearized_coordinate_fd": 0.004126537791686889,
+              "objective_fd": 0.004126828305854591,
+              "objective_pass": false
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "full_model_fp64": false,
+  "h": [
+    0.01,
+    0.003,
+    0.001,
+    0.0003,
+    0.0001
+  ],
+  "lock_sha256": "bd41546fc5bbe924d5484dae1ef2eea7725a6a8abd3f349033004db82e206e54",
+  "model_precision": "fp32",
+  "scope": "diagnostic only, original gates unchanged",
+  "source_sha256": "3dd9fb61eaf3c295544c3ddbe6f39db00408c04443d965645f2979f5af92392f",
+  "summary": {
+    "new_fp32": {
+      "linear_pass": {
+        "directions": [
+          true,
+          false,
+          true
+        ],
+        "passed": false
+      },
+      "objective_pass": {
+        "directions": [
+          true,
+          false,
+          true
+        ],
+        "passed": false
+      }
+    },
+    "new_loss_fp64": {
+      "linear_pass": {
+        "directions": [
+          true,
+          false,
+          true
+        ],
+        "passed": false
+      },
+      "objective_pass": {
+        "directions": [
+          true,
+          false,
+          true
+        ],
+        "passed": false
+      }
+    },
+    "old_fp32": {
+      "linear_pass": {
+        "directions": [
+          false,
+          true,
+          true
+        ],
+        "passed": false
+      },
+      "objective_pass": {
+        "directions": [
+          false,
+          true,
+          true
+        ],
+        "passed": false
+      }
+    },
+    "old_loss_fp64": {
+      "linear_pass": {
+        "directions": [
+          false,
+          true,
+          true
+        ],
+        "passed": false
+      },
+      "objective_pass": {
+        "directions": [
+          false,
+          true,
+          true
+        ],
+        "passed": false
+      }
+    }
+  }
+}
