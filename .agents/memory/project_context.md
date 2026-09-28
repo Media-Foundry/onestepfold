@@ -1,3 +1,22 @@
+## 2026-09-29 — C4/S5 collision control COMPLETE; repair first positive
+
+User requested original C4/S5 and bounded stopping tonight (no endless debugging).
+Same parent3seeds: exact archived controlledS1 replay; controlledS5 severe19/8/10
+→5/1/0, still maxpenetration2.88/2.06/2.16 fails. Native runner C4S5 severe0/0/3,
+absolutegeometry passes2/3; seed200009 has128O–129C .714A,128O–129O .678A,
+132O–159OH .808A. NativeMCdropout true only200009: not causal evidence.
+9CPUreplays exact. No newmutations, no next ablations tonight.
+Repair case0(parent211) finished398s:19→0 severe,maxpen3.228→.490,bond.237→.041,
+peptide.128→.00594;CArawRMS.581/heavy.792 passespreservation,maxatomshift4.19A.
+Case002(parent200009) also0clashes butchirality.988827 fails: H41/L163 newly
+flip, K194 corrected. CA.613/heavy.754 passpreservation. BothcasesCPUauditexact.
+Two-case evidence only; rest99batch running4CPUworkers, autoauditandstop.
+No new methods/parameters tonight; user prefers discussing unresolved issues tomorrow.
+Rawanatomy shows backbone–backbone clashes, notonlysidechainpacking.
+Report:docs/mini_collision_localization_2026-09-29.md. S5 rootDiamondHill:
+/media/PM982/onestepfold/c4s5_collision_v1_20260929. No further GPU jobs needed.
+Overallgoalactive: remaining repair evidence pending; no deployeddesign claim.
+
 ## 2026-09-29 — Restrained geometry repair v1 authorized and locked
 
 User approved advancing beyond the closed mutation batch. New development-only

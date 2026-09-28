@@ -1,4 +1,12 @@
-# Geometry repair v1 — submitted
+# Geometry repair v1 — running; two cases audited
+
+Latest update: cases000/002 completed and independently audited. Both remove
+all severe overlaps and meet displacement bounds; case000 passes absolute geometry,
+but case002 flips H41/L163 and fails chirality (.988827<.99). Controller has advanced
+to four parallel workers. Full99 results remain pending; no tuning/retry/expansion.
+See [collision findings](mini_collision_localization_2026-09-29.md).
+
+The following submission snapshot is retained as execution history.
 
 The new locked protocol is [mini_geometry_repair_v1.md](mini_geometry_repair_v1.md).
 The prior mutation batch remains closed. Code/protocol backup: `70499f76`.
