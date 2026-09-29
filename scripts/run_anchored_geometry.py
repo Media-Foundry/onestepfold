@@ -13,7 +13,7 @@ from fastglycan.collision_audit import collision_records
 
 
 def arguments():
- p=argparse.ArgumentParser();p.add_argument('--root',type=Path,required=True);p.add_argument('--source',type=Path);p.add_argument('--topology',type=Path);p.add_argument('--mode',choices=['prepare','batch','case','collect'],required=True);p.add_argument('--case',type=int);return p.parse_args()
+ p=argparse.ArgumentParser();p.add_argument('--root',type=Path,required=True);p.add_argument('--source',type=Path);p.add_argument('--topology',type=Path);p.add_argument('--mode',choices=['prepare','batch','case','collect'],required=True);p.add_argument('--case',type=int);p.add_argument('--objective',choices=['mean','tail'],default='mean');return p.parse_args()
 
 
 def prepare(a):
@@ -25,8 +25,10 @@ def prepare(a):
  assert sha256(a.topology)==old['topology_sha256']
  for case in old['cases']:assert sha256(Path(case['file']))==case['sha256']
  modules=['anchored_geometry','articulated_output','articulated_reference','hybrid_geometry','geometry_repair','repair_outcomes','collision_audit']
+ if a.objective=='tail':modules.append('anchored_tail')
  files=[Path(inspect.getfile(__import__('fastglycan.'+m,fromlist=['x']))) for m in modules]+[Path(__file__),root/'code/docs/mini_anchored_geometry_v1.md']
- write_json(root/'lock.json',dict(sequence=old['sequence'],cases=old['cases'],reference=str(a.source/'chemical_reference.npz'),reference_sha256=old['reference_sha256'],variants=str(a.source/'variants.json'),variants_sha256=old['variants_sha256'],topology=str(a.topology),topology_sha256=old['topology_sha256'],source_hashes={str(f):sha256(f) for f in files},prior_lock_sha256=sha256(a.source/'lock.json'),timeout_seconds=900,devices=list(range(6)),scope='six same-parent regression inputs; iterative feasibility only'))
+ if a.objective=='tail':files.append(root/'code/docs/mini_anchored_tail_v1.md')
+ write_json(root/'lock.json',dict(objective=a.objective,sequence=old['sequence'],cases=old['cases'],reference=str(a.source/'chemical_reference.npz'),reference_sha256=old['reference_sha256'],variants=str(a.source/'variants.json'),variants_sha256=old['variants_sha256'],topology=str(a.topology),topology_sha256=old['topology_sha256'],source_hashes={str(f):sha256(f) for f in files},prior_lock_sha256=sha256(a.source/'lock.json'),timeout_seconds=900,devices=list(range(6)),scope='six same-parent regression inputs; iterative feasibility only'))
 
 
 def case(a):
@@ -48,7 +50,12 @@ def case(a):
   anchors=[[int(np.flatnonzero((res==i)&(names==n))[0]) for n in ['N','CA','C','O']] for i in range(1,len(sequence)+1)]
   raw=torch.tensor(data['coordinates'].reshape(-1,3),dtype=torch.float64,device='cuda')
   adapter=ArticulatedOutput(ref['reference'],names,res,sequence,json.loads(Path(lock['variants']).read_text())).double().cuda()
-  variables=PoseVariables(adapter,raw);objective=JointObjective(raw,anchors,sequence,topology.pairs,topology.radii).cuda()
+  objective_class=JointObjective
+  if lock.get('objective','mean')=='tail':
+   from fastglycan.anchored_tail import TailObjective
+   objective_class=TailObjective
+  elif lock.get('objective','mean')!='mean':raise ValueError('unknown locked objective')
+  variables=PoseVariables(adapter,raw);objective=objective_class(raw,anchors,sequence,topology.pairs,topology.radii).cuda()
   result.update(torch_version=torch.__version__,device=torch.cuda.get_device_name(0),visible_device=os.environ.get('ROCR_VISIBLE_DEVICES'),cis_connections=(torch.nonzero(objective.omega_target[:,0]>0).flatten()+1).tolist(),initial_max_abs_vs_local=float((variables()-variables.initial).abs().max()))
   assert result['initial_max_abs_vs_local']<1e-8
   initial=variables().detach().cpu();write_json(folder/'progress.json',dict(stage='initialized',**result))

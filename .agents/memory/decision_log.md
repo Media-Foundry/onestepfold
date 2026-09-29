@@ -1,3 +1,17 @@
+## 2026-09-29 — Worst-pair contrast passes six fixed geometry cases
+
+User authorized mainline continuation; permission interruption occurred before jobs.
+Added independent TailObjective (top16 excess penetration over1.9A,scale.1A) to old
+mean objective; base/pose/scoring unchanged. Same six raw inputs/initial states,
+3x60 iteration caps, fresh initialization. All6 workers finish0 on DiamondHill.
+All6 jointpass,0 severe pairs, all checked chirality and connection limits pass;
+S1 old6/2/3 severe ->0/0/0. S1 CA RMS.368–.430A/heavy.934–1.019A. Maxatom11.24A,
+maxrotationvector1.327rad remain caveats.33–35s/case,189–200closures,not equal FLOPs.
+Independent audit6/6, NumPy pose replay1.33e-10A; initial arrays exactly matched.
+5tests pass. No solver-input derivative, design utility, independent-target or
+convergence claim. No new training/search. Next gate is independent protein panel
+before short-map learning; not started. Report:docs/mini_anchored_tail_findings_2026-09-29.md.
+
 ## 2026-09-29 — Anchored joint geometry feasibility and data inventory
 
 User approved per-residue global anchors with joint connection/repulsion. Implemented

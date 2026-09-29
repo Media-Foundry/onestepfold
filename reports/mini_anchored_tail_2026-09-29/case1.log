@@ -1,0 +1,3 @@
+/media/PM982/onestepfold/anchored_tail_v1_20260929/code/scripts/run_anchored_geometry.py:59: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /home/pc/pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:838.)
+  result.update(torch_version=torch.__version__,device=torch.cuda.get_device_name(0),visible_device=os.environ.get('ROCR_VISIBLE_DEVICES'),cis_connections=(torch.nonzero(objective.omega_target[:,0]>0).flatten()+1).tolist(),initial_max_abs_vs_local=float((variables()-variables.initial).abs().max()))
