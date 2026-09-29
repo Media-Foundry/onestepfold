@@ -1,3 +1,22 @@
+## 2026-09-30 — Local projection fitting draft and synthetic implementation prepared
+
+Previous goal turn was progress: completed independent32 negative validation, localized
+AA quality loss to initialization, published faf6e469. No old job should be restarted.
+Current turn adds standalone local_projection_fit.py, reusing unchanged PoseVariables
+and chemical constructor. One fixed-start60iteration/90max-eval LBFGS raw-coordinate
+fit; final-only, no best/fallback, no input gradient or chain/clash enforcement claim.
+3focused CPU synthetic tests pass (stationary feasible input, distorted-anchor fitting
+with invariant chemistry/proper equivariance, invalid-input rejection). Synthetic THR
+fixture MSE .147043 -> .022858 in16iterations/18closures; NOT a realprotein result.
+Draft docs/mini_local_projection_fit_draft_v1.md defines old6case CPU diagnostic only,
+independent32/near sequences untouched. No source/model/solver changes, no real-protein
+batch, no GPU/new prediction/training. The user preference question (minimal localfit
+versus discuss other representations) is pending. Prepare only until direction clear;
+do not claim draft execution or experimental precision recovery. Next implementation
+would need locked old6 inputs/driver/report; then separately defined GT development
+source before any accuracy claim. This goal turn is progress(code/tests/reviewable
+protocol), not blocked; overall differentiable design objective remains unfulfilled.
+
 ## 2026-09-30 — Independent32 finished; continuation rejected, loss localized to initialization
 
 Authoritative batch/audit/score exit0, analysis exit0; all known processes terminal.
