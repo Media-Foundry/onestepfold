@@ -1,3 +1,17 @@
+## 2026-09-30 — Independent32 live; read-only reporting supplement queued
+
+Revalidated live pipeline169720/controller169722 on DiamondHill, no restart.
+72/96raw and134/192repairs completed at latest check; no worker errors observed.
+Added separate reporting supplement: full permitted-pair penetration distributions,
+per-residue movements/local observed lDDT changes/new checked chiral flips,
+raw-pass retention vsraw-fail repair, per-protein triplet means/bootstrap, length
+and source subgroups, actual closure/time/memory costs. Original runtime/code and
+continuation gate untouched.4focused tests pass locally and in runtime.
+Queued CPU-only independent32_analysis_v1_20260930 PID174093 waiting for original
+pipeline terminal artifact; verified live. No new GPU trials/tuning/training.
+Original batch and final quality conclusions remain unfinished. Protocol
+ docs/mini_independent32_analysis_supplement_v1.md; do not mark goal complete.
+
 ## 2026-09-30 — Full-source search completes32;8-GCD validation launched
 
 HPC3 full244406-entry catalog available, raw83GB;256 catalog shards byte-identical
