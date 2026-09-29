@@ -1,3 +1,40 @@
+## 2026-09-30 — Independent experimental connection calibration completed (64 sources)
+
+Previous goal turn3b10f921 was progress: seven-source GT constraint/branch audit.
+This turn completed outcome-blind source selection, raw-catalog extension and
+calibration/held-out measurement onDiamondHill CPU. No optimizer/model/GPU/training.
+Original TRAIN search379 eligible ->43 selected (11<=1.5A,32at1.5-2A).
+Full256shard HPC3 catalog mirror:3001 eligible groups ->first1024hashranked;
+391sequence-isolated ->46sourcepreflightpass ->21added.345sourcefailures retained.
+64final sources:32perresolution stratum,alternating32calibration/32held_out.
+44monomer/20homomer chain sources;length56-451,resolution.92-2A. Full-source
+extension release<=2021-09-30,no temporaltest. Historical21070+reserved32+recent8
+PDB/accession/BLAST isolation and panel HSP exclusions checked. Source context
+is confounded with resolution; not an assembly effect comparison or pretraining
+exclusion. Calibration64 now reserved for distribution work,not fresh repair validation.
+Remote roots /media/PM982/onestepfold/connection_calibration_v1_20260930,
+connection_calibration_extension_v1_20260930,connection_calibration_measure_v1_20260930.
+All processes terminalexit0.64/64 measured,11058connections;mappingmax8.81e-6A,
+Gemmi phase9.16e-16. Calibration5621edges:4102active1882oldgatefail;held5437:
+4198active1678oldgatefail,all32chains eachrolefailoldwindow. Missing sidechains/
+disulfides allowed for backbone calibration only; no native chemistry support claim.
+Fit commontrans absolute q95/q99 oncalibrationonly beforeheld evaluation. NonPro
+omega q95/q99 chord.197406/.284436 =11.329/16.352deg;heldq99coverage99.0015%.
+Oldomega onset2.865/gate5.732. Otherterms differ:nonProCNq99.027352 held98.10%;
+ProCNq99.028873 held96.24%. Protein-weighted vsedge-weighted sparseProtails differ.
+Do not turn empirical quantiles directly intochemicalgates or claim99%guarantee.
+37cis-likeGTedges (cal21,held16),5nonPro includes2highB1LMI and3nearideal phases
+1QB7/1H6L/1RMG; rarecisdescriptive only, no all-nonPro-trans rule.
+Proteinbootstrap2000draws seed9302026;zero-variation100%CI notcoverageguarantee.
+Local4tests pass,remote3statistical tests pass. Offlineaudit165archivedfiles,
+64GTidentityhashes,26264HSPs,40window/coveragechecks passes.15.2MB sourcearchive
+includesallselectedGT,sourceevidence,HSPs;per-edgeCSV/report/plots saved locally.
+Findings docs/mini_connection_calibration_findings_2026-09-30.md;overall updated.
+Next: bounded continuous-connection-scale intervention usingindependentcalibration,
+separatecis/trans uncertainty; keepoldgate reporting andquality/clash/chirality.
+No intervention yet, no quality recovery or deploymentclaim. Independent32 rejection
+unchanged. Mainline objective remainsactive/unfulfilled; no livejobs fromthisbatch.
+
 ## 2026-09-30 — Experimental connection audit closed: constraint calibration and branch selection
 
 Previous progress adcc7c1a: joint warm-start did not retain local-fit quality gain.
