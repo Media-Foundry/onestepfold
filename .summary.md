@@ -1,3 +1,37 @@
+## 2026-09-30 — Joint warm-start comparison closed: initialization benefit not retained
+
+Previous goal turn was progress: experimental-GT local fit completed/pushed953b40fe.
+Current turn tested only initialization, on the same8 locked historical C1/S1
+sources (7 supported,3CR6 covalent-link exclusion retained),2 cached noises.
+Protocol mini_projection_joint_start_v1.md. DiamondHill
+/media/PM982/onestepfold/joint_start_dev_v1_20260930 controller194335 finished,
+batch/audit/report exit0:28 successful solves,4 source-skipped slots,32 planned.
+Original raw PoseVariables and TailObjective anchors/regularizers preserved;
+fitted arm copies saved q, not a rechart.14/14 input/buffer pairing verified.
+No frozen solver/chemical constructor edits, no GPU/model inference/training/32 access.
+FP64CPU,2singlethread workers, same3x60 joint iteration caps, extra60 localfit
+iterations counted for warm arm.2 focused tests pass locally and onDiamondHill.
+AA lDDT raw .773584,zero-start final .753066,warm final .753510:delta+.000444.
+Warm start .767987 -> final .753510 loses most of prior initialization gain.
+CA finalzero .846704,warm .843219 (delta-.003485).Jointpass13/14 ->12/14;
+both-noise proteins6/7 ->6/7.1pair gains,2pairs lose. All28 finalzero severe
+pairs,checkedchirality andRMSbudgets pass; warm4B9P bothnoises fail penetration
+2.0746/2.0731A despite distances>=1A. Old3D8L/12345 failsconnection/penetration,
+warm repairs it.7protein AAmeans5improve/2decline,CA6decline/1improve.
+28independent NumPy pose/metric audits pass(max1.77e-10A/4.45e-16).
+Old13cases180jointiterations,one3D8L39(30/7/2 stages),not convergence;warmall180.
+Median jointseconds17.34old/16.62warm,extra recordedlocalfitmean2.80s.
+Predeclared bounded-C4-candidate screen FALSE: jointpass decreased. Close this
+initialization version; no extra iterations,weight search,automatic C4 rollout,
+LoRA or mutation search. Original independent32 rejection unchanged.
+Findings docs/mini_projection_joint_start_findings_2026-09-30.md; report/audit,
+pairedCSV,qualityPNG/PDF and hash-verified archive saved. Goalstillactive/unfulfilled.
+Next meaningful inquiry: audit joint chemical/connection constraints against
+experimental GT and the quality tradeoff; not assume initialization is solecause.
+Previous7rawGT already failed strict ideal connection gate; keep thresholds and
+oldresults unchanged while diagnosing. Do not claim global infeasibility or a
+backward bug. No new experiment beyond this closed batch is running.
+
 ## 2026-09-30 — Experimental-GT local fitting development completed
 
 Previous goal turn was no progress (data/status restatement). This turn executed a
