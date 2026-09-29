@@ -1,0 +1,11 @@
+2026-09-29 15:25:11,747 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/data/constraint/constraint_featurizer.py:392] INFO protenix.data.constraint.constraint_featurizer: Loaded constraint feature: #atom contact:0 #contact:0 #pocket:0
+Traceback (most recent call last):
+  File "/media/PM982/onestepfold/connected_output_v1_20260929/code/scripts/probe_connected_output.py", line 105, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/media/PM982/onestepfold/connected_output_v1_20260929/code/scripts/probe_connected_output.py", line 56, in main
+    local=ArticulatedOutput(*args).double();connected=ConnectedOutput(*args).double();connected32=ConnectedOutput(*args).float()
+                                                      ^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/PM982/onestepfold/connected_output_v1_20260929/code/src/fastglycan/connected_output.py", line 38, in __init__
+    raise ValueError('v1 does not support OXT')
+ValueError: v1 does not support OXT

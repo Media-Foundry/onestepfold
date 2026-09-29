@@ -1,3 +1,18 @@
+## 2026-09-29 — Connected output prototype implemented; direct rebuild stopped
+
+User authorized starting the next output method. Added fixed-graph ConnectedOutput:
+proper local CCD reconstruction + raw phi/psi + ideal links + trans omega + carbonyl
+plane. No training, new sequences or folding forward. Six parent control S1/native S5
+archives on DiamondHill CPU; 14.85s execution. Initial constructor rejected terminal
+OXT before outputs; preserved lock/log, new v1.1 supports terminal-only OXT.
+All six CA and checked ILE/THR handedness correct, chain constraints exact; but aligned
+CA RMSD12.54–18.13A, clashes54–187, all preservation/geometry gates fail. NumPy phase,
+geometry/hash audit six cases passes; local AD/FD passes. No phase-sign bug found.
+Stop direct whole-chain torsion rebuild; next design must retain global residue pose
+anchors and jointly handle connectivity. No additional methods launched. These are
+same-parent regression examples, no quality/generalization claim. Findings/protocol:
+docs/mini_connected_output_findings_2026-09-29.md; docs/mini_connected_output_v1.md.
+
 ## 2026-09-29 — Close raw-gradient plus generic repair version
 
 User review accepted: current frozen Mini + soft local ranking + hard mutation +
