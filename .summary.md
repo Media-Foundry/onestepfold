@@ -1,3 +1,33 @@
+## 2026-09-30 — Experimental connection audit closed: constraint calibration and branch selection
+
+Previous progress adcc7c1a: joint warm-start did not retain local-fit quality gain.
+Read-only DiamondHill audit now completed at
+/media/PM982/onestepfold/connection_gt_audit_v1_20260930 (exit0; no active job).
+Same locked 8 development sources, 7 supported; 3CR6 covalent-link exclusion retained.
+7 unique experimental GT,14 historical native C1/S1 predictions,28 prior joint outputs:
+49/49 independent geometry checks pass;814 unique GT edges,5698 total CSV rows.
+No new solves, GPU forward, training, changed thresholds or independent32 access.
+GT source identity/altloc mapping verified from original mmCIF; proper rigid alignment
+max5.47e-6A. NumPy vs frozen production residual max6.11e-16 onGT,9.26e-9 overall;
+Gemmi phase max8.96e-16.3 focused tests pass locally and onDiamondHill.
+GT677/814(83.17%) edges activate current penalty;321/814(39.43%) exceed old gate.
+All7 GT fail full-chain connection gate, including high-resolution4A02(.95A;82/165).
+Omega phase onset2.865deg/gate5.732deg;452active/228rejectedGTedges.
+Omega62.66% of pooled scaled connection penalty is NOT contribution to lDDT loss.
+Pinned official AF2 constants/violation implementation documented as scale reference,
+not adopted gate and not complete AF2 evaluation. GT is not error-free physical truth.
+Two raw branch mismatches in1628 prediction edges:4A02/12345 label34->35(I),
+3D8L/54321 label32->33(E): GTtrans,rawcis-like, both initialization arms endcis.
+All4 final structures pass old joint gate because branch was fixed fromraw.
+GT also has2 cis-like Pro connections; do not force alltrans.2/1628 not prevalence
+or explanation of allqualityloss. No atom mapping/phase sign bug found.
+Report docs/mini_connection_gt_findings_2026-09-30.md;protocol,lock,fullJSON,
+per-edgeCSV,summary,PNG/PDF,external reference hashes and artifactmanifest retained.
+Next meaningful method task: independent geometry calibration and handling uncertain
+cis/trans branches under a new locked protocol; no more initialization tuning or
+loosening old gates post hoc. Keep independent32 rejection and genuine clash/chirality
+failures. No backward debugging reopened; mainline goal active/unfulfilled.
+
 ## 2026-09-30 — Joint warm-start comparison closed: initialization benefit not retained
 
 Previous goal turn was progress: experimental-GT local fit completed/pushed953b40fe.

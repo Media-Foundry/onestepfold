@@ -1,0 +1,65 @@
+{
+  "report_sha256": "fd118684661a82b701fe2efa58268da4a2325d9e8453256d1dbe4477a80a0928",
+  "unique_gt_proteins": 7,
+  "unique_gt_edges": 814,
+  "active_fraction": 0.8316953316953317,
+  "rejected_fraction": 0.39434889434889436,
+  "omega_pooled_penalty_fraction": 0.6265703351229736,
+  "omega_onset_degrees": 2.865087475133015,
+  "omega_gate_degrees": 5.7319679651977244,
+  "raw_branch_mismatch_instances": 2,
+  "compared_raw_edge_instances": 1628,
+  "wrong_branch_cases": [
+    {
+      "pdb_id": "4a02",
+      "seed": 12345,
+      "gt_degrees": -177.87857292242805,
+      "left_label": 34,
+      "next_residue": "I",
+      "raw_degrees": -84.81390565909146,
+      "right_label": 35,
+      "finals": [
+        {
+          "arm": "zero",
+          "omega_degrees": 1.375262135554737,
+          "joint_pass": true,
+          "left_auth": "62",
+          "right_auth": "63"
+        },
+        {
+          "arm": "fitted",
+          "omega_degrees": -2.87865834030249,
+          "joint_pass": true,
+          "left_auth": "62",
+          "right_auth": "63"
+        }
+      ]
+    },
+    {
+      "pdb_id": "3d8l",
+      "seed": 54321,
+      "gt_degrees": -178.28307454881335,
+      "left_label": 32,
+      "next_residue": "E",
+      "raw_degrees": 30.451213975551795,
+      "right_label": 33,
+      "finals": [
+        {
+          "arm": "zero",
+          "omega_degrees": -2.853895303731819,
+          "joint_pass": true,
+          "left_auth": "32",
+          "right_auth": "33"
+        },
+        {
+          "arm": "fitted",
+          "omega_degrees": -2.8443417874221018,
+          "joint_pass": true,
+          "left_auth": "32",
+          "right_auth": "33"
+        }
+      ]
+    }
+  ],
+  "scope": "descriptive read-only audit; no changed acceptance or causal loss attribution"
+}

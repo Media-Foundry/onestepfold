@@ -1,0 +1,41 @@
+{
+  "commit": "c77e5d2a8961d1a353632c462914ff0a32a950f6",
+  "source_files": {
+    "alphafold/common/residue_constants.py": {
+      "url": "https://raw.githubusercontent.com/google-deepmind/alphafold/c77e5d2a8961d1a353632c462914ff0a32a950f6/alphafold/common/residue_constants.py",
+      "sha256": "e73d2ab3228d05f768fb5308535b399f7269aac12d3783f9f1db651b8d246ed4"
+    },
+    "alphafold/model/all_atom.py": {
+      "url": "https://raw.githubusercontent.com/google-deepmind/alphafold/c77e5d2a8961d1a353632c462914ff0a32a950f6/alphafold/model/all_atom.py",
+      "sha256": "864d55ab2e4f5cd08a1b9a169bea22240c0a1bd63d51834cbe21b1cd1e3b9403"
+    }
+  },
+  "values": {
+    "between_res_bond_length_c_n": [
+      1.329,
+      1.341
+    ],
+    "between_res_bond_length_stddev_c_n": [
+      0.014,
+      0.016
+    ],
+    "between_res_cos_angles_c_n_ca": [
+      -0.5203,
+      0.0353
+    ],
+    "between_res_cos_angles_ca_c_n": [
+      -0.4473,
+      0.0311
+    ],
+    "between_residue_bond_loss": {
+      "tolerance_factor_soft": 12.0,
+      "tolerance_factor_hard": 12.0
+    },
+    "_loss_and_violation_mask": {
+      "tolerance_factor_soft": 12.0,
+      "tolerance_factor_hard": 12.0
+    }
+  },
+  "retrieved_utc": "2026-09-29T21:05:10.423206+00:00",
+  "scope": "primary-source reference constants, not a replacement acceptance protocol"
+}
