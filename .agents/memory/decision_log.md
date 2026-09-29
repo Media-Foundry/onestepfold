@@ -1,3 +1,38 @@
+## 2026-09-30 — Independent output-backbone reference scalar calibration
+
+Previous goal turn bda69034 was concrete progress: fixedCA necessary-condition
+rejection and native-reference provenance. This turn completed the next bounded
+calibration, no solver/inference/training or reserved independent32 access.
+Reuse frozen64source connection corpus32calibration/32heldout; all64mappedarchive
+GT/source/memberhashes verified.11122residue rows, internal5589cal/5405held;
+terminal rows retained but excludedfit.20AA*5metrics medians/q05/q95 fitcalonly,
+written beforeheldmeasurement andhashfixed. Support>=30residues/8proteins;
+all20supported(minC74res/23proteins). CCD20backbonepositionsfromsameDiamondHill
+runtimecachehashaspreviousprovenance; originalinputfeatures/model unchanged.
+Heldprotein-equalMAE native->fitted: NCA .016828->.009422A;CAC .042014->.009648A;
+CO .034578->.008955A;NCAC3.25823->1.88194deg;CACO2.42086->.80657deg. Improved
+32/32exceptNCA31/32(4Y2Mdelta+2.0098e-5A). Proteinbootstrap2000seed9302030:
+CACdelta-.032367CI[-.034330,-.030184];CO-.025623CI[-.027636,-.023441].
+ReferenceCACbias-.041572A,fit+.000248;CObias+.034021,fit+.000275.
+HeldGTspan necessaryconditions oldwindows/GTbranch, frozenref vs calibration-only
+CAC/NCA medians:1459/5437->134/5437; proteinswithviolations32->23;maxgap.139668
+->.130850A.64terminaledges18->6 butexplicitinteriorestimateextrapolation.
+ChangesbothCAC/NCA,notuniquetermattribution;GTbranchdescriptiveonly. No constructed
+output, lDDTclaim, newchemicalgate/fullconformerorproofglobalfeasibility. Quantiles
+notphysicaltruth; experimentalrefinementbias/measurementerror/sourcefilterremain.
+7focusedtests pass; independentno-primary-module auditor64/11122residues,300fit
+quantiles,5bootstrapmetrics,173984Cartesiancorners;geommax2.842e-14,span1.333e-15.
+Primary/fitted/input/outputhashes verified. Files reports/mini_backbone_reference_2026-09-30,
+findingsdocs/mini_backbone_reference_findings_2026-09-30.md;overallfrontupdated.
+No remotejobsactive;CPUreferenceexportfinished/noGPUconsumed. This calibration
+batchCLOSED. Nextboundedmethod:separateOUTPUTchemistryfromnativeINPUTreference,
+firstisolatedCAC/COlengthinterventionusingfrozencalconstants;verifychirality,
+Proring,terminalhandlingandraw-preservinginitializationbeforeolddevC4comparison.
+Do notblindlyassembleall5mediansintofullresidueorchangefit/branch/weightsjointly.
+No pertargetGTlengths,noheldoutretuning,nonewind32runs. No repeatbackwarddebugging.
+Originalone-stepdifferentiableoracle/designgoalactiveandunfulfilled;deployment
+stillrejected. Keepoldthresholdsandind32negativeevidenceunchanged.
+
 ## 2026-09-30 — Fixed-CA necessary feasibility and reference-length provenance audit
 
 Continued mainline after3181703b failed fitted initialization; no new solver/model/
