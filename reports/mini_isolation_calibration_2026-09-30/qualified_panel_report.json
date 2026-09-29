@@ -1,0 +1,113 @@
+{
+  "source_chemistry_sha256": {
+    "chemistry": "b3f3196fe7e523c89ad507bebcf1825544584bb52675b6556fb2cfa06d2cee7a",
+    "chemistry_remaining": "4bb4b4d65268af66df229c3b21d355a6beca788672e853dfb2decd6def863937"
+  },
+  "calibration_sha256": "4afb411a7914fda1d84d7ed5c5c7823d95ef0fb9d067f8099c07f918d7f77608",
+  "panel_sha256": "22156ce3a573b3ccd5963ba4b37ee6c99770227630a0691a0e6ac110eb7d33cc",
+  "script_sha256": "e985c1002078fe0d49eb6179379c61ea8bcada133afdc1fdb919438fc64a042e",
+  "pool_sha256": "d2c2b4bc7727dc45628e2ad97500f4f894711437ddfe8873a871974adab7c7f0",
+  "qualified_candidates": 39,
+  "scope_exclusions": [
+    {
+      "group_id": "a560142cdf7bc10c23b17838b4e73c497b3083012ad2f5d0dc44d450b8a22a49",
+      "length": 470,
+      "pdb_id": "1bj4",
+      "passed": false,
+      "unsupported_source_connections": [
+        {
+          "type": "covale",
+          "chains": [
+            "A",
+            "B"
+          ],
+          "atoms": [
+            "NZ",
+            "C4A"
+          ],
+          "residues": [
+            "247",
+            false
+          ]
+        }
+      ],
+      "error": "Traceback (most recent call last):\n  File \"/media/PM982/onestepfold/isolation_calibration_v2_1_20260930/code/scripts/preflight_isolated_chemistry.py\", line 49, in check\n    if unsupported:raise ValueError('source covalent connection outside supported chemistry')\n                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nValueError: source covalent connection outside supported chemistry\n",
+      "packet_dir": "/media/PM982/onestepfold/isolation_calibration_v2_1_20260930/chemistry/a560142cdf7bc10c23b17838b4e73c497b3083012ad2f5d0dc44d450b8a22a49"
+    },
+    {
+      "group_id": "de37af3bb3f7274d9c961337f0b1f038d47e7f9d8235b5d6753ff83f473f7dae",
+      "length": 71,
+      "pdb_id": "1c75",
+      "passed": false,
+      "unsupported_source_connections": [
+        {
+          "type": "covale",
+          "chains": [
+            "A",
+            "B"
+          ],
+          "atoms": [
+            "SG",
+            "CAB"
+          ],
+          "residues": [
+            "11",
+            false
+          ]
+        },
+        {
+          "type": "covale",
+          "chains": [
+            "A",
+            "B"
+          ],
+          "atoms": [
+            "SG",
+            "CAC"
+          ],
+          "residues": [
+            "14",
+            false
+          ]
+        }
+      ],
+      "error": "Traceback (most recent call last):\n  File \"/media/PM982/onestepfold/isolation_calibration_v2_1_20260930/code/scripts/preflight_isolated_chemistry.py\", line 49, in check\n    if unsupported:raise ValueError('source covalent connection outside supported chemistry')\n                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nValueError: source covalent connection outside supported chemistry\n",
+      "packet_dir": "/media/PM982/onestepfold/isolation_calibration_v2_1_20260930/chemistry_remaining/de37af3bb3f7274d9c961337f0b1f038d47e7f9d8235b5d6753ff83f473f7dae"
+    },
+    {
+      "group_id": "8f9b44c65888cb00388c8a80aef9bf3d3850159e7939cdb70c59d57ff843ba00",
+      "length": 58,
+      "pdb_id": "6wi6",
+      "passed": false,
+      "unsupported_source_connections": [
+        {
+          "type": "covale",
+          "chains": [
+            "A",
+            "A"
+          ],
+          "atoms": [
+            "N",
+            "C"
+          ],
+          "residues": [
+            "1",
+            "58"
+          ]
+        }
+      ],
+      "error": "Traceback (most recent call last):\n  File \"/media/PM982/onestepfold/isolation_calibration_v2_1_20260930/code/scripts/preflight_isolated_chemistry.py\", line 49, in check\n    if unsupported:raise ValueError('source covalent connection outside supported chemistry')\n                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nValueError: source covalent connection outside supported chemistry\n",
+      "packet_dir": "/media/PM982/onestepfold/isolation_calibration_v2_1_20260930/chemistry_remaining/8f9b44c65888cb00388c8a80aef9bf3d3850159e7939cdb70c59d57ff843ba00"
+    }
+  ],
+  "selected": 27,
+  "strata_counts": [
+    8,
+    8,
+    7,
+    4
+  ],
+  "pair_rejections": [],
+  "original_32_size_met": false,
+  "status": "provisional source-qualified panel; original32 protocol not satisfied; no folding started"
+}

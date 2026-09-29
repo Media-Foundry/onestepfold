@@ -1,3 +1,19 @@
+## 2026-09-30 — Sequence isolation calibrated;27 chemistry-qualified candidates
+
+Geometry frozen2aa87043. New predeclared BLAST2.17 rule adds significance to
+30%identity/70%shortcoverage/50aligned residues plusstrong-domain exclusion.
+32exact/crop/mutation20/natural controls allrecover intendedparents;mutation60
+also32/32descriptive;320shuffles0hits. Originalv1zero-selection untouched.
+Firstbuild rejected64charIDs beforesearch; newv2_1 reversible32charaliases,
+verifiedofficialdownload/binaryhashes.217pool→175excluded→42homologyeligible.
+All42CPUchemistrypreflight,39supported;1BJ4/1C75cofactorcovalent,6WI6cyclic excluded.
+Greedystrata final27(8/8/7/4),length69–634,no modelqualityselection. Immutable
+provisional list/masks/nativeinput hashes ready; original32protocolnotmet,noGPU.
+480calibration decisions,candidateexclusions,panelisolation independentlyrecomputed.
+User preference question offered28 beforechemistry;latestqualifiednumber27supersedes.
+Next decide27x3 boundedvalidation vsnewsourceextension for32;noautomaticthreshold
+relaxation/training. Reportdocs/mini_isolation_calibration_findings_2026-09-30.md.
+
 ## 2026-09-29 — Independent geometry validation selection v1 stops before inference
 
 User approved freezing 2aa87043 and independent32x3 raw/mean/tail validation.

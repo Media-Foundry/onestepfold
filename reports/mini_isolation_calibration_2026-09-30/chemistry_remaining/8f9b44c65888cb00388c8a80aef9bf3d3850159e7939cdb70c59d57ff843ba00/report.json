@@ -1,0 +1,24 @@
+{
+  "group_id": "8f9b44c65888cb00388c8a80aef9bf3d3850159e7939cdb70c59d57ff843ba00",
+  "length": 58,
+  "pdb_id": "6wi6",
+  "passed": false,
+  "unsupported_source_connections": [
+    {
+      "type": "covale",
+      "chains": [
+        "A",
+        "A"
+      ],
+      "atoms": [
+        "N",
+        "C"
+      ],
+      "residues": [
+        "1",
+        "58"
+      ]
+    }
+  ],
+  "error": "Traceback (most recent call last):\n  File \"/media/PM982/onestepfold/isolation_calibration_v2_1_20260930/code/scripts/preflight_isolated_chemistry.py\", line 49, in check\n    if unsupported:raise ValueError('source covalent connection outside supported chemistry')\n                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nValueError: source covalent connection outside supported chemistry\n"
+}
