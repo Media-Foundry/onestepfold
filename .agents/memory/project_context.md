@@ -1,3 +1,36 @@
+## 2026-09-30 — Fixed-CA necessary feasibility and reference-length provenance audit
+
+Continued mainline after3181703b failed fitted initialization; no new solver/model/
+training/independent32 access. Late user source approval already fulfilled: fullHPC3
+search and homomer additions3VSV/5JVL/3F6B/6P63 locked32, completed independent gate;
+do not rerun selection or validation on receipt of this duplicated async answer.
+Read-only14C4 archive inputs7proteins2seeds plus7uniqueGT;3CR6two source skips retained.
+Analytic CA-span bounds with invariantCA-C/N-CA lengths and old acceptance boxes:
+raw746/1628 outside selected branch,735 outside both;all14instances. Maximumgap
+selected2.169747A/both1.073412A;disjointedge CArms lowerboundmax.238106/.110547A.
+11alternative-only span cases allalreadyGTbranchmatched;distance-only flipunsafe.
+Calibratedzero raw818/813; notacceptance andboxesnotnested. Zero-final oldspan0,
+butoldjoint0/14:necessarynot sufficient. Fittedstart871/857,final1/1gap.003832A.
+GToldmodel-lengthspan176/814 acrossall7;posthoc replaceonlyintraresidue lengthswith
+GTown values->4/814(4A02three,1J7Bone);noGTfedtomodel. ModelCA-Cmeans1.478-1.482A,
+GT1.516-1.524A. CounterfactualchangesbothCA-C/N-CA,notuniqueCA-Ccausalattribution.
+RuntimeProtenixget_ccd_ref_info readsRDKitcachemol.ref_conf_id;nativefeaturizeradds
+rigidrefaugmentation. Savednative.ptref_pos==mapping.reference bitwise;cached/native
+lengthmaxdiff2.575e-7A;native/local1.777e-15A. Constructor preservesinputreference
+lengths. Concernisourhardchemicaluseofauxiliaryinputconformer,notProtenixbackwardbug.
+Code/CCD/native/mappinghashesandperresiduelengthsarchived. DoesnotauditeveryCCD
+constructionfallbackorproveallqualitylosscausedbylengths. OldbondRMSEreference-based.
+5focusedtests pass;formula max1.333e-15A;constructedlengthinvariance2.104e-12A.
+IndependentCartesian6512boxes/520960distances maxcorner8.882e-16A;analyticderivative
+signchecks pass;FP64numericnotformaloutwardroundedproof;1e-6Aclassificationmargin.
+Primarylock/reportunchanged;posthoccounterfactual/provenance separate. Reports root
+reports/mini_ca_span_feasibility_2026-09-30;findingsdocs/mini_ca_span_feasibility_findings_2026-09-30.md.
+RejectuniversalexactCAanchoring. Nextboundedwork:auditableoutputchemicalreference
+separatefrominputfeatures,usingexistingindependentcalibrationassetsforbond/angle
+checks;prelockanymethodchange,noGTper-targetreplacement/nogatechange/nobudgetgrid.
+No new valid output,deployment stillrejected,goalactive. No remoteexperimentrunning
+ornewGPUuse thisturn. Do not restartcompletedfitted/C4/ind32 batches.
+
 ## 2026-09-30 — Fitted initialization under calibrated C4 objective: bounded screen failed
 
 Previous goal turn bbbd3eea was progress: actualC4 confirmation of calibrated onsets.
