@@ -6,6 +6,7 @@ import json
 import os
 from pathlib import Path
 import resource
+import shutil
 import subprocess
 import sys
 import time
@@ -25,6 +26,8 @@ from fastglycan.hybrid_geometry import GeometryTopology
 from fastglycan.paired_teacher_protocol import sha256, write_json
 from fastglycan.repair_outcomes import absolute_failures
 from fastglycan.scaling_metrics import lddt_observed
+from fastglycan.local_projection_fit import fit_local_projection
+from fastglycan.geometry_start import pose_variables_at_start
 
 
 def prepare_window_trial(root, source, baseline, calibration):
@@ -59,6 +62,9 @@ def prepare_window_trial(root, source, baseline, calibration):
 def run_window_case(root, index):
     torch.set_num_threads(1)
     lock = json.loads((root / 'lock.json').read_text()); source = Path(lock['source'])
+    fitted_trial = lock.get('initialization_contract') == 'calibrated_c4_fitted_start_v1'
+    if 'initialization_contract' in lock:
+        assert fitted_trial and lock['arms'] == ['zero', 'fitted']
     selection = json.loads((source / 'selection.json').read_text())
     item = selection[index // 4]; seed = lock['seeds'][(index // 2) % 2]; arm = lock['arms'][index % 2]
     group = item['group_id']; packet = source / 'chemistry' / group
@@ -72,6 +78,19 @@ def run_window_case(root, index):
         chemistry = json.loads((packet / 'report.json').read_text())
         if not chemistry['passed']:
             result.update(not_run=True, source_failure=chemistry['error']); return
+        if fitted_trial and arm == 'zero':
+            previous = Path(lock['baseline']) / 'cases' / f'{index // 2 * 2 + 1:02d}'
+            saved = json.loads((previous / 'report.json').read_text())
+            assert saved['success'] and saved['arm'] == 'calibrated'
+            assert saved['group_id'] == group and saved['seed'] == seed
+            assert saved['raw_sha256'] == sha256(source / 'data' / group / f'native_{seed}.npy')
+            for name, key in [('coordinates.npz', 'coordinates_sha256'), ('values.pt', 'values_sha256')]:
+                assert sha256(previous / name) == saved[key]
+                shutil.copy2(previous / name, folder / name)
+            result = dict(saved, index=index, arm=arm, lock_sha256=sha256(root / 'lock.json'),
+                reused_control=dict(source=str(previous), report_sha256=sha256(previous / 'report.json'),
+                    scope='archived calibrated zero-start result; no new solver execution'))
+            return
         mapping = dict(np.load(packet / 'mapping.npz')); assert mapping['mask'].all()
         names, residues = mapping['atom_names'], mapping['residue_ids']
         inv = dict(np.load(source / 'data' / group / 'inventory.npz'))
@@ -83,29 +102,46 @@ def run_window_case(root, index):
         variables = PoseVariables(adapter, raw); start = variables().detach().clone()
         old = None
         if lock['baseline'] is not None:
-            previous = Path(lock['baseline']) / 'cases' / f'{index // 2 * 2:02d}'
+            previous = Path(lock['baseline']) / 'cases' / f'{index // 2 * 2 + int(fitted_trial):02d}'
             old = dict(np.load(previous / 'coordinates.npz'))
             assert np.array_equal(raw_array, old['raw'])
             assert np.max(np.abs(start.numpy() - old['start'])) < 1e-8
         else:
             assert lock.get('prediction_contract') == 'c4_s1_confirmation_v1'
+        fitted = None
+        if fitted_trial:
+            assert arm == 'fitted'
+            chart = buffer_digest(variables)
+            fit_started = time.monotonic()
+            fitted = fit_local_projection(adapter, raw, max_iter=60, max_eval=90)
+            fit_seconds = time.monotonic() - fit_started
+            variables = pose_variables_at_start(adapter, raw, fitted.values)
+            assert buffer_digest(variables) == chart
+            assert torch.equal(variables.initial, fitted.initial)
+            start = variables().detach().clone()
+            assert torch.allclose(start, fitted.coordinates, rtol=0, atol=1e-8)
+            result['local_fit'] = dict(seconds=fit_seconds, iterations=fitted.iterations,
+                closure_calls=fitted.closure_calls, initial_mse=fitted.initial_mse,
+                final_mse=fitted.final_mse, final_gradient_norm=fitted.final_gradient_norm,
+                improved=fitted.improved, max_iter=60, max_eval=90, final_iterate=True)
         atoms = torch.load(packet / 'native.pt', map_location='cpu', weights_only=False)['atoms']
         topology = GeometryTopology(atoms, mapping['reference'])
         anchors = np.array([[int(np.flatnonzero((residues == j) & (names == name))[0])
             for name in ['N', 'CA', 'C', 'O']] for j in range(1, len(item['sequence']) + 1)])
         args = (raw, anchors, item['sequence'], topology.pairs, topology.radii)
         base = TailObjective(*args)
-        objective = base if arm == 'original' else CalibratedConnectionObjective(
+        objective = base if not fitted_trial and arm == 'original' else CalibratedConnectionObjective(
             *args, json.loads(Path(lock['calibration']).read_text()))
         for name, value in base.named_buffers():
             assert torch.equal(value, dict(objective.named_buffers())[name])
         result.update(chart_sha256=buffer_digest(variables), objective_sha256=buffer_digest(objective),
             shared_objective_sha256=buffer_digest(base), raw_sha256=sha256(source / 'data' / group / f'native_{seed}.npy'),
-            start_replay_max_abs=float(np.max(np.abs(start.numpy() - old['start']))) if old is not None else None)
+            start_replay_max_abs=float(np.max(np.abs(start.numpy() - fitted.coordinates.numpy()))) if fitted is not None
+                else float(np.max(np.abs(start.numpy() - old['start']))) if old is not None else None)
         with torch.no_grad():
             loss, terms = objective(start, variables.variables, 1.)
         result['start_objective'] = dict(loss=float(loss), terms={k: float(v) for k, v in terms.items()})
-        if arm == 'calibrated':
+        if arm == 'calibrated' or fitted_trial:
             result['connection_onsets'] = objective.connection_onsets.tolist()
         initial_values = tuple(p.detach().clone() for p in variables.variables)
         write_json(folder / 'progress.json', dict(stage='initialized', **result))

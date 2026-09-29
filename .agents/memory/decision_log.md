@@ -1,3 +1,43 @@
+## 2026-09-30 — Fitted initialization under calibrated C4 objective: bounded screen failed
+
+Previous goal turn bbbd3eea was progress: actualC4 confirmation of calibrated onsets.
+This turn tested next authorized initialization-only combination; concrete negative
+result changes next action. Retain8development source slots/seeds12345,54321 and
+3CR6unsupportedchemistryskip4. Reused14audited calibrated-zero controls with exact
+coordinate/parameter hashes, NO14duplicate solves/replay claims.14new equal-atom
+localfits(max_iter60/max_eval90)+frozen calibratedjointsolves(3x60).28outputs audited,
+14paired,4sourcefailure slots retained. CPUFP64two workers900s/noGPU/newinference/
+training/independent32. SourceGT onlyscoring. Originalraw chart/objective/regularizer
+origins/branches/chemistry/onsets/buffers retained;fittedparameterscopiedinto samechart.
+DiamondHill /media/PM982/onestepfold/c4_fitted_start_v1_20260930 pipeline217787,
+controller217795 terminal;pipelineexit0,0processfailures. Do not restart.
+Raw/zero-final/fitted-final AA .825157/.812698/.814901;CA .900142/.900591/.898754.
+Fitted-zeroAA+.002203184;CA-.001836645 ->predeclaredscreenFALSE. AA improves11/14
+predictions,5/7proteins;CAonly2/14,1/7(3D8L). NewvsrawAA-.010256,CA-.001387.
+Bothfinalarms14/14zeroseverepairs,strictcheckedCA+ILE/THRchirality,RMSbudgets;
+oldjoint0/14both. Oldconnectionfailsboth CN0,angleC10,angleN14,omega14,carbonyl0.
+Absolute_failuresempty14/14both;maxpen1.79503->1.75487. Raw/GTbranchmismatches2
+4B9PP122-P123 bothnoises unchangedfinal. NoGTbranchreplacement.
+FittedstartAA.819113/CA.898821 vslocalzero.802942/.900142. InitialAAadvantage.016171
+shrinksfinal.002203(~13.6%descriptive retention);CAdeclinealreadyatfitstart-.001321,
+thenadditional-.000067throughjoint. Notuniqueenergy-termcausalattribution.
+FitmeanrawMSE .351191->.075093A²;all14improvefittingloss. FinalheavyRMS.52280->.43749A,
+CArms.22930->.26267A,maxatom4.61868->3.53564A. BetterallatomrawMSEdoesnotguarantee
+bone/GTquality. Do notautotunefitweights/iterationsonthispanel orpromotefitteddefault.
+Alllocalfits60iterations/63-65closures;mean2.78s. Joint13*180,one179;closures208-233.
+Newjointmedian18.18/mean22.02s;fit+jointmedian21.16/mean24.81s. Historicalcontrol
+median19.71/mean23.16s notconcurrenttiming;noequal-total-computeorspeedclaim.
+PeaknewRSS~.87GiB. Nooptimizerconvergenceclaim,solverinputgradientsstilldetached.
+28NumPypose/metrics/objectiveaudit max2.15e-10A/8.33e-16/5.69e-13;14samechart/objective
+pairs. OldC4read-onlyaudit28pass+601existing summaryleavesexact;oldC1audit28pass.
+88archivefiles+archiveSHAverifiedlocally. Reports/mini_c4_fitted_start_2026-09-30,
+findingsdocs/mini_c4_fitted_start_findings_2026-09-30.md;overallfrontupdated;PNG/PDF.
+CurrentcombinationCLOSED,notwholeproject. KeepcalibratedZEROstartasdevelopment
+reference. Nextmethodrequiresclearbackbone-preservation/allowedlocaldegreesof
+freedomandseparatebranchuncertaintydefinition;noautomaticsweeporrewritingoldgates.
+Originalgoal remainsactive/unfulfilled,independent32rejectionunchanged. No new
+numericalbackwardbugevidence;don'trestartFDdebuggingortrainthisfailedcombo.
+
 ## 2026-09-30 — Frozen calibrated objective confirms partial quality recovery on C4/S1
 
 Previous goal turn was no progress toward method development: it rechecked the

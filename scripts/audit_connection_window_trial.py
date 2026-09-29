@@ -20,6 +20,9 @@ from onestepfold.data.gt_materializer import ATOM37_INDEX
 def audit_connection_window_trial(root):
     torch.set_num_threads(1)
     lock = json.loads((root / 'lock.json').read_text()); source = Path(lock['source'])
+    fitted_trial = lock.get('initialization_contract') == 'calibrated_c4_fitted_start_v1'
+    if 'initialization_contract' in lock:
+        assert fitted_trial and lock['arms'] == ['zero', 'fitted']
     selection = json.loads((source / 'selection.json').read_text())
     report = json.loads((root / 'report.json').read_text())
     calibration = json.loads(Path(lock['calibration']).read_text())['windows']
@@ -36,7 +39,7 @@ def audit_connection_window_trial(root):
                                  reason=row.get('source_failure', row.get('error', 'unknown'))))
             continue
         assert row['group_id'] == group and row['seed'] == [12345, 54321][(index // 2) % 2]
-        assert row['arm'] == ['original', 'calibrated'][index % 2]
+        assert row['arm'] == lock['arms'][index % 2]
         folder = root / 'cases' / f'{index:02d}'
         for file, key in [('coordinates.npz', 'coordinates_sha256'), ('values.pt', 'values_sha256')]:
             assert sha256(folder / file) == row[key]
@@ -52,7 +55,14 @@ def audit_connection_window_trial(root):
             json.loads((packet / 'variants.json').read_text())).double()
         variables = PoseVariables(adapter, torch.tensor(data['raw']))
         values = torch.load(folder / 'values.pt', map_location='cpu', weights_only=True)
-        assert all(torch.count_nonzero(v) == 0 for v in values['initial'])
+        if not fitted_trial or row['arm'] == 'zero':
+            assert all(torch.count_nonzero(v) == 0 for v in values['initial'])
+        else:
+            fit = row['local_fit']
+            assert fit['max_iter'] == 60 and fit['max_eval'] == 90 and fit['final_iterate']
+            assert fit['iterations'] <= 60 and fit['seconds'] > 0
+            for key, label in [('initial_mse', 'local'), ('final_mse', 'start')]:
+                np.testing.assert_allclose(fit[key], ((data[label]-data['raw'])**2).sum(-1).mean(), rtol=1e-10, atol=1e-10)
         error = 0.
         for label, key in [('start', 'initial'), ('final', 'final')]:
             with torch.no_grad():
@@ -61,10 +71,17 @@ def audit_connection_window_trial(root):
             error = max(error, float(np.max(np.abs(replay(variables) - data[label]))))
         assert error < 1e-8
         if lock['baseline'] is not None:
-            old = dict(np.load(Path(lock['baseline']) / 'cases' / f'{index // 2 * 2:02d}' / 'coordinates.npz'))
-            assert np.max(np.abs(old['start'] - data['start'])) < 1e-8
-            if row['arm'] == 'original':
+            previous = Path(lock['baseline']) / 'cases' / f'{index // 2 * 2 + int(fitted_trial):02d}'
+            old = dict(np.load(previous / 'coordinates.npz'))
+            if not fitted_trial or row['arm'] == 'zero':
+                assert np.max(np.abs(old['start'] - data['start'])) < 1e-8
+            assert np.array_equal(old['local'], data['local'])
+            if row['arm'] in ['original', 'zero']:
                 assert np.max(np.abs(old['final'] - data['final'])) < 1e-8
+            if fitted_trial and row['arm'] == 'zero':
+                assert row['reused_control']['report_sha256'] == sha256(previous / 'report.json')
+                assert row['coordinates_sha256'] == sha256(previous / 'coordinates.npz')
+                assert row['values_sha256'] == sha256(previous / 'values.pt')
         else:
             assert lock.get('prediction_contract') == 'c4_s1_confirmation_v1'
             assert row['start_replay_max_abs'] is None
@@ -83,7 +100,7 @@ def audit_connection_window_trial(root):
         onsets = np.array([[calibration['Pro' if aa == 'P' else 'other']['windows'][term]['q95']['pooled']
                            if raw_sign[j] < 0 else .5 * t for j, aa in enumerate(item['sequence'][1:])]
                           for term, t in TOLERANCES.items()])
-        if row['arm'] == 'calibrated':
+        if row['arm'] == 'calibrated' or fitted_trial:
             np.testing.assert_array_equal(onsets, row['connection_onsets'])
         assert row['raw_branch_mismatches'] == np.flatnonzero(raw_sign != gt_sign).tolist()
         metric_error = 0.; objective_error = 0.
@@ -145,7 +162,12 @@ def audit_connection_window_trial(root):
             assert left[key] == right[key]
         x = dict(np.load(root / 'cases' / f'{i:02d}' / 'coordinates.npz'))
         y = dict(np.load(root / 'cases' / f'{i+1:02d}' / 'coordinates.npz'))
-        assert all(np.array_equal(x[k], y[k]) for k in ['raw', 'local', 'start', 'target', 'atom_names', 'residue_ids'])
+        shared = ['raw', 'local', 'target', 'atom_names', 'residue_ids']
+        if fitted_trial:
+            assert left['objective_sha256'] == right['objective_sha256']
+        else:
+            shared.append('start')
+        assert all(np.array_equal(x[k], y[k]) for k in shared)
         paired.append(dict(index=i//2, paired=True))
     write_json(root / 'audit.json', dict(complete=True, report_sha256=sha256(root / 'report.json'),
         script_sha256=sha256(Path(__file__)), verified=sum(r['verified'] for r in outcomes),
