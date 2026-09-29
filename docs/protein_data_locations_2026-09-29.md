@@ -101,3 +101,10 @@ Precision `/media/990Pro/onestepfold/esmc_29769_20260927`。本轮未重新连�
 后续使用优先读本次已确认存在且有验收记录的DiamondHill统一目录。
 
 没有在本次盘点中下载新数据、重提特征或改变任何数据划分。
+
+## 2026-09-30 补充：完整目录与单体子集
+
+实查HPC3和DiamondHill的256个`catalog_v1/shard-*.jsonl.gz`逐分片SHA256全部相同，
+覆盖244,406个PDB目录记录；`monomer_candidates.jsonl.gz`只是其中的单体视图。
+本次从全目录找到同源多聚体来源的完整单链，补齐独立32条几何验证；不是下载了另一套UniProt。
+详见[本次搜索报告](mini_full_source_search_findings_2026-09-30.md)。

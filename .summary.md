@@ -1,3 +1,20 @@
+## 2026-09-30 — Full-source search completes32;8-GCD validation launched
+
+HPC3 full244406-entry catalog available, raw83GB;256 catalog shards byte-identical
+with DiamondHill. Monomer alternatives891 groups/1336records yield0 supported new
+long chains. Full catalog census478groups/3789chains→154isolatedgroups/766records→
+125source-supportedgroups/591records, all contextual.47supportedhomooligomer groups;
+predeclared first8 pairwise-isolated native chemistry8/8pass. User explicitly allows
+homooligomer-derived complete chains. Add3VSV-A638,5JVL-A874,3F6B-A525,6P63-C595;
+retain28exact, now8/8/8/8. Scope label28monomer+4homooligomer; no relaxed isolation,
+chemistry, masks or temporal cutoff. No autonomous-monomer/pretraining exclusion claim.
+DiamondHill independent32_v2_20260930 data/runtime locks, frozen2aa geometry bytes.
+8GCD launched PID169720/controller169722:96C4S1 raw+192mean/tail repairs, autoCPUaudit
+and experimental scoring. First8 raw triplets complete; no final quality conclusion.
+Missing old solver scripts restored beforeGPU with preliminary manifest preserved.
+Isolatedtmtools0.3.0 officialwheel SHA verified; runtime3tests pass/local10pass+1skip
+covered remotely. Reportdocs/mini_full_source_search_findings_2026-09-30.md.
+
 ## 2026-09-30 — User-authorized source extension retains28;32 lock incomplete
 
 User explicitly chose extend sources to32 before validation. StageB complete TRAIN

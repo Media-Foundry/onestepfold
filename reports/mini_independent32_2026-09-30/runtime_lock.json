@@ -1,0 +1,666 @@
+{
+  "cycles": 4,
+  "data_lock_sha256": "83123fd0b22b92a8c990f61fadc72f2baccdcac253cefc03c1991a7cd5007365",
+  "devices": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "dtype": "fp32",
+  "finalized_before_gpu": true,
+  "frozen_geometry": {
+    "/media/PM982/onestepfold/independent32_v2_20260930/code/src/fastglycan/anchored_geometry.py": "2f2b2911896107539e7ad8fc468734ee63d7fad06c42acbaf26b5f568d4df5d5",
+    "/media/PM982/onestepfold/independent32_v2_20260930/code/src/fastglycan/anchored_tail.py": "6902f7324795f784b4e17fb5a82a609fc50012f77766b84088702cf0a2af2e64",
+    "/media/PM982/onestepfold/independent32_v2_20260930/code/src/fastglycan/articulated_output.py": "9ed9bee15d6e03da44768f4c42065622c6c936addbc01a481db930c107616e13",
+    "/media/PM982/onestepfold/independent32_v2_20260930/code/src/fastglycan/articulated_reference.py": "0e2c755c76b1ae318e05299d9461dad4352a2a8f022d7113e3cf8f64fea97606",
+    "/media/PM982/onestepfold/independent32_v2_20260930/code/src/fastglycan/collision_audit.py": "8065740a9bfb25a2fcc417422826a0df47c64e106e4d6f63601d3b3e7a036f5c",
+    "/media/PM982/onestepfold/independent32_v2_20260930/code/src/fastglycan/geometry_repair.py": "9677b69c07392781a3640f0c8eb85d094730f1fe3f560fb7d3c67618d00c4257",
+    "/media/PM982/onestepfold/independent32_v2_20260930/code/src/fastglycan/hybrid_geometry.py": "dbac578ed4b0ac44540942fb63256e17d33db6296e35b85a9c7111f728046672",
+    "/media/PM982/onestepfold/independent32_v2_20260930/code/src/fastglycan/repair_outcomes.py": "0d3d92ecbf1a4100482635ebe1850c4ed00768261fc0afadddf8b14dcb121f27"
+  },
+  "gt_in_model": false,
+  "gt_in_repair": false,
+  "model": "protenix_mini_esm_v0.5.0",
+  "noises": [
+    300007,
+    300017,
+    300023
+  ],
+  "panel_sha256": "9309244da5f06d1f01edba9daf0fa5d6f578fb0683acec3aeaf26e2ea3343482",
+  "per_protein_raw_external_timeout": 5400,
+  "preliminary_runtime_lock_sha256": "ba9b8bf9ec3c65f3c82d68213408fa67a40b559a78308e7dae26be984f89d514",
+  "prepared": [
+    {
+      "allowed_nonbonded_pairs": 149351,
+      "atoms": 551,
+      "files": {
+        "/media/PM982/onestepfold/independent32_v2_20260930/proteins/ca12943e40c19aff7e6316ba04889ab808ad0442f2f8900fefc83531c31cc2f3/chemical_reference.npz": "5aeb64307e5ade394a8e3da52ce2369f5c44229777ca62cf17098fc4ddead666",
+        "/media/PM982/onestepfold/independent32_v2_20260930/proteins/ca12943e40c19aff7e6316ba04889ab808ad0442f2f8900fefc83531c31cc2f3/topology.pt": "a78c6a7a0f1a741b87b4e1ec99cb2cc4827d6c3a03b541cae569bb582423d5f1",
+        "/media/PM982/onestepfold/independent32_v2_20260930/proteins/ca12943e40c19aff7e6316ba04889ab808ad0442f2f8900fefc83531c31cc2f3/variants.json": "020e925e7269da64cdd35bbb4058137e9e0d6343bb5567f36f4a504c573b9eae"
+      },
+      "group_id": "ca12943e40c19aff7e6316ba04889ab808ad0442f2f8900fefc83531c31cc2f3"
+    },
+    {
+      "allowed_nonbonded_pairs": 354129,
+      "atoms": 846,
+      "files": {
+        "/media/PM982/onestepfold/independent32_v2_20260930/proteins/8d61c04dbde7fca88eb2a935448eea6fa2708d387fe5064569be2b6af0899a51/chemical_reference.npz": "1c21b9a45927596433f06cb6c09a2641d61d16f63222c7f0c05690572ca2cb06",
+        "/media/PM982/onestepfold/independent32_v2_20260930/proteins/8d61c04dbde7fca88eb2a935448eea6fa2708d387fe5064569be2b6af0899a51/topology.pt": "4a71bd31938240269f514baecc1e53f366db496cf7df0e5730025e6dfbee3b0b",
+        "/media/PM982/onestepfold/independent32_v2_20260930/proteins/8d61c04dbde7fca88eb2a935448eea6fa2708d387fe5064569be2b6af0899a51/variants.json": "4c075669d835f60eed308bfa5040cc163cb8f0b61a71154016e6fcc765b16829"
+      },
+      "group_id": "8d61c04dbde7fca88eb2a935448eea6fa2708d387fe5064569be2b6af0899a51"
+    },
+    {
+      "allowed_nonbonded_pairs": 542421,
+      "atoms": 1046,
+      "files": {
+        "/media/PM982/onestepfold/independent32_v2_20260930/proteins/9410189af00e982b834fc0f2bb97c87d62aa29b2e30b91db3d322ad77d5c42e0/chemical_reference.npz": "74a9582fcb483b5c8edbd980c4faed683f4906e9b4413eaeafbbdd48430c1813",
+        "/media/PM982/onestepfold/independent32_v2_20260930/proteins/9410189af00e982b834fc0f2bb97c87d62aa29b2e30b91db3d322ad77d5c42e0/topology.pt": "b88d3f9e349c447cace8ea54415ed50e53d88073ba676fb4fd3eb42b75a53ffc",
+        "/media/PM982/onestepfold/independent32_v2_20260930/proteins/9410189af00e982b834fc0f2bb97c87d62aa29b2e30b91db3d322ad77d5c42e0/variants.json": "97df82b17bd0f198a6ff078f5943f4650b4881194f80c5c859af2016509f0827"
+      },
+      "group_id": "9410189af00e982b834fc0f2bb97c87d62aa29b2e30b91db3d322ad77d5c42e0"
+    },
+    {
+      "allowed_nonbonded_pairs": 335847,
+      "atoms": 824,
+      "files": {
+        "/media/PM982/onestepfold/independent32_v2_20260930/proteins/b7438c54fb2ded9c4916d03c2eba6fc8485f92b38ef46df6c94208852e227056/chemical_reference.npz": "5a4542f238248f1716cd571c078152036d4c6bf5a2bcbbf11c6f0fbb37485b11",
+        "/media/PM982/onestepfold/independent32_v2_20260930/proteins/b7438c54fb2ded9c4916d03c2eba6fc8485f92b38ef46df6c94208852e227056/topology.pt": "d93d0e674eb3edb98a51c69723c55444d7a2162c823802b9ad32cba7ba78f4b2",
+        "/media/PM982/onestepfold/independent32_v2_20260930/proteins/b7438c54fb2ded9c4916d03c2eba6fc8485f92b38ef46df6c94208852e227056/variants.json": "cbe03809076446f57a238af8636a04fd74f6d0a1617dca3a1ac392c633cc9be6"
+      },
+      "group_id": "b7438c54fb2ded9c4916d03c2eba6fc8485f92b38ef46df6c94208852e227056"
+    },
+    {
+      "allowed_nonbonded_pairs": 253868,
+      "atoms": 717,
+      "files": {
+        "/media/PM982/onestepfold/independent32_v2_20260930/proteins/f6a5c1b7d29d9527c2e97abc5eb3fbe57ba633e0420f480f77f0d2dac088ab1c/chemical_reference.npz": "3889cebc344bcb2890934ac70eca25265c5f048f959d894164272e1b98ac22e0",
+        "/media/PM982/onestepfold/independent32_v2_20260930/proteins/f6a5c1b7d29d9527c2e97abc5eb3fbe57ba633e0420f480f77f0d2dac088ab1c/topology.pt": "6d2d472ca0182d05f614ea9825f333241c164ebb63432459a61f5c08b622484f",
+        "/media/PM982/onestepfold/independent32_v2_20260930/proteins/f6a5c1b7d29d9527c2e97abc5eb3fbe57ba633e0420f480f77f0d2dac088ab1c/variants.json": "6cda9d214da1d006dccbea084de90ac7c96218caf4b45f78741be88e8ad01d5a"
+      },
+      "group_id": "f6a5c1b7d29d9527c2e97abc5eb3fbe57ba633e0420f480f77f0d2dac088ab1c"
+    },
+    {
+      "allowed_nonbonded_pairs": 358341,
+      "atoms": 851,
+      "files": {
+        "/media/PM982/onestepfold/independent32_v2_20260930/proteins/e14ef239bf889cf280f7b7b9bd5b1a6ff05ebd6dfe1b34398a4249075d5e98d6/chemical_reference.npz": "2b3554e24dac2364452259a802839bf38af877be7e16b17dbd589d9cd56f44b4",
+        "/media/PM982/onestepfold/independent32_v2_20260930/proteins/e14ef239bf889cf280f7b7b9bd5b1a6ff05ebd6dfe1b34398a4249075d5e98d6/topology.pt": "3b49dc24408b198994a4e3c9111b7e27004116a1f13a2ce698a58c09ecdf0e2b",
+        "/media/PM982/onestepfold/independent32_v2_20260930/proteins/e14ef239bf889cf280f7b7b9bd5b1a6ff05ebd6dfe1b34398a4249075d5e98d6/variants.json": "23252e6132da5e1b0446a25b11006f46de7b3ca9df77130bef2e4324831e859b"
+      },
+      "group_id": "e14ef239bf889cf280f7b7b9bd5b1a6ff05ebd6dfe1b34398a4249075d5e98d6"
+    },
+    {
+      "allowed_nonbonded_pairs": 314875,
+      "atoms": 798,
+      "files": {
+        "/media/PM982/onestepfold/independent32_v2_20260930/proteins/b764a4b473c579dcc6d1f245f017c0c46ac304cf779662e9a365b979d12e707f/chemical_reference.npz": "8b6a1cd624a3116442d9511ca8ccabbadfce3b4a386ed7893a83befb585a12c1",
+        "/media/PM982/onestepfold/independent32_v2_20260930/proteins/b764a4b473c579dcc6d1f245f017c0c46ac304cf779662e9a365b979d12e707f/topology.pt": "037380d02605cee96d8acece021eb7a8e80d15e6b86d67ed090b938ea2d53037",
+        "/media/PM982/onestepfold/independent32_v2_20260930/proteins/b764a4b473c579dcc6d1f245f017c0c46ac304cf779662e9a365b979d12e707f/variants.json": "391c5d8096e4e8f907329fd84953392081534992bfa95da9899310131170ee50"
+      },
+      "group_id": "b764a4b473c579dcc6d1f245f017c0c46ac304cf779662e9a365b979d12e707f"
+    },
+    {
+      "allowed_nonbonded_pairs": 208355,
+      "atoms": 650,
+      "files": {
+        "/media/PM982/onestepfold/independent32_v2_20260930/proteins/b8d070660f652bca81f0db9e843fc6dc7a4c2171fdc488c50b48284a4f648324/chemical_reference.npz": "2a2722a64e81c86c94b970920414725cb65482868a314b478e7be0c30dc733e2",
+        "/media/PM982/onestepfold/independent32_v2_20260930/proteins/b8d070660f652bca81f0db9e843fc6dc7a4c2171fdc488c50b48284a4f648324/topology.pt": "a1d68d5b4d7e45e3827cc963e28753b7b8e5721789bf5d9a9cbd56b8cfea3685",
+        "/media/PM982/onestepfold/independent32_v2_20260930/proteins/b8d070660f652bca81f0db9e843fc6dc7a4c2171fdc488c50b48284a4f648324/variants.json": "72d7b717fff000ba5dee9084a6d78694289309fdc585231608d960d0e7383ef1"
+      },
+      "group_id": "b8d070660f652bca81f0db9e843fc6dc7a4c2171fdc488c50b48284a4f648324"
+    },
+    {
+      "allowed_nonbonded_pairs": 708693,
+      "atoms": 1195,
+      "files": {
+        "/media/PM982/onestepfold/independent32_v2_20260930/proteins/f9a5c1ef0ef4504ded3cf5090a6903b0c34c1f1fd3fa73f93aa089e3f97480c5/chemical_reference.npz": "799624bf1cea3975d994a78d3e06031c21f12dee6d7132c84bb0f28e8c4d98ee",
+        "/media/PM982/onestepfold/independent32_v2_20260930/proteins/f9a5c1ef0ef4504ded3cf5090a6903b0c34c1f1fd3fa73f93aa089e3f97480c5/topology.pt": "8ea118878e785ad4048a4559335eb4f1ebc9f92249e3807d6d81ea97ed3cbf24",
+        "/media/PM982/onestepfold/independent32_v2_20260930/proteins/f9a5c1ef0ef4504ded3cf5090a6903b0c34c1f1fd3fa73f93aa089e3f97480c5/variants.json": "43c241e78c4a90d306d9891e09abd41192fbd8036cfaab108ef0fd1989994cc4"
+      },
+      "group_id": "f9a5c1ef0ef4504ded3cf5090a6903b0c34c1f1fd3fa73f93aa089e3f97480c5"
+    },
+    {
+      "allowed_nonbonded_pairs": 686264,
+      "atoms": 1176,
+      "files": {
+        "/media/PM982/onestepfold/independent32_v2_20260930/proteins/cc1ff81a13716e93a2e421f2d4f6f4eaccfdea3ca6f991933ded90cd4ad1a5c4/chemical_reference.npz": "a7417876718182c0d853c81de4c44a21063038ccc6fc6fa5535a06401c16cf8a",
+        "/media/PM982/onestepfold/independent32_v2_20260930/proteins/cc1ff81a13716e93a2e421f2d4f6f4eaccfdea3ca6f991933ded90cd4ad1a5c4/topology.pt": "f1da0561406d5eb1816cc65ea71be2729f80e9dd2769ae95ae80c894f695fdd7",
+        "/media/PM982/onestepfold/independent32_v2_20260930/proteins/cc1ff81a13716e93a2e421f2d4f6f4eaccfdea3ca6f991933ded90cd4ad1a5c4/variants.json": "aad4d1197fba210f3822852ff74a335c0506923506b7162eaa7ab0c97700eca7"
+      },
+      "group_id": "cc1ff81a13716e93a2e421f2d4f6f4eaccfdea3ca6f991933ded90cd4ad1a5c4"
+    },
+    {
+      "allowed_nonbonded_pairs": 797090,
+      "atoms": 1267,
+      "files": {
+        "/media/PM982/onestepfold/independent32_v2_20260930/proteins/d35c7eba87cd9f8639df94b1c1233782b9ad47cba45fc99f4ad3fe122ffc2e3b/chemical_reference.npz": "16fd2e2106fee04d1b117ac06dfa435c8826788878e5f576af3a8abb146013b9",
+        "/media/PM982/onestepfold/independent32_v2_20260930/proteins/d35c7eba87cd9f8639df94b1c1233782b9ad47cba45fc99f4ad3fe122ffc2e3b/topology.pt": "0ab65867afb515dc384044bb95f8addd18fcde7d633dfa3845fd200848a67fe9",
+        "/media/PM982/onestepfold/independent32_v2_20260930/proteins/d35c7eba87cd9f8639df94b1c1233782b9ad47cba45fc99f4ad3fe122ffc2e3b/variants.json": "cf1636288f6a6aa10e2622801a257c8ff516a594cb8f79ba447951976f580e60"
+      },
+      "group_id": "d35c7eba87cd9f8639df94b1c1233782b9ad47cba45fc99f4ad3fe122ffc2e3b"
+    },
+    {
+      "allowed_nonbonded_pairs": 1308186,
+      "atoms": 1622,
+      "files": {
+        "/media/PM982/onestepfold/independent32_v2_20260930/proteins/f3a4e81dc7c11a7e74469824559cc2aa1e4831b3e49622a455076a4490f86fdf/chemical_reference.npz": "e3d6aadd5302143691fb366cda1b0d00137b395b344b304e38aeab387adf731d",
+        "/media/PM982/onestepfold/independent32_v2_20260930/proteins/f3a4e81dc7c11a7e74469824559cc2aa1e4831b3e49622a455076a4490f86fdf/topology.pt": "6e6f7278e074e9622439573ca62cec521562c4568e62a64225c71c895c2462ca",
+        "/media/PM982/onestepfold/independent32_v2_20260930/proteins/f3a4e81dc7c11a7e74469824559cc2aa1e4831b3e49622a455076a4490f86fdf/variants.json": "446ac4ac75b1dbce6bf62d95999aba94f30880fd7f1f4c66abbfa3858303999c"
+      },
+      "group_id": "f3a4e81dc7c11a7e74469824559cc2aa1e4831b3e49622a455076a4490f86fdf"
+    },
+    {
+      "allowed_nonbonded_pairs": 1432393,
+      "atoms": 1697,
+      "files": {
+        "/media/PM982/onestepfold/independent32_v2_20260930/proteins/d958f0f21199522332a3cd32eb910bbd2a53b97d1f42b1ce44ec552b963a75df/chemical_reference.npz": "2315615dd283922acc01ef1a3bd94c05751a68d762ce88f8f87fdc81e1728e83",
+        "/media/PM982/onestepfold/independent32_v2_20260930/proteins/d958f0f21199522332a3cd32eb910bbd2a53b97d1f42b1ce44ec552b963a75df/topology.pt": "e534bc447ee2b1a1b484b11e47a3d7e684162a9fe14f46ed404375adde697a69",
+        "/media/PM982/onestepfold/independent32_v2_20260930/proteins/d958f0f21199522332a3cd32eb910bbd2a53b97d1f42b1ce44ec552b963a75df/variants.json": "8f83a15969342954f7b45c9859d74c90a21ecdd2def8cec71467542782ddf16e"
+      },
+      "group_id": "d958f0f21199522332a3cd32eb910bbd2a53b97d1f42b1ce44ec552b963a75df"
+    },
+    {
+      "allowed_nonbonded_pairs": 1526890,
+      "atoms": 1752,
+      "files": {
+        "/media/PM982/onestepfold/independent32_v2_20260930/proteins/9b55afd3ef360711fef95854b5f28f7a1995b6952c18a50e3230ff61f3686bbd/chemical_reference.npz": "63a72ad2a3233960f50af4b541df0172f7b503f06592f22c7e6deba7506710f8",
+        "/media/PM982/onestepfold/independent32_v2_20260930/proteins/9b55afd3ef360711fef95854b5f28f7a1995b6952c18a50e3230ff61f3686bbd/topology.pt": "3ec86084dcf7a803090587a049cbbd4ccb474ca74b0a931bf652152413cd6499",
+        "/media/PM982/onestepfold/independent32_v2_20260930/proteins/9b55afd3ef360711fef95854b5f28f7a1995b6952c18a50e3230ff61f3686bbd/variants.json": "b459671828f1ea10ab715efa4e986c07f1fcc1d68074ecf8d9e7fa1bcbc1cdce"
+      },
+      "group_id": "9b55afd3ef360711fef95854b5f28f7a1995b6952c18a50e3230ff61f3686bbd"
+    },
+    {
+      "allowed_nonbonded_pairs": 1252235,
+      "atoms": 1587,
+      "files": {
+        "/media/PM982/onestepfold/independent32_v2_20260930/proteins/a0c9deb194795d71ef17ef72d64ef251be16953aaee2420e9a97d00e679e431f/chemical_reference.npz": "8529b52713b6b7cd9b24a450c1cc7b9e6137813b93012c437bd6e8c6d6d13c2d",
+        "/media/PM982/onestepfold/independent32_v2_20260930/proteins/a0c9deb194795d71ef17ef72d64ef251be16953aaee2420e9a97d00e679e431f/topology.pt": "50ba29d77389528815d03d67c29e258bb6687a42001548dca7b45d5101bcb701",
+        "/media/PM982/onestepfold/independent32_v2_20260930/proteins/a0c9deb194795d71ef17ef72d64ef251be16953aaee2420e9a97d00e679e431f/variants.json": "c20130c18c1c9616f0ed052a57b200a10a17407cebda0e76d36ba7a709d969d8"
+      },
+      "group_id": "a0c9deb194795d71ef17ef72d64ef251be16953aaee2420e9a97d00e679e431f"
+    },
+    {
+      "allowed_nonbonded_pairs": 1355538,
+      "atoms": 1651,
+      "files": {
+        "/media/PM982/onestepfold/independent32_v2_20260930/proteins/f745dd77779192e2fa0799ec955f885d631a16cd5a563093305af7f16cf04101/chemical_reference.npz": "63f9ab87329878f2de2ea408654567e641f45cd308eb7f47f240965df6ef8576",
+        "/media/PM982/onestepfold/independent32_v2_20260930/proteins/f745dd77779192e2fa0799ec955f885d631a16cd5a563093305af7f16cf04101/topology.pt": "f7b2e9ddf420245ea10941f04f045b541a5fb7b0ff24468343f7be13568bca31",
+        "/media/PM982/onestepfold/independent32_v2_20260930/proteins/f745dd77779192e2fa0799ec955f885d631a16cd5a563093305af7f16cf04101/variants.json": "465f8f5c63d69a7334806c22d8de5f051f9c1d62dfdfa70dce66e249f2add355"
+      },
+      "group_id": "f745dd77779192e2fa0799ec955f885d631a16cd5a563093305af7f16cf04101"
+    },
+    {
+      "allowed_nonbonded_pairs": 2929474,
+      "atoms": 2425,
+      "files": {
+        "/media/PM982/onestepfold/independent32_v2_20260930/proteins/da5ec40891b4e1b7174b4568846b20975565f09e0ab099ccd1db8ca5fcc33f1f/chemical_reference.npz": "de6c1434f65cce070b962181ff4650ed52033a87002c6cfa52de736ac20b7bd4",
+        "/media/PM982/onestepfold/independent32_v2_20260930/proteins/da5ec40891b4e1b7174b4568846b20975565f09e0ab099ccd1db8ca5fcc33f1f/topology.pt": "c103e0185dd396ac12770dd0e5b9ca45aed92657540ee4c2b6a9c88155bc061f",
+        "/media/PM982/onestepfold/independent32_v2_20260930/proteins/da5ec40891b4e1b7174b4568846b20975565f09e0ab099ccd1db8ca5fcc33f1f/variants.json": "bfe7190a5f8aac0181ab5b60a4571d2252876dbfbd7887cc9623f1ac53138ad5"
+      },
+      "group_id": "da5ec40891b4e1b7174b4568846b20975565f09e0ab099ccd1db8ca5fcc33f1f"
+    },
+    {
+      "allowed_nonbonded_pairs": 3659983,
+      "atoms": 2710,
+      "files": {
+        "/media/PM982/onestepfold/independent32_v2_20260930/proteins/ca4c8d2687b28405eb7d70874ade21c8f8405c2aa42003de5ec4a1a2c921e2b9/chemical_reference.npz": "bb3ddb58aaa2fb00005d8881286075983aa6e2e09887bf48909833c6ed88c76c",
+        "/media/PM982/onestepfold/independent32_v2_20260930/proteins/ca4c8d2687b28405eb7d70874ade21c8f8405c2aa42003de5ec4a1a2c921e2b9/topology.pt": "68b6d89dbc58183532e4a9401ee0c5187dcaefbe244856ed0ff35af8abfb7722",
+        "/media/PM982/onestepfold/independent32_v2_20260930/proteins/ca4c8d2687b28405eb7d70874ade21c8f8405c2aa42003de5ec4a1a2c921e2b9/variants.json": "18b5bc67e4f5da3b74c3bceaa9566e6629e50a4ce079037ed565eed39df6e882"
+      },
+      "group_id": "ca4c8d2687b28405eb7d70874ade21c8f8405c2aa42003de5ec4a1a2c921e2b9"
+    },
+    {
+      "allowed_nonbonded_pairs": 3156461,
+      "atoms": 2517,
+      "files": {
+        "/media/PM982/onestepfold/independent32_v2_20260930/proteins/ebf998b8c980a8158532e2554b8660ebe0507c3ecd507229b0b56a6b970e11aa/chemical_reference.npz": "579487b126dc148bf75a654863d74fe0993e85f1242f92072edcd97b095c4edd",
+        "/media/PM982/onestepfold/independent32_v2_20260930/proteins/ebf998b8c980a8158532e2554b8660ebe0507c3ecd507229b0b56a6b970e11aa/topology.pt": "2b8f6c633d127a285730b41893161d815a5fc45e1882beca2dbe37b7e7767503",
+        "/media/PM982/onestepfold/independent32_v2_20260930/proteins/ebf998b8c980a8158532e2554b8660ebe0507c3ecd507229b0b56a6b970e11aa/variants.json": "5aa30d5bc03a7665d976eab7f8b0265976225588c8356e735f13dd12e76483bb"
+      },
+      "group_id": "ebf998b8c980a8158532e2554b8660ebe0507c3ecd507229b0b56a6b970e11aa"
+    },
+    {
+      "allowed_nonbonded_pairs": 2835883,
+      "atoms": 2386,
+      "files": {
+        "/media/PM982/onestepfold/independent32_v2_20260930/proteins/bcec914f18a2ff987e0ee7b42df021faeed99e21ebef4e90ad952f0eef7ac2fc/chemical_reference.npz": "24615fe771a1b2b8a03d1d1b7f6d5a274df308dc18982420195a60c9cb7044dd",
+        "/media/PM982/onestepfold/independent32_v2_20260930/proteins/bcec914f18a2ff987e0ee7b42df021faeed99e21ebef4e90ad952f0eef7ac2fc/topology.pt": "7e5e702b4ead3cbaafefcfd1d8bef666d06c3f711e7ed93b45c6df35021630ae",
+        "/media/PM982/onestepfold/independent32_v2_20260930/proteins/bcec914f18a2ff987e0ee7b42df021faeed99e21ebef4e90ad952f0eef7ac2fc/variants.json": "7ebc533157bae5130768546339f201315789d364caa70008002f4bad09801080"
+      },
+      "group_id": "bcec914f18a2ff987e0ee7b42df021faeed99e21ebef4e90ad952f0eef7ac2fc"
+    },
+    {
+      "allowed_nonbonded_pairs": 3687089,
+      "atoms": 2720,
+      "files": {
+        "/media/PM982/onestepfold/independent32_v2_20260930/proteins/b5735fff15f7785521f665ef734dc78f7614ec5fa6a27af0acb49ec5c830a695/chemical_reference.npz": "8ec6da130f466e6eb7d56c77f3a79e9bbee0906d711315b334b40712399b3329",
+        "/media/PM982/onestepfold/independent32_v2_20260930/proteins/b5735fff15f7785521f665ef734dc78f7614ec5fa6a27af0acb49ec5c830a695/topology.pt": "cc92101e2f165574667a1b40fd479bd33b0a81595cc9a8d35c48db198baf5f0b",
+        "/media/PM982/onestepfold/independent32_v2_20260930/proteins/b5735fff15f7785521f665ef734dc78f7614ec5fa6a27af0acb49ec5c830a695/variants.json": "0c3d4583e77b9e9b4577afea3deacd92e14baf3924417c5f395f004a58165579"
+      },
+      "group_id": "b5735fff15f7785521f665ef734dc78f7614ec5fa6a27af0acb49ec5c830a695"
+    },
+    {
+      "allowed_nonbonded_pairs": 7097244,
+      "atoms": 3772,
+      "files": {
+        "/media/PM982/onestepfold/independent32_v2_20260930/proteins/eedc4b6a556406c1d46c0f8b01df27f4bc714e1784bf8712953859fe4643d655/chemical_reference.npz": "f26c730dbb3e2e86255cea69c8fee5973ced742ebfeaa2f91b4db2544c0feb0e",
+        "/media/PM982/onestepfold/independent32_v2_20260930/proteins/eedc4b6a556406c1d46c0f8b01df27f4bc714e1784bf8712953859fe4643d655/topology.pt": "b52c4cb77ed648075f1ca212643b68e423485036333cdc4ed3e122cd0cfab468",
+        "/media/PM982/onestepfold/independent32_v2_20260930/proteins/eedc4b6a556406c1d46c0f8b01df27f4bc714e1784bf8712953859fe4643d655/variants.json": "f428bf59b3ca80e290eeba3a96f53bb51652196af293097a1d203e6d7443a681"
+      },
+      "group_id": "eedc4b6a556406c1d46c0f8b01df27f4bc714e1784bf8712953859fe4643d655"
+    },
+    {
+      "allowed_nonbonded_pairs": 2199906,
+      "atoms": 2102,
+      "files": {
+        "/media/PM982/onestepfold/independent32_v2_20260930/proteins/bfeda8fc0f2e5fbe53f964dc6b5a06b9cbe40089a06513ded94b0278f70df453/chemical_reference.npz": "d92e307e703f1e516feba5b9e513c5febb3677c5e28e591e26b1ac06f8e54394",
+        "/media/PM982/onestepfold/independent32_v2_20260930/proteins/bfeda8fc0f2e5fbe53f964dc6b5a06b9cbe40089a06513ded94b0278f70df453/topology.pt": "d5e26e208df3a7d638791dd08d5c09b8fb267df0138d30c4608208a86d1d571e",
+        "/media/PM982/onestepfold/independent32_v2_20260930/proteins/bfeda8fc0f2e5fbe53f964dc6b5a06b9cbe40089a06513ded94b0278f70df453/variants.json": "2a05882c1de5de45914879538fabf312219f6e322c304957e77dd521aaa3ca33"
+      },
+      "group_id": "bfeda8fc0f2e5fbe53f964dc6b5a06b9cbe40089a06513ded94b0278f70df453"
+    },
+    {
+      "allowed_nonbonded_pairs": 10422125,
+      "atoms": 4570,
+      "files": {
+        "/media/PM982/onestepfold/independent32_v2_20260930/proteins/b079623582d0c3b331a5abf11dfc6ed14ca3305a9ba1799ab68783b26a74c725/chemical_reference.npz": "7507dcbbe9f1ffca7e43ab6c78b380dd8ba3fb6b89232df5c3e19521d08964f2",
+        "/media/PM982/onestepfold/independent32_v2_20260930/proteins/b079623582d0c3b331a5abf11dfc6ed14ca3305a9ba1799ab68783b26a74c725/topology.pt": "83701a38029de1169c8452809e070143958d080d340bd4e7c5ef6f60af7729e7",
+        "/media/PM982/onestepfold/independent32_v2_20260930/proteins/b079623582d0c3b331a5abf11dfc6ed14ca3305a9ba1799ab68783b26a74c725/variants.json": "0aa6eb57caa19f7a65918d88335804ba5710a5c4e118dae2feb4894581ede785"
+      },
+      "group_id": "b079623582d0c3b331a5abf11dfc6ed14ca3305a9ba1799ab68783b26a74c725"
+    },
+    {
+      "allowed_nonbonded_pairs": 11005315,
+      "atoms": 4696,
+      "files": {
+        "/media/PM982/onestepfold/independent32_v2_20260930/proteins/92e90475bcb1d5c3ccc20c1f82f5a0555c43aff0740a258c343f9d5baf69253a/chemical_reference.npz": "19786e9d96ade0b4487b3e7ef764c70dae25ec3d2e4f21bf88304f09ca5e1e32",
+        "/media/PM982/onestepfold/independent32_v2_20260930/proteins/92e90475bcb1d5c3ccc20c1f82f5a0555c43aff0740a258c343f9d5baf69253a/topology.pt": "60b652a3fc7978a509d3682fd00556c3515098c835b7a4da9e83aa2472756b96",
+        "/media/PM982/onestepfold/independent32_v2_20260930/proteins/92e90475bcb1d5c3ccc20c1f82f5a0555c43aff0740a258c343f9d5baf69253a/variants.json": "47cb7f627763f201a5f6ea56f0f7758afd0303acd8977103110cd90ad4a6d720"
+      },
+      "group_id": "92e90475bcb1d5c3ccc20c1f82f5a0555c43aff0740a258c343f9d5baf69253a"
+    },
+    {
+      "allowed_nonbonded_pairs": 11899916,
+      "atoms": 4883,
+      "files": {
+        "/media/PM982/onestepfold/independent32_v2_20260930/proteins/ca5bd8b726235d72de405760fa553ac52957f3ba62b7c96fca96983a0f9b6720/chemical_reference.npz": "b46b45a835b315930e1559ccbf2831f55ae3d78a90ecfc9d4da5e952307fe6f8",
+        "/media/PM982/onestepfold/independent32_v2_20260930/proteins/ca5bd8b726235d72de405760fa553ac52957f3ba62b7c96fca96983a0f9b6720/topology.pt": "dd16781ebcaf506f73d225cb4033ad1ac6ce4c199e52b79ab683164bbdac15bd",
+        "/media/PM982/onestepfold/independent32_v2_20260930/proteins/ca5bd8b726235d72de405760fa553ac52957f3ba62b7c96fca96983a0f9b6720/variants.json": "073b9195499b09178c3ec8c030d10ead0de5f05f49625fd75c0c27a0dad255a1"
+      },
+      "group_id": "ca5bd8b726235d72de405760fa553ac52957f3ba62b7c96fca96983a0f9b6720"
+    },
+    {
+      "allowed_nonbonded_pairs": 10226737,
+      "atoms": 4527,
+      "files": {
+        "/media/PM982/onestepfold/independent32_v2_20260930/proteins/fcb34f66a713bdf4d7d6490740872b9e32e3dcd9efc351f0d98a10ce58348ce7/chemical_reference.npz": "c31d9bbb74972a8f53e9e20cf57efa63763cfe032338779946e283068f3dd03f",
+        "/media/PM982/onestepfold/independent32_v2_20260930/proteins/fcb34f66a713bdf4d7d6490740872b9e32e3dcd9efc351f0d98a10ce58348ce7/topology.pt": "a7e66dc6a40d67deceb10a783304a7f410ec666e8f00aa73f179360ab3f05416",
+        "/media/PM982/onestepfold/independent32_v2_20260930/proteins/fcb34f66a713bdf4d7d6490740872b9e32e3dcd9efc351f0d98a10ce58348ce7/variants.json": "244f3f0495d8dede68589b43e477c93ce4c02594290bf46311411211aa8de971"
+      },
+      "group_id": "fcb34f66a713bdf4d7d6490740872b9e32e3dcd9efc351f0d98a10ce58348ce7"
+    },
+    {
+      "allowed_nonbonded_pairs": 3059218,
+      "atoms": 2478,
+      "files": {
+        "/media/PM982/onestepfold/independent32_v2_20260930/proteins/9e0da4b73a55d09fac0e16230b3379ac82af1572a86363d1621d9dfc738c647f/chemical_reference.npz": "f22d34135327c1c911e58dcf7f4f2c7dc4f703ead932c311e2096fe4b54748a9",
+        "/media/PM982/onestepfold/independent32_v2_20260930/proteins/9e0da4b73a55d09fac0e16230b3379ac82af1572a86363d1621d9dfc738c647f/topology.pt": "7193c6162754e7b945a7111fe0fc69683bc2189b35cab4484bdc2f5a6898128a",
+        "/media/PM982/onestepfold/independent32_v2_20260930/proteins/9e0da4b73a55d09fac0e16230b3379ac82af1572a86363d1621d9dfc738c647f/variants.json": "e648b13b4560bd2bcf3001f12c7b715a77fe789900bae333abede48963b9b249"
+      },
+      "group_id": "9e0da4b73a55d09fac0e16230b3379ac82af1572a86363d1621d9dfc738c647f"
+    },
+    {
+      "allowed_nonbonded_pairs": 13222844,
+      "atoms": 5147,
+      "files": {
+        "/media/PM982/onestepfold/independent32_v2_20260930/proteins/ce207b15c47b338cda4aa4e0da833f191385447a3ef4805ff5fe74ad08fea17f/chemical_reference.npz": "524f01206afa0f794293fb56d407fc8b7654271e039b1a18b7a55afb8b733969",
+        "/media/PM982/onestepfold/independent32_v2_20260930/proteins/ce207b15c47b338cda4aa4e0da833f191385447a3ef4805ff5fe74ad08fea17f/topology.pt": "f86f67ff7149a2464dc769e6a1b8f2784e7e61a578091408959f1c7076f6dbdb",
+        "/media/PM982/onestepfold/independent32_v2_20260930/proteins/ce207b15c47b338cda4aa4e0da833f191385447a3ef4805ff5fe74ad08fea17f/variants.json": "f3ac4ca344231fadd868be62e7d2b4fe74d689b03c6633b9da6d027fac99ad14"
+      },
+      "group_id": "ce207b15c47b338cda4aa4e0da833f191385447a3ef4805ff5fe74ad08fea17f"
+    },
+    {
+      "allowed_nonbonded_pairs": 22228200,
+      "atoms": 6672,
+      "files": {
+        "/media/PM982/onestepfold/independent32_v2_20260930/proteins/b2898a1d70a39f0b135e5ea72fe18f2a98810ea0efd4683ae6434e785f3a979c/chemical_reference.npz": "3fe0116448773f5fb36457004a86aa4560e423e65a77551fdfc0cebe6dc83565",
+        "/media/PM982/onestepfold/independent32_v2_20260930/proteins/b2898a1d70a39f0b135e5ea72fe18f2a98810ea0efd4683ae6434e785f3a979c/topology.pt": "7441583e6aeaae017e963f9fb84153dc2754dd7fd56b68658dfcd49d8d280308",
+        "/media/PM982/onestepfold/independent32_v2_20260930/proteins/b2898a1d70a39f0b135e5ea72fe18f2a98810ea0efd4683ae6434e785f3a979c/variants.json": "db89f619adfe346e6c7256a178bc9da27dad046236d5149e7124b3e81cc90130"
+      },
+      "group_id": "b2898a1d70a39f0b135e5ea72fe18f2a98810ea0efd4683ae6434e785f3a979c"
+    },
+    {
+      "allowed_nonbonded_pairs": 7751995,
+      "atoms": 3942,
+      "files": {
+        "/media/PM982/onestepfold/independent32_v2_20260930/proteins/332b9b81658ca54a256d99b1503413f3dc57a4fb9555a1e05bb07966bf40a892/chemical_reference.npz": "a5fbdd512043ff76bdb9d402bafe1ad9bb3dc7bd2c5d7e3311a68c24c1832347",
+        "/media/PM982/onestepfold/independent32_v2_20260930/proteins/332b9b81658ca54a256d99b1503413f3dc57a4fb9555a1e05bb07966bf40a892/topology.pt": "6a49336498b947cd94342e353771321073028389a36fb9c6a71658b590184b91",
+        "/media/PM982/onestepfold/independent32_v2_20260930/proteins/332b9b81658ca54a256d99b1503413f3dc57a4fb9555a1e05bb07966bf40a892/variants.json": "4309161469fa6204218b4d132e0f2c34623ffa181326f685fc759f4c8d7070d6"
+      },
+      "group_id": "332b9b81658ca54a256d99b1503413f3dc57a4fb9555a1e05bb07966bf40a892"
+    },
+    {
+      "allowed_nonbonded_pairs": 11033427,
+      "atoms": 4702,
+      "files": {
+        "/media/PM982/onestepfold/independent32_v2_20260930/proteins/f3d64c9b675c625c8ec848af9abee2a039cf8a2a4dd6918b82e9843650e157e5/chemical_reference.npz": "d8858c7c4904bfa3b734ff0a6f8cb418f604882a4e62c67be57a0012d6aa7fab",
+        "/media/PM982/onestepfold/independent32_v2_20260930/proteins/f3d64c9b675c625c8ec848af9abee2a039cf8a2a4dd6918b82e9843650e157e5/topology.pt": "c976b2af0026437ba852d1509f836200ce0771ad6fd5099b8df570d4bdabbe0d",
+        "/media/PM982/onestepfold/independent32_v2_20260930/proteins/f3d64c9b675c625c8ec848af9abee2a039cf8a2a4dd6918b82e9843650e157e5/variants.json": "4ad70795fb9c3a3d8a03881cee2c201332a993a7332366f094b5e2f7e50451f5"
+      },
+      "group_id": "f3d64c9b675c625c8ec848af9abee2a039cf8a2a4dd6918b82e9843650e157e5"
+    }
+  ],
+  "protocol_sha256": {
+    "/media/PM982/onestepfold/independent32_v2_20260930/code/docs/mini_independent32_execution_v2.md": "c77c83ee624b3f15a0a587a3121d003799984a3d25213aba5413cc514e580386"
+  },
+  "raw_per_seed_timeout": 1800,
+  "repair_timeout": 900,
+  "runtime_pack_preflight": "complete; original solver/audit entry points restored before GPU",
+  "scoring_dependency": {
+    "files": {
+      "/media/PM982/onestepfold/independent32_v2_20260930/deps_offline/tmtools/__init__.py": "0605b8f0130bc71aa54fb30cd4ad66a434501d99593439cc56cf7bf94c515715",
+      "/media/PM982/onestepfold/independent32_v2_20260930/deps_offline/tmtools/_bindings.cpython-312-x86_64-linux-gnu.so": "aa60b465dbba3a4038ca70791209ac33aa89fd153f41cffb357842462e33bb7c",
+      "/media/PM982/onestepfold/independent32_v2_20260930/deps_offline/tmtools/helpers.py": "73dd904bef97d21150908cfcaa355d1d48f9984ea5d482f142a901f2c3cba9a5",
+      "/media/PM982/onestepfold/independent32_v2_20260930/deps_offline/tmtools/io.py": "adf96e58b1583c1c10a4f06ec241078371da1b8001b8190fd08d5f96089dd466",
+      "/media/PM982/onestepfold/independent32_v2_20260930/deps_offline/tmtools/testing.py": "e31a32c50ce0bdf4dc038b9b1d72579405e10e0a821f1d1514a923ef3a50adc8",
+      "/media/PM982/onestepfold/independent32_v2_20260930/deps_offline/tmtools/tests/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "/media/PM982/onestepfold/independent32_v2_20260930/deps_offline/tmtools/tests/test_bindings.py": "36d65e0545a29e77eb8df817aa5f3525c9e68c4151c73e3223f8796de271ab5f",
+      "/media/PM982/onestepfold/independent32_v2_20260930/deps_offline/tmtools/tests/test_helpers.py": "7e7de6b0999dba93ab1c3535cbdc83d124119af5113868cc8718804bc5766e82",
+      "/media/PM982/onestepfold/independent32_v2_20260930/deps_offline/tmtools/tests/test_io.py": "4cffb92dd836b95d5c7fa38391b07a8ef70cbe960938abdc71f8de2dfce438d8"
+    },
+    "name": "tmtools",
+    "version": "0.3.0",
+    "wheel_metadata_sha256": "bdfb705510a68e7e61bdbd5151d6bbf9b1967ba97c51898ef13f48bc5be3e1da"
+  },
+  "source_context": {
+    "homooligomer_chain": 4,
+    "monomer": 28
+  },
+  "source_hashes": {
+    "/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/configs/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/configs/configs_base.py": "13c36fb5624bb804aee78cd95d04b08832dcabc7de8378886dd99a67251d66b9",
+    "/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/configs/configs_data.py": "4699fc39387203bb861437dfa2dec89cc73e375539d37b2140c2b82fa6796e69",
+    "/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/configs/configs_inference.py": "0a1b8f79f6b770af74d3e27f3b60b21f05848aa3477bc33ca9b16abcd7755bab",
+    "/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/configs/configs_model_type.py": "d7f59f1b2d83b3657555893be085502b04c38b21a069e8ebb4b05229a8f12552",
+    "/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/esm/__init__.py": "e43f3e42991926802a5b5c6607e1d00f28681e38dcb8cae4464af444f27ee2da",
+    "/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/esm/axial_attention.py": "2b1433abe19a4821346f4715271dacfbea1435e95c6f2e335812e5af41087180",
+    "/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/esm/constants.py": "3a95efdb8427f92700e5d629bf03d114a4965b8849b35df12d147e29c4c18f46",
+    "/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/esm/data.py": "73898ebaa4e7792a98122fef81a9a4087b9aa87eb7ee729a7c270a25a46da230",
+    "/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/esm/esmfold/v1/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/esm/esmfold/v1/categorical_mixture.py": "b5f49e82b8dbf8572a51d1b3c78f552a3ddf5b9b04791edf093b1c0db018a1ac",
+    "/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/esm/esmfold/v1/esmfold.py": "2a6ba6b1da164a666f846045251adcdb68015197585065b7f4689860076a292a",
+    "/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/esm/esmfold/v1/misc.py": "0eb8d09136314f474ea7824028cceec6fc0396a40c1cba2585a6dc317a4fa45d",
+    "/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/esm/esmfold/v1/pretrained.py": "f3ab9525036826bdb6303294cdc2b17037603099a808f205da8b3407ab022f9b",
+    "/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/esm/esmfold/v1/tri_self_attn_block.py": "04ec4d78e0e256a0592566bc9a4417e44e00f6f6e07c3fff7efc13f90a005d34",
+    "/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/esm/esmfold/v1/trunk.py": "8d5c82c0b5c3422d493c2144f63d20bf23371e0142b5faf52617ba9dc1f58139",
+    "/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/esm/inverse_folding/__init__.py": "b6b935f99a9d509a3081a4407e30c2c60c44bfdb737253cd9a649f085649d4cf",
+    "/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/esm/inverse_folding/features.py": "f89f027bb072c2e056fcd37e8549394544fb00647419191739f8631e7fe7739e",
+    "/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/esm/inverse_folding/gvp_encoder.py": "18fa2cf9b7da6a100a90d6803d83ae1f05471c118186297ff98a8886616db814",
+    "/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/esm/inverse_folding/gvp_modules.py": "07899a5fd7ab4fa6d1eb3be3936a07f007c75a9e01f4294cc986bb60dfe63cfd",
+    "/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/esm/inverse_folding/gvp_transformer.py": "62045e7b94bdb8daa7dbb37da5990f57379e4cd77a9e73d48757f5d048b12915",
+    "/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/esm/inverse_folding/gvp_transformer_encoder.py": "09daf5192e3d1a18af038a2c67926c58b9ea1cf1d8e55909e226d0dfc218ba4a",
+    "/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/esm/inverse_folding/gvp_utils.py": "50a292769188552c49d14f87b85ca4c03576d2a1406a3f1202241cb919af7357",
+    "/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/esm/inverse_folding/multichain_util.py": "8aa4579e300c8277dd75a105b4f7ada470454b33089e440111cbd2d24a7aba61",
+    "/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/esm/inverse_folding/transformer_decoder.py": "ef0595d1df0d18efb6c8fd1e7125f5911ad21032d02f847721388023c12ebe95",
+    "/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/esm/inverse_folding/transformer_layer.py": "9bae6326e8b79cc4e013a6d5cd79bd19e127e6371464b6201e061233f4bec3fd",
+    "/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/esm/inverse_folding/util.py": "42ae2797ac4886280411a4e7c7583d5a65ced49019f745e334c828bea764b943",
+    "/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/esm/model/esm1.py": "45067b7f2562f267e1fb01a5341206185e78e08871d8f144c1652a6a7ed72faa",
+    "/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/esm/model/esm2.py": "aadad74d5c2a5b85786390df4071466acc57e028279fe499c97c473125e0d9f4",
+    "/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/esm/model/msa_transformer.py": "bcf15412dae6606dd59eb7a4c68dc60918981a05f4a9d13fb9f9dda596c0e446",
+    "/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/esm/modules.py": "6a82388514f8a9a6e67a5636277df5e7a5864421f392b45f3da80717500c57d9",
+    "/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/esm/multihead_attention.py": "81bfc52ff93431d2384562c657cb0578dee8677fb9663babeec1239155b2cbc0",
+    "/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/esm/pretrained.py": "2104beefc2eec254fb01143b14b89856d03cecf1fb698d1951e0c5c0cbf4a59f",
+    "/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/esm/rotary_embedding.py": "fcdf9be00183786bf77e9db4767ea8baac2470407e29ef8a6a2840ac1e03bcdf",
+    "/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/esm/version.py": "e0c43a5f868a2d79f152d66c72ee80f7bc1260cf93744f4df7eb4d114b8f2302",
+    "/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/__init__.py": "2736ff45f82f5c2ae6fd243801f786562d4ddfa6326f19cce66a72c6b9e28602",
+    "/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/config/__init__.py": "50d0fc5cbb80a0ef4c68227b9a523b0042ce101f1954126d9b4dcc0ffb5f84a5",
+    "/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/config/config.py": "22c134a75bf00c98b1ec85d9fb753830bca97e8b782a3c90ec60109087854c7e",
+    "/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/config/extend_types.py": "279c6eff86e90ca22bbd91e904a1c748773a745b92ab0735d0ec7325f1baeba4",
+    "/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/data/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/data/constants.py": "10a526bd64e1206052c307239ff92109c245aec3d2c10e6ef0d4deae295092a4",
+    "/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/data/constraint/__init__.py": "9448792dbd9aa44112cb16e9cdb77cca263cd50193ab8c7761d6a51d6d0d4d29",
+    "/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/data/constraint/constraint_featurizer.py": "a413febd327df54065dd4cc1786870f7f617f29a4e46214f9edaf472f99eaab4",
+    "/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/data/core/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/data/core/ccd.py": "f8262a29130c453f6d0a84c1752f4e11062c77df2baba686964018cfd5f88714",
+    "/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/data/core/featurizer.py": "298d1dcf21b1247e73d2cdbae413f9de8e314706d58376ef0de79648d90f05cd",
+    "/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/data/core/filter.py": "c2642455544cf8e96d95c8bb0e789b9e02acbe88c42251a456f1a0fd3c12625e",
+    "/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/data/core/parser.py": "f6f801195f9fdce3b17c43b141b6037491bf1f7e395fff4dc2a499ca8c739cf7",
+    "/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/data/core/substructure_perms.py": "da92fbb4fcaca716a9e7f32eff4119375e131b4684ca5a33f84c5cdcc98709a6",
+    "/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/data/esm/__init__.py": "42489adb08de889bb649185121b7d86b2aed3b4ea89b1ffdaa2d8d8bdf87f413",
+    "/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/data/esm/compute_esm.py": "ce3fc45709d088ecba45fb49c8dafd4882a74401a24f7df9a91f8115091a9363",
+    "/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/data/esm/esm_featurizer.py": "2ac3a6fa513e84a736f14e5d2d57ad156014b5cb7e785e2ca17e6f9d896ea657",
+    "/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/data/inference/__init__.py": "beeabcb42895075d0b6d5ab678307bbdfc87820273374dd5b685618272ecdbce",
+    "/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/data/inference/infer_dataloader.py": "ef87dd0c928720d54e0243a30b4be57d7f5325dad7e27dcf27f85b1db4051112",
+    "/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/data/inference/json_maker.py": "de9fdfc297886d924d1c207d8e1e79109087f32339c1c0ac25469bd32e8caf29",
+    "/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/data/inference/json_parser.py": "204a6ec0fdd5a00f0cf0725401efb7321ea1ece8c7f2326960c8068241f27c8e",
+    "/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/data/inference/json_to_feature.py": "e09bffa380acf3f3a1aa215ba8f2e3e87e6b23dbfe078120b4a498994f246afc",
+    "/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/data/msa/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/data/msa/msa_featurizer.py": "cac245cd3165fc3ca2318ffa8dba0b77ac961024f09e6b3dec48d768001e8fd6",
+    "/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/data/msa/msa_utils.py": "fbacbbdfa5afd0e17cacb9dba33f8e9e094531640ff665a285f507ecd4395918",
+    "/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/data/pipeline/__init__.py": "61b7184ce678a06c93ae88d2e1a27d00fa3621d3da15959f7b276c353e63bc2a",
+    "/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/data/pipeline/data_pipeline.py": "b071b38e741b090205a35da8eba0139d62e04cf4bed73c8b27ec3ccf53bffc99",
+    "/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/data/pipeline/dataloader.py": "2f6a68ba8a85c130001ecc18033722e86d99054ecc3954bb995578bb47e5cc29",
+    "/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/data/pipeline/dataset.py": "4d2706060aca6719dc43365e30384b2b471141e14fc84ae27b5a8b1997235c07",
+    "/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/data/template/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/data/template/template_featurizer.py": "728120aa433ef76dd064d200d1bb6f3304777c09844377ad1e634920d2aa28c0",
+    "/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/data/template/template_parser.py": "1d2e0a5c3ee7b44d1f5b1dcf0e4fadb0d4114f46f5c34e302b3fe4be058ecbe8",
+    "/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/data/template/template_utils.py": "6da8425ce2688994cd0882963116e6294c0ef77b86b461aa32c26cfd50b4b9df",
+    "/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/data/tokenizer.py": "ad70ef6e5a0c976132ee1e96af71b8ba0d27b92ab9d9284a1c68326ca8d1a265",
+    "/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/data/tools/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/data/tools/common.py": "833ceeb47c1460a1ac7bed498a536284f30e6af3e9bbf43a74cd03aefdd6c14b",
+    "/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/data/tools/kalign.py": "df068344839cda5d89df8bffe885b8b7a19918828aa3a21622b5530c76eaa48f",
+    "/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/data/tools/search.py": "2a33e74ddfb42d14026b2c2b219438babf9337f2e59c5754b36c9ccee7bb576c",
+    "/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/data/utils.py": "1c8ea6c8f9541ee081410d677bda7b2003ea91765b66cccb47e935e110b33a97",
+    "/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/metrics/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/metrics/clash.py": "4f8f47b8020cdf21c3332a87561ecbfb7e826ddcf23512fc10ad940d758f0adc",
+    "/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/metrics/lddt_metrics.py": "f78dde38592ee2bbdb8386b83e038255a6fae2fbc24d4f6b08885970d52b0501",
+    "/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/metrics/rmsd.py": "23ec3fc1993fafa6323fb6fc2a4662212e5f7ba667f12b3e9922bf8bbac6ff46",
+    "/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/model/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/model/generator.py": "84338db0cda852d859e498c9aee972747a319e4e701cfae271ac882215fe25ae",
+    "/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/model/layer_norm/__init__.py": "1c21a7a0bf9787f07c68caf16dfe80c7451bc28ff138bc8510cb9e0712a4333d",
+    "/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/model/layer_norm/layer_norm.py": "30b9a8803530a6fbdaa3c9302a7091eb04bca2d10dd2f79aa79a5efc1e4dfb8a",
+    "/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/model/layer_norm/torch_ext_compile.py": "1237b09c7a3f3494429d1dbb6547aad66a0682b199b3274e7d2e18b975ce2c1d",
+    "/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/model/loss.py": "c5a8c348d589829f3ed1eee36dbc04206773b50a4f22cac00f11fa4d7d978a88",
+    "/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/model/modules/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/model/modules/confidence.py": "064375730d100f1536cf1a2061fa08ad0a039f21c4bf2965275a74646d33cebd",
+    "/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/model/modules/diffusion.py": "c92001aeb046ea9a5dbbc8120a5487c76d0497c52ff7fe178143f443dd4cc988",
+    "/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/model/modules/embedders.py": "05e9e8d7bc8e9f917a6cadb3534b4b95764ea9968c19bc38d4743a29daf982f8",
+    "/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/model/modules/frames.py": "375bc7478c566338c5bce6e325f7dd912c1865df51bc373e1b9a21477a1f80b1",
+    "/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/model/modules/fused_ops.py": "89d80eae7d5fd688fac7c2c3f956de943022acd486427047eb1c584b0b58cd23",
+    "/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/model/modules/head.py": "5b79308417267c7072b9d220c78970d458ea44b94450e5e3f14140459331f1b4",
+    "/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/model/modules/pairformer.py": "876b29a323ebf5a9929be0b8efa6b45027108640784a250e3ce446e39ccae2eb",
+    "/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/model/modules/primitives.py": "48474abdd5b37a70f5d2579c0c2f1b2d2e6876961db7100f0eb9ebfad0198363",
+    "/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/model/modules/transformer.py": "4d4d56b0fdf0f0fd6eff2cbcafd4a2f35b24f217746e671cac4e1238ae649ed6",
+    "/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/model/protenix.py": "c4250bd93d592a11d9019285cfd84b71b26fa6a8aca6944a239fb31e0337e179",
+    "/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/model/sample_confidence.py": "66ca9d6001a429a8c613dfcdcbbe30fe515894cd851452073ef4aca1854e8de1",
+    "/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/model/tri_attention/__init__.py": "f738f69a1e4c6036957b5e852e139629bf3f3cf29a0a88220e8c1b00cb19c7eb",
+    "/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/model/tri_attention/autotune.py": "4da7f146f0c7e399b624ed818354c6e5044213ff873a3b995f66d3af988f0de8",
+    "/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/model/tri_attention/autotune_helpers.py": "e9f1a96c63a0218b2bd25198d9aa31a9165a0ec20534e5607a0692995d3743d7",
+    "/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/model/tri_attention/backward.py": "fac61c5601a2b0fe5d6f236f5de0e59a3382e094115f8654c0f9d675c14eea46",
+    "/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/model/tri_attention/forward.py": "42fc170c998d3170fbf5781837a71b7d7b9f7e569be7554f39287236a7d4ae93",
+    "/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/model/tri_attention/op.py": "e0942e6d6b06607ad399ee972465edbcb868fa1328cf39322730f3b3e4a4135b",
+    "/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/model/triangular/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/model/triangular/layers.py": "1928d7fcb21750ce613949461ecd8ab5ff2323c19761be5b2d6f24064c3c1bbd",
+    "/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/model/triangular/triangular.py": "4700a0abe41253a44a6504b1d11051010e5a67f9b63c29fd7535dfb033337ca2",
+    "/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/model/utils.py": "81784461673c929002f59a43c4a8980e7c638a01e0d0a7d8ec14263b0c76f5ef",
+    "/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/utils/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/utils/cropping.py": "5a6045b2df53822313bd67a792972452b35cef8da5f72cfdf27640d0c8b9ab0b",
+    "/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/utils/distributed.py": "10e8a47fe679cfc8844534e45f032d9908bb16fb8ab714e90d74ebfc439fbbb2",
+    "/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/utils/file_io.py": "ff17fac71adf30131790328c008b38de549357d42259d40ef9fcfd38c7f6947b",
+    "/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/utils/geometry.py": "18bf79f41026e8211196ae8d789849252e5b93f54c19ca94179ed8e7e6ca9622",
+    "/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/utils/logger.py": "d4597c92f044ea5a3c9954e44824928aeb7f6f222e0050754eb495025280995a",
+    "/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/utils/lr_scheduler.py": "a4758ed1e3df0d623b5ca3c829edb88dd027624178ecc17aea6baf43b5487ba0",
+    "/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/utils/metrics.py": "e69dbd717875f876ab21e33c17fa7eaa6a7d11a4543dd6d54c1ce63b188dac71",
+    "/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/utils/permutation/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/utils/permutation/atom_permutation.py": "428dfb0e6e7362435c5132b064888e63751a58d1e63f460053258f48a7527fca",
+    "/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/utils/permutation/chain_permutation/__init__.py": "e9b9411bbb55acd7f59db7e767268d7b24d5d2ce46552fc7b447366ac8b1c182",
+    "/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/utils/permutation/chain_permutation/heuristic.py": "63164ba4f8c33b2877c30af36ae0e2fb0db296016b026cf43c9ce2557bcc90e9",
+    "/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/utils/permutation/chain_permutation/pocket_based_permutation.py": "854c650f45eec574e3dbd4fbb958d4b6330341bf5498cfa69765f8e1902249c9",
+    "/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/utils/permutation/chain_permutation/utils.py": "7a8d7d0882f6ff7e8db25ede61bb23c5439d46a3b6ae8e865a4e229dda69707d",
+    "/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/utils/permutation/permutation.py": "4684fcf24b0fa01e58703d907db6d4cca9e51cf9ed50781a7723244497c2682e",
+    "/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/utils/permutation/utils.py": "22549e0cc17fecde6e37804a0c651da9a1d62f20a6c4ce12378b30bbe31685b7",
+    "/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/utils/scatter_utils.py": "5a4683c560140529f2ffc9e948206d46d80586c2a06ca17a9d498fc2e8917dad",
+    "/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/utils/seed.py": "dfb5611fd421d1316eafde5ecc82879a736682b4613ad9465a3982059148e744",
+    "/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/utils/torch_utils.py": "f7e60efd6c069c71cf7d2accb9204441168763c7629e723b8c93a3dcad8aa5c8",
+    "/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/utils/training.py": "b97c8904f6a7517e592b1730fb9cf74299717ca057400529dc116cef3498742f",
+    "/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/version.py": "f9c360c6efbbb5aed27ea3405265b6bc26ebceee25bdc7df69c7ccd8cbf8f33a",
+    "/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/web_service/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/web_service/colab_request_parser.py": "0b781cb10a1cd92f19a4924fb7273f97895c9bbb737aa741d241e4805d273d9c",
+    "/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/web_service/colab_request_utils.py": "11cf40531d6af7b335c21846d4199033ec1964b7cb6a649e122c869238cba1e7",
+    "/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/web_service/dependency_url.py": "f65331d36221a8c3fd715ff8760b39dda9c880b88054216b04d5e39277478fd8",
+    "/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/web_service/prediction_visualization.py": "a0f149784b2efaafae217c11610cab7471f85a29be61b36df1907ada1abb107c",
+    "/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/web_service/viewer.py": "d72c11014161b34e5d1fd9f77ec4e76e19264858b9db56600616f61591a68ec3",
+    "/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/runner/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/runner/batch_inference.py": "98e2a0149359b6507e5c385665ad0365348ea8a6e361e6519c1f214801d5635b",
+    "/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/runner/dumper.py": "c7ba3d2d42c9a700fea5efc1c9636118513a90906fd270204a4c12b72ad656d6",
+    "/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/runner/ema.py": "9500d6e0357d1686f5650fc418c322b1f647fa98f27139ab1975ad784bb9481c",
+    "/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/runner/inference.py": "f2c981b38936ff863e280602fc0ce4a32bc83e3103589b0111df73c00ac297f6",
+    "/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/runner/msa_search.py": "f2e6da81a178244e25c04ca4666a73028b4d3078280d52d6c1b070869ebc0dfc",
+    "/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/runner/rna_msa_search.py": "8106ea53953e6b49a5744e5813055f82a9c6854e238e360eedf2788da89e2976",
+    "/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/runner/template_search.py": "b62d711de0f8af3429c000ea60eaa43c1538431e91e8951c4bc6b93e07decd2a",
+    "/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/runner/train.py": "831ad0abd5cc46cc75419287a179cc3d66b27edc7d0003c8f9f32b5d5f6709ab",
+    "/media/PM982/onestepfold/independent32_v2_20260930/code/scripts/assemble_isolated_panel.py": "e985c1002078fe0d49eb6179379c61ea8bcada133afdc1fdb919438fc64a042e",
+    "/media/PM982/onestepfold/independent32_v2_20260930/code/scripts/audit_anchored_geometry.py": "da7ca194bca7d2be0a201b87189701ea31a726a771072bef0c1d9913550b7f71",
+    "/media/PM982/onestepfold/independent32_v2_20260930/code/scripts/audit_independent_geometry_validation.py": "af6fc1a5383ee0b199db0fcbabe44a8993a8870f0fd73b4423df0cf59ca995e4",
+    "/media/PM982/onestepfold/independent32_v2_20260930/code/scripts/calibrate_sequence_isolation.py": "e672e19bd906763e97382fd4f7c07744f7f50cb0b427f59bd565a942c8c87683",
+    "/media/PM982/onestepfold/independent32_v2_20260930/code/scripts/collect_independent_geometry_validation.py": "5687adf6afc8506e09a08c589d46d16c65a95bbee7bc12bbc3bb9c45a98b90f6",
+    "/media/PM982/onestepfold/independent32_v2_20260930/code/scripts/discover_full_chain_sources.py": "48c30bdbd930cbaff177420109519359084e3661a6dba92dcfdadc96fb05aa4d",
+    "/media/PM982/onestepfold/independent32_v2_20260930/code/scripts/extend_raw_validation_sources.py": "11da36a0faff28b1d0b38d04953ded34235e929b87cb0983683e456270426772",
+    "/media/PM982/onestepfold/independent32_v2_20260930/code/scripts/extend_validation_sources.py": "06bbb9fdb45072a8ab90bf06cf8ae01ecd58f58dd7e0593712c5cbd635bb3c6a",
+    "/media/PM982/onestepfold/independent32_v2_20260930/code/scripts/finalize_independent_runtime.py": "9c5a34c0ce6c4e39abeea32c1eeecf27509dcd662a750a7d6a4bec4fed1e3b5a",
+    "/media/PM982/onestepfold/independent32_v2_20260930/code/scripts/lock_extended_validation_panel.py": "7ace91bd160e87744ee49743026b7399036852ad956492bd39988264a6a20b82",
+    "/media/PM982/onestepfold/independent32_v2_20260930/code/scripts/preflight_isolated_chemistry.py": "77e667ba8bbb68d522a6f9f4ad8320e25c01be2511f592eb3129be464c464522",
+    "/media/PM982/onestepfold/independent32_v2_20260930/code/scripts/prepare_independent_geometry_runtime.py": "b6626b253740263eaf9a7ee4aa4a9b3683cd21756ac007be074be31839f8f1f9",
+    "/media/PM982/onestepfold/independent32_v2_20260930/code/scripts/qualify_discovered_chains.py": "b6009ddbb08a0e623511e797ec405a35b9e3456923ed02331d044205154e54cf",
+    "/media/PM982/onestepfold/independent32_v2_20260930/code/scripts/run_anchored_geometry.py": "2878539e25119890ff1318a164e0154b2de8221bb61a7c21c24c313b9607ab8b",
+    "/media/PM982/onestepfold/independent32_v2_20260930/code/scripts/run_independent_geometry_validation.py": "17ac6f86d75d61dfc720ad7ebb23d2db2f41d930efe46589b21e8b199fd0b52c",
+    "/media/PM982/onestepfold/independent32_v2_20260930/code/src/fastglycan/__init__.py": "027b89896d66de06c975e09ea01d1650cbb7bb729c4984f92975ac124412d4d4",
+    "/media/PM982/onestepfold/independent32_v2_20260930/code/src/fastglycan/__main__.py": "aaa8d9462ff5a0112b564ff1dccf962d437a5c74e7d827330e75dc0f58ecc7cc",
+    "/media/PM982/onestepfold/independent32_v2_20260930/code/src/fastglycan/all_atom_metrics.py": "b32515517d9627600a39bc1789740b827c44b01dab50949d1bcb8277e769b136",
+    "/media/PM982/onestepfold/independent32_v2_20260930/code/src/fastglycan/anchored_geometry.py": "2f2b2911896107539e7ad8fc468734ee63d7fad06c42acbaf26b5f568d4df5d5",
+    "/media/PM982/onestepfold/independent32_v2_20260930/code/src/fastglycan/anchored_tail.py": "6902f7324795f784b4e17fb5a82a609fc50012f77766b84088702cf0a2af2e64",
+    "/media/PM982/onestepfold/independent32_v2_20260930/code/src/fastglycan/articulated_capacity_control.py": "baedfdff259f323186be255dbe2e2b4aec616c656579215dfe41c806251f3126",
+    "/media/PM982/onestepfold/independent32_v2_20260930/code/src/fastglycan/articulated_fit.py": "c07256a963162b3e0c0efeacd193048563620ea4f568a84be3438b3384aeda6a",
+    "/media/PM982/onestepfold/independent32_v2_20260930/code/src/fastglycan/articulated_gradient_diagnostics.py": "59caa87fc775066da37024af4004e2e326cf0569c33ec367ab27eee7c33f8ced",
+    "/media/PM982/onestepfold/independent32_v2_20260930/code/src/fastglycan/articulated_output.py": "9ed9bee15d6e03da44768f4c42065622c6c936addbc01a481db930c107616e13",
+    "/media/PM982/onestepfold/independent32_v2_20260930/code/src/fastglycan/articulated_reference.py": "0e2c755c76b1ae318e05299d9461dad4352a2a8f022d7113e3cf8f64fea97606",
+    "/media/PM982/onestepfold/independent32_v2_20260930/code/src/fastglycan/articulated_validation.py": "b4f726b805ac998a1ffdfd5106be4ee38288dc7854c2e9a4ec8e94b513f9b453",
+    "/media/PM982/onestepfold/independent32_v2_20260930/code/src/fastglycan/audit.py": "2d6e7eb2bf46b71965a5c7b3ca07ded5da22cbddb30080a83517c29e74d03e1a",
+    "/media/PM982/onestepfold/independent32_v2_20260930/code/src/fastglycan/capacity_b.py": "cadb3d28587aa5fb92b23f9f38af92ec99437d87ab1154540bbff6b348516a0e",
+    "/media/PM982/onestepfold/independent32_v2_20260930/code/src/fastglycan/capacity_c.py": "dab029a83c485a139b4e530e501cb822cf05c62318d7fb643af189afbcef4625",
+    "/media/PM982/onestepfold/independent32_v2_20260930/code/src/fastglycan/capacity_weight_control.py": "ff2204aa256c1f8f3083859c233e94a2ae314aca56d095bd2cf2ba0185e28c63",
+    "/media/PM982/onestepfold/independent32_v2_20260930/code/src/fastglycan/checkpoint_forks.py": "6d95ceb9750b9c2a4a43139f8e7bd12b77a54ef751168b6bccc449e1c2f6400b",
+    "/media/PM982/onestepfold/independent32_v2_20260930/code/src/fastglycan/cli.py": "6217708650845b3b59a41bad5cdafe20de69dcc8356be39a46be2ac7430a593d",
+    "/media/PM982/onestepfold/independent32_v2_20260930/code/src/fastglycan/collision_audit.py": "8065740a9bfb25a2fcc417422826a0df47c64e106e4d6f63601d3b3e7a036f5c",
+    "/media/PM982/onestepfold/independent32_v2_20260930/code/src/fastglycan/composite_derivatives.py": "6c230c5cd197b43b0df1defdf1c00dad5c2c469ab8316707a0f6ca1c00053083",
+    "/media/PM982/onestepfold/independent32_v2_20260930/code/src/fastglycan/conditioning_bridge.py": "77fdce982a1226e1d42b55cc5980b9924391245db1a51b47d227b4168f89f11a",
+    "/media/PM982/onestepfold/independent32_v2_20260930/code/src/fastglycan/conditioning_diagnostics.py": "50b2ceaae7ce5480425dcd11707934f00997dd1251584755d00c2120b5b8a33b",
+    "/media/PM982/onestepfold/independent32_v2_20260930/code/src/fastglycan/connected_output.py": "e4855c745987f502c4ca670fd4eb02154cda5b8e3aaf1833d8a1e823edb4be2a",
+    "/media/PM982/onestepfold/independent32_v2_20260930/code/src/fastglycan/coordinate_diagnostics.py": "f4e5541633cb67407144b9c9c127d83c3f0ddccac29a1d3b5c6cb8fd96640d22",
+    "/media/PM982/onestepfold/independent32_v2_20260930/code/src/fastglycan/decoder_gradients.py": "1acd7d6606d79a2e228bd17337747fed6f3ca1ee0b5ca1c9c110f86553e5e616",
+    "/media/PM982/onestepfold/independent32_v2_20260930/code/src/fastglycan/distance_capacity_control.py": "b6271d265c17347d5e2c24511c4c61f55006f9ff8c9d5efd7452af9937006ab4",
+    "/media/PM982/onestepfold/independent32_v2_20260930/code/src/fastglycan/distance_supervision.py": "0e2372224064cf9b4f8df7d36a34939c71aad7fcc139faaa55f316edf5e69957",
+    "/media/PM982/onestepfold/independent32_v2_20260930/code/src/fastglycan/endpoint_distillation.py": "b7e59d76106cc581c8d0f63db745f71fe0aa2611586b51a563810d0501c988ef",
+    "/media/PM982/onestepfold/independent32_v2_20260930/code/src/fastglycan/endpoint_gradient_audit.py": "b7aa1f64b453c273721e540be8a24f504d126ad168806e25e3925049211a4521",
+    "/media/PM982/onestepfold/independent32_v2_20260930/code/src/fastglycan/endpoint_weight_followup.py": "ccf602f5c16116fb4c54b6225c9179132e2231616c7131dd9dcad21ee29226b4",
+    "/media/PM982/onestepfold/independent32_v2_20260930/code/src/fastglycan/esm_interface_diagnostics.py": "77793f599cb4fe5f0621874f6c700017df53100f6914d0155f3af98b21aee5ea",
+    "/media/PM982/onestepfold/independent32_v2_20260930/code/src/fastglycan/esm_precision_reference.py": "fbc93eb52c4e5435a021ae9c25bb5c555aed206c5a532a4d53050abee38133fc",
+    "/media/PM982/onestepfold/independent32_v2_20260930/code/src/fastglycan/esmc_features.py": "0cac3b2e5bbda9e74c43fbfe82624289d3240f1c1cc1c5a7b626081618bb1995",
+    "/media/PM982/onestepfold/independent32_v2_20260930/code/src/fastglycan/experimental_geometry.py": "ee428aa0f681d5989e37f198f27bfeae48d1efd568d89f43332488d076be363a",
+    "/media/PM982/onestepfold/independent32_v2_20260930/code/src/fastglycan/experimental_inputs.py": "be26db8acdba3fb33edf3542ff93018eb75ffc24d5163611d594029881131aa4",
+    "/media/PM982/onestepfold/independent32_v2_20260930/code/src/fastglycan/experimental_metrics.py": "dd08e9cfd5269660913867657dd0bf59a06faead2a575c549645d0b0f3fd144b",
+    "/media/PM982/onestepfold/independent32_v2_20260930/code/src/fastglycan/experimental_training.py": "f5965b2aeee2799d0d30b94ea909821aef3eee8110046adcb5edc01df8ee6bf3",
+    "/media/PM982/onestepfold/independent32_v2_20260930/code/src/fastglycan/frame_attribution.py": "7597d09b8ef062d1f966a3cf5cbdbcb3be54fa9a61d5cd57880eb5370c532dd0",
+    "/media/PM982/onestepfold/independent32_v2_20260930/code/src/fastglycan/frame_supervision.py": "55e28793421d804b4c6d891e55d64687660089d088e98380f1c65ddf72a7b8ab",
+    "/media/PM982/onestepfold/independent32_v2_20260930/code/src/fastglycan/geometry_audit.py": "e6fbfd19baec43e289f6ec72542fad0cb20b8814124e6606b1b71cabd3809613",
+    "/media/PM982/onestepfold/independent32_v2_20260930/code/src/fastglycan/geometry_capacity.py": "feb49dfaa94c81003d198237ec40a881f2aab26dd5999a869b4935116910e944",
+    "/media/PM982/onestepfold/independent32_v2_20260930/code/src/fastglycan/geometry_repair.py": "9677b69c07392781a3640f0c8eb85d094730f1fe3f560fb7d3c67618d00c4257",
+    "/media/PM982/onestepfold/independent32_v2_20260930/code/src/fastglycan/glycoshape.py": "71db753b5d705124ca3809537db2d3b51bf33ea54aa873fbb3115aab3a23e6b6",
+    "/media/PM982/onestepfold/independent32_v2_20260930/code/src/fastglycan/gradient_balance.py": "ab1bee31005933a5a3e4e196eba319a78bd9ca6f80b9e9969c0d667e41698f08",
+    "/media/PM982/onestepfold/independent32_v2_20260930/code/src/fastglycan/gt_catalog.py": "062cd995612eba1e40200a24e8ae5ac0feca3f64dc3349eee5d4fcced116eead",
+    "/media/PM982/onestepfold/independent32_v2_20260930/code/src/fastglycan/hybrid_geometry.py": "dbac578ed4b0ac44540942fb63256e17d33db6296e35b85a9c7111f728046672",
+    "/media/PM982/onestepfold/independent32_v2_20260930/code/src/fastglycan/hybrid_proposals.py": "c3b020f193ed83e80289e76f1b28c09ba4969c6fd23755ea91a3b82e4b451cba",
+    "/media/PM982/onestepfold/independent32_v2_20260930/code/src/fastglycan/independent_geometry_eval.py": "e13570318f02f4ed9d541e99583a403855350739ee70fb4426d7c449a88db904",
+    "/media/PM982/onestepfold/independent32_v2_20260930/code/src/fastglycan/input_interpolation.py": "00a70b08f17e5d91ebd180554942d6c7753bff0e3abb2b3ec3e59b225851781c",
+    "/media/PM982/onestepfold/independent32_v2_20260930/code/src/fastglycan/interface_decomposition.py": "76093176d5e4ff0686adae64090397dff6a0c4aec2811832a3622de9d8b88217",
+    "/media/PM982/onestepfold/independent32_v2_20260930/code/src/fastglycan/io.py": "99f17d58d66265237f220954c2f2406bdb417ba5a3cd06e4f3e74e0be0c08121",
+    "/media/PM982/onestepfold/independent32_v2_20260930/code/src/fastglycan/local_capacity_control.py": "01ae05e0d9f036c102f70837587cd2fac9b6b400715f7f0a1c0acdae9825e10b",
+    "/media/PM982/onestepfold/independent32_v2_20260930/code/src/fastglycan/local_gradient_balance.py": "74c6c33073108f6361367763d419d6d523d310e3c6015dbeee776252ad4d13e1",
+    "/media/PM982/onestepfold/independent32_v2_20260930/code/src/fastglycan/models/__init__.py": "098a0698cc47b7d4f0b18e0b76ce4195e44b2ba47a48e149271203d337f6f0c6",
+    "/media/PM982/onestepfold/independent32_v2_20260930/code/src/fastglycan/models/base.py": "cf7da395bd543caabe2a2edea0798f0d72b3660c4426c144cd8c713f1c0695bc",
+    "/media/PM982/onestepfold/independent32_v2_20260930/code/src/fastglycan/models/confidence_features.py": "1c8088eb67c9d5b41f4668ac8fd80b35d7ebbfcfbd4ffbd0d455424e89db7aae",
+    "/media/PM982/onestepfold/independent32_v2_20260930/code/src/fastglycan/models/differentiable_mini.py": "d81096c18ee442a7f35b42fa0b49da05135229a3f989d93785c28e32c8479e21",
+    "/media/PM982/onestepfold/independent32_v2_20260930/code/src/fastglycan/models/empirical.py": "fda179834892a41b64be47dd9b11ba608fb4a0041b41bd744e9d2a8768d3a583",
+    "/media/PM982/onestepfold/independent32_v2_20260930/code/src/fastglycan/models/esmc_core.py": "6dd0818a4831afdff6db98e635c228ea3c38f4a96f6f4c2478c0c3f29fe324f3",
+    "/media/PM982/onestepfold/independent32_v2_20260930/code/src/fastglycan/models/geometry_losses.py": "0ca103ebd7a393f1330df47b5718658c9f36bb24548acfee4ff15f1916022c2c",
+    "/media/PM982/onestepfold/independent32_v2_20260930/code/src/fastglycan/models/pair_attention.py": "6daafc7db8cc217ddfca4a0518ad4effc6649e01130c919352b8d86b33fd6979",
+    "/media/PM982/onestepfold/independent32_v2_20260930/code/src/fastglycan/models/pair_state_emulator.py": "ead2ddfeb9bb7208913e462209e39458f3f0056b4c84af42f91a94f3eba9ae46",
+    "/media/PM982/onestepfold/independent32_v2_20260930/code/src/fastglycan/models/pair_state_factory.py": "f5e12f6b81170c03324693a3f7b057227b735a3b2dfd079033bc16dac3ddfc8a",
+    "/media/PM982/onestepfold/independent32_v2_20260930/code/src/fastglycan/models/relative_geometry.py": "a010c49a1068f7ac3dac79840f6d4b9ce43132a5a3a19d08672c232e50b152fc",
+    "/media/PM982/onestepfold/independent32_v2_20260930/code/src/fastglycan/models/soft_esm.py": "23a93ef86f60677875603bb52170e523dc55268de7428ea6dccdfcf68047406a",
+    "/media/PM982/onestepfold/independent32_v2_20260930/code/src/fastglycan/models/soft_sequence_chart.py": "919480f82e7453aec25f79e3a30db920d4fec1f7bf6b2972b3ab1d615246df0b",
+    "/media/PM982/onestepfold/independent32_v2_20260930/code/src/fastglycan/models/triangle_pair_state_emulator.py": "ba5c7ccbe3de72ee61dd093604d45438a06682bf4e010916a602a981d57ce2a3",
+    "/media/PM982/onestepfold/independent32_v2_20260930/code/src/fastglycan/mutation_utility.py": "684b20dc58b4707b159d6d9d65312779573a3c2f4c349d0362143124b73a7c08",
+    "/media/PM982/onestepfold/independent32_v2_20260930/code/src/fastglycan/near_hard_diagnostics.py": "3cf45186223847a5d9e451c440156d31d506ac15ac4bad14a3f139ce71e57ebc",
+    "/media/PM982/onestepfold/independent32_v2_20260930/code/src/fastglycan/pair_state_cache.py": "59da03b53becf2a7ba372a1dc257cf4cd3d9637d3be83a20b7a319ce3e473e48",
+    "/media/PM982/onestepfold/independent32_v2_20260930/code/src/fastglycan/pair_state_components.py": "e64272e807f5b1ef85b7f0fad85a5a87c4a3cb5fe9655edd5627c40f0983e301",
+    "/media/PM982/onestepfold/independent32_v2_20260930/code/src/fastglycan/pair_state_training.py": "3bbf468d41b3e73f21797549cb264fe901fdaf9c4435fc6f702405a9a416b96d",
+    "/media/PM982/onestepfold/independent32_v2_20260930/code/src/fastglycan/paired_teacher_protocol.py": "0c7b5b1f4733cfb638d8ce6150577e0e7d1d37e9ea7142ba5ddaae7229b88990",
+    "/media/PM982/onestepfold/independent32_v2_20260930/code/src/fastglycan/pairformer_precision.py": "de3c60aae56e8a67ca88771775772564dbb66fb860b36cefaba871105ff630b4",
+    "/media/PM982/onestepfold/independent32_v2_20260930/code/src/fastglycan/pretrained_conditioning.py": "3a5283939f17b334534757179b97aa1e90a8c4b870b12c267109404236fe92fd",
+    "/media/PM982/onestepfold/independent32_v2_20260930/code/src/fastglycan/pretrained_gt.py": "2267fb9c9fb401b8bdb4614159455275b74c558896c7806398ffcd5922f4aa3f",
+    "/media/PM982/onestepfold/independent32_v2_20260930/code/src/fastglycan/projection_attribution.py": "ac21873af63e9cdd9da4d460d9c841cd8d713cb426df7f86a419a0768ed05a22",
+    "/media/PM982/onestepfold/independent32_v2_20260930/code/src/fastglycan/raw_projection_diagnostic.py": "08d7ad9e1979bef37c482f6b77da7450c066c32d4e6e93c18f49045643a34be0",
+    "/media/PM982/onestepfold/independent32_v2_20260930/code/src/fastglycan/raw_warmstart.py": "e7103a70365eb3b5d136329ec30b27b5911509f9c9d51fe56d51dd769b40468e",
+    "/media/PM982/onestepfold/independent32_v2_20260930/code/src/fastglycan/reference_shape.py": "852b41cf1cadef76811ae986fe7cfb648c8f421f0958328810246ea5956d7ecc",
+    "/media/PM982/onestepfold/independent32_v2_20260930/code/src/fastglycan/repair_outcomes.py": "0d3d92ecbf1a4100482635ebe1850c4ed00768261fc0afadddf8b14dcb121f27",
+    "/media/PM982/onestepfold/independent32_v2_20260930/code/src/fastglycan/response_cache.py": "1750ac3f14f9eb06cade23519b318b0a980eba85567eeec0d5fefa4187ee7b19",
+    "/media/PM982/onestepfold/independent32_v2_20260930/code/src/fastglycan/response_training.py": "5fe78fdf5f270e840519d3c6b439b7c46916eaf2e22da891cadab67481c085ab",
+    "/media/PM982/onestepfold/independent32_v2_20260930/code/src/fastglycan/scaling_analysis.py": "51b2a73ba706893f691f421307cd19c3e22c0c1912be708af17915f2b931d796",
+    "/media/PM982/onestepfold/independent32_v2_20260930/code/src/fastglycan/scaling_data.py": "4eba0b01656d053bf189e7ba4521cc93a3a957a726ba99e28f76a02516ea5ab7",
+    "/media/PM982/onestepfold/independent32_v2_20260930/code/src/fastglycan/scaling_metrics.py": "30cbff328ae04f0ea01e3cd551f98e20fe19e5c9b44418b29807204ceaf2b05f",
+    "/media/PM982/onestepfold/independent32_v2_20260930/code/src/fastglycan/scaling_precision_repair.py": "79920775d6a189e7946ea28e88f03759b50812cece4bec0e58530fca6b1ff239",
+    "/media/PM982/onestepfold/independent32_v2_20260930/code/src/fastglycan/scaling_runtime.py": "11f58cea6ad958cc57f7edc7969b79fc92fc943b33e990e6020ab2524d787948",
+    "/media/PM982/onestepfold/independent32_v2_20260930/code/src/fastglycan/scratch_overfit.py": "730390efeb1927eca2ff9470f1a82c622ce406301fb733b0c88429edcce90a89",
+    "/media/PM982/onestepfold/independent32_v2_20260930/code/src/fastglycan/scratch_primary.py": "a22672045bbb36fd2b96c9dce1699b5f2f6dc1565b7d4e560250e1d166b2674d",
+    "/media/PM982/onestepfold/independent32_v2_20260930/code/src/fastglycan/sequence_gate_audit.py": "fbeb40a8c85cfcbce097879441e9bdae434c437ae1ec1326acc50eece1c1d2d2",
+    "/media/PM982/onestepfold/independent32_v2_20260930/code/src/fastglycan/sequence_gate_metrics.py": "a831c7e46a774a03b48563afd6f3a15cd3cf02e1edb5c935e4e49e6f76227129",
+    "/media/PM982/onestepfold/independent32_v2_20260930/code/src/fastglycan/sequence_isolation.py": "031be912c692b853b12342628158cce100969fa2165b09f2b82cf19a2b33ca8d",
+    "/media/PM982/onestepfold/independent32_v2_20260930/code/src/fastglycan/smooth_lddt_supervision.py": "8d62dd3a71097a65530fc6cb7ea522bbfe0650397b1947dceb18b7475e9a1c8e",
+    "/media/PM982/onestepfold/independent32_v2_20260930/code/src/fastglycan/stage0_confirm_analysis.py": "faa4b13d081c82e1152c3c93da4bec8e6817110a1c717e048e15739ac4527189",
+    "/media/PM982/onestepfold/independent32_v2_20260930/code/src/fastglycan/stage0_confirm_runtime.py": "971c3705e9c16b6c1f266c2a38186ce96d353d0e297a6bccbb29fe21d90c4f59",
+    "/media/PM982/onestepfold/independent32_v2_20260930/code/src/fastglycan/stage0_confirmation.py": "b111e909aa8ecb49b634e85ccb1c7ed13b96508ef870f73a4792320f6a6bc463",
+    "/media/PM982/onestepfold/independent32_v2_20260930/code/src/fastglycan/teacher_pairing.py": "2cd389d67ee36675654311c6f9f4b64bfc7532f92db1b496806d3a8426169ad9",
+    "/media/PM982/onestepfold/independent32_v2_20260930/code/src/fastglycan/teacher_runtime.py": "546583c409aca667b09b0ca1eb85265c8d417021999335bf80c2442eb1f4d75b",
+    "/media/PM982/onestepfold/independent32_v2_20260930/code/src/fastglycan/teacher_states.py": "9cbdabbb817b85240db0f5d6c8b8e09fcda27dfd1e5e7f2c74f0991f36163f79",
+    "/media/PM982/onestepfold/independent32_v2_20260930/code/src/fastglycan/types.py": "1a7cecfe251daf195bf064efdf4f4a44a4bcc561cd3250c1c153d1f5932528fc",
+    "/media/PM982/onestepfold/independent32_v2_20260930/code/src/fastglycan/vjp_comparison.py": "ff4de330563adacdcc1e1467565b38b2eb7dc009999d1fd9c77030ccfb53c6f4",
+    "/media/PM982/onestepfold/independent32_v2_20260930/code/src/fastglycan/weighted_frame_attribution.py": "c4fd2ed915f42a8ae61a38e0cd01162dd11bbb1d1fdcf47ebe0f826d3cafb5ac",
+    "/media/PM982/onestepfold/independent32_v2_20260930/code/src/onestepfold/__init__.py": "73da81459bf321fa3b8b30677c878b2311f64508a0d8e8e5c1dc6bb5b2cb0623",
+    "/media/PM982/onestepfold/independent32_v2_20260930/code/src/onestepfold/data/__init__.py": "adf2c679a354938cd97bea3972fab59259457aec20f09de37470dc52b80de123",
+    "/media/PM982/onestepfold/independent32_v2_20260930/code/src/onestepfold/data/esmc_cache.py": "e34f64ebb1a5a85d5b5d5291e873691a6b028a9f12fa34736764aea449e3e6bd",
+    "/media/PM982/onestepfold/independent32_v2_20260930/code/src/onestepfold/data/gt_catalog.py": "c6e4ef653085e57c784975ba53ae39933240997b148f0c04f625cb2a3798be22",
+    "/media/PM982/onestepfold/independent32_v2_20260930/code/src/onestepfold/data/gt_materializer.py": "31831e19112bad0a7320cc0bddfed060ff10b0f4e609f1156054ddd5d61225b2",
+    "/media/PM982/onestepfold/independent32_v2_20260930/code/src/onestepfold/data/monomer_filter.py": "4a30c9399687edf21c8f9544c9711f4f1f92c543700a9d314b9f72a5c6cc34ae",
+    "/media/PM982/onestepfold/independent32_v2_20260930/code/src/onestepfold/data/quality_policy.py": "238e393cf46db30b83a4b4f0c1861f0fab7af726217eea3a9dee13d61f3ccdfa",
+    "/media/PM982/onestepfold/independent32_v2_20260930/code/src/onestepfold/data/sequence_identity.py": "06873b02d9f9c9819d93f1a43467dc3b5114a2b48496e03d2d2e038c4478f282",
+    "/media/PM982/onestepfold/independent32_v2_20260930/code/src/onestepfold/data/teacher_pair_training.py": "de017a3f92873ba20f982ef7255899d2b1bf87c672e63ba66a1f13017d6403a8",
+    "/media/PM982/onestepfold/independent32_v2_20260930/code/src/onestepfold/data/teacher_pairs.py": "37fada68e93801e5099e86e0615aad3f4cbe2cf5669aa525b6c9ac011d41b60c",
+    "/media/PM982/onestepfold/independent32_v2_20260930/code/src/onestepfold/data/temporal_dev.py": "449be435e5b8a20f4b7dbe50adda512cd97deeaf407d5ed64ad854a267d4c796",
+    "/media/PM982/onestepfold/independent32_v2_20260930/code/src/onestepfold/models/__init__.py": "d7fa080235279a3072bba21d4b4e880d4e160aeada3fba960020fc9fb4339831",
+    "/media/PM982/onestepfold/independent32_v2_20260930/code/src/onestepfold/models/coordinate_refiner.py": "cbc38c07c293e20a372c36d6bb8d56592f0cc01c7289ab02a84c32543f801f68"
+  },
+  "steps": 1,
+  "torch_version": "2.12.0a0+git78258b9",
+  "weights_sha256": {
+    "/media/PM982/onestepfold/protenix_stage0_pkg/v1_1/runtime/checkpoint/esm2_t36_3B_UR50D-contact-regression.pt": "4da500eab246481dc9c8c95bc7b1d02f2803d761c380b0e95186d4a07d0fc84e",
+    "/media/PM982/onestepfold/protenix_stage0_pkg/v1_1/runtime/checkpoint/esm2_t36_3B_UR50D.pt": "7de8b4082ba15891959ab368b77ce3886697af1efb16d3c9e9e7b0c5d3f07500",
+    "/media/PM982/onestepfold/protenix_stage0_pkg/v1_1/runtime/checkpoint/protenix_mini_esm_v0.5.0.pt": "1301bba9ad322518eace60fd244ded7904439f55317e90d402cc7a0c06026664"
+  }
+}
