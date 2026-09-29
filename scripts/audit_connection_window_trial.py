@@ -21,6 +21,9 @@ def audit_connection_window_trial(root):
     torch.set_num_threads(1)
     lock = json.loads((root / 'lock.json').read_text()); source = Path(lock['source'])
     fitted_trial = lock.get('initialization_contract') == 'calibrated_c4_fitted_start_v1'
+    reference_trial = lock.get('reference_contract') == 'calibrated_c4_reference_lengths_v1'
+    if 'reference_contract' in lock:
+        assert reference_trial and not fitted_trial and lock['arms'] == ['native_ref','length_ref']
     if 'initialization_contract' in lock:
         assert fitted_trial and lock['arms'] == ['zero', 'fitted']
     selection = json.loads((source / 'selection.json').read_text())
@@ -51,7 +54,17 @@ def audit_connection_window_trial(root):
         assert (gt['atom37_mask'][ri, ai] & gt['residue_mask'][ri]).all()
         assert np.array_equal(data['target'], gt['atom37_positions'][ri, ai])
         assert np.array_equal(data['raw'], np.load(source / 'data' / group / f'native_{row["seed"]}.npy'))
-        adapter = ArticulatedOutput(mapping['reference'], names, residues, item['sequence'],
+        output_reference = mapping['reference'].copy()
+        if reference_trial and row['arm'] == 'length_ref':
+            parameters = json.loads(Path(lock['reference_parameters']).read_text())['parameters']
+            for residue in range(2,len(item['sequence'])):
+                ix = {n:int(np.flatnonzero((residues==residue)&(names==n))[0]) for n in ['CA','C','O']}
+                p = parameters[item['sequence'][residue-1]]['metrics']; ca0,c0,o0 = mapping['reference'][[ix['CA'],ix['C'],ix['O']]]
+                cnew = ca0+(c0-ca0)/np.sqrt(np.sum((c0-ca0)**2))*p['ca_c']['median']
+                output_reference[ix['C']] = cnew
+                output_reference[ix['O']] = cnew+(o0-c0)/np.sqrt(np.sum((o0-c0)**2))*p['c_o']['median']
+            np.testing.assert_allclose(output_reference,data['output_reference'],rtol=0,atol=1e-12)
+        adapter = ArticulatedOutput(output_reference, names, residues, item['sequence'],
             json.loads((packet / 'variants.json').read_text())).double()
         variables = PoseVariables(adapter, torch.tensor(data['raw']))
         values = torch.load(folder / 'values.pt', map_location='cpu', weights_only=True)
@@ -70,15 +83,30 @@ def audit_connection_window_trial(root):
                     parameter.copy_(value)
             error = max(error, float(np.max(np.abs(replay(variables) - data[label]))))
         assert error < 1e-8
+        reference_length_error = 0.
+        if reference_trial and row['arm'] == 'length_ref':
+            for residue in range(2,len(item['sequence'])):
+                for a,b,key in [('CA','C','ca_c'),('C','O','c_o')]:
+                    ia=int(np.flatnonzero((residues==residue)&(names==a))[0])
+                    ib=int(np.flatnonzero((residues==residue)&(names==b))[0])
+                    target=parameters[item['sequence'][residue-1]]['metrics'][key]['median']
+                    for label in ['local','start','final']:
+                        reference_length_error=max(reference_length_error,abs(np.linalg.norm(data[label][ia]-data[label][ib])-target))
+            assert reference_length_error < 1e-8
         if lock['baseline'] is not None:
-            previous = Path(lock['baseline']) / 'cases' / f'{index // 2 * 2 + int(fitted_trial):02d}'
+            previous = Path(lock['baseline']) / 'cases' / f'{index // 2 * 2 + int(fitted_trial or reference_trial):02d}'
             old = dict(np.load(previous / 'coordinates.npz'))
-            if not fitted_trial or row['arm'] == 'zero':
+            if (not fitted_trial and not reference_trial) or row['arm'] in ['zero','native_ref']:
                 assert np.max(np.abs(old['start'] - data['start'])) < 1e-8
-            assert np.array_equal(old['local'], data['local'])
-            if row['arm'] in ['original', 'zero']:
+            if not reference_trial or row['arm'] == 'native_ref':
+                assert np.array_equal(old['local'], data['local'])
+            else:
+                unchanged = ~((residues>1)&(residues<len(item['sequence']))&np.isin(names,['C','O']))
+                assert np.max(np.abs(old['local'][unchanged]-data['local'][unchanged])) < 1e-8
+                assert np.max(np.abs(data['local'][ca_mask]-data['raw'][ca_mask])) < 1e-8
+            if row['arm'] in ['original', 'zero','native_ref']:
                 assert np.max(np.abs(old['final'] - data['final'])) < 1e-8
-            if fitted_trial and row['arm'] == 'zero':
+            if (fitted_trial and row['arm'] == 'zero') or (reference_trial and row['arm'] == 'native_ref'):
                 assert row['reused_control']['report_sha256'] == sha256(previous / 'report.json')
                 assert row['coordinates_sha256'] == sha256(previous / 'coordinates.npz')
                 assert row['values_sha256'] == sha256(previous / 'values.pt')
@@ -100,7 +128,7 @@ def audit_connection_window_trial(root):
         onsets = np.array([[calibration['Pro' if aa == 'P' else 'other']['windows'][term]['q95']['pooled']
                            if raw_sign[j] < 0 else .5 * t for j, aa in enumerate(item['sequence'][1:])]
                           for term, t in TOLERANCES.items()])
-        if row['arm'] == 'calibrated' or fitted_trial:
+        if row['arm'] == 'calibrated' or fitted_trial or reference_trial:
             np.testing.assert_array_equal(onsets, row['connection_onsets'])
         assert row['raw_branch_mismatches'] == np.flatnonzero(raw_sign != gt_sign).tolist()
         metric_error = 0.; objective_error = 0.
@@ -152,18 +180,20 @@ def audit_connection_window_trial(root):
                     objective_error = max(objective_error, abs(expected-found))
         assert metric_error < 1e-8
         outcomes.append(dict(index=index, verified=True, pose_max_abs=error, metric_max_abs=metric_error,
-                             objective_max_abs=objective_error))
+                             objective_max_abs=objective_error, reference_length_max_abs=reference_length_error))
     paired = []
     for i in range(0, 32, 2):
         left, right = report['rows'][i:i+2]
         if not (left['success'] and right['success']):
             paired.append(dict(index=i//2, paired=False)); continue
-        for key in ['chart_sha256', 'shared_objective_sha256', 'raw_sha256']:
+        for key in (['shared_objective_sha256', 'raw_sha256'] if reference_trial else ['chart_sha256', 'shared_objective_sha256', 'raw_sha256']):
             assert left[key] == right[key]
         x = dict(np.load(root / 'cases' / f'{i:02d}' / 'coordinates.npz'))
         y = dict(np.load(root / 'cases' / f'{i+1:02d}' / 'coordinates.npz'))
-        shared = ['raw', 'local', 'target', 'atom_names', 'residue_ids']
-        if fitted_trial:
+        shared = ['raw', 'target', 'atom_names', 'residue_ids']
+        if not reference_trial:
+            shared.append('local')
+        if fitted_trial or reference_trial:
             assert left['objective_sha256'] == right['objective_sha256']
         else:
             shared.append('start')

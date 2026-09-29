@@ -1,3 +1,42 @@
+## 2026-09-30 — Output-only CA-C/C-O reference intervention closed negative
+
+Previous goal turn abe62a7d was progress: isolated scalar calibration. This turn
+implemented and ran bounded output-reference intervention on same8devslots,
+seeds12345/54321;no newmodel/GPU/training/ind32access/calibrationrefit. Onlyinterior
+residueC/Oradialupdatesusingfrozencal32medians. NCA/angles/sidechains/rings/termini
+unchanged;graphCA-CcutmustisolateC/O. Nativefeatures/scoringreference/topology,
+rawanchor/branches/calibratedobjective/onsets/weights/3x60LBFGS unchanged.
+Preflight7supported807resupdates879checkedstereocentres pass;nonCO/termini/ring
+coordsbitwiseunchanged;CAprojectionzero;unchangedprojectedatomsmax1.599e-14A;
+length4.45e-16A/equivariance1.78e-15A,no fallback.6focusedtests pass incllocalAD.
+DiamondHill c4_output_reference_v1_20260930 pipeline225418/controller225425 terminal
+pipelineexit0;batch/audit/report/oldC4regression/oldfitregression allexit0.14newsolves,
+14hash-exactreusedcontrols,3CR6fourchemistry-skips,0scientificprocessfailures.
+TwoCPUFP64workers900sceiling;allnew180iterations,215-240closures,median19.56mean23.24s,
+peakRSS926540KiB;fullpipeline239.5s. Historicalcontroltimesnotmatchedbenchmark.
+RawAA.825157133/CA.900141834; oldfinal.812697793/.900591068;new.812428349/.900788655.
+PairedproteinmeanAA-.000269445,CA+.000197587;bounded_screenFALSE. AA2/7proteins,
+3/14predictionspositive;CA4/7,7/14. Both14/14zerosevere+strictcheckedchirality+RMS,
+oldjoint0/14both. OldangleCfails10->8;angleN/omega14both;CN/carbonyl0both.
+4B9Ptwo rawcis/GTtrans remain. Penmax1.79503->1.80999;heavyRMS.52280->.52799,
+CArms.22930->.23155A. Noabsolute_failuresbotharms. InitialAAgainonly+.000108450
+(.802942482->.803050932),CAexactunchanged;major~.022initialAAlossnotresolved.
+PriorGTspanmediancomparisonchangedCAC/NCA;thisinterventionCAC/CO+interioronly,
+notidenticalexperiment. Moreaccuratelengthscalarsnotguaranteeoutputfoldquality.
+28NumPypose/metrics/objectiveaudit max2.641e-10A/8.327e-16/5.116e-13;
+newtargetlengths preservedlocal/final<=3.560e-12A. OldC4/fit28eachshadowauditpass.
+180memberarchive+SHA localverified;executionsourcesmatchcurrentcommit.
+Launcherfailures beforecontroller:missing sys, shellquoteSyntaxError(pid224484),
+helperPYTHONPATHmissing(pid224995);preservedlauncher_failure/import_failurelogs.
+Scientificcontrolleronlystartedonce225425afterimportpreflight;noresumere-run.
+Reports/mini_c4_output_reference_2026-09-30;docs/mini_output_reference_lengths_findings_2026-09-30.md.
+CurrenttwolengthversionCLOSED;retainnative-referencecalibrated-zero baseline.
+Do notappendweights/iterationsortryfit+newlengthgridonpanel. Nextmethodneeds
+whole-residueconsistentoutputchemistryandshape-preservationevidence;inspect
+existingtrusted/idealchemicalreferenceoptionsbeforeblindlyassembling5medians.
+No newbackwardbugorLoRAjustification. Goalactive/unfulfilled,oldind32rejection
+unchanged;solverstilldetachedandnotone-stepdifferentiableoutput. No runningjobs.
+
 ## 2026-09-30 — Independent output-backbone reference scalar calibration
 
 Previous goal turn bda69034 was concrete progress: fixedCA necessary-condition

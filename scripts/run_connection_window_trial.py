@@ -28,6 +28,7 @@ from fastglycan.repair_outcomes import absolute_failures
 from fastglycan.scaling_metrics import lddt_observed
 from fastglycan.local_projection_fit import fit_local_projection
 from fastglycan.geometry_start import pose_variables_at_start
+from fastglycan.output_reference_lengths import calibrate_output_reference
 
 
 def prepare_window_trial(root, source, baseline, calibration):
@@ -63,6 +64,9 @@ def run_window_case(root, index):
     torch.set_num_threads(1)
     lock = json.loads((root / 'lock.json').read_text()); source = Path(lock['source'])
     fitted_trial = lock.get('initialization_contract') == 'calibrated_c4_fitted_start_v1'
+    reference_trial = lock.get('reference_contract') == 'calibrated_c4_reference_lengths_v1'
+    if 'reference_contract' in lock:
+        assert reference_trial and not fitted_trial and lock['arms'] == ['native_ref', 'length_ref']
     if 'initialization_contract' in lock:
         assert fitted_trial and lock['arms'] == ['zero', 'fitted']
     selection = json.loads((source / 'selection.json').read_text())
@@ -78,7 +82,7 @@ def run_window_case(root, index):
         chemistry = json.loads((packet / 'report.json').read_text())
         if not chemistry['passed']:
             result.update(not_run=True, source_failure=chemistry['error']); return
-        if fitted_trial and arm == 'zero':
+        if (fitted_trial and arm == 'zero') or (reference_trial and arm == 'native_ref'):
             previous = Path(lock['baseline']) / 'cases' / f'{index // 2 * 2 + 1:02d}'
             saved = json.loads((previous / 'report.json').read_text())
             assert saved['success'] and saved['arm'] == 'calibrated'
@@ -97,15 +101,26 @@ def run_window_case(root, index):
         assert np.array_equal(names, inv['atom_name']) and np.array_equal(residues, inv['residue_id'])
         raw_array = np.load(source / 'data' / group / f'native_{seed}.npy').astype(np.float64)
         raw = torch.tensor(raw_array)
-        adapter = ArticulatedOutput(mapping['reference'], names, residues, item['sequence'],
-            json.loads((packet / 'variants.json').read_text())).double()
+        variants = json.loads((packet / 'variants.json').read_text())
+        output_reference = mapping['reference']
+        if reference_trial:
+            output_reference, changes = calibrate_output_reference(output_reference, names, residues,
+                item['sequence'], variants, json.loads(Path(lock['reference_parameters']).read_text())['parameters'])
+            result['reference_changes'] = changes
+        adapter = ArticulatedOutput(output_reference, names, residues, item['sequence'], variants).double()
         variables = PoseVariables(adapter, raw); start = variables().detach().clone()
         old = None
         if lock['baseline'] is not None:
-            previous = Path(lock['baseline']) / 'cases' / f'{index // 2 * 2 + int(fitted_trial):02d}'
+            previous = Path(lock['baseline']) / 'cases' / f'{index // 2 * 2 + int(fitted_trial or reference_trial):02d}'
             old = dict(np.load(previous / 'coordinates.npz'))
             assert np.array_equal(raw_array, old['raw'])
-            assert np.max(np.abs(start.numpy() - old['start'])) < 1e-8
+            if not reference_trial:
+                assert np.max(np.abs(start.numpy() - old['start'])) < 1e-8
+            else:
+                unchanged = ~((residues > 1) & (residues < len(item['sequence'])) & np.isin(names, ['C','O']))
+                result['unchanged_local_max_abs'] = float(np.max(np.abs(start.numpy()[unchanged]-old['local'][unchanged])))
+                assert result['unchanged_local_max_abs'] < 1e-8
+                assert np.max(np.abs(start.numpy()[names=='CA']-raw_array[names=='CA'])) < 1e-8
         else:
             assert lock.get('prediction_contract') == 'c4_s1_confirmation_v1'
         fitted = None
@@ -130,18 +145,18 @@ def run_window_case(root, index):
             for name in ['N', 'CA', 'C', 'O']] for j in range(1, len(item['sequence']) + 1)])
         args = (raw, anchors, item['sequence'], topology.pairs, topology.radii)
         base = TailObjective(*args)
-        objective = base if not fitted_trial and arm == 'original' else CalibratedConnectionObjective(
+        objective = base if not fitted_trial and not reference_trial and arm == 'original' else CalibratedConnectionObjective(
             *args, json.loads(Path(lock['calibration']).read_text()))
         for name, value in base.named_buffers():
             assert torch.equal(value, dict(objective.named_buffers())[name])
         result.update(chart_sha256=buffer_digest(variables), objective_sha256=buffer_digest(objective),
             shared_objective_sha256=buffer_digest(base), raw_sha256=sha256(source / 'data' / group / f'native_{seed}.npy'),
             start_replay_max_abs=float(np.max(np.abs(start.numpy() - fitted.coordinates.numpy()))) if fitted is not None
-                else float(np.max(np.abs(start.numpy() - old['start']))) if old is not None else None)
+                else float(np.max(np.abs(start.numpy() - old['start']))) if old is not None and not reference_trial else None)
         with torch.no_grad():
             loss, terms = objective(start, variables.variables, 1.)
         result['start_objective'] = dict(loss=float(loss), terms={k: float(v) for k, v in terms.items()})
-        if arm == 'calibrated' or fitted_trial:
+        if arm == 'calibrated' or fitted_trial or reference_trial:
             result['connection_onsets'] = objective.connection_onsets.tolist()
         initial_values = tuple(p.detach().clone() for p in variables.variables)
         write_json(folder / 'progress.json', dict(stage='initialized', **result))
@@ -157,6 +172,8 @@ def run_window_case(root, index):
             assert result['historical_baseline_max_abs'] < 1e-8
         arrays = dict(raw=raw_array, local=variables.initial.numpy(), start=start.numpy(), final=final.numpy(),
                       target=mapping['coordinates'].astype(np.float64))
+        if reference_trial:
+            arrays['output_reference'] = output_reference
         ca = names == 'CA'; bone = np.isin(names, ['N', 'CA', 'C', 'O'])
         side = np.array([[int(np.flatnonzero((residues == j) & (names == n))[0])
             for n in ['CB', 'CA', 'CG1' if aa == 'I' else 'OG1', 'CG2']]

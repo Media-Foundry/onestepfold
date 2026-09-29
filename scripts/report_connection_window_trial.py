@@ -16,7 +16,7 @@ def report_connection_window_trial(root):
     rows = {r['index']: r for r in report['rows']}
     lock = json.loads((root / 'lock.json').read_text())
     control, candidate_arm = lock['arms']
-    assert [control, candidate_arm] in [['original', 'calibrated'], ['zero', 'fitted']]
+    assert [control, candidate_arm] in [['original', 'calibrated'], ['zero', 'fitted'], ['native_ref','length_ref']]
     arms = {}
     for arm in [control, candidate_arm]:
         available = [r for r in rows.values() if r['success'] and r['arm'] == arm]
