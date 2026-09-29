@@ -1,3 +1,28 @@
+## 2026-09-30 — Independent32 finished; continuation rejected, loss localized to initialization
+
+Authoritative batch/audit/score exit0, analysis exit0; all known processes terminal.
+96raw/192repairs complete,64/64independent CPUaudit,96/96input/initial pairing audit;
+612frozen file hashes match. Main pipeline52.3min. No missing GTscore/supplement error.
+Raw/Mean/Tail jointpass0/62/80of96;all3protein0/18/23of32. Tail misses24protein gate.
+AA-lDDT raw .771294, mean .749082, tail .748187; tail delta-.023107,bootstrap95
+[-.026423,-.019406],24/32delta<-.02. Both geometry and quality screens fail.
+Rawjointpass0 means good-input retention N/A, not100%. Tailchirality96/96,no new
+checked flips,RMSbudget96/96; local backbone/sidechain moves reach13.51/17.14A.
+Remaining16tailfails allconnection;9severe cases are4FMA/1N81/6N9Y across3noises.
+Read-only posthoc saved-initialization scoring all96: initialAA .749192,CA unchanged.
+Initial-raw -.022102; tail-initial -.001005 (CIcrosszero). Main quality cost precedes
+joint optimization. Atom-centre additive decomposition verified; no new GPU outputs.
+Full reportdocs/mini_independent32_findings_2026-09-30.md; overall front updated.
+Metadata archives+perresidue tables hashes/roundtrip verified, PNG/PDF inspected.
+This batch is CLOSED, no tuning/retries/automatic distillation on32. Suggested next
+question: lower-distortion proper/chirality-preserving local fitting on development
+cases, keeping32and near sequences excluded; specific method/protocol still to discuss.
+No new GPU batch, no reliable differentiable output/design utility established.
+Goal staysactive; this turn is progress(final results+scientific localization+report),
+not blocked and not full-goal completion. Do not poll/restart ended PIDs169720/169722/
+174093/183809. Results remain in independent32_v2_20260930 and
+independent32_analysis_v1_20260930 under/media/PM982/onestepfold onDiamondHill.
+
 ## 2026-09-30 — Raw96 artifact audit complete; paired repairs still running
 
 Verified live DiamondHill pipeline169720/controller169722 and analysis waiter174093
