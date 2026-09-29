@@ -1,6 +1,15 @@
-# Geometry repair v1 — running; six-case partial analysis
+# Geometry repair v1 — COMPLETE
 
-Latest partial analysis: 6/99 complete, all6 with zero severe collisions and
+Final update (2026-09-29): all99 repairs/coordinate audits/analyses completed,
+controllers exit0.99zero severe collisions and99preservation passes;49absolute
+geometry passes,50fail CAchirality. Both proposal arms:0/16confirmedutility and
+0/16full acceptance after repair. Y38T's prior task benefit is lost relative to
+the repaired parent.360files/99cases archive verification passed;9tests passed.
+See [overall report](onestepfold_overall_report_2026-09-29.md) and
+[final analysis](../reports/mini_geometry_repair_2026-09-29/final/outcome_analysis.json).
+No related jobs remain. Earlier partial snapshots below are retained as history.
+
+Earlier partial analysis: 6/99 complete, all6 with zero severe collisions and
 preserved structure;3/6 pass absolute geometry,3/6 fail chirality. Across these
 cases,7 new CA-centre flips and3 corrected flips. This is a completion-order
 subset, not a rate estimate. An independent lightweight collector is attached:

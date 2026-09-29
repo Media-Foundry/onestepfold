@@ -1,3 +1,20 @@
+## 2026-09-29 — Final collision/repair batch collected; overall report
+
+User requested current status plus overall Markdown report and push. No new model
+runs, training, repair, or protocol changes. All99 repairs and finalanalysis complete;
+controllers exit0 and no remaining related process.99CPUrecomputations exact.
+Read-only archive check verifies99cases/360files:rawinputs/atommapping/fullprojection
+exact, finiteoutputs, source/forcefield/report hashes bound.
+All99 zero severeclashes and preservationpass;49absolute/jointgeometrypass,50fail
+CAchirality.68structures have newflips;134new,38corrected,30persistent CAinstances.
+MeanCA/heavyRMS.615/.827A;maxsingleatom6.880A.80/99 meet recordedforce diagnostic;
+no claim allminimizationsconverged. Bothgradient/random repairedutility0/16 andfull0/16.
+Y38T loses benefit vsrepairedparent:confirmtaskdelta+.00054835/+.00102310.
+C4S5 remainscompleted:nativepasses2/3,onehas3severepairs;not S1-exclusivefailure.
+Overallreport:docs/onestepfold_overall_report_2026-09-29.md;finalcompactartifacts:
+reports/mini_geometry_repair_2026-09-29/final/. Ninefocusedtests pass.
+Batchclosed; reliableone-stepdesign/geometrypreservation notachieved. No nextjobs.
+
 ## 2026-09-29 — Existing repair batch live; automatic outcome analysis attached
 
 No new experiments or parameter changes. Verified live controller39918 plusfour
