@@ -1,0 +1,69 @@
+{
+  "cases": [
+    {
+      "arm": "controlled_s1",
+      "file": "/media/PM982/onestepfold/c4s5_collision_v1_20260929/controlled_s1_211.npz",
+      "seed": 211,
+      "sha256": "4b2c53fa0e9b0949ad42329ae5bf2809a58753b41428df81b7c9a4fece3de69d"
+    },
+    {
+      "arm": "controlled_s1",
+      "file": "/media/PM982/onestepfold/c4s5_collision_v1_20260929/controlled_s1_200003.npz",
+      "seed": 200003,
+      "sha256": "655889d85d2e4af0e036e9ac3907105844baf9cd03af777edf030e843bc657fc"
+    },
+    {
+      "arm": "controlled_s1",
+      "file": "/media/PM982/onestepfold/c4s5_collision_v1_20260929/controlled_s1_200009.npz",
+      "seed": 200009,
+      "sha256": "f94ac368179be6b00f00ec1f815d214de95a292f5aca6680310b067931603877"
+    },
+    {
+      "arm": "native_s5",
+      "file": "/media/PM982/onestepfold/c4s5_collision_v1_20260929/native_s5_211.npz",
+      "seed": 211,
+      "sha256": "b2015a41aa314b1c3d86329ea0fef144f3c2066027d07e8e0ff5c2aeccfd3559"
+    },
+    {
+      "arm": "native_s5",
+      "file": "/media/PM982/onestepfold/c4s5_collision_v1_20260929/native_s5_200003.npz",
+      "seed": 200003,
+      "sha256": "f4ed10a7ba546a714df2f312bbd59d8f64579eaa4421fd2e18008fa056442e65"
+    },
+    {
+      "arm": "native_s5",
+      "file": "/media/PM982/onestepfold/c4s5_collision_v1_20260929/native_s5_200009.npz",
+      "seed": 200009,
+      "sha256": "c070def6e051ca6444bdda5ac2a81d3360a649584b816dd14b181af16b2638b8"
+    }
+  ],
+  "devices": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "prior_lock_sha256": "ae005f034bea0b5db0b956ebf207a223c7f83d84e91007ce52d14406b8e62d7f",
+  "reference": "/media/PM982/onestepfold/connected_output_v1_1_20260929/chemical_reference.npz",
+  "reference_sha256": "70b1f7ab8731545bd938d9820a4817a31e0556fa301fe0fc2c069d2e900385b3",
+  "scope": "six same-parent regression inputs; iterative feasibility only",
+  "sequence": "AVPSEPKTVYVICLRESGSTVYPNEVSAQMQDAANSVYAVHGLKRFVNLHFVLYTTEYSCPSGNADEGLDGFTASLKANPKAEGYDDQIYFLIRWGTWDNNILGISWLDSYNVNTASDFKASGMSTTQLMYPGVMAHELGHILGARHADDPKDLMYSKYTGYLFHLSEENMYRIAKNLGWEIADGDWSHPQFEK",
+  "source_hashes": {
+    "/media/PM982/onestepfold/anchored_geometry_v1_20260929/code/docs/mini_anchored_geometry_v1.md": "155d5d3d66fa4d173dc6d8bf85e14a10c77e1c60638c2e5482f05478edcc8be3",
+    "/media/PM982/onestepfold/anchored_geometry_v1_20260929/code/scripts/run_anchored_geometry.py": "18ba4a8bee24449a5ed10af1b98739757c6dbc2f2e836b2c9a7c063d92054b93",
+    "/media/PM982/onestepfold/anchored_geometry_v1_20260929/code/src/fastglycan/anchored_geometry.py": "2f2b2911896107539e7ad8fc468734ee63d7fad06c42acbaf26b5f568d4df5d5",
+    "/media/PM982/onestepfold/anchored_geometry_v1_20260929/code/src/fastglycan/articulated_output.py": "9ed9bee15d6e03da44768f4c42065622c6c936addbc01a481db930c107616e13",
+    "/media/PM982/onestepfold/anchored_geometry_v1_20260929/code/src/fastglycan/articulated_reference.py": "0e2c755c76b1ae318e05299d9461dad4352a2a8f022d7113e3cf8f64fea97606",
+    "/media/PM982/onestepfold/anchored_geometry_v1_20260929/code/src/fastglycan/collision_audit.py": "8065740a9bfb25a2fcc417422826a0df47c64e106e4d6f63601d3b3e7a036f5c",
+    "/media/PM982/onestepfold/anchored_geometry_v1_20260929/code/src/fastglycan/geometry_repair.py": "9677b69c07392781a3640f0c8eb85d094730f1fe3f560fb7d3c67618d00c4257",
+    "/media/PM982/onestepfold/anchored_geometry_v1_20260929/code/src/fastglycan/hybrid_geometry.py": "dbac578ed4b0ac44540942fb63256e17d33db6296e35b85a9c7111f728046672",
+    "/media/PM982/onestepfold/anchored_geometry_v1_20260929/code/src/fastglycan/repair_outcomes.py": "0d3d92ecbf1a4100482635ebe1850c4ed00768261fc0afadddf8b14dcb121f27"
+  },
+  "timeout_seconds": 900,
+  "topology": "/media/PM982/onestepfold/c4s5_collision_v1_20260929/topology.pt",
+  "topology_sha256": "ae4a8c86033cfee3b8a73a3e8214983a0b258fac608561c1f6c0ffddbbb2adc1",
+  "variants": "/media/PM982/onestepfold/connected_output_v1_1_20260929/variants.json",
+  "variants_sha256": "81827f6dfeba1156ac5dff0ec50344eea4edfc4a6680d32b542e8f209ed037fc"
+}

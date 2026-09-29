@@ -1,3 +1,20 @@
+## 2026-09-29 — Anchored joint geometry feasibility and data inventory
+
+User approved per-residue global anchors with joint connection/repulsion. Implemented
+PoseVariables + bounded LBFGS diagnostic; no sequence search/training/Mini forwards.
+Six DiamondHill GCD workers finished normally (~29–31s each incl init), all stages
+hit60 iterations. All6 retain RMS budget, CA/ILE/THR handedness and added connection
+limits. NativeS5 all3 jointpass/0 severe; S1 residual severe6/2/3,maxpenetration>2A.
+Independent NumPy/SciPy output replay max1.33e-10A, CPU jointaudit3/6. No convergence,
+through-solver derivative, design utility or independent-protein claim. Max atom
+movement up11.57A/max rotation vector1.19rad retained as important limitations.
+Batch finished; no auto-retune. docs/mini_anchored_geometry_findings_2026-09-29.md.
+User also requested downloaded sequence locations. Live HPC3 audit verifies76273
+unique/nonempty UniProt mapped FASTA records in1526batches and244406PDB filenames,
+exact manifests, no partials. NOT fullUniProt. HPC2 rawroot also exists. DiamondHill
+29769TRAIN+128DEV acceptance and ESMC547shard multi-layer cache confirmed. Locations:
+docs/protein_data_locations_2026-09-29.md; no new data download or split changes.
+
 ## 2026-09-29 — Connected output prototype implemented; direct rebuild stopped
 
 User authorized starting the next output method. Added fixed-graph ConnectedOutput:
