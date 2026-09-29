@@ -1,3 +1,17 @@
+## 2026-09-29 — Independent geometry validation selection v1 stops before inference
+
+User approved freezing 2aa87043 and independent32x3 raw/mean/tail validation.
+Front-page overall report now distinguishes positive6/6 pose solver from old99
+force-field baseline. Protocol locks isolation, length strata, noises, budgets,
+GT metrics and continuation screen before outputs. DiamondHill source-only screen
+used192single-thread CPU workers,21070excluded sequences plusPDB/SIFTS exclusions.
+217source-eligible candidates all rejected by existing30% aligned-residue identity/
+70% shorter-coverage rule. Posthoc one-shuffle control stillhits74/217; suggests
+specificity limitation, not proof alloriginalhits false or no independentdata.
+No thresholds relaxed, no predictions/solver/training started;32panel notformed.
+Stopv1, preserveartifacts; nextcalibrate isolation innewversion, keepgeometryfrozen.
+Report:docs/mini_anchored_independent_screen_2026-09-29.md.7focusedtests pass.
+
 ## 2026-09-29 — Worst-pair contrast passes six fixed geometry cases
 
 User authorized mainline continuation; permission interruption occurred before jobs.
