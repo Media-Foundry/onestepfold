@@ -1,3 +1,35 @@
+## 2026-09-30 — Experimental-GT local fitting development completed
+
+Previous goal turn was no progress (data/status restatement). This turn executed a
+new bounded source-locked GT comparison under the standing mainline instruction.
+Protocol docs/mini_local_projection_gt_development_v1.md; findings in
+mini_local_projection_gt_findings_2026-09-30.md. DiamondHill root:
+/media/PM982/onestepfold/local_fit_gt_source_v1_20260930 (terminal, batch/audit exit0).
+Historical native ESM2 Mini C1/S1, NOT C4; seeds12345/54321, lambda1.003; no new
+model inference/GPU/training. native_reference means prediction, never GT.
+640 historical sources ->55 eligible ->first8 unique PDB/accession by group hash.
+Reserved32/PDB/accession and calibrated BLAST isolation passed; no warning/HSP
+exclusion hit. 7 complete native/experimental heavy-atom mappings passed chemistry;
+3CR6 rejected for Lys132 NZ–nonprotein CAF covalent link. Do not replace it.
+21 fits completed out of24 planned inputs,3 source-skipped retained. All60 iterations,
+62–66 closures, same frozen representation and equal-atom raw MSE objective.
+GT self AA-lDDT:1 ->.968419(old) ->.996713(fit).
+14 cached predictions AA:.773584(raw) ->.754925(old) ->.767987(fit), about70% of
+projection loss recovered. All14 improve vs old, all14 still below raw.
+CA:.848037 ->.848037 ->.846234. Backbone-to-raw MSE worsens; sidechain improves.
+Checked chirality21/21 and local chemistry preserved; connection0/21; native
+severe pairs raw/old/fit58/61/68. Even rawGT connection0/7 under the strict ideal
+connection thresholds; do not call this proof of erroneous experimental GT.
+21 independent saved-pose and metric audits pass (max1.77e-10 A/4.45e-16).
+Data/chemistry/fit artifacts backed up in2.5MB archive,172 files roundtrip hashed.
+Independent32 rejection unchanged, set not rerun. No solver-input gradients/design
+utility shown. No further fits launched. Next bounded question: compare old vs
+fitted initialization for joint solver on SAME original raw PoseVariables chart
+and SAME JointObjective/regularizer anchors; account for extra60 fit iterations.
+Do not rebuild zero variables around fitted coordinates, change weights, tune on32,
+or claim cachedC1 results validate C4. Needs own execution lock before running.
+Goal remains active/unfulfilled; current turn is progress (new empirical GT evidence).
+
 ## 2026-09-30 — Old-six CPU local fitting completed, no GT recovery claim
 
 Prior goal turn was progress(prepared code+3synthetic tests). Continued recommended
