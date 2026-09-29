@@ -1,0 +1,68 @@
+{
+  "cases": [
+    {
+      "arm": "controlled_s1",
+      "file": "/media/PM982/onestepfold/c4s5_collision_v1_20260929/controlled_s1_211.npz",
+      "seed": 211,
+      "sha256": "4b2c53fa0e9b0949ad42329ae5bf2809a58753b41428df81b7c9a4fece3de69d"
+    },
+    {
+      "arm": "controlled_s1",
+      "file": "/media/PM982/onestepfold/c4s5_collision_v1_20260929/controlled_s1_200003.npz",
+      "seed": 200003,
+      "sha256": "655889d85d2e4af0e036e9ac3907105844baf9cd03af777edf030e843bc657fc"
+    },
+    {
+      "arm": "controlled_s1",
+      "file": "/media/PM982/onestepfold/c4s5_collision_v1_20260929/controlled_s1_200009.npz",
+      "seed": 200009,
+      "sha256": "f94ac368179be6b00f00ec1f815d214de95a292f5aca6680310b067931603877"
+    },
+    {
+      "arm": "native_s5",
+      "file": "/media/PM982/onestepfold/c4s5_collision_v1_20260929/native_s5_211.npz",
+      "seed": 211,
+      "sha256": "b2015a41aa314b1c3d86329ea0fef144f3c2066027d07e8e0ff5c2aeccfd3559"
+    },
+    {
+      "arm": "native_s5",
+      "file": "/media/PM982/onestepfold/c4s5_collision_v1_20260929/native_s5_200003.npz",
+      "seed": 200003,
+      "sha256": "f4ed10a7ba546a714df2f312bbd59d8f64579eaa4421fd2e18008fa056442e65"
+    },
+    {
+      "arm": "native_s5",
+      "file": "/media/PM982/onestepfold/c4s5_collision_v1_20260929/native_s5_200009.npz",
+      "seed": 200009,
+      "sha256": "c070def6e051ca6444bdda5ac2a81d3360a649584b816dd14b181af16b2638b8"
+    }
+  ],
+  "device": "cpu",
+  "dtype": "float64",
+  "max_eval": 90,
+  "max_iter": 60,
+  "reference": "/media/PM982/onestepfold/connected_output_v1_1_20260929/chemical_reference.npz",
+  "reference_sha256": "70b1f7ab8731545bd938d9820a4817a31e0556fa301fe0fc2c069d2e900385b3",
+  "scope": "old same-parent development inputs; no GT or new model forward",
+  "sequence": "AVPSEPKTVYVICLRESGSTVYPNEVSAQMQDAANSVYAVHGLKRFVNLHFVLYTTEYSCPSGNADEGLDGFTASLKANPKAEGYDDQIYFLIRWGTWDNNILGISWLDSYNVNTASDFKASGMSTTQLMYPGVMAHELGHILGARHADDPKDLMYSKYTGYLFHLSEENMYRIAKNLGWEIADGDWSHPQFEK",
+  "source": "/media/PM982/onestepfold/anchored_tail_v1_20260929",
+  "source_hashes": {
+    "/media/PM982/onestepfold/local_fit_dev_v1_20260930/code/docs/mini_local_projection_fit_execution_v1.md": "dbc66effb2ce9bf65e16b0f90a762b9456c8dddaf1c9cbd08751d32e2cb39bd4",
+    "/media/PM982/onestepfold/local_fit_dev_v1_20260930/code/scripts/run_local_projection_development.py": "775d68f55467b0e0145f1f1e845977ec671f0feaaaac0767507d313999c75852",
+    "/media/PM982/onestepfold/local_fit_dev_v1_20260930/code/src/fastglycan/anchored_geometry.py": "2f2b2911896107539e7ad8fc468734ee63d7fad06c42acbaf26b5f568d4df5d5",
+    "/media/PM982/onestepfold/local_fit_dev_v1_20260930/code/src/fastglycan/articulated_output.py": "9ed9bee15d6e03da44768f4c42065622c6c936addbc01a481db930c107616e13",
+    "/media/PM982/onestepfold/local_fit_dev_v1_20260930/code/src/fastglycan/articulated_reference.py": "0e2c755c76b1ae318e05299d9461dad4352a2a8f022d7113e3cf8f64fea97606",
+    "/media/PM982/onestepfold/local_fit_dev_v1_20260930/code/src/fastglycan/geometry_repair.py": "9677b69c07392781a3640f0c8eb85d094730f1fe3f560fb7d3c67618d00c4257",
+    "/media/PM982/onestepfold/local_fit_dev_v1_20260930/code/src/fastglycan/hybrid_geometry.py": "dbac578ed4b0ac44540942fb63256e17d33db6296e35b85a9c7111f728046672",
+    "/media/PM982/onestepfold/local_fit_dev_v1_20260930/code/src/fastglycan/local_projection_fit.py": "15b187c1114145fe8cbbc80c40b421638162372010f1b08036f3255a8493ddbe",
+    "/media/PM982/onestepfold/local_fit_dev_v1_20260930/code/src/fastglycan/paired_teacher_protocol.py": "0c7b5b1f4733cfb638d8ce6150577e0e7d1d37e9ea7142ba5ddaae7229b88990",
+    "/media/PM982/onestepfold/local_fit_dev_v1_20260930/code/src/fastglycan/repair_outcomes.py": "0d3d92ecbf1a4100482635ebe1850c4ed00768261fc0afadddf8b14dcb121f27"
+  },
+  "source_lock_sha256": "ae9de857e1f9c03e4bbab6f4150322882cef2c330f18ff7ab37da5aa8667d6f5",
+  "timeout_seconds": 900,
+  "topology": "/media/PM982/onestepfold/c4s5_collision_v1_20260929/topology.pt",
+  "topology_sha256": "ae4a8c86033cfee3b8a73a3e8214983a0b258fac608561c1f6c0ffddbbb2adc1",
+  "variants": "/media/PM982/onestepfold/connected_output_v1_1_20260929/variants.json",
+  "variants_sha256": "81827f6dfeba1156ac5dff0ec50344eea4edfc4a6680d32b542e8f209ed037fc",
+  "workers": 2
+}

@@ -1,3 +1,27 @@
+## 2026-09-30 — Old-six CPU local fitting completed, no GT recovery claim
+
+Prior goal turn was progress(prepared code+3synthetic tests). Continued recommended
+bounded diagnosis under standing mainline task; unanswered optional preference was
+not treated as explicit user approval. Protocol mini_local_projection_fit_execution_v1.
+DiamondHill local_fit_dev_v1_20260930: controller186778 now terminal, exit0;6/6cases.
+Same old parent194res, controlledS1/nativeS5 three seeds each. No new model forward,
+GPU, training, experimentalGT, independent32 access or joint-solver integration.
+Same chemical manifold/frozen constructor; one60iter FP64CPU fit with2singlethread
+workers. Raw-coordinate MSE falls80.56–85.67%,all194residue totalMSE improves ineach
+case. Local bonds/angle cosines within7.4e-15; allchecked chirality preserved.
+BUT backbone-to-raw RMS increases inall6; sidechain fit supplies totalgain. Joint
+geometry0/6, chain/clashes notresolved; raw closer != GTaccuracy recovered.
+6/6independentNumPy replay/metric audit(max3.55e-15/4.44e-16); 3runtime tests pass.
+All use60iterationcap,63–64closures,~3.3s recordedcase time; no optimality/convergence
+claim. Outputs/values/report locallycollected and hashchecked.
+Report docs/mini_local_projection_fit_findings_2026-09-30.md, overallreportupdated.
+Next meaningful question is experimentally scored development comparison including
+GTself-projection and native-prediction projection, excludingreserved32andnearsets.
+Needs bounded source/mask protocol; do not reflexively rerun32oraddweights/budget.
+If integrating later, warmstart originalPoseVariables with fittedq and keeporiginal
+objectiveanchors; rebuildingchart around fittedcoords changesregularizer too.
+Batchclosed; do notpoll/restart186778. Goalactive/unfulfilled,currentturnprogress.
+
 ## 2026-09-30 — Local projection fitting draft and synthetic implementation prepared
 
 Previous goal turn was progress: completed independent32 negative validation, localized
