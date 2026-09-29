@@ -1,0 +1,23 @@
+{
+  "observed_at": "2026-09-29T19:26:58.399674+00:00",
+  "raw": 96,
+  "repairs": {
+    "mean": 96,
+    "tail": 93
+  },
+  "terminal": false,
+  "processes": "    PID     ELAPSED STAT COMMAND\n 169720       37:01 S    bash /media/PM982/onestepfold/independent32_v2_20260930/run.sh\n 169722       37:01 Sl   /home/pc/anaconda3/envs/fold/bin/python /media/PM982/onestepfold/independent32_v2_20260930/code/scripts/run_independent_geometry_validation.py --root /media/PM982/onestepfold/independent32_v2_20260930 --mode batch\n 174093       23:23 S    bash /media/PM982/onestepfold/independent32_analysis_v1_20260930/run.sh\n",
+  "active": [
+    {
+      "path": "/media/PM982/onestepfold/independent32_v2_20260930/proteins/b2898a1d70a39f0b135e5ea72fe18f2a98810ea0efd4683ae6434e785f3a979c/tail/cases/00/progress.json",
+      "age_seconds": 16.480982303619385,
+      "progress": {
+        "calls": 50,
+        "loss": 0.33016834524567756,
+        "rho": 100.0,
+        "seconds": 336.67614350499935,
+        "stage": "solving"
+      }
+    }
+  ]
+}

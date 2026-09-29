@@ -1,3 +1,21 @@
+## 2026-09-30 — Raw96 artifact audit complete; paired repairs still running
+
+Verified live DiamondHill pipeline169720/controller169722 and analysis waiter174093
+at03:27HK;96/96raw,96/96mean,93/96tail computational outputs. No restart or tuning.
+Independent artifact audit96/96: native atom identity/order, finite FP32 coordinates,
+sequence, locked model/config, four conditioning cycles shared across seeds, one
+structure evaluation per seed, identity-key noise/augmentation, fixed ODE settings.
+This checks artifacts/traces, not independent model replay or geometry/GT acceptance.
+Added exact mean/tail input+initial-coordinate audit: first90/96pairs pass; remaining
+protein reports not yet complete. Run again after all repairs. Analysis copy only;
+original frozen runtime untouched. Overall report front now reflects32 and livebatch.
+New plotting script prepared but not yet run; do not cite a figure as completed.
+Next: wait for original exit.json; inspect CPUaudit+GTreport, run final pairing audit,
+collect supplement, export/inspect plot, report frozen screen and source/length tails.
+Batchroot/media/PM982/onestepfold/independent32_v2_20260930;
+analysisroot/media/PM982/onestepfold/independent32_analysis_v1_20260930.
+Goal remains active; current turn made progress and has verified running handles.
+
 ## 2026-09-30 — Independent32 live; read-only reporting supplement queued
 
 Revalidated live pipeline169720/controller169722 on DiamondHill, no restart.
