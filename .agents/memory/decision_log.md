@@ -1,3 +1,17 @@
+## 2026-09-30 — User-authorized source extension retains28;32 lock incomplete
+
+User explicitly chose extend sources to32 before validation. StageB complete TRAIN
+extension148 candidates→15 isolated→10 source-supported medium proteins; fixed1F06
+320aa adds to original27, strata8/8/8/4. Raw pre-cutoff monomer representative universe
+841 long groups checked in frozen256 then remaining585 batches:158 isolation-eligible,
+156 incomplete experimental backbone, remaining1DAB/3KTT recorded chain breaks.
+No new qualified long chain; preserve28, no silent trimming/imputation/relaxed gates.
+No Mini/ESM/GPU inference, repair or training. All batches complete. This exhausts
+chosen representative universe, not all PDB variants/all possible sources. First
+StageB runtime import failure preserved; corrected isolated package v1_1 succeeds.
+Report docs/mini_validation_source_extension_findings_2026-09-30.md. Need additional
+source policy or explicit dataset-contract decision before32x3 can start.
+
 ## 2026-09-30 — Sequence isolation calibrated;27 chemistry-qualified candidates
 
 Geometry frozen2aa87043. New predeclared BLAST2.17 rule adds significance to

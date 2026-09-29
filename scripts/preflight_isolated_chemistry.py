@@ -14,7 +14,7 @@ def sha(path):
 
 
 def check(item):
-    row,root,base=item; folder=root/row['group_id'];folder.mkdir(exist_ok=False)
+    row,root,base,data_root=item; folder=root/row['group_id'];folder.mkdir(exist_ok=False)
     result=dict(group_id=row['group_id'],length=len(row['sequence']),pdb_id=row['pdb_id'],passed=False)
     try:
         import gemmi
@@ -24,7 +24,7 @@ def check(item):
         from fastglycan.articulated_output import ArticulatedOutput,AA
         from onestepfold.data.gt_materializer import ATOM37_INDEX
         torch.set_num_threads(1)
-        source=base/'scratch_structure_data_v1_20260927/examples'/row['group_id']
+        source=data_root/'examples'/row['group_id']
         prepared=json.loads((source/'prepared.json').read_text());meta=json.loads((source/'gt.json').read_text())
         for n in ['gt.json','gt.npz','input_provenance.json']:
             assert sha(source/n)==prepared['files_sha256'][n]
@@ -86,11 +86,13 @@ def check(item):
 
 def main():
     p=argparse.ArgumentParser();p.add_argument('--selection',type=Path,required=True)
-    p.add_argument('--root',type=Path,required=True);p.add_argument('--base',type=Path,required=True);a=p.parse_args()
+    p.add_argument('--root',type=Path,required=True);p.add_argument('--base',type=Path,required=True)
+    p.add_argument('--data-root',type=Path);a=p.parse_args()
+    data_root=a.data_root or a.base/'scratch_structure_data_v1_20260927'
     a.root.mkdir(exist_ok=False)
     rows=json.loads(a.selection.read_text())
     with concurrent.futures.ProcessPoolExecutor(max_workers=4,mp_context=multiprocessing.get_context('spawn')) as executor:
-        results=list(executor.map(check,[(r,a.root,a.base) for r in rows]))
+        results=list(executor.map(check,[(r,a.root,a.base,data_root) for r in rows]))
     (a.root/'report.json').write_text(json.dumps(dict(complete=True,total=len(rows),passed=sum(r['passed'] for r in results),
         rows=results,selection_sha256=sha(a.selection),source_sha256=sha(Path(__file__)),folding_started=False),indent=2)+'\n')
 
