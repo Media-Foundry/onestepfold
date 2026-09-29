@@ -1,0 +1,153 @@
+#!/usr/bin/env python3
+"""Independent saved-pose, geometry, quality, onset and objective audit."""
+import argparse
+import json
+from pathlib import Path
+
+import numpy as np
+import torch
+
+from audit_anchored_geometry import replay
+from audit_local_projection_gt import score
+from fastglycan.anchored_geometry import PoseVariables
+from fastglycan.articulated_output import ArticulatedOutput
+from fastglycan.connection_audit import measure_connections, TOLERANCES
+from fastglycan.hybrid_geometry import GeometryTopology
+from fastglycan.paired_teacher_protocol import sha256, write_json
+from onestepfold.data.gt_materializer import ATOM37_INDEX
+
+
+def audit_connection_window_trial(root):
+    torch.set_num_threads(1)
+    lock = json.loads((root / 'lock.json').read_text()); source = Path(lock['source'])
+    selection = json.loads((source / 'selection.json').read_text())
+    report = json.loads((root / 'report.json').read_text())
+    calibration = json.loads(Path(lock['calibration']).read_text())['windows']
+    assert report['complete'] and len(report['rows']) == report['expected'] == 32
+    assert report['lock_sha256'] == sha256(root / 'lock.json')
+    for path, digest in lock['hashes'].items():
+        assert sha256(Path(path)) == digest
+    outcomes = []
+    for row in report['rows']:
+        index = row['index']; item = selection[index // 4]; group = item['group_id']; packet = source / 'chemistry' / group
+        if not row['success']:
+            chemistry = json.loads((packet / 'report.json').read_text())
+            outcomes.append(dict(index=index, verified=False, source_skipped=not chemistry['passed'],
+                                 reason=row.get('source_failure', row.get('error', 'unknown'))))
+            continue
+        assert row['group_id'] == group and row['seed'] == [12345, 54321][(index // 2) % 2]
+        assert row['arm'] == ['original', 'calibrated'][index % 2]
+        folder = root / 'cases' / f'{index:02d}'
+        for file, key in [('coordinates.npz', 'coordinates_sha256'), ('values.pt', 'values_sha256')]:
+            assert sha256(folder / file) == row[key]
+        data = dict(np.load(folder / 'coordinates.npz')); mapping = dict(np.load(packet / 'mapping.npz'))
+        gt = dict(np.load(source / 'data' / group / 'gt.npz')); inv = dict(np.load(source / 'data' / group / 'inventory.npz'))
+        names, residues = data['atom_names'], data['residue_ids']; ca_mask = names == 'CA'
+        assert np.array_equal(names, inv['atom_name']) and np.array_equal(residues, inv['residue_id'])
+        ai = np.array([ATOM37_INDEX[n] for n in names]); ri = residues - 1
+        assert (gt['atom37_mask'][ri, ai] & gt['residue_mask'][ri]).all()
+        assert np.array_equal(data['target'], gt['atom37_positions'][ri, ai])
+        assert np.array_equal(data['raw'], np.load(source / 'data' / group / f'native_{row["seed"]}.npy'))
+        adapter = ArticulatedOutput(mapping['reference'], names, residues, item['sequence'],
+            json.loads((packet / 'variants.json').read_text())).double()
+        variables = PoseVariables(adapter, torch.tensor(data['raw']))
+        values = torch.load(folder / 'values.pt', map_location='cpu', weights_only=True)
+        assert all(torch.count_nonzero(v) == 0 for v in values['initial'])
+        error = 0.
+        for label, key in [('start', 'initial'), ('final', 'final')]:
+            with torch.no_grad():
+                for parameter, value in zip(variables.variables, values[key], strict=True):
+                    parameter.copy_(value)
+            error = max(error, float(np.max(np.abs(replay(variables) - data[label]))))
+        assert error < 1e-8
+        old = dict(np.load(Path(lock['baseline']) / 'cases' / f'{index // 2 * 2:02d}' / 'coordinates.npz'))
+        assert np.max(np.abs(old['start'] - data['start'])) < 1e-8
+        if row['arm'] == 'original':
+            assert np.max(np.abs(old['final'] - data['final'])) < 1e-8
+        atoms = torch.load(packet / 'native.pt', map_location='cpu', weights_only=False)['atoms']
+        top = GeometryTopology(atoms, mapping['reference']); bonds = top.bonds.numpy(); pairs = top.pairs.numpy()
+        ca, n, c, cb = top.centres.numpy().T
+        anchors = np.array([[int(np.flatnonzero((residues == j) & (names == name))[0])
+            for name in ['N', 'CA', 'C', 'O']] for j in range(1, len(item['sequence']) + 1)])
+        side = np.array([[int(np.flatnonzero((residues == j) & (names == name))[0])
+            for name in ['CB', 'CA', 'CG1' if aa == 'I' else 'OG1', 'CG2']]
+            for j, aa in enumerate(item['sequence'], 1) if aa in 'IT'], dtype=int).reshape(-1, 4)
+        sc, sa, sb, sd = side.T; ref = mapping['reference']
+        side_ref = np.sum(np.cross(ref[sa]-ref[sc], ref[sb]-ref[sc])*(ref[sd]-ref[sc]), axis=1)
+        raw_sign = measure_connections(data['raw'], anchors, item['sequence'])['nearest_omega_sign']
+        gt_sign = measure_connections(data['target'], anchors, item['sequence'])['nearest_omega_sign']
+        onsets = np.array([[calibration['Pro' if aa == 'P' else 'other']['windows'][term]['q95']['pooled']
+                           if raw_sign[j] < 0 else .5 * t for j, aa in enumerate(item['sequence'][1:])]
+                          for term, t in TOLERANCES.items()])
+        if row['arm'] == 'calibrated':
+            np.testing.assert_array_equal(onsets, row['connection_onsets'])
+        assert row['raw_branch_mismatches'] == np.flatnonzero(raw_sign != gt_sign).tolist()
+        metric_error = 0.; objective_error = 0.
+        for label in ['raw', 'local', 'start', 'final']:
+            x = data[label]; saved = row['metrics'][label]
+            per, valid = score(x, data['target'], residues)
+            perca, validca = score(x[ca_mask], data['target'][ca_mask], residues[ca_mask])
+            checks = [(float(per[valid].mean()), saved['all_atom_lddt']), (float(perca[validca].mean()), saved['ca_lddt'])]
+            bond = np.linalg.norm(x[bonds[:, 0]]-x[bonds[:, 1]], axis=1)-top.ideal.numpy()
+            distances = np.linalg.norm(x[pairs[:, 0]]-x[pairs[:, 1]], axis=1)
+            depths = top.radii.numpy()[pairs].sum(-1)-distances
+            volume = np.sum(np.cross(x[n]-x[ca], x[c]-x[ca])*(x[cb]-x[ca]), axis=1)
+            geometry = dict(bond_rmse=float(np.sqrt(np.mean(bond**2))),
+                peptide_mae=float(np.abs(bond[top.peptide.numpy()]).mean()),
+                chirality_fraction=float((volume*top.volumes.numpy() > 0).mean()),
+                severe_pairs=int((distances < 1).sum()), severe_pairs_per_atom=float((distances < 1).sum()/len(x)),
+                max_penetration=float(np.maximum(0, depths).max()))
+            checks.extend((v, saved['geometry'][k]) for k, v in geometry.items())
+            side_ok = bool((np.sum(np.cross(x[sa]-x[sc], x[sb]-x[sc])*(x[sd]-x[sc]), axis=1)*side_ref > 0).all())
+            chirality = geometry['chirality_fraction'] == 1 and side_ok
+            measured = measure_connections(x, anchors, item['sequence'], raw_sign)
+            edges = measured['residuals']
+            checks.extend((float(np.abs(v).max()), saved['connection_max'][k]) for k, v in edges.items())
+            connected = all(np.abs(edges[k]).max() <= t+1e-6 for k, t in TOLERANCES.items())
+            assert saved['branch_mismatches'] == np.flatnonzero(measured['nearest_omega_sign'] != gt_sign).tolist()
+            squared = ((x-data['raw'])**2).sum(-1); hr = float(np.sqrt(squared.mean())); cr = float(np.sqrt(squared[ca_mask].mean()))
+            checks += [(hr, saved['preservation']['heavy_rms']), (cr, saved['preservation']['ca_rms']),
+                       (float(np.sqrt(squared.max())), saved['preservation']['max_displacement'])]
+            budgets = hr <= 2 and cr <= 1
+            accepted = geometry['bond_rmse'] <= .25 and geometry['peptide_mae'] <= .15 and geometry['max_penetration'] <= 2 and geometry['severe_pairs_per_atom'] <= .02 and chirality and connected and budgets
+            assert bool(accepted) == saved['joint_pass'] and connected == saved['connection_pass']
+            assert chirality == saved['all_checked_chirality_pass']
+            assert (geometry['severe_pairs'] == 0 and chirality and budgets) == saved['zero_severe_chirality_budget']
+            metric_error = max(metric_error, max(abs(a-b) for a, b in checks))
+            if label == 'final':
+                q = [v.numpy() for v in values['final']]
+                rotations = np.concatenate([v[:, 3:6] for v in q]); torsions = np.concatenate([v[:, 6:].flatten() for v in q])
+                regular = squared.mean()+.1*(rotations**2).sum(-1).mean()+(.01*(1-np.cos(torsions)).mean() if len(torsions) else 0.)
+                repulsion = np.maximum(depths-1.5, 0).dot(np.maximum(depths-1.5, 0))/len(x)/.25
+                tail = np.maximum(np.sort(depths)[-16:]-1.9, 0)**2/.01
+                budget = max(cr**2-1, 0)**2+max(hr**2-4, 0)**2
+                for name in ['original', 'calibrated']:
+                    connection = sum(np.mean(np.maximum(np.abs(edges[k])/(.5*t)-
+                        (1 if name == 'original' else onsets[i]/(.5*t)), 0)**2)
+                        for i, (k, t) in enumerate(TOLERANCES.items()))
+                    expected = regular+100*(connection+repulsion+budget+tail.mean())
+                    found = row['final_cross_objectives'][name]
+                    assert abs(expected-found) <= 1e-7+1e-10*abs(expected)
+                    objective_error = max(objective_error, abs(expected-found))
+        assert metric_error < 1e-8
+        outcomes.append(dict(index=index, verified=True, pose_max_abs=error, metric_max_abs=metric_error,
+                             objective_max_abs=objective_error))
+    paired = []
+    for i in range(0, 32, 2):
+        left, right = report['rows'][i:i+2]
+        if not (left['success'] and right['success']):
+            paired.append(dict(index=i//2, paired=False)); continue
+        for key in ['chart_sha256', 'shared_objective_sha256', 'raw_sha256']:
+            assert left[key] == right[key]
+        x = dict(np.load(root / 'cases' / f'{i:02d}' / 'coordinates.npz'))
+        y = dict(np.load(root / 'cases' / f'{i+1:02d}' / 'coordinates.npz'))
+        assert all(np.array_equal(x[k], y[k]) for k in ['raw', 'local', 'start', 'target', 'atom_names', 'residue_ids'])
+        paired.append(dict(index=i//2, paired=True))
+    write_json(root / 'audit.json', dict(complete=True, report_sha256=sha256(root / 'report.json'),
+        script_sha256=sha256(Path(__file__)), verified=sum(r['verified'] for r in outcomes),
+        paired=sum(r['paired'] for r in paired), cases=outcomes, pairs=paired))
+
+
+if __name__ == '__main__':
+    p = argparse.ArgumentParser(); p.add_argument('--root', type=Path, required=True)
+    audit_connection_window_trial(p.parse_args().root)

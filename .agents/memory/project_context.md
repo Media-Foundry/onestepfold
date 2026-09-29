@@ -1,3 +1,39 @@
+## 2026-09-30 — Calibrated connection onset intervention completed: partial quality recovery
+
+Previous goal turn64ccaf4b was progress: independent64 experimental calibration.
+Current locked trial mini_connection_window_trial_v1 compared original and
+calibrated trans dead zones with old denominators/curvature, unchanged raw-selected
+branches, chemistry, tailtop16, regularization, zero pose start and3x60LBFGS budget.
+Cis-selected edges retainalloldonsets. Usespooledq95fromcalibration32only,no per-case
+GTsolverinputs. No new inference/training/GPU/independent32reuse/acceptancechange.
+Historical8sources,twoC1/S1noises each:3CR6cov-link skip4slots retained;28solves
+successful,0processfailures. DiamondHill /media/PM982/onestepfold/
+connection_window_trial_v1_20260930 controller205790 terminal;batch/audit/report exit0.
+Two singlethreadCPUworkersFP64,900s ceilings; no livejobs fromthisbatch.
+AA raw .773584 ->originalfinal .753066 ->calibratedfinal .760832(delta+.007766).
+CA raw .848037 ->original .846704 ->calibrated .849866(delta+.003162).
+14/14 predictions and7/7 proteinmeans improvebothqualitymetrics; recovery37.85%
+ofoldraw-relativeAAdrop is descriptive,notallerrorcausalapportionment.
+CalibratedAAstill.012752belowraw. Originaljoint13/14 ->calibrated0/14,oldgatesretained.
+Newoldwindowfails:CN0,angleC12,angleN14,omega14,carbonyl0. Empiricalonsetsnotnewgates.
+Botharms14/14zeroseverepairs,strictcheckedchirality,globalRMSbudgets. Calibrated
+oldabsolute_failures empty14/14;maxpenetration1.90007 vs2.21670old,maxbondRMSE.00480,
+maxpeptideMAE.01194. Notcompletephysicalchemistrycertification.
+Rawciswrong2remain (4A02/12345label34->35,3D8L/54321label32->33). Old3D8L/12345
+introducedanotherbrancherror;newavoidsit,ending3->2errorsbutnotfixingrawcis.
+CA RMSmean.334->.304A,heavy.761->.695A;maxatom9.000->11.045A(3D8L/12345label3NZ).
+Allnew180iterations,old13at180andone39;notconvergence. Medianseconds17.37/18.29,
+mean20.52/22.53;newclosures208-230. PeakRSS~.88GiB,equalcapsnotequalFLOPs.
+14baselineoutputsbitwisehistorical;28NumPypose/metric/cross-objectiveauditpass
+max1.43e-10A/1.67e-15/2.73e-12,14pairedinput/bufferchecks.2local+remoteobjectivetests
+pass.88filecasearchivehashverified. Findings docs/mini_connection_window_findings_2026-09-30.md;
+reports/mini_connection_window_trial_2026-09-30 includesJSON,pairedCSV,PNG/PDF,archive.
+Predeclaredboundedconfirmationscreentrue(bothqualitymeansup,safety-countnotdown),
+NOTdeploymentoroldjointpass. Freezeonsets;nextpriorityboundedC4/S1inputconfirmation,
+notq/weight/iterationsweep. Initializationinteraction,cis/transuncertainty,and
+short/differentiablecorrectionremainseparatework. Originalindependent32rejection
+unchanged,originalgoalstillactive/unfulfilled. Do not reopenbackwarddebugging.
+
 ## 2026-09-30 — Independent experimental connection calibration completed (64 sources)
 
 Previous goal turn3b10f921 was progress: seven-source GT constraint/branch audit.
