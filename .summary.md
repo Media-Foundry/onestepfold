@@ -1,3 +1,45 @@
+## 2026-09-30 — Whole CCD ideal-template local oracle screen positive
+
+Previous goal turn20d0825a was concrete progress: two-length interventionnegative
+andclosed. This turnfollowedwithfull-referencecandidateaudit, NOTanotherjointsolve.
+ActualsameDiamondHillcomponents.cif469MiB/RDKit136MiB;sourcehashesboundtosame
+priorcache. Exportexplicitpdbx_model_Cartn_*_idealfields20canonicalAA,167heavy
+nonleavingatoms;no guessingconformer0/1/noGT-basedconformerchoice. Nativeallrefid2.
+Saved20literalCCDblocks,stereoannotations,metadata,sourcehashes. Idealmetadata
+softwaredetailsnull;do notclaimverifiedCORINAforall. wwPDBdefinitionlinkedindocs.
+All20templateconstructors passnative/idealselfreplaymax1.777e-15A/equiv3.553e-15A,
+21CA/ILE/THRcentre signs matchnative. NotindependentCIPcertification/fullchemistry.
+Reuse64lockedconnectionGT32cal/32held,no fitting. Internalres5589/5405;complete
+sidechains5579/5392;10/13missingresretainednotimputed. Termini excluded. Existing
+ArticulatedOutput appliedtoGTcoordinatesbyresidue: GT-ORACLE localdistortion,
+NOTMiniquality orbestpossible representationfit. Fixedatomnames/nosymmetryor
+residueoptimization. Glyexcludedsidechainmeanonly. Disulfidecontextnotfullgraphsupport.
+Heldprotein-equalmeansofperresRMS:heavy.303859529->.177431773A(delta-.126427757,
+CI[-.137663396,-.115750633]);bone.065172429->.045335976;side.435912549->.255691065.
+Allthree32/32proteinsimprove. Calanalog.303620->.171649,.063526->.043857,
+.438100->.248864,all32improve. ByAAheldheavyD.16808->.17015,G.04969->.05848,
+T.08727->.11143worsen;keepall,nohybridtemplatecherrypick. Leu.95563->.18628,
+largeandname/probe/symmetrysensitive;notclaimphysicalconformererrorthissize.
+HeldbackbonescalarMAE native->ideal:NCA.016828->.013457,CAC.042014->.018166,
+CO.034578->.025718A;NCAC3.2582->2.3964,CACO2.4209->1.1479deg. Worseindividual
+scalarfitthanpreviousmedianparametersbutwholelocalshapeimproves;notheadtohead
+constructormediancomparison. Primarypredeclaredheavy+bone+20checksPASS.
+IndependentNumPyframe/atan2/Rodriguesreplay64sources10971res21942projections,
+maxcoord2.842e-14,metric1.295e-14,bondinvariance2.820e-14;6projectionbootstraps
+andmasks/rolesverified. Sharedgraph/probemetadatainverification,notindependent
+chemicalparser. Idealcoordsre-readfromCIFfields,sourceGT/memberhashesverified.
+4existingconstructor/geometrytests pass.64npzarchived5.45MB withmemberhashes;
+rawcoordsretainedlocalbutonlyarchiveingit. Exportremoteccd_ideal_templates_v1_20260930,
+allprocessescompleted/noGPU/model/trainingorreservedind32use.
+Reports/mini_ccd_ideal_template_2026-09-30;docs/mini_ccd_ideal_template_findings_2026-09-30.md.
+ThisauditCLOSEDpositive. NEXT:oneboundedWHOLE-idealoutput-referenceinterventionon
+existingC4devinputs;nativeinput,rawCApose,objective,budget/gatesunchanged;termini
+explicitretainnativeunlessseparatelysupported. Do notpickD/G/Toldtemplatesbasedon
+heldresults orcombinewithfittedstart/otherweights. CompareinitialandfinalGTquality,
+chemistry,shape;localGToraclebenefitdoesnotguaranteeforwardbenefit. Oldbaseline
+remainsdefaultuntilactualtest. No deployment/differentiablesolver/designclaim;
+originalgoalactive/unfulfilled andind32rejectionunchanged. No runningjobs.
+
 ## 2026-09-30 — Output-only CA-C/C-O reference intervention closed negative
 
 Previous goal turn abe62a7d was progress: isolated scalar calibration. This turn
