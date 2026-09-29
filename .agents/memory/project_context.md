@@ -1,3 +1,50 @@
+## 2026-09-30 — Frozen calibrated objective confirms partial quality recovery on C4/S1
+
+Previous goal turn was no progress toward method development: it rechecked the
+already completed independent32 source extension. This turn made concrete progress:
+implemented/ran/audited bounded C4/S1 confirmation of9f1393cd, no new tuning/training.
+Same8 development sources/two seeds12345,54321;3CR6 covalent chemistry skip retained.
+7 MI250 GCDs generated14 native ESM2/Mini FP32 C4/S1 outputs, no MC dropout,
+identity-key noise,identity augmentation,stableEuler,[2560,0],gamma0=0,lambda=eta1.
+Four conditioning cycles shared perprotein;two1-NFEpredictions plusoneexactreplay.
+7/7 replaysbitwise,counts4/3,weightSHA before/afterunchanged.7workers55-56s each
+including~49s load;peak11.3GiB. Notpurelatencybenchmark or independentfullmodelreplay.
+DiamondHill /media/PM982/onestepfold/c4_connection_confirmation_v1_20260930:
+pipeline211226/rawcontroller211230/CPUcontroller212025 all terminal;pipelineexit0,
+28successful repairs,4sourceskips,0processfailures. Do not restart these handles.
+Same chemistry,calibrationq95,rawselectedbranches,zerochart,2CPUFP64workers,3x60LBFGS,
+900s ceiling. All28runsto180limit,notconvergence. NoGTmodel/objectiveinputs.
+Raw/original/calibratedAA .825157/.802069/.812698;CA .900142/.896529/.900591.
+PairedAA+.010629,CA+.004062;14/14predictions and7/7proteinmeans bothpositive.
+NewAAstillraw-.012459;newCAraw+.000449. Botharms14/14zeroseverepairs,strictchecked
+CA+ILE/THRchirality,RMSbudget;raw28severepairs,9/14strictchirality. Oldjoint14/14
+->0/14;newoldconnectionfails CN0,angleC10,angleN14,omega14,carbonyl0. Empirical
+onsetsnotnewgates. Bothnew/oldabsolute_failures empty. Maxpen1.86482->1.79503.
+Rawbranchmismatches2both4B9Pindex121(P122-P123)persist inbotharms;posthocread
+confirmsraw/finalcis-like(+1),GTtrans-like(-1). NoGTbranchreplacement. LocalinitAA.802942;
+calibratedrecoverspartofinitloss. MeanCArms.28252->.22930A,heavy.62511->.52280A;
+maxatom4.71073->4.61868A. Median solve17.65/19.71s,means20.56/23.16;
+closures194-211/218-232;equaliterationsnotequalcompute. PeakRSS~.88/.85GiB.
+28NumPypose/metric/objectiveaudits pass(max2.72e-10A/8.33e-16/5.12e-13),14paired.
+Updatedaudit also passes old28archive innewshadowdir,oldreportsuntouched. C4hasno
+historicalrepairbaseline:explicitNonecontract;do notcount0replaysasfailedchecks.
+Boundeddevelopmentscreentrue,NOTdeployment,independentgeneralization,differentiable
+solverorjointacceptance. Originalindependent32rejection staysfrozen;notreused/tuned.
+Findings docs/mini_c4_connection_findings_2026-09-30.md;overallfrontupdated;
+reports/mini_c4_connection_confirmation_2026-09-30 includesfullreport,audit,locks,
+summary,pairedCSV,PNG/PDF andplotcode. Raw/parameterarchive118members3004024bytes
+createdremotely,thenSSHtemporarilytimedout(directandHPC3jump);SCPsession69089
+terminal255 connectionreset. Connectionrecovered,singleSSHtartransfercollectedall
+remainingfiles. Archiveoverall+118memberSHAsverifiedlocally;collectioncomplete.
+Noexperimentrestart. collection_status.json recordsresolvedtransfer.
+Post-exit auxiliarypssubstring scanner matcheditsownshell andoverwrote remote
+launch.json/pipeline.pid with214965/214966;localcollectedlaunch retainsverified
+211226/211230,CPU212025. Noneareliveexperiments;neverrestart214965. See
+launcher_note.json;badremotemetadata preserved andverifiedterminalIDsrestored.
+Next boundmethoddecision: preserveaccuratelocal
+fit withfrozencalibratedobjective,whilebranchselectionremainsseparateproblem. Do not
+expandtargetsortrainsolverdistillationyet; no newFD/backwarddebugging. Goalactive.
+
 ## 2026-09-30 — Calibrated connection onset intervention completed: partial quality recovery
 
 Previous goal turn64ccaf4b was progress: independent64 experimental calibration.

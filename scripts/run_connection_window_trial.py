@@ -81,10 +81,14 @@ def run_window_case(root, index):
         adapter = ArticulatedOutput(mapping['reference'], names, residues, item['sequence'],
             json.loads((packet / 'variants.json').read_text())).double()
         variables = PoseVariables(adapter, raw); start = variables().detach().clone()
-        previous = Path(lock['baseline']) / 'cases' / f'{index // 2 * 2:02d}'
-        old = dict(np.load(previous / 'coordinates.npz'))
-        assert np.array_equal(raw_array, old['raw'])
-        assert np.max(np.abs(start.numpy() - old['start'])) < 1e-8
+        old = None
+        if lock['baseline'] is not None:
+            previous = Path(lock['baseline']) / 'cases' / f'{index // 2 * 2:02d}'
+            old = dict(np.load(previous / 'coordinates.npz'))
+            assert np.array_equal(raw_array, old['raw'])
+            assert np.max(np.abs(start.numpy() - old['start'])) < 1e-8
+        else:
+            assert lock.get('prediction_contract') == 'c4_s1_confirmation_v1'
         atoms = torch.load(packet / 'native.pt', map_location='cpu', weights_only=False)['atoms']
         topology = GeometryTopology(atoms, mapping['reference'])
         anchors = np.array([[int(np.flatnonzero((residues == j) & (names == name))[0])
@@ -97,7 +101,7 @@ def run_window_case(root, index):
             assert torch.equal(value, dict(objective.named_buffers())[name])
         result.update(chart_sha256=buffer_digest(variables), objective_sha256=buffer_digest(objective),
             shared_objective_sha256=buffer_digest(base), raw_sha256=sha256(source / 'data' / group / f'native_{seed}.npy'),
-            start_replay_max_abs=float(np.max(np.abs(start.numpy() - old['start']))))
+            start_replay_max_abs=float(np.max(np.abs(start.numpy() - old['start']))) if old is not None else None)
         with torch.no_grad():
             loss, terms = objective(start, variables.variables, 1.)
         result['start_objective'] = dict(loss=float(loss), terms={k: float(v) for k, v in terms.items()})
@@ -111,7 +115,7 @@ def run_window_case(root, index):
         result.update(solver_seconds=time.monotonic()-begin, history=history)
         assert buffer_digest(variables) == result['chart_sha256']
         assert buffer_digest(objective) == result['objective_sha256']
-        if arm == 'original':
+        if arm == 'original' and old is not None:
             result['historical_baseline_max_abs'] = float(np.max(np.abs(final.numpy() - old['final'])))
             result['historical_baseline_bitwise'] = np.array_equal(final.numpy(), old['final'])
             assert result['historical_baseline_max_abs'] < 1e-8

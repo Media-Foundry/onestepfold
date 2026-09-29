@@ -1,0 +1,10 @@
+{
+  "verified_pipeline_pid": 211226,
+  "verified_raw_controller_pid": 211230,
+  "verified_cpu_controller_pid": 212025,
+  "all_experiment_processes_terminal": true,
+  "evidence": "Direct ps snapshots while running; raw_controller.json/controller.json finished; pipeline_exit.json returncode0",
+  "remote_metadata_issue": "After pipeline completion, an auxiliary ps substring scan matched its own shell and overwrote remote launch.json/pipeline.pid with214965/214966. Local launch.json was collected before that overwrite and retains verified IDs.",
+  "pending": null,
+  "resolved": "Remote bad metadata preserved as launch_scanner_false_match.json and pipeline_scanner_false_match.pid; verified terminal process IDs restored."
+}

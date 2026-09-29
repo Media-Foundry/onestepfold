@@ -60,10 +60,14 @@ def audit_connection_window_trial(root):
                     parameter.copy_(value)
             error = max(error, float(np.max(np.abs(replay(variables) - data[label]))))
         assert error < 1e-8
-        old = dict(np.load(Path(lock['baseline']) / 'cases' / f'{index // 2 * 2:02d}' / 'coordinates.npz'))
-        assert np.max(np.abs(old['start'] - data['start'])) < 1e-8
-        if row['arm'] == 'original':
-            assert np.max(np.abs(old['final'] - data['final'])) < 1e-8
+        if lock['baseline'] is not None:
+            old = dict(np.load(Path(lock['baseline']) / 'cases' / f'{index // 2 * 2:02d}' / 'coordinates.npz'))
+            assert np.max(np.abs(old['start'] - data['start'])) < 1e-8
+            if row['arm'] == 'original':
+                assert np.max(np.abs(old['final'] - data['final'])) < 1e-8
+        else:
+            assert lock.get('prediction_contract') == 'c4_s1_confirmation_v1'
+            assert row['start_replay_max_abs'] is None
         atoms = torch.load(packet / 'native.pt', map_location='cpu', weights_only=False)['atoms']
         top = GeometryTopology(atoms, mapping['reference']); bonds = top.bonds.numpy(); pairs = top.pairs.numpy()
         ca, n, c, cb = top.centres.numpy().T
