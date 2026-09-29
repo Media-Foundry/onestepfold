@@ -38,6 +38,18 @@ def preservation(raw, repaired, ca):
     return result
 
 
+def force_diagnostics(forces):
+    """Residual forces in kJ/mol/nm; neither diagnostic is a termination code."""
+    forces = np.asarray(forces, dtype=np.float64)
+    if forces.ndim != 2 or forces.shape[1] != 3 or not len(forces) or not np.isfinite(forces).all():
+        raise ValueError('invalid residual forces')
+    vector = float(np.sqrt(np.mean(np.sum(forces**2, axis=-1))))
+    component = float(np.sqrt(np.mean(forces**2)))
+    return dict(force_rms_vector=vector, force_vector_rms_le_10=vector <= 10.,
+                force_rms_component=component, force_component_rms_le_10=component <= 10.,
+                force_units='kJ/mol/nm')
+
+
 def repair_coordinates(raw, names, residues, chains, sequence, bonds):
     """Return original-heavy Å coordinates, full auxiliary structure and audit.
 
@@ -116,14 +128,14 @@ def repair_coordinates(raw, names, residues, chains, sequence, bonds):
     full = np.asarray(state.getPositions(asNumpy=True).value_in_unit(unit.angstrom))
     energy = state.getPotentialEnergy().value_in_unit(unit.kilojoule_per_mole)
     forces = np.asarray(state.getForces(asNumpy=True).value_in_unit(unit.kilojoule_per_mole/unit.nanometer))
-    rms = float(np.sqrt(np.mean(np.sum(forces**2, axis=-1))))
+    diagnostics = force_diagnostics(forces)
     if not np.isfinite(full).all() or not np.isfinite(energy):
         raise ValueError('nonfinite minimization output')
     pdb = io.StringIO()
     app.PDBFile.writeFile(modeller.topology, state.getPositions(), pdb, keepIds=True)
     return full[ix], full, pdb.getvalue(), dict(energy_before=before, energy_after=energy,
-        force_rms=rms, force_tolerance_met=rms <= 10.,
-        convergence_note='force criterion checked; maximum 2000 iterations, no retry',
+        **diagnostics,
+        convergence_note='post-hoc residual force diagnostics only; termination reason and iteration count not recorded; maximum 2000 iterations, no retry',
         original_graph_exact=True, original_positions_restored=True,
         added_atoms=[dict(identity=actual[a.index], element=a.element.symbol) for a in added],
         protonation_variants=variants, original_indices=ix.tolist())

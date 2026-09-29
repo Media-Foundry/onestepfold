@@ -1,3 +1,15 @@
+## 2026-09-29 — Close raw-gradient plus generic repair version
+
+User review accepted: current frozen Mini + soft local ranking + hard mutation +
+restrained force-field repair has no established joint design utility. Numerical
+AD evidence remains positive; do not reopen backward debugging or infer Mini/one-step
+impossibility. Stop old candidates/repair tuning/LoRA; next method must first define
+chemically constrained output with matching gradients and preserved pretrained prior.
+Old99 outputs are regression cases, not clean teachers or independent validation.
+Clarify future audit fields: vector/component force RMS separately, no termination
+claim. Reader accepts old archived names; original locks/results remain unchanged.
+No new experiment or remote mutation. Overall report section9 records closure.
+
 ## 2026-09-29 — Final collision/repair batch collected; overall report
 
 User requested current status plus overall Markdown report and push. No new model

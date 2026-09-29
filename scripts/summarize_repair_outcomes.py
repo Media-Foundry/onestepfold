@@ -39,7 +39,12 @@ def main():
       raw_absolute_failures=absolute_failures(old['raw']['geometry']),absolute_failures=absolute_failures(old['repaired']['geometry']),
       preservation=old['preservation'],task_change_from_own_raw=old['repaired']['task']-old['raw']['task'],chirality=chi,
       collision_pairs=dict(raw=len(pairs['raw']),repaired=len(pairs['repaired']),shared=len(pairs['raw']&pairs['repaired'])),
-      force_rms_vector=old['audit']['force_rms'],force_diagnostic_met=old['audit']['force_tolerance_met'],seconds=old['seconds'])
+      force_rms_vector=(old['audit']['force_rms_vector'] if 'force_rms_vector' in old['audit'] else old['audit']['force_rms']),
+      force_diagnostic_met=(old['audit']['force_vector_rms_le_10'] if 'force_vector_rms_le_10' in old['audit'] else old['audit']['force_tolerance_met']),seconds=old['seconds'])
+   # Legacy archives stored vector RMS only. Preserve its diagnostic meaning.
+   row['force_rms_component']=float(old['audit'].get('force_rms_component',row['force_rms_vector']/np.sqrt(3)))
+   row['force_component_rms_le_10']=row['force_rms_component']<=10.
+   row['force_component_source']='recorded' if 'force_rms_component' in old['audit'] else 'derived_from_archived_vector_rms'
   else:row['error']=old.get('error')
   r['cases'].append(row)
  ok=[x for x in r['cases'] if x['success']]
