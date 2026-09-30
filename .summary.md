@@ -1,3 +1,62 @@
+## 2026-09-30 — Native diffusion learning cache audited; two-arm pilot RUNNING
+
+Previous e3417907 was PROGRESS: isolated 128 TRAIN +32 VALIDATION sources ready.
+This turn locks the actual learning objective, completes native caches, and starts
+real adapter training. Goal remains ACTIVE/UNFULFILLED; no deployment or efficacy claim.
+
+DiamondHill cache: /media/PM982/onestepfold/diffusion_learning_cache_v1_20260930.
+8 GCD workers (277662–277669), controller277655, all exit0/proc terminal;141.204s.
+160 C4 conditioning, TRAIN-only two noises600001/600011 ×S1/S2=512 coordinates.
+Every TRAIN saved/reloaded conditioning S1 exactly replays (128/128). PF640/diff896
+including replays. VALIDATION32 conditioning only: no coordinates/teacher/loss labels.
+Cache28,638,960,976bytes, maxallocated42.983GiB. CPU full artifact/hash/mask/label audit
+complete63.843s:268933 observed TRAIN atoms,560 missing excluded before GT arithmetic;
+all predicted atoms still enter geometry. Cache audit does not rerun GPU replay.
+820-member12,712,768-byte evidence archive SHA256
+8c9b1ea75c66c0a4fe4701aadb17830b60935dbb377f0a41b48fda0dc912ff92, all members verified.
+Remote 27GiB cache remains there; Git stores metadata,512 coords,code,protocol/hashes.
+
+NEW bounded pilot protocol docs/mini_diffusion_learning_pilot_v1.md:
+Original public Mini weights, frozen ESM2/PF4, native FP32 C4/S1/K1; rank8 835584
+adapter params, same zero-up seed20260930. GT versus identical GT+frozenS2 auxiliary.
+A=observed aligned MSE,D=masked smooth-lDDT,B=observed true bond length MSE (equal
+intra/peptide means),C=CA+I/T reference-sign volume penalty,R=allinventory mean
+repulsion plus top16tail,T=fullinventory alignedS2 MSE. L=A/100+D+10B+C+.1R;
+secondarm adds .25T/100. Explicit pilot weights, NOT calibrated/equalgradient/fitto
+1U07. No old ideal omega/window penalty or raw1A repair constraint. True clashes,
+stereo errors and GT loss are not waived. S2 is synthetic and may have chemistry
+errors. KDTree4A query includes all positive repulsion terms; fixed allowed-pair
+exclusions graphdistance<=3; top16 denominator reflects full allowed set. 9 focused
+loss/mask tests passed. No sidechain symmetry assignment yet.
+
+Each arm:128proteins×16epochs=2048 exposures, accumulation4=512 AdamW updates.
+SHA'diffusion-pilot-v1:epoch:<1..16>:<group>' order; alternatingtwo noiseepochs.
+lr32update warmup to1e-5 then cosine1e-6 at512;decay0,clip1. Terminal512 only;
+checkpoints every32 for recovery, no validation-based selection/extra epochs.
+Both arms FROM ORIGINAL weights, NOT the one-update1U07 checkpoint.
+Training remote /media/PM982/onestepfold/diffusion_learning_pilot_v1_20260930.
+Controller280268, GT worker280275 GCD0, GT+S2 worker280276 GCD1 RUNNING.
+Training lockSHA d1bbac9f025fdf5059405b70df2022658b6320864c4ec7f1cfed1a9a726911de.
+Observed73/78 updates after~134s, finite losses/gradients, initialadapterS1 exact
+cache parity;peak~5.31GiB. This is a snapshot, query execution.json and arm/report.json
+for current state. Do not duplicate jobs or overwrite immutable running code.
+Native baseparam equality audited at terminal. No validation has been evaluated.
+
+New code: adapter_supervision.py, cache_diffusion_learning.py,
+audit_diffusion_learning_cache.py,train_diffusion_learning_pilot.py and mask/clashtest.
+Docs mini_diffusion_learning_status_2026-09-30.md and overview updated.
+Evidence reports/mini_diffusion_learning_2026-09-30/cache +training_launch.
+Local helper/tmp/collect_adapter_cache_remote.py;launcher/tmp/launch_adapter_training.py.
+All formal imports require PROTENIX_ROOT_DIR=.../protenix_stage0_pkg/v1_1/runtime,
+LAYERNORM_TYPE=torch, explicit fold Python and task code PYTHONPATH.
+
+NEXT: collect both terminal512 checkpoints/history, verify matched exposures/base
+frozen/reload+merge replay; THEN evaluate32VALIDATION at600029/600043 comparingnative
+S1,S2 and twoS1students with experimentalGT masks, fullgeometry and evaluationv2.
+Need implement terminal evaluation/audit: no evaluation script exists yet. Do not
+pick checkpoints, evaluate old protected32, alter windows/weights, reopenFD/Y38,
+or call this a usable design oracle. Training and verification remain unfinished.
+
 ## 2026-09-30 — Isolated native diffusion pilot data128TRAIN+32VALIDATION ready
 
 Previous7c6979e8PROGRESS: nativeadapteroneupdate/mergepathpassed; nottrainingefficacy.
