@@ -5,6 +5,44 @@ work remains deferred; ESMC is a later matched conditioner-interface comparison.
 The scientific protocol is [folding scaling cycle v1](mini_folding_scaling_cycle_v1.md).
 No new held-out model-quality result is available at launch.
 
+## Terminal evaluation now queued
+
+The fixed-terminal pipeline is implemented and submitted under `acd_u` in a
+separate frozen-code root. Training is still running: at the archived observation,
+TRAIN128 had407/2048 updates and expanded423 had300/2048, with no reported errors.
+These counters do not establish quality improvement.
+
+| Job | Work | Dependency |
+|---|---|---|
+|662313|bind audited checkpoints and evaluation lock|audit662294|
+|662314|first of eight evaluation shards|prepare662313|
+|662315–662321|remaining seven evaluation shards|first shard662314|
+|662322|scheduler/coverage audit, GT scoring and cohort summaries|all eight shards|
+
+All evaluation jobs are currently dependency-pending, not completed predictions.
+Any failed dependency cancels downstream work. GPU workers use one H100 allocation
+each; preparation/scoring reserve a hidden unused GPU as required by `acd_u`.
+CPU scoring has12 single-thread workers. No active training code or scientific
+budget was changed.
+
+Compare publicS1/S2, retained512 and both fixed2048 terminals on455 proteins with
+two assigned noises:4550 outputs. Reuse1692 audited TRAIN reference outputs;
+2922 new prediction NFEs plus80 engineering-probe NFEs. OriginalTRAIN128,
+addedTRAIN295 and newVAL32 are summarized separately with protein-level bootstrap
+and paired tails; no best-of-noise. Experimental GT scoring has an independent
+dense-distance check. Length and assembly subsets remain descriptive.
+
+Three focused tests pass, including missing/duplicate-record rejection and an
+adversarial two-noise case that must not become best-of-two or joint chemistry
+success. The continuation loader still enforces exact terminal budget, parent,
+origin lock and parameter scope before copying tensors. Actual GPU checkpoint
+replay for the new terminals awaits completion of training.
+
+Protocol: [fixed terminal evaluation](mini_folding_terminal_evaluation_v1.md).
+Remote: `/data/user/shuang886/Folding/folding_scale_evaluation_v1_20260930`.
+Submission, scheduler observation, deployed hashes and launcher:
+`reports/mini_folding_evaluation_2026-09-30/`.
+
 ## Cache audit completed
 
 Eight workers completed successfully. CPU audit662257 completed in7m11s:

@@ -1,3 +1,50 @@
+## 2026-09-30 — Fixed-terminal folding evaluation implemented and queued
+
+Continue folding FIRST: no BindCraft/target request, mutation search, repair
+matrix or backward investigation. ESMC remains a later matched interface trial;
+this comparison retains ESM2, C4/S1/K1 and the locked TRAIN128/TRAIN423 budgets.
+Objective remains active and unfinished. Previous turn was PROGRESS (training
+launched); this turn is PROGRESS (terminal pipeline implemented and submitted).
+
+Training662290/662291 still RUNNING; archived observation407/300 of2048 updates,
+1629/1200 exposures, finite progress/no reported errors. Audit662294 waits for both.
+No new terminal quality conclusion. Do not restart jobs because waiting takes time.
+
+New root /data/user/shuang886/Folding/folding_scale_evaluation_v1_20260930.
+Separate private code copied from training snapshot; live training unmodified.
+Queue: prepare662313 afteraudit662294; worker0=662314 afterprepare; workers1–7
+662315–662321 afterworker0; scoring662322 afterall8. acd_u, kill-on-invalid-dep,
+no requeue. Prepare/scoring reserve hidden unusedGPU; scorer12singlethreadCPUs.
+All evaluation currently pending. If failure, preserve frozen logs/root and
+diagnose explicitly; no silent partial completion/filter/overwrite/resume.
+
+Five models: publicS1/S2, retained512, train128/expanded2048 terminals. All455×2×5
+=4550outputs.1692TRAINnativeoutputs reused;2922newpredictionNFEs+80probeNFEs.
+Cache conditioning only: timing is diffusion-only, NOT fullESM/PF latency.
+newVAL32 seeds810013/810029; TRAIN600001/600011. Old64VAL excluded. Only2048
+checkpoints accepted; no intermediate/best checkpoint/noise selection.
+prepare binds trainingaudit/parent/terminalsha/source/GT/cache/code/calibration.
+Existing evaluation worker now supports strict continuation schema and retained
+alias/originlock; checks public/reload parity, excluded weights and calls.
+SchedulerCOMPLETED0:0 and complete worker coverage must agree before scoring.
+Existing GT scorer retains independent dense AA/CA distance verification.
+
+New folding_evaluation helper partitions original128/added295/newVAL32, rejects
+missing/duplicate/unexpected records, averages noises perprotein beforebootstrap,
+reports paired tails/new chemistry damage and descriptive length/assembly strata.
+Three focused tests pass (schedule/loader plus adversarial no-best-of/coverage).
+Newterminal GPU replay not yet run because checkpoints do not yet exist.
+No deployment/chemistry/interface success inferred from implementation tests.
+
+Docs mini_folding_terminal_evaluation_v1.md and training/overall status updated.
+Reports mini_folding_evaluation_2026-09-30 contains jobs, observations andlauncher.
+GitNexus evaluation worker impact LOW,1directFilecaller/0processes. New symbols
+UNKNOWN confirmed absent by literal search. Full graph change analysis beforecommit;
+unrelated dirty work preserved. Next collect training/audit and the automatic
+evaluation, inspect original/additional TRAIN and freshVAL separately, then choose
+one bounded folding improvement based on precision/tails/chemistry/cost. Do not
+declare generalization improvement or select a checkpoint from TRAIN curves.
+
 ## 2026-09-30 — Folding TRAIN128/TRAIN423 continuation launched on HPC3
 
 Active user request: continue C4/S1 folding FIRST; BindCraft/interface remains

@@ -2,6 +2,7 @@
 """Terminal-only native S1/S2 and merged-adapter comparison from frozen caches."""
 import argparse
 import copy
+from functools import partial
 import json
 import os
 from pathlib import Path
@@ -78,13 +79,22 @@ def run_diffusion_evaluation(root,index):
                 student=copy.deepcopy(model)
                 checkpoint=lock['checkpoints'][arm];assert sha256(Path(checkpoint['path']))==checkpoint['sha256']
                 state=torch.load(checkpoint['path'],map_location='cpu',weights_only=False)
-                if state.get('schema')=='native_dense_diffusion_v1':
-                    assert state['lock_sha256']==lock['training_lock_sha256']
+                if state.get('schema') in ('native_dense_diffusion_v1','folding_scale_continuation_v1'):
+                    expected_lock=lock.get('checkpoint_training_locks',{}).get(arm,lock.get('training_lock_sha256'))
+                    assert state['lock_sha256']==expected_lock
+                    checkpoint_arm=lock.get('checkpoint_arms',{}).get(arm,arm)
+                    if state['schema']=='folding_scale_continuation_v1':
+                        from fastglycan.folding_scale import load_folding_scale_terminal
+                        loader=partial(load_folding_scale_terminal,arm=checkpoint_arm,
+                            expected_names=lock['selected_names'][arm],lock_sha256=expected_lock)
+                    else:
+                        loader=partial(load_dense_diffusion_checkpoint,arm=checkpoint_arm,
+                            expected_names=lock['selected_names'][arm])
                     zero=diffusion_from_conditioning(student,features,noise.clone(),conditioning,steps=1).reshape(-1,3)
                     assert torch.equal(zero,native)
-                    load_dense_diffusion_checkpoint(student,state,arm=arm,expected_names=lock['selected_names'][arm])
+                    loader(student,state)
                     unmerged=diffusion_from_conditioning(student,features,noise.clone(),conditioning,steps=1).reshape(-1,3)
-                    load_dense_diffusion_checkpoint(student,state,arm=arm,expected_names=lock['selected_names'][arm])
+                    loader(student,state)
                     merged=diffusion_from_conditioning(student,features,noise.clone(),conditioning,steps=1).reshape(-1,3)
                     assert all(torch.equal(p,model.get_parameter(n)) for n,p in student.named_parameters() if n not in state['trained'])
                     probe_results[arm]=dict(public_parity=True,native_reload_parity=True,excluded_weights_unchanged=True)
