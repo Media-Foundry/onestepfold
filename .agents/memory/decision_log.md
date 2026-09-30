@@ -1,3 +1,60 @@
+## 2026-09-30 — Coordinate-zero matched candidate implemented and running
+
+Previous turn PROGRESS(finalscalingreport/protocol). Currentturn PROGRESS: implemented
+purecontractguard+thin orchestration aroundUNCHANGEDfrozen run_folding_training;
+3focusedtests pass(test_folding_ablation,test_folding_scale). ActualGPUpreflight
+passesandonecandidate trainingRUNNING. Goalactive/unfulfilled,nonewqualityclaim.
+
+HPC3 root /data/user/shuang886/Folding/folding_coordinate_ablation_v1_20260930.
+Jobs662468prepareCOMPLETED0:0 6s;662469preflightCOMPLETED0:0 51s;
+662470trainRUNNING;662471terminalauditafteroktrain. acd_u1H100,4CPU96G,3hcap,
+no-requeue/kill-invalid-dep. CPUprepare/auditreservehiddenunusedGPU. Onlyonearm.
+LockSHA81ee94ffddaacf4d9881d01d4e2b98d308ee151d20a0838e520aa1c815f684ea.
+
+All172originalcodefilescopiedbyteidentical. Guardallowsonlyexpandedmembership/
+orderrestriction(noalteration),coordinateweight.01→0,administrativecode/protocol
+metadata. Testsrejectchangedteacherweight,LR,scope,updates,seeds,membership,extra/
+missingfields;deepcopydoesnotmutatecontrol. Same retainedparent7fc018...,NOT
+expandedterminal. Same423groups8192records2048updates/optimizerreset/schedule/
+accum4/clip1/cachedC4/S1/K1/nativeFP32/288tensors. Otherweightsbond1.505408125612628,
+chirality1,clash.0006600251156855778,smooth1,tempunchanged,teacher.025476389066842815.
+Coordinatepartstillcomputed/logged; GTlocaldistance/bondsupervisionretained,
+S2syntheticauxiliarynotGT. Internalcheckpointarmremains'expanded',schema
+folding_scale_continuation_v1;semanticnewmodelnamecoordinate_zero,bindNEWlock.
+
+Newsrc fastglycan/folding_ablation.py, scripttrain_folding_coordinate_ablation.py,
+testtest_folding_ablation.py. Wrappermodesprepare/preflight/train/audit.
+Preflight-onlylossobservercallsoriginallosswithgraphandagainunder no_grad,
+verifiesallunweightedtermsidentical, oldtotalmatchesoriginalpreflight anddifference
+isremovedcoordinate. Returnsunmodifiedterms;restoresfunctionafterpreflight.
+Separatetrainprocess usesoriginalunmodifiedloss/trainer. No productionpatch.
+52res:oldloss.18591772888520242,new.14555458602598154,removed.04036314285922087;
+968res:old.35900473739163946,new.2884665082588983,removed.07053822913274115.
+Bothparentoutputsbitwisematcharchivedretainedpredictions,all288gradfinite/nonzero,
+no updates;norms2.05126695/1.92722182;peak16,763,567,616B. Parentfingerprintmatches.
+
+Startupindependentlyverifiesall64initialpredictionhashesbitwisematcholdexpanded
+control. First4actualtrainingexposures(beforefirstupdate)haveidenticalunweighted
+terms,orderedinputs/noise andtotal-lossdifferenceexactto1e-8+1e-6rtol. Confirms
+intendedsingleinterventioninrealtraining. Newsourcehashesverifiedlocalvsdeployed:
+wrapperbc17eabe81bf9dd9f5352de4c69b31bacc58563a46b20a068452731a4822eaa3;
+module46f454d9da933dff826dfb34204ab8c5af821d57fe56be0dc51415f94e7d1ead.
+
+Docs mini_folding_coordinate_ablation_status_2026-09-30.md, reports sameprefix
+containprepare/objective_preflight/preflight/release/submission/batch/startup.
+Transferredpreflight/objectivefilesSHAagreewithrelease. Overall/findingslinkstartup.
+Scientificprotocolfileunchangedafterfreeze. Privateactivecode MUSTNOTedit.
+
+NEXT: implementfixedterminalevaluationwhiletrainingruns,thenqueueafter662471.
+Onlynewcandidate910predictionNFEs; exactengineeringcountstillneedslockingbefore
+submission. ReuseauditedoldnativeS1/S2/retained/expanded455*2references from
+folding_scale_evaluation_v1_20260930. Now-observedVAL32isDEVELOPMENT,notfresh;
+laterfreshconfirmationrequired. No newcontroltraining, no noiseseed/weightgrid,
+ESMCswitch/repair/design. Preflight6NFEs;training8448including4*64TRAINprobes.
+The newterminalauditcheckslockedorders/LR/lossweightedvalues/optimizer/scope,
+initial64controlparity,256probehashes/finiteoutputs andterminalmetadata. Execution
+auditdoesnotreplaceindependentGTqualityscoring. No restartorpartialoverwrite.
+
 ## 2026-09-30 — Full scaling comparison complete; no incumbent replacement
 
 Previous turn PROGRESS(trainingaudit/evalstart). Currentturn PROGRESS: scoring662322

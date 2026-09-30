@@ -1,0 +1,44 @@
+{
+  "observed_unix": 1790766656.408732,
+  "scheduler": "662468|COMPLETED|0:0|00:00:06\n662469|COMPLETED|0:0|00:00:51\n662470|RUNNING|0:0|00:02:09\n662471|PENDING|0:0|00:00:00\n",
+  "initial64_coordinates_bitwise_match": true,
+  "first4_unweighted_terms_exact": true,
+  "first4_loss_change_matches_removed_coordinate": true,
+  "lock_sha256": "81ee94ffddaacf4d9881d01d4e2b98d308ee151d20a0838e520aa1c815f684ea",
+  "weights": {
+    "bond": 1.505408125612628,
+    "chirality": 1.0,
+    "clash": 0.0006600251156855778,
+    "coordinate": 0.0,
+    "smooth_lddt": 1.0,
+    "teacher": 0.025476389066842815
+  },
+  "original_code_identical_files": 172,
+  "preflight_cases": [
+    {
+      "gradient_norm": 2.0512669497404006,
+      "group_id": "1f74f58eabb09ab681f1840aefacb1988f6f1d2b60279adaf17929833d683fdb",
+      "loss": 0.14555458602598154,
+      "parameters_unchanged": true,
+      "peak_gpu_bytes": 5531062784,
+      "replay_exact": true,
+      "selected_nonzero_gradients": 288
+    },
+    {
+      "gradient_norm": 1.9272218184663383,
+      "group_id": "2bc85e3e9020f945ab6d25997a6948dddfdc58dd394bc6eca5bd0a0582314075",
+      "loss": 0.2884665082588983,
+      "parameters_unchanged": true,
+      "peak_gpu_bytes": 16763567616,
+      "replay_exact": true,
+      "selected_nonzero_gradients": 288
+    }
+  ],
+  "sources": "/data/user/shuang886/Folding/folding_source_extension_v1_20260930",
+  "cache": "/data/user/shuang886/Folding/folding_scale_cache_v1_20260930",
+  "scope": "Startup execution only; no trained quality result",
+  "script_hashes": {
+    "/data/user/shuang886/Folding/folding_coordinate_ablation_v1_20260930/code/scripts/train_folding_coordinate_ablation.py": "bc17eabe81bf9dd9f5352de4c69b31bacc58563a46b20a068452731a4822eaa3",
+    "/data/user/shuang886/Folding/folding_coordinate_ablation_v1_20260930/code/src/fastglycan/folding_ablation.py": "46f454d9da933dff826dfb34204ab8c5af821d57fe56be0dc51415f94e7d1ead"
+  }
+}

@@ -29,7 +29,8 @@
 Cα没有建立改善。TRAIN128则训练精度提高、验证精度下降。两臂相对保留模型均
 新增6份严重碰撞，故不升级默认模型，也不称为已补齐S2差距。
 两组同起点、同2048新增更新/8192曝光，但单蛋白曝光与GPU时间不同；不是纯
-数据量因果实验。下一项已固定单一全局GT坐标项消融协议，尚待实现与运行；ESMC匹配
+数据量因果实验。单一全局GT坐标项消融已通过匹配预检并在HPC3启动662470，
+见[启动记录](mini_folding_coordinate_ablation_status_2026-09-30.md)；尚无新质量结论。ESMC匹配
 特征已准备，不同时改变条件接口。详见[完整结论](mini_folding_scaling_findings_2026-09-30.md)、
 [训练与评测记录](mini_folding_training_status_2026-09-30.md)、
 [终点评测协议](mini_folding_terminal_evaluation_v1.md)。
