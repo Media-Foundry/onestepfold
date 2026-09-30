@@ -1,3 +1,30 @@
+## 2026-09-30 — ESMC C4/S1 paired comparison complete, negative
+
+Allretryjobs662588–662594COMPLETED0:0;fourworkers82/74/77/75s,score20s.256scores
+(128reusedretained,128newESMC),64proteins=TRAIN32+observedDEV32,twonoises,fixed
+retained512/checkpoint/chemistry/C4S1FP32. Successfulpath544PFstack/136diffusion
+calls(including8preflight). Failedinitial49spreflightpreserved,notcountedasfree.
+Nochangesactiveglobaltraining; noESMCpromotionorinterfacehyperparametersearch.
+
+DEV32: nativeESM2AA.817664/CA.902912/RMSD3.461940 vsESMC.775075/.853801/4.846740.
+AA delta-.042589 CI[-.076868,-.018927];CA-.049112;8/32AAdegrade>.05,pairedP05
+-.146287/worst5mean-.348785. RMSD+1.384800CI[+.329992,+2.786813],21/32worse.
+Zero+strict46→31/64,bothnoises20→12/32,severepairs562→1279,newsevere18/stereo8.
+TRAIN32AA.804773→.776735,CA.885653→.856230,RMSD4.096304→5.535991,severe394→817,
+6/32AAdegrade>.05. Notheldout-onlyloss,butTRAIN32notfull423. Fixedaffineinterface
+losesquality;notESMCintrinsicsuperiority/inferiority,notstructure-adaptedupperbound.
+
+All64nativeC4cachedconditioningexact,allworkerfullmodelstatesrestored.256coordinate
+hashesrechecked;originalGTscore/densecheckmax3.33e-16. Local6gzip+reportSHAverified;
+192proteinpairedmetricrowsindependentlyreducedmean/CImaxerror0;geometrytotalsmatch.
+4tests pass. Finalreportsmini_folding_esmc_comparison_2026-09-30/final includes
+losslessfullscores,workerreports,lock,acceptance,pairedmetrics. Findingsdocand
+overallfrontupdated. Noencoder-runtimeclaim; cachedfeatures,liveC4/diffusion.
+
+Main662548stillRUNNING55m56s,5466exposures(~1366updates),audits/evaldependencies
+normal. NEXT collectfixed2048globalterminal662549/662557–568; do notmodifylive
+candidate orstartnonlinear/MLC/ESMCcoretraining justbecausebridgefailed. Goalactive.
+
 ## 2026-09-30 — Matched ESMC C4/S1 structural comparison running
 
 PriorgoalturnPROGRESS(TRAIN423bridgefit48cb3e89). CurrentPROGRESS: standalone

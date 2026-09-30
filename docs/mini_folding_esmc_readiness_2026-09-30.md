@@ -1,5 +1,10 @@
 # ESMC readiness for the folding mainline
 
+**Subsequent structural outcome:** the fixed affine bridge was evaluated on
+TRAIN32/observedDEV32 with the same retained C4/S1 core and reduced quality; it is
+not promoted. See [matched results](mini_folding_esmc_comparison_findings_2026-09-30.md).
+The extraction and fitting records below remain historical stage-specific evidence.
+
 **Update2026-09-30:** a separate TRAIN-only interface initialization completed
 (job662574, COMPLETED0:0,2m11s). It reuses the paired cache below and the existing fixed ridge method.
 No folding prediction or core update is added, and global-distance training662548
