@@ -21,12 +21,14 @@ def audit_connection_window_trial(root):
     torch.set_num_threads(1)
     lock = json.loads((root / 'lock.json').read_text()); source = Path(lock['source'])
     fitted_trial = lock.get('initialization_contract') == 'calibrated_c4_fitted_start_v1'
-    ideal_trial = lock.get('reference_contract') == 'calibrated_c4_ideal_reference_v1'
+    warm_trial = lock.get('initialization_contract') == 'calibrated_c4_sidechain_repulsion_start_v1'
+    ideal_trial = warm_trial or lock.get('reference_contract') == 'calibrated_c4_ideal_reference_v1'
     reference_trial = ideal_trial or lock.get('reference_contract') == 'calibrated_c4_reference_lengths_v1'
     if 'reference_contract' in lock:
         assert reference_trial and not fitted_trial and lock['arms'] == ['native_ref', 'ideal_ref' if ideal_trial else 'length_ref']
     if 'initialization_contract' in lock:
-        assert fitted_trial and lock['arms'] == ['zero', 'fitted']
+        assert (fitted_trial and lock['arms'] == ['zero', 'fitted']) or (
+            warm_trial and lock['arms'] == ['zero', 'sidechain'])
     selection = json.loads((source / 'selection.json').read_text())
     report = json.loads((root / 'report.json').read_text())
     calibration = json.loads(Path(lock['calibration']).read_text())['windows']
@@ -65,7 +67,7 @@ def audit_connection_window_trial(root):
                 output_reference[ix['C']] = cnew
                 output_reference[ix['O']] = cnew+(o0-c0)/np.sqrt(np.sum((o0-c0)**2))*p['c_o']['median']
             np.testing.assert_allclose(output_reference,data['output_reference'],rtol=0,atol=1e-12)
-        if ideal_trial and row['arm'] == 'ideal_ref':
+        if ideal_trial and (warm_trial or row['arm'] == 'ideal_ref'):
             templates = json.loads(Path(lock['reference_templates']).read_text())['records']
             for residue in range(2,len(item['sequence'])):
                 ii = np.flatnonzero(residues == residue); nn = names[ii].tolist()
@@ -83,14 +85,32 @@ def audit_connection_window_trial(root):
             json.loads((packet / 'variants.json').read_text())).double()
         variables = PoseVariables(adapter, torch.tensor(data['raw']))
         values = torch.load(folder / 'values.pt', map_location='cpu', weights_only=True)
-        if not fitted_trial or row['arm'] == 'zero':
+        if (not fitted_trial and not warm_trial) or row['arm'] == 'zero':
             assert all(torch.count_nonzero(v) == 0 for v in values['initial'])
-        else:
+        elif fitted_trial:
             fit = row['local_fit']
             assert fit['max_iter'] == 60 and fit['max_eval'] == 90 and fit['final_iterate']
             assert fit['iterations'] <= 60 and fit['seconds'] > 0
             for key, label in [('initial_mse', 'local'), ('final_mse', 'start')]:
                 np.testing.assert_allclose(fit[key], ((data[label]-data['raw'])**2).sum(-1).mean(), rtol=1e-10, atol=1e-10)
+        if warm_trial and row['arm'] == 'sidechain':
+            warm_folder = Path(lock['warm_start_root']) / 'cases' / f'{index // 2:02d}'
+            warm = json.loads((warm_folder / 'report.json').read_text())
+            warm_values = torch.load(warm_folder / 'values.pt', weights_only=True, map_location='cpu')
+            warm_data = dict(np.load(warm_folder / 'coordinates.npz'))
+            assert warm['success'] and warm['group_id'] == group and warm['seed'] == row['seed']
+            assert row['warm_start']['report_sha256'] == sha256(warm_folder / 'report.json')
+            for file, key in [('coordinates.npz', 'coordinates_sha256'), ('values.pt', 'values_sha256')]:
+                assert row['warm_start'][key] == warm[key] == sha256(warm_folder / file)
+            for q, old_q, mask in zip(values['initial'], warm_values['values'], warm_values['masks'], strict=True):
+                assert torch.equal(q, old_q) and torch.count_nonzero(q[:, :6]) == 0
+                assert torch.count_nonzero(q * (~mask.bool())) == 0
+            for key in ['raw', 'target', 'output_reference', 'atom_names', 'residue_ids']:
+                assert np.array_equal(data[key], warm_data[key])
+            assert np.array_equal(data['local'], warm_data['initial'])
+            assert np.max(np.abs(data['start'] - warm_data['final'])) < 1e-8
+            bone = np.isin(names, ['N','CA','C','O','OXT'])
+            assert np.max(np.abs(data['start'][bone] - data['local'][bone])) < 1e-10
         error = 0.
         for label, key in [('start', 'initial'), ('final', 'final')]:
             with torch.no_grad():
@@ -108,7 +128,7 @@ def audit_connection_window_trial(root):
                     for label in ['local','start','final']:
                         reference_length_error=max(reference_length_error,abs(np.linalg.norm(data[label][ia]-data[label][ib])-target))
             assert reference_length_error < 1e-8
-        if ideal_trial and row['arm'] == 'ideal_ref':
+        if ideal_trial and (warm_trial or row['arm'] == 'ideal_ref'):
             for residue in range(2,len(item['sequence'])):
                 ii = np.flatnonzero(residues == residue); nn = names[ii].tolist()
                 template = templates[item['sequence'][residue-1]]; tn = template['atom_names']
@@ -133,7 +153,7 @@ def audit_connection_window_trial(root):
                 assert np.max(np.abs(data['local'][ca_mask]-data['raw'][ca_mask])) < 1e-8
             if row['arm'] in ['original', 'zero','native_ref']:
                 assert np.max(np.abs(old['final'] - data['final'])) < 1e-8
-            if (fitted_trial and row['arm'] == 'zero') or (reference_trial and row['arm'] == 'native_ref'):
+            if ((fitted_trial or warm_trial) and row['arm'] == 'zero') or (reference_trial and row['arm'] == 'native_ref'):
                 assert row['reused_control']['report_sha256'] == sha256(previous / 'report.json')
                 assert row['coordinates_sha256'] == sha256(previous / 'coordinates.npz')
                 assert row['values_sha256'] == sha256(previous / 'values.pt')
@@ -213,13 +233,15 @@ def audit_connection_window_trial(root):
         left, right = report['rows'][i:i+2]
         if not (left['success'] and right['success']):
             paired.append(dict(index=i//2, paired=False)); continue
-        for key in (['shared_objective_sha256', 'raw_sha256'] if reference_trial else ['chart_sha256', 'shared_objective_sha256', 'raw_sha256']):
+        for key in (['shared_objective_sha256', 'raw_sha256'] if reference_trial and not warm_trial else ['chart_sha256', 'shared_objective_sha256', 'raw_sha256']):
             assert left[key] == right[key]
         x = dict(np.load(root / 'cases' / f'{i:02d}' / 'coordinates.npz'))
         y = dict(np.load(root / 'cases' / f'{i+1:02d}' / 'coordinates.npz'))
         shared = ['raw', 'target', 'atom_names', 'residue_ids']
-        if not reference_trial:
+        if not reference_trial or warm_trial:
             shared.append('local')
+        if warm_trial:
+            shared.append('output_reference')
         if fitted_trial or reference_trial:
             assert left['objective_sha256'] == right['objective_sha256']
         else:

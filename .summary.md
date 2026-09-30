@@ -1,3 +1,46 @@
+## 2026-09-30 — Saved sidechain-angle joint start closes with mixed quality, screen FAIL
+
+Previous1ab2fb55 local screen was positive, sufficient to run this single bounded
+GLOBAL endpoint comparison. Same7 supported development proteins x2 archived C4/S1
+raw predictions;3CR6 unsupported4 comparison slots retained. Reused14 WHOLE-IDEAL
+zero controls from c4_ideal_reference_v1_20260930 odd cases; candidate loaded saved
+sidechain_repulsion_v1_20260930 case i full values into SAME originalraw chart.
+Whole-ideal reference, originalraw anchor/angle regularization, calibrated objective,
+all-pair mean/top16 repulsion, raw branches and3x60 joint budget fixed. No new local
+fit/model/training/GT fitting/ind32/Y38/precision changes.14 new joint solves only.
+Preflight all14 chart hashes equal control, raw/reference/GT identities equal,
+start replay max1.78e-15A. Two geometry_start tests pass. Frozen new initialization
+contract calibrated_c4_sidechain_repulsion_start_v1, arms zero/sidechain.
+Final AA .816196847791 -> .816853576310 (+.000656728519); CA .900562705372 ->
+.900200801549 (-.000361903823). Predeclared joint quality SCREEN FAIL. AA improved
+4/7proteins,7/14predictions;CA2/7,4/14. Earlier localAA14/14 is not final advantage.
+Both14/14 zero severe + strict checked CA/IT chirality + raw RMS; absolute geometry
+subchecks pass14/14, OLD FULL joint0/14 dueconnections. Same4B9P raw/GT branch errors
+persist2instances. Candidate still14/14 below rawAA .825157133307, gap.008303557.
+Heavy rawRMS .491800846 -> .440819896; CA rawRMS .228294571 -> .222248481; max atom
+4.692212 ->4.727113A; worst penetration1.809588 ->1.807493A. Closer raw != betterGT.
+Offline same rho100 final objective mean .272351554 -> .229860484,12/14 lower;
+this is fixed-objective improvement without jointquality improvement, not proof of
+convergence/global optimality. Endpoint objectives retained; no GT best-arm choice.
+DiamondHill2CPUFP64 workers1thread:13cases180iterations,1case178;214–244closures.
+Mean23.64215median19.61325s,range12.006–37.733,maxRSS899596KiB. Archived warmfit
+mean6.77996s so combined method cost30.42211s; baseline23.22114 is historical timing,
+not equal totalcompute. Pipeline238949 terminal,245.13s exit0;controller238954finished.
+28 independent pose/metric/objective audits14pairs pass: maxpose1.405e-10A,
+metric6.66e-16,objective5.12e-13,idealbond1.40e-12. Both old wholeideal and oldfullpose
+fitted-start shadow audits28 each pass.194member archive3,635,777bytes everySHA
+verified;4runtime scripts+protocolexact local. No livejobs. Worktree unrelated
+changes preserved; task graph staged riskMEDIUM, full worktreeHIGH includes oldwork.
+Reports mini_sidechain_joint_start_2026-09-30, docs mini_sidechain_joint_start_findings_2026-09-30.md;
+remote /media/PM982/onestepfold/sidechain_joint_start_v1_20260930.
+DECISION: close this initialization variant, no moreiterations/restarts/threshold
+change/default promotion. Keep localpositive and finalnegative; deployedoracle still
+unfulfilled, persistent goal ACTIVE. Do not resume backward debugging or claim
+solver input differentiability. Next useful progress is bounded offline attribution
+of saved final objective/structure tradeoffs (especially AA-losing2FC3/4B9P vs AA-
+gaining5GU9/3D8L) before a genuinely new output-objective intervention; no new
+initialization matrix, no independent32 retuning, no GT-conditioned arm selection.
+
 ## 2026-09-30 — Coupled sidechain preservation/repulsion passes bounded LOCAL screen
 
 Previous goal turn581d6d47 was progress: pure fixed-backbone fit AA positive but

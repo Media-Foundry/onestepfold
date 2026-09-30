@@ -16,7 +16,7 @@ def report_connection_window_trial(root):
     rows = {r['index']: r for r in report['rows']}
     lock = json.loads((root / 'lock.json').read_text())
     control, candidate_arm = lock['arms']
-    assert [control, candidate_arm] in [['original', 'calibrated'], ['zero', 'fitted'], ['native_ref','length_ref'], ['native_ref','ideal_ref']]
+    assert [control, candidate_arm] in [['original', 'calibrated'], ['zero', 'fitted'], ['native_ref','length_ref'], ['native_ref','ideal_ref'], ['zero','sidechain']]
     arms = {}
     for arm in [control, candidate_arm]:
         available = [r for r in rows.values() if r['success'] and r['arm'] == arm]
@@ -44,6 +44,8 @@ def report_connection_window_trial(root):
             closures=[sum(h['calls'] for h in r['history']) for r in available],
             max_peak_rss_kib=max(r['peak_rss_kib'] for r in available),
             reused_controls=sum('reused_control' in r for r in available),
+            archived_warm_fit_seconds=[r.get('warm_start', {}).get('archived_fit_seconds', 0.) for r in available],
+            archived_warm_fit_closures=[r.get('warm_start', {}).get('archived_fit_closures', 0) for r in available],
             fit_seconds=[r.get('local_fit', {}).get('seconds', 0.) for r in available],
             fit_iterations=[r.get('local_fit', {}).get('iterations', 0) for r in available],
             fit_closures=[r.get('local_fit', {}).get('closure_calls', 0) for r in available])

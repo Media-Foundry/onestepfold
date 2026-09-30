@@ -65,12 +65,14 @@ def run_window_case(root, index):
     torch.set_num_threads(1)
     lock = json.loads((root / 'lock.json').read_text()); source = Path(lock['source'])
     fitted_trial = lock.get('initialization_contract') == 'calibrated_c4_fitted_start_v1'
-    ideal_trial = lock.get('reference_contract') == 'calibrated_c4_ideal_reference_v1'
+    warm_trial = lock.get('initialization_contract') == 'calibrated_c4_sidechain_repulsion_start_v1'
+    ideal_trial = warm_trial or lock.get('reference_contract') == 'calibrated_c4_ideal_reference_v1'
     reference_trial = ideal_trial or lock.get('reference_contract') == 'calibrated_c4_reference_lengths_v1'
     if 'reference_contract' in lock:
         assert reference_trial and not fitted_trial and lock['arms'] == ['native_ref', 'ideal_ref' if ideal_trial else 'length_ref']
     if 'initialization_contract' in lock:
-        assert fitted_trial and lock['arms'] == ['zero', 'fitted']
+        assert (fitted_trial and lock['arms'] == ['zero', 'fitted']) or (
+            warm_trial and lock['arms'] == ['zero', 'sidechain'])
     selection = json.loads((source / 'selection.json').read_text())
     item = selection[index // 4]; seed = lock['seeds'][(index // 2) % 2]; arm = lock['arms'][index % 2]
     group = item['group_id']; packet = source / 'chemistry' / group
@@ -84,10 +86,10 @@ def run_window_case(root, index):
         chemistry = json.loads((packet / 'report.json').read_text())
         if not chemistry['passed']:
             result.update(not_run=True, source_failure=chemistry['error']); return
-        if (fitted_trial and arm == 'zero') or (reference_trial and arm == 'native_ref'):
+        if ((fitted_trial or warm_trial) and arm == 'zero') or (reference_trial and arm == 'native_ref'):
             previous = Path(lock['baseline']) / 'cases' / f'{index // 2 * 2 + 1:02d}'
             saved = json.loads((previous / 'report.json').read_text())
-            assert saved['success'] and saved['arm'] == 'calibrated'
+            assert saved['success'] and saved['arm'] == ('ideal_ref' if warm_trial else 'calibrated')
             assert saved['group_id'] == group and saved['seed'] == seed
             assert saved['raw_sha256'] == sha256(source / 'data' / group / f'native_{seed}.npy')
             for name, key in [('coordinates.npz', 'coordinates_sha256'), ('values.pt', 'values_sha256')]:
@@ -147,6 +149,32 @@ def run_window_case(root, index):
                 closure_calls=fitted.closure_calls, initial_mse=fitted.initial_mse,
                 final_mse=fitted.final_mse, final_gradient_norm=fitted.final_gradient_norm,
                 improved=fitted.improved, max_iter=60, max_eval=90, final_iterate=True)
+        if warm_trial:
+            assert arm == 'sidechain'
+            chart = buffer_digest(variables)
+            warm_folder = Path(lock['warm_start_root']) / 'cases' / f'{index // 2:02d}'
+            warm = json.loads((warm_folder / 'report.json').read_text())
+            assert warm['success'] and warm['group_id'] == group and warm['seed'] == seed
+            for file, key in [('coordinates.npz', 'coordinates_sha256'), ('values.pt', 'values_sha256')]:
+                assert sha256(warm_folder / file) == warm[key]
+            warm_data = dict(np.load(warm_folder / 'coordinates.npz'))
+            warm_values = torch.load(warm_folder / 'values.pt', weights_only=True, map_location='cpu')
+            assert np.array_equal(raw_array, warm_data['raw'])
+            assert np.array_equal(output_reference, warm_data['output_reference'])
+            for q, mask in zip(warm_values['values'], warm_values['masks'], strict=True):
+                assert torch.count_nonzero(q[:, :6]) == 0 and torch.count_nonzero(q * (~mask.bool())) == 0
+            variables = pose_variables_at_start(adapter, raw, warm_values['values'])
+            assert buffer_digest(variables) == chart
+            assert np.array_equal(variables.initial.numpy(), warm_data['initial'])
+            start = variables().detach().clone()
+            warm_error = float(np.max(np.abs(start.numpy() - warm_data['final'])))
+            assert warm_error < 1e-8
+            assert np.array_equal(variables.initial.numpy(), old['local'])
+            result['warm_start'] = dict(source=str(warm_folder), report_sha256=sha256(warm_folder / 'report.json'),
+                values_sha256=warm['values_sha256'], coordinates_sha256=warm['coordinates_sha256'],
+                replay_max_abs=warm_error, archived_fit_seconds=warm['fit_seconds'],
+                archived_fit_iterations=warm['fit']['iterations'], archived_fit_closures=warm['fit']['closure_calls'],
+                scope='saved full sidechain angles only; original raw chart and objective retained; no fresh local fit')
         atoms = torch.load(packet / 'native.pt', map_location='cpu', weights_only=False)['atoms']
         topology = GeometryTopology(atoms, mapping['reference'])
         anchors = np.array([[int(np.flatnonzero((residues == j) & (names == name))[0])
