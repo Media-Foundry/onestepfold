@@ -1,0 +1,36 @@
+[
+  {
+    "arm": "weak",
+    "pid": 382134,
+    "gcd": 0,
+    "command": [
+      "/media/IntelSSD/onestepfold/diamondhill_migration_20261001/tools/proot/usr/bin/proot",
+      "-b",
+      "/media/IntelSSD/onestepfold/hpc3_mirror_20261001/Folding:/data/user/shuang886/Folding",
+      "/home/pc/anaconda3/envs/fold/bin/python",
+      "-u",
+      "/data/user/shuang886/Folding/rocm_matched_evaluation_v1_20261001/replay_tools/audit_rocm_flag_replay.py",
+      "--root",
+      "/data/user/shuang886/Folding/rocm_matched_evaluation_v1_20261001",
+      "--arm",
+      "weak"
+    ]
+  },
+  {
+    "arm": "strong",
+    "pid": 382135,
+    "gcd": 2,
+    "command": [
+      "/media/IntelSSD/onestepfold/diamondhill_migration_20261001/tools/proot/usr/bin/proot",
+      "-b",
+      "/media/IntelSSD/onestepfold/hpc3_mirror_20261001/Folding:/data/user/shuang886/Folding",
+      "/home/pc/anaconda3/envs/fold/bin/python",
+      "-u",
+      "/data/user/shuang886/Folding/rocm_matched_evaluation_v1_20261001/replay_tools/audit_rocm_flag_replay.py",
+      "--root",
+      "/data/user/shuang886/Folding/rocm_matched_evaluation_v1_20261001",
+      "--arm",
+      "strong"
+    ]
+  }
+]

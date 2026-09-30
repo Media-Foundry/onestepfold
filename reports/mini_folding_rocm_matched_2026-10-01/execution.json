@@ -1,0 +1,139 @@
+{
+  "complete": true,
+  "jobs": [
+    {
+      "mode": "prepare",
+      "arm": "weak",
+      "pid": 370416,
+      "start_unix": 1790790382.8118088,
+      "command": [
+        "/media/IntelSSD/onestepfold/diamondhill_migration_20261001/tools/proot/usr/bin/proot",
+        "-b",
+        "/media/IntelSSD/onestepfold/hpc3_mirror_20261001/Folding:/data/user/shuang886/Folding",
+        "/home/pc/anaconda3/envs/fold/bin/python",
+        "-u",
+        "/data/user/shuang886/Folding/rocm_matched_training_v1_20261001/weak/code/scripts/train_folding_rocm_matched.py",
+        "--root",
+        "/data/user/shuang886/Folding/rocm_matched_training_v1_20261001/weak",
+        "--arm",
+        "weak",
+        "--mode",
+        "prepare"
+      ],
+      "exit_code": 0,
+      "seconds": 5.288487434387207
+    },
+    {
+      "mode": "prepare",
+      "arm": "strong",
+      "pid": 370417,
+      "start_unix": 1790790382.8131378,
+      "command": [
+        "/media/IntelSSD/onestepfold/diamondhill_migration_20261001/tools/proot/usr/bin/proot",
+        "-b",
+        "/media/IntelSSD/onestepfold/hpc3_mirror_20261001/Folding:/data/user/shuang886/Folding",
+        "/home/pc/anaconda3/envs/fold/bin/python",
+        "-u",
+        "/data/user/shuang886/Folding/rocm_matched_training_v1_20261001/strong/code/scripts/train_folding_rocm_matched.py",
+        "--root",
+        "/data/user/shuang886/Folding/rocm_matched_training_v1_20261001/strong",
+        "--arm",
+        "strong",
+        "--mode",
+        "prepare"
+      ],
+      "exit_code": 0,
+      "seconds": 5.287676572799683
+    },
+    {
+      "mode": "preflight",
+      "arm": "weak",
+      "pid": 370423,
+      "start_unix": 1790790388.1028576,
+      "command": [
+        "/media/IntelSSD/onestepfold/diamondhill_migration_20261001/tools/proot/usr/bin/proot",
+        "-b",
+        "/media/IntelSSD/onestepfold/hpc3_mirror_20261001/Folding:/data/user/shuang886/Folding",
+        "/home/pc/anaconda3/envs/fold/bin/python",
+        "-u",
+        "/data/user/shuang886/Folding/rocm_matched_training_v1_20261001/weak/code/scripts/train_folding_rocm_matched.py",
+        "--root",
+        "/data/user/shuang886/Folding/rocm_matched_training_v1_20261001/weak",
+        "--arm",
+        "weak",
+        "--mode",
+        "preflight"
+      ],
+      "exit_code": 0,
+      "seconds": 58.44157385826111
+    },
+    {
+      "mode": "preflight",
+      "arm": "strong",
+      "pid": 370424,
+      "start_unix": 1790790388.1048863,
+      "command": [
+        "/media/IntelSSD/onestepfold/diamondhill_migration_20261001/tools/proot/usr/bin/proot",
+        "-b",
+        "/media/IntelSSD/onestepfold/hpc3_mirror_20261001/Folding:/data/user/shuang886/Folding",
+        "/home/pc/anaconda3/envs/fold/bin/python",
+        "-u",
+        "/data/user/shuang886/Folding/rocm_matched_training_v1_20261001/strong/code/scripts/train_folding_rocm_matched.py",
+        "--root",
+        "/data/user/shuang886/Folding/rocm_matched_training_v1_20261001/strong",
+        "--arm",
+        "strong",
+        "--mode",
+        "preflight"
+      ],
+      "exit_code": 0,
+      "seconds": 58.440176248550415
+    },
+    {
+      "mode": "train",
+      "arm": "weak",
+      "pid": 370611,
+      "start_unix": 1790790446.6223648,
+      "command": [
+        "/media/IntelSSD/onestepfold/diamondhill_migration_20261001/tools/proot/usr/bin/proot",
+        "-b",
+        "/media/IntelSSD/onestepfold/hpc3_mirror_20261001/Folding:/data/user/shuang886/Folding",
+        "/home/pc/anaconda3/envs/fold/bin/python",
+        "-u",
+        "/data/user/shuang886/Folding/rocm_matched_training_v1_20261001/weak/code/scripts/train_folding_rocm_matched.py",
+        "--root",
+        "/data/user/shuang886/Folding/rocm_matched_training_v1_20261001/weak",
+        "--arm",
+        "weak",
+        "--mode",
+        "train"
+      ],
+      "exit_code": 0,
+      "seconds": 2925.3427035808563
+    },
+    {
+      "mode": "train",
+      "arm": "strong",
+      "pid": 370612,
+      "start_unix": 1790790446.6239274,
+      "command": [
+        "/media/IntelSSD/onestepfold/diamondhill_migration_20261001/tools/proot/usr/bin/proot",
+        "-b",
+        "/media/IntelSSD/onestepfold/hpc3_mirror_20261001/Folding:/data/user/shuang886/Folding",
+        "/home/pc/anaconda3/envs/fold/bin/python",
+        "-u",
+        "/data/user/shuang886/Folding/rocm_matched_training_v1_20261001/strong/code/scripts/train_folding_rocm_matched.py",
+        "--root",
+        "/data/user/shuang886/Folding/rocm_matched_training_v1_20261001/strong",
+        "--arm",
+        "strong",
+        "--mode",
+        "train"
+      ],
+      "exit_code": 0,
+      "seconds": 2925.3418221473694
+    }
+  ],
+  "seconds": 2990.88070595701,
+  "scope": "execution only; scientific terminal audit and evaluation remain required"
+}

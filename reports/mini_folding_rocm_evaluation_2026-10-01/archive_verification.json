@@ -1,0 +1,19 @@
+{
+  "complete": true,
+  "scope": "local archive integrity and explicit matched-state replay; NOT original protocol acceptance",
+  "original_protocol_accepted": false,
+  "arms": {
+    "weak": {
+      "matched_state_exact": true,
+      "training_replays": 64,
+      "frozen_replays": 64
+    },
+    "strong": {
+      "matched_state_exact": true,
+      "training_replays": 64,
+      "frozen_replays": 64
+    }
+  },
+  "outputs": 1820,
+  "metric_max_abs": 3.3306690738754696e-16
+}

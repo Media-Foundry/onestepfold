@@ -1,0 +1,49 @@
+{
+  "complete": false,
+  "commands": [
+    {
+      "mode": "prepare",
+      "pid": 366337,
+      "command": [
+        "/media/IntelSSD/onestepfold/diamondhill_migration_20261001/tools/proot/usr/bin/proot",
+        "-b",
+        "/media/IntelSSD/onestepfold/hpc3_mirror_20261001/Folding:/data/user/shuang886/Folding",
+        "/home/pc/anaconda3/envs/fold/bin/python",
+        "-u",
+        "/data/user/shuang886/Folding/folding_global_parameter_training_v1_20260930/code/scripts/train_folding_global_parameter.py",
+        "--root",
+        "/data/user/shuang886/Folding/folding_global_parameter_training_v1_20260930",
+        "--mode",
+        "prepare",
+        "--baseline",
+        "/data/user/shuang886/Folding/folding_global_distance_training_v1_20260930",
+        "--calibration",
+        "/data/user/shuang886/Folding/folding_parameter_budget_v1_20260930_retry1"
+      ],
+      "exit_code": 0
+    },
+    {
+      "mode": "preflight",
+      "pid": 366343,
+      "command": [
+        "/media/IntelSSD/onestepfold/diamondhill_migration_20261001/tools/proot/usr/bin/proot",
+        "-b",
+        "/media/IntelSSD/onestepfold/hpc3_mirror_20261001/Folding:/data/user/shuang886/Folding",
+        "/home/pc/anaconda3/envs/fold/bin/python",
+        "-u",
+        "/data/user/shuang886/Folding/folding_global_parameter_training_v1_20260930/code/scripts/train_folding_global_parameter.py",
+        "--root",
+        "/data/user/shuang886/Folding/folding_global_parameter_training_v1_20260930",
+        "--mode",
+        "preflight",
+        "--baseline",
+        "/data/user/shuang886/Folding/folding_global_distance_training_v1_20260930",
+        "--calibration",
+        "/data/user/shuang886/Folding/folding_parameter_budget_v1_20260930_retry1"
+      ],
+      "exit_code": 1
+    }
+  ],
+  "error": "Traceback (most recent call last):\n  File \"/media/IntelSSD/onestepfold/diamondhill_migration_20261001/preflight_after_verification.py\", line 22, in <module>\n    assert code==0,(mode,code)\n           ^^^^^^^\nAssertionError: ('preflight', 1)\n",
+  "training_started": false
+}

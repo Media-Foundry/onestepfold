@@ -1,0 +1,16 @@
+{
+  "pid": 381780,
+  "command": [
+    "/media/IntelSSD/onestepfold/diamondhill_migration_20261001/tools/proot/usr/bin/proot",
+    "-b",
+    "/media/IntelSSD/onestepfold/hpc3_mirror_20261001/Folding:/data/user/shuang886/Folding",
+    "/home/pc/anaconda3/envs/fold/bin/python",
+    "-u",
+    "/data/user/shuang886/Folding/rocm_matched_evaluation_v1_20261001/replay_tools/summarize_rocm_diagnostic.py",
+    "--root",
+    "/data/user/shuang886/Folding/rocm_matched_evaluation_v1_20261001",
+    "--workers",
+    "8"
+  ],
+  "scope": "posthoc descriptive scoring; not protocol acceptance"
+}

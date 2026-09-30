@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/data/user/shuang886/Folding/rocm_matched_evaluation_v1_20261001/code/scripts/evaluate_rocm_pair.py", line 159, in <module>
+    elif a.mode=='collect':collect_rocm_evaluation(a.root)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/user/shuang886/Folding/rocm_matched_evaluation_v1_20261001/code/scripts/evaluate_rocm_pair.py", line 98, in collect_rocm_evaluation
+    assert sha256(new) == sha256(original) == r['sha256'], (arm,r['group_id'],r['seed'])
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('weak', 'b39dc28758a783962593c6afc6fbc268be4a05b05f3bbbea4cceb5b6440f940d', 600001)

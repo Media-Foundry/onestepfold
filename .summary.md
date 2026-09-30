@@ -1,3 +1,105 @@
+## 2026-10-01 — Paired folding batch closed: global improvement/local loss; matched-flag replay explained
+
+Bothtrainingcomplete/audited. 8GCD1820inference allworkers0 in67.84s. Originalcollector
+fails stricttraining-vs-frozen exactreplay:4/128exact,max.000120640Å; preservefailed
+controller/protocol/code/coordinates. Boundedfirstfailure1QY7weak8NFE showsONLYselected
+requires_gradflag switches exactoutput:False=evaluation,True=training,bothinputloaders
+hashidentical,repeats exact. Newpredeclaredaddendum thenbotharms64each×False/True=256NFE:
+all128eachstateEXACT,no parameter/RNGchange/backward. No badkernel/backwardclaim.
+Originalcross-state gate remainsfailed; separate diagnostic_scores derivedview reports
+protocol_accepted=false. Scientificidentity hasmatchedstateaudit,notrelaxedthreshold.
+
+Scorescomplete455×2×2,metricdense max3.33e-16,RMSDextent replay0. 128probemetricchanges
+AAmax3.01e-6,CA1.37e-5,RMSD5.62e-6Å;severecount/strictchiralityallunchanged.
+DEV32 weak/strong AA.819745828/.819054371(delta-.000691457 CI[-.00111830,-.00031218]),
+CA.905273866/.904546336(delta-.000727530 CI[-.00132839,-.00018692]);RMSD3.51003/3.49292
+(delta-.017107 CIcross0),farMAE2.548461/2.445067(delta-.103395 CI[-.204968,-.025136]).
+Severe432/346,zero+strict46/47of64,bothnoises22/22of32. AA5/32improve,none<-0.05;
+no introducedsevereDEVinstance,one loststrict. TRAIN128/295meanAA -.000839/-.000571,
+RMSD-.10317/-.10564Å,farMAE-.25465/-.28966. AddedTRAINbothnoisegeometry219→206;
+newsevere22,loststrict23. Bettertotalcollisionsdoesnotmeanallinputsbetter.
+
+DECISION: globalweight works butlocalquality/geometrytradeoff;keepweakbaseline,
+strongnotpromoted. Batchclosed,noautomaticweightgrid/training/design/ESMC. Remaining
+foldingobjectiveunfinished; no new GPUjobs. ESM2/C4stillfrozen,C4/S1/K1actualTRAIN423.
+Docs mini_folding_rocm_results_2026-10-01.md, overallfrontupdated;originalprotocol
+mini_folding_rocm_evaluation_v1.md andseparate mini_folding_rocm_replay_addendum_v1.md.
+Reports mini_folding_rocm_matched_2026-10-01 andmini_folding_rocm_evaluation_2026-10-01
+includecompressedtraininghistories,checkpointaudit,allscoredrecords/cohorts/extent,
+failedcollector,diagnosticmanifestandflagreplayreports. Localmanifesthashesverified.
+Remote rootrocm_matched_evaluation_v1_20261001,diagnostic_scores/report.md;no official
+acceptance.json,do notreadfailedoldcontrollerasstillrunning. Newsourcefunctionsisolated;
+originaltrainer/inference/scorerunchanged.16focusedtests+runtimeaudits passed.
+
+## 2026-10-01 — Matched ROCm training complete; terminal audit passed; evaluation running
+
+User resumed after waiting. Both DiamondHill arms exited0,2048 updates/8192 ordered exposures,
+423 TRAIN,288 diffusion tensors69,777,841params,excluded parameters unchanged. Weak2916.93s,
+strong2836.96s;peak18,036,032,512B. New independent audit verifies all source hashes,8192
+history rows per arm,loss formulas,LR/update schedule,finite optimizer states,terminal hashes,
+all probe files and64 identical initial coordinates. NoDEV read during training.
+Weak terminal8a0e6e955ba47920444bf22e1e6461df3d0b538fae920c9b583768360c386c7e;
+strong ea1c9da6798ecab35cf9a0ceb5c6dd60e501638516d004315a92e309de2b45d5.
+TRAIN32 terminalweak AA.80756445/CA.88905234,severe190,zero+strict48/64;
+strong AA.80644052/CA.88767745,severe177,zero+strict46/64. These are TRAIN probes,
+not validation result or superiority evidence; stronger weight currently presents tradeoff.
+
+New frozen docs/mini_folding_rocm_evaluation_v1.md: same455 rows/cohorts/2noises,
+only two fresh ROCm models=1820predictions+56engineering NFE. HistoricalCUDA six-model
+outputs remain separate context; no new rescore/cross-platform pure-weightclaim.
+Original inference/scoring/extent modules unchanged. New readonlyaudit,isolatedpaired
+contract/driver;16focusedtests passed. Publicengineeringanchor explicitly copied from
+prior1YBKROCmdiagnostic into separateprobe_cache; oldCUDAcache unchanged. Requires128
+terminalTRAIN32exact replaysbefore scoring. Each GCDoneworker;8CPUscoreworkers,threads1;
+no autoretry/extra training/checkpointselection. Separate rawGT,globalextent,tails,geometry.
+DiamondHillroot/media/IntelSSD/onestepfold/hpc3_mirror_20261001/Folding/
+rocm_matched_evaluation_v1_20261001; virtual/data/user/shuang886/Folding/...
+Controller379186;handles.json/inference_execution.json/controller_execution.json;
+collect->finish automatic onlyafterallworkers0andexactreplay. Latest ~206/455proteins,
+all8workerslive/noerrors. Noqualityconclusionyet. Need collectfinalacceptance/report,
+cohorts/extent/evaluation; do notrestart afterconnectiontimeout.
+Repo originals/unrelated changespreserved; GitNexusnewfunctionsUNKNOWN,textconfirmed
+absentpre-edit,existingrunner dependenciesgraphread;fullall+stagedcheck beforecommit.
+
+## 2026-10-01 — Cross-backend discrepancy measured; matched ROCm pair now training
+
+Transfer complete997.61s;24,397files85.65GB allSHApass. Oldmappedpreparepasses;
+oldpreflightfails publicCUDAreplay1e-3beforeupdates;keep failure. Newboundedprobe
+backend_replay_probe_v1_20261001:52res1YBK/968res6NPS,public+retained,2repeats=8calls,
+0updates,2workers exit0 in53.24s. Samecond/features/noise hashesvsHPC3CPUreadback;
+fullretainedparameterfingerprints exactHPC3,params/RNGunchanged,repeatsbitwiseexact.
+Maxcoorddiff public .00505066/.00450468Å;retained .00277996/.00327945.
+AlignedCA .001020/.000459 public,.000734/.001063 retained. AAabsoluteDelta<=4.261e-5;
+shortpublicCADelta-.000854701 (discrete metric,donotclaimallscoresidentical),severe
+0/0shortand30/30publiclong,10/10retainedlong. Supportsbackendprecision/execution
+replaylimit,notinputcorruption;no specifickernelrootcause/fullgradientcertification.
+
+New independentprotocol mini_folding_rocm_matched_v1:weak=.03290655679814053 vs
+strong=.1810138829332775,solecandidatewithnecessaryROCmreplicationcontrol. Allother
+scientificbasefieldsunchanged,423membership/order8192exposures/2048updates,retained512,
+fixedcachedC4/ESM2/GT/S2teacher,288dense69.78M. Originaltrainer/hooksunchanged;new
+contract/preflightdriver,7focusedtestsPASS. ROCm anchors explicit fromaboveprobe,
+old1e-3engineeringboundunchanged,CUDAfailurepreserved. Needmatchedplatformeffect,
+notattributecross-platformterminalcomparisonpurelyto weight.
+
+RootDiamondHill /media/IntelSSD/onestepfold/hpc3_mirror_20261001/Folding/
+rocm_matched_training_v1_20261001. PRootvirtualroot/data/user/shuang886/Folding.
+Controller370250;prepare370416/417exit0;preflight370423/424exit0,51.45/48.68s,
+17,427,739,648Bpeak. All288gradsfinite/nonzero,params/RNGunchanged,replayexact;
+pair_release confirmsinitialfingerprints,engineeringcoordinateSHA andunweightedparts
+identical. ThenGCD0weak370611/GCD2strong370612 TRAINlive;record21updates87exposureseach.
+Initial64TRAIN32probeshashesallverifiedexactacrossarms. NoDEVread/terminalresults.
+Fixed2048,4hprocesslimit,noautorequeue/extension. Preservelivejobs; inspecthandles,
+execution.json,weak/strong expanded/report.json/history; timeoutnotterminal.
+
+Trainingterminalpairauditandevaluationadapterstillneedimplementation;old7model
+contractdoesnotyetincludeweak_ROCm,do notrununchangedclaimingmatchedcomparison.
+Primarynewcomparisonstrong_ROCm-weak_ROCm;oldCUDAmodelsdescriptivewithplatformcaveat.
+Docs mini_backend_replay_findings_2026-10-01.md andmini_folding_rocm_matched_v1.md;
+reports mini_backend_replay_2026-10-01 andmini_folding_rocm_matched_2026-10-01.
+GitNexusnewhelperUNKNOWN,textconfirmednewdriver/tests;fullchangecheckbeforecommit.
+Goalobjectiveunfinished;goaltoolstillblockedbutuserresumedworkandnewjobsarelive.
+
 ## 2026-10-01 — User authorizes DiamondHill migration; transfer and gated preflight running
 
 HPC3 ACD nodes under maintenance per user; login/data remain available. User explicitly

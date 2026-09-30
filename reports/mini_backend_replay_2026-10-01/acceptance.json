@@ -1,0 +1,54 @@
+{
+  "complete": true,
+  "calls": 8,
+  "updates": 0,
+  "inputs_match_hpc3_cpu": true,
+  "repeats_exact": true,
+  "rows": [
+    {
+      "pdb": "1ybk",
+      "length": 52,
+      "stage": "public",
+      "max_abs": 0.0050506591796875,
+      "ca_aligned_rmsd": 0.0010200358237943924,
+      "delta_aa": -4.260576715653386e-05,
+      "delta_ca": -0.0008547008547008517,
+      "severe_before": 0,
+      "severe_after": 0
+    },
+    {
+      "pdb": "1ybk",
+      "length": 52,
+      "stage": "retained",
+      "max_abs": 0.0027799606323242188,
+      "ca_aligned_rmsd": 0.0007337157136800844,
+      "delta_aa": 1.2604347899292101e-05,
+      "delta_ca": 0.0,
+      "severe_before": 0,
+      "severe_after": 0
+    },
+    {
+      "pdb": "6nps",
+      "length": 968,
+      "stage": "public",
+      "max_abs": 0.004504680633544922,
+      "ca_aligned_rmsd": 0.0004593241320199628,
+      "delta_aa": -4.306235801720959e-06,
+      "delta_ca": 6.1668750114263204e-06,
+      "severe_before": 30,
+      "severe_after": 30
+    },
+    {
+      "pdb": "6nps",
+      "length": 968,
+      "stage": "retained",
+      "max_abs": 0.003279447555541992,
+      "ca_aligned_rmsd": 0.0010634616084226338,
+      "delta_aa": 2.161077723550342e-06,
+      "delta_ca": 3.917377198259242e-05,
+      "severe_before": 10,
+      "severe_after": 10
+    }
+  ],
+  "scope": "two engineering TRAIN cases only; no population precision or full gradient certificate"
+}

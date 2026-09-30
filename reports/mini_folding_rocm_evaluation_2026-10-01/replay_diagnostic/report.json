@@ -1,0 +1,65 @@
+{
+  "arm": "weak",
+  "checkpoint_sha256": "8a0e6e955ba47920444bf22e1e6461df3d0b538fae920c9b583768360c386c7e",
+  "complete": true,
+  "group_id": "b39dc28758a783962593c6afc6fbc268be4a05b05f3bbbea4cceb5b6440f940d",
+  "inputs": {
+    "evaluation": {
+      "conditioning": "f48cc2565087e4cf74ab6ee8fda3cb4a015e0d9d427e7d613d7f1352561236e1",
+      "features": "fb41c8465ca7862810ac51a17befb8082bf13254c11b398911c6c415f07841a4",
+      "noise": "cdcdb4af5dd6202e6b77ef0c5b32f99763bc16f463a56011469419f6a8729637"
+    },
+    "training": {
+      "conditioning": "f48cc2565087e4cf74ab6ee8fda3cb4a015e0d9d427e7d613d7f1352561236e1",
+      "features": "fb41c8465ca7862810ac51a17befb8082bf13254c11b398911c6c415f07841a4",
+      "noise": "cdcdb4af5dd6202e6b77ef0c5b32f99763bc16f463a56011469419f6a8729637"
+    }
+  },
+  "nfe": 8,
+  "parameter_updates": 0,
+  "records": [
+    {
+      "coordinate_sha256": "64472c15b5bd28058a65e31f0ee578bd9ae101061ef2d31b9ec9dbe94d89d06f",
+      "evaluation_exact": true,
+      "evaluation_max_abs": 0.0,
+      "path": "evaluation",
+      "repeat_exact": true,
+      "selected_requires_grad": false,
+      "training_exact": false,
+      "training_max_abs": 7.2479248046875e-05
+    },
+    {
+      "coordinate_sha256": "87ff69e98fa1f5a37a16b2a96df794199f28b96f5f3997f79f8ee53f0909b529",
+      "evaluation_exact": false,
+      "evaluation_max_abs": 7.2479248046875e-05,
+      "path": "evaluation",
+      "repeat_exact": true,
+      "selected_requires_grad": true,
+      "training_exact": true,
+      "training_max_abs": 0.0
+    },
+    {
+      "coordinate_sha256": "64472c15b5bd28058a65e31f0ee578bd9ae101061ef2d31b9ec9dbe94d89d06f",
+      "evaluation_exact": true,
+      "evaluation_max_abs": 0.0,
+      "path": "training",
+      "repeat_exact": true,
+      "selected_requires_grad": false,
+      "training_exact": false,
+      "training_max_abs": 7.2479248046875e-05
+    },
+    {
+      "coordinate_sha256": "87ff69e98fa1f5a37a16b2a96df794199f28b96f5f3997f79f8ee53f0909b529",
+      "evaluation_exact": false,
+      "evaluation_max_abs": 7.2479248046875e-05,
+      "path": "training",
+      "repeat_exact": true,
+      "selected_requires_grad": true,
+      "training_exact": true,
+      "training_max_abs": 0.0
+    }
+  ],
+  "scope": "bounded diagnostic; original terminal exact gate unchanged",
+  "script_sha256": "1fcf5a027fc1e56f57f781d7a3cdc7f2c0ab68e214cd1f2154e5800ae2fa8fe5",
+  "seed": 600001
+}

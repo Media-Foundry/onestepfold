@@ -1,5 +1,9 @@
 # C4/S1 主线迁移到 DiamondHill
 
+后续更新：传输与全部哈希校验完成。跨平台预检失败已量化为小幅坐标差异；
+新同平台weak/strong预检通过并开始训练。详见[定位与训练记录](mini_backend_replay_findings_2026-10-01.md)。
+以下保留迁移启动时的记录。
+
 用户确认 HPC3 ACD 计算节点维护，明确授权后续实验转到 DiamondHill；HPC3 登录节点仍可供数据。
 此前“暂不使用 DiamondHill”的执行限制据此更新。历史硬件故障记录仍保留。
 
