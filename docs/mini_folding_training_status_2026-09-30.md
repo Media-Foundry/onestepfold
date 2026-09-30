@@ -5,6 +5,43 @@ work remains deferred; ESMC is a later matched conditioner-interface comparison.
 The scientific protocol is [folding scaling cycle v1](mini_folding_scaling_cycle_v1.md).
 No new held-out model-quality result is available at launch.
 
+## TRAIN128 terminal completed; expanded arm still running
+
+Job662290 completed0:0 in1h17m08s with2048 new updates and8192 exposures.
+The terminal checkpoint SHA256 is
+`3cabef69073f4a21aa92c25f7dfafd9ec3816fee53e27af37be1dcd0898a5e84`.
+An observation audit verified the training lock, history and checkpoint hashes,
+plus all256 saved coordinates across the four fixed TRAIN32 probes for exact
+target/noise coverage, hashes and finite values. This is not the still-pending
+joint training audit, independent GT rescoring, or new-validation evaluation.
+
+|Common original-TRAIN32, two training noises|Start|TRAIN128 terminal|
+|---|---:|---:|
+|AA-lDDT|0.804772891|0.811420360|
+|Cα-lDDT|0.885653254|0.890676190|
+|Zero severe + strict checked stereo|41/64|52/64|
+|Severe pairs total|394|166|
+|Proteins with positive mean AA change|—|30/32|
+|Proteins with mean AA change < −0.05|—|0/32|
+|New severe collision instances from zero|—|1|
+|Lost strict-stereo instances|—|0|
+
+The previously identified1MV8/noise600011 partially recovers from AA0.658448 at
+1024 to0.700772 at2048, but remains below its initial0.794474. Its severe pairs
+fall from11 to2; strict checked chirality still fails, as it did initially.
+Its two-noise mean AA change is−0.047522. Crossing back above the−0.05 protein-mean
+threshold does not remove this substantial single-noise regression. It also shows
+why the1024 observation must not be treated as the terminal result.
+
+The report records8448 diffusion calls, no live Pairformer calls (C4 conditioning
+is cached), and peak GPU allocation17,370,709,504 bytes. It reports frozen parameters
+unchanged and no validation reads; full independent verification awaits audit662294.
+TRAIN423 continues to the same fixed update budget; downstream jobs remain queued.
+No checkpoint promotion, loss revision or model-interface switch follows from this
+training-only result. Evidence and reproducible observation script:
+`reports/mini_folding_training_2026-09-30/interim/train128_terminal_observation.json`
+and `observe_train128_terminal.py`.
+
 ## Matched 1024-update TRAIN probe: mean and tail disagree
 
 Both arms now have the same1024-new-update/4096-exposure probe. All384 saved

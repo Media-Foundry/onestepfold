@@ -1,3 +1,33 @@
+## 2026-09-30 — TRAIN128 terminal completes with residual tail damage
+
+Previous turn PROGRESS (saved-output objective audit, committed5aaf1e5c). This turn
+PROGRESS: verified live jobs, then collected completed TRAIN1282048 terminal and
+all four TRAIN32 probes. Job662290 COMPLETED0:0 1h17m08; expanded662291 remains
+RUNNING and downstreamaudit/evaluation/reporting dependency-pending. Goal active,
+not achieved. No further training or model/weight/selection changes this turn.
+
+TerminalSHA3cabef69073f4a21aa92c25f7dfafd9ec3816fee53e27af37be1dcd0898a5e84.
+2048updates8192exposures; lock/history/checkpointhashes checked;256coordinates across
+0/512/1024/2048 have exact64-per-probe coverage,finitevalues,matchinghashes.
+Reported8448NFEs,0livePFcalls(C4cached),peak17,370,709,504B,69,777,841trainableparams,
+288tensors,frozenunchanged,noVALread. Independentjoint audit stillpending, notclaimed
+passed; no independentterminalGTrescoring or held-outresult yet.
+
+CommonTRAIN32(twoTRAINnoises) start→terminal:
+AA .804772891→.811420360(+.006647469),CA .885653254→.890676190(+.005022936),
+zero+strict41→52/64,severepairs394→166;30/32meanAApositive,0meanAA<-.05,
+1newseverefromzero,0loststrict. 1MV8noise600011 AA partiallyrecovers
+.658448(at1024)→.700772(at2048),stillbelowstart.794474;severe11→2,
+strictstillfalse(initialalsofalse). Two-noisemeanAAchange-.047521731,
+CA-.060109605. Passingbackabove-.05AAthresholddoesnotremovebad-noise-.093702.
+Do not describe1024tail asfinal orterminalmean asheld-out/generalimprovement.
+
+Docs mini_folding_training_status_2026-09-30.md frontsection updated.
+Artifacts interim/train128_terminal_observation.json and reproducible top-level
+observe_train128_terminal.py underreports/mini_folding_training_2026-09-30.
+No inference forobservation,onlysavedoutputs. ContinuefixedTRAIN423thenqueued
+fullterminalcomparison; no BindCraft/repair/numericaldebugging branch.
+
 ## 2026-09-30 — Saved 1MV8 objective audit: real metric tradeoff
 
 Previous turn PROGRESS (matched1024 mean/tail evidence). Current turn PROGRESS:
