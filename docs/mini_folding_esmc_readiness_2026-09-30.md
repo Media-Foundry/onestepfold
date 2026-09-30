@@ -14,6 +14,36 @@ hashes, and confirms the active training lock is unchanged. This establishes cac
 readiness under this runtime, not an ESMC folding-quality benefit. Storage is BF16;
 the wrapper did not separately record the model's compute dtype.
 
+## Paired native ESM2 features are also available
+
+CPU-only audit662380 completed0:0 in1m54s (actual audit111.50s). All455 sequences
+and96886 residues have finite, correctly shaped native ESM2 FP32 features
+`[L,2560]` and ESMC BF16 features `[L,1152]`. Exact full-sequence SHA256 identities,
+contiguous token/residue indices, single-chain layout, cache provenance and ESMC
+offset lengths agree. Cohorts remain128 original TRAIN,295 added TRAIN and32 new
+validation. The active training lock is unchanged.
+
+All six ESMC shard hashes were rechecked, and both models' individual feature
+tensor bytes were hashed. ESM2's full conditioning-container hashes are inherited
+from the completed cache audit, not recomputed by this feature-only check. Residue
+alignment is supported by the locked extraction code/provenance and native index
+layout; this is not an independent re-extraction of either model. ESM2 features
+already exist in each `conditioning.pt` under `features.esm_token_embedding`, so a
+later matched interface fit does not require another ESM2 forward.
+
+No experimental coordinates were read, no model was called, and no bridge was fit.
+The32 validation feature identities were checked, but they must remain excluded
+from interface fitting and model selection. Both feature sets being available
+does not establish an ESMC folding benefit or interchangeability. Any later bridge
+fit and folding comparison needs its own fixed protocol; the present C4/S1
+training/evaluation is unchanged. The audit uses one CPU and hides the GPU reserved
+by `acd_u`; it does not add GPU model computation.
+
+Remote root: `/data/user/shuang886/Folding/folding_esm_pair_audit_v1_20260930`.
+Reproducible script: `scripts/audit_folding_esm_pairs.py`.
+Report, execution record and launcher are archived in
+`reports/mini_folding_esmc_readiness_2026-09-30/paired_features/`.
+
 ## Existing assets are not a drop-in replacement
 
 On HPC3, the final-layer cache at

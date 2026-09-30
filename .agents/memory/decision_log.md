@@ -1,3 +1,31 @@
+## 2026-09-30 — Paired ESM2/ESMC feature readiness established
+
+Previous turn PROGRESS (TRAIN128terminalcompletion andprobeaudit). Currentturn
+PROGRESS: while662291 remainslive andfinalevaldepends onit, completedbounded
+CPUonlypairedfeatureaudit662380 COMPLETED0:0 1m54(actual111.50s). No modelcalls,
+GTcoordinates,training,interfacefit,productionchangesornewqualityevaluation.
+Goalactive/unfulfilled; finalfoldingcomparisonstillrequiredbeforechoosingmethod.
+
+All455groups/96886residues havefinite nativeESM2FP32[L,2560] and ESMCBF16[L,1152].
+ExactsequenceSHA/lengths,contiguoustoken0..L-1/residue1..Lindices,singlechain,
+cacheprovenance,ESMCoffsetschecked. Cohorts128original/295addedTRAIN/32newVAL.
+All6ESMCshardhashesrechecked; pertensorbytehashesrecordedforbothmodels.
+ESM2containerfullhashesinheritedfromcompletedcacheaudit,notrecomputedthisturn;
+sequencealignmentreliesonlockedextractionprovenance/layout,notindependent
+re-extraction. NativeESM2featuresresideinconditioning.pt features.esm_token_embedding;
+noadditionalESM2GPUextractionneededforfuturematchedfit. ESMCcomputedtypeunknown
+remainsrecorded; storageBF16notclaimedmodelcomputedtype. Nativechemistry/native.pt
+itselfcontainsnoESMfeatures(theconditioncachedoes). ActiveTRAINlockunchanged.
+
+Root /data/user/shuang886/Folding/folding_esm_pair_audit_v1_20260930.
+Script scripts/audit_folding_esm_pairs.py; paired_features/report.json,execution,
+log,launcher inreports/mini_folding_esmc_readiness_2026-09-30;docupdated.
+ReportSHA47e08e63e6689a61e49eb80294092c4d77226e65005dc50b0b0cc8c2512ef092.
+ScriptSHAcc36957e7d488f0ac143562279575bfd0b426e3861c4631e003cebe801f81c48.
+Transferredartifacthashesand455recordsverified. CPUauditreservedhiddenunusedGPU
+becauseacd_u; noGPUforward. NoESMCfoldingbenefitclaimed; laterTRAINonlyfitmust
+exclude32VALanduselockedmatchedfoldingcomparison; nofitstartedhere.
+
 ## 2026-09-30 — TRAIN128 terminal completes with residual tail damage
 
 Previous turn PROGRESS (saved-output objective audit, committed5aaf1e5c). This turn
