@@ -1,3 +1,48 @@
+## 2026-09-30 — Whole ideal-reference C4 intervention closed with partial AA benefit
+
+Previous turn e8de8479 established positive GT-oracle local representation evidence;
+this turn implemented the prescribed bounded real-C4 output-only intervention.
+New ideal_output_reference uses all20 frozen explicit CCD ideal templates for
+interior residues, proper N/CA/C frame alignment, exact native CA/termini retention,
+named inventory/adjacency checks and checked stereo signs. Keep native bond graph,
+input features, scoring reference/radii, raw anchors/cis-trans, calibrated objective,
+top16 penalty and zero pose start. No AA cherry-picking, symmetry renaming, GT branch
+choice, fitted start, two-length combination, new model inference/training/ind32 use.
+Preflight807 interior residues/879 checked centres;14 local CA/terminal replays exact,
+no fallback; rigid equivariance7.11e-15A, idempotence3.11e-15A, bond1.56e-15A.
+Seven supported proteins x two noises12345/54321. Preserve3CR6 unsupported4 slots.
+14 new solves +14 archived hash-exact native-reference calibrated controls; CPU2
+workers FP64 one thread,900s ceiling,3x60LBFGS.13 end at180 iterations,one176;
+closures207–241,solver median19.61/mean23.22s,RSS929248KiB. Pipeline251.12s exit0.
+Raw AA/CA=.825157133/.900141834. Old local AA=.802942482; ideal local=.811601496,
+CA unchanged. Old final AA/CA=.812697793/.900591068; ideal=.816196848/.900562705.
+Protein-mean AA delta+.003499055 (6/7 proteins,12/14 predictions); CA−.000028363
+(4/7 proteins,4/14 predictions). Tiny CA mean decline is not a backbone collapse,
+but predeclared BOTH-positive screen FAILS; do not rewrite threshold/noninferiority.
+Both14/14 zero-severe+strict checked chirality+RMS and absolute checks. Old full
+joint0/14 both: angleC fails10,angleN14,omega14,CN/carbonyl0.4B9P two rawcis/GTtrans
+mismatches persist. Ideal maxpenetration1.80959,CA RMSmean.22829,heavy.49180,
+maxatom displacement4.69221A. All14 ideal final AA below raw;mean gap.008960286.
+Initial AA advantage+.008659015;final preserves40.4% of that difference;descriptive,
+not causal objective attribution.Recovers28.1% of old raw-to-final AA gap on this dev
+batch,not whole failure fixed. Ideal local still37 severe pairs,final0.
+Independent NumPy reference alignment/saved-pose/metric/objective audit28 and14pairs;
+max coord1.40e-10A,metric8.33e-16,objective5.12e-13,bondinvariance1.01e-12A.
+Three shadow old C4/fitted/two-length audits each28 pass,no new old solves.
+5 focused local tests pass.Archive183members3,285,184bytes,all hashes and six runtime
+source copies verified. DiamondHill root c4_ideal_reference_v1_20260930,pipeline230295,
+controller230302 both terminal,no jobs running. Reports/mini_c4_ideal_reference_2026-09-30;
+docs/mini_c4_ideal_reference_findings_2026-09-30.md;overall updated up front.
+This batch CLOSED; default native-reference calibrated baseline unchanged. Keep
+partial AA benefit, no deployment/independent generalization/input-differentiable
+solver/design-success claim. Original goal active/unfulfilled. Next justified step
+is bounded READ-ONLY analysis of existing raw/local/final GT errors by backbone,
+sidechain and connection neighbourhood; identify where remaining loss arises before
+another intervention. No new weights/budget/template sweep or reopening ind32.
+Latest asynchronous homomer authorization was already executed in independent32;
+do not restart source hunt. The old untracked active_experiment_status.json is
+historical2026-09-27 scratch state, not the current run authority.
+
 ## 2026-09-30 — Whole CCD ideal-template local oracle screen positive
 
 Previous goal turn20d0825a was concrete progress: two-length interventionnegative

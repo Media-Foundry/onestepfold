@@ -21,9 +21,10 @@ def audit_connection_window_trial(root):
     torch.set_num_threads(1)
     lock = json.loads((root / 'lock.json').read_text()); source = Path(lock['source'])
     fitted_trial = lock.get('initialization_contract') == 'calibrated_c4_fitted_start_v1'
-    reference_trial = lock.get('reference_contract') == 'calibrated_c4_reference_lengths_v1'
+    ideal_trial = lock.get('reference_contract') == 'calibrated_c4_ideal_reference_v1'
+    reference_trial = ideal_trial or lock.get('reference_contract') == 'calibrated_c4_reference_lengths_v1'
     if 'reference_contract' in lock:
-        assert reference_trial and not fitted_trial and lock['arms'] == ['native_ref','length_ref']
+        assert reference_trial and not fitted_trial and lock['arms'] == ['native_ref', 'ideal_ref' if ideal_trial else 'length_ref']
     if 'initialization_contract' in lock:
         assert fitted_trial and lock['arms'] == ['zero', 'fitted']
     selection = json.loads((source / 'selection.json').read_text())
@@ -64,6 +65,20 @@ def audit_connection_window_trial(root):
                 output_reference[ix['C']] = cnew
                 output_reference[ix['O']] = cnew+(o0-c0)/np.sqrt(np.sum((o0-c0)**2))*p['c_o']['median']
             np.testing.assert_allclose(output_reference,data['output_reference'],rtol=0,atol=1e-12)
+        if ideal_trial and row['arm'] == 'ideal_ref':
+            templates = json.loads(Path(lock['reference_templates']).read_text())['records']
+            for residue in range(2,len(item['sequence'])):
+                ii = np.flatnonzero(residues == residue); nn = names[ii].tolist()
+                template = templates[item['sequence'][residue-1]]
+                xx = np.asarray(template['ideal'])[[template['atom_names'].index(n) for n in nn]]
+                cc, ni, ci = [nn.index(n) for n in ['CA','N','C']]
+                bases = []
+                for points in [xx, mapping['reference'][ii]]:
+                    a = points[ci]-points[cc]; a /= np.sqrt(a@a)
+                    b = points[ni]-points[cc]; b -= a*(a@b); b /= np.sqrt(b@b)
+                    bases.append(np.column_stack([a,b,np.cross(a,b)]))
+                output_reference[ii] = (xx-xx[cc])@bases[0]@bases[1].T+mapping['reference'][ii[cc]]
+            np.testing.assert_allclose(output_reference,data['output_reference'],rtol=0,atol=1e-12)
         adapter = ArticulatedOutput(output_reference, names, residues, item['sequence'],
             json.loads((packet / 'variants.json').read_text())).double()
         variables = PoseVariables(adapter, torch.tensor(data['raw']))
@@ -93,6 +108,16 @@ def audit_connection_window_trial(root):
                     for label in ['local','start','final']:
                         reference_length_error=max(reference_length_error,abs(np.linalg.norm(data[label][ia]-data[label][ib])-target))
             assert reference_length_error < 1e-8
+        if ideal_trial and row['arm'] == 'ideal_ref':
+            for residue in range(2,len(item['sequence'])):
+                ii = np.flatnonzero(residues == residue); nn = names[ii].tolist()
+                template = templates[item['sequence'][residue-1]]; tn = template['atom_names']
+                for a,b,_ in template['bonds']:
+                    ia,ib = ii[nn.index(tn[a])],ii[nn.index(tn[b])]
+                    target = np.linalg.norm(output_reference[ia]-output_reference[ib])
+                    for label in ['local','start','final']:
+                        reference_length_error = max(reference_length_error,abs(np.linalg.norm(data[label][ia]-data[label][ib])-target))
+            assert reference_length_error < 1e-8
         if lock['baseline'] is not None:
             previous = Path(lock['baseline']) / 'cases' / f'{index // 2 * 2 + int(fitted_trial or reference_trial):02d}'
             old = dict(np.load(previous / 'coordinates.npz'))
@@ -102,6 +127,8 @@ def audit_connection_window_trial(root):
                 assert np.array_equal(old['local'], data['local'])
             else:
                 unchanged = ~((residues>1)&(residues<len(item['sequence']))&np.isin(names,['C','O']))
+                if ideal_trial:
+                    unchanged = (residues==1) | (residues==len(item['sequence'])) | (names=='CA')
                 assert np.max(np.abs(old['local'][unchanged]-data['local'][unchanged])) < 1e-8
                 assert np.max(np.abs(data['local'][ca_mask]-data['raw'][ca_mask])) < 1e-8
             if row['arm'] in ['original', 'zero','native_ref']:

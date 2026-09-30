@@ -1,0 +1,19 @@
+{
+  "tests": [
+    "tests/test_ideal_output_reference.py",
+    "tests/test_output_reference_lengths.py",
+    "tests/test_articulated_output.py"
+  ],
+  "passed": 5,
+  "py_compile_passed": true,
+  "source_sha256": {
+    "src/fastglycan/ideal_output_reference.py": "90144c547f673f9db7a52082eb523a91d665e52c7364adc334f9bca02acd22fe",
+    "scripts/prepare_ideal_reference_trial.py": "4ff8ab034d3bc9f6471e42665078b82c8c302e7b060b7fe61749f383eb272962",
+    "scripts/run_connection_window_trial.py": "8446786c337b95cbc3e21ecafe087daa8195e09e33cff808b54078d05861638a",
+    "scripts/audit_connection_window_trial.py": "4a9d00e059b82407234f61af483b1110171635301f3ffd95f0a86a7780ff97d2",
+    "scripts/report_connection_window_trial.py": "da72c76da913e1c355673b09310f4ccce91aad6f9bc063316ec7411efe415558",
+    "docs/mini_c4_ideal_reference_v1.md": "348a759d9adcb90faa7789a833ace7045735fc1e2b0f12188a2c8374557edddc",
+    "tests/test_ideal_output_reference.py": "2427da83305485d6f54247399ad772ae19c05acf20a9cdf8230fc1f77c686ce5"
+  },
+  "scope": "20 named templates, mismatched graph rejection, rigid invariance and previous constructor tests; not solver input-gradient certification"
+}

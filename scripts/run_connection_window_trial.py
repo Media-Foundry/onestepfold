@@ -29,6 +29,7 @@ from fastglycan.scaling_metrics import lddt_observed
 from fastglycan.local_projection_fit import fit_local_projection
 from fastglycan.geometry_start import pose_variables_at_start
 from fastglycan.output_reference_lengths import calibrate_output_reference
+from fastglycan.ideal_output_reference import ideal_output_reference
 
 
 def prepare_window_trial(root, source, baseline, calibration):
@@ -64,9 +65,10 @@ def run_window_case(root, index):
     torch.set_num_threads(1)
     lock = json.loads((root / 'lock.json').read_text()); source = Path(lock['source'])
     fitted_trial = lock.get('initialization_contract') == 'calibrated_c4_fitted_start_v1'
-    reference_trial = lock.get('reference_contract') == 'calibrated_c4_reference_lengths_v1'
+    ideal_trial = lock.get('reference_contract') == 'calibrated_c4_ideal_reference_v1'
+    reference_trial = ideal_trial or lock.get('reference_contract') == 'calibrated_c4_reference_lengths_v1'
     if 'reference_contract' in lock:
-        assert reference_trial and not fitted_trial and lock['arms'] == ['native_ref', 'length_ref']
+        assert reference_trial and not fitted_trial and lock['arms'] == ['native_ref', 'ideal_ref' if ideal_trial else 'length_ref']
     if 'initialization_contract' in lock:
         assert fitted_trial and lock['arms'] == ['zero', 'fitted']
     selection = json.loads((source / 'selection.json').read_text())
@@ -103,7 +105,11 @@ def run_window_case(root, index):
         raw = torch.tensor(raw_array)
         variants = json.loads((packet / 'variants.json').read_text())
         output_reference = mapping['reference']
-        if reference_trial:
+        if ideal_trial:
+            output_reference, changes = ideal_output_reference(output_reference, names, residues,
+                item['sequence'], variants, json.loads(Path(lock['reference_templates']).read_text())['records'])
+            result['reference_changes'] = changes
+        elif reference_trial:
             output_reference, changes = calibrate_output_reference(output_reference, names, residues,
                 item['sequence'], variants, json.loads(Path(lock['reference_parameters']).read_text())['parameters'])
             result['reference_changes'] = changes
@@ -118,6 +124,8 @@ def run_window_case(root, index):
                 assert np.max(np.abs(start.numpy() - old['start'])) < 1e-8
             else:
                 unchanged = ~((residues > 1) & (residues < len(item['sequence'])) & np.isin(names, ['C','O']))
+                if ideal_trial:
+                    unchanged = (residues == 1) | (residues == len(item['sequence'])) | (names == 'CA')
                 result['unchanged_local_max_abs'] = float(np.max(np.abs(start.numpy()[unchanged]-old['local'][unchanged])))
                 assert result['unchanged_local_max_abs'] < 1e-8
                 assert np.max(np.abs(start.numpy()[names=='CA']-raw_array[names=='CA'])) < 1e-8
