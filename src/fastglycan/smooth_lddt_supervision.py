@@ -12,6 +12,7 @@ from __future__ import annotations
 
 import numpy as np
 import torch
+import math
 from scipy.spatial import cKDTree
 
 RADIUS = 15.0
@@ -70,8 +71,8 @@ def build_smooth_lddt_labels(labels, inventory):
     }
 
 
-def smooth_lddt_loss(prediction, labels):
-    """Return one minus the observed-atom sigmoid lDDT, with temperature 0.1 A.
+def smooth_lddt_loss(prediction, labels, *, temperature=TEMPERATURE):
+    """Return one minus sigmoid lDDT; the historical default remains 0.1 A.
 
     Only distances along the precomputed sparse pair list enter autograd; no
     dense atom-by-atom distance matrix is formed. FP64 inputs retain FP64 for
@@ -81,6 +82,8 @@ def smooth_lddt_loss(prediction, labels):
     """
     if prediction.ndim != 2 or prediction.shape[-1] != 3:
         raise ValueError("expected [atom,3] prediction")
+    if not math.isfinite(temperature) or temperature <= 0:
+        raise ValueError("temperature must be finite and positive")
     if not prediction.is_floating_point():
         raise ValueError("prediction must have floating-point coordinates")
     if labels["neighbor_count"].shape != prediction.shape[:1]:
@@ -99,5 +102,5 @@ def smooth_lddt_loss(prediction, labels):
             raise ValueError("nonfinite prediction in an evaluable pair")
         error = (delta.norm(dim=-1) - reference).abs()
         thresholds = x.new_tensor(THRESHOLDS)
-        pair_score = torch.sigmoid((thresholds - error[:, None]) / TEMPERATURE).mean(-1)
+        pair_score = torch.sigmoid((thresholds - error[:, None]) / temperature).mean(-1)
         return 1.0 - (weight * pair_score).sum()

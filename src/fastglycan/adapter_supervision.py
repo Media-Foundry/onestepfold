@@ -47,7 +47,7 @@ def build_adapter_supervision(mapping, bonds, sequence):
         allowed_pair_count=n*(n-1)//2-len(excluded),atoms=n)
 
 
-def adapter_loss_parts(prediction, supervision, teacher=None):
+def adapter_loss_parts(prediction, supervision, teacher=None, *, smooth_temperature=0.1):
     """Return raw components; the locked pilot specifies weights separately.
 
     A detached radius query includes all pairs with potentially positive clash
@@ -57,7 +57,7 @@ def adapter_loss_parts(prediction, supervision, teacher=None):
     x=prediction
     if x.shape!=(supervision['atoms'],3) or not torch.isfinite(x).all():raise ValueError('invalid prediction')
     coordinate=observed_aligned_mse(x,supervision['coordinate'].to(x.device),supervision['coordinate_mask'].to(x.device))
-    smooth=smooth_lddt_loss(x,supervision['smooth'])
+    smooth=smooth_lddt_loss(x,supervision['smooth'],temperature=smooth_temperature)
     pair=supervision['bonds'].to(x.device);distance=supervision['bond_distance'].to(x);peptide=supervision['peptide'].to(x.device)
     errors=((x[pair[:,0]]-x[pair[:,1]]).norm(dim=-1)-distance).square()
     categories=[errors[peptide==kind].mean() for kind in [False,True] if (peptide==kind).any()]

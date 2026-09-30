@@ -17,6 +17,7 @@ def analyze_diffusion_effects(root):
     checkpoint=torch.load(base_path,map_location='cpu',weights_only=False)
     base=checkpoint['model'] if 'model' in checkpoint else checkpoint
     checkpoints=dict(lock['checkpoints'])
+    checkpoints.update(lock.get('analysis_checkpoints',{}))
     if 'old_low' in lock:checkpoints['old_low']=lock['old_low']
     trained={a:torch.load(c['path'],map_location='cpu',weights_only=False)['trained'] for a,c in checkpoints.items()}
     matrices=[]

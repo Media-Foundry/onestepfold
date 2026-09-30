@@ -52,8 +52,10 @@ def train_diffusion_pilot(root,arm):
     from fastglycan.adapter_supervision import adapter_loss_parts
     lock=json.loads((root/'lock.json').read_text());assert arm in lock['arms']
     recipe=resolve_diffusion_recipe(lock,arm)
+    temperature=lock.get('smooth_temperature_by_arm',{}).get(arm,0.1)
+    assert math.isfinite(temperature) and temperature>0
     folder=root/arm;folder.mkdir(exist_ok=False);start=time.monotonic()
-    report=dict(complete=False,arm=arm,recipe=recipe,updates=0,exposures=0,lock_sha256=sha256(root/'lock.json'))
+    report=dict(complete=False,arm=arm,recipe=recipe,smooth_temperature=temperature,updates=0,exposures=0,lock_sha256=sha256(root/'lock.json'))
     try:
         for path,digest in lock['hashes'].items():assert sha256(Path(path))==digest
         for path,stat in lock['weight_stats'].items():assert [Path(path).stat().st_size,Path(path).stat().st_mtime_ns]==stat
@@ -94,7 +96,7 @@ def train_diffusion_pilot(root,arm):
             predicted=diffusion_from_conditioning(model,features,noise,conditioning,steps=1).reshape(-1,3)
             if exposure==1:
                 assert np.array_equal(predicted.detach().cpu().numpy(),np.load(data/f's1_seed{seed}.npy')),'zero-adapter cache replay'
-            parts=adapter_loss_parts(predicted,labels,teacher)
+            parts=adapter_loss_parts(predicted,labels,teacher,smooth_temperature=temperature)
             loss=sum(recipe['weights'][name]*value for name,value in parts.items())
             assert torch.isfinite(loss)
             (loss/4).backward()

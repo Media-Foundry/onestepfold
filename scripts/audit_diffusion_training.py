@@ -20,6 +20,7 @@ def audit_diffusion_training(root):
         recipe=resolve_diffusion_recipe(lock,arm)
         report=json.loads((root/arm/'report.json').read_text())
         if 'recipe' in report:assert report['recipe']==recipe
+        assert report.get('smooth_temperature',.1)==lock.get('smooth_temperature_by_arm',{}).get(arm,.1)
         assert report['complete'] and report['updates']==512 and report['exposures']==2048
         assert report['counts']==dict(diffusion=2048,pairformer=0) and report['base_parameters_unchanged']==1613
         assert not report['validation_read'] and report['lock_sha256']==sha256(root/'lock.json')

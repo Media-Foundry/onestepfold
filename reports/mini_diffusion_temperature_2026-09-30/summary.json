@@ -1,0 +1,406 @@
+{
+  "complete": true,
+  "counts": {
+    "native": 0,
+    "wide_matched": 256
+  },
+  "lock_sha256": "2b5e5781d0dab749d1626f93c2f2f45c34229018b05a73986daadffadd0dc69c",
+  "metric_max_abs": 3.3306690738754696e-16,
+  "outputs": 1280,
+  "probe_nfe": 32,
+  "proteins": 128,
+  "scope": "TRAIN-only width1 matched-strength minus archived width0.1 calibrated_high; no new acceptance gate",
+  "seconds": 23.543914739013417,
+  "summary": {
+    "train": {
+      "contrasts": [
+        {
+          "candidate": "native_s2",
+          "introduced_severe_on_zero_instances": 15,
+          "lost_strict_chirality_instances": 16,
+          "quality": {
+            "all_atom_lddt": {
+              "below_minus_005": 0,
+              "ci95": [
+                0.009327613524900786,
+                0.017391012054564618
+              ],
+              "mean": 0.012872249090065152,
+              "median": 0.006635261944552218,
+              "p01": -0.02492324285963227,
+              "p05": -0.0018176785051375543,
+              "positive_proteins": 113,
+              "worst5_mean": -0.012694874992176895
+            },
+            "ca_lddt": {
+              "below_minus_005": 0,
+              "ci95": [
+                0.008545341997128874,
+                0.01904707049317769
+              ],
+              "mean": 0.012900189620904322,
+              "median": 0.006275285808761133,
+              "p01": -0.0250724182522194,
+              "p05": -0.0036156780986849597,
+              "positive_proteins": 108,
+              "worst5_mean": -0.013390253716380838
+            }
+          },
+          "reference": "native_s1"
+        },
+        {
+          "candidate": "calibrated_low",
+          "introduced_severe_on_zero_instances": 0,
+          "lost_strict_chirality_instances": 1,
+          "quality": {
+            "all_atom_lddt": {
+              "below_minus_005": 0,
+              "ci95": [
+                0.000155478145704494,
+                0.00036331000979467336
+              ],
+              "mean": 0.00025110304593135586,
+              "median": 0.0001556244683540986,
+              "p01": -0.0005348628434218583,
+              "p05": -0.0003841816092436195,
+              "positive_proteins": 92,
+              "worst5_mean": -0.0004964562855283254
+            },
+            "ca_lddt": {
+              "below_minus_005": 0,
+              "ci95": [
+                0.00024149497323639236,
+                0.0005716780511761616
+              ],
+              "mean": 0.00038184014876488327,
+              "median": 0.0002456720083631736,
+              "p01": -0.0007524941347984443,
+              "p05": -0.0004998886684715265,
+              "positive_proteins": 93,
+              "worst5_mean": -0.0006922726527347092
+            }
+          },
+          "reference": "native_s1"
+        },
+        {
+          "candidate": "calibrated_high",
+          "introduced_severe_on_zero_instances": 5,
+          "lost_strict_chirality_instances": 10,
+          "quality": {
+            "all_atom_lddt": {
+              "below_minus_005": 0,
+              "ci95": [
+                -0.0009941555309637968,
+                0.0017969818323025908
+              ],
+              "mean": 0.00014252122890964867,
+              "median": -0.0008154956762329024,
+              "p01": -0.009964115563870467,
+              "p05": -0.0058464261481817985,
+              "positive_proteins": 47,
+              "worst5_mean": -0.008280758065948182
+            },
+            "ca_lddt": {
+              "below_minus_005": 0,
+              "ci95": [
+                0.0003954931499908886,
+                0.004180448360667157
+              ],
+              "mean": 0.0018644073001607814,
+              "median": 0.00032611941186444504,
+              "p01": -0.008360819659435772,
+              "p05": -0.00473754871116513,
+              "positive_proteins": 74,
+              "worst5_mean": -0.007475857000981055
+            }
+          },
+          "reference": "native_s1"
+        },
+        {
+          "candidate": "wide_matched",
+          "introduced_severe_on_zero_instances": 5,
+          "lost_strict_chirality_instances": 10,
+          "quality": {
+            "all_atom_lddt": {
+              "below_minus_005": 0,
+              "ci95": [
+                -0.0009611575987507014,
+                0.0018073299649073065
+              ],
+              "mean": 0.0001645576419602563,
+              "median": -0.0009050070504627028,
+              "p01": -0.009782200422911419,
+              "p05": -0.005667517808840522,
+              "positive_proteins": 46,
+              "worst5_mean": -0.008069865843703521
+            },
+            "ca_lddt": {
+              "below_minus_005": 0,
+              "ci95": [
+                0.0003708628659388685,
+                0.004143092797365584
+              ],
+              "mean": 0.001831835109677049,
+              "median": 0.0003973831888066659,
+              "p01": -0.008131784226810705,
+              "p05": -0.004733716801113977,
+              "positive_proteins": 73,
+              "worst5_mean": -0.007349435994121856
+            }
+          },
+          "reference": "native_s1"
+        },
+        {
+          "candidate": "wide_matched",
+          "introduced_severe_on_zero_instances": 0,
+          "lost_strict_chirality_instances": 1,
+          "quality": {
+            "all_atom_lddt": {
+              "below_minus_005": 0,
+              "ci95": [
+                -1.1339986736950556e-05,
+                5.266843604602371e-05
+              ],
+              "mean": 2.2036413050607623e-05,
+              "median": 5.1204129832005396e-05,
+              "p01": -0.00076791044263262,
+              "p05": -0.00029013911528522063,
+              "positive_proteins": 90,
+              "worst5_mean": -0.0005312159796087171
+            },
+            "ca_lddt": {
+              "below_minus_005": 0,
+              "ci95": [
+                -7.94448227279329e-05,
+                1.4057185848464162e-05
+              ],
+              "mean": -3.257219048373233e-05,
+              "median": -4.9565667471496155e-06,
+              "p01": -0.000866927030219281,
+              "p05": -0.0005731255171404715,
+              "positive_proteins": 62,
+              "worst5_mean": -0.000785186172777373
+            }
+          },
+          "reference": "calibrated_high"
+        },
+        {
+          "candidate": "wide_matched",
+          "introduced_severe_on_zero_instances": 5,
+          "lost_strict_chirality_instances": 10,
+          "quality": {
+            "all_atom_lddt": {
+              "below_minus_005": 0,
+              "ci95": [
+                -0.0011324666973339787,
+                0.0014593632829853211
+              ],
+              "mean": -8.654540397109957e-05,
+              "median": -0.0009634891546445035,
+              "p01": -0.009329397480563842,
+              "p05": -0.005182786061234645,
+              "positive_proteins": 41,
+              "worst5_mean": -0.007883219173144948
+            },
+            "ca_lddt": {
+              "below_minus_005": 0,
+              "ci95": [
+                9.597413944913731e-05,
+                0.003599199244761673
+              ],
+              "mean": 0.0014499949609121658,
+              "median": 0.00019530362519037947,
+              "p01": -0.0088431873524946,
+              "p05": -0.004723885272311512,
+              "positive_proteins": 66,
+              "worst5_mean": -0.0071978241483990745
+            }
+          },
+          "reference": "calibrated_low"
+        }
+      ],
+      "models": {
+        "calibrated_high": {
+          "ca_wrong_total": 171,
+          "diffusion_seconds_mean": null,
+          "instances": 256,
+          "max_penetration_max": 3.3094558675076726,
+          "quality_protein_means": {
+            "all_atom_lddt": {
+              "mean": 0.8013274723187871,
+              "median": 0.8292654417541635,
+              "p01": 0.36481402051070977,
+              "p05": 0.6015034056227974,
+              "worst5_mean": 0.4419459661548969
+            },
+            "ca_aligned_rmsd": {
+              "mean": 4.39821042153491,
+              "median": 1.9448395964732277,
+              "p01": 0.548977696803197,
+              "p05": 0.733987214001376,
+              "worst5_mean": 25.20268489881445
+            },
+            "ca_lddt": {
+              "mean": 0.8806548894746249,
+              "median": 0.9106306080676925,
+              "p01": 0.39898889095579193,
+              "p05": 0.6545318250447485,
+              "worst5_mean": 0.4803429735797901
+            }
+          },
+          "severe_pairs_total": 5834,
+          "side_wrong_total": 84,
+          "strict_chirality_instances": 172,
+          "zero_and_strict_both_noises": 51,
+          "zero_and_strict_instances": 123,
+          "zero_severe_instances": 140
+        },
+        "calibrated_low": {
+          "ca_wrong_total": 210,
+          "diffusion_seconds_mean": null,
+          "instances": 256,
+          "max_penetration_max": 3.3195707960702308,
+          "quality_protein_means": {
+            "all_atom_lddt": {
+              "mean": 0.8014360541358088,
+              "median": 0.8294932028333375,
+              "p01": 0.3661286125407889,
+              "p05": 0.5554725529100745,
+              "worst5_mean": 0.4329494741950528
+            },
+            "ca_aligned_rmsd": {
+              "mean": 4.607778327565402,
+              "median": 1.961113276433035,
+              "p01": 0.553941363405132,
+              "p05": 0.7164259744804735,
+              "worst5_mean": 26.27609563437567
+            },
+            "ca_lddt": {
+              "mean": 0.879172322323229,
+              "median": 0.9102434121513778,
+              "p01": 0.40198581925234905,
+              "p05": 0.586077166097234,
+              "worst5_mean": 0.4661850561657455
+            }
+          },
+          "severe_pairs_total": 8015,
+          "side_wrong_total": 131,
+          "strict_chirality_instances": 157,
+          "zero_and_strict_both_noises": 42,
+          "zero_and_strict_instances": 106,
+          "zero_severe_instances": 124
+        },
+        "native_s1": {
+          "ca_wrong_total": 208,
+          "diffusion_seconds_mean": null,
+          "instances": 256,
+          "max_penetration_max": 3.3484659399426127,
+          "quality_protein_means": {
+            "all_atom_lddt": {
+              "mean": 0.8011849510898774,
+              "median": 0.8295737575648894,
+              "p01": 0.36597204222337937,
+              "p05": 0.5519977816972208,
+              "worst5_mean": 0.43192772950335157
+            },
+            "ca_aligned_rmsd": {
+              "mean": 4.624699504471081,
+              "median": 1.964583972697228,
+              "p01": 0.5586216790582303,
+              "p05": 0.7194677596718312,
+              "worst5_mean": 26.3841704508184
+            },
+            "ca_lddt": {
+              "mean": 0.8787904821744641,
+              "median": 0.9101183170270101,
+              "p01": 0.4024104383280586,
+              "p05": 0.5851187917728703,
+              "worst5_mean": 0.464614729602837
+            }
+          },
+          "severe_pairs_total": 8144,
+          "side_wrong_total": 132,
+          "strict_chirality_instances": 157,
+          "zero_and_strict_both_noises": 42,
+          "zero_and_strict_instances": 107,
+          "zero_severe_instances": 124
+        },
+        "native_s2": {
+          "ca_wrong_total": 68,
+          "diffusion_seconds_mean": null,
+          "instances": 256,
+          "max_penetration_max": 3.296950435650544,
+          "quality_protein_means": {
+            "all_atom_lddt": {
+              "mean": 0.8140572001799425,
+              "median": 0.8417953369888909,
+              "p01": 0.34104879936374705,
+              "p05": 0.6011789296123342,
+              "worst5_mean": 0.4338263325297091
+            },
+            "ca_aligned_rmsd": {
+              "mean": 4.608227250924641,
+              "median": 1.8789445349317413,
+              "p01": 0.5649261040764588,
+              "p05": 0.6737750530354966,
+              "worst5_mean": 26.535794210682383
+            },
+            "ca_lddt": {
+              "mean": 0.8916906717953683,
+              "median": 0.9192953807166298,
+              "p01": 0.37572629660482343,
+              "p05": 0.6620300875596391,
+              "worst5_mean": 0.4769110431285536
+            }
+          },
+          "severe_pairs_total": 2359,
+          "side_wrong_total": 60,
+          "strict_chirality_instances": 190,
+          "zero_and_strict_both_noises": 58,
+          "zero_and_strict_instances": 137,
+          "zero_severe_instances": 150
+        },
+        "wide_matched": {
+          "ca_wrong_total": 179,
+          "diffusion_seconds_mean": 0.03984651992266208,
+          "instances": 256,
+          "max_penetration_max": 3.320247374070103,
+          "quality_protein_means": {
+            "all_atom_lddt": {
+              "mean": 0.8013495087318377,
+              "median": 0.829321671631215,
+              "p01": 0.36492872392387626,
+              "p05": 0.6015921852053621,
+              "worst5_mean": 0.44208009496393263
+            },
+            "ca_aligned_rmsd": {
+              "mean": 4.3987102092487556,
+              "median": 1.944821139310537,
+              "p01": 0.5490312744633304,
+              "p05": 0.7336699394674114,
+              "worst5_mean": 25.215120100176307
+            },
+            "ca_lddt": {
+              "mean": 0.880622317284141,
+              "median": 0.9104663060322482,
+              "p01": 0.39874447362319865,
+              "p05": 0.6545710310063311,
+              "worst5_mean": 0.4804628861276455
+            }
+          },
+          "severe_pairs_total": 5809,
+          "side_wrong_total": 87,
+          "strict_chirality_instances": 171,
+          "zero_and_strict_both_noises": 51,
+          "zero_and_strict_instances": 123,
+          "zero_severe_instances": 141
+        }
+      },
+      "proteins": 128,
+      "seeds": [
+        600001,
+        600011
+      ]
+    }
+  }
+}

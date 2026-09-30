@@ -1,3 +1,82 @@
+## 2026-09-30 — Matched-strength smooth-lDDT width trial closed; no joint benefit
+
+Previous326125f8 was PROGRESS (3trainingarms+fullTRAINcomparison+backup).
+This turn found a concrete recipe difference, performedinitialscaleprobe, ONEnew512run,
+fullTRAINevaluation. GoalACTIVE/UNFULFILLED. No validation reread/prediction, no deployment.
+
+CurrentcustomD useswidth.1A; frozenProtenix SmoothLDDTLoss uses sigmoid(threshold-error)
+(scale1A), confirmedlocalprotenix_stage0_pkg/v1_1/site/protenix/model/loss.py SHA
+c5a8c348d589829f3ed1eee36dbc04206773b50a4f22cac00f11fa4d7d978a88 andofficialGitHubsource.
+Differentpairreduction meansourwidthchangeisNOTfullofficiallossreproduction. NoGTmask/
+neighborhoodbugfound; reportedhardlDDTunchanged. Default.1retained, newtemperaturekwarg
+explicitonly. 18testsPASS inclclosedformvalue/coordinategradient,missingGT/defaultcompat.
+
+Protocol docs/mini_diffusion_temperature_v1.md frozenBEFOREprobe/training. TRAIN16same
+hashselectedgroupsaspriorgradientdiagnostic,two oldseeds,initialpublicMini+zeroadapter.
+32S1+64VJPs,width.1/1; all32coordsandoldDgradientvectorsexactreplay. Nooptimizer,
+1613baseweightsunchanged. 4GCD35.5866s. CPUrawvectornorm/cos auditmax5.71e-14.
+m_t=median_protein(mean_noise(||g_D||)): .011853143339902651/.007003376329674238.
+NewweightD=1.6924898480293433, matchesoneinitialstatistic,notAdam/per-targetstrength.
+Ddirectioncosmin/median/max .905819/.975784/.999799. FP64compositionofarchivedinitial
+VJPs fulltotalcosmedian.999243,relativechange median.041388 (range.004009–.149882).
+Notnewdirecttotalbackward. Noqualityusedtoselectcoefficient.
+
+Probe root /media/PM982/onestepfold/diffusion_temperature_probe_v1_20260930;
+controller298659/workers298671–674 completed0/procabsent. 32gradientfiles214320864bytes
+remainREMOTE, onlyhash/size/statisticsbackedup. No oldcheckpoint predictions usedinprobe.
+
+One wide_matched arm frompublicMini/zeroLoRA835584,allotherweights/LRsameas
+calibrated_high: .01A+1.692489848D_T1+1.505408126B+C+.000660025R+.025476389T,
+peakLR1e-4,32warmup→cos1e-5,clip1,Adam(.9,.999),eps1e-8,decay0.
+Same128TRAIN/order2048/accum4/512updates,oldnoises600001/600011. Initialstate/order
+exactoldcontrol; no continuation. Trainingroot diffusion_temperature_learning_v1_20260930;
+controller299571/worker299579 completed0/procabsent.634.651scontroller/629.966sworker.
+Base1613unchanged,112Adamstates512,auditedtemperatureandweightedloss. 11clippedupdates,
+merged∆W/baseFrobenius.00322649 vsnarrow.00324218. No newrank/LR/epochsearch.
+
+Evalroot diffusion_temperature_evaluation_v1_20260930,controller300045,
+8workers301112–119,finalanalyzer301469 allfinished.40.204sGPUinfer,23.544sCPUscore.
+128TRAIN×2×5=1280outputs,256new+32probeNFEs;1024controlsreusepreviousrecipearchive.
+ALL1024coordinateshashesANDscoresmatcholdTRAIN. Native/zero/load/mergeparityPASS.
+DenseindependentAA/CAmax3.33e-16;CSVpairedmeanindependentauditmax1.58e-17.
+Cachesmakecostdiffusion-only,notend-to-end. No oldVALIDATION32usage thiscycle.
+
+MAINwide−calibrated_high: AA .8013274723→.8013495087,delta+.0000220364,
+CI[-.0000113400,.0000526684]. CA .8806548895→.8806223173,delta−.0000325722,
+CI[-.0000794448,.0000140572]. Bothcross0;90/128AAslightlypositive,nomeaningfuljointgain.
+Severe5834→5809;CAwrong171→179,checkedsidewrong84→87. Zero+strict123/256unchanged,
+bothnoises51/128unchanged. Maincomparisonnonewsevere,1loststrictstereo.
+VersusnativeS1AA+.000164558 CI[-.000961158,.001807330],median−.000905007,
+46/128positive,worst5−.008069866. Newsevere5/loststrict10versusnativeunchangedproblem.
+NativeS2AA.814057stillfar. Newmaximumpenetration3.320A. Notchemical/designrelease.
+UnalignedrawheavyRMSmean1.03759A,max15.0814;notposealignedphysicalshiftclaim.
+
+CLOSEwidthhypothesisatthisbudget;defaultnotpromotedto1,notanotherTscan.
+Becausefullinitialgradientperturbationonly~4%,negativeoutcomenotproofalllocaldistance
+supervisionineffective. No backwardbugclaim or FDreopening.
+Nextconcretework: audit current trainable-parameter scope and engineer a dense update
+preflight (nativeparity,activegradients,freezeaudit,memory) before locking a bounded
+same-budget comparison. attach_diffusion_adapter VERIFIEDonly56rank8matricesin8token
+blocks; atomencoder/decoder/otherdiffusionpathsnotupdated. Limitation,NOTcapacityproof.
+Do not automatically extendepochs/LR/temp, claimfull-diffusiontrainingalreadytested,
+or launchnewheldoutconfirmationwithoutusefuljointcandidate. No nextjob submitted.
+
+Code: optionaltemperature in smooth_lddt_loss/adapter_loss_parts; trainer lockkey
+smooth_temperature_by_arm; audittestsreporttemperature; newprobe_diffusion_temperature.py,
+prepare_temperature_learning.py; analyzer supports analysis_checkpoints forreusedcontrols.
+Frozenprivateoldcodes/locksunchanged. Tests18passed,sourceparity18filesverified.
+Docs findings mini_diffusion_temperature_findings_2026-09-30.md +protocol,overviewupdated.
+Reports mini_diffusion_temperature_2026-09-30 includesreadablesummary/CSV/paired/effects,
+calibration/composition,controls/independent/hashes. Probe198members282633bytesSHA
+ a830441508f58400c91d16d65bbcbbf7b585f4cfd0ba7d5e4dcac7a01716851d;
+training164members11544525bytesSHAe661d89ee74830e6289ac512854cae8723a7ee214389135bf42022dbc50df108;
+eval697members62344820bytesSHAadb4fca54280b51778e20219e7d80b57c01fa7477aafa4d5208e44782033c6f8
+(split45MB). All1059memberslocalhashverified. Onlynew256coordsincluded;1024controls
+reference326125f8recipearchivehash080ff6a6...,notduplicated. Sharedlargecache/sourceassetsremote.
+Helpers/tmp/launch_temperature_probe.py,/tmp/launch_temperature_learning.py,
+/tmp/run_temperature_evaluation_pipeline.py,/tmp/collect_temperature_remote.py,
+/tmp/temperature_composite.py,/tmp/verify_temperature_artifacts.py.
+
 ## 2026-09-30 — Recipe×LR comparison completed; fitting/chemistry tradeoff remains
 
 Previous goal turn was NO PROGRESS (restated already-implemented evaluation roles).
