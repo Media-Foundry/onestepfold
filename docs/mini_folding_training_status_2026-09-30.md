@@ -39,6 +39,12 @@ essential. Compact evidence: `interim/matched_probe1024_observation.json` and
 
 ![Fixed TRAIN32 mean and the post-hoc 1MV8 case; no held-out result](../reports/mini_folding_training_2026-09-30/interim/probe1024_mean_and_tail.png)
 
+The subsequent [saved-output objective audit](mini_folding_tail_objective_findings_2026-09-30.md)
+independently reproduces the RMSD/lDDT numbers. For the declining TRAIN128 noise,
+weighted coordinate loss falls1.51348 and outweighs the worsening other terms;
+total loss falls0.39450 while AA-lDDT falls0.13603. This is an observed objective
+tradeoff, not a causal proof or a new loss experiment. All live settings stay fixed.
+
 ## First TRAIN128 probe: modest fitting improvement, new damage remains
 
 At512 new updates, the locked original-TRAIN32 probe (two training noises each)

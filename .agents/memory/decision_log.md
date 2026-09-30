@@ -1,3 +1,38 @@
+## 2026-09-30 — Saved 1MV8 objective audit: real metric tradeoff
+
+Previous turn PROGRESS (matched1024 mean/tail evidence). Current turn PROGRESS:
+independent metrics and fixed loss values recomputed on all12 saved1MV8 outputs,
+no inference/gradient/optimizer/weight change. Main training662290/662291 remains
+RUNNING, downstream queued, goal active/unfulfilled. Keep2048terminal protocol.
+
+HPC3 CPU job662369 COMPLETED0:0 12s,actualaudit3.95s,hidden unusedGPU reservation
+becauseacd_u. Root /data/user/shuang886/Folding/folding_tail_objective_audit_v1_20260930.
+Checks coordinate/input/sourcecode hashes,sourceatom37 identity/masks/GTvalues;
+SciPy alignment independently agrees with CA RMSD(max1.07e-14),AA MSE(5.68e-13),
+denseAA/CA-lDDT(3.33e-16). Five existing label/objective tests pass, testedlocal
+source hashes equalfrozenrun versions. No evidence of alignment/metric error here.
+
+TRAIN128noise600011 start→512→1024: totalobjective5.926910→5.601335→5.532412
+whileAA .794474→.737522→.658448,CA .869626→.800855→.700710,severe2→3→11.
+AAalignedMSE555.883→487.300→404.535,CA RMSD23.391→21.908→19.976.
+Weighted1024-minusstart components:coordinate-1.51347996,smooth+.13154447,
+bond+.05997946,chirality+.00003794,clash+.02234219,teacher+.90507811;
+total-.39449779. Thus this observed move lowerslockedobjective despite worse
+localquality/chemistry. Smoothsurrogate correctlysignalsworsening; coordinate
+gain outweighsremainingloss increases. These are loss-value differences, not
+gradientpercentages or causal attribution toAdam/sharedparameter dynamics.
+OthernoiseTRAIN128total-.100249/AA-.000269;expanded600011total+.044309/
+AA-.010489, so not allcasesfollowone explanation. Teacher is nativeS2synthetic
+auxiliary, GT terms remainexperimentalobservations. CPUrecomputation notclaimed
+bitwiseGPUlossreplay. PosthoconeTRAINcase, no prevalence/generalizationclaim.
+
+Findings docs/mini_folding_tail_objective_findings_2026-09-30.md; reports sameprefix
+containexecution/report/log/launcher. Source scripts/audit_folding_tail_objective.py.
+Trainingstatuslinksfindings. No newweights selected fromcase; no actualnewloss
+experiment, no ESMCfit or design/backward/repair branch. FinalnewVALmean/tails/
+geometry mustinformnextboundedintervention; laterobjectivecontrolwarrantedonly
+with explicitprotocol, not adhoc1MV8tuning. Lastmainstatus~69m bothRUNNING.
+
 ## 2026-09-30 — Matched1024 TRAIN probe exposes a mean/tail tradeoff
 
 Previous goal turn PROGRESS: final report stage queued. This turn initially a
