@@ -22,7 +22,10 @@ def audit_connection_window_trial(root):
     lock = json.loads((root / 'lock.json').read_text()); source = Path(lock['source'])
     fitted_trial = lock.get('initialization_contract') == 'calibrated_c4_fitted_start_v1'
     warm_trial = lock.get('initialization_contract') == 'calibrated_c4_sidechain_repulsion_start_v1'
-    ideal_trial = warm_trial or lock.get('reference_contract') == 'calibrated_c4_ideal_reference_v1'
+    contact_trial = lock.get('objective_contract') == 'calibrated_c4_raw_contact_v1'
+    if 'objective_contract' in lock:
+        assert contact_trial and lock['arms'] == ['zero', 'contact'] and not fitted_trial and not warm_trial
+    ideal_trial = contact_trial or warm_trial or lock.get('reference_contract') == 'calibrated_c4_ideal_reference_v1'
     reference_trial = ideal_trial or lock.get('reference_contract') == 'calibrated_c4_reference_lengths_v1'
     if 'reference_contract' in lock:
         assert reference_trial and not fitted_trial and lock['arms'] == ['native_ref', 'ideal_ref' if ideal_trial else 'length_ref']
@@ -67,7 +70,7 @@ def audit_connection_window_trial(root):
                 output_reference[ix['C']] = cnew
                 output_reference[ix['O']] = cnew+(o0-c0)/np.sqrt(np.sum((o0-c0)**2))*p['c_o']['median']
             np.testing.assert_allclose(output_reference,data['output_reference'],rtol=0,atol=1e-12)
-        if ideal_trial and (warm_trial or row['arm'] == 'ideal_ref'):
+        if ideal_trial and (warm_trial or contact_trial or row['arm'] == 'ideal_ref'):
             templates = json.loads(Path(lock['reference_templates']).read_text())['records']
             for residue in range(2,len(item['sequence'])):
                 ii = np.flatnonzero(residues == residue); nn = names[ii].tolist()
@@ -128,7 +131,7 @@ def audit_connection_window_trial(root):
                     for label in ['local','start','final']:
                         reference_length_error=max(reference_length_error,abs(np.linalg.norm(data[label][ia]-data[label][ib])-target))
             assert reference_length_error < 1e-8
-        if ideal_trial and (warm_trial or row['arm'] == 'ideal_ref'):
+        if ideal_trial and (warm_trial or contact_trial or row['arm'] == 'ideal_ref'):
             for residue in range(2,len(item['sequence'])):
                 ii = np.flatnonzero(residues == residue); nn = names[ii].tolist()
                 template = templates[item['sequence'][residue-1]]; tn = template['atom_names']
@@ -153,7 +156,7 @@ def audit_connection_window_trial(root):
                 assert np.max(np.abs(data['local'][ca_mask]-data['raw'][ca_mask])) < 1e-8
             if row['arm'] in ['original', 'zero','native_ref']:
                 assert np.max(np.abs(old['final'] - data['final'])) < 1e-8
-            if ((fitted_trial or warm_trial) and row['arm'] == 'zero') or (reference_trial and row['arm'] == 'native_ref'):
+            if ((fitted_trial or warm_trial or contact_trial) and row['arm'] == 'zero') or (reference_trial and row['arm'] == 'native_ref'):
                 assert row['reused_control']['report_sha256'] == sha256(previous / 'report.json')
                 assert row['coordinates_sha256'] == sha256(previous / 'coordinates.npz')
                 assert row['values_sha256'] == sha256(previous / 'values.pt')
@@ -162,6 +165,17 @@ def audit_connection_window_trial(root):
             assert row['start_replay_max_abs'] is None
         atoms = torch.load(packet / 'native.pt', map_location='cpu', weights_only=False)['atoms']
         top = GeometryTopology(atoms, mapping['reference']); bonds = top.bonds.numpy(); pairs = top.pairs.numpy()
+        if contact_trial and row['arm'] == 'contact':
+            raw_distance = np.linalg.norm(data['raw'][pairs[:,0]]-data['raw'][pairs[:,1]], axis=1)
+            selected = (np.abs(residues[pairs[:,0]]-residues[pairs[:,1]]) >= 5) & (raw_distance >= 4) & (raw_distance < 15)
+            cp = pairs[selected];ct = raw_distance[selected]
+            degree = np.bincount(cp.ravel(), minlength=len(data['raw']))
+            cw = (1/degree[cp[:,0]]+1/degree[cp[:,1]])/np.count_nonzero(degree) if len(cp) else np.empty(0)
+            assert np.array_equal(cp, data['contact_pairs'])
+            np.testing.assert_allclose(ct, data['contact_target'], rtol=0, atol=1e-12)
+            np.testing.assert_allclose(cw, data['contact_weights'], rtol=0, atol=1e-12)
+            assert row['contact_definition']['pairs'] == len(cp)
+            assert row['contact_definition']['active_atoms'] == np.count_nonzero(degree)
         ca, n, c, cb = top.centres.numpy().T
         anchors = np.array([[int(np.flatnonzero((residues == j) & (names == name))[0])
             for name in ['N', 'CA', 'C', 'O']] for j in range(1, len(item['sequence']) + 1)])
@@ -225,6 +239,14 @@ def audit_connection_window_trial(root):
                     found = row['final_cross_objectives'][name]
                     assert abs(expected-found) <= 1e-7+1e-10*abs(expected)
                     objective_error = max(objective_error, abs(expected-found))
+        if contact_trial and row['arm'] == 'contact':
+            for label in ['start','final']:
+                ce = np.linalg.norm(data[label][cp[:,0]]-data[label][cp[:,1]],axis=1)-ct
+                cv = float(cw @ (2*(np.sqrt(1+ce**2)-1)))
+                found = row['start_objective']['terms']['raw_contact'] if label=='start' else row['final_cross_objectives']['raw_contact']
+                assert abs(cv-found) < 1e-10
+            assert abs(row['final_cross_objectives']['contact']-row['final_cross_objectives']['calibrated']-cv) < 1e-8
+            assert abs(row['history'][-1]['loss']-row['final_cross_objectives']['contact']) < 1e-8
         assert metric_error < 1e-8
         outcomes.append(dict(index=index, verified=True, pose_max_abs=error, metric_max_abs=metric_error,
                              objective_max_abs=objective_error, reference_length_max_abs=reference_length_error))
@@ -233,21 +255,31 @@ def audit_connection_window_trial(root):
         left, right = report['rows'][i:i+2]
         if not (left['success'] and right['success']):
             paired.append(dict(index=i//2, paired=False)); continue
-        for key in (['shared_objective_sha256', 'raw_sha256'] if reference_trial and not warm_trial else ['chart_sha256', 'shared_objective_sha256', 'raw_sha256']):
+        for key in (['shared_objective_sha256', 'raw_sha256'] if reference_trial and not warm_trial and not contact_trial else ['chart_sha256', 'shared_objective_sha256', 'raw_sha256']):
             assert left[key] == right[key]
         x = dict(np.load(root / 'cases' / f'{i:02d}' / 'coordinates.npz'))
         y = dict(np.load(root / 'cases' / f'{i+1:02d}' / 'coordinates.npz'))
         shared = ['raw', 'target', 'atom_names', 'residue_ids']
-        if not reference_trial or warm_trial:
+        if not reference_trial or warm_trial or contact_trial:
             shared.append('local')
-        if warm_trial:
+        if warm_trial or contact_trial:
             shared.append('output_reference')
-        if fitted_trial or reference_trial:
+        if contact_trial:
+            shared.append('start')
+            assert left['objective_sha256'] == right['calibrated_objective_sha256']
+        elif fitted_trial or reference_trial:
             assert left['objective_sha256'] == right['objective_sha256']
         else:
             shared.append('start')
         assert all(np.array_equal(x[k], y[k]) for k in shared)
-        paired.append(dict(index=i//2, paired=True))
+        record = dict(index=i//2, paired=True)
+        if contact_trial:
+            cp,ct,cw = y['contact_pairs'],y['contact_target'],y['contact_weights']
+            for label,coords in [('zero',x['final']),('contact',y['final'])]:
+                error = np.linalg.norm(coords[cp[:,0]]-coords[cp[:,1]],axis=1)-ct
+                record[label+'_raw_contact'] = float(cw @ (2*(np.sqrt(1+error**2)-1)))
+                record[label+'_raw_contact_mae'] = float(cw @ np.abs(error))
+        paired.append(record)
     write_json(root / 'audit.json', dict(complete=True, report_sha256=sha256(root / 'report.json'),
         script_sha256=sha256(Path(__file__)), verified=sum(r['verified'] for r in outcomes),
         paired=sum(r['paired'] for r in paired), cases=outcomes, pairs=paired))

@@ -1,3 +1,59 @@
+## 2026-09-30 — Raw-only contact preservation passes bounded development screen
+
+Previousafa79dc7 read-only attribution was PROGRESS: located rawanchor/objective
+tradeoffs and clarified CA threshold vs continuousdistance disagreement. This turn
+implemented ONE frozen objective intervention on same7supporteddev x2C4/S1 raw,
+3CR6unsupported4comparison slots retained. No newprediction/training/ind32/Y38 use.
+User late reply approved the earlierlocalfitdiagnostic; acknowledged it already
+completed and kept currentrun's olddev/no32/noMini-training boundary.
+Base whole-CCDideal ZERO start, NOT failedwarmstart. Reuse14wholeideal oddcasecontrols;
+14newjointsolves. Same originalraw chart/anchors,calibratedconnections,rawcisbranches,
+fullchemistry pairset/top16,3x60LBFGS. Add weight1 raw-contact term OUTSIDE rho:
+select nativeallowedpairs |resdiff|>=5,4<=rawdist<15; weights(1/n_i+1/n_j)/Nactive;
+penalty2*(sqrt(1+e²)-1),delta1A,stableimplementation. Rawtarget/graphdetached; noGT
+selection, no prior GT diagnosticpairlist. Empty supportzero explicit; actual14
+nonempty57568–216219pairs,539–1336activeatoms. Everyzerostartbitwiseequalbaseline.
+FinalAA .816196847791 -> .816991813427,delta+.000794965636,7/7proteins13/14pred;
+CA .900562705372 -> .900702672556,delta+.000139967185,5/7proteins9/14pred.
+DEVELOPMENT SCREEN PASS. Both14/14zerosevere+strictcheckedCA/ITchirality+rawRMS;
+oldfulljoint0/14connectionsfail. Bothabsolutegeometrysubcheck14/14;notfullchemistry.
+Maxpenetration1.809588->1.817834A (worsebutwithinoldgate);CArawRMS.228295->.229728;
+heavyRMS.491801->.480606,maxatom4.692212->4.649849. Same4B9Praw/GTbranch2instances.
+AAnegative1J7B/12345 -.0000933677; worstCA -.000694596. ProteinAAallpositive;CA
+negative4A02-.0004045785and1J7B-.0000648342. RawAA .825157133307 still14/14higher,
+newgap-.008165319880. Notrestoredrawquality,nogeneralizationclaim.
+Newraw-selectedcontactcost .124060656->.116838939;rawdistanceMAE .224087159->.216008952,
+both14/14improve. Oldcalibratedobjective .272351554->.261713472,14/14lower;commonNEW
+objective .396412210->.378552411,14/14lower. Baselinecounterfactualevaluationonly;
+no reoptimization. Can'tseparate regularization from optimizationpathchanges;
+not globaloptimum/equalFLOPs evidence. DifferentpairdefinitionthanpreviousGTMAE.
+DiamondHillPID247030terminal/controller247031finished;pipeline265.45sexit0.
+2CPUFP64workers1thread,all14x180iterations213–234closures;mean25.230median21.185s,
+range12.764–40.365;fullcase27.057s;RSS1007544KiB~.96GiB. Old23.22historicalnotmatched
+speedclaim.5tests pass(newcontactgradcheck/unequaldegrees/rigidinvariance/empty/rho
+plus2oldgeometry_start).28pose/metrics/chem/baseobjective audits14pairs pass;
+NumPyselectedpairs/targets/weights,contacttermstart/final<1e-10. Maxpose1.252e-10A,
+metric6.66e-16,baseobjective6.25e-13,idealbond1.306e-12. Oldwholeideal andoldwarm
+shadowaudits28each pass.198memberarchive29,267,983bytes everySHAverified,7runtime
+code/test/protocolmatchlocal. Alljobsended,noGPUjobs. Report mini_raw_contact_2026-09-30;
+docs mini_raw_contact_findings_2026-09-30.md. Remote raw_contact_v1_20260930.
+GitNexus256MiB buffer exhaustion interruptedindexrefresh; discarded falsezero affected
+result. Forced fullrebuild with GITNEXUS_LBUG_BUFFER_POOL_SIZE=2147483648 succeeded;
+use thisbounded2GiB prefixforfutureindexing. Re-ran all/staged graph checksafterrepair.
+MCP retained stalehandle/false0 even afterrebuild. FreshCLI and directLocalBackend
+verified FULLstructured all58symbols6flowsHIGH(oldwork),staged23symbols1flowMEDIUM;
+no partial/truncated flags,counts equalfullarrays. /tmp/raw_contact_graph_check.mjs
+and /tmp/raw_contact_full_graph_check.json preservefreshcheck; usefreshCLI/backend
+if MCP staysstale. Do notcommitbasedonitsfalse0.
+DECISION:freeze thismethod,no weights/window/budget tuning onthese7. Next PREPARE
+small fresh proteinconfirmation panel isolatedfromcurrentdevelopment,withlocked
+source/chemistry/GTmapping andsamebudget/controlpolicy; original32lockedvalidation
+UNTOUCHED peruser. Do notmerelyrerunthese7orblendfailedwarmstart. ModelMini remains
+frozen. Need evidencebeyondsmallpositivegain beforeindependentvalidation/deployment.
+Still detachediterativesolver,oldconnections/openfullinputgradient/designutility
+notresolved,fullgoalACTIVEunfulfilled; not defaultproductionpromotion. Read relevant
+panel/source scripts throughGitNexus beforeimplementation. No newreasonFDdebug.
+
 ## 2026-09-30 — Archived joint tradeoff attribution completed; stop initialization tracing
 
 Previous760c55ea was progress:14new global solves+14controls, qualityscreenFAIL but

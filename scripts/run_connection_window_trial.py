@@ -28,6 +28,7 @@ from fastglycan.repair_outcomes import absolute_failures
 from fastglycan.scaling_metrics import lddt_observed
 from fastglycan.local_projection_fit import fit_local_projection
 from fastglycan.geometry_start import pose_variables_at_start
+from fastglycan.raw_contact_objective import RawContactObjective
 from fastglycan.output_reference_lengths import calibrate_output_reference
 from fastglycan.ideal_output_reference import ideal_output_reference
 
@@ -66,7 +67,10 @@ def run_window_case(root, index):
     lock = json.loads((root / 'lock.json').read_text()); source = Path(lock['source'])
     fitted_trial = lock.get('initialization_contract') == 'calibrated_c4_fitted_start_v1'
     warm_trial = lock.get('initialization_contract') == 'calibrated_c4_sidechain_repulsion_start_v1'
-    ideal_trial = warm_trial or lock.get('reference_contract') == 'calibrated_c4_ideal_reference_v1'
+    contact_trial = lock.get('objective_contract') == 'calibrated_c4_raw_contact_v1'
+    if 'objective_contract' in lock:
+        assert contact_trial and lock['arms'] == ['zero', 'contact'] and not fitted_trial and not warm_trial
+    ideal_trial = contact_trial or warm_trial or lock.get('reference_contract') == 'calibrated_c4_ideal_reference_v1'
     reference_trial = ideal_trial or lock.get('reference_contract') == 'calibrated_c4_reference_lengths_v1'
     if 'reference_contract' in lock:
         assert reference_trial and not fitted_trial and lock['arms'] == ['native_ref', 'ideal_ref' if ideal_trial else 'length_ref']
@@ -86,10 +90,10 @@ def run_window_case(root, index):
         chemistry = json.loads((packet / 'report.json').read_text())
         if not chemistry['passed']:
             result.update(not_run=True, source_failure=chemistry['error']); return
-        if ((fitted_trial or warm_trial) and arm == 'zero') or (reference_trial and arm == 'native_ref'):
+        if ((fitted_trial or warm_trial or contact_trial) and arm == 'zero') or (reference_trial and arm == 'native_ref'):
             previous = Path(lock['baseline']) / 'cases' / f'{index // 2 * 2 + 1:02d}'
             saved = json.loads((previous / 'report.json').read_text())
-            assert saved['success'] and saved['arm'] == ('ideal_ref' if warm_trial else 'calibrated')
+            assert saved['success'] and saved['arm'] == ('ideal_ref' if warm_trial or contact_trial else 'calibrated')
             assert saved['group_id'] == group and saved['seed'] == seed
             assert saved['raw_sha256'] == sha256(source / 'data' / group / f'native_{seed}.npy')
             for name, key in [('coordinates.npz', 'coordinates_sha256'), ('values.pt', 'values_sha256')]:
@@ -183,6 +187,14 @@ def run_window_case(root, index):
         base = TailObjective(*args)
         objective = base if not fitted_trial and not reference_trial and arm == 'original' else CalibratedConnectionObjective(
             *args, json.loads(Path(lock['calibration']).read_text()))
+        if contact_trial:
+            assert arm == 'contact'
+            result['calibrated_objective_sha256'] = buffer_digest(objective)
+            objective = RawContactObjective(*args, json.loads(Path(lock['calibration']).read_text()), residues)
+            result['contact_definition'] = dict(pairs=len(objective.contacts.contact_pairs),
+                active_atoms=int((objective.contacts.contact_degree > 0).sum()),
+                weight=1.,delta=1.,raw_distance_min=4.,raw_distance_max_exclusive=15.,min_sequence_separation=5,
+                scales_with_rho=False,scope='frozen original raw and native allowed pairs; no GT selection')
         for name, value in base.named_buffers():
             assert torch.equal(value, dict(objective.named_buffers())[name])
         result.update(chart_sha256=buffer_digest(variables), objective_sha256=buffer_digest(objective),
@@ -210,6 +222,9 @@ def run_window_case(root, index):
                       target=mapping['coordinates'].astype(np.float64))
         if reference_trial:
             arrays['output_reference'] = output_reference
+        if contact_trial:
+            arrays.update(contact_pairs=objective.contacts.contact_pairs.numpy(),
+                contact_target=objective.contacts.contact_target.numpy(),contact_weights=objective.contacts.contact_weights.numpy())
         ca = names == 'CA'; bone = np.isin(names, ['N', 'CA', 'C', 'O'])
         side = np.array([[int(np.flatnonzero((residues == j) & (names == n))[0])
             for n in ['CB', 'CA', 'CG1' if aa == 'I' else 'OG1', 'CG2']]
@@ -244,6 +259,10 @@ def run_window_case(root, index):
             a, _ = base(final, variables.variables, 100.)
             b, _ = CalibratedConnectionObjective(*args, json.loads(Path(lock['calibration']).read_text()))(final, variables.variables, 100.)
         result['final_cross_objectives'] = dict(original=float(a), calibrated=float(b))
+        if contact_trial:
+            with torch.no_grad():
+                c, terms = objective(final, variables.variables, 100.)
+            result['final_cross_objectives'].update(contact=float(c), raw_contact=float(terms['raw_contact']))
         np.savez_compressed(folder / 'coordinates.npz', **arrays, atom_names=names, residue_ids=residues)
         torch.save(dict(initial=initial_values, final=tuple(p.detach().clone() for p in variables.variables)), folder / 'values.pt')
         result.update(success=True, coordinates_sha256=sha256(folder / 'coordinates.npz'),
