@@ -1,0 +1,202 @@
+{
+  "observed_unix": 1790760193.6699119,
+  "arm": "train128",
+  "update": 512,
+  "scope": "training-only fixed32 probe; not validation or checkpoint selection",
+  "report_hashes": {
+    "/data/user/shuang886/Folding/folding_scale_training_v1_20260930/train128/probe_0000/report.json": "9a82d2cedbe89e49c4bdf27c4bcbe87dbf865f81980eb21c1f1fe830c9aa24e7",
+    "/data/user/shuang886/Folding/folding_scale_training_v1_20260930/train128/probe_0512/report.json": "a548df2bb695b95f47818b9e4de5f5a0209feff88e0ac7ffb894449fac3c0d5f"
+  },
+  "coordinates_verified": 128,
+  "summary": {
+    "0": {
+      "all_atom_lddt": 0.8047728912676493,
+      "ca_lddt": 0.8856532535990834,
+      "outputs": 64,
+      "proteins": 32,
+      "role": "train_probe_only",
+      "seconds": 40.50545709487051,
+      "severe_pairs": 394,
+      "update": 0,
+      "zero_and_strict": 41
+    },
+    "512": {
+      "all_atom_lddt": 0.80717921868797,
+      "ca_lddt": 0.8872782969736447,
+      "outputs": 64,
+      "proteins": 32,
+      "role": "train_probe_only",
+      "seconds": 25.343284402042627,
+      "severe_pairs": 330,
+      "update": 512,
+      "zero_and_strict": 47
+    }
+  },
+  "paired": [
+    {
+      "group_id": "b39dc28758a783962593c6afc6fbc268be4a05b05f3bbbea4cceb5b6440f940d",
+      "delta_aa": 0.007989305760239818,
+      "delta_ca": 0.0056851008744606135
+    },
+    {
+      "group_id": "60fd41b7901a80db6da9fc44473ed34656d4871aec48219500df5dbe28d8aeed",
+      "delta_aa": 0.0025800097879186135,
+      "delta_ca": 0.0009212114469168697
+    },
+    {
+      "group_id": "88e19a3f6811d9b1da11d59c43230eae29f2f17544613b02195b70f83023263c",
+      "delta_aa": 0.004027747800960324,
+      "delta_ca": 0.003575690499106998
+    },
+    {
+      "group_id": "216ccdb0edff45ebdf045962f35396f85d040e390f0ebd87b59750e79af7c3ba",
+      "delta_aa": 0.003673685976436636,
+      "delta_ca": 0.002821891690820588
+    },
+    {
+      "group_id": "fc7f09f37843169ec7f55d8e0dbcd046067071e3017c953a18d9bd617b6e17c1",
+      "delta_aa": 0.001391680678049012,
+      "delta_ca": 0.001157307368691407
+    },
+    {
+      "group_id": "736de7cbb5b402907e5d9e3459e67431b58b897639c3fe02ab33121e73be5977",
+      "delta_aa": 0.009913881471197539,
+      "delta_ca": 0.0075202225875454776
+    },
+    {
+      "group_id": "a246103220340964cc60e07837c7c56eb4f7b8fb16100ed4e8c608bb70091562",
+      "delta_aa": -0.00029160071532968734,
+      "delta_ca": -0.0009459378271812202
+    },
+    {
+      "group_id": "fad4577bf4818f602706bf882e26a57cd1d26e8812e617826b6a4d47f109b150",
+      "delta_aa": 0.001057321350202145,
+      "delta_ca": -0.0007849000524166594
+    },
+    {
+      "group_id": "e2e1feb9566c1d6e41881ac7ee2dd1a92c274905a9c583c064afd25694cf5e1c",
+      "delta_aa": 0.006530260190003467,
+      "delta_ca": 0.00517929553448182
+    },
+    {
+      "group_id": "449497bdd616e4dfa12b2cc08b6f8c2e3acf06c3ca09cffa1888d8456dc652a6",
+      "delta_aa": 0.0056409455576699186,
+      "delta_ca": 0.005823741869958821
+    },
+    {
+      "group_id": "569bdb8e20d6bc3dac0518323e9a83916ae9ed872d93f364340a396bdb936cfc",
+      "delta_aa": 0.001234322109125885,
+      "delta_ca": 0.0016365129989487914
+    },
+    {
+      "group_id": "b3720c71607d41f1d13c0eaf1014fcb3aa8dcb16459f1b97fe9347c3cdc35223",
+      "delta_aa": 0.001182578881062657,
+      "delta_ca": 0.0004906068650454842
+    },
+    {
+      "group_id": "1c33967c905c32f24961c0698d1d5f3a2aedbed4b00a2b9bcab9e682a7bede5c",
+      "delta_aa": 0.0008284581574872774,
+      "delta_ca": -8.351829703312497e-05
+    },
+    {
+      "group_id": "d2597b559b17d37477b3e04d627e378589c0578087a8757a7b598154800a1b9a",
+      "delta_aa": 0.004575710295113167,
+      "delta_ca": 0.00451693460908581
+    },
+    {
+      "group_id": "8e5953df380af5aa868762e64c8687638c9ce82da2a640ee6b1c8eb5f345326f",
+      "delta_aa": 0.002787818976619838,
+      "delta_ca": 0.003070792342451778
+    },
+    {
+      "group_id": "bbf5fd23b56264807aeb67ce638aa8b21726fbad2f1f57adfc6f5a9797d45f39",
+      "delta_aa": 0.004134951122210351,
+      "delta_ca": 0.0016549235984528732
+    },
+    {
+      "group_id": "ac4b0d6e10b5fe5b7e79f7e6e692fff3ae7843963ad19f2f14c95a5f69a9f3cf",
+      "delta_aa": -0.028315325071318898,
+      "delta_ca": -0.03483165617460676
+    },
+    {
+      "group_id": "1d5b774c4752d42bf98b61cdc3c083a7c95b6de45c6db732598274f3785c919e",
+      "delta_aa": 0.001216511616473126,
+      "delta_ca": 9.747336916898774e-05
+    },
+    {
+      "group_id": "3bcc0f8608e401c8a6d8236fb8da27512e3cf3ffd41866c76882d918b70bf46d",
+      "delta_aa": -0.00015159203937387122,
+      "delta_ca": 0.00024825681082141227
+    },
+    {
+      "group_id": "246654afaa6ad91106a86ede46fc185657226e88a7f83d34a92a999f2e274407",
+      "delta_aa": 0.002536661092449488,
+      "delta_ca": 0.002192004531446745
+    },
+    {
+      "group_id": "8abc803a1c0879359fbd2fa6e5e0dd879764b6227500b5b5c1304e9d18200ba4",
+      "delta_aa": 0.010037591145750091,
+      "delta_ca": 0.010751362377072082
+    },
+    {
+      "group_id": "2f702dcb8c10feb28f9bb3a949d1142ba1099bec8130e0b6c8cd04b13aeabdd8",
+      "delta_aa": 0.0023462163353973886,
+      "delta_ca": 0.00015326181204394773
+    },
+    {
+      "group_id": "b23e9c9baa2d9d57d1848c5cef99dc48668af28bd00b3ceab109addf03683328",
+      "delta_aa": 0.004111294609839389,
+      "delta_ca": 0.005035188192719586
+    },
+    {
+      "group_id": "c3fd561aae9106f4c44c9e81112ef4376f26c3084c51f1745d68c57291af2278",
+      "delta_aa": 0.0015100899259649636,
+      "delta_ca": 0.0009842105664564227
+    },
+    {
+      "group_id": "f2f998f23ec55e9ea710bf585807aefa1a21cfd2abf4072aea36f50422a93845",
+      "delta_aa": 0.002097184998705981,
+      "delta_ca": 0.001267671213070476
+    },
+    {
+      "group_id": "2939ec7cb19df0f621215dbc39968a241056e44c950918e37830286c0d3718fc",
+      "delta_aa": 0.0011622220046459963,
+      "delta_ca": 0.0005954046964548043
+    },
+    {
+      "group_id": "162849ed3aff3411d9670efb4df8558e0fe678f8cab72d46bc06769149a63757",
+      "delta_aa": 0.0005583550929960657,
+      "delta_ca": 0.0010207081046758604
+    },
+    {
+      "group_id": "080d2ae5b45caf390ef1d5dec5ca4a9dddf9d8ee15705263873be3702b731f61",
+      "delta_aa": 0.0046258815909104856,
+      "delta_ca": 0.0019491406627821783
+    },
+    {
+      "group_id": "2a9dc9d359b223c23bce11939b03b010026157015b16adc19767cd83408be451",
+      "delta_aa": 0.002696496460597886,
+      "delta_ca": 0.0025398786555067
+    },
+    {
+      "group_id": "765fb764abd5e316cab153072b5cd0b29af6ad9c2e601e9d188d40fd2c205cff",
+      "delta_aa": 0.00047257115723076115,
+      "delta_ca": -0.0011402072451280332
+    },
+    {
+      "group_id": "ac4e6d1fb0a98dbad72a9663287334f0b2b7b05400f6c09b4e4f1ba3e29b782f",
+      "delta_aa": 0.011038842585983644,
+      "delta_ca": 0.016081409373712996
+    },
+    {
+      "group_id": "3fee8c07616cbd0056d1196ee9e92f11b2166f19cb837a4e70d64d21ea4be6a3",
+      "delta_aa": 0.0038023985450452713,
+      "delta_ca": 0.0028174049304300897
+    }
+  ],
+  "positive_aa_proteins": 29,
+  "positive_ca_proteins": 27,
+  "aa_below_minus005": 0,
+  "new_severe_instances": 2,
+  "lost_strict_instances": 2
+}

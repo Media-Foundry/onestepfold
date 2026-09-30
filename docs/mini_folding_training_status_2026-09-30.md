@@ -5,6 +5,31 @@ work remains deferred; ESMC is a later matched conditioner-interface comparison.
 The scientific protocol is [folding scaling cycle v1](mini_folding_scaling_cycle_v1.md).
 No new held-out model-quality result is available at launch.
 
+## First TRAIN128 probe: modest fitting improvement, new damage remains
+
+At512 new updates, the locked original-TRAIN32 probe (two training noises each)
+shows the following paired change. These proteins are used for training, not
+validation; no checkpoint selection or budget change follows from this observation.
+
+| Metric | Retained starting point | TRAIN128 +512 updates |
+|---|---:|---:|
+|All-atom lDDT|0.804772891|0.807179219|
+|Cα-lDDT|0.885653254|0.887278297|
+|Zero severe pairs and strict checked chirality|41/64|47/64|
+|Total severe pairs|394|330|
+
+Protein means improve for29/32 in AA and27/32 in Cα; none has mean AA loss
+greater than0.05. Nevertheless,2 previously collision-free instances acquire severe
+pairs, and2 previously strict-stereo instances lose that status. Better aggregate
+geometry is not uniform preservation or full chemical validity. TRAIN423 has not
+yet reached the same512-update probe at this observation, so no between-arm
+quality comparison is available.
+
+Both probe reports have exact locked coverage;128 saved coordinate files across
+the two timepoints were checked for hashes and finite values. This is an interim
+artifact check, not the final independent training audit or GT score recomputation.
+Files: `reports/mini_folding_training_2026-09-30/interim/`.
+
 ## Terminal evaluation now queued
 
 The fixed-terminal pipeline is implemented and submitted under `acd_u` in a
