@@ -8,6 +8,7 @@ from pathlib import Path
 import numpy as np
 import torch
 from fastglycan.paired_teacher_protocol import sha256, write_json
+from fastglycan.diffusion_recipe import resolve_diffusion_recipe
 
 
 def audit_diffusion_training(root):
@@ -16,7 +17,9 @@ def audit_diffusion_training(root):
     for path,digest in lock['hashes'].items():assert sha256(Path(path))==digest
     checkpoints={};histories={};initials=[];summary={}
     for arm in lock['arms']:
+        recipe=resolve_diffusion_recipe(lock,arm)
         report=json.loads((root/arm/'report.json').read_text())
+        if 'recipe' in report:assert report['recipe']==recipe
         assert report['complete'] and report['updates']==512 and report['exposures']==2048
         assert report['counts']==dict(diffusion=2048,pairformer=0) and report['base_parameters_unchanged']==1613
         assert not report['validation_read'] and report['lock_sha256']==sha256(root/'lock.json')
@@ -25,12 +28,13 @@ def audit_diffusion_training(root):
         for i,(record,item) in enumerate(zip(history,lock['order']),1):
             assert record['exposure']==i and all(record[k]==item[k] for k in ['epoch','group_id','seed'])
             assert all(np.isfinite(v) for v in record['parts'].values()) and np.isfinite(record['loss'])
-            expected=set(lock['loss_weights'])-({'teacher'} if arm=='gt' else set())
+            expected=set(recipe['weights'])-(set() if recipe['teacher'] else {'teacher'})
             assert set(record['parts'])==expected
-            weighted=sum(record['parts'][k]*lock['loss_weights'][k] for k in record['parts'])
+            weighted=sum(record['parts'][k]*recipe['weights'][k] for k in record['parts'])
             assert abs(weighted-record['loss'])<=1e-5*max(1,abs(weighted))
             if i%4==0:
                 update=i//4;lr=1e-5*update/32 if update<=32 else 1e-6+.5*9e-6*(1+math.cos(math.pi*(update-32)/480))
+                lr*=recipe['lr_multiplier']
                 assert record['update']==update and abs(record['lr']-lr)<1e-18
                 assert np.isfinite(record['unclipped_accumulated_grad_norm'])
             else:assert 'update' not in record
@@ -52,8 +56,9 @@ def audit_diffusion_training(root):
                 parts={k:float(np.mean([r['parts'][k] for r in part])) for k in part[0]['parts']},
                 gradient_norm_mean=float(np.mean([r['unclipped_accumulated_grad_norm'] for r in part if 'update' in r]))))
         summary[arm]=dict(seconds=report['seconds'],peak_gpu_bytes=report['peak_gpu_bytes'],epochs=epochs)
-    assert initials[0].keys()==initials[1].keys()
-    assert all(torch.equal(initials[0][n][k],initials[1][n][k]) for n in initials[0] for k in initials[0][n])
+    for initial in initials[1:]:
+        assert initials[0].keys()==initial.keys()
+        assert all(torch.equal(initials[0][n][k],initial[n][k]) for n in initials[0] for k in initials[0][n])
     write_json(root/'training_audit.json',dict(complete=True,lock_sha256=sha256(root/'lock.json'),
         checkpoints=checkpoints,histories=histories,identical_initialization=True,summary=summary,
         terminal_only=True,validation_not_used=True,script_sha256=sha256(Path(__file__))))

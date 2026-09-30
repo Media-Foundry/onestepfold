@@ -12,6 +12,7 @@ import traceback
 import numpy as np
 import torch
 from fastglycan.paired_teacher_protocol import sha256, write_json
+from fastglycan.diffusion_recipe import resolve_diffusion_recipe
 
 
 def prepare_diffusion_pilot(root):
@@ -50,8 +51,9 @@ def train_diffusion_pilot(root,arm):
     from fastglycan.hybrid_proposals import identity_noise
     from fastglycan.adapter_supervision import adapter_loss_parts
     lock=json.loads((root/'lock.json').read_text());assert arm in lock['arms']
+    recipe=resolve_diffusion_recipe(lock,arm)
     folder=root/arm;folder.mkdir(exist_ok=False);start=time.monotonic()
-    report=dict(complete=False,arm=arm,updates=0,exposures=0,lock_sha256=sha256(root/'lock.json'))
+    report=dict(complete=False,arm=arm,recipe=recipe,updates=0,exposures=0,lock_sha256=sha256(root/'lock.json'))
     try:
         for path,digest in lock['hashes'].items():assert sha256(Path(path))==digest
         for path,stat in lock['weight_stats'].items():assert [Path(path).stat().st_size,Path(path).stat().st_mtime_ns]==stat
@@ -87,13 +89,13 @@ def train_diffusion_pilot(root,arm):
             native=torch.load(source/'chemistry'/g/'native.pt',map_location='cpu',weights_only=False)
             noise=identity_noise(native['atoms'],seed,device='cuda')
             labels=torch.load(data/'gt_supervision.pt',map_location='cpu',weights_only=False)
-            teacher=torch.as_tensor(np.load(data/f's2_seed{seed}.npy'),device='cuda') if arm=='gt_s2' else None
+            teacher=torch.as_tensor(np.load(data/f's2_seed{seed}.npy'),device='cuda') if recipe['teacher'] else None
             cpu_rng=torch.get_rng_state().clone();gpu_rng=torch.cuda.get_rng_state().clone()
             predicted=diffusion_from_conditioning(model,features,noise,conditioning,steps=1).reshape(-1,3)
             if exposure==1:
                 assert np.array_equal(predicted.detach().cpu().numpy(),np.load(data/f's1_seed{seed}.npy')),'zero-adapter cache replay'
             parts=adapter_loss_parts(predicted,labels,teacher)
-            loss=sum(lock['loss_weights'][name]*value for name,value in parts.items())
+            loss=sum(recipe['weights'][name]*value for name,value in parts.items())
             assert torch.isfinite(loss)
             (loss/4).backward()
             assert torch.equal(cpu_rng,torch.get_rng_state()) and torch.equal(gpu_rng,torch.cuda.get_rng_state())
@@ -103,6 +105,7 @@ def train_diffusion_pilot(root,arm):
             if exposure%4==0:
                 update=exposure//4
                 lr=1e-5*update/32 if update<=32 else 1e-6+.5*(1e-5-1e-6)*(1+math.cos(math.pi*(update-32)/480))
+                lr*=recipe['lr_multiplier']
                 for group in optimizer.param_groups:group['lr']=lr
                 norm=torch.nn.utils.clip_grad_norm_(params,1.,error_if_nonfinite=True)
                 optimizer.step();optimizer.zero_grad(set_to_none=True)
@@ -135,7 +138,7 @@ def train_diffusion_pilot(root,arm):
 
 if __name__=='__main__':
     p=argparse.ArgumentParser();p.add_argument('--root',type=Path,required=True)
-    p.add_argument('--mode',choices=['prepare','train'],required=True);p.add_argument('--arm',choices=['gt','gt_s2']);a=p.parse_args()
+    p.add_argument('--mode',choices=['prepare','train'],required=True);p.add_argument('--arm');a=p.parse_args()
     assert Path(os.environ['PROTENIX_ROOT_DIR']).resolve()==(a.root.parent/'protenix_stage0_pkg/v1_1/runtime').resolve()
     assert os.environ.get('LAYERNORM_TYPE')=='torch'
     if a.mode=='prepare':prepare_diffusion_pilot(a.root)

@@ -68,7 +68,7 @@ def run_diffusion_evaluation(root,index):
         with torch.no_grad():
             native=diffusion_from_conditioning(model,features,noise.clone(),conditioning,steps=1).reshape(-1,3)
             assert np.array_equal(native.cpu().numpy(),np.load(data/f's1_seed{lock["train_seeds"][0]}.npy'))
-            for arm in ['gt','gt_s2']:
+            for arm in lock['checkpoints']:
                 student=copy.deepcopy(model);adapters=attach_diffusion_adapter(student)
                 zero=diffusion_from_conditioning(student,features,noise.clone(),conditioning,steps=1).reshape(-1,3)
                 assert torch.equal(zero,native)
@@ -85,7 +85,7 @@ def run_diffusion_evaluation(root,index):
                 np.save(folder/f'{arm}_probe.npy',merged.cpu().numpy());models[arm]=student
                 del student,adapters,state,zero,unmerged,merged
         del saved,flat,features,conditioning,atoms,noise,native
-        report['probe']=probe_results;report['probe_nfe']=7
+        report['probe']=probe_results;report['probe_nfe']=1+3*len(lock['checkpoints'])
         calls={name:0 for name in models};handles=[]
         for name,m in models.items():
             handles.append(m.diffusion_module.register_forward_hook(lambda *unused,key=name:calls.__setitem__(key,calls[key]+1)))
@@ -102,9 +102,11 @@ def run_diffusion_evaluation(root,index):
                     noise=identity_noise(atoms,seed,device='cuda')
                     for name in lock['models']:
                         file=target/f'{name}_seed{seed}.npy';steps=2 if name=='native_s2' else 1
-                        cached=row['role']=='train' and name.startswith('native')
+                        reused=lock.get('reuse_models',{}).get(name)
+                        cached=row['role']=='train' and (name.startswith('native') or reused is not None)
                         if cached:
-                            previous=data/f's{steps}_seed{seed}.npy'
+                            previous=(Path(reused['root'])/g/f'{reused["model"]}_seed{seed}.npy'
+                                if reused else data/f's{steps}_seed{seed}.npy')
                             assert sha256(previous)==lock['input_hashes'][str(previous)];shutil.copyfile(previous,file);seconds=None
                         else:
                             selected=models['native' if name.startswith('native') else name]
@@ -116,13 +118,14 @@ def run_diffusion_evaluation(root,index):
                             assert torch.equal(cpu_rng,torch.get_rng_state()) and torch.equal(gpu_rng,torch.cuda.get_rng_state())
                             np.save(file,coordinate.cpu().numpy());del coordinate
                         entries.append(dict(model=name,seed=seed,name=file.name,sha256=sha256(file),
-                            cached_native_train=cached,nfe=0 if cached else steps,seconds=seconds))
+                            cached_native_train=cached and name.startswith('native'),
+                            reused_prediction=cached,nfe=0 if cached else steps,seconds=seconds))
                 result=dict(group_id=g,role=row['role'],entries=entries,lock_sha256=sha256(root/'lock.json'))
                 write_json(target/'report.json',result);report['rows'].append(result);write_json(folder/'report.json',report)
                 del saved,flat,features,conditioning,atoms,noise
                 torch.cuda.empty_cache()
         nval=sum(r['role']=='validation' for r in lock['assignments'][index]);n=len(lock['assignments'][index])
-        assert calls==dict(native=6*nval,gt=2*n,gt_s2=2*n)
+        assert calls==dict(native=6*nval,**{arm:2*n for arm in lock['checkpoints']})
         for h in handles:h.remove()
         report.update(complete=True,calls=calls,peak_gpu_bytes=torch.cuda.max_memory_allocated(),
             timing_scope='diffusion only with cached conditioning; includes reference cache rebuild, not ESM/PF runtime')

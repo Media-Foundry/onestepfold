@@ -1,3 +1,70 @@
+## 2026-09-30 — Recipe×LR comparison completed; fitting/chemistry tradeoff remains
+
+Previous goal turn was NO PROGRESS (restated already-implemented evaluation roles).
+This turn implemented/executed/audited three new512update arms and fullTRAIN evaluation.
+GoalACTIVE/UNFULFILLED. No deployment, no new validation inference or automatic budget extension.
+
+Original protocol docs/mini_diffusion_recipe_scale_v1.md honored. Reuseold_low=oldgt_s2512;
+newold_high/calibrated_low/calibrated_high frompublicMini+zero rank8,seed20260930.
+Same128TRAIN/order2048/2noises/accum4/512updates. Explicit per-armrecipeconfig added
+backward-compatibly; old4096exposures/1024updates reaudited in read-only mirrored control.
+4recipe tests+3mask/scoring/adapter testsPASS. Exactinitials/order/rows equal tooldlow.
+Base1613tensorsunchanged,112Adamstatesstep512,allnative/zero/loaded/mergedreplaysPASS.
+
+DiamondHill training /media/PM982/onestepfold/diffusion_recipe_scale_v1_20260930.
+Controller291576,workers291583/584/585 completed0,/procabsent. 640.986s parallelwall;
+old_high635.499s,cal_low605.267s,cal_high637.231s;peak5.313GiB.
+Trainlock3585a23f6eb8735edea150333eb9a743417f9a0dfa8056eccd4e288aa0718cbe.
+New evaluator /media/PM982/onestepfold/diffusion_recipe_evaluation_v1_20260930.
+Controller293108,8workers295221–295228,finalanalyzer295628 allterminal0/procabsent.
+41.542s8GCDinfer,27.525s16CPUscore;1536outputs(6models×128×2),768new+80probeNFEs.
+FullTRAINonly,oldrevealedVAL32 neverreevaluated/readforscoring or selection thiscycle.
+DenseindependentAA/CAmax4.44e-16;768reusedcontrolrecordsALLscoresexactoldTRAINreplay.
+IndependentCSV9metric×5contrastvectorsmax1.78e-15. NoGTmask/geometrygate changes.
+
+TRAINAA: nativeS1 .8011849511,S2 .8140572002,oldlow .8013013149,
+oldhigh .8001680253,callow .8014360541,calhigh .8013274723.
+CA respectively .8787904822,.8916906718,.8789463328,.8791243343,.8791723223,.8806548895.
+Oldhigh−oldlowAA−.00113329 CI[-.00177886,-.00046272]. Calhigh−callow−.00010858
+CI[-.00116629,.00144943]. Objectiveeffectlow+.00013474 CI[.00005586,.00023578];
+high+.00115945 CI[.000145,.00258388]; interaction+.00102471 CI[.0000531,.00236702].
+Intervalsdescriptive,fixednoiseconditional,no multiplicitycorrection/generalityclaim.
+Calhigh−nativeAA+.00014252 CIcross0,median−.00081550,47/128positive,worst5−.00828076.
+Callow−native+.00025110,92/128positive,~2%ofnativeS2−S1gap;notjointchemicalsuccess.
+
+Severepairtotals S1/S2/oldlow/oldhigh/callow/calhigh:8144/2359/8060/6310/8015/5834.
+Zero+strictcheckedinstances107/137/107/130/106/123 of256;bothnoises42/58/42/51/42/51
+of128. CAwrong208/68/207/200/210/171,sidewrong132/60/133/125/131/84.
+Calhigh5newsevereonformerlyzeroinputs:5kl9seed600001,6kysboth,4ja8600011,5z2u600001;
+10loststrictstereo. Oldhighnonewsevere,8loststrict. S2also15newsevere/16loststrict.
+NoAAproteinmeandelta<−.05doesNOTestablishabsenceofmeaningfuldegradation.
+2v66calhighmeanAA+.080822concentratesbenefit;seed600011AA.387855→.490794,
+severe249→151,CAwrong8→3,stillbad;S2AA.646899/severe12. Noextraexampletraining.
+
+Merged∆W/baseFrobeniusoldlow.00018784,oldhigh.00176375,callow.00028884,calhigh.00324218.
+Clippedupdates472/460/15/9. CalhighheavyunalignedrawRMSmean1.0562A,aligned.7061A,
+maxaligned14.3697A(2v66);notjustgauge. Oldlowalignedmean.0152A,oldhigh.3218,callow.0529.
+CalhighGTCA RMS4.6247→4.3982,GTbondRMSE.22009→.16691,realpartialimprovements,
+notjointquality/chemicalrelease. Same-noisecoordinateMSE63.642→59.158 andteacher3.013→2.634,
+butsmoothlDDTloss.203279→.203507. Thus weakupdatesalone no longer sufficient explanation;
+objective/retentiontradeoff unresolved. B/R/Tchangedtogether,notindividualcausalproof.
+
+BatchCLOSED atbudget. No autoLR/epochs/grid, no reusevalidationforselection.
+Nextwork should reassess supervision/nativeabilityretention usingthesecontrols andlock
+ONE discriminativeprotocol beforemoreGPU; do not reopenFD, claimrankinsufficiency or
+launchfreshconfirmationwithoutusefuljointcandidate. No nexttraining job submitted.
+
+Docs mini_diffusion_recipe_scale_findings_2026-09-30.md,mini_diffusion_recipe_evaluation_v1.md,
+overviewupdated. Reports mini_diffusion_recipe_scale_2026-09-30 includes summaries,csv,
+paired/factorial/effects,curves+plotcode,initial/control/process/audits,allcoords andterminal
+checkpoints+optimizer+initials+runtimecodeinarchives. Training160members33905015bytes SHA
+5cfc68475fc81289fc84d67e38fb04c74866720d408926daab5ef102ffa83c2a;eval1991members103910025
+bytes SHA080ff6a6cdbbf56bec7796bccbcdcac19780c88e9678a528262f8f7bddd605dd in45MBpieces.
+All2151memberslocalhashverified. Largeconditioning/sourceassetsremainremoteboundbyhash.
+Posthocaligneddisplacementsdescriptiveonly, scriptandjsonincludedoutsidefrozenarchives.
+Helpers/tmp/launch_recipe_scale.py,/tmp/run_recipe_evaluation_pipeline.py,/tmp/collect_recipe_remote.py.
+Generic eval/scoring/effectsscripts extended perlock; historical remote code/locks unchanged.
+
 ## 2026-09-30 — TRAIN component-gradient audit completed; next minimal factorial specified
 
 Previous40bc604f was PROGRESS: real512training+new32evaluation completed,veryweakgain.

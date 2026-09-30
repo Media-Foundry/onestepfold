@@ -21,6 +21,8 @@ def score_diffusion_case(arguments):
     try:
         lock=json.loads((root/'lock.json').read_text());source=Path(lock['source']);g=row['group_id']
         packet=source/'chemistry'/g;folder=root/'examples'/g
+        for path in [packet/'mapping.npz',packet/'native.pt',source/'data/examples'/g/'gt.npz']:
+            if str(path) in lock['input_hashes']:assert sha256(path)==lock['input_hashes'][str(path)]
         mapping=dict(np.load(packet/'mapping.npz'));native=torch.load(packet/'native.pt',map_location='cpu',weights_only=False)
         atoms=native['atoms'];names=mapping['atom_names'];ri=mapping['residue_ids']-1
         for key,array in [('atom_names',atoms.atom_name),('residue_ids',atoms.res_id),('chain_ids',atoms.chain_id)]:
@@ -64,26 +66,29 @@ def summarize_diffusion_evaluation(root,workers):
     assert execution['complete'] and all(w['exit_code']==0 for w in execution['workers'])
     for path,digest in lock['hashes'].items():assert sha256(Path(path))==digest
     for checkpoint in lock['checkpoints'].values():assert sha256(Path(checkpoint['path']))==checkpoint['sha256']
-    totals=dict(native=0,gt=0,gt_s2=0);seen=[]
+    totals=dict(native=0,**{arm:0 for arm in lock['checkpoints']});seen=[]
+    planned=len(lock['rows']);probe_nfe=1+3*len(lock['checkpoints'])
     for i,assigned in enumerate(lock['assignments']):
         report=json.loads((root/f'worker_{i}/report.json').read_text());assert report['complete']
-        assert report['lock_sha256']==sha256(root/'lock.json') and report['probe_nfe']==7
+        assert report['lock_sha256']==sha256(root/'lock.json') and report['probe_nfe']==probe_nfe
         assert all(all(p.values()) for p in report['probe'].values())
         assert [r['group_id'] for r in report['rows']]==[r['group_id'] for r in assigned]
         for name in totals:totals[name]+=report['calls'][name]
         seen.extend(r['group_id'] for r in report['rows'])
-    assert len(set(seen))==160 and totals==dict(native=192,gt=320,gt_s2=320)
+    nval=sum(r['role']=='validation' for r in lock['rows'])
+    assert len(seen)==len(set(seen))==planned
+    assert totals==dict(native=6*nval,**{arm:2*planned for arm in lock['checkpoints']})
     with ProcessPoolExecutor(max_workers=workers) as pool:
         results=list(pool.map(score_diffusion_case,[(str(root),r) for r in lock['rows']]))
     failures=[dict(group_id=r['group_id'],role=r['role'],error=r['error']) for r in results if not r['complete']]
     records=[v for r in results if r['complete'] for v in r['records']]
     if failures:
-        write_json(root/'evaluation.json',dict(complete=False,planned_proteins=160,failures=failures,
+        write_json(root/'evaluation.json',dict(complete=False,planned_proteins=planned,failures=failures,
             completed_proteins=sum(r['complete'] for r in results),records=records))
         raise RuntimeError('incomplete evaluation; failures retained, no reduced-denominator summary')
-    assert len(records)==1280
+    expected_outputs=2*planned*len(lock['models']);assert len(records)==expected_outputs
     summary={};paired=[]
-    for role in ['train','validation']:
+    for role in sorted({r['role'] for r in lock['rows']}):
         part=[r for r in records if r['role']==role];groups=sorted({r['group_id'] for r in part});n=len(groups)
         lookup={(r['group_id'],r['seed'],r['model']):r for r in part}
         seeds=lock['train_seeds'] if role=='train' else lock['validation_seeds']
@@ -108,7 +113,7 @@ def summarize_diffusion_evaluation(root,workers):
                 max_penetration_max=max(r['geometry']['max_penetration'] for r in rows),
                 diffusion_seconds_mean=float(np.mean([r['seconds'] for r in rows])) if all(r['seconds'] is not None for r in rows) else None)
         contrasts=[]
-        for candidate,reference in [('native_s2','native_s1'),('gt','native_s1'),('gt_s2','native_s1'),('gt_s2','gt')]:
+        for candidate,reference in lock.get('contrasts', [('native_s2','native_s1'),('gt','native_s1'),('gt_s2','native_s1'),('gt_s2','gt')]):
             difference={}
             for metric in ['all_atom_lddt','ca_lddt']:
                 delta=arrays[candidate][metric]-arrays[reference][metric]
@@ -126,9 +131,9 @@ def summarize_diffusion_evaluation(root,workers):
                         delta_ca=lookup[g,s,candidate]['ca_lddt']-lookup[g,s,reference]['ca_lddt']) for s in seeds]))
         summary[role]=dict(proteins=n,seeds=seeds,models=by_model,contrasts=contrasts)
     write_json(root/'evaluation.json',dict(complete=True,lock_sha256=sha256(root/'lock.json'),
-        outputs=1280,proteins=160,counts=totals,probe_nfe=56,metric_max_abs=max(r['metric_max_abs'] for r in results),
+        outputs=expected_outputs,proteins=planned,counts=totals,probe_nfe=probe_nfe*len(lock['assignments']),metric_max_abs=max(r['metric_max_abs'] for r in results),
         summary=summary,paired=paired,records=records,seconds=time.monotonic()-begin,
-        scope='terminal paired learning pilot; TRAIN and held-out VALIDATION kept separate; no deployment pass'))
+        scope=lock.get('primary','terminal paired learning pilot; TRAIN and held-out VALIDATION kept separate; no deployment pass')))
 
 
 if __name__=='__main__':
