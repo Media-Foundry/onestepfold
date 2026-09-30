@@ -1,3 +1,18 @@
+## 2026-09-30 — Gradient diagnostic compatibility correction
+
+Commitdiff after6deabb23 exposed that gradient_budget.py/test_gradient_budget.py
+already existed with component_gradient_statistics and its test. New files had
+replaced them. Restored legacyfunction/test from6cc0dc7e and appended newhelper,
+with imports retained. Known legacycaller scripts/probe_diffusion_gradient_budget.py
+found by text after graph impactUNKNOWN. Four tests pass. OriginalfunctionAST
+matches6cc0dc7e;newcoordinatehelperAST matches executed6deabb23snapshot exactly.
+No model/loss/scoredresult change;remote384-case frozen snapshot untouched. Original
+executedmodule archived as executed_gradient_budget_source.txt;compatibility_correction
+records hashes/AST checks. Historical firstcommit preserved,follow-up fixes API.
+Next parameterdiagnostic should inspect/reuse existing probe_diffusion_gradient_budget.py
+rather than inventing duplicate infrastructure. Panel/goal/previousresults unchanged.
+No livejobs;goalactive. Preserve unrelated worktreechanges.
+
 ## 2026-09-30 — TRAIN coordinate-gradient budget measured, no new training
 
 Previous goalturn PROGRESS (globalterminal6cc0dc7e). Thisturn PROGRESS: new isolated
