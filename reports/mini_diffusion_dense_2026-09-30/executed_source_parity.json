@@ -1,0 +1,81 @@
+{
+  "complete": true,
+  "checks": [
+    {
+      "role": "training",
+      "path": "scripts/train_dense_diffusion.py",
+      "commit": "acc29e82"
+    },
+    {
+      "role": "training",
+      "path": "scripts/audit_dense_diffusion.py",
+      "commit": "acc29e82"
+    },
+    {
+      "role": "training",
+      "path": "src/fastglycan/models/diffusion_scope.py",
+      "commit": "acc29e82"
+    },
+    {
+      "role": "training",
+      "path": "src/fastglycan/models/differentiable_mini.py",
+      "commit": "acc29e82"
+    },
+    {
+      "role": "training",
+      "path": "src/fastglycan/adapter_supervision.py",
+      "commit": "acc29e82"
+    },
+    {
+      "role": "training",
+      "path": "docs/mini_diffusion_dense_learning_v1.md",
+      "commit": "acc29e82"
+    },
+    {
+      "role": "evaluation",
+      "path": "scripts/evaluate_diffusion_learning.py",
+      "commit": "pending"
+    },
+    {
+      "role": "evaluation",
+      "path": "scripts/prepare_dense_evaluation.py",
+      "commit": "pending"
+    },
+    {
+      "role": "evaluation",
+      "path": "scripts/analyze_dense_diffusion_effects.py",
+      "commit": "pending"
+    },
+    {
+      "role": "evaluation",
+      "path": "scripts/score_diffusion_learning.py",
+      "commit": "pending"
+    },
+    {
+      "role": "evaluation",
+      "path": "src/fastglycan/models/diffusion_scope.py",
+      "commit": "pending"
+    },
+    {
+      "role": "evaluation",
+      "path": "src/fastglycan/models/differentiable_mini.py",
+      "commit": "pending"
+    },
+    {
+      "role": "evaluation",
+      "path": "src/fastglycan/adapter_supervision.py",
+      "commit": "pending"
+    },
+    {
+      "role": "evaluation",
+      "path": "src/fastglycan/diffusion_pilot_metrics.py",
+      "commit": "pending"
+    },
+    {
+      "role": "evaluation",
+      "path": "docs/mini_diffusion_dense_evaluation_v1.md",
+      "commit": "pending"
+    }
+  ],
+  "independent_hpc3_checkpoint_hashes_match": true
+}

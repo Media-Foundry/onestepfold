@@ -1,3 +1,91 @@
+## 2026-09-30 — Dense diffusion terminals evaluated; joint TRAIN benefit, freeze for fresh confirmation
+
+Previousacc29e82 was PROGRESS (scope preflights+traininglaunch). This turn completed
+both512 arms, schema-safe native checkpoint loader, fullTRAIN evaluation, audits,
+artifact collection and actualHPC3 checkpoint backup. GoalACTIVE/UNFULFILLED.
+No new validation inference/training extension or deployment pass.
+
+Training /media/PM982/onestepfold/diffusion_dense_learning_v1_20260930 COMPLETE.
+Controller308084,workers308093/308094 terminal0 and/procabsent. 863.048sparallel;
+token598.478s,full859.097s. Peak6272519680B/18032605184B (~5.84/16.79GiB).
+512updates/2048exposures each,identical1613publicinitialfingerprints/order. All
+56/288 native tensorschanged;1557/1325excludedparamtensorsunchanged,Adamstates512.
+Trainingaudit0. Nativecheckpoint schema native_dense_diffusion_v1,notLoRA:
+ token SHA33285de5da8c6614eeab0214097d2bd8a26413a9a911deaf003c463b3c87710a
+ full SHA7fc01820269b6f376f8313b79c4ab2bf8fcfd2a0b2a017a432033a51b73fd829.
+
+Eval /media/PM982/onestepfold/diffusion_dense_evaluation_v1_20260930 COMPLETE.
+Controller310560,workers311009–311016,analyzer311717 allterminal/procabsent.
+42.923s8GCDpredict,25.448s16CPUscore.128TRAIN×2×5=1280outputs,
+512new+56probeNFEs,768nativeS1/S2/calibrated_highcontrolsreusedEXACTcoords/scores.
+No oldVAL32predict/readforselection. DenseindependentAA/CAmax3.33e-16;
+localCSV8contrasts×2metricsinclbootstrapCI/tails EXACT(0maxdiff),geomcountsverified.
+Nativefrozen/public/load/reloadparityPASS,newloadervalidatesALLbeforecopy,scope/
+shape/dtype/nonfinite rejectionno mutation. FivefocusedtestsPASS. OldLoRAbranchkept.
+
+TRAIN proteinmeanAA/CA,severe,CAwrong,sidewrong,zero+strict /256,bothnoise/128:
+ nativeS1 .8011849511/.8787904822,8144,208,132,107,42
+ nativeS2 .8140572002/.8916906718,2359,68,60,137,58
+ cal_high .8013274723/.8806548895,5834,171,84,123,51
+ token    .8035574954/.8826759563,5397,160,94,134,55
+ full     .8064542731/.8853702109,4312,124,60,165,73.
+MAINfull−tokenAA+.002896778CI[.002325748,.003549105],119/128positive;
+CA+.002694255CI[.002057575,.003396989],111/128. AApairedworst5−.00116099.
+Newsevere4/loststrict8vsTOKEN. FullvsnativeAA+.005269322CI[.003560827,.007480954],
+median+.002304635,103/128positive;CA+.006579729CI[.004402412,.009581321].
+FullvsLoRAAA+.005126801,125/128positive;LRdifferentnotpure-rankcontrast.
+FullvsnativepairedAAp05−.002689253,worst5−.005641162;no proteinmean <−.05.
+4OTVAA.346086→.328144 (−.017942),notfixed. 2V66+.108782 but excludingit
+fullvsnativeAAmeanstill+.004454259(posthocdescription,notreviseddenominator).
+All4descriptivelengthbinmeanspositive;>512only9proteins. Notgeneralization.
+FullvsS2AA−.007602927CI[−.010482843,−.005130839],only29/128positive,
+3proteinsmean<−.05. ~41%ofmeanS2-S1gap recovered,notcompletecompression.
+
+Fullvsnative1newsevere(1MV8seed600001 0→1),6loststrict(2B82,4JA8,6NZY,
+3QVS,6ILS,1UM0 respective report seeds). Worstresidualclashes2noisescombined:
+4OOJ1119,1VPS633,4NUR510 (native425,worsened). Maxpenetration3.294A.
+165/256finiteindicatorcombination != fullchemicalvalidity ordesignsuccess.
+Fullhasmorezero+strictinstances thanS2butworsemeanquality/totalclashes;notcontradiction.
+
+Clippedupdates token106/full428;common56ΔW/baseFrob.001828370/.001595674;
+fullselectedall288ratio.001652956. Notjustlargertokenweightmove,notone-modulecause.
+Fullrawheavyunalignedmean1.77272A,properalignedmean.867332,max14.9416;
+notallsmalllocalrepairs,nooldrepairRMSgatefornativelearnedoutputs.
+Same-seedepoch2→16loss1.13817→.98608token,1.12258→.97162full;odd/evennoise
+DIFFERENT,do notcompareepoch1/16partsascausalcheckpointqualitycurve.
+
+DECISION: freeze FULL512 assolelearnedcandidateforfresh independentconfirmation;
+no moreLR/temp/epoch/modulegrid beforeconfirmation. NativeS1/S2matchedreferences.
+PriorTRAIN128andoldrevealedVAL32+historicaldev excludedbyexistingidentity/HSP rule.
+DO NOT reevaluateoldVAL32tochooseconfiguration. Preservecurrentevaluationv2/no
+newaggregatepass. Goalstillaccuratechemicalone-stepdifferentiableoracle;liveq
+andhardmutationutilityunestablishedfortrainedcheckpoint.
+UsefulNEXTsourceassets: diffusion_training_sources_v1_20260930 haspool4096,
+1298ref-isolatedcandidates,222native-preflightpassed/160selected;19qualified
+unusedquotaextras plus manyunvisited. Fullcandidate-pair HSPs archived; add160
+selectedIDs/accessions/PDBs/HSPneighbors toexcludedset, reuseoldsourcecontract
+(Xray<=2.5A,release<=2021-09-30,canonical50–1024,monomer/homooligomer,complete
+observedbackbone,>=90%nativeheavyGTmask,no unsupportedcrosslinks/SGnear).
+Oldtwo lengthstrata50–255/256–1024;do notinventbalanced4strataasifpreviouslylocked.
+Needwritefreshconfirmationselection/evaluationprotocol BEFOREselecting/newoutputs,
+thennew32 and twofixednoises,do notchoosebyGTgeometry ormodelquality.
+Sourceprepqualify_adapter_source/prepare_adapter_sources script and sourcefindings
+docread thisturn;no newsource selection executedyet.
+
+Backups: reports/mini_diffusion_dense_2026-09-30 contains summary/paired/CSV/effects,
+trainingaudit/lock,independentCSV/sourceparity/archiveverification/terminalobservation.
+Trainingarchive177members1055975B SHA53ac9c575bfc5d902387284f13394cec43b669226d70440f88b43beac5c427d5;
+eval975members68431360B SHA88a0fe816be6aa76b06446b403518cfe4440cfe43b23722a519c63273751e9d9 split45MB.
+ALL1152membershashverified.15executedsourcesmatched(trainingpinnedacc29e82,
+evalcurrent). CheckpointsNOTinGit:1,403,989,914Bweights+optimizer nowalsoHPC3
+/data/user/shuang886/Folding/Backups/diffusion_dense_learning_v1_20260930,
+12files1,407,541,957Btotal SHAverifiedreceipt. HPC3python3oldno walrus; verifier
+rewrittenportableandpassed. Sharedconditioning/sourceassetsremainremotehashbound.
+Helpers /tmp/run_dense_evaluation_pipeline.py,/tmp/collect_dense_remote.py,
+/tmp/verify_dense_artifacts.py,/tmp/audit_dense_csv.py,/tmp/verify_dense_backup.py.
+Docs mini_diffusion_dense_findings_2026-09-30 +evaluation_v1,overviewupdated.
+No GPU experiment remains running. Nextsafeactionnewindependentconfirmationprep.
+
 ## 2026-09-30 — Dense diffusion scope preflight completed; paired native training running
 
 Previous goal turn was NO PROGRESS (restated evaluation v2). This turn executed

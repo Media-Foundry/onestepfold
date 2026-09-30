@@ -1,0 +1,475 @@
+{
+  "complete": true,
+  "counts": {
+    "diffusion_dense": 256,
+    "native": 0,
+    "token_dense": 256
+  },
+  "lock_sha256": "a74091c5c3594e9d4a2d9be74a6d25effd94f5038f6060c63c5da971b2faf95b",
+  "metric_max_abs": 3.3306690738754696e-16,
+  "outputs": 1280,
+  "probe_nfe": 56,
+  "proteins": 128,
+  "scope": "TRAIN-only native dense scope comparison; no new acceptance gate or validation reuse",
+  "seconds": 25.447914085001685,
+  "summary": {
+    "train": {
+      "contrasts": [
+        {
+          "candidate": "diffusion_dense",
+          "introduced_severe_on_zero_instances": 4,
+          "lost_strict_chirality_instances": 8,
+          "quality": {
+            "all_atom_lddt": {
+              "below_minus_005": 0,
+              "ci95": [
+                0.0023257483124979415,
+                0.0035491047524421103
+              ],
+              "mean": 0.0028967777241324312,
+              "median": 0.001722077806072475,
+              "p01": -0.0013052436183426642,
+              "p05": -0.0001655218955430692,
+              "positive_proteins": 119,
+              "worst5_mean": -0.001160994322581012
+            },
+            "ca_lddt": {
+              "below_minus_005": 0,
+              "ci95": [
+                0.002057575124981298,
+                0.0033969894102981067
+              ],
+              "mean": 0.002694254576572647,
+              "median": 0.0015162500137851365,
+              "p01": -0.002527710010201587,
+              "p05": -0.00043026625410793603,
+              "positive_proteins": 111,
+              "worst5_mean": -0.0021025931649073276
+            }
+          },
+          "reference": "token_dense"
+        },
+        {
+          "candidate": "token_dense",
+          "introduced_severe_on_zero_instances": 2,
+          "lost_strict_chirality_instances": 8,
+          "quality": {
+            "all_atom_lddt": {
+              "below_minus_005": 0,
+              "ci95": [
+                0.001072909842361595,
+                0.004226423957580377
+              ],
+              "mean": 0.0023725442744194163,
+              "median": 0.0007012341016647272,
+              "p01": -0.007841443879579118,
+              "p05": -0.003718807379070377,
+              "positive_proteins": 77,
+              "worst5_mean": -0.006521242191546975
+            },
+            "ca_lddt": {
+              "below_minus_005": 0,
+              "ci95": [
+                0.002136220985636681,
+                0.006543497921040449
+              ],
+              "mean": 0.0038854741157855165,
+              "median": 0.0014877128042465881,
+              "p01": -0.007263826509441722,
+              "p05": -0.00297205999895489,
+              "positive_proteins": 94,
+              "worst5_mean": -0.005758129100624494
+            }
+          },
+          "reference": "native_s1"
+        },
+        {
+          "candidate": "diffusion_dense",
+          "introduced_severe_on_zero_instances": 1,
+          "lost_strict_chirality_instances": 6,
+          "quality": {
+            "all_atom_lddt": {
+              "below_minus_005": 0,
+              "ci95": [
+                0.003560827422100302,
+                0.007480953648010336
+              ],
+              "mean": 0.0052693219985518475,
+              "median": 0.0023046348630118563,
+              "p01": -0.0047036869635664995,
+              "p05": -0.002689253422520926,
+              "positive_proteins": 103,
+              "worst5_mean": -0.0056411622426454765
+            },
+            "ca_lddt": {
+              "below_minus_005": 0,
+              "ci95": [
+                0.004402412193471579,
+                0.009581321401081828
+              ],
+              "mean": 0.006579728692358164,
+              "median": 0.003249899604418627,
+              "p01": -0.005197740974342734,
+              "p05": -0.0020097911233954826,
+              "positive_proteins": 107,
+              "worst5_mean": -0.0048151570578997315
+            }
+          },
+          "reference": "native_s1"
+        },
+        {
+          "candidate": "token_dense",
+          "introduced_severe_on_zero_instances": 3,
+          "lost_strict_chirality_instances": 6,
+          "quality": {
+            "all_atom_lddt": {
+              "below_minus_005": 0,
+              "ci95": [
+                0.001865366839749733,
+                0.0026258502911771092
+              ],
+              "mean": 0.0022300230455097676,
+              "median": 0.0014384777394758075,
+              "p01": -0.0004854472952939287,
+              "p05": 0.00021595162791580025,
+              "positive_proteins": 124,
+              "worst5_mean": -0.0004106094471100774
+            },
+            "ca_lddt": {
+              "below_minus_005": 0,
+              "ci95": [
+                0.001537049027974726,
+                0.002556532783291619
+              ],
+              "mean": 0.002021066815624735,
+              "median": 0.00099955112891853,
+              "p01": -0.0014892986952646159,
+              "p05": -0.0006183709604822673,
+              "positive_proteins": 109,
+              "worst5_mean": -0.0011993800066698432
+            }
+          },
+          "reference": "calibrated_high"
+        },
+        {
+          "candidate": "diffusion_dense",
+          "introduced_severe_on_zero_instances": 1,
+          "lost_strict_chirality_instances": 5,
+          "quality": {
+            "all_atom_lddt": {
+              "below_minus_005": 0,
+              "ci95": [
+                0.004289694706079081,
+                0.006058108091700463
+              ],
+              "mean": 0.005126800769642199,
+              "median": 0.0033369029316359655,
+              "p01": -0.0005647567775402268,
+              "p05": 0.00037460196741982997,
+              "positive_proteins": 125,
+              "worst5_mean": -0.0005888068298568869
+            },
+            "ca_lddt": {
+              "below_minus_005": 0,
+              "ci95": [
+                0.0037204180037072286,
+                0.005806142964713157
+              ],
+              "mean": 0.004715321392197382,
+              "median": 0.0023796579770652415,
+              "p01": -0.002109959839745912,
+              "p05": 3.828455209327626e-05,
+              "positive_proteins": 121,
+              "worst5_mean": -0.0017092623090633513
+            }
+          },
+          "reference": "calibrated_high"
+        },
+        {
+          "candidate": "token_dense",
+          "introduced_severe_on_zero_instances": 30,
+          "lost_strict_chirality_instances": 40,
+          "quality": {
+            "all_atom_lddt": {
+              "below_minus_005": 3,
+              "ci95": [
+                -0.01364211523425472,
+                -0.007797766574325631
+              ],
+              "mean": -0.010499704815645737,
+              "median": -0.006567169480297175,
+              "p01": -0.07740662876198183,
+              "p05": -0.03735642289218466,
+              "positive_proteins": 17,
+              "worst5_mean": -0.05990870215616527
+            },
+            "ca_lddt": {
+              "below_minus_005": 3,
+              "ci95": [
+                -0.012838776753545628,
+                -0.005977531616556162
+              ],
+              "mean": -0.009014715505118806,
+              "median": -0.005139061097826636,
+              "p01": -0.0804630129382453,
+              "p05": -0.033806272337447145,
+              "positive_proteins": 26,
+              "worst5_mean": -0.06842311319764786
+            }
+          },
+          "reference": "native_s2"
+        },
+        {
+          "candidate": "diffusion_dense",
+          "introduced_severe_on_zero_instances": 19,
+          "lost_strict_chirality_instances": 26,
+          "quality": {
+            "all_atom_lddt": {
+              "below_minus_005": 3,
+              "ci95": [
+                -0.010482843119584457,
+                -0.0051308389998876505
+              ],
+              "mean": -0.007602927091513306,
+              "median": -0.004447327767245657,
+              "p01": -0.07512870747646946,
+              "p05": -0.029777169093575633,
+              "positive_proteins": 29,
+              "worst5_mean": -0.05369078427213847
+            },
+            "ca_lddt": {
+              "below_minus_005": 3,
+              "ci95": [
+                -0.009869994270074556,
+                -0.0035041143828375165
+              ],
+              "mean": -0.006320460928546158,
+              "median": -0.0033470872642255567,
+              "p01": -0.07923303208692851,
+              "p05": -0.028945150794762706,
+              "positive_proteins": 37,
+              "worst5_mean": -0.0628083426534729
+            }
+          },
+          "reference": "native_s2"
+        },
+        {
+          "candidate": "native_s2",
+          "introduced_severe_on_zero_instances": 15,
+          "lost_strict_chirality_instances": 16,
+          "quality": {
+            "all_atom_lddt": {
+              "below_minus_005": 0,
+              "ci95": [
+                0.009327613524900786,
+                0.017391012054564618
+              ],
+              "mean": 0.012872249090065152,
+              "median": 0.006635261944552218,
+              "p01": -0.02492324285963227,
+              "p05": -0.0018176785051375543,
+              "positive_proteins": 113,
+              "worst5_mean": -0.012694874992176895
+            },
+            "ca_lddt": {
+              "below_minus_005": 0,
+              "ci95": [
+                0.008545341997128874,
+                0.01904707049317769
+              ],
+              "mean": 0.012900189620904322,
+              "median": 0.006275285808761133,
+              "p01": -0.0250724182522194,
+              "p05": -0.0036156780986849597,
+              "positive_proteins": 108,
+              "worst5_mean": -0.013390253716380838
+            }
+          },
+          "reference": "native_s1"
+        }
+      ],
+      "models": {
+        "calibrated_high": {
+          "ca_wrong_total": 171,
+          "diffusion_seconds_mean": null,
+          "instances": 256,
+          "max_penetration_max": 3.3094558675076726,
+          "quality_protein_means": {
+            "all_atom_lddt": {
+              "mean": 0.8013274723187871,
+              "median": 0.8292654417541635,
+              "p01": 0.36481402051070977,
+              "p05": 0.6015034056227974,
+              "worst5_mean": 0.4419459661548969
+            },
+            "ca_aligned_rmsd": {
+              "mean": 4.39821042153491,
+              "median": 1.9448395964732277,
+              "p01": 0.548977696803197,
+              "p05": 0.733987214001376,
+              "worst5_mean": 25.20268489881445
+            },
+            "ca_lddt": {
+              "mean": 0.8806548894746249,
+              "median": 0.9106306080676925,
+              "p01": 0.39898889095579193,
+              "p05": 0.6545318250447485,
+              "worst5_mean": 0.4803429735797901
+            }
+          },
+          "severe_pairs_total": 5834,
+          "side_wrong_total": 84,
+          "strict_chirality_instances": 172,
+          "zero_and_strict_both_noises": 51,
+          "zero_and_strict_instances": 123,
+          "zero_severe_instances": 140
+        },
+        "diffusion_dense": {
+          "ca_wrong_total": 124,
+          "diffusion_seconds_mean": 0.02754732478376809,
+          "instances": 256,
+          "max_penetration_max": 3.2940368255939116,
+          "quality_protein_means": {
+            "all_atom_lddt": {
+              "mean": 0.8064542730884292,
+              "median": 0.834160764024059,
+              "p01": 0.3662659471560082,
+              "p05": 0.6080432284118651,
+              "worst5_mean": 0.4467715388279427
+            },
+            "ca_aligned_rmsd": {
+              "mean": 4.299590911144316,
+              "median": 1.888625370286392,
+              "p01": 0.5304506848170263,
+              "p05": 0.7111010259863388,
+              "worst5_mean": 24.8718770164492
+            },
+            "ca_lddt": {
+              "mean": 0.8853702108668222,
+              "median": 0.9184594651996394,
+              "p01": 0.39785427636160436,
+              "p05": 0.6660038002152238,
+              "worst5_mean": 0.4881356953764347
+            }
+          },
+          "severe_pairs_total": 4312,
+          "side_wrong_total": 60,
+          "strict_chirality_instances": 198,
+          "zero_and_strict_both_noises": 73,
+          "zero_and_strict_instances": 165,
+          "zero_severe_instances": 182
+        },
+        "native_s1": {
+          "ca_wrong_total": 208,
+          "diffusion_seconds_mean": null,
+          "instances": 256,
+          "max_penetration_max": 3.3484659399426127,
+          "quality_protein_means": {
+            "all_atom_lddt": {
+              "mean": 0.8011849510898774,
+              "median": 0.8295737575648894,
+              "p01": 0.36597204222337937,
+              "p05": 0.5519977816972208,
+              "worst5_mean": 0.43192772950335157
+            },
+            "ca_aligned_rmsd": {
+              "mean": 4.624699504471081,
+              "median": 1.964583972697228,
+              "p01": 0.5586216790582303,
+              "p05": 0.7194677596718312,
+              "worst5_mean": 26.3841704508184
+            },
+            "ca_lddt": {
+              "mean": 0.8787904821744641,
+              "median": 0.9101183170270101,
+              "p01": 0.4024104383280586,
+              "p05": 0.5851187917728703,
+              "worst5_mean": 0.464614729602837
+            }
+          },
+          "severe_pairs_total": 8144,
+          "side_wrong_total": 132,
+          "strict_chirality_instances": 157,
+          "zero_and_strict_both_noises": 42,
+          "zero_and_strict_instances": 107,
+          "zero_severe_instances": 124
+        },
+        "native_s2": {
+          "ca_wrong_total": 68,
+          "diffusion_seconds_mean": null,
+          "instances": 256,
+          "max_penetration_max": 3.296950435650544,
+          "quality_protein_means": {
+            "all_atom_lddt": {
+              "mean": 0.8140572001799425,
+              "median": 0.8417953369888909,
+              "p01": 0.34104879936374705,
+              "p05": 0.6011789296123342,
+              "worst5_mean": 0.4338263325297091
+            },
+            "ca_aligned_rmsd": {
+              "mean": 4.608227250924641,
+              "median": 1.8789445349317413,
+              "p01": 0.5649261040764588,
+              "p05": 0.6737750530354966,
+              "worst5_mean": 26.535794210682383
+            },
+            "ca_lddt": {
+              "mean": 0.8916906717953683,
+              "median": 0.9192953807166298,
+              "p01": 0.37572629660482343,
+              "p05": 0.6620300875596391,
+              "worst5_mean": 0.4769110431285536
+            }
+          },
+          "severe_pairs_total": 2359,
+          "side_wrong_total": 60,
+          "strict_chirality_instances": 190,
+          "zero_and_strict_both_noises": 58,
+          "zero_and_strict_instances": 137,
+          "zero_severe_instances": 150
+        },
+        "token_dense": {
+          "ca_wrong_total": 160,
+          "diffusion_seconds_mean": 0.04251966162394183,
+          "instances": 256,
+          "max_penetration_max": 3.2441364112573288,
+          "quality_protein_means": {
+            "all_atom_lddt": {
+              "mean": 0.8035574953642968,
+              "median": 0.8305903988123235,
+              "p01": 0.36575901878829326,
+              "p05": 0.6041712539174858,
+              "worst5_mean": 0.44431120106791294
+            },
+            "ca_aligned_rmsd": {
+              "mean": 4.333587865061708,
+              "median": 1.917069130572877,
+              "p01": 0.5400285250214136,
+              "p05": 0.721907876323214,
+              "worst5_mean": 24.781641503143966
+            },
+            "ca_lddt": {
+              "mean": 0.8826759562902495,
+              "median": 0.9140385744707968,
+              "p01": 0.4004702778290736,
+              "p05": 0.6612976754433889,
+              "worst5_mean": 0.48425344024464057
+            }
+          },
+          "severe_pairs_total": 5397,
+          "side_wrong_total": 94,
+          "strict_chirality_instances": 176,
+          "zero_and_strict_both_noises": 55,
+          "zero_and_strict_instances": 134,
+          "zero_severe_instances": 159
+        }
+      },
+      "proteins": 128,
+      "seeds": [
+        600001,
+        600011
+      ]
+    }
+  }
+}

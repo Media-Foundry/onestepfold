@@ -49,6 +49,7 @@ def run_diffusion_evaluation(root,index):
     from fastglycan.models.soft_sequence_chart import device_tree
     from fastglycan.models.differentiable_mini import diffusion_from_conditioning
     from fastglycan.models.diffusion_adapter import attach_diffusion_adapter, merge_diffusion_adapter
+    from fastglycan.models.diffusion_scope import load_dense_diffusion_checkpoint
     from fastglycan.hybrid_proposals import identity_noise
     lock=json.loads((root/'lock.json').read_text());cache=Path(lock['cache']);source=Path(lock['source'])
     folder=root/f'worker_{index}';folder.mkdir(exist_ok=False);start=time.monotonic()
@@ -69,21 +70,34 @@ def run_diffusion_evaluation(root,index):
             native=diffusion_from_conditioning(model,features,noise.clone(),conditioning,steps=1).reshape(-1,3)
             assert np.array_equal(native.cpu().numpy(),np.load(data/f's1_seed{lock["train_seeds"][0]}.npy'))
             for arm in lock['checkpoints']:
-                student=copy.deepcopy(model);adapters=attach_diffusion_adapter(student)
-                zero=diffusion_from_conditioning(student,features,noise.clone(),conditioning,steps=1).reshape(-1,3)
-                assert torch.equal(zero,native)
+                student=copy.deepcopy(model)
                 checkpoint=lock['checkpoints'][arm];assert sha256(Path(checkpoint['path']))==checkpoint['sha256']
                 state=torch.load(checkpoint['path'],map_location='cpu',weights_only=False)
-                assert state['update']==512 and state['arm']==arm and set(state['trained'])==set(adapters)
-                for name,adapter in adapters.items():adapter.load_state_dict(state['trained'][name])
-                unmerged=diffusion_from_conditioning(student,features,noise.clone(),conditioning,steps=1).reshape(-1,3)
-                merge_diffusion_adapter(student,adapters);student.requires_grad_(False)
-                merged=diffusion_from_conditioning(student,features,noise.clone(),conditioning,steps=1).reshape(-1,3)
+                if state.get('schema')=='native_dense_diffusion_v1':
+                    assert state['lock_sha256']==lock['training_lock_sha256']
+                    zero=diffusion_from_conditioning(student,features,noise.clone(),conditioning,steps=1).reshape(-1,3)
+                    assert torch.equal(zero,native)
+                    load_dense_diffusion_checkpoint(student,state,arm=arm,expected_names=lock['selected_names'][arm])
+                    unmerged=diffusion_from_conditioning(student,features,noise.clone(),conditioning,steps=1).reshape(-1,3)
+                    load_dense_diffusion_checkpoint(student,state,arm=arm,expected_names=lock['selected_names'][arm])
+                    merged=diffusion_from_conditioning(student,features,noise.clone(),conditioning,steps=1).reshape(-1,3)
+                    assert all(torch.equal(p,model.get_parameter(n)) for n,p in student.named_parameters() if n not in state['trained'])
+                    probe_results[arm]=dict(public_parity=True,native_reload_parity=True,excluded_weights_unchanged=True)
+                else:
+                    adapters=attach_diffusion_adapter(student)
+                    zero=diffusion_from_conditioning(student,features,noise.clone(),conditioning,steps=1).reshape(-1,3)
+                    assert torch.equal(zero,native)
+                    assert state['update']==512 and state['arm']==arm and set(state['trained'])==set(adapters)
+                    for name,adapter in adapters.items():adapter.load_state_dict(state['trained'][name])
+                    unmerged=diffusion_from_conditioning(student,features,noise.clone(),conditioning,steps=1).reshape(-1,3)
+                    merge_diffusion_adapter(student,adapters);student.requires_grad_(False)
+                    merged=diffusion_from_conditioning(student,features,noise.clone(),conditioning,steps=1).reshape(-1,3)
+                    probe_results[arm]=dict(zero_parity=True,merged_parity=True,restored_native_state_keys=True)
+                    del adapters
                 assert torch.equal(unmerged,merged) and torch.isfinite(merged).all()
                 assert set(student.state_dict())==set(model.state_dict())
-                probe_results[arm]=dict(zero_parity=True,merged_parity=True,restored_native_state_keys=True)
                 np.save(folder/f'{arm}_probe.npy',merged.cpu().numpy());models[arm]=student
-                del student,adapters,state,zero,unmerged,merged
+                del student,state,zero,unmerged,merged
         del saved,flat,features,conditioning,atoms,noise,native
         report['probe']=probe_results;report['probe_nfe']=1+3*len(lock['checkpoints'])
         calls={name:0 for name in models};handles=[]

@@ -1,4 +1,5 @@
 """Explicit dense training scopes; selecting a scope never changes parameter values."""
+import torch
 from torch import nn
 
 
@@ -27,3 +28,23 @@ def select_diffusion_scope(model, scope, *, native_trainable_names):
         raise ValueError('empty or aliased selected parameters')
     for p in selected.values():p.requires_grad_(True)
     return selected
+
+
+def load_dense_diffusion_checkpoint(model, state, *, arm, expected_names):
+    """Validate the whole terminal payload before copying any native weights."""
+    if any(p.requires_grad for p in model.parameters()):
+        raise ValueError('native inference model must be frozen')
+    if (state.get('schema')!='native_dense_diffusion_v1' or state.get('arm')!=arm
+            or state.get('update')!=512 or state.get('exposures')!=2048):
+        raise ValueError('wrong dense terminal checkpoint contract')
+    trained=state['trained'];names=set(expected_names);parameters=dict(model.named_parameters())
+    if not names or set(trained)!=names or not names<=parameters.keys():
+        raise ValueError('dense checkpoint scope mismatch')
+    if not all(n.startswith('diffusion_module.') for n in names):
+        raise ValueError('checkpoint attempts to modify the frozen trunk')
+    for n in names:
+        value=trained[n];parameter=parameters[n]
+        if value.shape!=parameter.shape or value.dtype!=parameter.dtype or not torch.isfinite(value).all():
+            raise ValueError('invalid dense tensor: '+n)
+    with torch.no_grad():
+        for n in names:parameters[n].copy_(trained[n].to(parameters[n].device))
