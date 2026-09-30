@@ -1,3 +1,55 @@
+## 2026-09-30 — Folding TRAIN128/TRAIN423 continuation launched on HPC3
+
+Active user request: continue C4/S1 folding FIRST; BindCraft/interface remains
+later. ESMC retained as later matched conditioner-interface experiment, not
+changed alongside this locked data/optimization comparison. No new predictions
+on validation yet. Overall folding/deployment objectives remain unfinished.
+
+All455cacheworkers completed0:0. Audit662257 COMPLETED7m11,checked55,800,460,070B,
+423TRAIN/32newVAL,1692TRAINnativeS1/S2coords,423exactcache-reloadreplays,
+1820C4cycles+2961diffusionNFEs inclreplay;684611observedTRAINatoms,1895missing
+correctlymasked. Verifiedsource/publicweights/input/GTdistance/bondlabels and
+normalization. VALonlyconditioning,zeroVALpredictions/labels. Cacheaudit/hash
+manifest/executionarchived reports/mini_folding_training_2026-09-30/cache.
+
+New root /data/user/shuang886/Folding/folding_scale_training_v1_20260930
+Privatecodecopiedfromfrozencachecode+newfolding_scale.py/train_folding_scale.py.
+Originalsource/cache/experimentlocksunmodified. trainlockbindscycle/cacheaudit,
+initialcheckpoint,allcode,selected288nativeparamnames,orders,andTR32probe.
+Prepare662281 COMPLETED4s. Preflight662283 COMPLETED1m02H10080GB:
+originalTRAINshort52/long968,publiccachebitwiseequal,retrainedcheckpointreload
+bitwiseequal,all288paramsgradfinite/nonzero,zerooptimizerupdates,excluded
+paramsunchanged. Longpeak16,763,567,616B. Same initialcheckpointSHA
+7fc01820269b6f376f8313b79c4ab2bf8fcfd2a0b2a017a432033a51b73fd829.
+InitialparamfingerprintsSHAdcac9c0a9b34b9576f4413ee4416f5621d0be62e8c88dab3350f5c4f1a389a3d.
+Twofocusedtestspassed(schedulebounds/endpoints,terminalmetadata/scope/NaN
+reject-before-copy). Theseareengineeringchecks,notnewsequence-gradientcertification.
+
+Actualtrainingjobs662290(train128),662291(expanded423),eachH10080GB,4CPU,96GB
+hostRAM,schedulerwallcap3h. Each2048NEWAdamupdates/8192exposures,accum4,resetstate,
+LRwarm64peak1e-5cosend1e-6,fullnative69,777,841params,currentweights/smooth.1,
+frozenESM2/PF/fixedFourier/confidence. NoLoRA/scratch/repair/designloss.
+Atstartupobservationtrain12829updates/116exposures,expanded26/107,finite,noerrors.
+Observationisnotfinalquality. InitialTRprobe64coordinatehashes andallparameter
+fingerprintsconfirmedidenticalbetweenarms;initial_pair_audit.json archived.
+TR32probehas2trainingnoises at0/512/1024/2048,coordinates+AA/CA+geometrysaved.
+256probeNFEsperarmseparatefrom8192trainingNFEs. Checkpoints512/1024/2048;
+only2048isfixedterminalcandidate. New schemafolding_scale_continuation_v1,
+strictloaderrequiresparentSHA/runlockSHA/fullscope/2048updates/8192exposures.
+
+Posttrainingaudit662294 submittedafterok:662290:662291,kill-on-invalid-dep,
+CPUonly(hiddenGPUreservationbecauseacd_u). Checksoptimizersteps/order/LR,
+parameterandinitialcoordinateidentity,scope/frozenparams,allTRprobes/terminalhash.
+No terminal evaluation jobs submitted yet. Next:collecttraining/auditresults,
+explainfailuresifanywithoutoverwritingfrozenruns,thenimplement/runprelocked
+fullTRAINandnewVAL32terminalcomparison(nativeS1/S2/retained/fulltwoarms).
+Keep old64VALout. No adaptiveearlystop/bestcheckpoint/ESMCswitch/extraepochs.
+ScoresmustseparateTRAINoriginal128/added295/VAL32;newterminalmodelhasnoquality
+claimuntilthesearemeasured. Useraskedbatchcyclesapproximately2h,notendlessmonitor.
+
+Docs mini_folding_training_status_2026-09-30.md and overallreport updated.
+Unrelateddirtyfilespreserved;onlyowncode/docs/artifacts+journalentry staged.
+
 Cache update before backup:662226_0 completed onH10080GB,56conditionings,
 52TRAINreloadreplays,224Pairformercycles/364diffusionNFEs,141.51s,
 peak46,106,396,672B. Sevenremaining662228 shards nowRUNNING,not merely pending.
