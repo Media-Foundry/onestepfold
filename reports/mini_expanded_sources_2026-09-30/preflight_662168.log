@@ -1,0 +1,7 @@
+Traceback (most recent call last):
+  File "/data/user/shuang886/Folding/diffusion_expanded_sources_hpc3_v1_20260930/migrate_expanded_sources_hpc3.py", line 97, in <module>
+    p=argparse.ArgumentParser();p.add_argument('--root',type=Path,required=True);p.add_argument('--mode',choices=['preflight','worker','select'],required=True);p.add_argument('--index',type=int,default=-1);a=p.parse_args();assert not torch.cuda.is_available();run_hpc3_source_migration(a.root.resolve(),a.mode,a.index)
+                                                                                                                                                                                                                                                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/user/shuang886/Folding/diffusion_expanded_sources_hpc3_v1_20260930/migrate_expanded_sources_hpc3.py", line 26, in run_hpc3_source_migration
+    from fastglycan.paired_teacher_protocol import sha256,write_json
+ModuleNotFoundError: No module named 'fastglycan.paired_teacher_protocol'

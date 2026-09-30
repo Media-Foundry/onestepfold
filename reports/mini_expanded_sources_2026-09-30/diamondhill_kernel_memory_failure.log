@@ -1,0 +1,35 @@
+Sep 30 15:44:15 DiamondHill kernel: mce: [Hardware Error]: Machine check events logged
+Sep 30 15:44:15 DiamondHill kernel: Disabling lock debugging due to kernel taint
+Sep 30 15:44:15 DiamondHill kernel: [Hardware Error]: Uncorrected, software restartable error.
+Sep 30 15:44:15 DiamondHill kernel: [Hardware Error]: CPU:4 (19:1:1) MC0_STATUS[-|UE|-|AddrV|-|-|-|-|Poison|-]: 0xb400080001010135
+Sep 30 15:44:15 DiamondHill kernel: [Hardware Error]: Error Addr: 0x0000003f04fc3380
+Sep 30 15:44:15 DiamondHill kernel: [Hardware Error]: PPIN: 0x02b0d6d4e99c801a
+Sep 30 15:44:15 DiamondHill kernel: [Hardware Error]: IPID: 0x001000b000000008
+Sep 30 15:44:15 DiamondHill kernel: [Hardware Error]: Load Store Unit Ext. Error Code: 1
+Sep 30 15:44:15 DiamondHill kernel: [Hardware Error]: cache level: L1, tx: DATA, mem-tx: DRD
+Sep 30 15:44:15 DiamondHill kernel: mce: Uncorrected hardware memory error in user-access at 3f04fc3380
+Sep 30 15:44:15 DiamondHill kernel: workqueue: vmstat_update hogged CPU for >10000us 4 times, consider switching to WQ_UNBOUND
+Sep 30 15:44:15 DiamondHill kernel: workqueue: vmstat_update hogged CPU for >10000us 5 times, consider switching to WQ_UNBOUND
+Sep 30 15:44:15 DiamondHill kernel: workqueue: vmstat_update hogged CPU for >10000us 7 times, consider switching to WQ_UNBOUND
+Sep 30 15:44:15 DiamondHill kernel: workqueue: vmstat_update hogged CPU for >10000us 11 times, consider switching to WQ_UNBOUND
+Sep 30 15:44:15 DiamondHill kernel: workqueue: vmstat_update hogged CPU for >10000us 19 times, consider switching to WQ_UNBOUND
+Sep 30 15:44:15 DiamondHill kernel: workqueue: vmstat_update hogged CPU for >10000us 35 times, consider switching to WQ_UNBOUND
+Sep 30 15:44:16 DiamondHill kernel: workqueue: vmstat_update hogged CPU for >10000us 67 times, consider switching to WQ_UNBOUND
+Sep 30 15:44:18 DiamondHill kernel: Memory failure: 0x3f04fc3: Sending SIGBUS to python:326630 due to hardware memory corruption
+Sep 30 15:44:18 DiamondHill kernel: Memory failure: 0x3f04fc3: recovery action for dirty LRU page: Recovered
+Sep 30 15:44:19 DiamondHill kernel: mce: [Hardware Error]: Machine check events logged
+Sep 30 15:44:19 DiamondHill kernel: [Hardware Error]: Uncorrected, software restartable error.
+Sep 30 15:44:19 DiamondHill kernel: [Hardware Error]: CPU:33 (19:1:1) MC0_STATUS[-|UE|-|AddrV|-|-|-|-|Poison|-]: 0xb400080001010135
+Sep 30 15:44:19 DiamondHill kernel: [Hardware Error]: Error Addr: 0x0000003f04fd3f30
+Sep 30 15:44:19 DiamondHill kernel: [Hardware Error]: PPIN: 0x02b0d6d4e99c801a
+Sep 30 15:44:19 DiamondHill kernel: [Hardware Error]: IPID: 0x001000b000000042
+Sep 30 15:44:19 DiamondHill kernel: [Hardware Error]: Load Store Unit Ext. Error Code: 1
+Sep 30 15:44:19 DiamondHill kernel: [Hardware Error]: cache level: L1, tx: DATA, mem-tx: DRD
+Sep 30 15:44:19 DiamondHill kernel: mce: Uncorrected hardware memory error in user-access at 3f04fd3f30
+Sep 30 15:44:19 DiamondHill kernel: Memory failure: 0x3f04fd3: Sending SIGBUS to python:326608 due to hardware memory corruption
+Sep 30 15:44:19 DiamondHill kernel: Memory failure: 0x3f04fd3: recovery action for dirty LRU page: Recovered
+Sep 30 15:44:20 DiamondHill kernel: workqueue: delayed_fput hogged CPU for >10000us 7 times, consider switching to WQ_UNBOUND
+Sep 30 15:44:20 DiamondHill kernel: workqueue: delayed_fput hogged CPU for >10000us 11 times, consider switching to WQ_UNBOUND
+Sep 30 15:44:21 DiamondHill kernel: workqueue: vmstat_update hogged CPU for >10000us 131 times, consider switching to WQ_UNBOUND
+Sep 30 15:44:21 DiamondHill kernel: workqueue: delayed_fput hogged CPU for >10000us 19 times, consider switching to WQ_UNBOUND
+Sep 30 15:44:26 DiamondHill kernel: workqueue: delayed_fput hogged CPU for >10000us 35 times, consider switching to WQ_UNBOUND

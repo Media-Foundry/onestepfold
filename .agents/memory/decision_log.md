@@ -1,3 +1,44 @@
+## 2026-09-30 — Interface-design priority; monomer reanalysis and HPC3 migration preflight
+
+User selected binding-interface design and will supply target/complex. Asked for
+PDB ID/local path, target/design chains, binding-site and immutable-residue
+constraints; no target received yet. Complete target-independent interface audit,
+then finalize task protocol. No further monomer search, no training or source
+reconstruction release. Overall objective remains unfinished; no deployment claim.
+
+Offline analysis of frozen411 outputs completed without new inference. At all4
+gradient-selected sites, local probability replacement scores correlate negatively
+with three-noise hard TOTAL changes (Spearman -.1193,-.1456,-.7456,-.1702).
+2FIP task gain driven by contact reward (-.047253) despite CA clash +.004172 and
+chain +.000172. Noise sensitivity varies; multi-noise averaging alone is not an
+established remedy. Findings docs/mini_position_objective_findings_2026-09-30.md.
+
+Source128→512 preparation started192 single-thread CPU workers on DiamondHill;
+controller326565 exited1 after59.23s. First192 yielded86 provisional additions;
+no final selection. Kernel confirmed hardware memory corruption/SIGBUS to workers
+326630 and326608, no cgroup OOM. Preserve partial root; do not reuse NEW packets
+or start new DiamondHill scientific compute pending hardware recovery/validation.
+No evidence identifies a component or invalidates all prior results.
+
+HPC3 migration root /data/user/shuang886/Folding/diffusion_expanded_sources_hpc3_v1_20260930.
+Pre-fault Git lineage verified8 metadata files and1152 inherited packet files.
+Preflight662168 failed cold import cache; invalidate_caches fixed it, failed logs
+preserved. Retry662184 COMPLETED0:0 in2m21s; verified1349 members,783 candidate
+CIF hashes,128 inherited CIF provenance hashes,2 native chemistry rebuilds exact.
+acd_u minimum1 GPU reserved but hidden/unused,4 CPUs. NO2×96 reconstruction shards,
+new selection, feature extraction or training submitted. Source compatibility is
+not GPU/folding parity. Migration metadata/code/lineage archived locally.
+
+Current SequenceChart/native_sequence_features single-chain; reference lookups
+residue+atom only. soft_esm2 one BOS/EOS sequence; complex needs per-chain native
+mapping. contact_objective is explicitly monomer-only, adjacency unsafe across
+concatenated chains. No existing route is hereby certified for binding. Next must
+preserve target/immutable positions, chain identity and actual inter-chain metrics,
+compare native and learned C4/S1 with matchedS2, native hard rebuild each candidate.
+Do not confuse fixed target sequence with fixed/template-constrained coordinates.
+Do not invent binder/scaffold or infer affinity from contact/confidence.
+See docs/mini_binding_interface_next_stage_2026-09-30.md and migration status.
+
 ## 2026-09-30 — Frozen learned S1 hard-position pilot completed; prospective selection 0/4
 
 Previous0d3d5e8b was PROGRESS: fresh32 forward confirmation completed/pushed.
