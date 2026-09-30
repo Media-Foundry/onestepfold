@@ -1,3 +1,38 @@
+## 2026-09-30 — Alternate source qualification completes with11 reserved groups
+
+PreviousgoalturnPROGRESS(sourceinventory). CurrentturnPROGRESS: implemented
+source-onlysame-ruleisolation/first-passing-variantqualification, completedand
+verifiedoutputs. Activefoldtraining662470continues unchanged; lastseen1824/2048
+updates,1h16m15s. Evaluation662471/662475-485 pendingdependencies; no newquality.
+
+Root folding_alternate_sources_v1_20260930 firstprepare662505COMPLETE7s;
+qualify662506FAILED1:0 25s beforealternateadmission: BLAST normalizedr17781→R17781
+andnewstrictprefixassertrejected. Knownengineering50/968GTreplaypassed. Preserved
+failedroot/code/log. Addedcanonical_hsp_index(case-normalizationonly,namespace/
+rangechecks) andboundarytest. Newretryroot folding_alternate_sources_v1_20260930_retry1:
+662509prepareCOMPLETE50s,662510qualifyCOMPLETE51s. BothHSPfilesbyteidenticaltofirst
+run; allscientificlockfields/order/references/parameters/protocolunchanged.
+
+113groupsvs21694historical+currentreferences,192HSPs independentlyreparsed;
+7reference-excluded,106eligible.199variantrecordsvisitedinlockedorderuntilfirst
+pass/group.12groupsqualify,1mutualconflict ->11reserved_source groups.94groupsfail
+sameGT/nativepreflight. No model/GPUcompute;8singlethreadCPUworkers(GPUhidden),
+no training/prediction/validationpaneldecision. Long-chainshortageremains:
+7groupslength50-255,4length256-511,0length512-1024;actualrange74-365.
+PDBs3e3c,3u2x,7cy1,6czy,1del,2aag,5uky,4xm1,1kt8,1nmp,1s2g.
+
+3focusedtests pass; exactGTknown-source replay; qualifiedGT/nativeidentity/mask/
+coordinateaudit;108datafiles andallinput/code/CIFhashesrechecked. Archives metadata
+andfailed_attempt tar.gz eachmemberSHAverifiedlocally. Sourcepaths areper-attempt,
+use source/chemistry_packet fields, NOTflatdatasetroot. No claim32confirmation
+available orabsencefrompretraining. Nativepreflightimplementationunchanged.
+Newsource_variants.py,pipelineprepare_folding_source_variants.py,tests; docsprotocol/
+findingsmini_folding_source_variant_qualification; reportssameprefix2026-09-30.
+
+NEXT: prioritizefixedfoldterminal/audit/evaluation.11sourcesreservedonly; future
+panel/inferenceprotocolneededbeforeuse. Do notchangeongoing423data/weights, count
+11as32, orpromoteonTRAINprobe. Goalactive/unfulfilled. ESMCstillnotfit/evaluated.
+
 ## 2026-09-30 — Alternate source records remain for failed representatives
 
 Previous goal turn PROGRESS(1024TRAINprobe andglobalRMSDreport). Currentturn
