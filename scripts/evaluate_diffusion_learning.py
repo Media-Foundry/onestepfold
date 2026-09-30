@@ -60,11 +60,16 @@ def run_diffusion_evaluation(root,index):
         torch.set_num_threads(1);runner=rt.runner_setup(folder/'work');runner.configs.dtype='fp32'
         model=runner.model.eval().requires_grad_(False)
         assert all(p.dtype==torch.float32 for p in model.parameters() if p.is_floating_point())
-        probe=lock['probe'];data=cache/'examples'/probe['group_id']
+        probe=lock['probe'];probe_cache=Path(lock.get('probe_cache',str(cache)))
+        probe_source=Path(lock.get('probe_source',str(source)))
+        data=probe_cache/'examples'/probe['group_id']
+        if 'probe_cache' in lock:
+            for path in [data/'conditioning.pt',data/f's1_seed{lock["train_seeds"][0]}.npy',probe_source/'chemistry'/probe['group_id']/'native.pt']:
+                assert sha256(path)==lock['input_hashes'][str(path)]
         saved=torch.load(data/'conditioning.pt',map_location='cpu',weights_only=False)
         flat=saved['conditioning_flat'].cuda();features=device_tree(saved['features'],'cuda')
         conditioning=tuple(x.reshape(s) for x,s in zip(flat.split(saved['sizes']),saved['shapes']))
-        atoms=torch.load(source/'chemistry'/probe['group_id']/'native.pt',map_location='cpu',weights_only=False)['atoms']
+        atoms=torch.load(probe_source/'chemistry'/probe['group_id']/'native.pt',map_location='cpu',weights_only=False)['atoms']
         noise=identity_noise(atoms,lock['train_seeds'][0],device='cuda');models={'native':model};probe_results={}
         with torch.no_grad():
             native=diffusion_from_conditioning(model,features,noise.clone(),conditioning,steps=1).reshape(-1,3)

@@ -1,0 +1,234 @@
+{
+  "complete": true,
+  "counts": {
+    "diffusion_dense": 64,
+    "native": 192
+  },
+  "lock_sha256": "057b4f38826a3efdc8666199cda693746bcf0443d22ca0769fedf7afc2187004",
+  "metric_max_abs": 3.3306690738754696e-16,
+  "outputs": 192,
+  "probe_nfe": 32,
+  "proteins": 32,
+  "scope": "Fresh32 confirmation: frozen full diffusion S1 minus public S1 AA-lDDT; chemistry and CA remain separate",
+  "seconds": 4.831827002984937,
+  "summary": {
+    "validation": {
+      "contrasts": [
+        {
+          "candidate": "diffusion_dense",
+          "introduced_severe_on_zero_instances": 2,
+          "lost_strict_chirality_instances": 2,
+          "quality": {
+            "all_atom_lddt": {
+              "below_minus_005": 0,
+              "ci95": [
+                0.0004792630861719937,
+                0.005543637800262679
+              ],
+              "mean": 0.002668394863587744,
+              "median": 0.000524436479864332,
+              "p01": -0.0032651286926694877,
+              "p05": -0.0026924117377128075,
+              "positive_proteins": 22,
+              "worst5_mean": -0.0031852534391265674
+            },
+            "ca_lddt": {
+              "below_minus_005": 0,
+              "ci95": [
+                0.0015449440516546778,
+                0.009012138135208696
+              ],
+              "mean": 0.0047694155788609235,
+              "median": 0.000833180745338391,
+              "p01": -0.0034602154589333466,
+              "p05": -0.0020650419074055293,
+              "positive_proteins": 21,
+              "worst5_mean": -0.0032290277989174276
+            }
+          },
+          "reference": "native_s1"
+        },
+        {
+          "candidate": "diffusion_dense",
+          "introduced_severe_on_zero_instances": 6,
+          "lost_strict_chirality_instances": 5,
+          "quality": {
+            "all_atom_lddt": {
+              "below_minus_005": 0,
+              "ci95": [
+                -0.008543995445711555,
+                -0.0017253357772208998
+              ],
+              "mean": -0.004978436769335234,
+              "median": -0.005048733001374206,
+              "p01": -0.03569844176850116,
+              "p05": -0.012150689472827264,
+              "positive_proteins": 4,
+              "worst5_mean": -0.02924815508226014
+            },
+            "ca_lddt": {
+              "below_minus_005": 1,
+              "ci95": [
+                -0.008040027249732478,
+                0.00027125921518419315
+              ],
+              "mean": -0.003576535378772866,
+              "median": -0.002980362342869247,
+              "p01": -0.043232702777204174,
+              "p05": -0.009604079928331788,
+              "positive_proteins": 4,
+              "worst5_mean": -0.034239525071294796
+            }
+          },
+          "reference": "native_s2"
+        },
+        {
+          "candidate": "native_s2",
+          "introduced_severe_on_zero_instances": 4,
+          "lost_strict_chirality_instances": 7,
+          "quality": {
+            "all_atom_lddt": {
+              "below_minus_005": 0,
+              "ci95": [
+                0.003987884599181025,
+                0.013194431439297312
+              ],
+              "mean": 0.007646831632922978,
+              "median": 0.005092687861737444,
+              "p01": -0.008508237808033357,
+              "p05": 0.0006417071036677158,
+              "positive_proteins": 31,
+              "worst5_mean": -0.006160328268855153
+            },
+            "ca_lddt": {
+              "below_minus_005": 0,
+              "ci95": [
+                0.0034410120188415835,
+                0.0157887583331785
+              ],
+              "mean": 0.00834595095763379,
+              "median": 0.004132369576772987,
+              "p01": -0.009470269729189799,
+              "p05": 0.00032164794535685106,
+              "positive_proteins": 30,
+              "worst5_mean": -0.006886939279038551
+            }
+          },
+          "reference": "native_s1"
+        }
+      ],
+      "models": {
+        "diffusion_dense": {
+          "ca_wrong_total": 17,
+          "diffusion_seconds_mean": 0.026137703391668765,
+          "instances": 64,
+          "max_penetration_max": 3.3307105203891347,
+          "quality_protein_means": {
+            "all_atom_lddt": {
+              "mean": 0.8014816998962453,
+              "median": 0.8348178880361259,
+              "p01": 0.4356121729338378,
+              "p05": 0.6124841680235359,
+              "worst5_mean": 0.4733410721558757
+            },
+            "ca_aligned_rmsd": {
+              "mean": 6.5669506170844505,
+              "median": 1.8976083683874942,
+              "p01": 0.46496534966627706,
+              "p05": 0.5378155099803632,
+              "worst5_mean": 52.20615449318048
+            },
+            "ca_lddt": {
+              "mean": 0.8788585786294631,
+              "median": 0.916727774564789,
+              "p01": 0.46558804730276226,
+              "p05": 0.6703191512836839,
+              "worst5_mean": 0.5057223133894828
+            }
+          },
+          "severe_pairs_total": 480,
+          "side_wrong_total": 5,
+          "strict_chirality_instances": 53,
+          "zero_and_strict_both_noises": 17,
+          "zero_and_strict_instances": 39,
+          "zero_severe_instances": 40
+        },
+        "native_s1": {
+          "ca_wrong_total": 22,
+          "diffusion_seconds_mean": 0.06407985378200465,
+          "instances": 64,
+          "max_penetration_max": 3.230179929195704,
+          "quality_protein_means": {
+            "all_atom_lddt": {
+              "mean": 0.7988133050326576,
+              "median": 0.8380031414752525,
+              "p01": 0.4081364524000417,
+              "p05": 0.596238010390616,
+              "worst5_mean": 0.4436622372768775
+            },
+            "ca_aligned_rmsd": {
+              "mean": 6.695161109899992,
+              "median": 2.0433043992105553,
+              "p01": 0.47042821753268244,
+              "p05": 0.5327496823708909,
+              "worst5_mean": 53.3817941066334
+            },
+            "ca_lddt": {
+              "mean": 0.8740891630506022,
+              "median": 0.9150876326772064,
+              "p01": 0.4242002111576559,
+              "p05": 0.6442612236278016,
+              "worst5_mean": 0.4614844563676347
+            }
+          },
+          "severe_pairs_total": 875,
+          "side_wrong_total": 16,
+          "strict_chirality_instances": 49,
+          "zero_and_strict_both_noises": 12,
+          "zero_and_strict_instances": 31,
+          "zero_severe_instances": 33
+        },
+        "native_s2": {
+          "ca_wrong_total": 11,
+          "diffusion_seconds_mean": 0.04576419546856414,
+          "instances": 64,
+          "max_penetration_max": 3.300990146626363,
+          "quality_protein_means": {
+            "all_atom_lddt": {
+              "mean": 0.8064601366655806,
+              "median": 0.8406652288767968,
+              "p01": 0.4401798948484932,
+              "p05": 0.6399118522795655,
+              "worst5_mean": 0.48937897616468384
+            },
+            "ca_aligned_rmsd": {
+              "mean": 6.674438726670784,
+              "median": 1.9796367888191733,
+              "p01": 0.44199356634419423,
+              "p05": 0.5013755501031474,
+              "worst5_mean": 53.35616382367922
+            },
+            "ca_lddt": {
+              "mean": 0.882435114008236,
+              "median": 0.9189997602580935,
+              "p01": 0.47549630205414006,
+              "p05": 0.6995923313262431,
+              "worst5_mean": 0.5288472785955547
+            }
+          },
+          "severe_pairs_total": 323,
+          "side_wrong_total": 7,
+          "strict_chirality_instances": 50,
+          "zero_and_strict_both_noises": 13,
+          "zero_and_strict_instances": 36,
+          "zero_severe_instances": 40
+        }
+      },
+      "proteins": 32,
+      "seeds": [
+        700021,
+        700027
+      ]
+    }
+  }
+}

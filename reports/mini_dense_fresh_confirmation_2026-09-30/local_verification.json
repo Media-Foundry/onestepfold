@@ -1,0 +1,32 @@
+{
+  "archives": [
+    {
+      "archive": "source",
+      "members": 537,
+      "sha256": "96de8ddc4fb18326775cda448597efcd75932d81086176fc052de9e877beb619"
+    },
+    {
+      "archive": "cache",
+      "members": 222,
+      "sha256": "593ac9fa9fba46cd8a7c7bc4f46fae4da37cf7cd86a148ff9e5b9f55bd648bb6"
+    },
+    {
+      "archive": "evaluation",
+      "members": 457,
+      "sha256": "5e6be36a0ace969ec751d920402c45e2ea5f4def378265a448a96262d20d5979"
+    }
+  ],
+  "archive_members_verified": 1216,
+  "executed_key_source_parity": [
+    "scripts/audit_dense_confirmation_sources.py",
+    "scripts/evaluate_diffusion_learning.py",
+    "scripts/prepare_dense_confirmation.py",
+    "scripts/prepare_dense_confirmation_sources.py",
+    "scripts/score_diffusion_learning.py"
+  ],
+  "independent_csv_contrast_max_abs": 5.551115123125783e-17,
+  "protein_bootstrap_unit": 32,
+  "outputs_verified": 192,
+  "all_recorded_processes_absent": true,
+  "note": "Source snapshot contains an older unused evaluation driver; actual evaluation archive matches current executed source."
+}

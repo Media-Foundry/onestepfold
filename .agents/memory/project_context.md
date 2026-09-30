@@ -1,3 +1,67 @@
+## 2026-09-30 — Frozen full diffusion: fresh32 confirmation completed, average AA gain confirmed
+
+Previous5a97fcec was PROGRESS (fullTRAIN scope comparison and frozen candidate).
+This turn completed a preregistered new32 source selection+independent audit,
+conditioning cache, one-candidate confirmation, statistics, collection and report.
+Overall goal remains ACTIVE/UNFULFILLED; no deployment/hard-design certification.
+No further training, no checkpoint/threshold tuning on this32, no oldVAL predictions.
+
+Protocol docs/mini_dense_fresh_confirmation_v1.md locked BEFORE source/model outputs.
+Only learned candidate full512 SHA7fc01820269b6f376f8313b79c4ab2bf8fcfd2a0b2a017a432033a51b73fd829.
+PublicS1/publicS2/frozenfullS1, C4 FP32, identitynoise700021/700027.
+Fresh32 excluded historical21175 refs+ALLprior160 identities/PDB/accessions/qualifyingHSPs,
+mutually isolated. Source same4096pool, no support-rule relaxation. 839eligible,
+67chemistrypreflights/36pass/32selected,16each50–255/256–1024,actual64–509.
+31homooligomercompletechains/1monomer;no>509 or Mini/ESM-pretraining exclusion claim.
+Independent reparse91468HSPs,390sourcefiles verified,129missingheavyGT atoms masked.
+Source26.43s+audit3.65s. SourcePID314451/audit315571 terminal0/procabsent.
+
+DiamondHill /media/PM982/onestepfold/:
+ diffusion_dense_fresh_sources_v1_20260930
+ diffusion_dense_fresh_cache_v1_20260930
+ diffusion_dense_fresh_evaluation_v1_20260930
+Controller316216 COMPLETE144.7549s;cache316228–235 exit0 72.2216s8GCD;
+eval316748–755 exit0 35.8257s8GCD;score316950 exit0 4.8318s16CPU.
+32conditionings=128PF cycles/0diffusion;192newpredictions=256targetNFEs+32probeNFEs.
+Engineeringprobe uses separate oldTRAIN probe_source/probe_cache with bound hashes;
+no freshpanel modelselection. Cached C4 shared, noGTconditioning or coordinate repair.
+
+ProteinmeanAA/CA;severe;CAwrong/sidewrong;zero+strict64/bothnoise32:
+ nativeS1 .798813305/.874089163;875;22/16;31/12
+ nativeS2 .806460137/.882435114;323;11/7;36/13
+ fullS1   .801481700/.878858579;480;17/5;39/17.
+Primaryfull−S1AA+.002668395 CI[+.000479263,+.005543638],22/32positive,
+median+.000524436,P05−.002692412,worst2mean−.003185253,0proteinmean<−.05.
+CA+.004769416 CI[+.001544944,+.009012138],21/32positive.
+Full−S2AA−.004978437 CI[−.008543995,−.001725336],4/32positive;
+CA−.003576535 CIcross0,oneproteinmean<−.05. No complete S2 compression.
+Introduced severe2 vs S1:6CWQ700027 and5MUX700027 0→1.
+Loststrict2:5MUX700027 side0→1;6SIY700021 CA0→2 while severe7→0.
+Maxpenetrationfull3.33071Å. Limitedcombo is NOTfullchemistry.
+WorstAA3EFE−.00339545,1GK2−.00297506,2A6S−.00246116;
+best3C9I+.0354765,5C94+.0238812,3G67+.0096923.
+Posthoc excludehighestgain leaves+.00161007,notchangingdenominator/confirmationrule.
+PrimaryCI condition met; fixednoise/proteinbootstrap only,not allnoise/trainingseed certainty.
+
+Independent denseAA/CAmax3.33e−16;localCSVthreecontrasts/twometrics incl bootstrap,
+tails reproduced max5.56e−17. 1216archive members hash+size verified;fiveexecuted
+keysource files matchlocal. Sourceprivate snapshot contains unused oldevaldriver;
+actualevaluation archive uses newlockedoverride version, no liveprivatecodeedit.
+Sevenfocusedtests passed. AllrecordedPIDs/procabsent.
+Artifacts reports/mini_dense_fresh_confirmation_2026-09-30;source/cache/evaltar17MB;
+6,828,721,492B nativeinputs/conditioning tensors remainremotehashbound,notinGit.
+Fulltrainedcheckpoint alreadyverifiedHPC3backup from priorbatch.
+Findings docs/mini_dense_fresh_findings_2026-09-30.md, overallreportlatestfrontupdated.
+
+Decision: retain frozenfullS1 candidate with independentlyconfirmed meanforwardgain,
+closefresh32 now, never reuse for tuning. Legacyjoint remains historical diagnostic,
+real severe chemistry/GTquality/designeffect independent. No new deployment pass.
+Next proposed bounded work: on OLDTRAIN development parents, frozenmodel, gradient
+position proposal+allrealhard substitutions vs equalbudgetrandompositions, separate
+confirmationnoise. NOTY38extra candidates/signflip, NOTfresh32reuse, NOTnewtraininggrid.
+This hardutility protocol is not yet locked or executed; choose/support-check parents
+and preregister before candidates. Updatedweights' q-gradient usefulness remains unknown.
+
 ## 2026-09-30 — Dense diffusion terminals evaluated; joint TRAIN benefit, freeze for fresh confirmation
 
 Previousacc29e82 was PROGRESS (scope preflights+traininglaunch). This turn completed
