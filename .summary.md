@@ -1,3 +1,28 @@
+## 2026-09-30 — Global-distance TRAIN32 probe512 and read-only readiness audit
+
+Prior goal turn PROGRESS (terminal evaluation deployed/queued/pushed4713577c).
+Current turn verified live662548 and completed read-only prefix/reference audit;
+fixed TRAIN32 probe512 now available. No training/model/evaluation change.
+
+512-update means: expandedAA.8053674335/CA.8858489427,severe382,zero+strict42/64;
+coordinate_zeroAA.8061741571/CA.8877134240,severe306,41/64;
+global_distanceAA.8060597707/CA.8877550563,severe292,42/64. Training-only local
+quality, not globalshape recovery or terminal quality. No checkpoint selection.
+Training continued to2058exposures at21:43HongKong;662548live. Dependencies unchanged.
+
+Read-only audit:1783completeexposures/445updates match originalorder,weightedloss,
+finiteparts andupdatecount;1453lockedfiles hashes checked (code AND labels etc),
+4550referencecoordinates and455GT/mapping/native sets hash-verified;455rowsmatch.
+Filehasnoblanklines; prior localSSHparse issue was not malformedtrainingJSONL.
+Audit readcompleteprefixbeforehashscan; notterminalacceptance. Evalsixmodel/report
+interfaces reviewed throughGitNexus/source, no incompatibility found. No newGPUcalls.
+
+Archived threeprobeJSONs/hash-boundcomparison andread-onlyaudit+script under
+reports/mini_folding_global_distance_training_2026-09-30/interim_0512;
+statusdocupdated. Keepfixed2048then12-jobterminalchain662557–662568. ESMC,design,
+repairremainoutsidecurrentlosscomparison. Goalnotcomplete; nextcollectterminal,
+notrerunexpensivereferenceaudit oraddinterimDEVpredictions.
+
 ## 2026-09-30 — Fixed-terminal global-distance evaluation submitted
 
 C4/S1 folding remains the active mainline. Training662548 remains RUNNING unchanged;

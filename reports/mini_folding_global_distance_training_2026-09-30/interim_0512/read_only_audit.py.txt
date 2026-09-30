@@ -1,0 +1,31 @@
+import json,hashlib,math,datetime,subprocess
+from pathlib import Path
+base=Path('/data/user/shuang886/Folding'); train=base/'folding_global_distance_training_v1_20260930'; ev=base/'folding_global_distance_evaluation_v1_20260930'; old=base/'folding_coordinate_evaluation_v1_20260930'
+def sha(p):return hashlib.sha256(Path(p).read_bytes()).hexdigest()
+lock=json.loads((train/'lock.json').read_text()); control=Path(lock['global_distance']['control']); orig=json.loads((control/'lock.json').read_text()); prior=json.loads((old/'lock.json').read_text())
+assert prior['rows']==lock['rows'] and len(prior['rows'])==455
+raw=(train/'expanded/history.jsonl').read_bytes(); lines=raw.splitlines(); partial=bool(raw and not raw.endswith(b'\n'))
+if partial:lines=lines[:-1]
+assert all(line.strip() for line in lines)
+rows=[json.loads(line) for line in lines]
+for i,(x,y) in enumerate(zip(rows,orig['orders']['expanded']),1):
+ assert x['exposure']==i and all(x[k]==y[k] for k in ['group_id','epoch','seed'])
+ assert set(x['parts'])==set(lock['weights']) and all(math.isfinite(v) for v in x['parts'].values())
+ assert math.isclose(x['loss'],sum(lock['weights'][k]*v for k,v in x['parts'].items()),rel_tol=1e-6,abs_tol=1e-8)
+ if i%4==0:assert x['update']==i//4 and math.isfinite(x['unclipped_accumulated_grad_norm'])
+ else:assert 'update' not in x
+files=0
+for row in prior['rows']:
+ g=row['group_id'];p=old/'examples'/g/'report.json';r=json.loads(p.read_text())
+ assert len(r['entries'])==10
+ for e in r['entries']:
+  assert sha(p.parent/e['name'])==e['sha256'];files+=1
+ for f in [Path(prior['source'])/'chemistry'/g/'mapping.npz',Path(prior['source'])/'chemistry'/g/'native.pt',Path(prior['source'])/'data/examples'/g/'gt.npz']:
+  assert sha(f)==prior['input_hashes'][str(f)]
+assert files==4550
+for path,digest in lock['hashes'].items():assert sha(path)==digest
+sub=json.loads((ev/'submission.json').read_text());assert sha(ev/'batch.sh')==sub['batch_sha256']
+state=subprocess.check_output(['scontrol','show','job','662548','-o'],text=True)
+assert 'JobState=RUNNING' in state
+out=dict(complete=True,observed_utc=datetime.datetime.now(datetime.timezone.utc).isoformat(),training_job=662548,training_live=True,complete_exposures_verified=len(rows),last_update=max(x.get('update',0) for x in rows),last_partial_line_excluded=partial,blank_lines_in_file=0,training_locked_files_checked=len(lock['hashes']),reference_coordinates_rehashed=files,gt_mapping_sets_checked=455,scientific_rows_match=True,weighted_loss_and_order_prefix_match=True,scheduler=state.strip(),scope='Read-only readiness and live-prefix audit; not terminal execution acceptance or quality evidence')
+print(json.dumps(out,indent=2))

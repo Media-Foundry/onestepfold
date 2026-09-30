@@ -1,0 +1,47 @@
+{
+  "complete": true,
+  "scope": "Fixed TRAIN32 intermediate probe only; no DEV inference, checkpoint selection, or global-shape conclusion",
+  "rows": [
+    {
+      "arm": "expanded",
+      "all_atom_lddt": 0.8053674334951317,
+      "ca_lddt": 0.8858489427450145,
+      "outputs": 64,
+      "proteins": 32,
+      "role": "train_probe_only",
+      "seconds": 34.603173630777746,
+      "severe_pairs": 382,
+      "update": 512,
+      "zero_and_strict": 42
+    },
+    {
+      "arm": "coordinate_zero",
+      "all_atom_lddt": 0.8061741571464809,
+      "ca_lddt": 0.8877134239982146,
+      "outputs": 64,
+      "proteins": 32,
+      "role": "train_probe_only",
+      "seconds": 27.838475096970797,
+      "severe_pairs": 306,
+      "update": 512,
+      "zero_and_strict": 41
+    },
+    {
+      "arm": "global_distance",
+      "all_atom_lddt": 0.8060597706636794,
+      "ca_lddt": 0.8877550563457071,
+      "outputs": 64,
+      "proteins": 32,
+      "role": "train_probe_only",
+      "seconds": 26.67542447242886,
+      "severe_pairs": 292,
+      "update": 512,
+      "zero_and_strict": 42
+    }
+  ],
+  "input_hashes": {
+    "/data/user/shuang886/Folding/folding_scale_training_v1_20260930/expanded/probe_0512/report.json": "2c16cded60edcfa44f24bc76f189d265d415c99a8414d9f7051564049863e8a8",
+    "/data/user/shuang886/Folding/folding_coordinate_ablation_v1_20260930/expanded/probe_0512/report.json": "5af7d4df6eb45184ab2aa8c2e4be4907b65e02137c72022c2210c8439348d87c",
+    "/data/user/shuang886/Folding/folding_global_distance_training_v1_20260930/expanded/probe_0512/report.json": "961ec49e5a0c772000576726cb6cf3faf88898dab5f30ba8037f87e169d78e43"
+  }
+}
