@@ -1,0 +1,66 @@
+{
+  "changes": [
+    {
+      "after": 26.38105558875853,
+      "before": 0.6171878932379177,
+      "model": "gt",
+      "proteins_in_tail": 7,
+      "role": "train"
+    },
+    {
+      "after": 26.3808289532669,
+      "before": 0.6171823018051951,
+      "model": "gt_s2",
+      "proteins_in_tail": 7,
+      "role": "train"
+    },
+    {
+      "after": 26.3841704508184,
+      "before": 0.6180021693541524,
+      "model": "native_s1",
+      "proteins_in_tail": 7,
+      "role": "train"
+    },
+    {
+      "after": 26.535794210682383,
+      "before": 0.6007537710828655,
+      "model": "native_s2",
+      "proteins_in_tail": 7,
+      "role": "train"
+    },
+    {
+      "after": 10.796920115092142,
+      "before": 0.48709734416034123,
+      "model": "gt",
+      "proteins_in_tail": 2,
+      "role": "validation"
+    },
+    {
+      "after": 10.796920035847236,
+      "before": 0.48709589196589353,
+      "model": "gt_s2",
+      "proteins_in_tail": 2,
+      "role": "validation"
+    },
+    {
+      "after": 10.785891620636612,
+      "before": 0.4876512769980285,
+      "model": "native_s1",
+      "proteins_in_tail": 2,
+      "role": "validation"
+    },
+    {
+      "after": 10.593135636617541,
+      "before": 0.4311457011961956,
+      "model": "native_s2",
+      "proteins_in_tail": 2,
+      "role": "validation"
+    }
+  ],
+  "corrected_sha256": "2581b93947c63710f9fd4a42bf00d87efedec98c84f55d35d5afd39a07829781",
+  "no_new_predictions": true,
+  "reason": "RMSD lower is better: worst tail is the largest 5%, not the smallest 5%",
+  "script_sha256": "9d6ab302992282cf256ca64226a19469a15bdfcc9f58e2206ac9136538a15836",
+  "source_sha256": "0442f79aed6b9b8358009363f3fec3432fe360bfeab60eafc0f86d6a9ecde297",
+  "unchanged": "all raw records, all paired contrasts, all means, lDDT tails and chemical diagnostics"
+}

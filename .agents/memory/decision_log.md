@@ -1,3 +1,79 @@
+## 2026-09-30 — Two-arm512 pilot COMPLETE: tiny quality gain, chemistry largely unchanged
+
+Previous a8f40af4 was PROGRESS (auditedcache + reallearningstarted). This turn collects
+both terminal512 checkpoints, audits full training, evaluatesall160targets and1280
+predictions, reports bounded weak result. Goal ACTIVE/UNFULFILLED, no deployment.
+All training/evaluation/scoring processes terminal exit0 and /proc absent confirmed.
+Trainingroot /media/PM982/onestepfold/diffusion_learning_pilot_v1_20260930:
+GT637.940s,GT+S2611.382s,parallelwall642.007s. Both2048exposures/512updates,
+1613baseparameter tensors unchanged, identical initialization/order/LR/noise,112Adam
+states step512. Terminal-only; no early selection, extraepochs or validation training.
+
+Newevaluationroot /media/PM982/onestepfold/diffusion_learning_evaluation_v1_20260930.
+Controller283509,8workers283513/515/517/519/520/521/522/523,CPUscorer284033 allDONE.
+8GCDinfer42.473s,16CPUscore27.930s,all160targets/1280outputs. TRAIN128×2×4=1024;
+VALIDATION32×2×4=256. NativeTRAIN outputs reused,8×7probeNFEs +832newcalls=888.
+Eachworker nativeTRAINcache parity; zeroadapter/reload/merge parity and nativestatekeys
+checked. No ESM/PF recomputation; inference timing is cachedconditioning diffusion
+sharedhardware ONLY, not end-to-end/isolatedspeedbenchmark. GT used ONLY in CPUscoring.
+Maskmapped independently tooriginalatom37; sparseAA/CA vsdenseblocked distances onall
+1280 outputs maxabs4.44e-16. Fullpredictedinventorychemistry includingmissingGTatoms.
+Typedconnectionbands descriptive, no newgate. Tests5PASS inclNaNmissingGT anddense
+chemistrycomparison. Initialteststub lackedlen; fixedfixture,notproduction/model.
+
+VALIDATION32 equalprotein means overtwofixednoises600029/600043:
+NativeS1 AA.8300273284 CA.9082885054; nativeS2 AA.8374299807 CA.9148615150.
+GT-S1 AA.8301144922 CA.9085346684;GT+S2-S1 AA.8301147787 CA.9085358636.
+GTAA delta+.0000871637 CI[.0000505348,.0001233770],GT+S2+.0000874502
+CI[.0000505465,.0001238182]. Both28/32AApositive;~1.2%ofmeanS2-S1gap.
+Auxiliarydifference+.0000002865 CI[-.0000005677,.0000011147],no establishedextraeffect.
+No proteinmeanAA/CAΔ<-.05, butN32 cannot certifyrarecatastrophic tails.
+GTAApairedP05-.00006746,worst5mean-.00011150 (2proteins). Allpernoise retained.
+
+VALIDATION64instances rawS1→GT→GT+S2 severe325→323→323; zero-severe32→31→31;
+CAwrong18all,ILE/THRwrong14all. Zero-severe+strictcheckedstereo27all;bothnoises11/32all.
+Notfullchemistry pass. Newsevere2Z3Bnoise600043 residue27CD2—32CG2 distance1.012735→
+.997070/.996945A; failure retained. S2severe150,zero39,CAwrong6/side8,zero+strict37,
+bothnoises15/32 BUTintroducessevere5formerlyzero andlosesstrict4instances.
+S2NOTcleanlabel. maxpenetrationstudent~3.225A, notdeployablechemistry.
+
+TRAINAA native.8011849511 GT.8013008833 GT+S2.8013013149 S2.8140572002.
+Fit improvementtinytoo; notprimarilyestablishedvalidationgeneralizationfailure.
+TRAIN/VALlength/difficultymixdifferent, noclaimVAL>TRAIN provesgeneralization.
+Same-noiseGTloss epoch1→15 3.18698→3.10146;epoch2→16 3.82093→3.70351.
+Mostscalarreductionclashterm;coordinateMSE63.6653almostunchanged atnoise600001.
+472/512updatesclippedboth;meanunclippedgrad~5.17. Notproofclippingbug orgradient
+componentdominance. Offlineadapterdelta/baseaggregateFrobenius~.000188(0.019%).
+ValidationstudentheavyunalignedRMS fromraw mean~.015A,max~.057A: actualupdateverysmall.
+Teacherweightedscalar~.0075/.0118versusoverall3–4; notindependentgradientdiagnosis.
+CannotconcludegeneralLoRA/S2/singlestepfailure; currentweights/budgetweak/practicalgainabsent.
+
+REPORT docs/mini_diffusion_learning_findings_2026-09-30.md;overviewandstartupstatus
+updated. New scripts audit_diffusion_training.py,evaluate_diffusion_learning.py,
+score_diffusion_learning.py,analyze_diffusion_learning_effects.py;importablemetrics
+src/fastglycan/diffusion_pilot_metrics.py. Protocol mini_diffusion_terminal_evaluation_v1.md.
+Evidence reports/mini_diffusion_learning_2026-09-30/terminal +evaluation, PNG+plotcode.
+Trainingarchive142members22,663,224bytesSHA5092b62392c9a54a1a5efdb1ab9bb9dbbf3cfde977bbedb470bb8e2e23ca40a3.
+Evalarchive1766members83,307,278bytesSHAb877abb508e379c90df7641560c1743b8ae409aada85247fd56100e81d1def72.
+Allmembersverified. Terminalcheckpointsintrainingarchive. Full143MBJSONinarchive and
+/tmp/diffusion_pilot_evaluation_full.json, NOTlooseGitfile; readable summary/per_prediction.csv.
+
+Post-hoc genuine reportingcorrection: genericRMSDworst5 incorrectly usedLOWEST5%,
+whilelowerRMSDisbetter. Fixedfuture score script and exactly8 descriptiveRMSDtail
+fields via correct_diffusion_rms_summary.py. Originalruntimecode/JSON/archiveFROZEN,
+not overwritten. Local/remote correctedfullSHA2581b93947c63710f9fd4a42bf00d87efedec98c84f55d35d5afd39a07829781.
+Patchstored evaluation/rms_tail_correction.json,summaryupdated; remoteevaluation_corrected.json.
+ALLrecords,means,lDDTtails,CIs,geometryunchanged. Runtime/localsource parity holds
+EXCEPTintentional1lineRMSDsummaryfix documentedabove. No newprediction/thresholdchange.
+
+NEXT: thismatchedpilotSTOPPED, noautoextraepochs/seed/grid. Actualnextmethodquestion
+is effectiveupdate/relative supervision, notoldFD/backward orY38. Can examinebounded
+TRAIN-only componentgradient/update-scale diagnostic BEFOREchoosingoneoptimization
+contrast; currentlogscontainonlytotalgradnorm,notpercomponentnorm. KeepGTauthority,
+S2notcleantruth, C4/S1target. Current32VALIDATION nowrevealed; furthermethodselection
+mustnotbe soldasindependentconfirmationonthissame32. Needfreshisolationfornextconfirm.
+No soft-sequence/hardmutation/binderutility or fullmergedinputgradient acceptance yet.
+
 ## 2026-09-30 — Native diffusion learning cache audited; two-arm pilot RUNNING
 
 Previous e3417907 was PROGRESS: isolated 128 TRAIN +32 VALIDATION sources ready.

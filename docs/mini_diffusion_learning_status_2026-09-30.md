@@ -1,5 +1,8 @@
 # 原生一步 diffusion：缓存完成，两臂训练启动
 
+更新：本批已完成；终点与新验证结果见
+[完整结果报告](mini_diffusion_learning_findings_2026-09-30.md)。以下保留启动阶段记录。
+
 2026-09-30。本报告记录执行与工程检查，**尚无训练终点、验证收益或部署结论**。
 依据 [锁定协议](mini_diffusion_learning_pilot_v1.md) 和
 [128 TRAIN＋32 VALIDATION 来源审计](mini_diffusion_training_sources_findings_2026-09-30.md)。
