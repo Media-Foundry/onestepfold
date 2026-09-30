@@ -1,3 +1,68 @@
+## 2026-09-30 — Native one-step diffusion adapter engineering preflight completed
+
+Previous51f2d387wasPROGRESS: matched2B0AS2/S5rescuedbadraw, separateevaluationv2.
+ThisturnimplementedaMERGEABLErank8weightadapter andexecutedONEGT+S2engineering
+update, nottrainingefficacy/generalization/deploytrial. No oldgeometrysolver,
+FDbackwarddebugging,Y38search,ESMCscratchrestart orlargertraining. NativeMiniESM
+C4/S1 preserved; adaptertargets tokenDiffusionTransformer8blocks x7(q/k/v/o +
+transitiona1/a2/b)=56matrices,112tensors835584newparameters. Uses torchparametrize
+W+B@A,localCPUinitgenerator20260930,Azero-meanBzero;nativeLinearandfusedweight
+access retained. All1613originalparametertensorsfrozen/no gradients/bitwiseunchanged
+beforemerge. Zero-init,clearingB,checkpointreload,mergedweightsallbitwiseparity.
+Native state-dictkeys restoredaftermerge;merge needsno low-rankmultiply atdeployment.
+No fullmergedmodelpublished/basecheckpointmodified. CPUfocusedtestPASS;current
+nativeGPUintegrationpassedtoo. ReferencePyTorchsource/docschecked;runtime2.12a0.
+
+Data1U07(group845b7151e1cd70ab51a196d726ba16bb58387812a09406e969421606d05926ba),
+90res710heavyatoms,noise500009. SoleunusedfullnativeGTpassfromfresh_contact_source
+pool. Beforeforwardverifiedparentlocks/datahashes,inheritedhistoricalisolation,
+PDB/accession/HSPisolationfromfresh8;fixedselectionbeforeoutcomes. ThisproteinNOW
+DEVELOPMENT/TRAININGINFRASTRUCTURE, exclude fromnewindependentvalidation. Do not
+claimpretrainingisolation. No2B0A/2Z0J/reserved32/Y38coordinatesusedinupdate.
+
+DiamondHill /media/PM982/onestepfold/diffusion_adapter_preflight_v1_20260930;
+controller261728,worker261738bothterminal/procabsent;exit0;pipeline62.1108s,worker
+54.614s,peakGPU12174255104bytes~11.34GiB. NativeFP32ESM2-3B/PF4cachedonce,teacher
+unmodifiedS2generatedBEFOREadapter;10diffusiontotalincludes2teacher,zero/train/
+updated/restore/reload/merged/liveconditioningchecks. MC/churn/aug off.
+OneAdamWlr1e-5,betas.9/.999,eps1e-8,decay0,gradclip1.No extraepochs/retries orquality
+selection. GT andteacherproperalignedallatomMSE equalweights engineeringloss,NOT
+finalchemistryrecipe; no sidechainsymmetryrenaming. GTmaskfull andindependentatom37
+mappingchecked. S2syntheticNOTexperimentalGT/cleanlabel.
+
+LossGT41.0132850816->41.0109497786;teacher.0941374321->.0941021491.
+GTgradnorm1.03987401,teacher.076779817,ratio~13.54,cos.29259863;totalpreclip1.0648737.
+Equalweightsnot equalgradientcontribution; don'tcalibratefutureweightfromthisonepoint.
+AA nativeS1 .8416498289 -> updated/merged .8416580232 (+8.19e-6),S2 .8429234094.
+Allzero severe<1A andCAchirality1;maxpenetration2.133642/2.133590/S2 2.068093 all
+exceedold2A diagnostic. NOTchemistrypass/notallsidechainstereocentresaudited.
+BondRMSE.203072->.203079 slightlyworse;noqualityclaimbasedoneupdate.
+MergedfrozenmodelconditioningVJPnorms .015289389,.009778813,.016432479 allfinite
+nonzero;NOTfullsequencegradientorFD/Jacobiancertification orhardmutationutility.
+
+OfflineauditscriptcreatedAFTERruntime, separatehash,noinferencechange:7coordinate
+variantsGTlddt/NumPygeometryproperalignmentverified;metricmax2.7756e-17,
+lossmax7.816e-14.56checkpointBinitialzero/trainednonzero;Aunchangedonfirstupdate
+expected,835584countschecked. Original1613immutabilitycheckedruntimebeforemerge,
+notclaimedofflinefromunsavedfullsnapshot. CPUaudit6.7806s exit0.26member4209857byte
+archiveallSHA/runtimecode/auditscriptexactlocalverified. Reports
+mini_diffusion_adapter_preflight_2026-09-30;docsmini_diffusion_adapter_preflight_v1.md
+andmini_diffusion_adapter_preflight_findings_2026-09-30.md. Sources
+src/fastglycan/models/diffusion_adapter.py;scriptsrun/audit_diffusion_adapter_preflight.py;
+newfocusedtesttest_diffusion_adapter.py. Fullruntimeconfigs/locks/adapter/coordsinarchive.
+Read-onlyinitialsourceimportomittedLAYERNORM_TYPE andtriggeredfailedCUDAextension
+compile onROCm; no trainingstartedthere. CorrectexplicitTORCHenvformalrunoncepasses.
+Startupdefaultbf16logprecedesFP32configoverride;manualpathnoautocast/FP32paramassert.
+
+DECISION thisengineeringbatchCLOSED, noautomaticlongertraining/modelpromotion.
+NEXT reallearningneedsindependenttrain/validationmanifest,experimentalGTauthority,
+explicitteacher/geometrysupervisionandscales,budget/endpointrules BEFORE outputs.
+Usevalidatednativeadapterinterface,nottheoldESMC/scratchendpointtrainerunchanged.
+Do notturnS2into assumedcleanlabel orrelaxgeometrythresholds;preserveC4/S1finalgoal.
+Source1U07nowdevelopmentalongwithfresh8,64calibration,old32reserved/usedroles;exclude
+fromnewheldout. Thisisconcreteinfrastructureprogress, notachievedone-stepdesignoracle.
+GoalconsistentlypushworkforwardACTIVE/unfulfilled. No jobsleftfromthisbatch.
+
 ## 2026-09-30 — Evaluation v2 recorded; matched S2/S5 resolves severe2B0A raw failures
 
 Previous c6a1d98f completedfresh8; userreviewstale f471a100 pendingstatus corrected.

@@ -1,0 +1,314 @@
+{
+  "complete": true,
+  "coordinate_variants": 7,
+  "loss_max_abs": 7.815970093361102e-14,
+  "metric_max_abs": 2.7755575615628914e-17,
+  "parameter_count": 835584,
+  "records": {
+    "merged_s1": {
+      "aa_lddt": 0.8416580231813723,
+      "geometry": {
+        "bond_rmse": 0.20307904504089572,
+        "chirality_fraction": 1.0,
+        "max_penetration": 2.1335900001557877,
+        "peptide_mae": 0.07288275443880343,
+        "severe_pairs": 0,
+        "severe_pairs_per_atom": 0.0
+      }
+    },
+    "native_s1": {
+      "aa_lddt": 0.8416498288556593,
+      "geometry": {
+        "bond_rmse": 0.20307235828973044,
+        "chirality_fraction": 1.0,
+        "max_penetration": 2.1336424450759433,
+        "peptide_mae": 0.0728826457364742,
+        "severe_pairs": 0,
+        "severe_pairs_per_atom": 0.0
+      }
+    },
+    "reference_s2": {
+      "aa_lddt": 0.8429234094030684,
+      "geometry": {
+        "bond_rmse": 0.19840222206798372,
+        "chirality_fraction": 1.0,
+        "max_penetration": 2.068093093190737,
+        "peptide_mae": 0.04424436351253027,
+        "severe_pairs": 0,
+        "severe_pairs_per_atom": 0.0
+      }
+    },
+    "reloaded_s1": {
+      "aa_lddt": 0.8416580231813723,
+      "geometry": {
+        "bond_rmse": 0.20307904504089572,
+        "chirality_fraction": 1.0,
+        "max_penetration": 2.1335900001557877,
+        "peptide_mae": 0.07288275443880343,
+        "severe_pairs": 0,
+        "severe_pairs_per_atom": 0.0
+      }
+    },
+    "restored_s1": {
+      "aa_lddt": 0.8416498288556593,
+      "geometry": {
+        "bond_rmse": 0.20307235828973044,
+        "chirality_fraction": 1.0,
+        "max_penetration": 2.1336424450759433,
+        "peptide_mae": 0.0728826457364742,
+        "severe_pairs": 0,
+        "severe_pairs_per_atom": 0.0
+      }
+    },
+    "updated_s1": {
+      "aa_lddt": 0.8416580231813723,
+      "geometry": {
+        "bond_rmse": 0.20307904504089572,
+        "chirality_fraction": 1.0,
+        "max_penetration": 2.1335900001557877,
+        "peptide_mae": 0.07288275443880343,
+        "severe_pairs": 0,
+        "severe_pairs_per_atom": 0.0
+      }
+    },
+    "zero_adapter": {
+      "aa_lddt": 0.8416498288556593,
+      "geometry": {
+        "bond_rmse": 0.20307235828973044,
+        "chirality_fraction": 1.0,
+        "max_penetration": 2.1336424450759433,
+        "peptide_mae": 0.0728826457364742,
+        "severe_pairs": 0,
+        "severe_pairs_per_atom": 0.0
+      }
+    }
+  },
+  "scope": "offline checkpoint/coordinates/GT audit; original parameter immutability checked in runtime before merge",
+  "script_sha256": "d94bde248c006245ba2350377664515b0c0bdb77281afda10f1ba2589cc269b7",
+  "weight_deltas": [
+    {
+      "delta_weight_norm": 0.0007815590347677465,
+      "module": "diffusion_module.diffusion_transformer.blocks.0.attention_pair_bias.attention.linear_q"
+    },
+    {
+      "delta_weight_norm": 0.0007798074339933971,
+      "module": "diffusion_module.diffusion_transformer.blocks.0.attention_pair_bias.attention.linear_k"
+    },
+    {
+      "delta_weight_norm": 0.0007737471566298935,
+      "module": "diffusion_module.diffusion_transformer.blocks.0.attention_pair_bias.attention.linear_v"
+    },
+    {
+      "delta_weight_norm": 0.0007724427092811577,
+      "module": "diffusion_module.diffusion_transformer.blocks.0.attention_pair_bias.attention.linear_o"
+    },
+    {
+      "delta_weight_norm": 0.0010990691674457888,
+      "module": "diffusion_module.diffusion_transformer.blocks.0.conditioned_transition_block.linear_nobias_a1"
+    },
+    {
+      "delta_weight_norm": 0.0010898517118383443,
+      "module": "diffusion_module.diffusion_transformer.blocks.0.conditioned_transition_block.linear_nobias_a2"
+    },
+    {
+      "delta_weight_norm": 0.0007705724105613753,
+      "module": "diffusion_module.diffusion_transformer.blocks.0.conditioned_transition_block.linear_nobias_b"
+    },
+    {
+      "delta_weight_norm": 0.0007771901219270382,
+      "module": "diffusion_module.diffusion_transformer.blocks.1.attention_pair_bias.attention.linear_q"
+    },
+    {
+      "delta_weight_norm": 0.0007714493192723747,
+      "module": "diffusion_module.diffusion_transformer.blocks.1.attention_pair_bias.attention.linear_k"
+    },
+    {
+      "delta_weight_norm": 0.00078837265471962,
+      "module": "diffusion_module.diffusion_transformer.blocks.1.attention_pair_bias.attention.linear_v"
+    },
+    {
+      "delta_weight_norm": 0.0007854998181607458,
+      "module": "diffusion_module.diffusion_transformer.blocks.1.attention_pair_bias.attention.linear_o"
+    },
+    {
+      "delta_weight_norm": 0.0011083617191861774,
+      "module": "diffusion_module.diffusion_transformer.blocks.1.conditioned_transition_block.linear_nobias_a1"
+    },
+    {
+      "delta_weight_norm": 0.001106902872975759,
+      "module": "diffusion_module.diffusion_transformer.blocks.1.conditioned_transition_block.linear_nobias_a2"
+    },
+    {
+      "delta_weight_norm": 0.0007551935002413465,
+      "module": "diffusion_module.diffusion_transformer.blocks.1.conditioned_transition_block.linear_nobias_b"
+    },
+    {
+      "delta_weight_norm": 0.000787799812021826,
+      "module": "diffusion_module.diffusion_transformer.blocks.2.attention_pair_bias.attention.linear_q"
+    },
+    {
+      "delta_weight_norm": 0.0007774024681347058,
+      "module": "diffusion_module.diffusion_transformer.blocks.2.attention_pair_bias.attention.linear_k"
+    },
+    {
+      "delta_weight_norm": 0.0007863731888461099,
+      "module": "diffusion_module.diffusion_transformer.blocks.2.attention_pair_bias.attention.linear_v"
+    },
+    {
+      "delta_weight_norm": 0.0007646452814960808,
+      "module": "diffusion_module.diffusion_transformer.blocks.2.attention_pair_bias.attention.linear_o"
+    },
+    {
+      "delta_weight_norm": 0.0011129281473758947,
+      "module": "diffusion_module.diffusion_transformer.blocks.2.conditioned_transition_block.linear_nobias_a1"
+    },
+    {
+      "delta_weight_norm": 0.001119301505290477,
+      "module": "diffusion_module.diffusion_transformer.blocks.2.conditioned_transition_block.linear_nobias_a2"
+    },
+    {
+      "delta_weight_norm": 0.0007661478318345651,
+      "module": "diffusion_module.diffusion_transformer.blocks.2.conditioned_transition_block.linear_nobias_b"
+    },
+    {
+      "delta_weight_norm": 0.0007942335332393323,
+      "module": "diffusion_module.diffusion_transformer.blocks.3.attention_pair_bias.attention.linear_q"
+    },
+    {
+      "delta_weight_norm": 0.0007892289041584101,
+      "module": "diffusion_module.diffusion_transformer.blocks.3.attention_pair_bias.attention.linear_k"
+    },
+    {
+      "delta_weight_norm": 0.0007622317565218693,
+      "module": "diffusion_module.diffusion_transformer.blocks.3.attention_pair_bias.attention.linear_v"
+    },
+    {
+      "delta_weight_norm": 0.0007452814029685367,
+      "module": "diffusion_module.diffusion_transformer.blocks.3.attention_pair_bias.attention.linear_o"
+    },
+    {
+      "delta_weight_norm": 0.0011198581755456868,
+      "module": "diffusion_module.diffusion_transformer.blocks.3.conditioned_transition_block.linear_nobias_a1"
+    },
+    {
+      "delta_weight_norm": 0.0011147505563558857,
+      "module": "diffusion_module.diffusion_transformer.blocks.3.conditioned_transition_block.linear_nobias_a2"
+    },
+    {
+      "delta_weight_norm": 0.0007622849010907002,
+      "module": "diffusion_module.diffusion_transformer.blocks.3.conditioned_transition_block.linear_nobias_b"
+    },
+    {
+      "delta_weight_norm": 0.0007870501746187769,
+      "module": "diffusion_module.diffusion_transformer.blocks.4.attention_pair_bias.attention.linear_q"
+    },
+    {
+      "delta_weight_norm": 0.0007723401786313978,
+      "module": "diffusion_module.diffusion_transformer.blocks.4.attention_pair_bias.attention.linear_k"
+    },
+    {
+      "delta_weight_norm": 0.0007851617431699264,
+      "module": "diffusion_module.diffusion_transformer.blocks.4.attention_pair_bias.attention.linear_v"
+    },
+    {
+      "delta_weight_norm": 0.0007805025574031122,
+      "module": "diffusion_module.diffusion_transformer.blocks.4.attention_pair_bias.attention.linear_o"
+    },
+    {
+      "delta_weight_norm": 0.0011143692637831848,
+      "module": "diffusion_module.diffusion_transformer.blocks.4.conditioned_transition_block.linear_nobias_a1"
+    },
+    {
+      "delta_weight_norm": 0.001107382349704706,
+      "module": "diffusion_module.diffusion_transformer.blocks.4.conditioned_transition_block.linear_nobias_a2"
+    },
+    {
+      "delta_weight_norm": 0.0007807467951875944,
+      "module": "diffusion_module.diffusion_transformer.blocks.4.conditioned_transition_block.linear_nobias_b"
+    },
+    {
+      "delta_weight_norm": 0.0007919196929518146,
+      "module": "diffusion_module.diffusion_transformer.blocks.5.attention_pair_bias.attention.linear_q"
+    },
+    {
+      "delta_weight_norm": 0.000789013686935604,
+      "module": "diffusion_module.diffusion_transformer.blocks.5.attention_pair_bias.attention.linear_k"
+    },
+    {
+      "delta_weight_norm": 0.0007964656912855958,
+      "module": "diffusion_module.diffusion_transformer.blocks.5.attention_pair_bias.attention.linear_v"
+    },
+    {
+      "delta_weight_norm": 0.0007672785333774932,
+      "module": "diffusion_module.diffusion_transformer.blocks.5.attention_pair_bias.attention.linear_o"
+    },
+    {
+      "delta_weight_norm": 0.0011050558838920127,
+      "module": "diffusion_module.diffusion_transformer.blocks.5.conditioned_transition_block.linear_nobias_a1"
+    },
+    {
+      "delta_weight_norm": 0.0011299908413030739,
+      "module": "diffusion_module.diffusion_transformer.blocks.5.conditioned_transition_block.linear_nobias_a2"
+    },
+    {
+      "delta_weight_norm": 0.0007783353675192191,
+      "module": "diffusion_module.diffusion_transformer.blocks.5.conditioned_transition_block.linear_nobias_b"
+    },
+    {
+      "delta_weight_norm": 0.0007866389014857319,
+      "module": "diffusion_module.diffusion_transformer.blocks.6.attention_pair_bias.attention.linear_q"
+    },
+    {
+      "delta_weight_norm": 0.0007989495886992156,
+      "module": "diffusion_module.diffusion_transformer.blocks.6.attention_pair_bias.attention.linear_k"
+    },
+    {
+      "delta_weight_norm": 0.0007788483570617982,
+      "module": "diffusion_module.diffusion_transformer.blocks.6.attention_pair_bias.attention.linear_v"
+    },
+    {
+      "delta_weight_norm": 0.0007641238132588154,
+      "module": "diffusion_module.diffusion_transformer.blocks.6.attention_pair_bias.attention.linear_o"
+    },
+    {
+      "delta_weight_norm": 0.001114836141884587,
+      "module": "diffusion_module.diffusion_transformer.blocks.6.conditioned_transition_block.linear_nobias_a1"
+    },
+    {
+      "delta_weight_norm": 0.0011074041515452173,
+      "module": "diffusion_module.diffusion_transformer.blocks.6.conditioned_transition_block.linear_nobias_a2"
+    },
+    {
+      "delta_weight_norm": 0.0007773203556436212,
+      "module": "diffusion_module.diffusion_transformer.blocks.6.conditioned_transition_block.linear_nobias_b"
+    },
+    {
+      "delta_weight_norm": 0.0008122230802072293,
+      "module": "diffusion_module.diffusion_transformer.blocks.7.attention_pair_bias.attention.linear_q"
+    },
+    {
+      "delta_weight_norm": 0.0007820569294684441,
+      "module": "diffusion_module.diffusion_transformer.blocks.7.attention_pair_bias.attention.linear_k"
+    },
+    {
+      "delta_weight_norm": 0.0007725289067480382,
+      "module": "diffusion_module.diffusion_transformer.blocks.7.attention_pair_bias.attention.linear_v"
+    },
+    {
+      "delta_weight_norm": 0.0007492665472539957,
+      "module": "diffusion_module.diffusion_transformer.blocks.7.attention_pair_bias.attention.linear_o"
+    },
+    {
+      "delta_weight_norm": 0.001110046285630411,
+      "module": "diffusion_module.diffusion_transformer.blocks.7.conditioned_transition_block.linear_nobias_a1"
+    },
+    {
+      "delta_weight_norm": 0.0011145265180149233,
+      "module": "diffusion_module.diffusion_transformer.blocks.7.conditioned_transition_block.linear_nobias_a2"
+    },
+    {
+      "delta_weight_norm": 0.0007759412550357623,
+      "module": "diffusion_module.diffusion_transformer.blocks.7.conditioned_transition_block.linear_nobias_b"
+    }
+  ]
+}
