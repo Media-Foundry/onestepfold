@@ -1,0 +1,1245 @@
+[
+  {
+    "chemistry": {
+      "atom_count": 1123,
+      "cif_sha256": "9e6eec65a25dec65ac6ba340a5137ec0d275d8d2faa3130bd4c120fcd09d462c",
+      "files": {
+        "mapping.npz": "54949ac6e4b29c9e5be67da3c8088c05ffafd69073f45dc42dd7677bd2af774a",
+        "native.pt": "a8a27662da14cd72526b7fe40922e437b2bf12923b2d3ac6bdf745ef8be34d47",
+        "variants.json": "5b169fd45e4136447e4ab32478fbbdf8d66cde0ef32cc20a9e75b36cf7d562e5"
+      },
+      "group_id": "ac2c623af3e8e016fdeeebee9c22438a932986f25a854ba39ae389d7bf643a6f",
+      "length": 142,
+      "observed_atoms": 1123,
+      "passed": true,
+      "pdb_id": "6o2k",
+      "reference_replay_max_abs": 2.6645352591003757e-15,
+      "source_hashes": {
+        "gt.json": "5e4c87c7e3cffef1ba6fb7ed2837b9ccd2cea56a26e8c1ca5add2936274778f2",
+        "gt.npz": "397684d063728a3faf9e096c1284f3a46e20163cf75a30591344f21c71c48103",
+        "input_provenance.json": "2f66866d626c8cbba5b2c98b7080117f32b1b1571b2c8e97dcb879f30e1c0c8e",
+        "prepared.json": "8494078c1022196b17db19ed1a61c9c24f9966f2faf81c78507b39ee78d70fc6"
+      },
+      "unsupported_source_connections": []
+    },
+    "chemistry_packet": "/data/user/shuang886/Folding/folding_source_extension_v1_20260930/chemistry/ac2c623af3e8e016fdeeebee9c22438a932986f25a854ba39ae389d7bf643a6f",
+    "group_id": "ac2c623af3e8e016fdeeebee9c22438a932986f25a854ba39ae389d7bf643a6f",
+    "observed_heavy_fraction": 1.0,
+    "passed": true,
+    "pdb_id": "6o2k",
+    "source": "/data/user/shuang886/Folding/folding_source_extension_v1_20260930/data/examples/ac2c623af3e8e016fdeeebee9c22438a932986f25a854ba39ae389d7bf643a6f",
+    "source_mmcif_sha256": "9e6eec65a25dec65ac6ba340a5137ec0d275d8d2faa3130bd4c120fcd09d462c"
+  },
+  {
+    "error": "Traceback (most recent call last):\n  File \"/data/user/shuang886/Folding/diffusion_expanded_sources_hpc3_v1_20260930/code/scripts/prepare_diffusion_training_sources.py\", line 36, in qualify_adapter_source\n    assert not np.any(distances[np.triu_indices(len(sg),1)]<2.3),'observed SG proximity outside supported unlinked graph'\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: observed SG proximity outside supported unlinked graph\n",
+    "group_id": "8583c20d78dadccb02cf3b456dc7eab433abd56cdd92e90be21826884b5e244b",
+    "passed": false,
+    "pdb_id": "5lzi"
+  },
+  {
+    "chemistry": {
+      "atom_count": 1040,
+      "cif_sha256": "46041135ef0bc8dc6d7230881340ec301ff6b14c59dc1b7dbd5443ec62ed84fa",
+      "files": {
+        "mapping.npz": "48befe8d2c5e6279b42ed0ac057c908c2b6974e53126cd7844baab53e190ef75",
+        "native.pt": "da16b217d324c1d5eb583acd4e24cd3bb5b52ddc1ecf03ceb6d8d3c157576801",
+        "variants.json": "915ad389c0748a8ec5e1715058686addea3a3fd94128f9a881b4f2c24bafd808"
+      },
+      "group_id": "eb9f1dcdd1f6a64e035e03a405aded3be8cdecf44a4416d50ad5eb78b91b38d9",
+      "length": 129,
+      "observed_atoms": 1040,
+      "passed": true,
+      "pdb_id": "5gpe",
+      "reference_replay_max_abs": 1.7763568394002505e-15,
+      "source_hashes": {
+        "gt.json": "98841c5281e8f2df754ce1ad13790de001d5184939c60c3f75a7ab118d216e62",
+        "gt.npz": "476a8d4eae44f1a2e34ca71981ebc5bc4d0e737f45f5f02b36362eaf17c7e971",
+        "input_provenance.json": "6845b11b8d610a78e8d003103c0b9810b22e99fee19320d0b5cfb496f259081c",
+        "prepared.json": "ad69a0c77fed1ee2be21a38222764f3f45633b3dcef6f8ef430889d8a290b45e"
+      },
+      "unsupported_source_connections": []
+    },
+    "chemistry_packet": "/data/user/shuang886/Folding/folding_source_extension_v1_20260930/chemistry/eb9f1dcdd1f6a64e035e03a405aded3be8cdecf44a4416d50ad5eb78b91b38d9",
+    "group_id": "eb9f1dcdd1f6a64e035e03a405aded3be8cdecf44a4416d50ad5eb78b91b38d9",
+    "observed_heavy_fraction": 1.0,
+    "passed": true,
+    "pdb_id": "5gpe",
+    "source": "/data/user/shuang886/Folding/folding_source_extension_v1_20260930/data/examples/eb9f1dcdd1f6a64e035e03a405aded3be8cdecf44a4416d50ad5eb78b91b38d9",
+    "source_mmcif_sha256": "46041135ef0bc8dc6d7230881340ec301ff6b14c59dc1b7dbd5443ec62ed84fa"
+  },
+  {
+    "error": "Traceback (most recent call last):\n  File \"/data/user/shuang886/Folding/diffusion_expanded_sources_hpc3_v1_20260930/code/scripts/prepare_diffusion_training_sources.py\", line 28, in qualify_adapter_source\n    qa=meta['qa'];assert qa['backbone4_coverage']==1 and qa['chain_break_count']==qa['modified_residue_count']==0\n                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+    "group_id": "cb6b6dcda612b0656ea9b89c41da665c63c84361a1aca810b6a17b291d7f1d10",
+    "passed": false,
+    "pdb_id": "1yq5"
+  },
+  {
+    "chemistry": {
+      "atom_count": 1894,
+      "cif_sha256": "e8181014dc07682056db637d5ff1d9a61dc1597cc79bd2426390d41d2c0d302b",
+      "files": {
+        "mapping.npz": "73d85dae969f47973c3ebe3385b603f599dfc44e1f221474c284c45e85ab67d2",
+        "native.pt": "9f585744594dd32e890c2f75489d9d48518ec1b0b14761afbd31b1f55603c353",
+        "variants.json": "1fa73b3e246cdceed7a9d5e193883772ff1ceaeb1d972b90e20ce50d510c06f1"
+      },
+      "group_id": "51d98f8472c5816c5bf3c8c7718b27bbb7d54c382a30af7099de04c046050147",
+      "length": 243,
+      "observed_atoms": 1894,
+      "passed": true,
+      "pdb_id": "2q35",
+      "reference_replay_max_abs": 2.220446049250313e-15,
+      "source_hashes": {
+        "gt.json": "1575d78b920722f10622cdc3f613c7d017646c1be46bfabcdb5e7238275e6ce6",
+        "gt.npz": "bb070b514bae1d53f848de54db35e40150a14e42122db1ebf2e264498d2ca2b9",
+        "input_provenance.json": "3f09ca73775dfad8be8965357253d83738f5e3d746589f235664bc18af99497e",
+        "prepared.json": "77c9cf2c82cac503662cc47c5bd99eef5f8d871659314b2b63c159e19843fbb7"
+      },
+      "unsupported_source_connections": []
+    },
+    "chemistry_packet": "/data/user/shuang886/Folding/folding_source_extension_v1_20260930/chemistry/51d98f8472c5816c5bf3c8c7718b27bbb7d54c382a30af7099de04c046050147",
+    "group_id": "51d98f8472c5816c5bf3c8c7718b27bbb7d54c382a30af7099de04c046050147",
+    "observed_heavy_fraction": 1.0,
+    "passed": true,
+    "pdb_id": "2q35",
+    "source": "/data/user/shuang886/Folding/folding_source_extension_v1_20260930/data/examples/51d98f8472c5816c5bf3c8c7718b27bbb7d54c382a30af7099de04c046050147",
+    "source_mmcif_sha256": "e8181014dc07682056db637d5ff1d9a61dc1597cc79bd2426390d41d2c0d302b"
+  },
+  {
+    "error": "Traceback (most recent call last):\n  File \"/data/user/shuang886/Folding/diffusion_expanded_sources_hpc3_v1_20260930/code/scripts/prepare_diffusion_training_sources.py\", line 36, in qualify_adapter_source\n    assert not np.any(distances[np.triu_indices(len(sg),1)]<2.3),'observed SG proximity outside supported unlinked graph'\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: observed SG proximity outside supported unlinked graph\n",
+    "group_id": "4f8a886a462654605df7bdee20ad11f80d2a58132b21ccf2de61a66b812c6326",
+    "passed": false,
+    "pdb_id": "2hnu"
+  },
+  {
+    "chemistry": {
+      "atom_count": 1303,
+      "cif_sha256": "62896f9f338e21a7b5ed9ce5f3e41cc0443faae3696c96ad5ea95216b3deec8f",
+      "files": {
+        "mapping.npz": "7e0e6cfb6eee859b7ba5bf3f63af650f9937255a2d9b56368bb8007e1813f51a",
+        "native.pt": "39b79237e55bbee010a9e9b430535123b56b08acf21b6b366dc449aa643b8ca7",
+        "variants.json": "bff96fec8efce5b1dd92faa8de177d9a0167b44e20461a1dde8f0ba32cfdc335"
+      },
+      "group_id": "4c589b69ada00fb8fde4d62d6d89b26e5034e87865c90c2ca3f23099bf0f6a10",
+      "length": 162,
+      "observed_atoms": 1302,
+      "passed": true,
+      "pdb_id": "1t6s",
+      "reference_replay_max_abs": 2.6645352591003757e-15,
+      "source_hashes": {
+        "gt.json": "485ecf9b1b94812400c06fce055c330ea71b5cc95889f2f552478487b4dbde9a",
+        "gt.npz": "fa8305f8fe6169fe8e4fc32a3a403a8a53369af5bbe9d03f1995b0b507dc9bf7",
+        "input_provenance.json": "599ab93f56eba40f199b53f812c6828d61149d3b32d29524d0822fabff054797",
+        "prepared.json": "f8b262cc61c81a645696d6b0dd0b507a1a1459424627f12a29d02493ffb13e87"
+      },
+      "unsupported_source_connections": []
+    },
+    "chemistry_packet": "/data/user/shuang886/Folding/folding_source_extension_v1_20260930/chemistry/4c589b69ada00fb8fde4d62d6d89b26e5034e87865c90c2ca3f23099bf0f6a10",
+    "group_id": "4c589b69ada00fb8fde4d62d6d89b26e5034e87865c90c2ca3f23099bf0f6a10",
+    "observed_heavy_fraction": 0.9992325402916347,
+    "passed": true,
+    "pdb_id": "1t6s",
+    "source": "/data/user/shuang886/Folding/folding_source_extension_v1_20260930/data/examples/4c589b69ada00fb8fde4d62d6d89b26e5034e87865c90c2ca3f23099bf0f6a10",
+    "source_mmcif_sha256": "62896f9f338e21a7b5ed9ce5f3e41cc0443faae3696c96ad5ea95216b3deec8f"
+  },
+  {
+    "error": "Traceback (most recent call last):\n  File \"/data/user/shuang886/Folding/diffusion_expanded_sources_hpc3_v1_20260930/code/scripts/prepare_diffusion_training_sources.py\", line 36, in qualify_adapter_source\n    assert not np.any(distances[np.triu_indices(len(sg),1)]<2.3),'observed SG proximity outside supported unlinked graph'\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: observed SG proximity outside supported unlinked graph\n",
+    "group_id": "6e6eb7f523beaf066312d3d5e18c582247dfd990f0ac4cca15d2e0f86f70f198",
+    "passed": false,
+    "pdb_id": "1ete"
+  },
+  {
+    "error": "Traceback (most recent call last):\n  File \"/data/user/shuang886/Folding/diffusion_expanded_sources_hpc3_v1_20260930/code/scripts/prepare_diffusion_training_sources.py\", line 28, in qualify_adapter_source\n    qa=meta['qa'];assert qa['backbone4_coverage']==1 and qa['chain_break_count']==qa['modified_residue_count']==0\n                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+    "group_id": "b474922e5e52ffb4eddfc63d9bc19444492f24bf9d865b433731bd6567d0e7cd",
+    "passed": false,
+    "pdb_id": "1wd5"
+  },
+  {
+    "error": "Traceback (most recent call last):\n  File \"/data/user/shuang886/Folding/diffusion_expanded_sources_hpc3_v1_20260930/code/scripts/prepare_diffusion_training_sources.py\", line 36, in qualify_adapter_source\n    assert not np.any(distances[np.triu_indices(len(sg),1)]<2.3),'observed SG proximity outside supported unlinked graph'\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: observed SG proximity outside supported unlinked graph\n",
+    "group_id": "dc7731cc2b4309f91dfdf6fe8d98ac9d4f193f2b4f985a6a09a108a1f9cf6198",
+    "passed": false,
+    "pdb_id": "1bet"
+  },
+  {
+    "error": "Traceback (most recent call last):\n  File \"/data/user/shuang886/Folding/diffusion_expanded_sources_hpc3_v1_20260930/code/scripts/prepare_diffusion_training_sources.py\", line 36, in qualify_adapter_source\n    assert not np.any(distances[np.triu_indices(len(sg),1)]<2.3),'observed SG proximity outside supported unlinked graph'\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: observed SG proximity outside supported unlinked graph\n",
+    "group_id": "ab7fe8d22cc37fc45ea2cadad74f77cae69896ecba617d3b7de4daa149d5509f",
+    "passed": false,
+    "pdb_id": "5elb"
+  },
+  {
+    "error": "Traceback (most recent call last):\n  File \"/data/user/shuang886/Folding/diffusion_expanded_sources_hpc3_v1_20260930/code/scripts/prepare_diffusion_training_sources.py\", line 36, in qualify_adapter_source\n    assert not np.any(distances[np.triu_indices(len(sg),1)]<2.3),'observed SG proximity outside supported unlinked graph'\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: observed SG proximity outside supported unlinked graph\n",
+    "group_id": "bf8f4397895ef844c959757b1cde2a7d1fcda49a2705ca5043950784026a446b",
+    "passed": false,
+    "pdb_id": "5du1"
+  },
+  {
+    "error": "Traceback (most recent call last):\n  File \"/data/user/shuang886/Folding/diffusion_expanded_sources_hpc3_v1_20260930/code/scripts/prepare_diffusion_training_sources.py\", line 36, in qualify_adapter_source\n    assert not np.any(distances[np.triu_indices(len(sg),1)]<2.3),'observed SG proximity outside supported unlinked graph'\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: observed SG proximity outside supported unlinked graph\n",
+    "group_id": "87bd1d2fab38c177ad9f51ec008790e09a5c93010923c03d35067f0760fbfe0b",
+    "passed": false,
+    "pdb_id": "1c48"
+  },
+  {
+    "error": "Traceback (most recent call last):\n  File \"/data/user/shuang886/Folding/diffusion_expanded_sources_hpc3_v1_20260930/code/scripts/prepare_diffusion_training_sources.py\", line 36, in qualify_adapter_source\n    assert not np.any(distances[np.triu_indices(len(sg),1)]<2.3),'observed SG proximity outside supported unlinked graph'\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: observed SG proximity outside supported unlinked graph\n",
+    "group_id": "4657945f96af9d6152383985a4e1314ba693b967bb31d2314846f154e49c2665",
+    "passed": false,
+    "pdb_id": "1chq"
+  },
+  {
+    "chemistry": {
+      "atom_count": 1348,
+      "cif_sha256": "bfc2f56b1dcbcf9228da6b40c59b3f16918d7214d6d365be5c7312c789026c83",
+      "files": {
+        "mapping.npz": "0f098a61bbe15d8d374521cf8851ca453ccef4e0c1874de8ff663f3898e1671e",
+        "native.pt": "02f7ef9b4903812b71dc17849f521bf90ae3edf5187c62cdfe26edf74b955f1b",
+        "variants.json": "7f7368d4f3b731e6ee09e86c391d2c51749101e1a8d5ce4da5e07a6c069f5529"
+      },
+      "group_id": "8418268af9c8411525d7df488d31360bdc6bdb761b8eee44d6358fd3935bb1f3",
+      "length": 166,
+      "observed_atoms": 1347,
+      "passed": true,
+      "pdb_id": "2fe7",
+      "reference_replay_max_abs": 2.220446049250313e-15,
+      "source_hashes": {
+        "gt.json": "7527be564dca0f3a9ede1536f900336e043dfc01ed2375301b889e39fa3add11",
+        "gt.npz": "381f8948e6b9043c971f3be61da0141a551b1461f13f21cd789748d6ef8a96c0",
+        "input_provenance.json": "4011950399b90b2526ddce8bedd7440e67ee804618b9fa585dd59113f36589c6",
+        "prepared.json": "2c349f737454ceb93af3ec538b44b6219181be966bb8a25ca9dedf242943722f"
+      },
+      "unsupported_source_connections": []
+    },
+    "chemistry_packet": "/data/user/shuang886/Folding/folding_source_extension_v1_20260930/chemistry/8418268af9c8411525d7df488d31360bdc6bdb761b8eee44d6358fd3935bb1f3",
+    "group_id": "8418268af9c8411525d7df488d31360bdc6bdb761b8eee44d6358fd3935bb1f3",
+    "observed_heavy_fraction": 0.9992581602373887,
+    "passed": true,
+    "pdb_id": "2fe7",
+    "source": "/data/user/shuang886/Folding/folding_source_extension_v1_20260930/data/examples/8418268af9c8411525d7df488d31360bdc6bdb761b8eee44d6358fd3935bb1f3",
+    "source_mmcif_sha256": "bfc2f56b1dcbcf9228da6b40c59b3f16918d7214d6d365be5c7312c789026c83"
+  },
+  {
+    "chemistry": {
+      "atom_count": 866,
+      "cif_sha256": "e826776d8185cf5359905cfdad43b8ad5337ff4f3b61a4049f4b5f1f818c8fc2",
+      "files": {
+        "mapping.npz": "e57c2acb49e5aef5c79e707a5b6cfc49d41374affb25a53eba5dde8fa4e4cead",
+        "native.pt": "37efe541c16cc8713e05aeb15aa37aded89044f3a10ef6cf645347eeca21d358",
+        "variants.json": "07faad1310f0b67c36fc64d3df3f22e5b2191d43959660e2a89f7be07f7b7165"
+      },
+      "group_id": "644235bfc43341b7f0e807c8ff36797e8b8c48d6c96c11c8a0c5aeab4ad7508b",
+      "length": 113,
+      "observed_atoms": 865,
+      "passed": true,
+      "pdb_id": "4rww",
+      "reference_replay_max_abs": 1.7763568394002505e-15,
+      "source_hashes": {
+        "gt.json": "a0ff7f16282ac9cd0f8026a670919e07a6167467152513d330d163bc47acc485",
+        "gt.npz": "ccd3ebd3f4fa9b361f08c1081ee11bfbf967eb5b7863b82a7bc0889f0f6ecfec",
+        "input_provenance.json": "5dcc6101426b6e317d8a57179feff08a8ef69b85411925e99515101b12c02d9f",
+        "prepared.json": "5357f0ff8abeba882f1e456c7825fbb00c8e1122c80107214bbf9d21c8010a2b"
+      },
+      "unsupported_source_connections": []
+    },
+    "chemistry_packet": "/data/user/shuang886/Folding/folding_source_extension_v1_20260930/chemistry/644235bfc43341b7f0e807c8ff36797e8b8c48d6c96c11c8a0c5aeab4ad7508b",
+    "group_id": "644235bfc43341b7f0e807c8ff36797e8b8c48d6c96c11c8a0c5aeab4ad7508b",
+    "observed_heavy_fraction": 0.9988452655889145,
+    "passed": true,
+    "pdb_id": "4rww",
+    "source": "/data/user/shuang886/Folding/folding_source_extension_v1_20260930/data/examples/644235bfc43341b7f0e807c8ff36797e8b8c48d6c96c11c8a0c5aeab4ad7508b",
+    "source_mmcif_sha256": "e826776d8185cf5359905cfdad43b8ad5337ff4f3b61a4049f4b5f1f818c8fc2"
+  },
+  {
+    "chemistry": {
+      "atom_count": 1490,
+      "cif_sha256": "fb64b7df2a747ce21f20db5e951fe46274880851fce6be110c0e15db241d4c17",
+      "files": {
+        "mapping.npz": "df013c864195290833a78f341272db0159bbb86a79cdf0f16ee139552dec41f4",
+        "native.pt": "1000899b12bb8ba46e73636ee558ecf9d1f4ba350cbd334cff6c22c30f5b1a9c",
+        "variants.json": "60e760534a7f74dfde009722de828dead614af7f4238da8479044cb42cbe11ca"
+      },
+      "group_id": "8f6ebc401caa797c04d9be01c5a9c238750e9d6f5d3416453f63333a61ba9db1",
+      "length": 186,
+      "observed_atoms": 1489,
+      "passed": true,
+      "pdb_id": "3zqs",
+      "reference_replay_max_abs": 2.6645352591003757e-15,
+      "source_hashes": {
+        "gt.json": "11fe204dd029c210ce7b3fc14013f0a53ef4d787932404b640efaecaddafb2d6",
+        "gt.npz": "c59ab5a0436afbb6fc1e2985a632945e6c3c1107e6bf7cac514db531d3c4e0f9",
+        "input_provenance.json": "c656550254fcd0ff46d51933ea7509437eb2432faf8a329d0ab115b2a47affd5",
+        "prepared.json": "1d358b4b6c83302c4d10ac6c9f3d6bf592342b852d99bd071d9636f0e65f5514"
+      },
+      "unsupported_source_connections": []
+    },
+    "chemistry_packet": "/data/user/shuang886/Folding/folding_source_extension_v1_20260930/chemistry/8f6ebc401caa797c04d9be01c5a9c238750e9d6f5d3416453f63333a61ba9db1",
+    "group_id": "8f6ebc401caa797c04d9be01c5a9c238750e9d6f5d3416453f63333a61ba9db1",
+    "observed_heavy_fraction": 0.9993288590604027,
+    "passed": true,
+    "pdb_id": "3zqs",
+    "source": "/data/user/shuang886/Folding/folding_source_extension_v1_20260930/data/examples/8f6ebc401caa797c04d9be01c5a9c238750e9d6f5d3416453f63333a61ba9db1",
+    "source_mmcif_sha256": "fb64b7df2a747ce21f20db5e951fe46274880851fce6be110c0e15db241d4c17"
+  },
+  {
+    "chemistry": {
+      "atom_count": 574,
+      "cif_sha256": "95a8cb99f5d98bd0b6da3780f7866cf9f48188a1e7e6e38e7f2fa81215a8fa02",
+      "files": {
+        "mapping.npz": "ee12a125c25a34e95e1acc5f1688c9d65b461086463c1869ebb38e88fb4aeadd",
+        "native.pt": "6437ee05bd43fe3173b06dbd542010aa118fe1cd87a726efd34f775bcc625b80",
+        "variants.json": "1da5754bf150d921dce47552dfc43838471ff663f52e293a82c4cf3499329a9e"
+      },
+      "group_id": "9bddcca89bae8d623477eeed6a9a371fbd97c1e8902c2176ac6c00ceb7c693e2",
+      "length": 70,
+      "observed_atoms": 566,
+      "passed": true,
+      "pdb_id": "6l00",
+      "reference_replay_max_abs": 1.7763568394002505e-15,
+      "source_hashes": {
+        "gt.json": "90ccdde10e817b266c4afca6328e04d41a31e485daca35221263b82e0485dcf4",
+        "gt.npz": "eb42d1e73991621709962553279674558603c27bcbbf77fc68c7f38f15e0404c",
+        "input_provenance.json": "d1de5f76a703b8eac591722856bfde98001969fc2358a24dc28526309d63a418",
+        "prepared.json": "b2e0d3026d81e88bfff5ad3b886e03ee851186321e77ebf7f1ddfc34735ad0fb"
+      },
+      "unsupported_source_connections": []
+    },
+    "chemistry_packet": "/data/user/shuang886/Folding/folding_source_extension_v1_20260930/chemistry/9bddcca89bae8d623477eeed6a9a371fbd97c1e8902c2176ac6c00ceb7c693e2",
+    "group_id": "9bddcca89bae8d623477eeed6a9a371fbd97c1e8902c2176ac6c00ceb7c693e2",
+    "observed_heavy_fraction": 0.9860627177700348,
+    "passed": true,
+    "pdb_id": "6l00",
+    "source": "/data/user/shuang886/Folding/folding_source_extension_v1_20260930/data/examples/9bddcca89bae8d623477eeed6a9a371fbd97c1e8902c2176ac6c00ceb7c693e2",
+    "source_mmcif_sha256": "95a8cb99f5d98bd0b6da3780f7866cf9f48188a1e7e6e38e7f2fa81215a8fa02"
+  },
+  {
+    "error": "Traceback (most recent call last):\n  File \"/data/user/shuang886/Folding/diffusion_expanded_sources_hpc3_v1_20260930/code/scripts/prepare_diffusion_training_sources.py\", line 28, in qualify_adapter_source\n    qa=meta['qa'];assert qa['backbone4_coverage']==1 and qa['chain_break_count']==qa['modified_residue_count']==0\n                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+    "group_id": "fdfb78a3eb2736fa00669e9d33018502f171db9b53a1505064f70a2161c8f0f8",
+    "passed": false,
+    "pdb_id": "6mez"
+  },
+  {
+    "error": "Traceback (most recent call last):\n  File \"/data/user/shuang886/Folding/diffusion_expanded_sources_hpc3_v1_20260930/code/scripts/prepare_diffusion_training_sources.py\", line 36, in qualify_adapter_source\n    assert not np.any(distances[np.triu_indices(len(sg),1)]<2.3),'observed SG proximity outside supported unlinked graph'\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: observed SG proximity outside supported unlinked graph\n",
+    "group_id": "688193d70465cccff02cc39922ba3e19a0eaa8793e3951e4a1e957043518ef14",
+    "passed": false,
+    "pdb_id": "2ebo"
+  },
+  {
+    "error": "Traceback (most recent call last):\n  File \"/data/user/shuang886/Folding/diffusion_expanded_sources_hpc3_v1_20260930/code/scripts/prepare_diffusion_training_sources.py\", line 28, in qualify_adapter_source\n    qa=meta['qa'];assert qa['backbone4_coverage']==1 and qa['chain_break_count']==qa['modified_residue_count']==0\n                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+    "group_id": "d23a2061ea46b3654322f0b4150eaa545c7ab20c284e93b73610313d68d0d74b",
+    "passed": false,
+    "pdb_id": "3d82"
+  },
+  {
+    "error": "Traceback (most recent call last):\n  File \"/data/user/shuang886/Folding/diffusion_expanded_sources_hpc3_v1_20260930/code/scripts/prepare_diffusion_training_sources.py\", line 28, in qualify_adapter_source\n    qa=meta['qa'];assert qa['backbone4_coverage']==1 and qa['chain_break_count']==qa['modified_residue_count']==0\n                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+    "group_id": "f8808d7fa19e596bd23b5a40af662df5684d85881e4a9d1fce4a7f9b1a203c58",
+    "passed": false,
+    "pdb_id": "3d7l"
+  },
+  {
+    "chemistry": {
+      "error": "Traceback (most recent call last):\n  File \"/data/user/shuang886/Folding/diffusion_expanded_sources_hpc3_v1_20260930/code/scripts/preflight_isolated_chemistry.py\", line 49, in check\n    if unsupported:raise ValueError('source covalent connection outside supported chemistry')\n                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nValueError: source covalent connection outside supported chemistry\n",
+      "group_id": "8b1bed61f918bf2cf0261141a7f6b4789e8c735b77f2fc3c51aa221637853d1f",
+      "length": 241,
+      "passed": false,
+      "pdb_id": "2p62",
+      "unsupported_source_connections": [
+        {
+          "atoms": [
+            "SG",
+            "SG"
+          ],
+          "chains": [
+            "A",
+            "B"
+          ],
+          "residues": [
+            "203",
+            "203"
+          ],
+          "type": "disulf"
+        }
+      ]
+    },
+    "error": "Traceback (most recent call last):\n  File \"/data/user/shuang886/Folding/diffusion_expanded_sources_hpc3_v1_20260930/code/scripts/prepare_diffusion_training_sources.py\", line 41, in qualify_adapter_source\n    assert chemistry['passed'],chemistry.get('error')\n           ~~~~~~~~~^^^^^^^^^^\nAssertionError: Traceback (most recent call last):\n  File \"/data/user/shuang886/Folding/diffusion_expanded_sources_hpc3_v1_20260930/code/scripts/preflight_isolated_chemistry.py\", line 49, in check\n    if unsupported:raise ValueError('source covalent connection outside supported chemistry')\n                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nValueError: source covalent connection outside supported chemistry\n\n",
+    "group_id": "8b1bed61f918bf2cf0261141a7f6b4789e8c735b77f2fc3c51aa221637853d1f",
+    "passed": false,
+    "pdb_id": "2p62"
+  },
+  {
+    "error": "Traceback (most recent call last):\n  File \"/data/user/shuang886/Folding/diffusion_expanded_sources_hpc3_v1_20260930/code/scripts/prepare_diffusion_training_sources.py\", line 28, in qualify_adapter_source\n    qa=meta['qa'];assert qa['backbone4_coverage']==1 and qa['chain_break_count']==qa['modified_residue_count']==0\n                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+    "group_id": "8608c71c8f584fc0432f417bde12c727fa2f7250f0e065e8d109db67f0aab975",
+    "passed": false,
+    "pdb_id": "4o2t"
+  },
+  {
+    "chemistry": {
+      "atom_count": 489,
+      "cif_sha256": "9182fe911c3d2c82e8eb2e15df489e5a575c74d0122d8faf4094a48cb45f989c",
+      "files": {
+        "mapping.npz": "eaf7a934f3d859d4ff9bc61744884825a7bdd2180b119ceebd4f459e4e6a8812",
+        "native.pt": "04d1af854dbd66034c6e5633c585d6daa4e335a861c043b2e939f510032f40bb",
+        "variants.json": "bc1f564e57b469b6fb314ff8130441cd2ddc64a3f2c01a161e904490f7201b09"
+      },
+      "group_id": "9cbc415c9209e86f2f0ccd26d94e698e5669c6e2f366387380a01444648f8330",
+      "length": 65,
+      "observed_atoms": 489,
+      "passed": true,
+      "pdb_id": "3ry0",
+      "reference_replay_max_abs": 2.6645352591003757e-15,
+      "source_hashes": {
+        "gt.json": "7f83f634d713b1fae96269d7cdfe40d8fb80f1f849c7939bb9ce395a0eb2ccaf",
+        "gt.npz": "5e1827d0468c7a8db5c2535f5fd27f69b36917153c5254d389ea77f7d7340b53",
+        "input_provenance.json": "6c10c712c0bdd37194e51a867586c3666d6644d40e73d62668050a108b46adfa",
+        "prepared.json": "b1df3d665c8d9be5662ca98cab0db41f3527f49bd95b3632e2f7edc163e028b4"
+      },
+      "unsupported_source_connections": []
+    },
+    "chemistry_packet": "/data/user/shuang886/Folding/folding_source_extension_v1_20260930/chemistry/9cbc415c9209e86f2f0ccd26d94e698e5669c6e2f366387380a01444648f8330",
+    "group_id": "9cbc415c9209e86f2f0ccd26d94e698e5669c6e2f366387380a01444648f8330",
+    "observed_heavy_fraction": 1.0,
+    "passed": true,
+    "pdb_id": "3ry0",
+    "source": "/data/user/shuang886/Folding/folding_source_extension_v1_20260930/data/examples/9cbc415c9209e86f2f0ccd26d94e698e5669c6e2f366387380a01444648f8330",
+    "source_mmcif_sha256": "9182fe911c3d2c82e8eb2e15df489e5a575c74d0122d8faf4094a48cb45f989c"
+  },
+  {
+    "chemistry": {
+      "atom_count": 967,
+      "cif_sha256": "964acfb7d1340d155e46fdc6aa97cbf498c38a9c03ca3420fb6c198ef8b75eaf",
+      "files": {
+        "mapping.npz": "0328173c40edcbaac8deba29a1fb55bcfce77df999f69f489f25e345efa3e594",
+        "native.pt": "2bf45deb6b740c961e3ffd7057c770eaed0f6e3770936b5017d715f5a56e4ac7",
+        "variants.json": "140c7bea151bdccd03246eb6c04b04b7ce43bf617cfc292766d0ccda45f69d43"
+      },
+      "group_id": "d1fc8513329b5372ab2b2bc964a289e377dbdc59957a6f400da365c24a2e5ea9",
+      "length": 121,
+      "observed_atoms": 967,
+      "passed": true,
+      "pdb_id": "1dhn",
+      "reference_replay_max_abs": 1.7763568394002505e-15,
+      "source_hashes": {
+        "gt.json": "6a93c080648243648d5677d43ad7b13612b5cf97ccd8a417f5f23f613a943fa8",
+        "gt.npz": "44459dc7815a9a3995b5ba9f2391fcdd8094c1f876dc44c83ee77ef29939291b",
+        "input_provenance.json": "509c768f1369a9c9476a54557231c8bc8f5a29f3e4d74b1d59be62e8ef065778",
+        "prepared.json": "176d7c4d98412ab62e7dbe3061c4e540e4f88b40f94dd75d5f2a5e345f8dbdfc"
+      },
+      "unsupported_source_connections": []
+    },
+    "chemistry_packet": "/data/user/shuang886/Folding/folding_source_extension_v1_20260930/chemistry/d1fc8513329b5372ab2b2bc964a289e377dbdc59957a6f400da365c24a2e5ea9",
+    "group_id": "d1fc8513329b5372ab2b2bc964a289e377dbdc59957a6f400da365c24a2e5ea9",
+    "observed_heavy_fraction": 1.0,
+    "passed": true,
+    "pdb_id": "1dhn",
+    "source": "/data/user/shuang886/Folding/folding_source_extension_v1_20260930/data/examples/d1fc8513329b5372ab2b2bc964a289e377dbdc59957a6f400da365c24a2e5ea9",
+    "source_mmcif_sha256": "964acfb7d1340d155e46fdc6aa97cbf498c38a9c03ca3420fb6c198ef8b75eaf"
+  },
+  {
+    "chemistry": {
+      "atom_count": 540,
+      "cif_sha256": "2036604981fb09ae12a040f37e757c7ec4f551722b5584cf350857d0cd485e70",
+      "files": {
+        "mapping.npz": "70ba996945025d84b5034dcd7658ebe40227c00d4bf041d1543abb4c9062f8c3",
+        "native.pt": "a104ac0352326b17dd4c07f063d567067f62b041efd5347fc19dabf2aadca063",
+        "variants.json": "30296a9a684876a8b08659b4ca248551c8324c5945726fbbf81cec6690f6da28"
+      },
+      "group_id": "e47506dbb3c653d43f5dd8a85de71e7b2e16b044f0faeb6b7900933ca6d1ef41",
+      "length": 63,
+      "observed_atoms": 540,
+      "passed": true,
+      "pdb_id": "3e7l",
+      "reference_replay_max_abs": 2.220446049250313e-15,
+      "source_hashes": {
+        "gt.json": "362cba252e0ccad03a6844240c479a7ce4b7f2899d650f7a683749bab733a0a8",
+        "gt.npz": "c77495c9261140157326d943d666cb4d87d178fdd83d1f6ceff2f06e3eb263e1",
+        "input_provenance.json": "6bdbd84c04447ac2dc0f0adc6f326b7fedabc924a183bc45dba0e6264df9b62b",
+        "prepared.json": "d33ee59bb9a9cf42620474cdb707f66c5dfd51ab0004a645c9ecbfa5a8763113"
+      },
+      "unsupported_source_connections": []
+    },
+    "chemistry_packet": "/data/user/shuang886/Folding/folding_source_extension_v1_20260930/chemistry/e47506dbb3c653d43f5dd8a85de71e7b2e16b044f0faeb6b7900933ca6d1ef41",
+    "group_id": "e47506dbb3c653d43f5dd8a85de71e7b2e16b044f0faeb6b7900933ca6d1ef41",
+    "observed_heavy_fraction": 1.0,
+    "passed": true,
+    "pdb_id": "3e7l",
+    "source": "/data/user/shuang886/Folding/folding_source_extension_v1_20260930/data/examples/e47506dbb3c653d43f5dd8a85de71e7b2e16b044f0faeb6b7900933ca6d1ef41",
+    "source_mmcif_sha256": "2036604981fb09ae12a040f37e757c7ec4f551722b5584cf350857d0cd485e70"
+  },
+  {
+    "chemistry": {
+      "atom_count": 1375,
+      "cif_sha256": "50964c0979323408504df6fd13a11880b442ad13d8efe9cc985213de55e4d6c2",
+      "files": {
+        "mapping.npz": "5f6c95a73564a99be0e6a5bfa18ce2c9e7fbea05b80209266b363716d9684e9c",
+        "native.pt": "ecd307679d148b7cafe31cee682ea15fc2ee2c66bcc49f511f14095b1c165ff7",
+        "variants.json": "bf2295d4414ce513628af7953893148b985006421280a5c8da13f03d14b2d313"
+      },
+      "group_id": "21d5d890bc4685b673205bf3a98df573e15d58e38dc48b888843ab58f87fa170",
+      "length": 175,
+      "observed_atoms": 1338,
+      "passed": true,
+      "pdb_id": "2ja9",
+      "reference_replay_max_abs": 2.220446049250313e-15,
+      "source_hashes": {
+        "gt.json": "c17f95d0f05c11464142f11004786a24c9538be83450fc79878f916fd4aa87c7",
+        "gt.npz": "57adfa2eaa9ddd5e31eccd5a5971c6009a4d28e67e7fe831f4260ad37111b1c0",
+        "input_provenance.json": "c9bdacc7d7b2d7d8a85147ebd695a39cdc169302e6636ca119bbef9172d034f5",
+        "prepared.json": "ccf7ad70e5b1d6f5dbe5557940944e2f5d9bc733971c670557c85639f73bd9d8"
+      },
+      "unsupported_source_connections": []
+    },
+    "chemistry_packet": "/data/user/shuang886/Folding/folding_source_extension_v1_20260930/chemistry/21d5d890bc4685b673205bf3a98df573e15d58e38dc48b888843ab58f87fa170",
+    "group_id": "21d5d890bc4685b673205bf3a98df573e15d58e38dc48b888843ab58f87fa170",
+    "observed_heavy_fraction": 0.9730909090909091,
+    "passed": true,
+    "pdb_id": "2ja9",
+    "source": "/data/user/shuang886/Folding/folding_source_extension_v1_20260930/data/examples/21d5d890bc4685b673205bf3a98df573e15d58e38dc48b888843ab58f87fa170",
+    "source_mmcif_sha256": "50964c0979323408504df6fd13a11880b442ad13d8efe9cc985213de55e4d6c2"
+  },
+  {
+    "chemistry": {
+      "atom_count": 863,
+      "cif_sha256": "e76266d1bf512f8044e66fa67366f79a66c652cc11bace6056a8e19f96772628",
+      "files": {
+        "mapping.npz": "e423137fbde7ef7b9cf0717b34ca6c38a9735dc8a8097a9914fc8a0a651fcd9b",
+        "native.pt": "47ebad6e5569034987fd965be81272a042f847d9ee6bdbc3c36f275e67467442",
+        "variants.json": "afb8ac5235c6fc54680889798b7b9727eccb37cf27ab6562d247dc9d46dfdbc0"
+      },
+      "group_id": "96411c89ffacc79ef3c1ebd7d712651633e36cb7dae29fbe480db79cb30fb2eb",
+      "length": 110,
+      "observed_atoms": 863,
+      "passed": true,
+      "pdb_id": "1vc1",
+      "reference_replay_max_abs": 1.7763568394002505e-15,
+      "source_hashes": {
+        "gt.json": "49cee7c90808286e0425ff5e787833bda96e48a346ad8d3ad864b4396d98c4c1",
+        "gt.npz": "1bc84da62ef8d3e8edb24f618134f315fc9965681457043baf814ebdce0b4b0d",
+        "input_provenance.json": "a23f4eca4fbf996c7b706c2a7ca4afc6277fe3e79328e61883cabf02e9c4736a",
+        "prepared.json": "a138cf7ad903c9b7faffea2811561cdd11c67796cee3e528746d2d8047a210fc"
+      },
+      "unsupported_source_connections": []
+    },
+    "chemistry_packet": "/data/user/shuang886/Folding/folding_source_extension_v1_20260930/chemistry/96411c89ffacc79ef3c1ebd7d712651633e36cb7dae29fbe480db79cb30fb2eb",
+    "group_id": "96411c89ffacc79ef3c1ebd7d712651633e36cb7dae29fbe480db79cb30fb2eb",
+    "observed_heavy_fraction": 1.0,
+    "passed": true,
+    "pdb_id": "1vc1",
+    "source": "/data/user/shuang886/Folding/folding_source_extension_v1_20260930/data/examples/96411c89ffacc79ef3c1ebd7d712651633e36cb7dae29fbe480db79cb30fb2eb",
+    "source_mmcif_sha256": "e76266d1bf512f8044e66fa67366f79a66c652cc11bace6056a8e19f96772628"
+  },
+  {
+    "chemistry": {
+      "atom_count": 1897,
+      "cif_sha256": "9a5ad5204d5bbf14c506156f645bfac1c294833bf29c9ab2e7d2c9db56775ce5",
+      "files": {
+        "mapping.npz": "96ce696d5a2a7b393fbf90ef655e0b32d375791a546ae464653e39df29bc437c",
+        "native.pt": "adba1cc9cd9a929ea175554603e4d5f332664f9a0f09c1ef582be354d34cf7ed",
+        "variants.json": "9a18a921f14708a0776aa9a28b7e94ef4bbd5ab67294620096eb8531538e041b"
+      },
+      "group_id": "941c3d3c945ac45f2ec3e42061109c4ba9926f5efd22208747f913425ec34231",
+      "length": 226,
+      "observed_atoms": 1897,
+      "passed": true,
+      "pdb_id": "5tgq",
+      "reference_replay_max_abs": 2.6645352591003757e-15,
+      "source_hashes": {
+        "gt.json": "79d2fe1c25e14f9800b607122a63728fc851e72e47d9b48256676a7d52a24aea",
+        "gt.npz": "f1006093a9af1c1ba2581b38bf67665ee0e49da8bba8dcd9a06f643cb2162a91",
+        "input_provenance.json": "7d69193f2cf6542ee8e3b7fb159da21b824652f9aa8722c146cf91d5afa2c649",
+        "prepared.json": "e1b7074d3d02817f96c84a35c9797b4489c3cb23bd3aa4e32b5c70ba6b134d8e"
+      },
+      "unsupported_source_connections": []
+    },
+    "chemistry_packet": "/data/user/shuang886/Folding/folding_source_extension_v1_20260930/chemistry/941c3d3c945ac45f2ec3e42061109c4ba9926f5efd22208747f913425ec34231",
+    "group_id": "941c3d3c945ac45f2ec3e42061109c4ba9926f5efd22208747f913425ec34231",
+    "observed_heavy_fraction": 1.0,
+    "passed": true,
+    "pdb_id": "5tgq",
+    "source": "/data/user/shuang886/Folding/folding_source_extension_v1_20260930/data/examples/941c3d3c945ac45f2ec3e42061109c4ba9926f5efd22208747f913425ec34231",
+    "source_mmcif_sha256": "9a5ad5204d5bbf14c506156f645bfac1c294833bf29c9ab2e7d2c9db56775ce5"
+  },
+  {
+    "chemistry": {
+      "atom_count": 1110,
+      "cif_sha256": "d2c61942fd3a7440c6a8617d3e01d7a4b0f4b2a390788b34f4c2bdd6dd764617",
+      "files": {
+        "mapping.npz": "4c8aa5ab59de11673c6a82585f802b60cfa1c1da5378e3bb09311e1ddfc07c41",
+        "native.pt": "f3429d442e98760140fc0c3957b3905a704d3d2f9bb86172d71913be7740c39c",
+        "variants.json": "d7890f968377069c1951f88f00ba5fb390e3304c7a02d4fe1cc2cb83f50d34f7"
+      },
+      "group_id": "715861aeb19b44b20d30a6ed587f20624404f64b6c806868b3478bc185cd758e",
+      "length": 138,
+      "observed_atoms": 1110,
+      "passed": true,
+      "pdb_id": "2bj7",
+      "reference_replay_max_abs": 1.7763568394002505e-15,
+      "source_hashes": {
+        "gt.json": "095715cc3539b5652aa381d57f85507cdd6079679e91deee8688e6458fafa8d5",
+        "gt.npz": "52b6bef5b976309b8cb96483886e150f7100fbb234cd4347036cb01d50b5b418",
+        "input_provenance.json": "02b877d76f0ed83f39f0b136c794dc325172fc43f7a8afe162350ca691ef23a4",
+        "prepared.json": "930551b647eb007ffb44569a8f9e023808bca06685a42d439d5564a9eb3f3c43"
+      },
+      "unsupported_source_connections": []
+    },
+    "chemistry_packet": "/data/user/shuang886/Folding/folding_source_extension_v1_20260930/chemistry/715861aeb19b44b20d30a6ed587f20624404f64b6c806868b3478bc185cd758e",
+    "group_id": "715861aeb19b44b20d30a6ed587f20624404f64b6c806868b3478bc185cd758e",
+    "observed_heavy_fraction": 1.0,
+    "passed": true,
+    "pdb_id": "2bj7",
+    "source": "/data/user/shuang886/Folding/folding_source_extension_v1_20260930/data/examples/715861aeb19b44b20d30a6ed587f20624404f64b6c806868b3478bc185cd758e",
+    "source_mmcif_sha256": "d2c61942fd3a7440c6a8617d3e01d7a4b0f4b2a390788b34f4c2bdd6dd764617"
+  },
+  {
+    "error": "Traceback (most recent call last):\n  File \"/data/user/shuang886/Folding/diffusion_expanded_sources_hpc3_v1_20260930/code/scripts/prepare_diffusion_training_sources.py\", line 28, in qualify_adapter_source\n    qa=meta['qa'];assert qa['backbone4_coverage']==1 and qa['chain_break_count']==qa['modified_residue_count']==0\n                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+    "group_id": "20528c30d5871656e99b090887a12f49cf41ad78b21c3ad02a68f7f754ad5c73",
+    "passed": false,
+    "pdb_id": "5yrk"
+  },
+  {
+    "error": "Traceback (most recent call last):\n  File \"/data/user/shuang886/Folding/diffusion_expanded_sources_hpc3_v1_20260930/code/scripts/prepare_diffusion_training_sources.py\", line 28, in qualify_adapter_source\n    qa=meta['qa'];assert qa['backbone4_coverage']==1 and qa['chain_break_count']==qa['modified_residue_count']==0\n                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+    "group_id": "13131d79261f04d8137082e2a7cfc7310bacd2f6225ba7dacc2db544727b4ac3",
+    "passed": false,
+    "pdb_id": "2nlv"
+  },
+  {
+    "chemistry": {
+      "atom_count": 1021,
+      "cif_sha256": "daddfdc9d9266b65c8143e5c0593ccfcbf4c86b224f7634f8b6732d7039b56f7",
+      "files": {
+        "mapping.npz": "891c0b15d2e492bf13a9a2c5cb1326604e2ff17fee95a8ec1883c49bd935d359",
+        "native.pt": "6a2cb57b272dc2bfa3c1152a315a4fd2a921c1f1394b142c6c1fb9c7bbe0c8fc",
+        "variants.json": "0f1b9adfdc9a8a3075de0db46bffb4371986ad2fdd88fe0d9a35d3e6142af40b"
+      },
+      "group_id": "e65ce372c3d3e242cdb926a99895331fa18efd214adeffcb5ab2322accc9d19a",
+      "length": 133,
+      "observed_atoms": 1021,
+      "passed": true,
+      "pdb_id": "2e5y",
+      "reference_replay_max_abs": 3.1086244689504383e-15,
+      "source_hashes": {
+        "gt.json": "528d111ee0e818df96cd67f2087babd26a48437408c1f5bf9a33069c5b33d00a",
+        "gt.npz": "360df53ffb7dd24f5ebd19c38c3473085413f50104fd47326bd3d399fcf04084",
+        "input_provenance.json": "4a70f3c2f5f69f6e36203c29c9c2b8035169c66b4901239c4a1cf55db369a6ac",
+        "prepared.json": "42b9a7e9ed5c6a85b70073f41d53c3a5d63c824f3e11f0f1646463262077708e"
+      },
+      "unsupported_source_connections": []
+    },
+    "chemistry_packet": "/data/user/shuang886/Folding/folding_source_extension_v1_20260930/chemistry/e65ce372c3d3e242cdb926a99895331fa18efd214adeffcb5ab2322accc9d19a",
+    "group_id": "e65ce372c3d3e242cdb926a99895331fa18efd214adeffcb5ab2322accc9d19a",
+    "observed_heavy_fraction": 1.0,
+    "passed": true,
+    "pdb_id": "2e5y",
+    "source": "/data/user/shuang886/Folding/folding_source_extension_v1_20260930/data/examples/e65ce372c3d3e242cdb926a99895331fa18efd214adeffcb5ab2322accc9d19a",
+    "source_mmcif_sha256": "daddfdc9d9266b65c8143e5c0593ccfcbf4c86b224f7634f8b6732d7039b56f7"
+  },
+  {
+    "chemistry": {
+      "atom_count": 439,
+      "cif_sha256": "20d83b84713634f0c966b0237216dd392c59baaa0186f9939a69b4329e4d8237",
+      "files": {
+        "mapping.npz": "936eba7ab715e41301cf8ee1234078c0c4d4d77366c55ae2a53fabfe3ae16bec",
+        "native.pt": "201fd8d8f420cbd492d93e9d3023a35b2340ae88f33ada4504373228fe482f55",
+        "variants.json": "bfa0850f9e7d0938e98be6e4c8f86bc976321c64c4b3969d6a7fb71233462765"
+      },
+      "group_id": "a40653db2118cd620d83f69f23273f88323a8ef551fb1991c2439c894bf29125",
+      "length": 55,
+      "observed_atoms": 438,
+      "passed": true,
+      "pdb_id": "5zkt",
+      "reference_replay_max_abs": 1.7763568394002505e-15,
+      "source_hashes": {
+        "gt.json": "d39e96d3c0a7996183d205be9431d985e9501cd689b612091dc1329dbeb01fa7",
+        "gt.npz": "8d9cb951000b2e0a94a93d0c6b3d0947b442f1eb69a0d25520d24e30ae7bf157",
+        "input_provenance.json": "69446831eede72e82d4a41338329b9b586f8c730a78e5ed3575f29ae616a9f33",
+        "prepared.json": "0b303faf9c728a74eee40c2bfb93aaed53f51a1f26605be25614673658cce546"
+      },
+      "unsupported_source_connections": []
+    },
+    "chemistry_packet": "/data/user/shuang886/Folding/folding_source_extension_v1_20260930/chemistry/a40653db2118cd620d83f69f23273f88323a8ef551fb1991c2439c894bf29125",
+    "group_id": "a40653db2118cd620d83f69f23273f88323a8ef551fb1991c2439c894bf29125",
+    "observed_heavy_fraction": 0.9977220956719818,
+    "passed": true,
+    "pdb_id": "5zkt",
+    "source": "/data/user/shuang886/Folding/folding_source_extension_v1_20260930/data/examples/a40653db2118cd620d83f69f23273f88323a8ef551fb1991c2439c894bf29125",
+    "source_mmcif_sha256": "20d83b84713634f0c966b0237216dd392c59baaa0186f9939a69b4329e4d8237"
+  },
+  {
+    "error": "Traceback (most recent call last):\n  File \"/data/user/shuang886/Folding/diffusion_expanded_sources_hpc3_v1_20260930/code/scripts/prepare_diffusion_training_sources.py\", line 28, in qualify_adapter_source\n    qa=meta['qa'];assert qa['backbone4_coverage']==1 and qa['chain_break_count']==qa['modified_residue_count']==0\n                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+    "group_id": "e19cc6b15ba4379af2c57f02ec8a319321277b05b7a64be0df7b2f399c703b32",
+    "passed": false,
+    "pdb_id": "3st7"
+  },
+  {
+    "chemistry": {
+      "atom_count": 1850,
+      "cif_sha256": "5429321d178c44136ad31cb3a3513f79903fe62fd4be4bc0d82d37c82255d53a",
+      "files": {
+        "mapping.npz": "0a141f54d6b286ec84978f25e110f9fd33600beaaa0f5da7c148318795676c02",
+        "native.pt": "fcc4e3dbb75b57ea3c3634631de6d35a3481fefdd67ddc3ec37cbc2b8778e75e",
+        "variants.json": "c2f634da97007353956fb2f43dcf3383cb9783f4096d6edaea5d1d9528073ae7"
+      },
+      "group_id": "a864b3d2095b4f12e8bbd530b586b192468b5bf9b52cdaf31e7f7b4a63b37251",
+      "length": 252,
+      "observed_atoms": 1843,
+      "passed": true,
+      "pdb_id": "5bnc",
+      "reference_replay_max_abs": 2.6645352591003757e-15,
+      "source_hashes": {
+        "gt.json": "0fb97c67229254867fbc018527785fdf5fa73b9773ec8e9ed4d5f7264db2fb0d",
+        "gt.npz": "2a4bc6dc9c5ffa650ce76cf4f2f2d9e0381b9fc014b9bfa07c4b0df7590c3a9c",
+        "input_provenance.json": "d636ab4125ccd2edf9b674adfe473b3450474806561f5d789df7b13016a42d4b",
+        "prepared.json": "fc8a9cb2fe31efce2d8d26504e911681648e06e014f6d9d68debc9ef2f1a4e20"
+      },
+      "unsupported_source_connections": []
+    },
+    "chemistry_packet": "/data/user/shuang886/Folding/folding_source_extension_v1_20260930/chemistry/a864b3d2095b4f12e8bbd530b586b192468b5bf9b52cdaf31e7f7b4a63b37251",
+    "group_id": "a864b3d2095b4f12e8bbd530b586b192468b5bf9b52cdaf31e7f7b4a63b37251",
+    "observed_heavy_fraction": 0.9962162162162163,
+    "passed": true,
+    "pdb_id": "5bnc",
+    "source": "/data/user/shuang886/Folding/folding_source_extension_v1_20260930/data/examples/a864b3d2095b4f12e8bbd530b586b192468b5bf9b52cdaf31e7f7b4a63b37251",
+    "source_mmcif_sha256": "5429321d178c44136ad31cb3a3513f79903fe62fd4be4bc0d82d37c82255d53a"
+  },
+  {
+    "chemistry": {
+      "error": "Traceback (most recent call last):\n  File \"/data/user/shuang886/Folding/diffusion_expanded_sources_hpc3_v1_20260930/code/scripts/preflight_isolated_chemistry.py\", line 49, in check\n    if unsupported:raise ValueError('source covalent connection outside supported chemistry')\n                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nValueError: source covalent connection outside supported chemistry\n",
+      "group_id": "623586458a351f78ffbc875154eb8a675eade05d3aff6aec626339d936a5268a",
+      "length": 102,
+      "passed": false,
+      "pdb_id": "1l3p",
+      "unsupported_source_connections": [
+        {
+          "atoms": [
+            "SG",
+            "SG"
+          ],
+          "chains": [
+            "A",
+            "A"
+          ],
+          "residues": [
+            "56",
+            "56"
+          ],
+          "type": "disulf"
+        }
+      ]
+    },
+    "error": "Traceback (most recent call last):\n  File \"/data/user/shuang886/Folding/diffusion_expanded_sources_hpc3_v1_20260930/code/scripts/prepare_diffusion_training_sources.py\", line 41, in qualify_adapter_source\n    assert chemistry['passed'],chemistry.get('error')\n           ~~~~~~~~~^^^^^^^^^^\nAssertionError: Traceback (most recent call last):\n  File \"/data/user/shuang886/Folding/diffusion_expanded_sources_hpc3_v1_20260930/code/scripts/preflight_isolated_chemistry.py\", line 49, in check\n    if unsupported:raise ValueError('source covalent connection outside supported chemistry')\n                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nValueError: source covalent connection outside supported chemistry\n\n",
+    "group_id": "623586458a351f78ffbc875154eb8a675eade05d3aff6aec626339d936a5268a",
+    "passed": false,
+    "pdb_id": "1l3p"
+  },
+  {
+    "chemistry": {
+      "atom_count": 902,
+      "cif_sha256": "b86fcd94521e18af5bd6219b294a9f0116e1bf50ad6673b64215b64a3db066b8",
+      "files": {
+        "mapping.npz": "6e979d09f93f4a7cf9d547d37560523685bf6a06b09ba3bab426ef66e5f44411",
+        "native.pt": "9e8970decc4200c4603691cfe3820b4cdf0a653e62b51eb0037f9df3239ec985",
+        "variants.json": "0fa588a67bedfa69e50c26eb087bf0db047279db086bb0e6b7473732690098ed"
+      },
+      "group_id": "a9c2ed6b4b95beff7946f64986bdd3f070d2e90110462ce8e52b3669133290b9",
+      "length": 119,
+      "observed_atoms": 901,
+      "passed": true,
+      "pdb_id": "6qyy",
+      "reference_replay_max_abs": 1.7763568394002505e-15,
+      "source_hashes": {
+        "gt.json": "1662dc0a40aba93525db304e2b178d8adb9c3007a81e52a029fa34265b6f0634",
+        "gt.npz": "ac6450844bbb5ef2ded890e790ae6564334622493fed4ab7262c4ff2fca75578",
+        "input_provenance.json": "66bc7da7426c25957f24ad221551a127c0cf4809d7ccbcbb42a3685f2db0e83a",
+        "prepared.json": "04285592b20ff6444cfb8bd8b9775060e2aaab3a19289869ef16c992ebf476a0"
+      },
+      "unsupported_source_connections": []
+    },
+    "chemistry_packet": "/data/user/shuang886/Folding/folding_source_extension_v1_20260930/chemistry/a9c2ed6b4b95beff7946f64986bdd3f070d2e90110462ce8e52b3669133290b9",
+    "group_id": "a9c2ed6b4b95beff7946f64986bdd3f070d2e90110462ce8e52b3669133290b9",
+    "observed_heavy_fraction": 0.9988913525498891,
+    "passed": true,
+    "pdb_id": "6qyy",
+    "source": "/data/user/shuang886/Folding/folding_source_extension_v1_20260930/data/examples/a9c2ed6b4b95beff7946f64986bdd3f070d2e90110462ce8e52b3669133290b9",
+    "source_mmcif_sha256": "b86fcd94521e18af5bd6219b294a9f0116e1bf50ad6673b64215b64a3db066b8"
+  },
+  {
+    "chemistry": {
+      "error": "Traceback (most recent call last):\n  File \"/data/user/shuang886/Folding/diffusion_expanded_sources_hpc3_v1_20260930/code/scripts/preflight_isolated_chemistry.py\", line 49, in check\n    if unsupported:raise ValueError('source covalent connection outside supported chemistry')\n                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nValueError: source covalent connection outside supported chemistry\n",
+      "group_id": "ea30ad2e58fae0cc1a7454c61f290e3c02a26eae07772f7b04592ca4dee071ee",
+      "length": 129,
+      "passed": false,
+      "pdb_id": "2fxo",
+      "unsupported_source_connections": [
+        {
+          "atoms": [
+            "SG",
+            "SG"
+          ],
+          "chains": [
+            "A",
+            "B"
+          ],
+          "residues": [
+            "113",
+            "113"
+          ],
+          "type": "disulf"
+        }
+      ]
+    },
+    "error": "Traceback (most recent call last):\n  File \"/data/user/shuang886/Folding/diffusion_expanded_sources_hpc3_v1_20260930/code/scripts/prepare_diffusion_training_sources.py\", line 41, in qualify_adapter_source\n    assert chemistry['passed'],chemistry.get('error')\n           ~~~~~~~~~^^^^^^^^^^\nAssertionError: Traceback (most recent call last):\n  File \"/data/user/shuang886/Folding/diffusion_expanded_sources_hpc3_v1_20260930/code/scripts/preflight_isolated_chemistry.py\", line 49, in check\n    if unsupported:raise ValueError('source covalent connection outside supported chemistry')\n                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nValueError: source covalent connection outside supported chemistry\n\n",
+    "group_id": "ea30ad2e58fae0cc1a7454c61f290e3c02a26eae07772f7b04592ca4dee071ee",
+    "passed": false,
+    "pdb_id": "2fxo"
+  },
+  {
+    "error": "Traceback (most recent call last):\n  File \"/data/user/shuang886/Folding/diffusion_expanded_sources_hpc3_v1_20260930/code/scripts/prepare_diffusion_training_sources.py\", line 36, in qualify_adapter_source\n    assert not np.any(distances[np.triu_indices(len(sg),1)]<2.3),'observed SG proximity outside supported unlinked graph'\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: observed SG proximity outside supported unlinked graph\n",
+    "group_id": "b9a16c4f48da1c4cfc2813d5010c731c257077285eb0494a506f61c7c6d1f3f7",
+    "passed": false,
+    "pdb_id": "7br1"
+  },
+  {
+    "chemistry": {
+      "atom_count": 1335,
+      "cif_sha256": "22965e732ba42328da6f9d83fa19622fb2cdc657516dbd368a4bc8198e1aeac9",
+      "files": {
+        "mapping.npz": "03bbc7a300735d0d43e285c706268ddf1f90147a67839192341eb68f04458e53",
+        "native.pt": "a5a5d602647d706c713e0ed58a3a29e8702e71729274756be07adc9b996645f1",
+        "variants.json": "d91648ee4bcddf1b5394864280c60b7ab2e98a5ef60cc9037eb51e5d4366a3e2"
+      },
+      "group_id": "ed93716eeb77678d6ed42948f13dd7cd25e43a24016cf283030578d1ef463d94",
+      "length": 172,
+      "observed_atoms": 1330,
+      "passed": true,
+      "pdb_id": "1bxw",
+      "reference_replay_max_abs": 1.7763568394002505e-15,
+      "source_hashes": {
+        "gt.json": "0b982a10b45c51892b1bc5d4e4b7686eb47933ad39375c43c1fe23fff6b3b8e0",
+        "gt.npz": "69ae6b8fb2669ce08e0568807445f236f8d098da87f583d304d88cf67eb86bcb",
+        "input_provenance.json": "b3b0137fecfa5d82edd794759c5bc6198f1c28b87ead1a1f9c9e22ca668b6c2e",
+        "prepared.json": "b0a4afddaba69a39c6e287462b74f964ee15683b3825ce578d2ee5a1ac84472a"
+      },
+      "unsupported_source_connections": []
+    },
+    "chemistry_packet": "/data/user/shuang886/Folding/folding_source_extension_v1_20260930/chemistry/ed93716eeb77678d6ed42948f13dd7cd25e43a24016cf283030578d1ef463d94",
+    "group_id": "ed93716eeb77678d6ed42948f13dd7cd25e43a24016cf283030578d1ef463d94",
+    "observed_heavy_fraction": 0.9962546816479401,
+    "passed": true,
+    "pdb_id": "1bxw",
+    "source": "/data/user/shuang886/Folding/folding_source_extension_v1_20260930/data/examples/ed93716eeb77678d6ed42948f13dd7cd25e43a24016cf283030578d1ef463d94",
+    "source_mmcif_sha256": "22965e732ba42328da6f9d83fa19622fb2cdc657516dbd368a4bc8198e1aeac9"
+  },
+  {
+    "chemistry": {
+      "atom_count": 799,
+      "cif_sha256": "e14465f90ca013fb7d90aaba098d9e57535b7095b712f754b02309778da2143c",
+      "files": {
+        "mapping.npz": "c29efd8c11328391c8b6053427d0537337873132abb24dd3278c6424fb703d9b",
+        "native.pt": "d9d165a60d110cdd4c46d1acd47e89689e3dce6229138b99b67a949afcc11159",
+        "variants.json": "70e7362b255866ae6894279f6f6499e3a8abaae5b8ab875b0e3338efa21b8820"
+      },
+      "group_id": "1af546578ef1f4556d8ddfa7ec514cdabbc1cee65fc805583fdab89a9dab9173",
+      "length": 100,
+      "observed_atoms": 799,
+      "passed": true,
+      "pdb_id": "1ub9",
+      "reference_replay_max_abs": 1.9984014443252818e-15,
+      "source_hashes": {
+        "gt.json": "50664e534bfcd0b60c3e449b34f0336914c0afd2edebabd6e64d456a88a7182f",
+        "gt.npz": "446ff56d6aea5a3c6481538ee38a2125cd0cf970bd5d0d87f8acf5bce40a5329",
+        "input_provenance.json": "bd1bff9907e300f84795d089d861698e9e66ec856893d01d293134047817c45d",
+        "prepared.json": "f93ac288c73bbae5fab1888b642cbecea2297b27ea2ccb575a8f6c00d673114d"
+      },
+      "unsupported_source_connections": []
+    },
+    "chemistry_packet": "/data/user/shuang886/Folding/folding_source_extension_v1_20260930/chemistry/1af546578ef1f4556d8ddfa7ec514cdabbc1cee65fc805583fdab89a9dab9173",
+    "group_id": "1af546578ef1f4556d8ddfa7ec514cdabbc1cee65fc805583fdab89a9dab9173",
+    "observed_heavy_fraction": 1.0,
+    "passed": true,
+    "pdb_id": "1ub9",
+    "source": "/data/user/shuang886/Folding/folding_source_extension_v1_20260930/data/examples/1af546578ef1f4556d8ddfa7ec514cdabbc1cee65fc805583fdab89a9dab9173",
+    "source_mmcif_sha256": "e14465f90ca013fb7d90aaba098d9e57535b7095b712f754b02309778da2143c"
+  },
+  {
+    "chemistry": {
+      "atom_count": 642,
+      "cif_sha256": "c0c1b17705b4e783df0f48dd06303636e706095b92689b80af0708a069673243",
+      "files": {
+        "mapping.npz": "cf9040db8ad46b6bf9533eb85e45fe8b756b5848defbceb39ec015de095c60f7",
+        "native.pt": "172038ec7cfd86082ba9fead0bd7e2af664b3487fa034d6b84a879b2bb744529",
+        "variants.json": "383b82fd482f73b010bb0908fb2864929b588673ce71c5c249629506918ac5e1"
+      },
+      "group_id": "11081ecb3830b3ad531606b1d2ac97c21f1e2951919e2fe38225457c12c055e3",
+      "length": 80,
+      "observed_atoms": 642,
+      "passed": true,
+      "pdb_id": "1pzw",
+      "reference_replay_max_abs": 2.6645352591003757e-15,
+      "source_hashes": {
+        "gt.json": "c3e5d06d48e59b4e7c439d4c0887680ea8dd25d94aed241528e4372b284947a7",
+        "gt.npz": "bd09aaa4d1307b2025add2192f3d92081e7ab082647e388ff821d5a6ced186c2",
+        "input_provenance.json": "c3702f01463d3bd50766ed244dca2fd5401f7b5a090caa3618b16e82f997ad36",
+        "prepared.json": "60fd988bcccf8141a5a7fd3fd9ba54ed7c6c0187e09fdab2f8cbeac77fa0fa7a"
+      },
+      "unsupported_source_connections": []
+    },
+    "chemistry_packet": "/data/user/shuang886/Folding/folding_source_extension_v1_20260930/chemistry/11081ecb3830b3ad531606b1d2ac97c21f1e2951919e2fe38225457c12c055e3",
+    "group_id": "11081ecb3830b3ad531606b1d2ac97c21f1e2951919e2fe38225457c12c055e3",
+    "observed_heavy_fraction": 1.0,
+    "passed": true,
+    "pdb_id": "1pzw",
+    "source": "/data/user/shuang886/Folding/folding_source_extension_v1_20260930/data/examples/11081ecb3830b3ad531606b1d2ac97c21f1e2951919e2fe38225457c12c055e3",
+    "source_mmcif_sha256": "c0c1b17705b4e783df0f48dd06303636e706095b92689b80af0708a069673243"
+  },
+  {
+    "chemistry": {
+      "atom_count": 1112,
+      "cif_sha256": "e4a0a2c4faa428aaead4dbb09344ca7bd1ab2f90031e67e1a8b37020fdb1f547",
+      "files": {
+        "mapping.npz": "19d18a93b9bd36245b0c507bce2b261aac42d7b97d6e810ba2f45dfdf33bae8c",
+        "native.pt": "da40d6de9d3f4432a09a1b17a6b1dbf520cdc48f46a48560f4fcb9617c5e9265",
+        "variants.json": "aba7b4d6c49a245a90c064bf344086e9bfeaeaa87cd18793c18886dae62bad59"
+      },
+      "group_id": "3b568bf01f33736414da05710e7df266b8536b6f5cc01b18c1a7ad3dbba1397b",
+      "length": 131,
+      "observed_atoms": 1111,
+      "passed": true,
+      "pdb_id": "4pql",
+      "reference_replay_max_abs": 3.1086244689504383e-15,
+      "source_hashes": {
+        "gt.json": "402dc28b68fb0a2d2fa5469ea92e34de099156bbcd4002ad791d22622bdd67b2",
+        "gt.npz": "bbb4119918bea7354ab7cb5a455aa9a9ebc074c696ecd871e142f796eef0a9e6",
+        "input_provenance.json": "0a5b2009d7ff98a8f24c525861faa2060c231c205d4e4b0eea659ad93e2479b4",
+        "prepared.json": "4a534acccad40c7f25ee16545312a2c3edac5c7c4d9e7d533776cc77cfd5c1d7"
+      },
+      "unsupported_source_connections": []
+    },
+    "chemistry_packet": "/data/user/shuang886/Folding/folding_source_extension_v1_20260930/chemistry/3b568bf01f33736414da05710e7df266b8536b6f5cc01b18c1a7ad3dbba1397b",
+    "group_id": "3b568bf01f33736414da05710e7df266b8536b6f5cc01b18c1a7ad3dbba1397b",
+    "observed_heavy_fraction": 0.9991007194244604,
+    "passed": true,
+    "pdb_id": "4pql",
+    "source": "/data/user/shuang886/Folding/folding_source_extension_v1_20260930/data/examples/3b568bf01f33736414da05710e7df266b8536b6f5cc01b18c1a7ad3dbba1397b",
+    "source_mmcif_sha256": "e4a0a2c4faa428aaead4dbb09344ca7bd1ab2f90031e67e1a8b37020fdb1f547"
+  },
+  {
+    "error": "Traceback (most recent call last):\n  File \"/data/user/shuang886/Folding/diffusion_expanded_sources_hpc3_v1_20260930/code/scripts/prepare_diffusion_training_sources.py\", line 28, in qualify_adapter_source\n    qa=meta['qa'];assert qa['backbone4_coverage']==1 and qa['chain_break_count']==qa['modified_residue_count']==0\n                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+    "group_id": "03c33281bc664d3217222bdb7d426076e947d06342fe8778e37747852ca575d3",
+    "passed": false,
+    "pdb_id": "1xer"
+  },
+  {
+    "chemistry": {
+      "atom_count": 969,
+      "cif_sha256": "ae265d27638c4b2e40cc9ef061b657155a31831fdc26f78f968d4c7ad1ef22e1",
+      "files": {
+        "mapping.npz": "3ff6783f4406b42f7f32694548e7b56d565a9f10e038f478f21b6169d0d6ac51",
+        "native.pt": "bc526a39c13e16508b825fef9d267f3f56f92dc15e731ec837681198644c5f12",
+        "variants.json": "df176f1f61007bac195675a4a0adce7989a3ea249dce56bf7938bbab7fa2cefa"
+      },
+      "group_id": "160a97b82d7eb60a95e9da05a4a99ad64b7bb17fb1852b2153e398ca053ccac9",
+      "length": 116,
+      "observed_atoms": 968,
+      "passed": true,
+      "pdb_id": "1yoz",
+      "reference_replay_max_abs": 2.6645352591003757e-15,
+      "source_hashes": {
+        "gt.json": "c20fb017b962ced83ead74ab4195fbdf3891f43c995eeefe7b2ba3e45f2dfa89",
+        "gt.npz": "dff44a86ab2cd38c9e70aad70d59d24e646700713d7c69df391eb5e26cf102ac",
+        "input_provenance.json": "4a77caa474f047671f4413845d5a805c70b0cb34b516c3994da4da70bb177de6",
+        "prepared.json": "36042029a6d3136a4c65311c2db5074784a5539d0efb2df434ce15ca9ef9574d"
+      },
+      "unsupported_source_connections": []
+    },
+    "chemistry_packet": "/data/user/shuang886/Folding/folding_source_extension_v1_20260930/chemistry/160a97b82d7eb60a95e9da05a4a99ad64b7bb17fb1852b2153e398ca053ccac9",
+    "group_id": "160a97b82d7eb60a95e9da05a4a99ad64b7bb17fb1852b2153e398ca053ccac9",
+    "observed_heavy_fraction": 0.9989680082559339,
+    "passed": true,
+    "pdb_id": "1yoz",
+    "source": "/data/user/shuang886/Folding/folding_source_extension_v1_20260930/data/examples/160a97b82d7eb60a95e9da05a4a99ad64b7bb17fb1852b2153e398ca053ccac9",
+    "source_mmcif_sha256": "ae265d27638c4b2e40cc9ef061b657155a31831fdc26f78f968d4c7ad1ef22e1"
+  },
+  {
+    "error": "Traceback (most recent call last):\n  File \"/data/user/shuang886/Folding/diffusion_expanded_sources_hpc3_v1_20260930/code/scripts/prepare_diffusion_training_sources.py\", line 28, in qualify_adapter_source\n    qa=meta['qa'];assert qa['backbone4_coverage']==1 and qa['chain_break_count']==qa['modified_residue_count']==0\n                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+    "group_id": "1852ce41cc4af9bd6bf1a731434ab234a8e38d3fd9eba7a1a1dc27d0511f1f63",
+    "passed": false,
+    "pdb_id": "2fzt"
+  },
+  {
+    "error": "Traceback (most recent call last):\n  File \"/data/user/shuang886/Folding/diffusion_expanded_sources_hpc3_v1_20260930/code/scripts/prepare_diffusion_training_sources.py\", line 28, in qualify_adapter_source\n    qa=meta['qa'];assert qa['backbone4_coverage']==1 and qa['chain_break_count']==qa['modified_residue_count']==0\n                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+    "group_id": "de136f9ca6d754003ab9b6fe3f49c84632b3f64bbe92f1a5893ab84cf58ce632",
+    "passed": false,
+    "pdb_id": "4xp8"
+  },
+  {
+    "chemistry": {
+      "atom_count": 928,
+      "cif_sha256": "25bd715dae1ad27255a4c9b2aed3fc2dc098fa1a8a0b660ef2e6e7a4a8b334d7",
+      "files": {
+        "mapping.npz": "6cf998a18f4764ccb1928e1c5c1fce0bfad9fcc761b99498d70fe4067c38f350",
+        "native.pt": "f6c724f518d2f8ab35479e800c15640cfd4496725cf376b7f41b032a00975e5a",
+        "variants.json": "ab48ec3803f61982adf0043c6bb99c77b19a203546cea1ac67ca450f4d7f457d"
+      },
+      "group_id": "5e689795718f44003ae6ced672097fc061ae979d2110a6d4cf71be1247c3d239",
+      "length": 115,
+      "observed_atoms": 927,
+      "passed": true,
+      "pdb_id": "7b5j",
+      "reference_replay_max_abs": 2.220446049250313e-15,
+      "source_hashes": {
+        "gt.json": "ee92e274328c528a27ce029c89b4cce7e5864819a5a21706fd8cdbd829148f21",
+        "gt.npz": "4726891ddc0f215c4b17cfb43d2207370424e05bb64e3de06d6a332855ff9429",
+        "input_provenance.json": "77c9d9f85cba1dd2b4b117b0a6619dc642a1d15b845f564ec4aaad1cecdabdc2",
+        "prepared.json": "901bcfdf7bf488514c85a308933d937fd4869e3a5133f3c0d770a2a48fbf3756"
+      },
+      "unsupported_source_connections": []
+    },
+    "chemistry_packet": "/data/user/shuang886/Folding/folding_source_extension_v1_20260930/chemistry/5e689795718f44003ae6ced672097fc061ae979d2110a6d4cf71be1247c3d239",
+    "group_id": "5e689795718f44003ae6ced672097fc061ae979d2110a6d4cf71be1247c3d239",
+    "observed_heavy_fraction": 0.9989224137931034,
+    "passed": true,
+    "pdb_id": "7b5j",
+    "source": "/data/user/shuang886/Folding/folding_source_extension_v1_20260930/data/examples/5e689795718f44003ae6ced672097fc061ae979d2110a6d4cf71be1247c3d239",
+    "source_mmcif_sha256": "25bd715dae1ad27255a4c9b2aed3fc2dc098fa1a8a0b660ef2e6e7a4a8b334d7"
+  },
+  {
+    "chemistry": {
+      "atom_count": 864,
+      "cif_sha256": "6736a1e736e8fdb03eded78ee451b6e4c73da5793dc4f8950824e132131e881c",
+      "files": {
+        "mapping.npz": "879c10e914dafcfac2a471c0240e191f70b55686bb556a721f7b6eeb5a86636d",
+        "native.pt": "bf5667344f0f37bdc286865cb7221f32e600529811271694b4dc8c5f67008fdf",
+        "variants.json": "5e8f58a24a2c83aa8a1fe9b3d6e4a536c9315950a454a5d43aaa938f5e57aec9"
+      },
+      "group_id": "4465931f2254a66da389a1d90214422806667c1017d47e76adfa23134970bbaf",
+      "length": 106,
+      "observed_atoms": 864,
+      "passed": true,
+      "pdb_id": "1btn",
+      "reference_replay_max_abs": 3.552713678800501e-15,
+      "source_hashes": {
+        "gt.json": "1ed4ecd3e2fca96b9bdc2a528ae10017b45ccc3b983640f632ae6ef434b2ac77",
+        "gt.npz": "2ad747a36f114c65b1631d3e509ab2b0a755e3e5c1709b0ea421efdd34c562c5",
+        "input_provenance.json": "f7c48415e7976fab7a2efc54fe2476926f5d78f2f9485f4f4279ac879af49533",
+        "prepared.json": "8d5beb6207d25f42d9f9fa64f50667a60d4cff64b6b9540082298dcd617d596d"
+      },
+      "unsupported_source_connections": []
+    },
+    "chemistry_packet": "/data/user/shuang886/Folding/folding_source_extension_v1_20260930/chemistry/4465931f2254a66da389a1d90214422806667c1017d47e76adfa23134970bbaf",
+    "group_id": "4465931f2254a66da389a1d90214422806667c1017d47e76adfa23134970bbaf",
+    "observed_heavy_fraction": 1.0,
+    "passed": true,
+    "pdb_id": "1btn",
+    "source": "/data/user/shuang886/Folding/folding_source_extension_v1_20260930/data/examples/4465931f2254a66da389a1d90214422806667c1017d47e76adfa23134970bbaf",
+    "source_mmcif_sha256": "6736a1e736e8fdb03eded78ee451b6e4c73da5793dc4f8950824e132131e881c"
+  },
+  {
+    "chemistry": {
+      "atom_count": 1261,
+      "cif_sha256": "b82ee33c9654ef2e1ba06f14746cb037b641a5ec117fc3bfb1f88b931fa28f4a",
+      "files": {
+        "mapping.npz": "bfebb6735848e8bdd94c92fb3629599475409cfdeb210c33115ffba7d429e84a",
+        "native.pt": "58bd1bbc6fab34e781a354980fb29405e9a1ade5c1372646eb3e630821052092",
+        "variants.json": "fc2ed73f3aff72c2a094b4961ab4aa9fd975000d0e7cbf70984a697a47057dda"
+      },
+      "group_id": "d5bcaa99f631c2f912c69e4c5fb2d6a0e575ad2c05d1798ad3615e98f0337f01",
+      "length": 160,
+      "observed_atoms": 1248,
+      "passed": true,
+      "pdb_id": "6u9j",
+      "reference_replay_max_abs": 2.6645352591003757e-15,
+      "source_hashes": {
+        "gt.json": "3bc4a384a6d58c1790b04e9162796ebb6c2d7f9b05a1341c4bc3afb6857fd63f",
+        "gt.npz": "b9733bc05d0295770698205a6399106790f2b244d4d4cf316bd8450cd139109c",
+        "input_provenance.json": "b5846fb872f815a2148510cf69d8e54c7ffe7d558b0c75902eaf3e7a2ad5639d",
+        "prepared.json": "2799432e43dbe20862636d5b0f4354e0dc184ca0a306baa8fbd5427420cf4c0f"
+      },
+      "unsupported_source_connections": []
+    },
+    "chemistry_packet": "/data/user/shuang886/Folding/folding_source_extension_v1_20260930/chemistry/d5bcaa99f631c2f912c69e4c5fb2d6a0e575ad2c05d1798ad3615e98f0337f01",
+    "group_id": "d5bcaa99f631c2f912c69e4c5fb2d6a0e575ad2c05d1798ad3615e98f0337f01",
+    "observed_heavy_fraction": 0.9896907216494846,
+    "passed": true,
+    "pdb_id": "6u9j",
+    "source": "/data/user/shuang886/Folding/folding_source_extension_v1_20260930/data/examples/d5bcaa99f631c2f912c69e4c5fb2d6a0e575ad2c05d1798ad3615e98f0337f01",
+    "source_mmcif_sha256": "b82ee33c9654ef2e1ba06f14746cb037b641a5ec117fc3bfb1f88b931fa28f4a"
+  },
+  {
+    "error": "Traceback (most recent call last):\n  File \"/data/user/shuang886/Folding/diffusion_expanded_sources_hpc3_v1_20260930/code/scripts/prepare_diffusion_training_sources.py\", line 36, in qualify_adapter_source\n    assert not np.any(distances[np.triu_indices(len(sg),1)]<2.3),'observed SG proximity outside supported unlinked graph'\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: observed SG proximity outside supported unlinked graph\n",
+    "group_id": "8865b19a1efb202c4b65e1d48cd690ea04a1021d4acdc650feb6e13237b9a47e",
+    "passed": false,
+    "pdb_id": "1ilk"
+  },
+  {
+    "chemistry": {
+      "atom_count": 1039,
+      "cif_sha256": "8c2ca36d7d8ada4c57849051de8a3f1ca4e214bb0c56e3e8cae3986406004c2b",
+      "files": {
+        "mapping.npz": "7b8f0832ec836976dd4217bbd15eda201d6a33617111593ded97a704bbf8f1ad",
+        "native.pt": "c703dc8d6fd8af6f3da753450b72611b9e9330f380d25c65620b147676e7c7ad",
+        "variants.json": "3eb06e0673c3041da18fb647f42ca0d38d2e12f712d45ab8fc30eee646654c15"
+      },
+      "group_id": "94a622fee99a7f35e817a3214cde7642062af468c9b891d482dcf22c3d18201c",
+      "length": 137,
+      "observed_atoms": 1039,
+      "passed": true,
+      "pdb_id": "2z3v",
+      "reference_replay_max_abs": 2.220446049250313e-15,
+      "source_hashes": {
+        "gt.json": "19f5eea9b10239742eb5c2505f9ec30d2103db007ea6891959cf5a20e3618364",
+        "gt.npz": "9b0415b7005946e9a28c587b205a67c9d10f7c82ffeb298f8d6cfd8e7e1693ea",
+        "input_provenance.json": "7d1769683320d7126d0e25ad7d309e468723bfb3d55e89066b235b162e33a4e8",
+        "prepared.json": "97114b48cec4d6ab5293d569107ba0cd2e76c9631d497174570047c10ac1e64d"
+      },
+      "unsupported_source_connections": []
+    },
+    "chemistry_packet": "/data/user/shuang886/Folding/folding_source_extension_v1_20260930/chemistry/94a622fee99a7f35e817a3214cde7642062af468c9b891d482dcf22c3d18201c",
+    "group_id": "94a622fee99a7f35e817a3214cde7642062af468c9b891d482dcf22c3d18201c",
+    "observed_heavy_fraction": 1.0,
+    "passed": true,
+    "pdb_id": "2z3v",
+    "source": "/data/user/shuang886/Folding/folding_source_extension_v1_20260930/data/examples/94a622fee99a7f35e817a3214cde7642062af468c9b891d482dcf22c3d18201c",
+    "source_mmcif_sha256": "8c2ca36d7d8ada4c57849051de8a3f1ca4e214bb0c56e3e8cae3986406004c2b"
+  },
+  {
+    "error": "Traceback (most recent call last):\n  File \"/data/user/shuang886/Folding/diffusion_expanded_sources_hpc3_v1_20260930/code/scripts/prepare_diffusion_training_sources.py\", line 28, in qualify_adapter_source\n    qa=meta['qa'];assert qa['backbone4_coverage']==1 and qa['chain_break_count']==qa['modified_residue_count']==0\n                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+    "group_id": "2dc147f62af5a319f5230e4f0458a50008f86d159afef58cfa672b308c86ad99",
+    "passed": false,
+    "pdb_id": "2fre"
+  },
+  {
+    "error": "Traceback (most recent call last):\n  File \"/data/user/shuang886/Folding/diffusion_expanded_sources_hpc3_v1_20260930/code/scripts/prepare_diffusion_training_sources.py\", line 28, in qualify_adapter_source\n    qa=meta['qa'];assert qa['backbone4_coverage']==1 and qa['chain_break_count']==qa['modified_residue_count']==0\n                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+    "group_id": "8d49ce85e2b9b0c40a9ff738fb1ba87b38d3df5c0239ab64b4cd19cf64bd4982",
+    "passed": false,
+    "pdb_id": "5x1u"
+  },
+  {
+    "error": "Traceback (most recent call last):\n  File \"/data/user/shuang886/Folding/diffusion_expanded_sources_hpc3_v1_20260930/code/scripts/prepare_diffusion_training_sources.py\", line 36, in qualify_adapter_source\n    assert not np.any(distances[np.triu_indices(len(sg),1)]<2.3),'observed SG proximity outside supported unlinked graph'\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: observed SG proximity outside supported unlinked graph\n",
+    "group_id": "28ef210958f92c6b7d13a64cc3f76beee39d45c98f3608435dac8ad0b7fefe91",
+    "passed": false,
+    "pdb_id": "6i0i"
+  },
+  {
+    "error": "Traceback (most recent call last):\n  File \"/data/user/shuang886/Folding/diffusion_expanded_sources_hpc3_v1_20260930/code/scripts/prepare_diffusion_training_sources.py\", line 28, in qualify_adapter_source\n    qa=meta['qa'];assert qa['backbone4_coverage']==1 and qa['chain_break_count']==qa['modified_residue_count']==0\n                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+    "group_id": "a73300f48fd94a4447298bb6cae1f1c7bdf97db13d21600b8b0b752858caa69b",
+    "passed": false,
+    "pdb_id": "2ef8"
+  },
+  {
+    "chemistry": {
+      "atom_count": 1021,
+      "cif_sha256": "760aca632977ed83848da03044d60aabd53ba6db54de0792a5dbac36c80fec48",
+      "files": {
+        "mapping.npz": "b0736a05008dfae9238a9e7b43d824872ac9a7cd3db5b8cb03aa4397b543e0c5",
+        "native.pt": "8bfba1a2c5b589ddfe7c4cae3112f9b393cd40be4748c06cbef33b4d05aa7a91",
+        "variants.json": "8ed619f16b2fbe4226b1f705711eb777f838108017f7dc54668978ae7b745646"
+      },
+      "group_id": "f732c40a7c43381c1934f7bd9ddd176068ac742600ac7bed2de7d0f21a169935",
+      "length": 124,
+      "observed_atoms": 1021,
+      "passed": true,
+      "pdb_id": "2dp9",
+      "reference_replay_max_abs": 1.9984014443252818e-15,
+      "source_hashes": {
+        "gt.json": "ae13843d8a9b70d47e95f81606758f1faf58652474e5b14b589b20f7afa6ec28",
+        "gt.npz": "4be715828971f8494c1aa3c1ab47db35e6011d2348bb94c58abc3be54487e3e9",
+        "input_provenance.json": "2851924efc5bb081670f850a6f2b66bcdcf8b81de157979d7e59b82487dd20c8",
+        "prepared.json": "87197efa4b91561003997ae6a70aea007575ef8e4989489da533cd79da05bcf4"
+      },
+      "unsupported_source_connections": []
+    },
+    "chemistry_packet": "/data/user/shuang886/Folding/folding_source_extension_v1_20260930/chemistry/f732c40a7c43381c1934f7bd9ddd176068ac742600ac7bed2de7d0f21a169935",
+    "group_id": "f732c40a7c43381c1934f7bd9ddd176068ac742600ac7bed2de7d0f21a169935",
+    "observed_heavy_fraction": 1.0,
+    "passed": true,
+    "pdb_id": "2dp9",
+    "source": "/data/user/shuang886/Folding/folding_source_extension_v1_20260930/data/examples/f732c40a7c43381c1934f7bd9ddd176068ac742600ac7bed2de7d0f21a169935",
+    "source_mmcif_sha256": "760aca632977ed83848da03044d60aabd53ba6db54de0792a5dbac36c80fec48"
+  },
+  {
+    "error": "Traceback (most recent call last):\n  File \"/data/user/shuang886/Folding/diffusion_expanded_sources_hpc3_v1_20260930/code/scripts/prepare_diffusion_training_sources.py\", line 36, in qualify_adapter_source\n    assert not np.any(distances[np.triu_indices(len(sg),1)]<2.3),'observed SG proximity outside supported unlinked graph'\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: observed SG proximity outside supported unlinked graph\n",
+    "group_id": "01f0c90a808a5c74cba5bdeb07c03bdfcf64e7c4a91f00694f9c972baaada1d3",
+    "passed": false,
+    "pdb_id": "3wmq"
+  },
+  {
+    "chemistry": {
+      "atom_count": 561,
+      "cif_sha256": "e824f629b4322ea0328c6037073b46fe189a9862e3150f7041bf7189d30251c7",
+      "files": {
+        "mapping.npz": "b7d57422a391f01eacf3f6c6d15a61cf92d155b2db4ba6d861fc819f288d43c5",
+        "native.pt": "6a24bbcbddb4c7fae2890b20ae3b3b3cf0cb516856fcc8698a3844737bd8a20e",
+        "variants.json": "1ec8655eb9f50866c9a1af5007e47a7f9d3620edd456021ab23fab0f9ffba475"
+      },
+      "group_id": "9bf619f711854d952f9b98f76bfe1e1a1b783e12f29416464d00f7d2e7313e53",
+      "length": 81,
+      "observed_atoms": 554,
+      "passed": true,
+      "pdb_id": "6tqj",
+      "reference_replay_max_abs": 1.7763568394002505e-15,
+      "source_hashes": {
+        "gt.json": "065aa94ab3f4f2f742efd9ac99bf51bb566baa0bf1628de31d04aaa1cec4e402",
+        "gt.npz": "aaad6ce6b9aca0e8081bc4da961b772ab5f7b113491f13024c2c255f43a6a9b3",
+        "input_provenance.json": "37cca4c6ce94d49b5ebe5f63189abcf874b003b2fbd7d65746f8ef3689ed77bb",
+        "prepared.json": "c5abe1f8b4b973c54e70cf76d076ecc3c8fdd00c3680096e4b83ca577ce9b530"
+      },
+      "unsupported_source_connections": []
+    },
+    "chemistry_packet": "/data/user/shuang886/Folding/folding_source_extension_v1_20260930/chemistry/9bf619f711854d952f9b98f76bfe1e1a1b783e12f29416464d00f7d2e7313e53",
+    "group_id": "9bf619f711854d952f9b98f76bfe1e1a1b783e12f29416464d00f7d2e7313e53",
+    "observed_heavy_fraction": 0.9875222816399287,
+    "passed": true,
+    "pdb_id": "6tqj",
+    "source": "/data/user/shuang886/Folding/folding_source_extension_v1_20260930/data/examples/9bf619f711854d952f9b98f76bfe1e1a1b783e12f29416464d00f7d2e7313e53",
+    "source_mmcif_sha256": "e824f629b4322ea0328c6037073b46fe189a9862e3150f7041bf7189d30251c7"
+  },
+  {
+    "error": "Traceback (most recent call last):\n  File \"/data/user/shuang886/Folding/diffusion_expanded_sources_hpc3_v1_20260930/code/scripts/prepare_diffusion_training_sources.py\", line 28, in qualify_adapter_source\n    qa=meta['qa'];assert qa['backbone4_coverage']==1 and qa['chain_break_count']==qa['modified_residue_count']==0\n                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+    "group_id": "1984771bd60db3868d1879dfa1b3b11476e87f660e90d22d31b91e65fe0196d8",
+    "passed": false,
+    "pdb_id": "3pnx"
+  },
+  {
+    "error": "Traceback (most recent call last):\n  File \"/data/user/shuang886/Folding/diffusion_expanded_sources_hpc3_v1_20260930/code/scripts/prepare_diffusion_training_sources.py\", line 28, in qualify_adapter_source\n    qa=meta['qa'];assert qa['backbone4_coverage']==1 and qa['chain_break_count']==qa['modified_residue_count']==0\n                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+    "group_id": "9a156b98f7a6d64b3a9785819aeceafd6dc6c8440380dc6c3328a7be8d71c611",
+    "passed": false,
+    "pdb_id": "1y7r"
+  },
+  {
+    "error": "Traceback (most recent call last):\n  File \"/data/user/shuang886/Folding/diffusion_expanded_sources_hpc3_v1_20260930/code/scripts/prepare_diffusion_training_sources.py\", line 28, in qualify_adapter_source\n    qa=meta['qa'];assert qa['backbone4_coverage']==1 and qa['chain_break_count']==qa['modified_residue_count']==0\n                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+    "group_id": "93fff42a25980159660d78aec71a06df274863c14dc0bb858dbe3d3a41c2bc88",
+    "passed": false,
+    "pdb_id": "4f2l"
+  },
+  {
+    "error": "Traceback (most recent call last):\n  File \"/data/user/shuang886/Folding/diffusion_expanded_sources_hpc3_v1_20260930/code/scripts/prepare_diffusion_training_sources.py\", line 28, in qualify_adapter_source\n    qa=meta['qa'];assert qa['backbone4_coverage']==1 and qa['chain_break_count']==qa['modified_residue_count']==0\n                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+    "group_id": "1c4bc201ff2a95f7ea70fd72404d8c3ed41d50b92e2b9f882b5ee455223b1126",
+    "passed": false,
+    "pdb_id": "4rcb"
+  },
+  {
+    "chemistry": {
+      "atom_count": 847,
+      "cif_sha256": "1b0b93c572db27e93cab7306659761069dbde1205177f1c9cd9c0c121075ce56",
+      "files": {
+        "mapping.npz": "fe92e90ee423b3b91931957070367b09c0a4c88d229427e0b2b90ed0e153cc65",
+        "native.pt": "17ac94ecab9b699f29ff1ff9d20923061ff0832f648ab4f22aacea76495c9fc4",
+        "variants.json": "1ae07f5467c8fd2fbb5a83d4f007b2ba2a55577d3509fddf47528c4dcbf09bc4"
+      },
+      "group_id": "439132ab9189a4f09111794dfbe346f3ca8105c64f6dad2c281c635cf4f8fb73",
+      "length": 110,
+      "observed_atoms": 847,
+      "passed": true,
+      "pdb_id": "6ahp",
+      "reference_replay_max_abs": 1.9984014443252818e-15,
+      "source_hashes": {
+        "gt.json": "a9d744c5416ece021539f718bb6ce3429519665d7230c17d2d076c5b48e98721",
+        "gt.npz": "ee1d9b7a72b171486a7be1d6d6853cca8da39995be711dd38355dbb6f63101bb",
+        "input_provenance.json": "2bd2d04bb40209e2932c7ac84db4714729c8785b6860e38401ca2a0278dc240a",
+        "prepared.json": "2652b7e464a77c4ac47821243b95744cc0e2ef79c3c7a4d8e795f73a9eb29216"
+      },
+      "unsupported_source_connections": []
+    },
+    "chemistry_packet": "/data/user/shuang886/Folding/folding_source_extension_v1_20260930/chemistry/439132ab9189a4f09111794dfbe346f3ca8105c64f6dad2c281c635cf4f8fb73",
+    "group_id": "439132ab9189a4f09111794dfbe346f3ca8105c64f6dad2c281c635cf4f8fb73",
+    "observed_heavy_fraction": 1.0,
+    "passed": true,
+    "pdb_id": "6ahp",
+    "source": "/data/user/shuang886/Folding/folding_source_extension_v1_20260930/data/examples/439132ab9189a4f09111794dfbe346f3ca8105c64f6dad2c281c635cf4f8fb73",
+    "source_mmcif_sha256": "1b0b93c572db27e93cab7306659761069dbde1205177f1c9cd9c0c121075ce56"
+  }
+]

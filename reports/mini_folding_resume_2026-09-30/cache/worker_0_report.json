@@ -1,0 +1,3989 @@
+{
+  "complete": true,
+  "counts": {
+    "diffusion": 364,
+    "pairformer": 224
+  },
+  "device": "NVIDIA H100 80GB HBM3",
+  "index": 0,
+  "lock_sha256": "56cf4439f20b5bd231d1e02963ba26d7094b14133df1ebd55b1a781c454771f4",
+  "peak_gpu_bytes": 46106396672,
+  "resolved_config": {
+    "adam": {
+      "beta1": 0.9,
+      "beta2": 0.95,
+      "lr": 0.0018,
+      "use_adamw": false,
+      "weight_decay": 1e-08
+    },
+    "af3_lr_scheduler": {
+      "decay_every_n_steps": 50000,
+      "decay_factor": 0.95,
+      "lr": 0.0018,
+      "warmup_steps": 10
+    },
+    "atom_permutation": {
+      "global_align_wo_symmetric_atom": false,
+      "permute_by_pocket": true,
+      "test": {
+        "diffusion_sample": true
+      },
+      "train": {
+        "diffusion_sample": false,
+        "mini_rollout": true
+      }
+    },
+    "base_dir": null,
+    "blocks_per_ckpt": 1,
+    "c_atom": 128,
+    "c_atompair": 16,
+    "c_s": 384,
+    "c_s_inputs": 449,
+    "c_token": 384,
+    "c_z": 128,
+    "chain_permutation": {
+      "configs": {
+        "accept_it_as_it_is": false,
+        "enumerate_all_anchor_pairs": false,
+        "find_gt_anchor_first": false,
+        "selection_metric": "aligned_rmsd",
+        "use_center_rmsd": false
+      },
+      "permute_by_pocket": true,
+      "test": {
+        "diffusion_sample": true
+      },
+      "train": {
+        "diffusion_sample": false,
+        "mini_rollout": true
+      }
+    },
+    "checkpoint_interval": -1,
+    "data": {
+      "ccd_components_file": "/data/user/shuang886/Folding/protenix_stage0_pkg/v1_1/runtime/common/components.cif",
+      "ccd_components_rdkit_mol_file": "/data/user/shuang886/Folding/protenix_stage0_pkg/v1_1/runtime/common/components.cif.rdkit_mol.pkl",
+      "epoch_size": 10000,
+      "msa": {
+        "enable_prot_msa": true,
+        "enable_rna_msa": true,
+        "max_size": {
+          "test": 16384,
+          "train": 16384
+        },
+        "min_size": {
+          "test": 1,
+          "train": 1
+        },
+        "prot_indexing_methods": [
+          "sequence"
+        ],
+        "prot_msadir_raw_paths": [
+          "/data/user/shuang886/Folding/protenix_stage0_pkg/v1_1/runtime/mmcif_msa_template"
+        ],
+        "prot_non_pairing_dbs": [
+          "pairing-non_pairing"
+        ],
+        "prot_pairing_dbs": [
+          "pairing"
+        ],
+        "prot_seq_or_filename_to_msadir_jsons": [
+          "/data/user/shuang886/Folding/protenix_stage0_pkg/v1_1/runtime/common/seq_to_pdb_index.json"
+        ],
+        "rna_indexing_methods": [
+          "sequence"
+        ],
+        "rna_msadir_raw_paths": [
+          "/data/user/shuang886/Folding/protenix_stage0_pkg/v1_1/runtime/rna_msa/msas"
+        ],
+        "rna_seq_or_filename_to_msadir_jsons": [
+          "/data/user/shuang886/Folding/protenix_stage0_pkg/v1_1/runtime/rna_msa/rna_sequence_to_pdb_chains.json"
+        ],
+        "sample_cutoff": {
+          "test": 16384,
+          "train": 16384
+        }
+      },
+      "num_dl_workers": 16,
+      "obsolete_release_data_csv": "/data/user/shuang886/Folding/protenix_stage0_pkg/v1_1/runtime/common/obsolete_release_date.csv",
+      "pdb_cluster_file": "/data/user/shuang886/Folding/protenix_stage0_pkg/v1_1/runtime/common/clusters-by-entity-40.txt",
+      "posebusters_0925": {
+        "base_info": {
+          "bioassembly_dict_dir": "/data/user/shuang886/Folding/protenix_stage0_pkg/v1_1/runtime/posebusters_bioassembly",
+          "find_all_pockets": false,
+          "find_pocket": true,
+          "indices_fpath": "/data/user/shuang886/Folding/protenix_stage0_pkg/v1_1/runtime/indices/posebusters_indices_mainchain_interface.csv",
+          "max_n_token": -1,
+          "mmcif_dir": "/data/user/shuang886/Folding/protenix_stage0_pkg/v1_1/runtime/posebusters_mmcif",
+          "pdb_list": ""
+        },
+        "constraint": {
+          "enable": false,
+          "fix_seed": false
+        },
+        "cropping_configs": {
+          "crop_size": -1,
+          "method_weights": [
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        "lig_atom_rename": false,
+        "sampler_configs": {
+          "sampler_type": "uniform"
+        },
+        "shuffle_mols": false,
+        "shuffle_sym_ids": false
+      },
+      "recentPDB_1536_sample384_0925": {
+        "base_info": {
+          "bioassembly_dict_dir": "/data/user/shuang886/Folding/protenix_stage0_pkg/v1_1/runtime/recentPDB_bioassembly",
+          "find_eval_chain_interface": true,
+          "group_by_pdb_id": true,
+          "indices_fpath": "/data/user/shuang886/Folding/protenix_stage0_pkg/v1_1/runtime/indices/recentPDB_low_homology_maxtoken1536.csv",
+          "max_n_token": -1,
+          "mmcif_dir": "/data/user/shuang886/Folding/protenix_stage0_pkg/v1_1/runtime/mmcif",
+          "pdb_list": "/data/user/shuang886/Folding/protenix_stage0_pkg/v1_1/runtime/indices/recentPDB_low_homology_maxtoken1024_sample384_pdb_id.txt",
+          "sort_by_n_token": false
+        },
+        "constraint": {
+          "enable": false,
+          "fix_seed": false
+        },
+        "cropping_configs": {
+          "crop_size": -1,
+          "method_weights": [
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        "lig_atom_rename": false,
+        "sampler_configs": {
+          "sampler_type": "uniform"
+        },
+        "shuffle_mols": false,
+        "shuffle_sym_ids": false
+      },
+      "template": {
+        "enable_prot_template": true,
+        "kalign_binary_path": "/usr/bin/kalign",
+        "obsolete_pdbs_path": "/data/user/shuang886/Folding/protenix_stage0_pkg/v1_1/runtime/common/obsolete_to_successor.json",
+        "prot_indexing_methods": [
+          "sequence"
+        ],
+        "prot_seq_or_filename_to_templatedir_jsons": [
+          "/data/user/shuang886/Folding/protenix_stage0_pkg/v1_1/runtime/common/seq_to_pdb_index.json"
+        ],
+        "prot_template_cache_dir": "",
+        "prot_template_mmcif_dir": "/data/user/shuang886/Folding/protenix_stage0_pkg/v1_1/runtime/mmcif",
+        "prot_template_raw_paths": [
+          "/data/user/shuang886/Folding/protenix_stage0_pkg/v1_1/runtime/mmcif_msa_template"
+        ],
+        "release_dates_path": "/data/user/shuang886/Folding/protenix_stage0_pkg/v1_1/runtime/common/release_date_cache.json",
+        "template_dropout_rate": 0.0
+      },
+      "test_ref_pos_augment": true,
+      "test_sets": [
+        "recentPDB_1536_sample384_0925"
+      ],
+      "train_ref_pos_augment": true,
+      "train_sampler": {
+        "sampler_type": "weighted",
+        "train_sample_weights": [
+          1.0
+        ]
+      },
+      "train_sets": [
+        "weightedPDB_before2109_wopb_nometalc_0925"
+      ],
+      "weightedPDB_before2109_wopb_nometalc_0925": {
+        "base_info": {
+          "bioassembly_dict_dir": "/data/user/shuang886/Folding/protenix_stage0_pkg/v1_1/runtime/mmcif_bioassembly",
+          "exclusion": {
+            "mol_1_type": [
+              "ions"
+            ],
+            "mol_2_type": [
+              "ions"
+            ]
+          },
+          "indices_fpath": "/data/user/shuang886/Folding/protenix_stage0_pkg/v1_1/runtime/indices/weightedPDB_indices_before_2021-09-30_wo_posebusters_resolution_below_9.csv.gz",
+          "max_n_token": -1,
+          "mmcif_dir": "/data/user/shuang886/Folding/protenix_stage0_pkg/v1_1/runtime/mmcif",
+          "pdb_list": "",
+          "random_sample_if_failed": true,
+          "use_reference_chains_only": false
+        },
+        "constraint": {
+          "contact": {
+            "distance_type": "center_atom",
+            "group": "complex",
+            "max_distance_range": {
+              "PL": [
+                4,
+                10
+              ],
+              "PP": [
+                6,
+                30
+              ]
+            },
+            "prob": 0.0,
+            "size": 0.3333333333333333
+          },
+          "contact_atom": {
+            "distance_type": "atom",
+            "feature_type": "continuous",
+            "group": "complex",
+            "max_distance_range": {
+              "PL": [
+                2,
+                8
+              ],
+              "PP": [
+                2,
+                12
+              ]
+            },
+            "min_distance": -1,
+            "prob": 0.0,
+            "size": 0.3333333333333333
+          },
+          "enable": false,
+          "fix_seed": false,
+          "pocket": {
+            "distance_type": "center_atom",
+            "group": "complex",
+            "max_distance_range": {
+              "LP": [
+                6,
+                20
+              ],
+              "PP": [
+                6,
+                20
+              ]
+            },
+            "prob": 0.0,
+            "size": 0.3333333333333333,
+            "spec_binder_chain": false
+          },
+          "substructure": {
+            "coord_noise_scale": 0.05,
+            "feature_type": "one_hot",
+            "mol_type_pairs": {
+              "LP": 10,
+              "PL": 10,
+              "PP": 15
+            },
+            "prob": 0.0,
+            "ratios": {
+              "full": [
+                0.0,
+                0.5,
+                1.0
+              ],
+              "partial": 0.3
+            },
+            "size": 0.8,
+            "spec_asym_id": false
+          }
+        },
+        "cropping_configs": {
+          "crop_size": 256,
+          "method_weights": [
+            0.2,
+            0.4,
+            0.4
+          ]
+        },
+        "lig_atom_rename": false,
+        "limits": -1,
+        "sample_weight": 0.5,
+        "sampler_configs": {
+          "alpha_dict": {
+            "ligand": 1,
+            "nuc": 3,
+            "prot": 3
+          },
+          "beta_dict": {
+            "chain": 0.5,
+            "interface": 1
+          },
+          "force_recompute_weight": true,
+          "sampler_type": "weighted"
+        },
+        "shuffle_mols": false,
+        "shuffle_sym_ids": false
+      }
+    },
+    "decay_every_n_steps": 50000,
+    "deterministic": true,
+    "deterministic_seed": false,
+    "diffusion_batch_size": 48,
+    "diffusion_chunk_size": 4,
+    "dtype": "fp32",
+    "dump_dir": "./output",
+    "ema_decay": -1.0,
+    "ema_mutable_param_keywords": [
+      ""
+    ],
+    "enable_diffusion_shared_vars_cache": true,
+    "enable_efficient_fusion": true,
+    "enable_tf32": false,
+    "esm": {
+      "embedding_dim": 2560,
+      "enable": true,
+      "model_name": "esm2-3b"
+    },
+    "eval_ema_only": false,
+    "eval_first": false,
+    "eval_interval": null,
+    "eval_only": false,
+    "find_unused_parameters": false,
+    "finetune": {
+      "decay_every_n_steps": 50000,
+      "lr": 0.0018,
+      "lr_scheduler": "cosine_annealing",
+      "max_steps": 20000,
+      "min_lr_ratio": 0.1,
+      "warmup_steps": 1000
+    },
+    "finetune_params_with_substring": [
+      ""
+    ],
+    "grad_clip_norm": 10,
+    "hidden_scale_up": false,
+    "infer_setting": {
+      "chunk_size": 256,
+      "chunk_size_thresholds": {
+        "1024": -1,
+        "1536": 512,
+        "2048": 256,
+        "2560": 128
+      },
+      "dynamic_chunk_size": true,
+      "lddt_metrics_chunk_size": 1,
+      "lddt_metrics_sparse_enable": true,
+      "sample_diffusion_chunk_size": 5
+    },
+    "inference_noise_scheduler": {
+      "rho": 7,
+      "s_max": 160.0,
+      "s_min": 0.0004,
+      "sigma_data": 16.0
+    },
+    "input_json_path": null,
+    "iters_to_accumulate": 1,
+    "load_checkpoint_dir": "/data/user/shuang886/Folding/protenix_stage0_pkg/v1_1/runtime/checkpoint",
+    "load_checkpoint_path": "",
+    "load_ema_checkpoint_path": "",
+    "load_params_only": true,
+    "load_step_for_scheduler": false,
+    "load_strict": false,
+    "log_interval": null,
+    "loss": {
+      "diffusion": {
+        "bond": {
+          "eps": 1e-06
+        },
+        "mse": {
+          "eps": 1e-06,
+          "weight_dna": 5.0,
+          "weight_ligand": 10.0,
+          "weight_mse": 0.3333333333333333,
+          "weight_rna": 5.0
+        },
+        "smooth_lddt": {
+          "eps": 1e-06
+        }
+      },
+      "diffusion_bond_chunk_size": 1,
+      "diffusion_chunk_size_outer": 1,
+      "diffusion_lddt_chunk_size": 1,
+      "diffusion_lddt_loss_dense": true,
+      "diffusion_sparse_loss_enable": true,
+      "distogram": {
+        "eps": 1e-06,
+        "max_bin": 21.6875,
+        "min_bin": 2.3125,
+        "no_bins": 64
+      },
+      "pae": {
+        "eps": 1e-06,
+        "max_bin": 32,
+        "min_bin": 0,
+        "no_bins": 64
+      },
+      "pde": {
+        "eps": 1e-06,
+        "max_bin": 32,
+        "min_bin": 0,
+        "no_bins": 64
+      },
+      "plddt": {
+        "eps": 1e-06,
+        "max_bin": 1.0,
+        "min_bin": 0,
+        "no_bins": 50,
+        "normalize": true
+      },
+      "resolution": {
+        "max": 4.0,
+        "min": 0.1
+      },
+      "resolved": {
+        "eps": 1e-06
+      },
+      "weight": {
+        "alpha_bond": 0.0,
+        "alpha_confidence": 0.0001,
+        "alpha_diffusion": 4.0,
+        "alpha_distogram": 0.03,
+        "alpha_except_pae": 1.0,
+        "alpha_pae": 0.0,
+        "smooth_lddt": 1.0
+      }
+    },
+    "loss_metrics_sparse_enable": true,
+    "lr": 0.0018,
+    "lr_scheduler": "af3",
+    "max_atoms_per_token": 24,
+    "max_steps": null,
+    "mc_dropout_apply_rate": 0.4,
+    "mc_dropout_rate": 0.4,
+    "metrics": {
+      "chain_ranker_keys": [
+        "chain_ptm",
+        "chain_plddt"
+      ],
+      "clash": {
+        "af3_clash_threshold": 1.1,
+        "vdw_clash_threshold": 0.75
+      },
+      "complex_ranker_keys": [
+        "plddt",
+        "gpde",
+        "ranking_score"
+      ],
+      "interface_ranker_keys": [
+        "chain_pair_iptm",
+        "chain_pair_iptm_global",
+        "chain_pair_plddt"
+      ],
+      "lddt": {
+        "eps": 1e-06
+      }
+    },
+    "min_lr_ratio": 0.1,
+    "model": {
+      "N_cycle": 4,
+      "N_model_seed": 1,
+      "condition_embedding_drop_rate": 0.0,
+      "confidence_embedding_drop_rate": 0.0,
+      "confidence_head": {
+        "blocks_per_ckpt": 1,
+        "c_s": 384,
+        "c_s_inputs": 449,
+        "c_z": 128,
+        "distance_bin_end": 52.0,
+        "distance_bin_start": 3.25,
+        "distance_bin_step": 1.25,
+        "hidden_scale_up": false,
+        "max_atoms_per_token": 24,
+        "n_blocks": 4,
+        "pairformer_dropout": 0.0,
+        "stop_gradient": true
+      },
+      "constraint_embedder": {
+        "c_constraint_atom_pair": 16,
+        "c_constraint_s": 449,
+        "c_constraint_z": 128,
+        "contact_atom_embedder": {
+          "c_z_input": 2,
+          "enable": false
+        },
+        "contact_embedder": {
+          "c_z_input": 2,
+          "enable": false
+        },
+        "initialize_method": "zero",
+        "pocket_embedder": {
+          "c_s_input": 3,
+          "c_z_input": 1,
+          "enable": false
+        },
+        "substructure_embedder": {
+          "architecture": "transformer",
+          "enable": false,
+          "hidden_dim": 128,
+          "n_classes": 4,
+          "n_layers": 1
+        }
+      },
+      "diffusion_module": {
+        "atom_decoder": {
+          "n_blocks": 1,
+          "n_heads": 4
+        },
+        "atom_encoder": {
+          "n_blocks": 1,
+          "n_heads": 4
+        },
+        "blocks_per_ckpt": 1,
+        "c_atom": 128,
+        "c_atompair": 16,
+        "c_s": 384,
+        "c_s_inputs": 449,
+        "c_token": 768,
+        "c_z": 128,
+        "sigma_data": 16.0,
+        "transformer": {
+          "n_blocks": 8,
+          "n_heads": 16
+        },
+        "use_fine_grained_checkpoint": true
+      },
+      "distogram_head": {
+        "c_z": 128,
+        "no_bins": 64
+      },
+      "input_embedder": {
+        "c_atom": 128,
+        "c_atompair": 16,
+        "c_token": 384
+      },
+      "msa_module": {
+        "blocks_per_ckpt": 1,
+        "c_m": 64,
+        "c_s_inputs": 449,
+        "c_z": 128,
+        "hidden_scale_up": false,
+        "msa_chunk_size": 2048,
+        "msa_dropout": 0.15,
+        "msa_max_size": 16384,
+        "n_blocks": 1,
+        "pair_dropout": 0.25
+      },
+      "pairformer": {
+        "blocks_per_ckpt": 1,
+        "c_s": 384,
+        "c_z": 128,
+        "dropout": 0.25,
+        "hidden_scale_up": false,
+        "n_blocks": 16,
+        "n_heads": 16
+      },
+      "relative_position_encoding": {
+        "c_z": 128,
+        "r_max": 32,
+        "s_max": 2
+      },
+      "template_embedder": {
+        "blocks_per_ckpt": 1,
+        "c": 64,
+        "c_z": 128,
+        "dropout": 0.25,
+        "hidden_scale_up": false,
+        "n_blocks": 0
+      }
+    },
+    "model_name": "protenix_mini_esm_v0.5.0",
+    "msa_pair_as_unpair": true,
+    "n_blocks": 48,
+    "need_atom_confidence": false,
+    "no_bins": 64,
+    "num_workers": 0,
+    "project": null,
+    "run_name": null,
+    "sample_diffusion": {
+      "N_sample": 1,
+      "N_sample_mini_rollout": 1,
+      "N_step": 5,
+      "N_step_mini_rollout": 20,
+      "gamma0": 0.0,
+      "gamma_min": 1.0,
+      "noise_scale_lambda": 1.003,
+      "step_scale_eta": 1.0
+    },
+    "seed": 42,
+    "seeds": [
+      101
+    ],
+    "sigma_data": 16.0,
+    "skip_amp": {
+      "confidence_head": false,
+      "loss": true,
+      "sample_diffusion": true,
+      "sample_diffusion_training": true
+    },
+    "skip_load_optimizer": false,
+    "skip_load_scheduler": false,
+    "skip_load_step": false,
+    "sorted_by_ranking_score": true,
+    "test_lig_atom_rename": false,
+    "test_max_n_token": -1,
+    "test_shuffle_mols": false,
+    "test_shuffle_sym_ids": false,
+    "train_confidence_only": false,
+    "train_crop_size": 256,
+    "train_lig_atom_rename": false,
+    "train_noise_sampler": {
+      "p_mean": -1.2,
+      "p_std": 1.5,
+      "sigma_data": 16.0
+    },
+    "train_shuffle_mols": false,
+    "train_shuffle_sym_ids": false,
+    "triangle_attention": "torch",
+    "triangle_multiplicative": "torch",
+    "use_msa": false,
+    "use_rna_msa": false,
+    "use_seeds_in_json": false,
+    "use_template": false,
+    "use_wandb": true,
+    "wandb_id": "",
+    "warmup_steps": 10
+  },
+  "rows": [
+    {
+      "counts": {
+        "diffusion": 7,
+        "pairformer": 4
+      },
+      "files": {
+        "conditioning.pt": "adaf5c101f964cff45425b706640e039de8246316c2dbc5cc2965e4035fa095c",
+        "gt_supervision.pt": "0cbcf42b8f0b4694c5d815b9bb9a9141ed154878d12e444c5094851321a5b74d",
+        "s1_seed600001.npy": "7a3ac6d2c40718f23f669a01583c300f52500611bfce903509e85fa9d4a79a2b",
+        "s1_seed600011.npy": "76d9ad1e19b758774ea284dee58d8181623fe5e99731812fc08fa69ce82938f0",
+        "s2_seed600001.npy": "9191b7b544f43b9f5817dbcd71ff76a9fb7da5d8a92ce9e5d8e7cc36eaa80020",
+        "s2_seed600011.npy": "411b377a5df206faaa7588f06de965e5216022114f66805ecf37019b00fd91d6"
+      },
+      "group_id": "2bc85e3e9020f945ab6d25997a6948dddfdc58dd394bc6eca5bd0a0582314075",
+      "length": 968,
+      "outputs": [
+        {
+          "name": "s1_seed600001.npy",
+          "schedule": [
+            2560.0,
+            0.0
+          ],
+          "seed": 600001,
+          "sha256": "7a3ac6d2c40718f23f669a01583c300f52500611bfce903509e85fa9d4a79a2b",
+          "steps": 1
+        },
+        {
+          "name": "s2_seed600001.npy",
+          "schedule": [
+            2560.0,
+            55.97478485107422,
+            0.0
+          ],
+          "seed": 600001,
+          "sha256": "9191b7b544f43b9f5817dbcd71ff76a9fb7da5d8a92ce9e5d8e7cc36eaa80020",
+          "steps": 2
+        },
+        {
+          "name": "s1_seed600011.npy",
+          "schedule": [
+            2560.0,
+            0.0
+          ],
+          "seed": 600011,
+          "sha256": "76d9ad1e19b758774ea284dee58d8181623fe5e99731812fc08fa69ce82938f0",
+          "steps": 1
+        },
+        {
+          "name": "s2_seed600011.npy",
+          "schedule": [
+            2560.0,
+            55.97478485107422,
+            0.0
+          ],
+          "seed": 600011,
+          "sha256": "411b377a5df206faaa7588f06de965e5216022114f66805ecf37019b00fd91d6",
+          "steps": 2
+        }
+      ],
+      "reload_replay": true,
+      "role": "train",
+      "seconds": 18.226905267685652
+    },
+    {
+      "counts": {
+        "diffusion": 7,
+        "pairformer": 4
+      },
+      "files": {
+        "conditioning.pt": "b2a07bf72079fe73599c39b1b7563c4a2f472dd48336daf90e4b49738dedde7c",
+        "gt_supervision.pt": "2fb1b3484a20045fed6c441a2cfd2323ca3de222ee201b2c3a803251d45e93d5",
+        "s1_seed600001.npy": "8bab7b2f16b9614ef7571ebd8fe27437986401d6575816a2d3e0b3bafe3f3867",
+        "s1_seed600011.npy": "4b2d651be395ecd726dc34044f94beb8c2ddb16187ce74b8a41e4f1b7a32fd10",
+        "s2_seed600001.npy": "65a668d67e58303c66e179b485c558692a571f028c04bd21b93734056d150c16",
+        "s2_seed600011.npy": "a364d2a584e2de9b51ed7e4b0ef180fa6667bc62db3bd432e904bd7373a9018f"
+      },
+      "group_id": "8b194a5159d3b2105823c07738f5c468d2ae99246b4b59debd46febc9ed6eadb",
+      "length": 464,
+      "outputs": [
+        {
+          "name": "s1_seed600001.npy",
+          "schedule": [
+            2560.0,
+            0.0
+          ],
+          "seed": 600001,
+          "sha256": "8bab7b2f16b9614ef7571ebd8fe27437986401d6575816a2d3e0b3bafe3f3867",
+          "steps": 1
+        },
+        {
+          "name": "s2_seed600001.npy",
+          "schedule": [
+            2560.0,
+            55.97478485107422,
+            0.0
+          ],
+          "seed": 600001,
+          "sha256": "65a668d67e58303c66e179b485c558692a571f028c04bd21b93734056d150c16",
+          "steps": 2
+        },
+        {
+          "name": "s1_seed600011.npy",
+          "schedule": [
+            2560.0,
+            0.0
+          ],
+          "seed": 600011,
+          "sha256": "4b2d651be395ecd726dc34044f94beb8c2ddb16187ce74b8a41e4f1b7a32fd10",
+          "steps": 1
+        },
+        {
+          "name": "s2_seed600011.npy",
+          "schedule": [
+            2560.0,
+            55.97478485107422,
+            0.0
+          ],
+          "seed": 600011,
+          "sha256": "a364d2a584e2de9b51ed7e4b0ef180fa6667bc62db3bd432e904bd7373a9018f",
+          "steps": 2
+        }
+      ],
+      "reload_replay": true,
+      "role": "train",
+      "seconds": 4.3192641492933035
+    },
+    {
+      "counts": {
+        "diffusion": 0,
+        "pairformer": 4
+      },
+      "files": {
+        "conditioning.pt": "8b824bed04224bcc6bf622df21dc498b1a054087122f76ab9961255c4fd7e5a3"
+      },
+      "group_id": "cbc56b45dc18f059abcd00e987939b633daf72dcf5e343eb20d2f60884503b4b",
+      "length": 435,
+      "outputs": [],
+      "reload_replay": false,
+      "role": "validation",
+      "seconds": 2.6988600846379995
+    },
+    {
+      "counts": {
+        "diffusion": 0,
+        "pairformer": 4
+      },
+      "files": {
+        "conditioning.pt": "810119f3377901ec9e471cffd5073698d073ba6a004d2ca4745bc85cd68d53fb"
+      },
+      "group_id": "4b5aa7581f7042961fa756db698aa532ce255931cce28107c7dcb549f01f1ed9",
+      "length": 413,
+      "outputs": [],
+      "reload_replay": false,
+      "role": "validation",
+      "seconds": 2.11284039914608
+    },
+    {
+      "counts": {
+        "diffusion": 7,
+        "pairformer": 4
+      },
+      "files": {
+        "conditioning.pt": "f457043803fa4f1824acdb061424bcd9ebed53bcb05709e5c2a0dacbd0006490",
+        "gt_supervision.pt": "ac27578f47d2003101c4d64bcb0f8b05b98bc5aea1bf120889381976d6ca276d",
+        "s1_seed600001.npy": "2088cb7a0d8e8ee9b97e2a4921d0a7b518adb17a5302b7d84049bb6da766ccaf",
+        "s1_seed600011.npy": "95f5d4fa1e70273de57c31b0c31a807ff8a53b164b164b46a16cee25d02e11fb",
+        "s2_seed600001.npy": "7d2ca708e4e604e54ac8890826f72f93145fdcd134a0715c3868b2b3f3bfc020",
+        "s2_seed600011.npy": "f29938bb7e4ed861a98dd662d16516669f8c48452de5318ae69b37b8045964ee"
+      },
+      "group_id": "9fe154029dce3f8ab1a8dca6365c57f5b3820c60379cdc1a2138dbcc3c8730a3",
+      "length": 394,
+      "outputs": [
+        {
+          "name": "s1_seed600001.npy",
+          "schedule": [
+            2560.0,
+            0.0
+          ],
+          "seed": 600001,
+          "sha256": "2088cb7a0d8e8ee9b97e2a4921d0a7b518adb17a5302b7d84049bb6da766ccaf",
+          "steps": 1
+        },
+        {
+          "name": "s2_seed600001.npy",
+          "schedule": [
+            2560.0,
+            55.97478485107422,
+            0.0
+          ],
+          "seed": 600001,
+          "sha256": "7d2ca708e4e604e54ac8890826f72f93145fdcd134a0715c3868b2b3f3bfc020",
+          "steps": 2
+        },
+        {
+          "name": "s1_seed600011.npy",
+          "schedule": [
+            2560.0,
+            0.0
+          ],
+          "seed": 600011,
+          "sha256": "95f5d4fa1e70273de57c31b0c31a807ff8a53b164b164b46a16cee25d02e11fb",
+          "steps": 1
+        },
+        {
+          "name": "s2_seed600011.npy",
+          "schedule": [
+            2560.0,
+            55.97478485107422,
+            0.0
+          ],
+          "seed": 600011,
+          "sha256": "f29938bb7e4ed861a98dd662d16516669f8c48452de5318ae69b37b8045964ee",
+          "steps": 2
+        }
+      ],
+      "reload_replay": true,
+      "role": "train",
+      "seconds": 3.0031427945941687
+    },
+    {
+      "counts": {
+        "diffusion": 7,
+        "pairformer": 4
+      },
+      "files": {
+        "conditioning.pt": "d0e9bb6e1ff59e5c1f2df45348d62c09bd1eb25f792d01ba2f9111bce0b4e22e",
+        "gt_supervision.pt": "df4765eb71913dd5bde2b96013276b915bf86053c2d4e2fb71a410e139a95c11",
+        "s1_seed600001.npy": "8ff569e10eafe40d09668614003a5fd8558275971cad69c3bc68c6505101edf9",
+        "s1_seed600011.npy": "b7700edb7aa826a59fc6a0416cc2ee7fab35ba49b6d773ad7a0d07666912b9f1",
+        "s2_seed600001.npy": "aa3dc33b5b80258d1175fa9572956c5e7158cf9b83d3f62fd308da25ac61ee07",
+        "s2_seed600011.npy": "3ab5300a7134bdd379f2ae6d27bbfbaba2cef7b41ce41414a6c259048fcc0da7"
+      },
+      "group_id": "66624ab33df79e6645f6ab273057fc74a9f21e903420d2e057eca41cf203c9c2",
+      "length": 377,
+      "outputs": [
+        {
+          "name": "s1_seed600001.npy",
+          "schedule": [
+            2560.0,
+            0.0
+          ],
+          "seed": 600001,
+          "sha256": "8ff569e10eafe40d09668614003a5fd8558275971cad69c3bc68c6505101edf9",
+          "steps": 1
+        },
+        {
+          "name": "s2_seed600001.npy",
+          "schedule": [
+            2560.0,
+            55.97478485107422,
+            0.0
+          ],
+          "seed": 600001,
+          "sha256": "aa3dc33b5b80258d1175fa9572956c5e7158cf9b83d3f62fd308da25ac61ee07",
+          "steps": 2
+        },
+        {
+          "name": "s1_seed600011.npy",
+          "schedule": [
+            2560.0,
+            0.0
+          ],
+          "seed": 600011,
+          "sha256": "b7700edb7aa826a59fc6a0416cc2ee7fab35ba49b6d773ad7a0d07666912b9f1",
+          "steps": 1
+        },
+        {
+          "name": "s2_seed600011.npy",
+          "schedule": [
+            2560.0,
+            55.97478485107422,
+            0.0
+          ],
+          "seed": 600011,
+          "sha256": "3ab5300a7134bdd379f2ae6d27bbfbaba2cef7b41ce41414a6c259048fcc0da7",
+          "steps": 2
+        }
+      ],
+      "reload_replay": true,
+      "role": "train",
+      "seconds": 2.7198614180088043
+    },
+    {
+      "counts": {
+        "diffusion": 7,
+        "pairformer": 4
+      },
+      "files": {
+        "conditioning.pt": "a483e15cfd848375ded8c1e1f52b86d888290aac395dd0dcbe5962aed86ff974",
+        "gt_supervision.pt": "9c386406fd057029351a5a966c73d8d2f8f771c19176b0285d10e180b49b89d5",
+        "s1_seed600001.npy": "77edf17082a13f1dea607933ce323824a14837f8f919a7680cf2c9de82b03145",
+        "s1_seed600011.npy": "259455438a32ba37c5ed5685dc586e7cf73509d53a0a131845e2a2f5530a0f9b",
+        "s2_seed600001.npy": "6b734867a47450ff37e8812291d6ac4f4fcaa4891676d92dd074cb11643228db",
+        "s2_seed600011.npy": "e9072a1e7f732cecb84bea6c4e59cf1068df81f4c8e10f39da829ce458df75da"
+      },
+      "group_id": "9ec4ff62b5919d568a4d57b385074944262ef4d3f42561b317594ccafc26fc91",
+      "length": 363,
+      "outputs": [
+        {
+          "name": "s1_seed600001.npy",
+          "schedule": [
+            2560.0,
+            0.0
+          ],
+          "seed": 600001,
+          "sha256": "77edf17082a13f1dea607933ce323824a14837f8f919a7680cf2c9de82b03145",
+          "steps": 1
+        },
+        {
+          "name": "s2_seed600001.npy",
+          "schedule": [
+            2560.0,
+            55.97478485107422,
+            0.0
+          ],
+          "seed": 600001,
+          "sha256": "6b734867a47450ff37e8812291d6ac4f4fcaa4891676d92dd074cb11643228db",
+          "steps": 2
+        },
+        {
+          "name": "s1_seed600011.npy",
+          "schedule": [
+            2560.0,
+            0.0
+          ],
+          "seed": 600011,
+          "sha256": "259455438a32ba37c5ed5685dc586e7cf73509d53a0a131845e2a2f5530a0f9b",
+          "steps": 1
+        },
+        {
+          "name": "s2_seed600011.npy",
+          "schedule": [
+            2560.0,
+            55.97478485107422,
+            0.0
+          ],
+          "seed": 600011,
+          "sha256": "e9072a1e7f732cecb84bea6c4e59cf1068df81f4c8e10f39da829ce458df75da",
+          "steps": 2
+        }
+      ],
+      "reload_replay": true,
+      "role": "train",
+      "seconds": 2.350696090608835
+    },
+    {
+      "counts": {
+        "diffusion": 7,
+        "pairformer": 4
+      },
+      "files": {
+        "conditioning.pt": "1ed83770a8b570d1a8f428003bedbb5c477c531be50bcf41fa650a80652c8df3",
+        "gt_supervision.pt": "9a43d932ceda6f692e2ad980bae5f20c48a732e81d7eaf16f470b0c871e9cef4",
+        "s1_seed600001.npy": "3ea36585ffdd70b7b40126162d91b8f1a9f5ab0d39e95244f38184c9ae4095d2",
+        "s1_seed600011.npy": "ecc6db91d367c4b3afaa54425aa583747f0a62621ec8c83b4a2a9affb4ccfa24",
+        "s2_seed600001.npy": "9d13db3f3c33131221d5af9045b806d2b7e9e21ef3b9a07edb8883db16c8d5cd",
+        "s2_seed600011.npy": "0a474c39104f27a5cebedf2beef3967d1565600083d648f61bd925ab4b51041c"
+      },
+      "group_id": "1aa21d90af7dbaa101e7ceac7a49d2261d8722584e14f91c5ee689c0681f3acb",
+      "length": 340,
+      "outputs": [
+        {
+          "name": "s1_seed600001.npy",
+          "schedule": [
+            2560.0,
+            0.0
+          ],
+          "seed": 600001,
+          "sha256": "3ea36585ffdd70b7b40126162d91b8f1a9f5ab0d39e95244f38184c9ae4095d2",
+          "steps": 1
+        },
+        {
+          "name": "s2_seed600001.npy",
+          "schedule": [
+            2560.0,
+            55.97478485107422,
+            0.0
+          ],
+          "seed": 600001,
+          "sha256": "9d13db3f3c33131221d5af9045b806d2b7e9e21ef3b9a07edb8883db16c8d5cd",
+          "steps": 2
+        },
+        {
+          "name": "s1_seed600011.npy",
+          "schedule": [
+            2560.0,
+            0.0
+          ],
+          "seed": 600011,
+          "sha256": "ecc6db91d367c4b3afaa54425aa583747f0a62621ec8c83b4a2a9affb4ccfa24",
+          "steps": 1
+        },
+        {
+          "name": "s2_seed600011.npy",
+          "schedule": [
+            2560.0,
+            55.97478485107422,
+            0.0
+          ],
+          "seed": 600011,
+          "sha256": "0a474c39104f27a5cebedf2beef3967d1565600083d648f61bd925ab4b51041c",
+          "steps": 2
+        }
+      ],
+      "reload_replay": true,
+      "role": "train",
+      "seconds": 2.616978259757161
+    },
+    {
+      "counts": {
+        "diffusion": 7,
+        "pairformer": 4
+      },
+      "files": {
+        "conditioning.pt": "b970b93375df979efe76d3778cf7e8ccf5e03b783d87bcd3eea477c2316ca0b7",
+        "gt_supervision.pt": "6bb46d239f11ab81b3a5ae5c71f121e8c775c29fa4f58c971e80422cf0e7f6e5",
+        "s1_seed600001.npy": "1ed1a341701810c9bd06f40efb03a66af4e2b6923987059bd2d439e7774d7f68",
+        "s1_seed600011.npy": "d2efdb0edc077ee029f0c27682f7cf9f25bd47da6671c1ca32f5f0b32a13203e",
+        "s2_seed600001.npy": "81cba7fa55237dda237ee502c66666771a4901a8e8f84325fd5f318d412f3f77",
+        "s2_seed600011.npy": "5c9108efb2cdca6711e2ede2093df386574956010fe8d5c33ee05672f9c7fd8e"
+      },
+      "group_id": "57d3ed148539775ca07c7289d2d2d3f61ffe9434ed517b8401d7863148d5569c",
+      "length": 325,
+      "outputs": [
+        {
+          "name": "s1_seed600001.npy",
+          "schedule": [
+            2560.0,
+            0.0
+          ],
+          "seed": 600001,
+          "sha256": "1ed1a341701810c9bd06f40efb03a66af4e2b6923987059bd2d439e7774d7f68",
+          "steps": 1
+        },
+        {
+          "name": "s2_seed600001.npy",
+          "schedule": [
+            2560.0,
+            55.97478485107422,
+            0.0
+          ],
+          "seed": 600001,
+          "sha256": "81cba7fa55237dda237ee502c66666771a4901a8e8f84325fd5f318d412f3f77",
+          "steps": 2
+        },
+        {
+          "name": "s1_seed600011.npy",
+          "schedule": [
+            2560.0,
+            0.0
+          ],
+          "seed": 600011,
+          "sha256": "d2efdb0edc077ee029f0c27682f7cf9f25bd47da6671c1ca32f5f0b32a13203e",
+          "steps": 1
+        },
+        {
+          "name": "s2_seed600011.npy",
+          "schedule": [
+            2560.0,
+            55.97478485107422,
+            0.0
+          ],
+          "seed": 600011,
+          "sha256": "5c9108efb2cdca6711e2ede2093df386574956010fe8d5c33ee05672f9c7fd8e",
+          "steps": 2
+        }
+      ],
+      "reload_replay": true,
+      "role": "train",
+      "seconds": 2.254981502890587
+    },
+    {
+      "counts": {
+        "diffusion": 7,
+        "pairformer": 4
+      },
+      "files": {
+        "conditioning.pt": "15d0489801450cd0395f0da3f4d8df9ff64edfed40fa4d838da8e2e302caa9d5",
+        "gt_supervision.pt": "377e490132c09fc3ba0ba3e4b37be2670095715118f3f023fc8f292acf4d3182",
+        "s1_seed600001.npy": "846531cd561710e8fb78b671ce4f2dcb22a0c86ad44eeb5a8006a05505f87cbf",
+        "s1_seed600011.npy": "b32d42ddc81119eeee0f5f77724bf36ca32f052bbd2a8388b39d43874b58d1f8",
+        "s2_seed600001.npy": "e549a5ebdf1446db4b748471cea2829d3430fc72a9a5eb4496ed47f3620fb08f",
+        "s2_seed600011.npy": "be0c4b85f65398630a57a462bdd057546f8b370ef947343c07194f750c45588d"
+      },
+      "group_id": "846ff81c0bca89934bf88512023f11571306d58ac710baf981be5ee1bbd992ff",
+      "length": 314,
+      "outputs": [
+        {
+          "name": "s1_seed600001.npy",
+          "schedule": [
+            2560.0,
+            0.0
+          ],
+          "seed": 600001,
+          "sha256": "846531cd561710e8fb78b671ce4f2dcb22a0c86ad44eeb5a8006a05505f87cbf",
+          "steps": 1
+        },
+        {
+          "name": "s2_seed600001.npy",
+          "schedule": [
+            2560.0,
+            55.97478485107422,
+            0.0
+          ],
+          "seed": 600001,
+          "sha256": "e549a5ebdf1446db4b748471cea2829d3430fc72a9a5eb4496ed47f3620fb08f",
+          "steps": 2
+        },
+        {
+          "name": "s1_seed600011.npy",
+          "schedule": [
+            2560.0,
+            0.0
+          ],
+          "seed": 600011,
+          "sha256": "b32d42ddc81119eeee0f5f77724bf36ca32f052bbd2a8388b39d43874b58d1f8",
+          "steps": 1
+        },
+        {
+          "name": "s2_seed600011.npy",
+          "schedule": [
+            2560.0,
+            55.97478485107422,
+            0.0
+          ],
+          "seed": 600011,
+          "sha256": "be0c4b85f65398630a57a462bdd057546f8b370ef947343c07194f750c45588d",
+          "steps": 2
+        }
+      ],
+      "reload_replay": true,
+      "role": "train",
+      "seconds": 1.874559534713626
+    },
+    {
+      "counts": {
+        "diffusion": 7,
+        "pairformer": 4
+      },
+      "files": {
+        "conditioning.pt": "c088be11cbc338bf910d89cd65cf6807b4148553670a2e0139e094cb421afc46",
+        "gt_supervision.pt": "187f63e84a6c23c477d694d57c30c59367f05445cd13ded267ed0f677471cc22",
+        "s1_seed600001.npy": "6978f71263560e2f7609f049b1a5934d41dbc6486d2396bdfc4530effa883d55",
+        "s1_seed600011.npy": "1256095402e285281f5337a83779efbc971b67e474a88d8b3220d28cd20d0e17",
+        "s2_seed600001.npy": "0a2d7cab15c9497b6fa72d3973101e5f411fb3581034f236867d7de764575772",
+        "s2_seed600011.npy": "740d19f1c869d8602b23811424a470f88f5fb319fd20a22bf1bb55a3340fc015"
+      },
+      "group_id": "8016a40e6cfa3f04181a89aea8bc3077701d2dfe29214af0e2e2c5c73ef15396",
+      "length": 301,
+      "outputs": [
+        {
+          "name": "s1_seed600001.npy",
+          "schedule": [
+            2560.0,
+            0.0
+          ],
+          "seed": 600001,
+          "sha256": "6978f71263560e2f7609f049b1a5934d41dbc6486d2396bdfc4530effa883d55",
+          "steps": 1
+        },
+        {
+          "name": "s2_seed600001.npy",
+          "schedule": [
+            2560.0,
+            55.97478485107422,
+            0.0
+          ],
+          "seed": 600001,
+          "sha256": "0a2d7cab15c9497b6fa72d3973101e5f411fb3581034f236867d7de764575772",
+          "steps": 2
+        },
+        {
+          "name": "s1_seed600011.npy",
+          "schedule": [
+            2560.0,
+            0.0
+          ],
+          "seed": 600011,
+          "sha256": "1256095402e285281f5337a83779efbc971b67e474a88d8b3220d28cd20d0e17",
+          "steps": 1
+        },
+        {
+          "name": "s2_seed600011.npy",
+          "schedule": [
+            2560.0,
+            55.97478485107422,
+            0.0
+          ],
+          "seed": 600011,
+          "sha256": "740d19f1c869d8602b23811424a470f88f5fb319fd20a22bf1bb55a3340fc015",
+          "steps": 2
+        }
+      ],
+      "reload_replay": true,
+      "role": "train",
+      "seconds": 1.7564379516988993
+    },
+    {
+      "counts": {
+        "diffusion": 7,
+        "pairformer": 4
+      },
+      "files": {
+        "conditioning.pt": "7235fb7bfb075fe4a21d4a3e09169e3f7288ac32b62340f866ced9ebe717d352",
+        "gt_supervision.pt": "b1e164e158c492e88fb7af8509d00939dfa37b9335d6602a73e3756c52bc622a",
+        "s1_seed600001.npy": "7cced5018eda9c9f5b2e83948d2ebf365bb43d575b25b13708b580f9d245dad2",
+        "s1_seed600011.npy": "e4def6e326209ef917778673e0296ce630dc11fabe5d9ded0b3e42d4799566ed",
+        "s2_seed600001.npy": "27a91576866360851dca677fa3a99d77d1607b794abeb68fd1f35818484bab45",
+        "s2_seed600011.npy": "315751d5c7ceaab3abed2f5d47430d341c0b908209859d1a44cc1cfa5129e274"
+      },
+      "group_id": "ddadc00ebf3ef2f3789817d06d08de47bfdbe779ce241d53178c57d3cff34fb7",
+      "length": 293,
+      "outputs": [
+        {
+          "name": "s1_seed600001.npy",
+          "schedule": [
+            2560.0,
+            0.0
+          ],
+          "seed": 600001,
+          "sha256": "7cced5018eda9c9f5b2e83948d2ebf365bb43d575b25b13708b580f9d245dad2",
+          "steps": 1
+        },
+        {
+          "name": "s2_seed600001.npy",
+          "schedule": [
+            2560.0,
+            55.97478485107422,
+            0.0
+          ],
+          "seed": 600001,
+          "sha256": "27a91576866360851dca677fa3a99d77d1607b794abeb68fd1f35818484bab45",
+          "steps": 2
+        },
+        {
+          "name": "s1_seed600011.npy",
+          "schedule": [
+            2560.0,
+            0.0
+          ],
+          "seed": 600011,
+          "sha256": "e4def6e326209ef917778673e0296ce630dc11fabe5d9ded0b3e42d4799566ed",
+          "steps": 1
+        },
+        {
+          "name": "s2_seed600011.npy",
+          "schedule": [
+            2560.0,
+            55.97478485107422,
+            0.0
+          ],
+          "seed": 600011,
+          "sha256": "315751d5c7ceaab3abed2f5d47430d341c0b908209859d1a44cc1cfa5129e274",
+          "steps": 2
+        }
+      ],
+      "reload_replay": true,
+      "role": "train",
+      "seconds": 1.9633420165628195
+    },
+    {
+      "counts": {
+        "diffusion": 7,
+        "pairformer": 4
+      },
+      "files": {
+        "conditioning.pt": "383f6c12327af314fdcee242aca46f137a7087e594a322f41260c7fa2e4f5961",
+        "gt_supervision.pt": "6c47b737b987552b6d985aed16f1db8fbfd2a6f5c8c936985083e232cf41c132",
+        "s1_seed600001.npy": "defac032644b7e3c4d1ecd7b51bf6c9cd8e9df7ff83d7d524b06c16455b4c490",
+        "s1_seed600011.npy": "2143a555645dfdac6f217d8a383c9f02b0ce8ddcbd06c324d0094e90054715ec",
+        "s2_seed600001.npy": "fdaf9c4177cbf7a0e819c6838dda36a773815ce96ccf8be2fba7db5b64477d1f",
+        "s2_seed600011.npy": "d3247bd08fb4cf25fdc218fc1c319697282823863d3fb8dcc39c9417233b16bb"
+      },
+      "group_id": "245709e73c4f606e952e0dfc9e80f6e94a594038e27235c45f1347d8b7cbfdd5",
+      "length": 284,
+      "outputs": [
+        {
+          "name": "s1_seed600001.npy",
+          "schedule": [
+            2560.0,
+            0.0
+          ],
+          "seed": 600001,
+          "sha256": "defac032644b7e3c4d1ecd7b51bf6c9cd8e9df7ff83d7d524b06c16455b4c490",
+          "steps": 1
+        },
+        {
+          "name": "s2_seed600001.npy",
+          "schedule": [
+            2560.0,
+            55.97478485107422,
+            0.0
+          ],
+          "seed": 600001,
+          "sha256": "fdaf9c4177cbf7a0e819c6838dda36a773815ce96ccf8be2fba7db5b64477d1f",
+          "steps": 2
+        },
+        {
+          "name": "s1_seed600011.npy",
+          "schedule": [
+            2560.0,
+            0.0
+          ],
+          "seed": 600011,
+          "sha256": "2143a555645dfdac6f217d8a383c9f02b0ce8ddcbd06c324d0094e90054715ec",
+          "steps": 1
+        },
+        {
+          "name": "s2_seed600011.npy",
+          "schedule": [
+            2560.0,
+            55.97478485107422,
+            0.0
+          ],
+          "seed": 600011,
+          "sha256": "d3247bd08fb4cf25fdc218fc1c319697282823863d3fb8dcc39c9417233b16bb",
+          "steps": 2
+        }
+      ],
+      "reload_replay": true,
+      "role": "train",
+      "seconds": 2.1117152497172356
+    },
+    {
+      "counts": {
+        "diffusion": 7,
+        "pairformer": 4
+      },
+      "files": {
+        "conditioning.pt": "c8eb21f14a5c228651609e5814a1887fde91916246c4e3ff3a1d78d306be678b",
+        "gt_supervision.pt": "2b9c8f78bd6be488b8befec0f464dd40336ddb6d40151806a3c61b7f2e9147b8",
+        "s1_seed600001.npy": "74a6022c24b30e8eb1a88004be5cfc50b71336bf1e069b865982adab8c4df996",
+        "s1_seed600011.npy": "e94200755b840935cb392af60f64e3198e6f18e8eb7b459dd2019443da3fc917",
+        "s2_seed600001.npy": "2ef8241c980039bab6564758fb35a42e2220cb7353e84a6e82b5023b6318bd53",
+        "s2_seed600011.npy": "8b304b8e9cf6cea7c8b66298f8631a3983442ba859c3b58b07a964b211d1f927"
+      },
+      "group_id": "8eddd66109dd5559692ff4940d3a5cd00f4f34f6b4abc94bf3915070ea34e7f4",
+      "length": 279,
+      "outputs": [
+        {
+          "name": "s1_seed600001.npy",
+          "schedule": [
+            2560.0,
+            0.0
+          ],
+          "seed": 600001,
+          "sha256": "74a6022c24b30e8eb1a88004be5cfc50b71336bf1e069b865982adab8c4df996",
+          "steps": 1
+        },
+        {
+          "name": "s2_seed600001.npy",
+          "schedule": [
+            2560.0,
+            55.97478485107422,
+            0.0
+          ],
+          "seed": 600001,
+          "sha256": "2ef8241c980039bab6564758fb35a42e2220cb7353e84a6e82b5023b6318bd53",
+          "steps": 2
+        },
+        {
+          "name": "s1_seed600011.npy",
+          "schedule": [
+            2560.0,
+            0.0
+          ],
+          "seed": 600011,
+          "sha256": "e94200755b840935cb392af60f64e3198e6f18e8eb7b459dd2019443da3fc917",
+          "steps": 1
+        },
+        {
+          "name": "s2_seed600011.npy",
+          "schedule": [
+            2560.0,
+            55.97478485107422,
+            0.0
+          ],
+          "seed": 600011,
+          "sha256": "8b304b8e9cf6cea7c8b66298f8631a3983442ba859c3b58b07a964b211d1f927",
+          "steps": 2
+        }
+      ],
+      "reload_replay": true,
+      "role": "train",
+      "seconds": 1.8594094309955835
+    },
+    {
+      "counts": {
+        "diffusion": 7,
+        "pairformer": 4
+      },
+      "files": {
+        "conditioning.pt": "f81e20ca9166bb1379092408068f8afb72f7c195254351639852a74125341815",
+        "gt_supervision.pt": "c3e5b65884c7d7d65712f6e32c7e8021aaac30c247ce27726c94f29493131791",
+        "s1_seed600001.npy": "b5607306f860f07c14b878f66140a8cacf52b2998e7903bf7529c3fb2df36825",
+        "s1_seed600011.npy": "50614f7fd4d4d69b9b1f0f3ec5bb58b0c7e5f2edfb7ab0d54d5aaa6c309e1971",
+        "s2_seed600001.npy": "2a227fef5b6af236386b94a6a7c66a2dd66e163d8c52a16e0adad874bf31d659",
+        "s2_seed600011.npy": "5e4d191b206d1163cb2c9cfdd427c23d8dd4ec5b89bfea3b90dcdc425dbec10e"
+      },
+      "group_id": "fad4577bf4818f602706bf882e26a57cd1d26e8812e617826b6a4d47f109b150",
+      "length": 265,
+      "outputs": [
+        {
+          "name": "s1_seed600001.npy",
+          "schedule": [
+            2560.0,
+            0.0
+          ],
+          "seed": 600001,
+          "sha256": "b5607306f860f07c14b878f66140a8cacf52b2998e7903bf7529c3fb2df36825",
+          "steps": 1
+        },
+        {
+          "name": "s2_seed600001.npy",
+          "schedule": [
+            2560.0,
+            55.97478485107422,
+            0.0
+          ],
+          "seed": 600001,
+          "sha256": "2a227fef5b6af236386b94a6a7c66a2dd66e163d8c52a16e0adad874bf31d659",
+          "steps": 2
+        },
+        {
+          "name": "s1_seed600011.npy",
+          "schedule": [
+            2560.0,
+            0.0
+          ],
+          "seed": 600011,
+          "sha256": "50614f7fd4d4d69b9b1f0f3ec5bb58b0c7e5f2edfb7ab0d54d5aaa6c309e1971",
+          "steps": 1
+        },
+        {
+          "name": "s2_seed600011.npy",
+          "schedule": [
+            2560.0,
+            55.97478485107422,
+            0.0
+          ],
+          "seed": 600011,
+          "sha256": "5e4d191b206d1163cb2c9cfdd427c23d8dd4ec5b89bfea3b90dcdc425dbec10e",
+          "steps": 2
+        }
+      ],
+      "reload_replay": true,
+      "role": "train",
+      "seconds": 1.8883822485804558
+    },
+    {
+      "counts": {
+        "diffusion": 7,
+        "pairformer": 4
+      },
+      "files": {
+        "conditioning.pt": "a4d4b5cfabe6f683db75169901e1145e66d1d9b2cfbb913cc5b02faee26c7da0",
+        "gt_supervision.pt": "ae275f0bcfd97590186f6c0609f60d975c878fe6af2686110bdfcf1c6b9ae45b",
+        "s1_seed600001.npy": "aa3de3b7e8b9d2dc9ac70e5ae53aabe2b5436138303aacd9a699917b66db1b4d",
+        "s1_seed600011.npy": "7b2bf1193ac5162db130166b09b6cf2d5fd9acd10e6d36c716c441f58f57fb9b",
+        "s2_seed600001.npy": "b04cafe6b1dda4f14bf42e25d1cc89e3d08a1f5869122488fbbe4e13c0c4c37e",
+        "s2_seed600011.npy": "73f2afb52d2842bd1c9c9cb0132819696caf1f3c705cbc8785a69231562b7ba3"
+      },
+      "group_id": "580dfd7d54b97e5ebefd345335bf9929d40607b96bafbb2bbfb5694b5c54fe71",
+      "length": 255,
+      "outputs": [
+        {
+          "name": "s1_seed600001.npy",
+          "schedule": [
+            2560.0,
+            0.0
+          ],
+          "seed": 600001,
+          "sha256": "aa3de3b7e8b9d2dc9ac70e5ae53aabe2b5436138303aacd9a699917b66db1b4d",
+          "steps": 1
+        },
+        {
+          "name": "s2_seed600001.npy",
+          "schedule": [
+            2560.0,
+            55.97478485107422,
+            0.0
+          ],
+          "seed": 600001,
+          "sha256": "b04cafe6b1dda4f14bf42e25d1cc89e3d08a1f5869122488fbbe4e13c0c4c37e",
+          "steps": 2
+        },
+        {
+          "name": "s1_seed600011.npy",
+          "schedule": [
+            2560.0,
+            0.0
+          ],
+          "seed": 600011,
+          "sha256": "7b2bf1193ac5162db130166b09b6cf2d5fd9acd10e6d36c716c441f58f57fb9b",
+          "steps": 1
+        },
+        {
+          "name": "s2_seed600011.npy",
+          "schedule": [
+            2560.0,
+            55.97478485107422,
+            0.0
+          ],
+          "seed": 600011,
+          "sha256": "73f2afb52d2842bd1c9c9cb0132819696caf1f3c705cbc8785a69231562b7ba3",
+          "steps": 2
+        }
+      ],
+      "reload_replay": true,
+      "role": "train",
+      "seconds": 1.2216742131859064
+    },
+    {
+      "counts": {
+        "diffusion": 7,
+        "pairformer": 4
+      },
+      "files": {
+        "conditioning.pt": "e10ce4f218759336d5582f4d10670db4dd89ef20711cc91829c6f2f251558f37",
+        "gt_supervision.pt": "29f9b85a2f1f4d704aaf6c4eb2cc5417e6ef909bf2296e752124b237fefb1928",
+        "s1_seed600001.npy": "d9d17ba85ef58a7a3b0523fd7c846fef5e43f976fd9b09cc39b7726eefff81e7",
+        "s1_seed600011.npy": "55ffb8f380b74f02fdc121f78e794625dd7e2eb29ad008dce57f53f03b357968",
+        "s2_seed600001.npy": "ae4ac21839a8719d61497f5aacbbc8e38bb2054d4b47d06c0137697a01dcacc6",
+        "s2_seed600011.npy": "c296e3937d2b721fb04c190f2c1f8eed70c0e67befcca901f4de6c7f11349598"
+      },
+      "group_id": "e07c74bc7f87fea9163f5f84895af5f098f805bb0ede01e6b3100076559e1a79",
+      "length": 248,
+      "outputs": [
+        {
+          "name": "s1_seed600001.npy",
+          "schedule": [
+            2560.0,
+            0.0
+          ],
+          "seed": 600001,
+          "sha256": "d9d17ba85ef58a7a3b0523fd7c846fef5e43f976fd9b09cc39b7726eefff81e7",
+          "steps": 1
+        },
+        {
+          "name": "s2_seed600001.npy",
+          "schedule": [
+            2560.0,
+            55.97478485107422,
+            0.0
+          ],
+          "seed": 600001,
+          "sha256": "ae4ac21839a8719d61497f5aacbbc8e38bb2054d4b47d06c0137697a01dcacc6",
+          "steps": 2
+        },
+        {
+          "name": "s1_seed600011.npy",
+          "schedule": [
+            2560.0,
+            0.0
+          ],
+          "seed": 600011,
+          "sha256": "55ffb8f380b74f02fdc121f78e794625dd7e2eb29ad008dce57f53f03b357968",
+          "steps": 1
+        },
+        {
+          "name": "s2_seed600011.npy",
+          "schedule": [
+            2560.0,
+            55.97478485107422,
+            0.0
+          ],
+          "seed": 600011,
+          "sha256": "c296e3937d2b721fb04c190f2c1f8eed70c0e67befcca901f4de6c7f11349598",
+          "steps": 2
+        }
+      ],
+      "reload_replay": true,
+      "role": "train",
+      "seconds": 1.2789982948452234
+    },
+    {
+      "counts": {
+        "diffusion": 7,
+        "pairformer": 4
+      },
+      "files": {
+        "conditioning.pt": "a6811ea01370ed517bc8b3f92eb0282a0d591030cbf6cb8e44f74c57b6e245e0",
+        "gt_supervision.pt": "e132e6bacf99ac1e1a19d36354049fb4fb24d2746195634849ac297cecac517f",
+        "s1_seed600001.npy": "b5098535cbdae77086e78a0e50a20cf66ca6a03c5f6feca23f2266996a5fc456",
+        "s1_seed600011.npy": "adffcf0ab15a641d5a058a52c0c1978ad2a2930c57832f2858ad88a83e2503e0",
+        "s2_seed600001.npy": "9be5b761599bef89814613603c668b2566439e1d9abd9713c95b61a2dbc3fd79",
+        "s2_seed600011.npy": "79f40d5efadf5811dd0cfef70d7ad95a9d6e5b744a708ffba7d428b0cb010fef"
+      },
+      "group_id": "84ade506598ad7837ab20ef9815624258370d286c38648b320c8397f0f260219",
+      "length": 243,
+      "outputs": [
+        {
+          "name": "s1_seed600001.npy",
+          "schedule": [
+            2560.0,
+            0.0
+          ],
+          "seed": 600001,
+          "sha256": "b5098535cbdae77086e78a0e50a20cf66ca6a03c5f6feca23f2266996a5fc456",
+          "steps": 1
+        },
+        {
+          "name": "s2_seed600001.npy",
+          "schedule": [
+            2560.0,
+            55.97478485107422,
+            0.0
+          ],
+          "seed": 600001,
+          "sha256": "9be5b761599bef89814613603c668b2566439e1d9abd9713c95b61a2dbc3fd79",
+          "steps": 2
+        },
+        {
+          "name": "s1_seed600011.npy",
+          "schedule": [
+            2560.0,
+            0.0
+          ],
+          "seed": 600011,
+          "sha256": "adffcf0ab15a641d5a058a52c0c1978ad2a2930c57832f2858ad88a83e2503e0",
+          "steps": 1
+        },
+        {
+          "name": "s2_seed600011.npy",
+          "schedule": [
+            2560.0,
+            55.97478485107422,
+            0.0
+          ],
+          "seed": 600011,
+          "sha256": "79f40d5efadf5811dd0cfef70d7ad95a9d6e5b744a708ffba7d428b0cb010fef",
+          "steps": 2
+        }
+      ],
+      "reload_replay": true,
+      "role": "train",
+      "seconds": 1.2763958983123302
+    },
+    {
+      "counts": {
+        "diffusion": 7,
+        "pairformer": 4
+      },
+      "files": {
+        "conditioning.pt": "4e104ad075947a69c53b145651625bcba0fc833bee81afadf4e90eedc1366307",
+        "gt_supervision.pt": "bc6d65a411d3b1cefcb6b5a5bdd2302cd3cb6b9d7dd0d1ffed9614b153e3c7c1",
+        "s1_seed600001.npy": "dcf2328ebfc1725d0e6d5ac15e34248e7ab37e90b7fb26010e71312c28a3f212",
+        "s1_seed600011.npy": "dc5d1f17dba253756ef1e7ebae4ae204adb6d5a47cbdfcfc4cbcad821b6f4a19",
+        "s2_seed600001.npy": "e1f4ddf0f46455966dabeb4d08e56ec6b4a24853c1ec2fbd46700cd3ab072a24",
+        "s2_seed600011.npy": "56fbb9be96444823d22fe038ab47b4c7763d120a448ad0fe425778c313a8188c"
+      },
+      "group_id": "b2d5162e62468b80b279aa86fa04ec11a0512b22ffcaf0db3de8fd5966a057fc",
+      "length": 231,
+      "outputs": [
+        {
+          "name": "s1_seed600001.npy",
+          "schedule": [
+            2560.0,
+            0.0
+          ],
+          "seed": 600001,
+          "sha256": "dcf2328ebfc1725d0e6d5ac15e34248e7ab37e90b7fb26010e71312c28a3f212",
+          "steps": 1
+        },
+        {
+          "name": "s2_seed600001.npy",
+          "schedule": [
+            2560.0,
+            55.97478485107422,
+            0.0
+          ],
+          "seed": 600001,
+          "sha256": "e1f4ddf0f46455966dabeb4d08e56ec6b4a24853c1ec2fbd46700cd3ab072a24",
+          "steps": 2
+        },
+        {
+          "name": "s1_seed600011.npy",
+          "schedule": [
+            2560.0,
+            0.0
+          ],
+          "seed": 600011,
+          "sha256": "dc5d1f17dba253756ef1e7ebae4ae204adb6d5a47cbdfcfc4cbcad821b6f4a19",
+          "steps": 1
+        },
+        {
+          "name": "s2_seed600011.npy",
+          "schedule": [
+            2560.0,
+            55.97478485107422,
+            0.0
+          ],
+          "seed": 600011,
+          "sha256": "56fbb9be96444823d22fe038ab47b4c7763d120a448ad0fe425778c313a8188c",
+          "steps": 2
+        }
+      ],
+      "reload_replay": true,
+      "role": "train",
+      "seconds": 1.2096524704247713
+    },
+    {
+      "counts": {
+        "diffusion": 7,
+        "pairformer": 4
+      },
+      "files": {
+        "conditioning.pt": "8bb153834a6496e8809be049dccebfcd10fdbf6a8e42b0fa79eccf5907669645",
+        "gt_supervision.pt": "1b077a1740f6d71357a9a359fb2e6877c3c304b4d53dfadd446d8a9880102ced",
+        "s1_seed600001.npy": "6027d7c4cada408b8924717a12d3344d5cf79066eabdeb4c072a533f2a82851f",
+        "s1_seed600011.npy": "1b9242b2c149fd938a164d2c1088a1c633ccde8279642a99028ec9e43c772985",
+        "s2_seed600001.npy": "c954670308ac97af66285836e154a1ce7224d3aa01e9cd55ad58878861eab16a",
+        "s2_seed600011.npy": "f1232952982130425fdae1e398ea2c596a6ae0ac3206f7cf004c9323756e32fe"
+      },
+      "group_id": "6967bf47f53a76a752d38ebdedd0b23251cd15dfe78da5beb183851b09c33fb3",
+      "length": 225,
+      "outputs": [
+        {
+          "name": "s1_seed600001.npy",
+          "schedule": [
+            2560.0,
+            0.0
+          ],
+          "seed": 600001,
+          "sha256": "6027d7c4cada408b8924717a12d3344d5cf79066eabdeb4c072a533f2a82851f",
+          "steps": 1
+        },
+        {
+          "name": "s2_seed600001.npy",
+          "schedule": [
+            2560.0,
+            55.97478485107422,
+            0.0
+          ],
+          "seed": 600001,
+          "sha256": "c954670308ac97af66285836e154a1ce7224d3aa01e9cd55ad58878861eab16a",
+          "steps": 2
+        },
+        {
+          "name": "s1_seed600011.npy",
+          "schedule": [
+            2560.0,
+            0.0
+          ],
+          "seed": 600011,
+          "sha256": "1b9242b2c149fd938a164d2c1088a1c633ccde8279642a99028ec9e43c772985",
+          "steps": 1
+        },
+        {
+          "name": "s2_seed600011.npy",
+          "schedule": [
+            2560.0,
+            55.97478485107422,
+            0.0
+          ],
+          "seed": 600011,
+          "sha256": "f1232952982130425fdae1e398ea2c596a6ae0ac3206f7cf004c9323756e32fe",
+          "steps": 2
+        }
+      ],
+      "reload_replay": true,
+      "role": "train",
+      "seconds": 1.1063500419259071
+    },
+    {
+      "counts": {
+        "diffusion": 7,
+        "pairformer": 4
+      },
+      "files": {
+        "conditioning.pt": "80643bde52fee2111e6b164d56ef50e00dc39d4d74237a3f74bd117fa49219c5",
+        "gt_supervision.pt": "a282888262ed219f33b403765e00402e13def5dbb44694bf20d1c9cc6ca5feea",
+        "s1_seed600001.npy": "26f522c559a5a8c8f0fcebaed18936d0a983e363218e2edee33268c60c33a93e",
+        "s1_seed600011.npy": "70273c316ce3a0ed600b83d9c8d106daca9be1c70152bebedd14c75876912583",
+        "s2_seed600001.npy": "d69308a7768959174d61a2039e36725c511e357a72069bdbbe7c7f37c79962d4",
+        "s2_seed600011.npy": "3f88836dbdb620a99a56b64e388e797046d46040756e6819087c6f512d71d855"
+      },
+      "group_id": "f631fafbd5cba5e4d71021200f9ef4fe06b1f2e9a2464b889f7122050c1ba6bc",
+      "length": 212,
+      "outputs": [
+        {
+          "name": "s1_seed600001.npy",
+          "schedule": [
+            2560.0,
+            0.0
+          ],
+          "seed": 600001,
+          "sha256": "26f522c559a5a8c8f0fcebaed18936d0a983e363218e2edee33268c60c33a93e",
+          "steps": 1
+        },
+        {
+          "name": "s2_seed600001.npy",
+          "schedule": [
+            2560.0,
+            55.97478485107422,
+            0.0
+          ],
+          "seed": 600001,
+          "sha256": "d69308a7768959174d61a2039e36725c511e357a72069bdbbe7c7f37c79962d4",
+          "steps": 2
+        },
+        {
+          "name": "s1_seed600011.npy",
+          "schedule": [
+            2560.0,
+            0.0
+          ],
+          "seed": 600011,
+          "sha256": "70273c316ce3a0ed600b83d9c8d106daca9be1c70152bebedd14c75876912583",
+          "steps": 1
+        },
+        {
+          "name": "s2_seed600011.npy",
+          "schedule": [
+            2560.0,
+            55.97478485107422,
+            0.0
+          ],
+          "seed": 600011,
+          "sha256": "3f88836dbdb620a99a56b64e388e797046d46040756e6819087c6f512d71d855",
+          "steps": 2
+        }
+      ],
+      "reload_replay": true,
+      "role": "train",
+      "seconds": 0.9299657847732306
+    },
+    {
+      "counts": {
+        "diffusion": 7,
+        "pairformer": 4
+      },
+      "files": {
+        "conditioning.pt": "e6e81296c1951a040339aa16ef812c7bf26177c29ba2a3f3c7401cd8e18a6334",
+        "gt_supervision.pt": "b1c9633d1270eaed9607d3e1480b721ac42b556241e190b31bc650fa909410d9",
+        "s1_seed600001.npy": "56030f6230776d5eaec40f46b677442e9d62e7c109c1beba4990dac7585963c1",
+        "s1_seed600011.npy": "e5fa66b90d9e17bb1840c7dbeeecffdf676553d4ae78180fdf0a0a069031bd0b",
+        "s2_seed600001.npy": "8e820746d41d5f8e975668727500f4c47efbba40748e19626130d8d92f326da6",
+        "s2_seed600011.npy": "f9979e838f96aefddb278c86dfa2e46ea599af739bbea2c4483f396820bd5f89"
+      },
+      "group_id": "506205280076e19ea1f64856bc1bc239472e117e0ea89524bae2deb6c530e7bf",
+      "length": 207,
+      "outputs": [
+        {
+          "name": "s1_seed600001.npy",
+          "schedule": [
+            2560.0,
+            0.0
+          ],
+          "seed": 600001,
+          "sha256": "56030f6230776d5eaec40f46b677442e9d62e7c109c1beba4990dac7585963c1",
+          "steps": 1
+        },
+        {
+          "name": "s2_seed600001.npy",
+          "schedule": [
+            2560.0,
+            55.97478485107422,
+            0.0
+          ],
+          "seed": 600001,
+          "sha256": "8e820746d41d5f8e975668727500f4c47efbba40748e19626130d8d92f326da6",
+          "steps": 2
+        },
+        {
+          "name": "s1_seed600011.npy",
+          "schedule": [
+            2560.0,
+            0.0
+          ],
+          "seed": 600011,
+          "sha256": "e5fa66b90d9e17bb1840c7dbeeecffdf676553d4ae78180fdf0a0a069031bd0b",
+          "steps": 1
+        },
+        {
+          "name": "s2_seed600011.npy",
+          "schedule": [
+            2560.0,
+            55.97478485107422,
+            0.0
+          ],
+          "seed": 600011,
+          "sha256": "f9979e838f96aefddb278c86dfa2e46ea599af739bbea2c4483f396820bd5f89",
+          "steps": 2
+        }
+      ],
+      "reload_replay": true,
+      "role": "train",
+      "seconds": 1.5490832477807999
+    },
+    {
+      "counts": {
+        "diffusion": 7,
+        "pairformer": 4
+      },
+      "files": {
+        "conditioning.pt": "7dcdd034e48f6f599806f6bcd1162efbee5cd85d30f59669a560fcfb42ffc72f",
+        "gt_supervision.pt": "9beaa4cf58ebf0fbcce87cdeaf5b960470e181a3caf9dfdd1b0181d44d561506",
+        "s1_seed600001.npy": "6c8271b6b7013a833db3919afb0b60587abd1a790a951b41af8e323136eb0337",
+        "s1_seed600011.npy": "4613a84fbb72f697e6553131d00b3ed4c4ba4bba2ee862f04a8ae354219e3c8a",
+        "s2_seed600001.npy": "2d6bed7278d2a05a61fe4786f4df4abaecb36390ffa0ecaad7fde53fb6dc74bb",
+        "s2_seed600011.npy": "df593e168c7f6b63d808ba98d9ea683094e608651583b51a90a524e8d45b8bdd"
+      },
+      "group_id": "68f195e055b5a544f07f4ef978d0ec6234e6e126fd29caf4f4911a873995eb41",
+      "length": 200,
+      "outputs": [
+        {
+          "name": "s1_seed600001.npy",
+          "schedule": [
+            2560.0,
+            0.0
+          ],
+          "seed": 600001,
+          "sha256": "6c8271b6b7013a833db3919afb0b60587abd1a790a951b41af8e323136eb0337",
+          "steps": 1
+        },
+        {
+          "name": "s2_seed600001.npy",
+          "schedule": [
+            2560.0,
+            55.97478485107422,
+            0.0
+          ],
+          "seed": 600001,
+          "sha256": "2d6bed7278d2a05a61fe4786f4df4abaecb36390ffa0ecaad7fde53fb6dc74bb",
+          "steps": 2
+        },
+        {
+          "name": "s1_seed600011.npy",
+          "schedule": [
+            2560.0,
+            0.0
+          ],
+          "seed": 600011,
+          "sha256": "4613a84fbb72f697e6553131d00b3ed4c4ba4bba2ee862f04a8ae354219e3c8a",
+          "steps": 1
+        },
+        {
+          "name": "s2_seed600011.npy",
+          "schedule": [
+            2560.0,
+            55.97478485107422,
+            0.0
+          ],
+          "seed": 600011,
+          "sha256": "df593e168c7f6b63d808ba98d9ea683094e608651583b51a90a524e8d45b8bdd",
+          "steps": 2
+        }
+      ],
+      "reload_replay": true,
+      "role": "train",
+      "seconds": 0.9880269728600979
+    },
+    {
+      "counts": {
+        "diffusion": 7,
+        "pairformer": 4
+      },
+      "files": {
+        "conditioning.pt": "1106410538ec4dc4fbc3c4addd2f050fa22f88d77f5d9480f1faa155e448dd3f",
+        "gt_supervision.pt": "98d387b8ef073a353e6ba5f5ca7fd50d6a325c0da85ad0e73aad34cab00e819a",
+        "s1_seed600001.npy": "282f18d99de4828804feb6967a6c24625709ef0a0e214bcce86dba8bb3b6429e",
+        "s1_seed600011.npy": "c671eddc4815d0171cd35173e492bead6e1b099e8875dfccd0b764483c1c13c7",
+        "s2_seed600001.npy": "c53b53acf29ce678443c32d968e03aa83deb1d44109e9a08a9476f8b3699dd12",
+        "s2_seed600011.npy": "bf25220b74a5960add805e6fd77dc8c95cb959482bfcb314ad9d7451ce73c8b0"
+      },
+      "group_id": "90235c209d2f16ca78946e8667f95bf71a68a780e616182f93c3baeec43fbf48",
+      "length": 194,
+      "outputs": [
+        {
+          "name": "s1_seed600001.npy",
+          "schedule": [
+            2560.0,
+            0.0
+          ],
+          "seed": 600001,
+          "sha256": "282f18d99de4828804feb6967a6c24625709ef0a0e214bcce86dba8bb3b6429e",
+          "steps": 1
+        },
+        {
+          "name": "s2_seed600001.npy",
+          "schedule": [
+            2560.0,
+            55.97478485107422,
+            0.0
+          ],
+          "seed": 600001,
+          "sha256": "c53b53acf29ce678443c32d968e03aa83deb1d44109e9a08a9476f8b3699dd12",
+          "steps": 2
+        },
+        {
+          "name": "s1_seed600011.npy",
+          "schedule": [
+            2560.0,
+            0.0
+          ],
+          "seed": 600011,
+          "sha256": "c671eddc4815d0171cd35173e492bead6e1b099e8875dfccd0b764483c1c13c7",
+          "steps": 1
+        },
+        {
+          "name": "s2_seed600011.npy",
+          "schedule": [
+            2560.0,
+            55.97478485107422,
+            0.0
+          ],
+          "seed": 600011,
+          "sha256": "bf25220b74a5960add805e6fd77dc8c95cb959482bfcb314ad9d7451ce73c8b0",
+          "steps": 2
+        }
+      ],
+      "reload_replay": true,
+      "role": "train",
+      "seconds": 1.037277091294527
+    },
+    {
+      "counts": {
+        "diffusion": 7,
+        "pairformer": 4
+      },
+      "files": {
+        "conditioning.pt": "a91a54313354b79a845bc278c0f485d9554affb26be49ce463a455dec51665e6",
+        "gt_supervision.pt": "27b26b21296e37373a54e7ac1fb947f9a38f00d4d7d13ee57fd73f2d62ac21a8",
+        "s1_seed600001.npy": "f12543e761fd628911e1e33f4e08a5dc362593bd88ee85cbfde0da121045ca4c",
+        "s1_seed600011.npy": "de75c5ef7c8d0fd1048b394aa71548a72ff800ffb4bd26ca369191cd0b9857c0",
+        "s2_seed600001.npy": "5b12519c601bfb6bb0d7c4cdaf33aecbbe0f2a72a1fc982f47629717649a3e4f",
+        "s2_seed600011.npy": "cbeae3465d71c42b3cc77cb980ef4bc1287b550de0bd6eea00596598e274221c"
+      },
+      "group_id": "e1f7318a01f141aa68c3dde9c7ff90adeccdcb766454fa61e37bcf9f264b28a4",
+      "length": 189,
+      "outputs": [
+        {
+          "name": "s1_seed600001.npy",
+          "schedule": [
+            2560.0,
+            0.0
+          ],
+          "seed": 600001,
+          "sha256": "f12543e761fd628911e1e33f4e08a5dc362593bd88ee85cbfde0da121045ca4c",
+          "steps": 1
+        },
+        {
+          "name": "s2_seed600001.npy",
+          "schedule": [
+            2560.0,
+            55.97478485107422,
+            0.0
+          ],
+          "seed": 600001,
+          "sha256": "5b12519c601bfb6bb0d7c4cdaf33aecbbe0f2a72a1fc982f47629717649a3e4f",
+          "steps": 2
+        },
+        {
+          "name": "s1_seed600011.npy",
+          "schedule": [
+            2560.0,
+            0.0
+          ],
+          "seed": 600011,
+          "sha256": "de75c5ef7c8d0fd1048b394aa71548a72ff800ffb4bd26ca369191cd0b9857c0",
+          "steps": 1
+        },
+        {
+          "name": "s2_seed600011.npy",
+          "schedule": [
+            2560.0,
+            55.97478485107422,
+            0.0
+          ],
+          "seed": 600011,
+          "sha256": "cbeae3465d71c42b3cc77cb980ef4bc1287b550de0bd6eea00596598e274221c",
+          "steps": 2
+        }
+      ],
+      "reload_replay": true,
+      "role": "train",
+      "seconds": 0.8087331224232912
+    },
+    {
+      "counts": {
+        "diffusion": 7,
+        "pairformer": 4
+      },
+      "files": {
+        "conditioning.pt": "9cbe8a74ee06c05a15544e11613fdc9d73d21dfb54b3d99751eb5bfc887d6a88",
+        "gt_supervision.pt": "2316c6ad4dc7076d4ba9d2a93d69566a8726953eed5f5ee9be5b88ce36e8c36d",
+        "s1_seed600001.npy": "e0d7f72055308efe3220273ca4b0704d6aa088181419d499bf7139382e4434a2",
+        "s1_seed600011.npy": "c8831523adf5a53eb5a521fddc03200f72bdbcc2177cfca32b0c4311d4177223",
+        "s2_seed600001.npy": "aa211bd40b5f63ddf9eea09a651ab7ff2003715fa294ad6c148be38216803025",
+        "s2_seed600011.npy": "cdc70023a612ba1c619380e935480cc2e3bf7a4fd05ddee6fdd744963c67edd6"
+      },
+      "group_id": "1da77a8d2039740dec22a7ccca8b04e876966a97dc1bae8c5c16f4516540176e",
+      "length": 180,
+      "outputs": [
+        {
+          "name": "s1_seed600001.npy",
+          "schedule": [
+            2560.0,
+            0.0
+          ],
+          "seed": 600001,
+          "sha256": "e0d7f72055308efe3220273ca4b0704d6aa088181419d499bf7139382e4434a2",
+          "steps": 1
+        },
+        {
+          "name": "s2_seed600001.npy",
+          "schedule": [
+            2560.0,
+            55.97478485107422,
+            0.0
+          ],
+          "seed": 600001,
+          "sha256": "aa211bd40b5f63ddf9eea09a651ab7ff2003715fa294ad6c148be38216803025",
+          "steps": 2
+        },
+        {
+          "name": "s1_seed600011.npy",
+          "schedule": [
+            2560.0,
+            0.0
+          ],
+          "seed": 600011,
+          "sha256": "c8831523adf5a53eb5a521fddc03200f72bdbcc2177cfca32b0c4311d4177223",
+          "steps": 1
+        },
+        {
+          "name": "s2_seed600011.npy",
+          "schedule": [
+            2560.0,
+            55.97478485107422,
+            0.0
+          ],
+          "seed": 600011,
+          "sha256": "cdc70023a612ba1c619380e935480cc2e3bf7a4fd05ddee6fdd744963c67edd6",
+          "steps": 2
+        }
+      ],
+      "reload_replay": true,
+      "role": "train",
+      "seconds": 0.7396134790033102
+    },
+    {
+      "counts": {
+        "diffusion": 7,
+        "pairformer": 4
+      },
+      "files": {
+        "conditioning.pt": "c60e1bbc0812cc7254c0beaebab942210baa65dbb4492f6f908303e6b6cfe342",
+        "gt_supervision.pt": "cbfc1653e3ddeab7a9ce3cf5fa88bfefb9263b9d3b27467d974a5bf9a1b377cd",
+        "s1_seed600001.npy": "1d6040834f27379e34ec7dc48257f22d5d68dda6cca0bd0f38550a03a36af2a1",
+        "s1_seed600011.npy": "4e073dd15c15a897f6b0167deb7406c641af87458ff214ff3d7f306d1db47e9a",
+        "s2_seed600001.npy": "421c99a9a0c4efe2215c4a9170d859acb78e3bdd2513cb4337634978083c2ecc",
+        "s2_seed600011.npy": "09d2eacf1d0d9e6dd0de45111dc6158ee44125befde2799c0e71c4fd914d19e1"
+      },
+      "group_id": "3fee8c07616cbd0056d1196ee9e92f11b2166f19cb837a4e70d64d21ea4be6a3",
+      "length": 171,
+      "outputs": [
+        {
+          "name": "s1_seed600001.npy",
+          "schedule": [
+            2560.0,
+            0.0
+          ],
+          "seed": 600001,
+          "sha256": "1d6040834f27379e34ec7dc48257f22d5d68dda6cca0bd0f38550a03a36af2a1",
+          "steps": 1
+        },
+        {
+          "name": "s2_seed600001.npy",
+          "schedule": [
+            2560.0,
+            55.97478485107422,
+            0.0
+          ],
+          "seed": 600001,
+          "sha256": "421c99a9a0c4efe2215c4a9170d859acb78e3bdd2513cb4337634978083c2ecc",
+          "steps": 2
+        },
+        {
+          "name": "s1_seed600011.npy",
+          "schedule": [
+            2560.0,
+            0.0
+          ],
+          "seed": 600011,
+          "sha256": "4e073dd15c15a897f6b0167deb7406c641af87458ff214ff3d7f306d1db47e9a",
+          "steps": 1
+        },
+        {
+          "name": "s2_seed600011.npy",
+          "schedule": [
+            2560.0,
+            55.97478485107422,
+            0.0
+          ],
+          "seed": 600011,
+          "sha256": "09d2eacf1d0d9e6dd0de45111dc6158ee44125befde2799c0e71c4fd914d19e1",
+          "steps": 2
+        }
+      ],
+      "reload_replay": true,
+      "role": "train",
+      "seconds": 1.0336265359073877
+    },
+    {
+      "counts": {
+        "diffusion": 7,
+        "pairformer": 4
+      },
+      "files": {
+        "conditioning.pt": "94ffb11d8d3686e15d895303d134eccb39170ad64a64e49d28bd21e814a996ce",
+        "gt_supervision.pt": "c046b4e517597a2f06a2d04e247485c12fcf28bfb42a45427fceca7425d7df7a",
+        "s1_seed600001.npy": "9935509f2c370b152a83f49745168f03c65c84c6d15557e35144ac208e0e56cf",
+        "s1_seed600011.npy": "2bfef0c8c2d7ae894f5b4d34d62db7063c1d8087711781aba7eaa836aa6282cf",
+        "s2_seed600001.npy": "e229cc8a55478a1639eba563104784b8e7948a8bc7999627328f649927f86f00",
+        "s2_seed600011.npy": "40a115dc4a6f7f22513d5948552113009653c7b8e7751937db66a32e6763b55c"
+      },
+      "group_id": "54cc0ff0c344c56b72093221c51f921852e623c54d0b5c37df5ed1cb0d9c08b9",
+      "length": 166,
+      "outputs": [
+        {
+          "name": "s1_seed600001.npy",
+          "schedule": [
+            2560.0,
+            0.0
+          ],
+          "seed": 600001,
+          "sha256": "9935509f2c370b152a83f49745168f03c65c84c6d15557e35144ac208e0e56cf",
+          "steps": 1
+        },
+        {
+          "name": "s2_seed600001.npy",
+          "schedule": [
+            2560.0,
+            55.97478485107422,
+            0.0
+          ],
+          "seed": 600001,
+          "sha256": "e229cc8a55478a1639eba563104784b8e7948a8bc7999627328f649927f86f00",
+          "steps": 2
+        },
+        {
+          "name": "s1_seed600011.npy",
+          "schedule": [
+            2560.0,
+            0.0
+          ],
+          "seed": 600011,
+          "sha256": "2bfef0c8c2d7ae894f5b4d34d62db7063c1d8087711781aba7eaa836aa6282cf",
+          "steps": 1
+        },
+        {
+          "name": "s2_seed600011.npy",
+          "schedule": [
+            2560.0,
+            55.97478485107422,
+            0.0
+          ],
+          "seed": 600011,
+          "sha256": "40a115dc4a6f7f22513d5948552113009653c7b8e7751937db66a32e6763b55c",
+          "steps": 2
+        }
+      ],
+      "reload_replay": true,
+      "role": "train",
+      "seconds": 0.8925786782056093
+    },
+    {
+      "counts": {
+        "diffusion": 7,
+        "pairformer": 4
+      },
+      "files": {
+        "conditioning.pt": "5a69342bad28353579cef2381cc7a802603dd7f7c8d9f0e016b1176ae731e8a1",
+        "gt_supervision.pt": "1656fe96912e5cb890878dfd2d83341b89670d3f5c3823204842bd957cf0069a",
+        "s1_seed600001.npy": "56a90add4f670fe7be8497784ea4a67ca30210503ca5bd493eda27f3b4b867f2",
+        "s1_seed600011.npy": "2f345bcb6a51798a857243d6fa5ea1d3995f44b76aa2800929e301ed3f6e5f96",
+        "s2_seed600001.npy": "d7f5a7821720518589306ac81038cd03a80d2e6d7a9da9e562ac6d905aa9a22e",
+        "s2_seed600011.npy": "61ebc5dc788f99fe7994a0ecd1af1f7a9d757cb91c3693c6731460b618a9f0e2"
+      },
+      "group_id": "fd11aa7b5c57b41a3dbb13f8f2d45befd3e81cd61ae33e0c590a34d73d09bc8c",
+      "length": 164,
+      "outputs": [
+        {
+          "name": "s1_seed600001.npy",
+          "schedule": [
+            2560.0,
+            0.0
+          ],
+          "seed": 600001,
+          "sha256": "56a90add4f670fe7be8497784ea4a67ca30210503ca5bd493eda27f3b4b867f2",
+          "steps": 1
+        },
+        {
+          "name": "s2_seed600001.npy",
+          "schedule": [
+            2560.0,
+            55.97478485107422,
+            0.0
+          ],
+          "seed": 600001,
+          "sha256": "d7f5a7821720518589306ac81038cd03a80d2e6d7a9da9e562ac6d905aa9a22e",
+          "steps": 2
+        },
+        {
+          "name": "s1_seed600011.npy",
+          "schedule": [
+            2560.0,
+            0.0
+          ],
+          "seed": 600011,
+          "sha256": "2f345bcb6a51798a857243d6fa5ea1d3995f44b76aa2800929e301ed3f6e5f96",
+          "steps": 1
+        },
+        {
+          "name": "s2_seed600011.npy",
+          "schedule": [
+            2560.0,
+            55.97478485107422,
+            0.0
+          ],
+          "seed": 600011,
+          "sha256": "61ebc5dc788f99fe7994a0ecd1af1f7a9d757cb91c3693c6731460b618a9f0e2",
+          "steps": 2
+        }
+      ],
+      "reload_replay": true,
+      "role": "train",
+      "seconds": 0.7244859412312508
+    },
+    {
+      "counts": {
+        "diffusion": 7,
+        "pairformer": 4
+      },
+      "files": {
+        "conditioning.pt": "945e8852109e7bd1073cf914eecced0c8e548d5cde5793e29267632936b0115c",
+        "gt_supervision.pt": "a0783b3167018a03ab0f28433f3c5ddb5ca23e5e9e80a016e61265178974fccf",
+        "s1_seed600001.npy": "8a328df9057c7ac90110c7e8c36aed4f76768a9b872403d07e553cb68b9e3a2c",
+        "s1_seed600011.npy": "d66a5acd4c7c62d7b9cd9560970d9f4b6a8dcf7515afeea623668464ca752522",
+        "s2_seed600001.npy": "d0a5c0b721c5cc6ba0353668ee270b0028782173259948303597b955f9a67901",
+        "s2_seed600011.npy": "5626d2f5de68f8ee76b6da4503b3dd69a43356442db9f2b7cb7eb4672ad15ba1"
+      },
+      "group_id": "d5bcaa99f631c2f912c69e4c5fb2d6a0e575ad2c05d1798ad3615e98f0337f01",
+      "length": 160,
+      "outputs": [
+        {
+          "name": "s1_seed600001.npy",
+          "schedule": [
+            2560.0,
+            0.0
+          ],
+          "seed": 600001,
+          "sha256": "8a328df9057c7ac90110c7e8c36aed4f76768a9b872403d07e553cb68b9e3a2c",
+          "steps": 1
+        },
+        {
+          "name": "s2_seed600001.npy",
+          "schedule": [
+            2560.0,
+            55.97478485107422,
+            0.0
+          ],
+          "seed": 600001,
+          "sha256": "d0a5c0b721c5cc6ba0353668ee270b0028782173259948303597b955f9a67901",
+          "steps": 2
+        },
+        {
+          "name": "s1_seed600011.npy",
+          "schedule": [
+            2560.0,
+            0.0
+          ],
+          "seed": 600011,
+          "sha256": "d66a5acd4c7c62d7b9cd9560970d9f4b6a8dcf7515afeea623668464ca752522",
+          "steps": 1
+        },
+        {
+          "name": "s2_seed600011.npy",
+          "schedule": [
+            2560.0,
+            55.97478485107422,
+            0.0
+          ],
+          "seed": 600011,
+          "sha256": "5626d2f5de68f8ee76b6da4503b3dd69a43356442db9f2b7cb7eb4672ad15ba1",
+          "steps": 2
+        }
+      ],
+      "reload_replay": true,
+      "role": "train",
+      "seconds": 0.7460207641124725
+    },
+    {
+      "counts": {
+        "diffusion": 7,
+        "pairformer": 4
+      },
+      "files": {
+        "conditioning.pt": "cf09e6b0df41c02145cbeb09dc7fd81bcf83bb2aacf85948a3bcb14e7e155991",
+        "gt_supervision.pt": "ba4cb573ac49e343932d5cb8337a100469e1e2a6610d7377593b5ce78c8312bb",
+        "s1_seed600001.npy": "b9b1e0da99a1ae6ba3c36c2eb83b1a42ba7d011b5d90f9be6c742f0cc64360fd",
+        "s1_seed600011.npy": "4623d4bb2fedb21aa05a7a1594899b704ebb32714aa2f16ac0f04bf1c1d36440",
+        "s2_seed600001.npy": "f91b28a6a9dfc8940347e117253971e1833a835f9f09351c8db23aeb5d6cdaca",
+        "s2_seed600011.npy": "5047dcb0c9cb35d1c5e30d8c06a85a36aa44c3436ffd12e55e1ee15886fed6e3"
+      },
+      "group_id": "5efecc7ad1bd23787e5e9108c2620b1b689137a9256a5280932fef074b182d6d",
+      "length": 155,
+      "outputs": [
+        {
+          "name": "s1_seed600001.npy",
+          "schedule": [
+            2560.0,
+            0.0
+          ],
+          "seed": 600001,
+          "sha256": "b9b1e0da99a1ae6ba3c36c2eb83b1a42ba7d011b5d90f9be6c742f0cc64360fd",
+          "steps": 1
+        },
+        {
+          "name": "s2_seed600001.npy",
+          "schedule": [
+            2560.0,
+            55.97478485107422,
+            0.0
+          ],
+          "seed": 600001,
+          "sha256": "f91b28a6a9dfc8940347e117253971e1833a835f9f09351c8db23aeb5d6cdaca",
+          "steps": 2
+        },
+        {
+          "name": "s1_seed600011.npy",
+          "schedule": [
+            2560.0,
+            0.0
+          ],
+          "seed": 600011,
+          "sha256": "4623d4bb2fedb21aa05a7a1594899b704ebb32714aa2f16ac0f04bf1c1d36440",
+          "steps": 1
+        },
+        {
+          "name": "s2_seed600011.npy",
+          "schedule": [
+            2560.0,
+            55.97478485107422,
+            0.0
+          ],
+          "seed": 600011,
+          "sha256": "5047dcb0c9cb35d1c5e30d8c06a85a36aa44c3436ffd12e55e1ee15886fed6e3",
+          "steps": 2
+        }
+      ],
+      "reload_replay": true,
+      "role": "train",
+      "seconds": 0.8467545937746763
+    },
+    {
+      "counts": {
+        "diffusion": 7,
+        "pairformer": 4
+      },
+      "files": {
+        "conditioning.pt": "5c53670587a03b1957d3dcde50d6a8db633903a3436d978b756d9c412f376d30",
+        "gt_supervision.pt": "6f122c024c608df440ec620dbec1f65262bc169ffa755afe93603fef10da2c06",
+        "s1_seed600001.npy": "489c5b393013ee81e8b82e66b968f97c5659f836423a745e036360722e83b41c",
+        "s1_seed600011.npy": "3b6e8474da9db3a1364123b2afbe2cc0e4ab153b3db135c8f850bec9ed0fc090",
+        "s2_seed600001.npy": "eecfc73ed05a2890168e0145f3ec2b79af586c6c48367d522d3270352b307f16",
+        "s2_seed600011.npy": "c81bfcd7fbc811a32c298a88290911aa35c2e942054850f18f6d331701e6423c"
+      },
+      "group_id": "02a598566996d0eb49e3854209abea609fa2abea6eaa9833d128fa37c2145b6d",
+      "length": 152,
+      "outputs": [
+        {
+          "name": "s1_seed600001.npy",
+          "schedule": [
+            2560.0,
+            0.0
+          ],
+          "seed": 600001,
+          "sha256": "489c5b393013ee81e8b82e66b968f97c5659f836423a745e036360722e83b41c",
+          "steps": 1
+        },
+        {
+          "name": "s2_seed600001.npy",
+          "schedule": [
+            2560.0,
+            55.97478485107422,
+            0.0
+          ],
+          "seed": 600001,
+          "sha256": "eecfc73ed05a2890168e0145f3ec2b79af586c6c48367d522d3270352b307f16",
+          "steps": 2
+        },
+        {
+          "name": "s1_seed600011.npy",
+          "schedule": [
+            2560.0,
+            0.0
+          ],
+          "seed": 600011,
+          "sha256": "3b6e8474da9db3a1364123b2afbe2cc0e4ab153b3db135c8f850bec9ed0fc090",
+          "steps": 1
+        },
+        {
+          "name": "s2_seed600011.npy",
+          "schedule": [
+            2560.0,
+            55.97478485107422,
+            0.0
+          ],
+          "seed": 600011,
+          "sha256": "c81bfcd7fbc811a32c298a88290911aa35c2e942054850f18f6d331701e6423c",
+          "steps": 2
+        }
+      ],
+      "reload_replay": true,
+      "role": "train",
+      "seconds": 0.7464619576931
+    },
+    {
+      "counts": {
+        "diffusion": 7,
+        "pairformer": 4
+      },
+      "files": {
+        "conditioning.pt": "1bdaa775f1368b73df62c968d7cccdb89db17c906ff90d2eff447e06ca4ea1aa",
+        "gt_supervision.pt": "2f22e4f8d60627f9889916dedf0a6afbd31d27ab6897b8b2262a96116c8d739e",
+        "s1_seed600001.npy": "d29cf410207d9843ce6eebeac77f1041f993b6b9f64df83dab5d8604ee5126ec",
+        "s1_seed600011.npy": "adb7f2dc453cc3bcd926694c730e7f7238d05df9277c5e25f2265b68cb8b350e",
+        "s2_seed600001.npy": "e986eac3b05ba9fbebba3449ef804734ff2fe5cf4363d01809af9c50fa56e9d8",
+        "s2_seed600011.npy": "952737701914cbfa1b642bc8e1dd31a2796da91a5b10220a3fa60ed0a3850b6e"
+      },
+      "group_id": "e1cfe1ae8373d9078b32d39b78a946252df218b6c4a2a7b05659c1887d19d85d",
+      "length": 148,
+      "outputs": [
+        {
+          "name": "s1_seed600001.npy",
+          "schedule": [
+            2560.0,
+            0.0
+          ],
+          "seed": 600001,
+          "sha256": "d29cf410207d9843ce6eebeac77f1041f993b6b9f64df83dab5d8604ee5126ec",
+          "steps": 1
+        },
+        {
+          "name": "s2_seed600001.npy",
+          "schedule": [
+            2560.0,
+            55.97478485107422,
+            0.0
+          ],
+          "seed": 600001,
+          "sha256": "e986eac3b05ba9fbebba3449ef804734ff2fe5cf4363d01809af9c50fa56e9d8",
+          "steps": 2
+        },
+        {
+          "name": "s1_seed600011.npy",
+          "schedule": [
+            2560.0,
+            0.0
+          ],
+          "seed": 600011,
+          "sha256": "adb7f2dc453cc3bcd926694c730e7f7238d05df9277c5e25f2265b68cb8b350e",
+          "steps": 1
+        },
+        {
+          "name": "s2_seed600011.npy",
+          "schedule": [
+            2560.0,
+            55.97478485107422,
+            0.0
+          ],
+          "seed": 600011,
+          "sha256": "952737701914cbfa1b642bc8e1dd31a2796da91a5b10220a3fa60ed0a3850b6e",
+          "steps": 2
+        }
+      ],
+      "reload_replay": true,
+      "role": "train",
+      "seconds": 0.7260008454322815
+    },
+    {
+      "counts": {
+        "diffusion": 0,
+        "pairformer": 4
+      },
+      "files": {
+        "conditioning.pt": "130e20be627864df7eeed5c854e4eaeedb48b76b6b74712a26a4d9268d14c943"
+      },
+      "group_id": "ec7c69e3e6eb9f9011bfba76091c8f358f1982bcf36a3fd3948652913c60a947",
+      "length": 146,
+      "outputs": [],
+      "reload_replay": false,
+      "role": "validation",
+      "seconds": 0.42390246130526066
+    },
+    {
+      "counts": {
+        "diffusion": 7,
+        "pairformer": 4
+      },
+      "files": {
+        "conditioning.pt": "d67db35942a7c55132352490814a221fbb73532a44b79e5cf469d16193c48145",
+        "gt_supervision.pt": "8fa356091f4902f1eb7f76288bb81da8b78c65bbabf61033ed822ddb1efafc11",
+        "s1_seed600001.npy": "7b9f8f7debc273a01b1cfcefdc5e6a5f84a8910b9dd80b691fbe62f48451f838",
+        "s1_seed600011.npy": "ca0628a73d3f08eb3e300ad82074b899c1925b5281fa1473ffbef960461182f2",
+        "s2_seed600001.npy": "c7e23a2fa5ec3fc3ad672f46ebf87a277585ad62d026051e3ad7843261772343",
+        "s2_seed600011.npy": "a2cb9e71c63b9afb719f6bd46d2820c4ad85af880f2b53a1a07538d7158fe4e8"
+      },
+      "group_id": "deb72518d110c2c94d4f0556481b9f9983f8633005b87b136a03b270c9011844",
+      "length": 143,
+      "outputs": [
+        {
+          "name": "s1_seed600001.npy",
+          "schedule": [
+            2560.0,
+            0.0
+          ],
+          "seed": 600001,
+          "sha256": "7b9f8f7debc273a01b1cfcefdc5e6a5f84a8910b9dd80b691fbe62f48451f838",
+          "steps": 1
+        },
+        {
+          "name": "s2_seed600001.npy",
+          "schedule": [
+            2560.0,
+            55.97478485107422,
+            0.0
+          ],
+          "seed": 600001,
+          "sha256": "c7e23a2fa5ec3fc3ad672f46ebf87a277585ad62d026051e3ad7843261772343",
+          "steps": 2
+        },
+        {
+          "name": "s1_seed600011.npy",
+          "schedule": [
+            2560.0,
+            0.0
+          ],
+          "seed": 600011,
+          "sha256": "ca0628a73d3f08eb3e300ad82074b899c1925b5281fa1473ffbef960461182f2",
+          "steps": 1
+        },
+        {
+          "name": "s2_seed600011.npy",
+          "schedule": [
+            2560.0,
+            55.97478485107422,
+            0.0
+          ],
+          "seed": 600011,
+          "sha256": "a2cb9e71c63b9afb719f6bd46d2820c4ad85af880f2b53a1a07538d7158fe4e8",
+          "steps": 2
+        }
+      ],
+      "reload_replay": true,
+      "role": "train",
+      "seconds": 0.833418183028698
+    },
+    {
+      "counts": {
+        "diffusion": 7,
+        "pairformer": 4
+      },
+      "files": {
+        "conditioning.pt": "eaf159310f9796165de709478f2b3a02a1264894a22b21487ab59a0032a1511b",
+        "gt_supervision.pt": "664271c43a9e7d072504070aaf31730e6c15bcddaf44a8a5ab892cd645e1b94c",
+        "s1_seed600001.npy": "51f9bf7ab9142bda195fb3d82a9289bc0895428b8375de47b84c122fa7f8e096",
+        "s1_seed600011.npy": "664d4866c692e54c830e609ba791bf8f587a98fc278898c77b6a350e6a5a75d9",
+        "s2_seed600001.npy": "b0eb275f028c1c55a191d9f7e76bd5e8174459a37ff79eec7b4d38164b94c4a3",
+        "s2_seed600011.npy": "544333729205a65edb15509bf938b1863af9e1fd4aede7cdd9ccaac8b145abb4"
+      },
+      "group_id": "0a0af0fda25365a5846778f867e715b57c166b48eaf231c04d0b8f7b67cbee6b",
+      "length": 140,
+      "outputs": [
+        {
+          "name": "s1_seed600001.npy",
+          "schedule": [
+            2560.0,
+            0.0
+          ],
+          "seed": 600001,
+          "sha256": "51f9bf7ab9142bda195fb3d82a9289bc0895428b8375de47b84c122fa7f8e096",
+          "steps": 1
+        },
+        {
+          "name": "s2_seed600001.npy",
+          "schedule": [
+            2560.0,
+            55.97478485107422,
+            0.0
+          ],
+          "seed": 600001,
+          "sha256": "b0eb275f028c1c55a191d9f7e76bd5e8174459a37ff79eec7b4d38164b94c4a3",
+          "steps": 2
+        },
+        {
+          "name": "s1_seed600011.npy",
+          "schedule": [
+            2560.0,
+            0.0
+          ],
+          "seed": 600011,
+          "sha256": "664d4866c692e54c830e609ba791bf8f587a98fc278898c77b6a350e6a5a75d9",
+          "steps": 1
+        },
+        {
+          "name": "s2_seed600011.npy",
+          "schedule": [
+            2560.0,
+            55.97478485107422,
+            0.0
+          ],
+          "seed": 600011,
+          "sha256": "544333729205a65edb15509bf938b1863af9e1fd4aede7cdd9ccaac8b145abb4",
+          "steps": 2
+        }
+      ],
+      "reload_replay": true,
+      "role": "train",
+      "seconds": 0.733986871317029
+    },
+    {
+      "counts": {
+        "diffusion": 7,
+        "pairformer": 4
+      },
+      "files": {
+        "conditioning.pt": "47e52272331416ea9e6a0f6b92c8b0ebc54a5adafb4dac035f67796d565fae3c",
+        "gt_supervision.pt": "932a9963950eb01c438b9535872401e054b990b797482434921e26fe6c068bee",
+        "s1_seed600001.npy": "4267dea44e137f2592a7b02584edecd6163f6eed63ce51263030eb09ce9f9f4c",
+        "s1_seed600011.npy": "f0cff83ec6332f2b21cb90793ace3927c908af21a25de79e35780d0d19e48720",
+        "s2_seed600001.npy": "07063ea125eaf5edc15bd622f0a512545f0b6062fb978dad3cca3f7f76433002",
+        "s2_seed600011.npy": "6752d8120569aec04f4585afd388f3e1ee11f2fc3c7863c9b1fbea6e0c4760f9"
+      },
+      "group_id": "e9688b4475d8e0857ec051fd2383ffb168fb064e9b46fc755e12e4902939c251",
+      "length": 138,
+      "outputs": [
+        {
+          "name": "s1_seed600001.npy",
+          "schedule": [
+            2560.0,
+            0.0
+          ],
+          "seed": 600001,
+          "sha256": "4267dea44e137f2592a7b02584edecd6163f6eed63ce51263030eb09ce9f9f4c",
+          "steps": 1
+        },
+        {
+          "name": "s2_seed600001.npy",
+          "schedule": [
+            2560.0,
+            55.97478485107422,
+            0.0
+          ],
+          "seed": 600001,
+          "sha256": "07063ea125eaf5edc15bd622f0a512545f0b6062fb978dad3cca3f7f76433002",
+          "steps": 2
+        },
+        {
+          "name": "s1_seed600011.npy",
+          "schedule": [
+            2560.0,
+            0.0
+          ],
+          "seed": 600011,
+          "sha256": "f0cff83ec6332f2b21cb90793ace3927c908af21a25de79e35780d0d19e48720",
+          "steps": 1
+        },
+        {
+          "name": "s2_seed600011.npy",
+          "schedule": [
+            2560.0,
+            55.97478485107422,
+            0.0
+          ],
+          "seed": 600011,
+          "sha256": "6752d8120569aec04f4585afd388f3e1ee11f2fc3c7863c9b1fbea6e0c4760f9",
+          "steps": 2
+        }
+      ],
+      "reload_replay": true,
+      "role": "train",
+      "seconds": 0.7177912853658199
+    },
+    {
+      "counts": {
+        "diffusion": 7,
+        "pairformer": 4
+      },
+      "files": {
+        "conditioning.pt": "a0a4832ff10dd0527b61f4adb08aaaab76a856e7b30b5c5ba49b424f0865bb7e",
+        "gt_supervision.pt": "debbeffdb9381b4de8a6b97a7274833144404fb9adfb4638e4aa68e8ce2bf41d",
+        "s1_seed600001.npy": "424f077930f20e167553752827e8b03e0af200925c91ff4274177edf581ce8a9",
+        "s1_seed600011.npy": "9dd59b22d0a296d531d728ddffe37d68ac5b83dc88b451b77f3a9a3f43cc14c1",
+        "s2_seed600001.npy": "188387542b3921c202d5e67fba292803b91ea8cbeb46c0447d5e80b7220bc44e",
+        "s2_seed600011.npy": "14bb8c69b1628615eb44aa3b2d1212ec7b5936be0eb104ccb3d35f1a72179154"
+      },
+      "group_id": "3b568bf01f33736414da05710e7df266b8536b6f5cc01b18c1a7ad3dbba1397b",
+      "length": 131,
+      "outputs": [
+        {
+          "name": "s1_seed600001.npy",
+          "schedule": [
+            2560.0,
+            0.0
+          ],
+          "seed": 600001,
+          "sha256": "424f077930f20e167553752827e8b03e0af200925c91ff4274177edf581ce8a9",
+          "steps": 1
+        },
+        {
+          "name": "s2_seed600001.npy",
+          "schedule": [
+            2560.0,
+            55.97478485107422,
+            0.0
+          ],
+          "seed": 600001,
+          "sha256": "188387542b3921c202d5e67fba292803b91ea8cbeb46c0447d5e80b7220bc44e",
+          "steps": 2
+        },
+        {
+          "name": "s1_seed600011.npy",
+          "schedule": [
+            2560.0,
+            0.0
+          ],
+          "seed": 600011,
+          "sha256": "9dd59b22d0a296d531d728ddffe37d68ac5b83dc88b451b77f3a9a3f43cc14c1",
+          "steps": 1
+        },
+        {
+          "name": "s2_seed600011.npy",
+          "schedule": [
+            2560.0,
+            55.97478485107422,
+            0.0
+          ],
+          "seed": 600011,
+          "sha256": "14bb8c69b1628615eb44aa3b2d1212ec7b5936be0eb104ccb3d35f1a72179154",
+          "steps": 2
+        }
+      ],
+      "reload_replay": true,
+      "role": "train",
+      "seconds": 0.7172429580241442
+    },
+    {
+      "counts": {
+        "diffusion": 7,
+        "pairformer": 4
+      },
+      "files": {
+        "conditioning.pt": "d97b0424a4ca12116b475499596e63f00f91e890e5df983ebd3f00b5a8a9e04a",
+        "gt_supervision.pt": "ab7369c346f39a1edec2cd896cf00d47f01c9baf8a4eb7f94a0c2e091e4805ae",
+        "s1_seed600001.npy": "74f23fb328427036323b11afdef6904c244bb46e4f17577406dd0cece6555379",
+        "s1_seed600011.npy": "fcccc43efeae5be4feb747089b34b61446230359c048158cdd277caf9847c8ee",
+        "s2_seed600001.npy": "66ada4a4ef8d38a2ebb89767dfd5d94a940b5cd8b3c8d594069feb6ce3708967",
+        "s2_seed600011.npy": "5cf54cdf458cf31753dd25534ac9d5b64d37d1f239c6e53adbc9a89c9e9ed6ce"
+      },
+      "group_id": "60fd41b7901a80db6da9fc44473ed34656d4871aec48219500df5dbe28d8aeed",
+      "length": 129,
+      "outputs": [
+        {
+          "name": "s1_seed600001.npy",
+          "schedule": [
+            2560.0,
+            0.0
+          ],
+          "seed": 600001,
+          "sha256": "74f23fb328427036323b11afdef6904c244bb46e4f17577406dd0cece6555379",
+          "steps": 1
+        },
+        {
+          "name": "s2_seed600001.npy",
+          "schedule": [
+            2560.0,
+            55.97478485107422,
+            0.0
+          ],
+          "seed": 600001,
+          "sha256": "66ada4a4ef8d38a2ebb89767dfd5d94a940b5cd8b3c8d594069feb6ce3708967",
+          "steps": 2
+        },
+        {
+          "name": "s1_seed600011.npy",
+          "schedule": [
+            2560.0,
+            0.0
+          ],
+          "seed": 600011,
+          "sha256": "fcccc43efeae5be4feb747089b34b61446230359c048158cdd277caf9847c8ee",
+          "steps": 1
+        },
+        {
+          "name": "s2_seed600011.npy",
+          "schedule": [
+            2560.0,
+            55.97478485107422,
+            0.0
+          ],
+          "seed": 600011,
+          "sha256": "5cf54cdf458cf31753dd25534ac9d5b64d37d1f239c6e53adbc9a89c9e9ed6ce",
+          "steps": 2
+        }
+      ],
+      "reload_replay": true,
+      "role": "train",
+      "seconds": 0.8199103679507971
+    },
+    {
+      "counts": {
+        "diffusion": 7,
+        "pairformer": 4
+      },
+      "files": {
+        "conditioning.pt": "38de7a8ab52f47667f2e594274810d9c377900d28f94cb89ace24ef15d9d27ea",
+        "gt_supervision.pt": "d996aaddb74c9b0caced69895ee03e6f03d8dfeda488bd18f4ce10af3ab868fb",
+        "s1_seed600001.npy": "9be55f4dcf1be107ed56045adf8a272209117c6429de7c8a8286447ab3755090",
+        "s1_seed600011.npy": "ba882ff8ccebc305276ed27895a03ab51e57a6eba850462862674b637f2bd564",
+        "s2_seed600001.npy": "0d32b2386e20d9d769713f6f6c97e1f80b396fbe8d2da41f6bea8645f3d6e76e",
+        "s2_seed600011.npy": "3c55f8f690cd451f45a57e88d7e5e46901b33b53e55d3833862017d25042ddb2"
+      },
+      "group_id": "c5341aa461e65a9bc533f266fea08537b9ab8b426ba631d6ad46491222f4ff4e",
+      "length": 126,
+      "outputs": [
+        {
+          "name": "s1_seed600001.npy",
+          "schedule": [
+            2560.0,
+            0.0
+          ],
+          "seed": 600001,
+          "sha256": "9be55f4dcf1be107ed56045adf8a272209117c6429de7c8a8286447ab3755090",
+          "steps": 1
+        },
+        {
+          "name": "s2_seed600001.npy",
+          "schedule": [
+            2560.0,
+            55.97478485107422,
+            0.0
+          ],
+          "seed": 600001,
+          "sha256": "0d32b2386e20d9d769713f6f6c97e1f80b396fbe8d2da41f6bea8645f3d6e76e",
+          "steps": 2
+        },
+        {
+          "name": "s1_seed600011.npy",
+          "schedule": [
+            2560.0,
+            0.0
+          ],
+          "seed": 600011,
+          "sha256": "ba882ff8ccebc305276ed27895a03ab51e57a6eba850462862674b637f2bd564",
+          "steps": 1
+        },
+        {
+          "name": "s2_seed600011.npy",
+          "schedule": [
+            2560.0,
+            55.97478485107422,
+            0.0
+          ],
+          "seed": 600011,
+          "sha256": "3c55f8f690cd451f45a57e88d7e5e46901b33b53e55d3833862017d25042ddb2",
+          "steps": 2
+        }
+      ],
+      "reload_replay": true,
+      "role": "train",
+      "seconds": 0.9151678457856178
+    },
+    {
+      "counts": {
+        "diffusion": 7,
+        "pairformer": 4
+      },
+      "files": {
+        "conditioning.pt": "247ddf50e1be7a4fd8912ec1396e438378bf6e17b78d7ba3e3d56d2f39900b91",
+        "gt_supervision.pt": "b4395224532abc94d37822b07b485edef089dba45d1670b41da08a81978fba23",
+        "s1_seed600001.npy": "2dddd5d6e50b71aad21f19a7d1137f6aa08502ccfc37e3ecfbfaa74a659a7621",
+        "s1_seed600011.npy": "fbfb4c093556cb75aa51fa8ea853f02b9575e78df64fd899f2c4ad35ded08d6e",
+        "s2_seed600001.npy": "3cb1121a8180ba047912569c05478bc47bf68eb410ffbff6126f65655686ac2b",
+        "s2_seed600011.npy": "e683e30b67bcd4f52d08b4a0689fdac890192192f64978af46c230ca1e0f008b"
+      },
+      "group_id": "cc5130e0da46aeaff2f84e5f0452de82394d63182731cf406a032ec70ee6d990",
+      "length": 121,
+      "outputs": [
+        {
+          "name": "s1_seed600001.npy",
+          "schedule": [
+            2560.0,
+            0.0
+          ],
+          "seed": 600001,
+          "sha256": "2dddd5d6e50b71aad21f19a7d1137f6aa08502ccfc37e3ecfbfaa74a659a7621",
+          "steps": 1
+        },
+        {
+          "name": "s2_seed600001.npy",
+          "schedule": [
+            2560.0,
+            55.97478485107422,
+            0.0
+          ],
+          "seed": 600001,
+          "sha256": "3cb1121a8180ba047912569c05478bc47bf68eb410ffbff6126f65655686ac2b",
+          "steps": 2
+        },
+        {
+          "name": "s1_seed600011.npy",
+          "schedule": [
+            2560.0,
+            0.0
+          ],
+          "seed": 600011,
+          "sha256": "fbfb4c093556cb75aa51fa8ea853f02b9575e78df64fd899f2c4ad35ded08d6e",
+          "steps": 1
+        },
+        {
+          "name": "s2_seed600011.npy",
+          "schedule": [
+            2560.0,
+            55.97478485107422,
+            0.0
+          ],
+          "seed": 600011,
+          "sha256": "e683e30b67bcd4f52d08b4a0689fdac890192192f64978af46c230ca1e0f008b",
+          "steps": 2
+        }
+      ],
+      "reload_replay": true,
+      "role": "train",
+      "seconds": 0.7326659578830004
+    },
+    {
+      "counts": {
+        "diffusion": 7,
+        "pairformer": 4
+      },
+      "files": {
+        "conditioning.pt": "d69c9f6fbf0bec24eaed0b39f3fbcc32788c6c4a5c67f6b37383995d83b61721",
+        "gt_supervision.pt": "914192c524ca91450ac655675466b107c2da3bdf0bdc08548617ed01292c8c45",
+        "s1_seed600001.npy": "deba4168853bcd770bd927e86a3bcc2b91d3bf32f3040e873bd3928c48c36d2c",
+        "s1_seed600011.npy": "5b89aeddef11c05164a46b16a2325df8e90fd2c5921d39f38478adcdfe6febe3",
+        "s2_seed600001.npy": "5b20551360f9562aeeb118c6e68fc70f9c2d0f131e66cd5706718169711c1073",
+        "s2_seed600011.npy": "c368cd6c8b4e1178dcc8dc6ed07dd6efb1f4c00a414c9929a353ce2c7454c1c8"
+      },
+      "group_id": "53af202f9f73a2dc4e5ee3cf4738a42db916b683bca21c9de9241c854ed345de",
+      "length": 116,
+      "outputs": [
+        {
+          "name": "s1_seed600001.npy",
+          "schedule": [
+            2560.0,
+            0.0
+          ],
+          "seed": 600001,
+          "sha256": "deba4168853bcd770bd927e86a3bcc2b91d3bf32f3040e873bd3928c48c36d2c",
+          "steps": 1
+        },
+        {
+          "name": "s2_seed600001.npy",
+          "schedule": [
+            2560.0,
+            55.97478485107422,
+            0.0
+          ],
+          "seed": 600001,
+          "sha256": "5b20551360f9562aeeb118c6e68fc70f9c2d0f131e66cd5706718169711c1073",
+          "steps": 2
+        },
+        {
+          "name": "s1_seed600011.npy",
+          "schedule": [
+            2560.0,
+            0.0
+          ],
+          "seed": 600011,
+          "sha256": "5b89aeddef11c05164a46b16a2325df8e90fd2c5921d39f38478adcdfe6febe3",
+          "steps": 1
+        },
+        {
+          "name": "s2_seed600011.npy",
+          "schedule": [
+            2560.0,
+            55.97478485107422,
+            0.0
+          ],
+          "seed": 600011,
+          "sha256": "c368cd6c8b4e1178dcc8dc6ed07dd6efb1f4c00a414c9929a353ce2c7454c1c8",
+          "steps": 2
+        }
+      ],
+      "reload_replay": true,
+      "role": "train",
+      "seconds": 0.8492300417274237
+    },
+    {
+      "counts": {
+        "diffusion": 7,
+        "pairformer": 4
+      },
+      "files": {
+        "conditioning.pt": "1bfcf01e9c5542aa40271262b5aa419b8334e7d9dfe68f63190627f998d43086",
+        "gt_supervision.pt": "e7624a6b7910aa2cd7af93155742042958ae843b279d06b3f4588b112338ed2c",
+        "s1_seed600001.npy": "2b7627370799a33d5a6af0d6ad4f5304ebe08d2c004b5d183dbbca7f408b496b",
+        "s1_seed600011.npy": "00b283ffe9b5d4d9a9535badc00d37bfdbc780ec18a2d57f4f69efa81a9838c5",
+        "s2_seed600001.npy": "56628f3a12acf093f631d10572d1bea3a15bc24a8f8db5045acc67d1d06e0f3a",
+        "s2_seed600011.npy": "e62f6d735c2b7e728d9b7213e57900fb16c7f99f37d5e0504df9a389ad0b21d8"
+      },
+      "group_id": "56d669f00d033f9463d22c64d5d7b725fa345c7f4b4fbdd86e93339ee65ea40f",
+      "length": 115,
+      "outputs": [
+        {
+          "name": "s1_seed600001.npy",
+          "schedule": [
+            2560.0,
+            0.0
+          ],
+          "seed": 600001,
+          "sha256": "2b7627370799a33d5a6af0d6ad4f5304ebe08d2c004b5d183dbbca7f408b496b",
+          "steps": 1
+        },
+        {
+          "name": "s2_seed600001.npy",
+          "schedule": [
+            2560.0,
+            55.97478485107422,
+            0.0
+          ],
+          "seed": 600001,
+          "sha256": "56628f3a12acf093f631d10572d1bea3a15bc24a8f8db5045acc67d1d06e0f3a",
+          "steps": 2
+        },
+        {
+          "name": "s1_seed600011.npy",
+          "schedule": [
+            2560.0,
+            0.0
+          ],
+          "seed": 600011,
+          "sha256": "00b283ffe9b5d4d9a9535badc00d37bfdbc780ec18a2d57f4f69efa81a9838c5",
+          "steps": 1
+        },
+        {
+          "name": "s2_seed600011.npy",
+          "schedule": [
+            2560.0,
+            55.97478485107422,
+            0.0
+          ],
+          "seed": 600011,
+          "sha256": "e62f6d735c2b7e728d9b7213e57900fb16c7f99f37d5e0504df9a389ad0b21d8",
+          "steps": 2
+        }
+      ],
+      "reload_replay": true,
+      "role": "train",
+      "seconds": 0.7233725320547819
+    },
+    {
+      "counts": {
+        "diffusion": 7,
+        "pairformer": 4
+      },
+      "files": {
+        "conditioning.pt": "267738c84406b7e1fba3a35862a8b824a509fbc7c64414995c0ecad2f98c2f43",
+        "gt_supervision.pt": "b8549742ed5c96dffc44b3fb558f7ebdabf430c230ae56762ba7f9c81d8bf2a6",
+        "s1_seed600001.npy": "ca35e9ee1bf9d029ebb9944e94fd430e0dc51e52d2650d45142784ae170980aa",
+        "s1_seed600011.npy": "3aedc378d87e4b765cffa2736f84db5d6f74eb9a5f3488736d5cb5c4f3fc2e99",
+        "s2_seed600001.npy": "961f7bad418bd2456f2a7dc79fc67a6429bf04c1cff49beddffc7a41527e0e6a",
+        "s2_seed600011.npy": "c87df7323262e9b414fc983d02fa59eb3fb88170fc5368b4ce7fad7a1fdb4e88"
+      },
+      "group_id": "b39dc28758a783962593c6afc6fbc268be4a05b05f3bbbea4cceb5b6440f940d",
+      "length": 112,
+      "outputs": [
+        {
+          "name": "s1_seed600001.npy",
+          "schedule": [
+            2560.0,
+            0.0
+          ],
+          "seed": 600001,
+          "sha256": "ca35e9ee1bf9d029ebb9944e94fd430e0dc51e52d2650d45142784ae170980aa",
+          "steps": 1
+        },
+        {
+          "name": "s2_seed600001.npy",
+          "schedule": [
+            2560.0,
+            55.97478485107422,
+            0.0
+          ],
+          "seed": 600001,
+          "sha256": "961f7bad418bd2456f2a7dc79fc67a6429bf04c1cff49beddffc7a41527e0e6a",
+          "steps": 2
+        },
+        {
+          "name": "s1_seed600011.npy",
+          "schedule": [
+            2560.0,
+            0.0
+          ],
+          "seed": 600011,
+          "sha256": "3aedc378d87e4b765cffa2736f84db5d6f74eb9a5f3488736d5cb5c4f3fc2e99",
+          "steps": 1
+        },
+        {
+          "name": "s2_seed600011.npy",
+          "schedule": [
+            2560.0,
+            55.97478485107422,
+            0.0
+          ],
+          "seed": 600011,
+          "sha256": "c87df7323262e9b414fc983d02fa59eb3fb88170fc5368b4ce7fad7a1fdb4e88",
+          "steps": 2
+        }
+      ],
+      "reload_replay": true,
+      "role": "train",
+      "seconds": 0.7995211482048035
+    },
+    {
+      "counts": {
+        "diffusion": 7,
+        "pairformer": 4
+      },
+      "files": {
+        "conditioning.pt": "c99640e0fd4c57e63da345f084b3fb4303f70354d84aedb9049aeefedd5f8ed0",
+        "gt_supervision.pt": "9d9352a48dcc326a4abdb8b5cdf3c44bce9f25c4d1bbd2d2d816acee98c16946",
+        "s1_seed600001.npy": "40dc55c02a54e6dc269ee054a297fc309247365ac44113367e913bff21744ad1",
+        "s1_seed600011.npy": "646d2bc0e63913a756d4e24f892e057485e5e4c0ab52443bf8d55eac5793010a",
+        "s2_seed600001.npy": "049134965b35bc1f68e2afee0aedb25fdac079655d36a8af18ed21946ce34900",
+        "s2_seed600011.npy": "aab6ae3cae5a9dcd5bac0e50753c275550f4e23060b376c1ad53441914d89bb9"
+      },
+      "group_id": "75b8c1f7f4336e2f2f74f525931bcc5b934fdcde19ff4ff6e5cc3da52bcd9a71",
+      "length": 105,
+      "outputs": [
+        {
+          "name": "s1_seed600001.npy",
+          "schedule": [
+            2560.0,
+            0.0
+          ],
+          "seed": 600001,
+          "sha256": "40dc55c02a54e6dc269ee054a297fc309247365ac44113367e913bff21744ad1",
+          "steps": 1
+        },
+        {
+          "name": "s2_seed600001.npy",
+          "schedule": [
+            2560.0,
+            55.97478485107422,
+            0.0
+          ],
+          "seed": 600001,
+          "sha256": "049134965b35bc1f68e2afee0aedb25fdac079655d36a8af18ed21946ce34900",
+          "steps": 2
+        },
+        {
+          "name": "s1_seed600011.npy",
+          "schedule": [
+            2560.0,
+            0.0
+          ],
+          "seed": 600011,
+          "sha256": "646d2bc0e63913a756d4e24f892e057485e5e4c0ab52443bf8d55eac5793010a",
+          "steps": 1
+        },
+        {
+          "name": "s2_seed600011.npy",
+          "schedule": [
+            2560.0,
+            55.97478485107422,
+            0.0
+          ],
+          "seed": 600011,
+          "sha256": "aab6ae3cae5a9dcd5bac0e50753c275550f4e23060b376c1ad53441914d89bb9",
+          "steps": 2
+        }
+      ],
+      "reload_replay": true,
+      "role": "train",
+      "seconds": 0.8367396239191294
+    },
+    {
+      "counts": {
+        "diffusion": 7,
+        "pairformer": 4
+      },
+      "files": {
+        "conditioning.pt": "ff86747a860af8a401d7860cc5d94918a62cb25a71d6f280e03ce9f0cc2fbf16",
+        "gt_supervision.pt": "52bb4cd38f93ac84df7a34978f6aa1aa5e85669f5b89e80021b21e8a516ed112",
+        "s1_seed600001.npy": "c3cd376d61cf3592bc77ee63fda341345452b49387e093390884d57c1bdfc86a",
+        "s1_seed600011.npy": "d246ef36b71ceb84712fe7d72bdf1648f77d920099ce3520d7762cb3e7592d8f",
+        "s2_seed600001.npy": "b6f4850f336d9922608bd0e88a39facb8ad37c7958f977191abfbc4faeff275e",
+        "s2_seed600011.npy": "cccc4a907a7a70f1873f4289077e8499b4ca3dfd95518d3558da9fa1de6aab47"
+      },
+      "group_id": "5e6fcde3f42f8b5bf62fa45c5b177cb518e47599b3360562df8e3b8972c67eb9",
+      "length": 104,
+      "outputs": [
+        {
+          "name": "s1_seed600001.npy",
+          "schedule": [
+            2560.0,
+            0.0
+          ],
+          "seed": 600001,
+          "sha256": "c3cd376d61cf3592bc77ee63fda341345452b49387e093390884d57c1bdfc86a",
+          "steps": 1
+        },
+        {
+          "name": "s2_seed600001.npy",
+          "schedule": [
+            2560.0,
+            55.97478485107422,
+            0.0
+          ],
+          "seed": 600001,
+          "sha256": "b6f4850f336d9922608bd0e88a39facb8ad37c7958f977191abfbc4faeff275e",
+          "steps": 2
+        },
+        {
+          "name": "s1_seed600011.npy",
+          "schedule": [
+            2560.0,
+            0.0
+          ],
+          "seed": 600011,
+          "sha256": "d246ef36b71ceb84712fe7d72bdf1648f77d920099ce3520d7762cb3e7592d8f",
+          "steps": 1
+        },
+        {
+          "name": "s2_seed600011.npy",
+          "schedule": [
+            2560.0,
+            55.97478485107422,
+            0.0
+          ],
+          "seed": 600011,
+          "sha256": "cccc4a907a7a70f1873f4289077e8499b4ca3dfd95518d3558da9fa1de6aab47",
+          "steps": 2
+        }
+      ],
+      "reload_replay": true,
+      "role": "train",
+      "seconds": 0.7336978781968355
+    },
+    {
+      "counts": {
+        "diffusion": 7,
+        "pairformer": 4
+      },
+      "files": {
+        "conditioning.pt": "7edfe15aeb8208f023c401a9a8b72d209fa2d7833f9ec057fb0b973013174113",
+        "gt_supervision.pt": "6c94fa6d042548b888a975312f268d64fefeb7b07422d17ec15aa23fe3203d82",
+        "s1_seed600001.npy": "fda43c0e9ec85bcb15c749a014bb8a307a6c98644fa4326b508faa76f6d12787",
+        "s1_seed600011.npy": "40323653e80063f331dc9c0d68b7b6da76c2b4ed94ec6f6fc64c40c4d037a4de",
+        "s2_seed600001.npy": "74007eb848b6c8ee2b4a4afbc407b505602b9122209ad8c24f89541623895aec",
+        "s2_seed600011.npy": "3597c0c4b3bafd18c375fe80fda1ebf880723da5ddbc497dca1b26deb04c6e33"
+      },
+      "group_id": "2a4e5e875457d4262a6227dce91d3246284a3d3a2ce2a18a3ce7c2fbdfab30f3",
+      "length": 101,
+      "outputs": [
+        {
+          "name": "s1_seed600001.npy",
+          "schedule": [
+            2560.0,
+            0.0
+          ],
+          "seed": 600001,
+          "sha256": "fda43c0e9ec85bcb15c749a014bb8a307a6c98644fa4326b508faa76f6d12787",
+          "steps": 1
+        },
+        {
+          "name": "s2_seed600001.npy",
+          "schedule": [
+            2560.0,
+            55.97478485107422,
+            0.0
+          ],
+          "seed": 600001,
+          "sha256": "74007eb848b6c8ee2b4a4afbc407b505602b9122209ad8c24f89541623895aec",
+          "steps": 2
+        },
+        {
+          "name": "s1_seed600011.npy",
+          "schedule": [
+            2560.0,
+            0.0
+          ],
+          "seed": 600011,
+          "sha256": "40323653e80063f331dc9c0d68b7b6da76c2b4ed94ec6f6fc64c40c4d037a4de",
+          "steps": 1
+        },
+        {
+          "name": "s2_seed600011.npy",
+          "schedule": [
+            2560.0,
+            55.97478485107422,
+            0.0
+          ],
+          "seed": 600011,
+          "sha256": "3597c0c4b3bafd18c375fe80fda1ebf880723da5ddbc497dca1b26deb04c6e33",
+          "steps": 2
+        }
+      ],
+      "reload_replay": true,
+      "role": "train",
+      "seconds": 0.6745848078280687
+    },
+    {
+      "counts": {
+        "diffusion": 7,
+        "pairformer": 4
+      },
+      "files": {
+        "conditioning.pt": "b5179bd64048c21cb8886cb612ea28159fb041b75923f40cd025f866794591b6",
+        "gt_supervision.pt": "e839a8974f392e4c8ef95aed2003f55a1bd670ee1a44b089e8041202a963827f",
+        "s1_seed600001.npy": "782f6e15cc410e2344ba30dfd3b2fe4d5fa01d3c0e744168bbacb9b00670a03c",
+        "s1_seed600011.npy": "385bc9fdf2de3dde407a911f19201a01d8be08b9d0177f7ee49ac2554b18633c",
+        "s2_seed600001.npy": "12b92fe618d7821f0729b884c0c4bb2b9711a1645949266a58a90585adee6289",
+        "s2_seed600011.npy": "e32f11f9b271f91e334e3024096308583b288b2c08136acccb76c6720444bdcd"
+      },
+      "group_id": "d010adbf8dfbb2feb5b808d43ca4b1242985cd88536dfa6b228787f625b62b37",
+      "length": 95,
+      "outputs": [
+        {
+          "name": "s1_seed600001.npy",
+          "schedule": [
+            2560.0,
+            0.0
+          ],
+          "seed": 600001,
+          "sha256": "782f6e15cc410e2344ba30dfd3b2fe4d5fa01d3c0e744168bbacb9b00670a03c",
+          "steps": 1
+        },
+        {
+          "name": "s2_seed600001.npy",
+          "schedule": [
+            2560.0,
+            55.97478485107422,
+            0.0
+          ],
+          "seed": 600001,
+          "sha256": "12b92fe618d7821f0729b884c0c4bb2b9711a1645949266a58a90585adee6289",
+          "steps": 2
+        },
+        {
+          "name": "s1_seed600011.npy",
+          "schedule": [
+            2560.0,
+            0.0
+          ],
+          "seed": 600011,
+          "sha256": "385bc9fdf2de3dde407a911f19201a01d8be08b9d0177f7ee49ac2554b18633c",
+          "steps": 1
+        },
+        {
+          "name": "s2_seed600011.npy",
+          "schedule": [
+            2560.0,
+            55.97478485107422,
+            0.0
+          ],
+          "seed": 600011,
+          "sha256": "e32f11f9b271f91e334e3024096308583b288b2c08136acccb76c6720444bdcd",
+          "steps": 2
+        }
+      ],
+      "reload_replay": true,
+      "role": "train",
+      "seconds": 0.6779753044247627
+    },
+    {
+      "counts": {
+        "diffusion": 7,
+        "pairformer": 4
+      },
+      "files": {
+        "conditioning.pt": "8a4478c6e933ffeb05b38056cc2a59af78099185f3115118588979fab3b0fb86",
+        "gt_supervision.pt": "26df810a557a23f92e940d4dc496d8f4594ec74924704be33aee849529a07415",
+        "s1_seed600001.npy": "889a5121836b5febddaf1a003b5a9d44ba4ba38b6acd1a76b80986de4a5ac975",
+        "s1_seed600011.npy": "d43faed261bae08d7b69883dc22c35320bf574367ea884f6e859673bf7f28c6d",
+        "s2_seed600001.npy": "5aaa5c7fe33194ba2b19ba2883c5289b48dabdd36d40283e0404b695eb3456e4",
+        "s2_seed600011.npy": "0b66e33bb99a882cccaffae5a4be78a0965bcdfaa27e99ec8f8e1f46eb70f1e3"
+      },
+      "group_id": "2632f1826d3d92ae6b7bca38213792cc6d6ba98a972c62ddcee3d54b81ed90d4",
+      "length": 94,
+      "outputs": [
+        {
+          "name": "s1_seed600001.npy",
+          "schedule": [
+            2560.0,
+            0.0
+          ],
+          "seed": 600001,
+          "sha256": "889a5121836b5febddaf1a003b5a9d44ba4ba38b6acd1a76b80986de4a5ac975",
+          "steps": 1
+        },
+        {
+          "name": "s2_seed600001.npy",
+          "schedule": [
+            2560.0,
+            55.97478485107422,
+            0.0
+          ],
+          "seed": 600001,
+          "sha256": "5aaa5c7fe33194ba2b19ba2883c5289b48dabdd36d40283e0404b695eb3456e4",
+          "steps": 2
+        },
+        {
+          "name": "s1_seed600011.npy",
+          "schedule": [
+            2560.0,
+            0.0
+          ],
+          "seed": 600011,
+          "sha256": "d43faed261bae08d7b69883dc22c35320bf574367ea884f6e859673bf7f28c6d",
+          "steps": 1
+        },
+        {
+          "name": "s2_seed600011.npy",
+          "schedule": [
+            2560.0,
+            55.97478485107422,
+            0.0
+          ],
+          "seed": 600011,
+          "sha256": "0b66e33bb99a882cccaffae5a4be78a0965bcdfaa27e99ec8f8e1f46eb70f1e3",
+          "steps": 2
+        }
+      ],
+      "reload_replay": true,
+      "role": "train",
+      "seconds": 0.6448766477406025
+    },
+    {
+      "counts": {
+        "diffusion": 7,
+        "pairformer": 4
+      },
+      "files": {
+        "conditioning.pt": "f289d306a2f3d6987beebd8bf55a41603c39321c748873ce7100150920493c21",
+        "gt_supervision.pt": "499aa5c3f847ccd051f4d9ea0f42abe80672baa7edea4d70d37dbcef1739102b",
+        "s1_seed600001.npy": "f51f5e8cbc86d42a0386160c11406c9d69992f3c253876be8d556988c37f366f",
+        "s1_seed600011.npy": "2d9a3d9a7da215f16b7b1dd8f9a8fc9f78a88f4b4d0fd3d47103ccfe2ecd3879",
+        "s2_seed600001.npy": "8f0c2b79fd0199b0f2847701369898cb2b70bb0a2cf95a33ef57c835ad35b4b8",
+        "s2_seed600011.npy": "7f63ffede0859433378e0773b6a294233799b00273a5795a277c5f170a255360"
+      },
+      "group_id": "6cae6b5295772727a1f3edfaab8cd39450e90662ef2ad7b3e39feb5a16faa363",
+      "length": 83,
+      "outputs": [
+        {
+          "name": "s1_seed600001.npy",
+          "schedule": [
+            2560.0,
+            0.0
+          ],
+          "seed": 600001,
+          "sha256": "f51f5e8cbc86d42a0386160c11406c9d69992f3c253876be8d556988c37f366f",
+          "steps": 1
+        },
+        {
+          "name": "s2_seed600001.npy",
+          "schedule": [
+            2560.0,
+            55.97478485107422,
+            0.0
+          ],
+          "seed": 600001,
+          "sha256": "8f0c2b79fd0199b0f2847701369898cb2b70bb0a2cf95a33ef57c835ad35b4b8",
+          "steps": 2
+        },
+        {
+          "name": "s1_seed600011.npy",
+          "schedule": [
+            2560.0,
+            0.0
+          ],
+          "seed": 600011,
+          "sha256": "2d9a3d9a7da215f16b7b1dd8f9a8fc9f78a88f4b4d0fd3d47103ccfe2ecd3879",
+          "steps": 1
+        },
+        {
+          "name": "s2_seed600011.npy",
+          "schedule": [
+            2560.0,
+            55.97478485107422,
+            0.0
+          ],
+          "seed": 600011,
+          "sha256": "7f63ffede0859433378e0773b6a294233799b00273a5795a277c5f170a255360",
+          "steps": 2
+        }
+      ],
+      "reload_replay": true,
+      "role": "train",
+      "seconds": 0.6243656314909458
+    },
+    {
+      "counts": {
+        "diffusion": 7,
+        "pairformer": 4
+      },
+      "files": {
+        "conditioning.pt": "36aeb4395768d4c5f3114da6928260bb9048b6affa014626b19b3a0c9a71a261",
+        "gt_supervision.pt": "1ee4f3ad9c0afdcfb187cd96ed9e85781ebcb59695a25663c27517aea076a8fc",
+        "s1_seed600001.npy": "ac60af86f78bb07777d4c14e8b48d785ac1a9d80a14bf5253156bbcf0d0b413f",
+        "s1_seed600011.npy": "ead5f602261ca9bbd5bdac4c7ed59f10c68062fdfe20b736476f6af3fb8a434c",
+        "s2_seed600001.npy": "45adcda0e0cdadd0042ef92b5caf3e5b28323d214b050887603295848c413812",
+        "s2_seed600011.npy": "ada3e73823327cd07d06b5ca9b95720d1a1988e360dc27aa6a5803fdadabe942"
+      },
+      "group_id": "11081ecb3830b3ad531606b1d2ac97c21f1e2951919e2fe38225457c12c055e3",
+      "length": 80,
+      "outputs": [
+        {
+          "name": "s1_seed600001.npy",
+          "schedule": [
+            2560.0,
+            0.0
+          ],
+          "seed": 600001,
+          "sha256": "ac60af86f78bb07777d4c14e8b48d785ac1a9d80a14bf5253156bbcf0d0b413f",
+          "steps": 1
+        },
+        {
+          "name": "s2_seed600001.npy",
+          "schedule": [
+            2560.0,
+            55.97478485107422,
+            0.0
+          ],
+          "seed": 600001,
+          "sha256": "45adcda0e0cdadd0042ef92b5caf3e5b28323d214b050887603295848c413812",
+          "steps": 2
+        },
+        {
+          "name": "s1_seed600011.npy",
+          "schedule": [
+            2560.0,
+            0.0
+          ],
+          "seed": 600011,
+          "sha256": "ead5f602261ca9bbd5bdac4c7ed59f10c68062fdfe20b736476f6af3fb8a434c",
+          "steps": 1
+        },
+        {
+          "name": "s2_seed600011.npy",
+          "schedule": [
+            2560.0,
+            55.97478485107422,
+            0.0
+          ],
+          "seed": 600011,
+          "sha256": "ada3e73823327cd07d06b5ca9b95720d1a1988e360dc27aa6a5803fdadabe942",
+          "steps": 2
+        }
+      ],
+      "reload_replay": true,
+      "role": "train",
+      "seconds": 0.7794673927128315
+    },
+    {
+      "counts": {
+        "diffusion": 0,
+        "pairformer": 4
+      },
+      "files": {
+        "conditioning.pt": "53c53d5d83d9c7e727bda4839c3a70cf7b97ba4bc1b2a2c46250796b29b6d779"
+      },
+      "group_id": "a1dcb6b8165cc763afb27fd65a7e59d1c1a17a3c7db3f5f2849ec2e93b20874e",
+      "length": 74,
+      "outputs": [],
+      "reload_replay": false,
+      "role": "validation",
+      "seconds": 0.388678215444088
+    },
+    {
+      "counts": {
+        "diffusion": 7,
+        "pairformer": 4
+      },
+      "files": {
+        "conditioning.pt": "5481cda1c705c8b35b6b97c953f2efbf2ae2dc2d12f74b3febc37d94affda3e0",
+        "gt_supervision.pt": "6b9159a816309da1b33f89c341993e4c65b6203c10e6d89d94107bbad229c40b",
+        "s1_seed600001.npy": "85a0dc4cd589d9f92658b26a844d852119e09a4108784f5ab5b94d0f6cd65e50",
+        "s1_seed600011.npy": "4c1d935b0acf7127face637b086a72381ce122bd09b3745f7c338a946eb2985c",
+        "s2_seed600001.npy": "9751113556b58429fa8cc0ac6645fd7e3eb3518e3b0712b1fef122188df0709c",
+        "s2_seed600011.npy": "194207840b299126d011a21bb81a141120717ffb5c9f74e9795326d12546f376"
+      },
+      "group_id": "9cbc415c9209e86f2f0ccd26d94e698e5669c6e2f366387380a01444648f8330",
+      "length": 65,
+      "outputs": [
+        {
+          "name": "s1_seed600001.npy",
+          "schedule": [
+            2560.0,
+            0.0
+          ],
+          "seed": 600001,
+          "sha256": "85a0dc4cd589d9f92658b26a844d852119e09a4108784f5ab5b94d0f6cd65e50",
+          "steps": 1
+        },
+        {
+          "name": "s2_seed600001.npy",
+          "schedule": [
+            2560.0,
+            55.97478485107422,
+            0.0
+          ],
+          "seed": 600001,
+          "sha256": "9751113556b58429fa8cc0ac6645fd7e3eb3518e3b0712b1fef122188df0709c",
+          "steps": 2
+        },
+        {
+          "name": "s1_seed600011.npy",
+          "schedule": [
+            2560.0,
+            0.0
+          ],
+          "seed": 600011,
+          "sha256": "4c1d935b0acf7127face637b086a72381ce122bd09b3745f7c338a946eb2985c",
+          "steps": 1
+        },
+        {
+          "name": "s2_seed600011.npy",
+          "schedule": [
+            2560.0,
+            55.97478485107422,
+            0.0
+          ],
+          "seed": 600011,
+          "sha256": "194207840b299126d011a21bb81a141120717ffb5c9f74e9795326d12546f376",
+          "steps": 2
+        }
+      ],
+      "reload_replay": true,
+      "role": "train",
+      "seconds": 0.6133898571133614
+    },
+    {
+      "counts": {
+        "diffusion": 7,
+        "pairformer": 4
+      },
+      "files": {
+        "conditioning.pt": "edc952fa26c63aad6885e3753f453694a36279e8180e64a3662b9ff153ee1574",
+        "gt_supervision.pt": "db4d22c42a2101a388862842901c9faab1cc57adfa9d68c2b9b8e77120851e19",
+        "s1_seed600001.npy": "febd677614df64d4aa2c0a8e988d28c26a0bccd36da1aeaee887edcc9870070e",
+        "s1_seed600011.npy": "c1cca080b367e9108de66983d6b114e9aff194a2aa9270cfd5e097ea938d6f9a",
+        "s2_seed600001.npy": "e2a62ae5510b94d5abefc8bd7c8728ea9b42763d1f5ccc040c2f5bb1927f493c",
+        "s2_seed600011.npy": "a0466cb765784968962eca445deec1300cf83ecbff72298a8189f1a637f6b325"
+      },
+      "group_id": "462251f02adacfac0591ecdf93417553963587c350a7f9844b5bacda8841d88d",
+      "length": 61,
+      "outputs": [
+        {
+          "name": "s1_seed600001.npy",
+          "schedule": [
+            2560.0,
+            0.0
+          ],
+          "seed": 600001,
+          "sha256": "febd677614df64d4aa2c0a8e988d28c26a0bccd36da1aeaee887edcc9870070e",
+          "steps": 1
+        },
+        {
+          "name": "s2_seed600001.npy",
+          "schedule": [
+            2560.0,
+            55.97478485107422,
+            0.0
+          ],
+          "seed": 600001,
+          "sha256": "e2a62ae5510b94d5abefc8bd7c8728ea9b42763d1f5ccc040c2f5bb1927f493c",
+          "steps": 2
+        },
+        {
+          "name": "s1_seed600011.npy",
+          "schedule": [
+            2560.0,
+            0.0
+          ],
+          "seed": 600011,
+          "sha256": "c1cca080b367e9108de66983d6b114e9aff194a2aa9270cfd5e097ea938d6f9a",
+          "steps": 1
+        },
+        {
+          "name": "s2_seed600011.npy",
+          "schedule": [
+            2560.0,
+            55.97478485107422,
+            0.0
+          ],
+          "seed": 600011,
+          "sha256": "a0466cb765784968962eca445deec1300cf83ecbff72298a8189f1a637f6b325",
+          "steps": 2
+        }
+      ],
+      "reload_replay": true,
+      "role": "train",
+      "seconds": 0.601775798946619
+    },
+    {
+      "counts": {
+        "diffusion": 7,
+        "pairformer": 4
+      },
+      "files": {
+        "conditioning.pt": "6b62e9dab3af98adeeb8cdbc63bdb1dc0ac2d7f6267edad02916f1b2ab4da764",
+        "gt_supervision.pt": "9fdcd4e11ed16f8b5b503fa2f89c3252069e5db329d314b896454aa09551e33f",
+        "s1_seed600001.npy": "fdea5fcb22ab599f27d82771e50c907f2a8b2d362fb335079817ab3aab5b3229",
+        "s1_seed600011.npy": "80f0ade7e8735398f3cde3654067f8311ca963061eae74472d479d6dbf324383",
+        "s2_seed600001.npy": "9b8b88b9f8a3973beade979eda3dfcce1a3dce47d04dbc0834f029cb5b380b92",
+        "s2_seed600011.npy": "f8e58bed1c476566786299c85eab4fe0f39edd3478a717f59bd38d1065750bb1"
+      },
+      "group_id": "9d7e2e2d49e6f2cfe4ec8de6391b37fcc103ef9c53137887ec509146d095ccac",
+      "length": 54,
+      "outputs": [
+        {
+          "name": "s1_seed600001.npy",
+          "schedule": [
+            2560.0,
+            0.0
+          ],
+          "seed": 600001,
+          "sha256": "fdea5fcb22ab599f27d82771e50c907f2a8b2d362fb335079817ab3aab5b3229",
+          "steps": 1
+        },
+        {
+          "name": "s2_seed600001.npy",
+          "schedule": [
+            2560.0,
+            55.97478485107422,
+            0.0
+          ],
+          "seed": 600001,
+          "sha256": "9b8b88b9f8a3973beade979eda3dfcce1a3dce47d04dbc0834f029cb5b380b92",
+          "steps": 2
+        },
+        {
+          "name": "s1_seed600011.npy",
+          "schedule": [
+            2560.0,
+            0.0
+          ],
+          "seed": 600011,
+          "sha256": "80f0ade7e8735398f3cde3654067f8311ca963061eae74472d479d6dbf324383",
+          "steps": 1
+        },
+        {
+          "name": "s2_seed600011.npy",
+          "schedule": [
+            2560.0,
+            55.97478485107422,
+            0.0
+          ],
+          "seed": 600011,
+          "sha256": "f8e58bed1c476566786299c85eab4fe0f39edd3478a717f59bd38d1065750bb1",
+          "steps": 2
+        }
+      ],
+      "reload_replay": true,
+      "role": "train",
+      "seconds": 0.612779987975955
+    },
+    {
+      "counts": {
+        "diffusion": 7,
+        "pairformer": 4
+      },
+      "files": {
+        "conditioning.pt": "e851e92c915205268d45d9c7633d61543ac6f371d2b262481379479f6f1abd81",
+        "gt_supervision.pt": "1f637b0f37033f0fdefecbc873599ab2bb31d7f1845dad0d389ee2b485c84f25",
+        "s1_seed600001.npy": "3ec3a1779c5aa9db4f66c05ee07128c15431590d68555f7e20f4990d1d1c317d",
+        "s1_seed600011.npy": "aab16f79b7659e94672c0bd4dff76f3502f0e9ff8b4964ba39be26fdedbf7b59",
+        "s2_seed600001.npy": "371141c5810875ca13b0cc35e1f508362a7f9ba9c0e746adb30b0eb517b60bb4",
+        "s2_seed600011.npy": "8c321debb640b31a83406d5c74639d498d35f5e7345b3b80d91fc52d78d914c2"
+      },
+      "group_id": "9d6b9dc3674e9ce25ffbf10cd325764814d443c8d9c627b5b4821b0a17fe687f",
+      "length": 53,
+      "outputs": [
+        {
+          "name": "s1_seed600001.npy",
+          "schedule": [
+            2560.0,
+            0.0
+          ],
+          "seed": 600001,
+          "sha256": "3ec3a1779c5aa9db4f66c05ee07128c15431590d68555f7e20f4990d1d1c317d",
+          "steps": 1
+        },
+        {
+          "name": "s2_seed600001.npy",
+          "schedule": [
+            2560.0,
+            55.97478485107422,
+            0.0
+          ],
+          "seed": 600001,
+          "sha256": "371141c5810875ca13b0cc35e1f508362a7f9ba9c0e746adb30b0eb517b60bb4",
+          "steps": 2
+        },
+        {
+          "name": "s1_seed600011.npy",
+          "schedule": [
+            2560.0,
+            0.0
+          ],
+          "seed": 600011,
+          "sha256": "aab16f79b7659e94672c0bd4dff76f3502f0e9ff8b4964ba39be26fdedbf7b59",
+          "steps": 1
+        },
+        {
+          "name": "s2_seed600011.npy",
+          "schedule": [
+            2560.0,
+            55.97478485107422,
+            0.0
+          ],
+          "seed": 600011,
+          "sha256": "8c321debb640b31a83406d5c74639d498d35f5e7345b3b80d91fc52d78d914c2",
+          "steps": 2
+        }
+      ],
+      "reload_replay": true,
+      "role": "train",
+      "seconds": 0.5996883846819401
+    }
+  ],
+  "seconds": 141.51162899658084,
+  "torch_version": "2.7.1+cu128"
+}

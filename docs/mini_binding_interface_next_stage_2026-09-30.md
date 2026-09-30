@@ -1,6 +1,10 @@
 # Next stage: user-specified binding interface
 
-Status: target-dependent protocol pending. On 2026-09-30 the user chose binding
+Status: DEFERRED by subsequent user correction: finish C4/S1 folding first.
+See mini_folding_mainline_resume_v1.md. No target is required for the active stage.
+The text below preserves the earlier interface proposal, not an active request.
+
+Historical status: target-dependent protocol pending. On 2026-09-30 the user chose binding
 interface design and will supply a target or complex. No biological target has
 been selected by the agent. Required input: PDB ID or local structure path, target
 chain(s), design chain if present, and any binding-site or immutable-residue

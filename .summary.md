@@ -1,3 +1,65 @@
+Cache update before backup:662226_0 completed onH10080GB,56conditionings,
+52TRAINreloadreplays,224Pairformercycles/364diffusionNFEs,141.51s,
+peak46,106,396,672B. Sevenremaining662228 shards nowRUNNING,not merely pending.
+Nooptimizerupdates or learnedmodelcheckpointcreated by thisstage.
+
+## 2026-09-30 — User restores folding-first mainline; TRAIN423/newVAL32 frozen
+
+User corrected the premature interface transition: finish C4/S1 folding model
+first, BindCraft later. Do not ask for target/design chains now. No binder setup,
+monomer mutation search, new repair architecture or reopened backward matrix.
+User additionally suggested ESMC; retain a later matched conditioner-interface
+trial, without changing this ESM2 data/optimization control mid-run. ESMC feature
+quality does not imply drop-in compatibility with pretrained ESM2 conditioning.
+
+Retained model: public pretrained Mini-ESM core, frozenESM2/Pairformer, full native
+diffusion fine-tuned TRAIN128/512updates/2048exposures. Existing fresh32 mean
+AA.801482 vsS1.798813/S2.806460, chemistry39/64limitedjoint. No newmodelresultyet.
+
+HPC3 source work completed:96CPU/1GPU request rejected beforejob (max12CPU/GPU).
+Amended to2×12singlethreadCPU workers, GPUhidden/unusedreserved1each.
+662214_0/1 completed35/54s:783candidates,380nativepasses,296isolatednew=424total.
+662216 completed3m07:independent91468HSPs,5230files,1152inheritedfiles,GT/masks,
+64oldvalidationexclusions. Source512objective incomplete by88, preserved.
+Full unchanged256catalogshards verified against pre-fault hashes. SameBLAST2.17.0
+binaryhashes copied read-only fromDiamondHill; nonewcompute there afterhardwareerror.
+662218 completed51s:275remaininggroups outsideold4096pool,66HSPeligible.
+662221 completed2m42:31newisolatednativepasses retained,455source total,short57.
+Original source-complete512flagsremainFALSE; no criteria relaxed or512claim.
+Explicit symlinks in455root point to424root, full selectedmanifest binds targets.
+
+New explicit protocol mini_folding_scaling_cycle_v1: do not stall on nominal512.
+Reserve32previouslynever-predicted new sources,16perlengthbin fixedSHA, beforecache.
+Original128 unchanged. Result TRAIN423 (50–968,117>=256,13monomer) +newVAL32
+(57–763,16>=256,1monomer). Source-only TRAIN labels reassigned in separatemanifest
+before anymodelcall; old64validation excluded. Prioritizes independentconfirmation
+over maximumtrainingcount; not30ktrainingfulfilled. All pairs source-isolated.
+
+Locked twoarms original128/expanded423; samefull512 checkpoint
+7fc01820269b6f376f8313b79c4ab2bf8fcfd2a0b2a017a432033a51b73fd829.
+Each2048NEWupdates/8192exposures,accum4,resetAdamW.9/.999 eps1e-8 decay0 clip1,
+LRwarm64peak1e-5 cosineend1e-6. Sameoldlossweights/smooth.1,GT+explicitnativeS2aux.
+C4/S1/K1 noLoRA/scratch/relaxation. TRAINnoises600001/600011,newVAL810013/810029.
+Fixedterminalonly; no validationcheckpointselection. Hashorders incyclelock.
+Actualcompositionchangesreported, notpurecausalNcontrast.
+
+Roots /data/user/shuang886/Folding/:
+ diffusion_expanded_sources_hpc3_v1_20260930 (424sources)
+ folding_source_extension_v1_20260930 (455sources; parent packet symlinks)
+ folding_scale_cycle_v1_20260930 (newroles/order/protocol locks)
+ folding_scale_cache_v1_20260930 (nativecaches nowbeingcreated).
+Cacheprep662224 completed36s; sourceandpublicweighthashesverified.
+Cachefirstshard662226_0 running,7remaining662228 afterok dependency with
+kill-on-invalid-dep. Uses unchanged run_adapter_cache from frozen privatecode:
+455conditionings,423×4TRAINnativeS1/S2references,validationconditioningONLY.
+No modelparametertrainingstarted. Next:checkcachejobs,independentlyauditcache/
+labels/replay withdynamiccounts;preflightretainedcheckpoint/runtimeonHPC3;
+implement/runlockedtwoarmtraining; thenfixedterminalfoldingquality/chemistry.
+Do not mistake cachejobcompletion fortraining or deployability.
+
+Artifacts reports/mini_folding_resume_2026-09-30; docs/mini_folding_resume_status_2026-09-30.md.
+Original unrelatedworktree preserved; stageonlyownfiles+thisjournalentry.
+
 ## 2026-09-30 — Interface-design priority; monomer reanalysis and HPC3 migration preflight
 
 User selected binding-interface design and will supply target/complex. Asked for
