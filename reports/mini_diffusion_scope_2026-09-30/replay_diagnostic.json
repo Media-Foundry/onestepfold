@@ -1,0 +1,450 @@
+{
+  "cases": {
+    "frozen_grad": {
+      "atom_rms": 0.0,
+      "cache_exact": true,
+      "max_abs": 0.0,
+      "requires_grad": false
+    },
+    "full_grad": {
+      "atom_rms": 1.5076386836094855e-05,
+      "cache_exact": false,
+      "loss": 0.4578833069269935,
+      "max_abs": 4.649162292480469e-05,
+      "missing": [],
+      "nonfinite": [],
+      "parts": {
+        "bond": 0.029524818062782288,
+        "chirality": 0.00027111091185361147,
+        "clash": 35.846073150634766,
+        "coordinate": 8.089989181997959,
+        "smooth_lddt": 0.212286114692688,
+        "teacher": 3.7807548492507803
+      },
+      "requires_grad": true,
+      "zeros": []
+    },
+    "full_grad_repeat": {
+      "atom_rms": 1.5076386836094855e-05,
+      "cache_exact": false,
+      "max_abs": 4.649162292480469e-05,
+      "requires_grad": true
+    },
+    "full_no_grad": {
+      "atom_rms": 1.5076386836094855e-05,
+      "cache_exact": false,
+      "max_abs": 4.649162292480469e-05,
+      "requires_grad": false
+    }
+  },
+  "complete": true,
+  "imported_sources": {
+    "/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/model/modules/diffusion.py": "c92001aeb046ea9a5dbbc8120a5487c76d0497c52ff7fe178143f443dd4cc988",
+    "/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/model/modules/embedders.py": "05e9e8d7bc8e9f917a6cadb3534b4b95764ea9968c19bc38d4743a29daf982f8",
+    "/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/model/modules/primitives.py": "48474abdd5b37a70f5d2579c0c2f1b2d2e6876961db7100f0eb9ebfad0198363",
+    "/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/model/modules/transformer.py": "4d4d56b0fdf0f0fd6eff2cbcafd4a2f35b24f217746e671cac4e1238ae649ed6",
+    "/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/model/triangular/layers.py": "1928d7fcb21750ce613949461ecd8ab5ff2323c19761be5b2d6f24064c3c1bbd",
+    "/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/torch/nn/modules/activation.py": "89c774e9d0d6fc06a3d8cbf06036f32e0fc7fbd18b80436b6d462c398d4d1a8b",
+    "/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/torch/nn/modules/container.py": "0478b94a43b507276cc4dcd85cfbdff7fc83807f30226f575aaac69d416b658a",
+    "/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/torch/nn/modules/linear.py": "1961ad1a1f650e104b3c7f78d19af2d21bf977e7af6c3fdf2420aad563c9e202"
+  },
+  "optimizer_updates": 0,
+  "repeat_exact": true,
+  "seconds": 14.733572167984676,
+  "trace_order": [
+    "diffusion_conditioning.relpe:0:0",
+    "diffusion_conditioning.layernorm_z:0:0",
+    "diffusion_conditioning.linear_no_bias_z:0:0",
+    "diffusion_conditioning.transition_z1:0:0",
+    "diffusion_conditioning.transition_z2:0:0",
+    "diffusion_conditioning.layernorm_s:0:0",
+    "diffusion_conditioning.linear_no_bias_s:0:0",
+    "diffusion_conditioning.fourier_embedding:0:0",
+    "diffusion_conditioning.layernorm_n:0:0",
+    "diffusion_conditioning.linear_no_bias_n:0:0",
+    "diffusion_conditioning.transition_s1:0:0",
+    "diffusion_conditioning.transition_s2:0:0",
+    "diffusion_conditioning:0:0",
+    "diffusion_conditioning:0:1",
+    "atom_attention_encoder:0:0",
+    "atom_attention_encoder:0:1",
+    "atom_attention_encoder:0:2",
+    "atom_attention_encoder:0:3",
+    "layernorm_s:0:0",
+    "linear_no_bias_s:0:0",
+    "normalize:0:0",
+    "diffusion_transformer:0:0",
+    "layernorm_a:0:0",
+    "atom_attention_decoder:0:0"
+  ],
+  "traces": {
+    "frozen_grad": {},
+    "full_grad": {
+      "atom_attention_decoder:0:0": {
+        "exact": false,
+        "max_abs": 2.905726432800293e-06,
+        "relative_l2": 8.573213279502667e-07
+      },
+      "atom_attention_encoder:0:0": {
+        "exact": false,
+        "max_abs": 2.288818359375e-05,
+        "relative_l2": 7.17910224050376e-08
+      },
+      "atom_attention_encoder:0:1": {
+        "exact": false,
+        "max_abs": 3.62396240234375e-05,
+        "relative_l2": 1.261948975197931e-07
+      },
+      "atom_attention_encoder:0:2": {
+        "exact": true,
+        "max_abs": 0.0,
+        "relative_l2": 0.0
+      },
+      "atom_attention_encoder:0:3": {
+        "exact": false,
+        "max_abs": 2.288818359375e-05,
+        "relative_l2": 7.83761736737296e-08
+      },
+      "diffusion_conditioning.fourier_embedding:0:0": {
+        "exact": true,
+        "max_abs": 0.0,
+        "relative_l2": 0.0
+      },
+      "diffusion_conditioning.layernorm_n:0:0": {
+        "exact": true,
+        "max_abs": 0.0,
+        "relative_l2": 0.0
+      },
+      "diffusion_conditioning.layernorm_s:0:0": {
+        "exact": true,
+        "max_abs": 0.0,
+        "relative_l2": 0.0
+      },
+      "diffusion_conditioning.layernorm_z:0:0": {
+        "exact": true,
+        "max_abs": 0.0,
+        "relative_l2": 0.0
+      },
+      "diffusion_conditioning.linear_no_bias_n:0:0": {
+        "exact": true,
+        "max_abs": 0.0,
+        "relative_l2": 0.0
+      },
+      "diffusion_conditioning.linear_no_bias_s:0:0": {
+        "exact": true,
+        "max_abs": 0.0,
+        "relative_l2": 0.0
+      },
+      "diffusion_conditioning.linear_no_bias_z:0:0": {
+        "exact": true,
+        "max_abs": 0.0,
+        "relative_l2": 0.0
+      },
+      "diffusion_conditioning.relpe:0:0": {
+        "exact": true,
+        "max_abs": 0.0,
+        "relative_l2": 0.0
+      },
+      "diffusion_conditioning.transition_s1:0:0": {
+        "exact": true,
+        "max_abs": 0.0,
+        "relative_l2": 0.0
+      },
+      "diffusion_conditioning.transition_s2:0:0": {
+        "exact": true,
+        "max_abs": 0.0,
+        "relative_l2": 0.0
+      },
+      "diffusion_conditioning.transition_z1:0:0": {
+        "exact": true,
+        "max_abs": 0.0,
+        "relative_l2": 0.0
+      },
+      "diffusion_conditioning.transition_z2:0:0": {
+        "exact": true,
+        "max_abs": 0.0,
+        "relative_l2": 0.0
+      },
+      "diffusion_conditioning:0:0": {
+        "exact": true,
+        "max_abs": 0.0,
+        "relative_l2": 0.0
+      },
+      "diffusion_conditioning:0:1": {
+        "exact": true,
+        "max_abs": 0.0,
+        "relative_l2": 0.0
+      },
+      "diffusion_transformer:0:0": {
+        "exact": false,
+        "max_abs": 0.00180816650390625,
+        "relative_l2": 1.2502242527907993e-06
+      },
+      "layernorm_a:0:0": {
+        "exact": false,
+        "max_abs": 2.4400651454925537e-05,
+        "relative_l2": 6.750846073444975e-07
+      },
+      "layernorm_s:0:0": {
+        "exact": true,
+        "max_abs": 0.0,
+        "relative_l2": 0.0
+      },
+      "linear_no_bias_s:0:0": {
+        "exact": true,
+        "max_abs": 0.0,
+        "relative_l2": 0.0
+      },
+      "normalize:0:0": {
+        "exact": true,
+        "max_abs": 0.0,
+        "relative_l2": 0.0
+      }
+    },
+    "full_grad_repeat": {
+      "atom_attention_decoder:0:0": {
+        "exact": false,
+        "max_abs": 2.905726432800293e-06,
+        "relative_l2": 8.573213279502667e-07
+      },
+      "atom_attention_encoder:0:0": {
+        "exact": false,
+        "max_abs": 2.288818359375e-05,
+        "relative_l2": 7.17910224050376e-08
+      },
+      "atom_attention_encoder:0:1": {
+        "exact": false,
+        "max_abs": 3.62396240234375e-05,
+        "relative_l2": 1.261948975197931e-07
+      },
+      "atom_attention_encoder:0:2": {
+        "exact": true,
+        "max_abs": 0.0,
+        "relative_l2": 0.0
+      },
+      "atom_attention_encoder:0:3": {
+        "exact": false,
+        "max_abs": 2.288818359375e-05,
+        "relative_l2": 7.83761736737296e-08
+      },
+      "diffusion_conditioning.fourier_embedding:0:0": {
+        "exact": true,
+        "max_abs": 0.0,
+        "relative_l2": 0.0
+      },
+      "diffusion_conditioning.layernorm_n:0:0": {
+        "exact": true,
+        "max_abs": 0.0,
+        "relative_l2": 0.0
+      },
+      "diffusion_conditioning.layernorm_s:0:0": {
+        "exact": true,
+        "max_abs": 0.0,
+        "relative_l2": 0.0
+      },
+      "diffusion_conditioning.layernorm_z:0:0": {
+        "exact": true,
+        "max_abs": 0.0,
+        "relative_l2": 0.0
+      },
+      "diffusion_conditioning.linear_no_bias_n:0:0": {
+        "exact": true,
+        "max_abs": 0.0,
+        "relative_l2": 0.0
+      },
+      "diffusion_conditioning.linear_no_bias_s:0:0": {
+        "exact": true,
+        "max_abs": 0.0,
+        "relative_l2": 0.0
+      },
+      "diffusion_conditioning.linear_no_bias_z:0:0": {
+        "exact": true,
+        "max_abs": 0.0,
+        "relative_l2": 0.0
+      },
+      "diffusion_conditioning.relpe:0:0": {
+        "exact": true,
+        "max_abs": 0.0,
+        "relative_l2": 0.0
+      },
+      "diffusion_conditioning.transition_s1:0:0": {
+        "exact": true,
+        "max_abs": 0.0,
+        "relative_l2": 0.0
+      },
+      "diffusion_conditioning.transition_s2:0:0": {
+        "exact": true,
+        "max_abs": 0.0,
+        "relative_l2": 0.0
+      },
+      "diffusion_conditioning.transition_z1:0:0": {
+        "exact": true,
+        "max_abs": 0.0,
+        "relative_l2": 0.0
+      },
+      "diffusion_conditioning.transition_z2:0:0": {
+        "exact": true,
+        "max_abs": 0.0,
+        "relative_l2": 0.0
+      },
+      "diffusion_conditioning:0:0": {
+        "exact": true,
+        "max_abs": 0.0,
+        "relative_l2": 0.0
+      },
+      "diffusion_conditioning:0:1": {
+        "exact": true,
+        "max_abs": 0.0,
+        "relative_l2": 0.0
+      },
+      "diffusion_transformer:0:0": {
+        "exact": false,
+        "max_abs": 0.00180816650390625,
+        "relative_l2": 1.2502242527907993e-06
+      },
+      "layernorm_a:0:0": {
+        "exact": false,
+        "max_abs": 2.4400651454925537e-05,
+        "relative_l2": 6.750846073444975e-07
+      },
+      "layernorm_s:0:0": {
+        "exact": true,
+        "max_abs": 0.0,
+        "relative_l2": 0.0
+      },
+      "linear_no_bias_s:0:0": {
+        "exact": true,
+        "max_abs": 0.0,
+        "relative_l2": 0.0
+      },
+      "normalize:0:0": {
+        "exact": true,
+        "max_abs": 0.0,
+        "relative_l2": 0.0
+      }
+    },
+    "full_no_grad": {
+      "atom_attention_decoder:0:0": {
+        "exact": false,
+        "max_abs": 2.905726432800293e-06,
+        "relative_l2": 8.573213279502667e-07
+      },
+      "atom_attention_encoder:0:0": {
+        "exact": false,
+        "max_abs": 2.288818359375e-05,
+        "relative_l2": 7.17910224050376e-08
+      },
+      "atom_attention_encoder:0:1": {
+        "exact": false,
+        "max_abs": 3.62396240234375e-05,
+        "relative_l2": 1.261948975197931e-07
+      },
+      "atom_attention_encoder:0:2": {
+        "exact": true,
+        "max_abs": 0.0,
+        "relative_l2": 0.0
+      },
+      "atom_attention_encoder:0:3": {
+        "exact": false,
+        "max_abs": 2.288818359375e-05,
+        "relative_l2": 7.83761736737296e-08
+      },
+      "diffusion_conditioning.fourier_embedding:0:0": {
+        "exact": true,
+        "max_abs": 0.0,
+        "relative_l2": 0.0
+      },
+      "diffusion_conditioning.layernorm_n:0:0": {
+        "exact": true,
+        "max_abs": 0.0,
+        "relative_l2": 0.0
+      },
+      "diffusion_conditioning.layernorm_s:0:0": {
+        "exact": true,
+        "max_abs": 0.0,
+        "relative_l2": 0.0
+      },
+      "diffusion_conditioning.layernorm_z:0:0": {
+        "exact": true,
+        "max_abs": 0.0,
+        "relative_l2": 0.0
+      },
+      "diffusion_conditioning.linear_no_bias_n:0:0": {
+        "exact": true,
+        "max_abs": 0.0,
+        "relative_l2": 0.0
+      },
+      "diffusion_conditioning.linear_no_bias_s:0:0": {
+        "exact": true,
+        "max_abs": 0.0,
+        "relative_l2": 0.0
+      },
+      "diffusion_conditioning.linear_no_bias_z:0:0": {
+        "exact": true,
+        "max_abs": 0.0,
+        "relative_l2": 0.0
+      },
+      "diffusion_conditioning.relpe:0:0": {
+        "exact": true,
+        "max_abs": 0.0,
+        "relative_l2": 0.0
+      },
+      "diffusion_conditioning.transition_s1:0:0": {
+        "exact": true,
+        "max_abs": 0.0,
+        "relative_l2": 0.0
+      },
+      "diffusion_conditioning.transition_s2:0:0": {
+        "exact": true,
+        "max_abs": 0.0,
+        "relative_l2": 0.0
+      },
+      "diffusion_conditioning.transition_z1:0:0": {
+        "exact": true,
+        "max_abs": 0.0,
+        "relative_l2": 0.0
+      },
+      "diffusion_conditioning.transition_z2:0:0": {
+        "exact": true,
+        "max_abs": 0.0,
+        "relative_l2": 0.0
+      },
+      "diffusion_conditioning:0:0": {
+        "exact": true,
+        "max_abs": 0.0,
+        "relative_l2": 0.0
+      },
+      "diffusion_conditioning:0:1": {
+        "exact": true,
+        "max_abs": 0.0,
+        "relative_l2": 0.0
+      },
+      "diffusion_transformer:0:0": {
+        "exact": false,
+        "max_abs": 0.00180816650390625,
+        "relative_l2": 1.2502242527907993e-06
+      },
+      "layernorm_a:0:0": {
+        "exact": false,
+        "max_abs": 2.4400651454925537e-05,
+        "relative_l2": 6.750846073444975e-07
+      },
+      "layernorm_s:0:0": {
+        "exact": true,
+        "max_abs": 0.0,
+        "relative_l2": 0.0
+      },
+      "linear_no_bias_s:0:0": {
+        "exact": true,
+        "max_abs": 0.0,
+        "relative_l2": 0.0
+      },
+      "normalize:0:0": {
+        "exact": true,
+        "max_abs": 0.0,
+        "relative_l2": 0.0
+      }
+    }
+  },
+  "weights_unchanged": true
+}

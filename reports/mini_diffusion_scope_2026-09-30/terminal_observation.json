@@ -1,0 +1,65 @@
+{
+  "diffusion_scope_preflight_v1_20260930": {
+    "execution": {
+      "controller": 304940,
+      "started": 1790747711.1842217,
+      "workers": [
+        {
+          "scope": "token_dense",
+          "gcd": 0,
+          "pid": 304953,
+          "exit_code": 0
+        },
+        {
+          "scope": "diffusion_dense",
+          "gcd": 1,
+          "pid": 304954,
+          "exit_code": 1
+        }
+      ],
+      "complete": false,
+      "seconds": 37.17759299278259
+    },
+    "observed_processes_absent": [
+      304940,
+      304953,
+      304954
+    ]
+  },
+  "diffusion_scope_replay_v1_20260930": {
+    "execution": {
+      "pid": 305921
+    },
+    "observed_processes_absent": [
+      305921
+    ]
+  },
+  "diffusion_scope_replay_v2_20260930": {
+    "execution": {
+      "pid": 306575
+    },
+    "observed_processes_absent": [
+      306575
+    ]
+  },
+  "diffusion_scope_preflight_v2_20260930": {
+    "execution": {
+      "controller": 307405,
+      "started": 1790748132.3718567,
+      "workers": [
+        {
+          "scope": "diffusion_dense",
+          "gcd": 0,
+          "pid": 307417,
+          "exit_code": 0
+        }
+      ],
+      "complete": true,
+      "seconds": 42.020384550094604
+    },
+    "observed_processes_absent": [
+      307405,
+      307417
+    ]
+  }
+}

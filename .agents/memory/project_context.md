@@ -1,3 +1,66 @@
+## 2026-09-30 — Dense diffusion scope preflight completed; paired native training running
+
+Previous goal turn was NO PROGRESS (restated evaluation v2). This turn executed
+scope preflights, isolated a tiny replay difference, implemented and launched
+matched native dense training. GoalACTIVE/UNFULFILLED. No quality/deployment claim.
+HEAD before work65041e09. Native scope selector preserves intrinsic Fourier w/b
+fixed flags captured BEFORE model-wide freeze. token_dense56weights47,185,920;
+diffusion_dense288native tensors69,777,841. Frozen ESM/PF/confidence. No LoRA.
+Same two TRAIN inputs5xe5 L280 and6nps L968,seed600001 only.
+
+Remote preflightv1 /media/PM982/onestepfold/diffusion_scope_preflight_v1_20260930:
+controller304940,workers304953/304954 allterminal. Token passed2cases/8NFEs,
+all56nonzero finite grads, exact native/restore/reload; maxallocated6069904896B.
+Fullscopefailed initial EXACTcache assertion before anyupdate. Originalfailurekept.
+Replaydiagnosticv1 PID305921 failed instrumentationKeyError on checkpointbackward
+hook recomputation; fixed capture_enabled guard in v2 PID306575,completed.
+Fourforwards frozen-grad/full-no-grad/full-grad/repeat: frozenexactoldcache;
+full3exacteachother, maxdifference4.64916229248e-5A,RMS1.50763868361e-5A.
+Firstcapturedmismatchatomencoderoutputs,conditioningstillbitwise. Full288grads
+presentfiniteNONZERO, weights/RNGunchanged. Notidentifiedbadkernel/backwardbug.
+
+Explicit preflightv2 /media/PM982/onestepfold/diffusion_scope_preflight_v2_20260930,
+controller307405/worker307417 terminal0,42.020s. Fullonly,same2inputs,12NFEs.
+Allfrozennative/restore/checkpointreplaysEXACT. Prospectiveengineeringcross-scope
+bound.001A declared AFTERobservingfirstinput; NOTquality/chemistrygate/notnewheldout.
+Initialmax4.6492e-5/4.0054e-5;postupdate3.7670e-5/4.0054e-5. Every288gradientfinite
+nonzero/parameterchanged. Excludedparametersunchanged. Peakallocated17428026368B
+16.23GiB. No engineeringcheckpoint usedfortraining. Productionwrapperunchanged.
+
+Newdocs mini_diffusion_scope_preflight_v1/v2,mini_diffusion_dense_learning_v1,
+mini_diffusion_scope_findings_2026-09-30. Newselect_diffusion_scope+test,
+preflight_diffusion_scope.py,diagnose_diffusion_scope_replay.py,
+train_dense_diffusion.py,audit_dense_diffusion.py. Local3testsPASS.
+Frozenremotev1source retained inarchive despite localpreflightscriptnowv2.
+
+RUNNING /media/PM982/onestepfold/diffusion_dense_learning_v1_20260930.
+Controller308084;token_dense308093 GCD0;diffusion_dense308094 GCD1.
+Atelapsed~163s BOTHactual/proc live,105/512 and54/512updates,noerrors.
+All1613initialpublicparameterfingerprintsidentical SHA715c72a093b90ee36393a2e14b45718a7f010a33f51e6666a4ab11707e58de5b.
+Traininglocksha ec38b7481dbe2f06bdcbaca5f64727e22524ca0cdc5feeaafa3c6f5dac6f864a.
+SameoldTRAIN128/order2048/accum4/512/seed600001,600011; calibrated_highweights
+.01A+D+1.505408125612628B+C+.0006600251156855778R+.025476389066842815T,
+width.1. BOTHdenseLRpeak1e-5,warm32,costo1e-6,clip1,Adam(.9,.999)eps1e-8decay0.
+Publicnativeinitialization,notcheckpointcontinuation. Nativepartialtraineddict
+checkpoint schema native_dense_diffusion_v1; rollingcheckpoint128/256/384,
+terminal update_0512.pt. No intermediatesselection. NoVALIDATIONreads/predictions.
+Controllerautomatically audit_dense_diffusion.py afterbothfinish. Needverifyexit,
+audit_execution/training_audit beforequalityevaluation. Do NOT restart livePID.
+
+NEXT: implement native-partialcheckpoint evaluation loader (old generic evaluator
+currently assumes LoRA, cannot load thisschema unchanged), fixed fullTRAIN128x2
+terminalcomparison diffusion_dense-token_dense; also nativeS1/S2 &archivedLoRA
+calibrated_high (practicalrefLR1e-4,notpure-rank/equalLRcausalcomparison).
+Retain allquality/chemistrytails, validation32revealedNOTreused. Cachedconditions
+notfullsequencedesigngradients. No more LR/temp/epochgrid oroldFDrerun.
+
+Reports mini_diffusion_scope_2026-09-30: preflightarchive670membersallhashverified,
+localcoordinatecomparisonindependentlyrecomputed,6executedtrainingsourcesmatched.
+935978708B engineeringweights REMOTE ONLY withmanifest,neverlabels/initializers.
+Allpreflight/diagnosticprocessesconfirmedabsent. Trainstillrunningnotterminal.
+Helpers /tmp/launch_scope_preflight.py,/tmp/launch_scope_preflight_v2.py,
+/tmp/launch_dense_training.py,/tmp/collect_scope_artifacts.py.
+
 ## 2026-09-30 — Matched-strength smooth-lDDT width trial closed; no joint benefit
 
 Previous326125f8 was PROGRESS (3trainingarms+fullTRAINcomparison+backup).
