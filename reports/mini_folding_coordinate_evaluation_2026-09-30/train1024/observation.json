@@ -1,0 +1,1602 @@
+{
+  "complete": true,
+  "observed_at": "2026-09-30T11:54:49.213730+00:00",
+  "update": 1024,
+  "scope": "TRAIN32 intermediate only; no terminal selection or held-out conclusion",
+  "inputs": {
+    "/data/user/shuang886/Folding/folding_coordinate_ablation_v1_20260930/expanded/probe_1024/report.json": "c49d4ca1630ed94c28bb0d5faf45e72f1e3eafb25e34d8502c26c912654c356f",
+    "/data/user/shuang886/Folding/folding_scale_training_v1_20260930/expanded/probe_1024/report.json": "8f665a566da5689f424aec098ba88fd1c0369e71df4625850fff34c6ff146359",
+    "/data/user/shuang886/Folding/folding_scale_training_v1_20260930/expanded/probe_0000/report.json": "24e57570a3007bf9436fdbc9fcdb970e299a99b925905138d0297c820f9ff345"
+  },
+  "coordinate_hashes_verified": 192,
+  "summary": {
+    "coordinate_zero1024": {
+      "all_atom_lddt": 0.8070031881788301,
+      "ca_lddt": 0.8884149722304284,
+      "outputs": 64,
+      "proteins": 32,
+      "role": "train_probe_only",
+      "seconds": 28.443439649417996,
+      "severe_pairs": 246,
+      "update": 1024,
+      "zero_and_strict": 45
+    },
+    "expanded_control1024": {
+      "all_atom_lddt": 0.8059087698668171,
+      "ca_lddt": 0.8860873575328109,
+      "outputs": 64,
+      "proteins": 32,
+      "role": "train_probe_only",
+      "seconds": 32.43990078615025,
+      "severe_pairs": 396,
+      "update": 1024,
+      "zero_and_strict": 41
+    },
+    "retained_start": {
+      "all_atom_lddt": 0.8047728912676493,
+      "ca_lddt": 0.8856532535990834,
+      "outputs": 64,
+      "proteins": 32,
+      "role": "train_probe_only",
+      "seconds": 42.58067783713341,
+      "severe_pairs": 394,
+      "update": 0,
+      "zero_and_strict": 41
+    }
+  },
+  "paired": {
+    "matched_control1024": {
+      "mean_delta": {
+        "all_atom_lddt": 0.0010944183120130775,
+        "ca_lddt": 0.002327614697617525,
+        "ca_aligned_rmsd": 0.22365642385017012
+      },
+      "positive_aa": 22,
+      "rows": [
+        {
+          "group_id": "080d2ae5b45caf390ef1d5dec5ca4a9dddf9d8ee15705263873be3702b731f61",
+          "all_atom_lddt": 0.0023614570741362084,
+          "ca_lddt": 0.005107234493223756,
+          "ca_aligned_rmsd": 0.7132296903717865
+        },
+        {
+          "group_id": "162849ed3aff3411d9670efb4df8558e0fe678f8cab72d46bc06769149a63757",
+          "all_atom_lddt": -0.0004574839840709166,
+          "ca_lddt": -5.430238940573595e-05,
+          "ca_aligned_rmsd": 0.004149821982074753
+        },
+        {
+          "group_id": "1c33967c905c32f24961c0698d1d5f3a2aedbed4b00a2b9bcab9e682a7bede5c",
+          "all_atom_lddt": 0.0003117192783057554,
+          "ca_lddt": 0.0021606985432455206,
+          "ca_aligned_rmsd": -0.029670115678101183
+        },
+        {
+          "group_id": "1d5b774c4752d42bf98b61cdc3c083a7c95b6de45c6db732598274f3785c919e",
+          "all_atom_lddt": 7.75360532720426e-05,
+          "ca_lddt": -0.00017033882722450322,
+          "ca_aligned_rmsd": -0.013499556780271371
+        },
+        {
+          "group_id": "216ccdb0edff45ebdf045962f35396f85d040e390f0ebd87b59750e79af7c3ba",
+          "all_atom_lddt": -0.0003403580783205573,
+          "ca_lddt": -0.000765726453301363,
+          "ca_aligned_rmsd": 0.003080994839071871
+        },
+        {
+          "group_id": "246654afaa6ad91106a86ede46fc185657226e88a7f83d34a92a999f2e274407",
+          "all_atom_lddt": 0.00645821068914626,
+          "ca_lddt": 0.013646289324603045,
+          "ca_aligned_rmsd": 2.594337344874793
+        },
+        {
+          "group_id": "2939ec7cb19df0f621215dbc39968a241056e44c950918e37830286c0d3718fc",
+          "all_atom_lddt": 0.00045178790497452104,
+          "ca_lddt": 0.0022853572174405534,
+          "ca_aligned_rmsd": 0.07526739368877078
+        },
+        {
+          "group_id": "2a9dc9d359b223c23bce11939b03b010026157015b16adc19767cd83408be451",
+          "all_atom_lddt": -2.291992221931105e-05,
+          "ca_lddt": 0.00033138044515224063,
+          "ca_aligned_rmsd": 0.013028874154157433
+        },
+        {
+          "group_id": "2f702dcb8c10feb28f9bb3a949d1142ba1099bec8130e0b6c8cd04b13aeabdd8",
+          "all_atom_lddt": 0.0012264462998276549,
+          "ca_lddt": 0.0007212476268222412,
+          "ca_aligned_rmsd": 0.07427173148487776
+        },
+        {
+          "group_id": "3bcc0f8608e401c8a6d8236fb8da27512e3cf3ffd41866c76882d918b70bf46d",
+          "all_atom_lddt": -0.00017128240907066106,
+          "ca_lddt": 0.0003093413401954459,
+          "ca_aligned_rmsd": 0.006059580487907945
+        },
+        {
+          "group_id": "3fee8c07616cbd0056d1196ee9e92f11b2166f19cb837a4e70d64d21ea4be6a3",
+          "all_atom_lddt": -0.0004384264830223361,
+          "ca_lddt": 0.0015252325737596384,
+          "ca_aligned_rmsd": 0.08809382816757216
+        },
+        {
+          "group_id": "449497bdd616e4dfa12b2cc08b6f8c2e3acf06c3ca09cffa1888d8456dc652a6",
+          "all_atom_lddt": 0.00894368686884578,
+          "ca_lddt": 0.011379977380856943,
+          "ca_aligned_rmsd": 0.6776256255194766
+        },
+        {
+          "group_id": "569bdb8e20d6bc3dac0518323e9a83916ae9ed872d93f364340a396bdb936cfc",
+          "all_atom_lddt": 0.0008144989631499455,
+          "ca_lddt": 0.002658780492397983,
+          "ca_aligned_rmsd": -0.019501712264538673
+        },
+        {
+          "group_id": "60fd41b7901a80db6da9fc44473ed34656d4871aec48219500df5dbe28d8aeed",
+          "all_atom_lddt": -0.0005019237134402665,
+          "ca_lddt": -0.0006630184049223886,
+          "ca_aligned_rmsd": 0.009904338184123507
+        },
+        {
+          "group_id": "736de7cbb5b402907e5d9e3459e67431b58b897639c3fe02ab33121e73be5977",
+          "all_atom_lddt": 0.00047434969502258006,
+          "ca_lddt": 0.0017336032807695467,
+          "ca_aligned_rmsd": 0.005753711814834972
+        },
+        {
+          "group_id": "765fb764abd5e316cab153072b5cd0b29af6ad9c2e601e9d188d40fd2c205cff",
+          "all_atom_lddt": 7.316370173665598e-05,
+          "ca_lddt": 0.0007946256687236808,
+          "ca_aligned_rmsd": 0.023413723935661546
+        },
+        {
+          "group_id": "88e19a3f6811d9b1da11d59c43230eae29f2f17544613b02195b70f83023263c",
+          "all_atom_lddt": 0.0010665423196545287,
+          "ca_lddt": 0.00106888552573553,
+          "ca_aligned_rmsd": -0.04460390246999568
+        },
+        {
+          "group_id": "8abc803a1c0879359fbd2fa6e5e0dd879764b6227500b5b5c1304e9d18200ba4",
+          "all_atom_lddt": 0.002676946529379276,
+          "ca_lddt": 0.0066625241861260065,
+          "ca_aligned_rmsd": -0.03825018976595573
+        },
+        {
+          "group_id": "8e5953df380af5aa868762e64c8687638c9ce82da2a640ee6b1c8eb5f345326f",
+          "all_atom_lddt": 0.002342254207550021,
+          "ca_lddt": 0.00338372885145799,
+          "ca_aligned_rmsd": 1.0300450260551486
+        },
+        {
+          "group_id": "a246103220340964cc60e07837c7c56eb4f7b8fb16100ed4e8c608bb70091562",
+          "all_atom_lddt": 0.001524856669233965,
+          "ca_lddt": 0.003052806887684223,
+          "ca_aligned_rmsd": 0.11835078577322644
+        },
+        {
+          "group_id": "ac4b0d6e10b5fe5b7e79f7e6e692fff3ae7843963ad19f2f14c95a5f69a9f3cf",
+          "all_atom_lddt": 0.004255044781377393,
+          "ca_lddt": 0.00518334156969108,
+          "ca_aligned_rmsd": 0.27511549434748517
+        },
+        {
+          "group_id": "ac4e6d1fb0a98dbad72a9663287334f0b2b7b05400f6c09b4e4f1ba3e29b782f",
+          "all_atom_lddt": -0.004343239956486472,
+          "ca_lddt": 0.002337526211572627,
+          "ca_aligned_rmsd": 0.7269349680153767
+        },
+        {
+          "group_id": "b23e9c9baa2d9d57d1848c5cef99dc48668af28bd00b3ceab109addf03683328",
+          "all_atom_lddt": 0.0031549715729575767,
+          "ca_lddt": 0.003933715023457074,
+          "ca_aligned_rmsd": 0.41844463313868974
+        },
+        {
+          "group_id": "b3720c71607d41f1d13c0eaf1014fcb3aa8dcb16459f1b97fe9347c3cdc35223",
+          "all_atom_lddt": -8.931711446813484e-05,
+          "ca_lddt": 0.00017690575001128028,
+          "ca_aligned_rmsd": 0.09046552822801024
+        },
+        {
+          "group_id": "b39dc28758a783962593c6afc6fbc268be4a05b05f3bbbea4cceb5b6440f940d",
+          "all_atom_lddt": -0.0005140194677851206,
+          "ca_lddt": -0.0016958406672233362,
+          "ca_aligned_rmsd": 0.3292338510688224
+        },
+        {
+          "group_id": "bbf5fd23b56264807aeb67ce638aa8b21726fbad2f1f57adfc6f5a9797d45f39",
+          "all_atom_lddt": 0.0010220301174853619,
+          "ca_lddt": 0.0005863228808029031,
+          "ca_aligned_rmsd": 0.0025987524881216917
+        },
+        {
+          "group_id": "c3fd561aae9106f4c44c9e81112ef4376f26c3084c51f1745d68c57291af2278",
+          "all_atom_lddt": 0.0005281515462003394,
+          "ca_lddt": 0.0012512325263396296,
+          "ca_aligned_rmsd": 0.0112136254085341
+        },
+        {
+          "group_id": "d2597b559b17d37477b3e04d627e378589c0578087a8757a7b598154800a1b9a",
+          "all_atom_lddt": 0.0010340113678903862,
+          "ca_lddt": 0.0007233570037185055,
+          "ca_aligned_rmsd": 0.012753029898778578
+        },
+        {
+          "group_id": "e2e1feb9566c1d6e41881ac7ee2dd1a92c274905a9c583c064afd25694cf5e1c",
+          "all_atom_lddt": -0.0009264643077364076,
+          "ca_lddt": 0.0006542119902009369,
+          "ca_aligned_rmsd": 0.044081337550536226
+        },
+        {
+          "group_id": "f2f998f23ec55e9ea710bf585807aefa1a21cfd2abf4072aea36f50422a93845",
+          "all_atom_lddt": 0.0018896687217028751,
+          "ca_lddt": 0.0017300382708552164,
+          "ca_aligned_rmsd": -0.0250471935244046
+        },
+        {
+          "group_id": "fad4577bf4818f602706bf882e26a57cd1d26e8812e617826b6a4d47f109b150",
+          "all_atom_lddt": 0.001603620254712168,
+          "ca_lddt": 0.0030617500342807746,
+          "ca_aligned_rmsd": -0.019665684058341237
+        },
+        {
+          "group_id": "fc7f09f37843169ec7f55d8e0dbcd046067071e3017c953a18d9bd617b6e17c1",
+          "all_atom_lddt": 0.0005358668044773696,
+          "ca_lddt": 0.0013727819667137542,
+          "ca_aligned_rmsd": -0.00020977373078601147
+        }
+      ]
+    },
+    "retained_start": {
+      "mean_delta": {
+        "all_atom_lddt": 0.0022302969111808865,
+        "ca_lddt": 0.0027617186313450472,
+        "ca_aligned_rmsd": 0.1467227576994257
+      },
+      "positive_aa": 28,
+      "rows": [
+        {
+          "group_id": "080d2ae5b45caf390ef1d5dec5ca4a9dddf9d8ee15705263873be3702b731f61",
+          "all_atom_lddt": 0.0024320543151103435,
+          "ca_lddt": 0.004038349775331462,
+          "ca_aligned_rmsd": 0.8205118210331186
+        },
+        {
+          "group_id": "162849ed3aff3411d9670efb4df8558e0fe678f8cab72d46bc06769149a63757",
+          "all_atom_lddt": 0.0001340040607420434,
+          "ca_lddt": 7.357834693400012e-05,
+          "ca_aligned_rmsd": 0.0005620076897699389
+        },
+        {
+          "group_id": "1c33967c905c32f24961c0698d1d5f3a2aedbed4b00a2b9bcab9e682a7bede5c",
+          "all_atom_lddt": 0.0010590079713709288,
+          "ca_lddt": 0.0019782255184673248,
+          "ca_aligned_rmsd": -0.061550917296269714
+        },
+        {
+          "group_id": "1d5b774c4752d42bf98b61cdc3c083a7c95b6de45c6db732598274f3785c919e",
+          "all_atom_lddt": 0.001292330572659206,
+          "ca_lddt": 0.0003659819136886955,
+          "ca_aligned_rmsd": -0.009768066050414359
+        },
+        {
+          "group_id": "216ccdb0edff45ebdf045962f35396f85d040e390f0ebd87b59750e79af7c3ba",
+          "all_atom_lddt": 0.002171632207327634,
+          "ca_lddt": 0.002206687695317122,
+          "ca_aligned_rmsd": -0.01165496943149813
+        },
+        {
+          "group_id": "246654afaa6ad91106a86ede46fc185657226e88a7f83d34a92a999f2e274407",
+          "all_atom_lddt": 0.0033090360654659534,
+          "ca_lddt": 0.006609158729619369,
+          "ca_aligned_rmsd": 2.6188871237269726
+        },
+        {
+          "group_id": "2939ec7cb19df0f621215dbc39968a241056e44c950918e37830286c0d3718fc",
+          "all_atom_lddt": 0.0010774417052896168,
+          "ca_lddt": 0.001812267566738801,
+          "ca_aligned_rmsd": 0.05897072796782998
+        },
+        {
+          "group_id": "2a9dc9d359b223c23bce11939b03b010026157015b16adc19767cd83408be451",
+          "all_atom_lddt": 0.002079545627694468,
+          "ca_lddt": 0.0030814580104215894,
+          "ca_aligned_rmsd": -0.054242055187268046
+        },
+        {
+          "group_id": "2f702dcb8c10feb28f9bb3a949d1142ba1099bec8130e0b6c8cd04b13aeabdd8",
+          "all_atom_lddt": 0.0018233666445715557,
+          "ca_lddt": 0.0002461133228529033,
+          "ca_aligned_rmsd": 0.05434479348062515
+        },
+        {
+          "group_id": "3bcc0f8608e401c8a6d8236fb8da27512e3cf3ffd41866c76882d918b70bf46d",
+          "all_atom_lddt": -0.0003406040246472508,
+          "ca_lddt": -0.00017785549048565663,
+          "ca_aligned_rmsd": -0.014142505742535949
+        },
+        {
+          "group_id": "3fee8c07616cbd0056d1196ee9e92f11b2166f19cb837a4e70d64d21ea4be6a3",
+          "all_atom_lddt": 0.00423006357929967,
+          "ca_lddt": 0.005454392680706077,
+          "ca_aligned_rmsd": -0.007208913038834419
+        },
+        {
+          "group_id": "449497bdd616e4dfa12b2cc08b6f8c2e3acf06c3ca09cffa1888d8456dc652a6",
+          "all_atom_lddt": 0.011093896003918635,
+          "ca_lddt": 0.012814068449575833,
+          "ca_aligned_rmsd": 0.45546333212485957
+        },
+        {
+          "group_id": "569bdb8e20d6bc3dac0518323e9a83916ae9ed872d93f364340a396bdb936cfc",
+          "all_atom_lddt": 0.0010045547754073958,
+          "ca_lddt": 0.003235699095566369,
+          "ca_aligned_rmsd": -0.01324014167911347
+        },
+        {
+          "group_id": "60fd41b7901a80db6da9fc44473ed34656d4871aec48219500df5dbe28d8aeed",
+          "all_atom_lddt": 0.00041153567444407457,
+          "ca_lddt": -0.00016688469958653362,
+          "ca_aligned_rmsd": -0.006573455048750398
+        },
+        {
+          "group_id": "736de7cbb5b402907e5d9e3459e67431b58b897639c3fe02ab33121e73be5977",
+          "all_atom_lddt": 0.005328436214623533,
+          "ca_lddt": 0.005436274973412203,
+          "ca_aligned_rmsd": -0.22710303741051352
+        },
+        {
+          "group_id": "765fb764abd5e316cab153072b5cd0b29af6ad9c2e601e9d188d40fd2c205cff",
+          "all_atom_lddt": -0.0005910676510495483,
+          "ca_lddt": 7.724886142945753e-05,
+          "ca_aligned_rmsd": 0.02930658685540921
+        },
+        {
+          "group_id": "88e19a3f6811d9b1da11d59c43230eae29f2f17544613b02195b70f83023263c",
+          "all_atom_lddt": 0.004794895160950774,
+          "ca_lddt": 0.004049317864906143,
+          "ca_aligned_rmsd": -0.11782762770743938
+        },
+        {
+          "group_id": "8abc803a1c0879359fbd2fa6e5e0dd879764b6227500b5b5c1304e9d18200ba4",
+          "all_atom_lddt": 0.010553695504317062,
+          "ca_lddt": 0.01241047662080541,
+          "ca_aligned_rmsd": -0.3674186583662873
+        },
+        {
+          "group_id": "8e5953df380af5aa868762e64c8687638c9ce82da2a640ee6b1c8eb5f345326f",
+          "all_atom_lddt": 0.0017688247897662546,
+          "ca_lddt": 0.0039646553271382445,
+          "ca_aligned_rmsd": 0.44058387729364057
+        },
+        {
+          "group_id": "a246103220340964cc60e07837c7c56eb4f7b8fb16100ed4e8c608bb70091562",
+          "all_atom_lddt": 0.002389537231856864,
+          "ca_lddt": 0.0025666711986013224,
+          "ca_aligned_rmsd": 0.029754720351185426
+        },
+        {
+          "group_id": "ac4b0d6e10b5fe5b7e79f7e6e692fff3ae7843963ad19f2f14c95a5f69a9f3cf",
+          "all_atom_lddt": -0.0007567255435742548,
+          "ca_lddt": -0.0010774786496721145,
+          "ca_aligned_rmsd": 0.28730317757681867
+        },
+        {
+          "group_id": "ac4e6d1fb0a98dbad72a9663287334f0b2b7b05400f6c09b4e4f1ba3e29b782f",
+          "all_atom_lddt": -0.0021887706420074815,
+          "ca_lddt": 0.0057704515835034775,
+          "ca_aligned_rmsd": 0.2773202493138318
+        },
+        {
+          "group_id": "b23e9c9baa2d9d57d1848c5cef99dc48668af28bd00b3ceab109addf03683328",
+          "all_atom_lddt": 0.004193844880108821,
+          "ca_lddt": 0.004288734063002231,
+          "ca_aligned_rmsd": 0.34073944552845714
+        },
+        {
+          "group_id": "b3720c71607d41f1d13c0eaf1014fcb3aa8dcb16459f1b97fe9347c3cdc35223",
+          "all_atom_lddt": 0.0002726439808685144,
+          "ca_lddt": 0.00016132725561823769,
+          "ca_aligned_rmsd": 0.08952721019745047
+        },
+        {
+          "group_id": "b39dc28758a783962593c6afc6fbc268be4a05b05f3bbbea4cceb5b6440f940d",
+          "all_atom_lddt": 0.0024877290083765713,
+          "ca_lddt": -0.00038269177717770164,
+          "ca_aligned_rmsd": 0.1224826889026982
+        },
+        {
+          "group_id": "bbf5fd23b56264807aeb67ce638aa8b21726fbad2f1f57adfc6f5a9797d45f39",
+          "all_atom_lddt": 0.002806922471946416,
+          "ca_lddt": 0.0014162499359294256,
+          "ca_aligned_rmsd": -0.006911640131278096
+        },
+        {
+          "group_id": "c3fd561aae9106f4c44c9e81112ef4376f26c3084c51f1745d68c57291af2278",
+          "all_atom_lddt": 0.0009034242182109908,
+          "ca_lddt": 0.0004964090850921865,
+          "ca_aligned_rmsd": -0.05892631235715329
+        },
+        {
+          "group_id": "d2597b559b17d37477b3e04d627e378589c0578087a8757a7b598154800a1b9a",
+          "all_atom_lddt": 0.0016022221875713338,
+          "ca_lddt": 0.0005936952920431726,
+          "ca_aligned_rmsd": -0.029607758781888815
+        },
+        {
+          "group_id": "e2e1feb9566c1d6e41881ac7ee2dd1a92c274905a9c583c064afd25694cf5e1c",
+          "all_atom_lddt": 0.0012829191649825211,
+          "ca_lddt": 0.0028435310675001824,
+          "ca_aligned_rmsd": 0.061387652705507945
+        },
+        {
+          "group_id": "f2f998f23ec55e9ea710bf585807aefa1a21cfd2abf4072aea36f50422a93845",
+          "all_atom_lddt": 0.0014834262716732494,
+          "ca_lddt": 0.0005110109239264693,
+          "ca_aligned_rmsd": -0.010952419326602625
+        },
+        {
+          "group_id": "fad4577bf4818f602706bf882e26a57cd1d26e8812e617826b6a4d47f109b150",
+          "all_atom_lddt": 0.001761696385848499,
+          "ca_lddt": 0.0018359382227403631,
+          "ca_aligned_rmsd": 0.028807893292089215
+        },
+        {
+          "group_id": "fc7f09f37843169ec7f55d8e0dbcd046067071e3017c953a18d9bd617b6e17c1",
+          "all_atom_lddt": 0.0014979823446639728,
+          "ca_lddt": 0.0018419334390954445,
+          "ca_aligned_rmsd": -0.023696584102795182
+        }
+      ]
+    }
+  },
+  "global_structure": {
+    "complete": true,
+    "summary": {
+      "train32": {
+        "proteins": 32,
+        "models": {
+          "coordinate_zero1024": {
+            "mean": 4.243026579859675,
+            "median": 1.754125269195183,
+            "p95": 16.352576924679358,
+            "p99": 21.80665540652319,
+            "worst5_mean": 20.563901998587987
+          },
+          "expanded_control1024": {
+            "mean": 4.019370156009506,
+            "median": 1.698371493143566,
+            "p95": 15.043510143912272,
+            "p99": 21.049799473046527,
+            "worst5_mean": 19.51178579596763
+          },
+          "retained_start": {
+            "mean": 4.09630382216025,
+            "median": 1.7430764322868955,
+            "p95": 15.06987599498349,
+            "p99": 21.068854751899117,
+            "worst5_mean": 19.54998998706398
+          }
+        },
+        "contrasts": [
+          {
+            "candidate": "coordinate_zero1024",
+            "reference": "expanded_control1024",
+            "mean": 0.22365642385017012,
+            "ci95": [
+              0.07783642142242662,
+              0.42700045899055744
+            ],
+            "p95": 0.8633344941332741,
+            "p99": 2.1094067260407052,
+            "worst5_mean": 1.8121911854649708,
+            "increased_proteins": 24
+          },
+          {
+            "candidate": "coordinate_zero1024",
+            "reference": "retained_start",
+            "mean": 0.14672275769942575,
+            "ci95": [
+              0.01325084158971789,
+              0.3480882495945502
+            ],
+            "p95": 0.6197351521335761,
+            "p99": 2.0613907798918802,
+            "worst5_mean": 1.7196994723800456,
+            "increased_proteins": 16
+          }
+        ]
+      }
+    },
+    "paired": [
+      {
+        "cohort": "train32",
+        "group_id": "080d2ae5b45caf390ef1d5dec5ca4a9dddf9d8ee15705263873be3702b731f61",
+        "candidate": "coordinate_zero1024",
+        "reference": "expanded_control1024",
+        "delta_rmsd": 0.7132296903717865,
+        "per_noise": [
+          {
+            "seed": 600001,
+            "delta_rmsd": 1.0855248234018822
+          },
+          {
+            "seed": 600011,
+            "delta_rmsd": 0.34093455734169087
+          }
+        ]
+      },
+      {
+        "cohort": "train32",
+        "group_id": "162849ed3aff3411d9670efb4df8558e0fe678f8cab72d46bc06769149a63757",
+        "candidate": "coordinate_zero1024",
+        "reference": "expanded_control1024",
+        "delta_rmsd": 0.004149821982074808,
+        "per_noise": [
+          {
+            "seed": 600001,
+            "delta_rmsd": 0.01095121240362007
+          },
+          {
+            "seed": 600011,
+            "delta_rmsd": -0.002651568439470564
+          }
+        ]
+      },
+      {
+        "cohort": "train32",
+        "group_id": "1c33967c905c32f24961c0698d1d5f3a2aedbed4b00a2b9bcab9e682a7bede5c",
+        "candidate": "coordinate_zero1024",
+        "reference": "expanded_control1024",
+        "delta_rmsd": -0.029670115678101183,
+        "per_noise": [
+          {
+            "seed": 600001,
+            "delta_rmsd": -0.026190915040050555
+          },
+          {
+            "seed": 600011,
+            "delta_rmsd": -0.03314931631615181
+          }
+        ]
+      },
+      {
+        "cohort": "train32",
+        "group_id": "1d5b774c4752d42bf98b61cdc3c083a7c95b6de45c6db732598274f3785c919e",
+        "candidate": "coordinate_zero1024",
+        "reference": "expanded_control1024",
+        "delta_rmsd": -0.013499556780271371,
+        "per_noise": [
+          {
+            "seed": 600001,
+            "delta_rmsd": -0.015864368008390306
+          },
+          {
+            "seed": 600011,
+            "delta_rmsd": -0.011134745552152436
+          }
+        ]
+      },
+      {
+        "cohort": "train32",
+        "group_id": "216ccdb0edff45ebdf045962f35396f85d040e390f0ebd87b59750e79af7c3ba",
+        "candidate": "coordinate_zero1024",
+        "reference": "expanded_control1024",
+        "delta_rmsd": 0.003080994839071982,
+        "per_noise": [
+          {
+            "seed": 600001,
+            "delta_rmsd": 0.003158743326872049
+          },
+          {
+            "seed": 600011,
+            "delta_rmsd": 0.0030032463512716934
+          }
+        ]
+      },
+      {
+        "cohort": "train32",
+        "group_id": "246654afaa6ad91106a86ede46fc185657226e88a7f83d34a92a999f2e274407",
+        "candidate": "coordinate_zero1024",
+        "reference": "expanded_control1024",
+        "delta_rmsd": 2.594337344874793,
+        "per_noise": [
+          {
+            "seed": 600001,
+            "delta_rmsd": 3.03578221472471
+          },
+          {
+            "seed": 600011,
+            "delta_rmsd": 2.152892475024876
+          }
+        ]
+      },
+      {
+        "cohort": "train32",
+        "group_id": "2939ec7cb19df0f621215dbc39968a241056e44c950918e37830286c0d3718fc",
+        "candidate": "coordinate_zero1024",
+        "reference": "expanded_control1024",
+        "delta_rmsd": 0.07526739368877089,
+        "per_noise": [
+          {
+            "seed": 600001,
+            "delta_rmsd": 0.07856411570525612
+          },
+          {
+            "seed": 600011,
+            "delta_rmsd": 0.07197067167228544
+          }
+        ]
+      },
+      {
+        "cohort": "train32",
+        "group_id": "2a9dc9d359b223c23bce11939b03b010026157015b16adc19767cd83408be451",
+        "candidate": "coordinate_zero1024",
+        "reference": "expanded_control1024",
+        "delta_rmsd": 0.013028874154157433,
+        "per_noise": [
+          {
+            "seed": 600001,
+            "delta_rmsd": 0.006887989036243214
+          },
+          {
+            "seed": 600011,
+            "delta_rmsd": 0.01916975927207165
+          }
+        ]
+      },
+      {
+        "cohort": "train32",
+        "group_id": "2f702dcb8c10feb28f9bb3a949d1142ba1099bec8130e0b6c8cd04b13aeabdd8",
+        "candidate": "coordinate_zero1024",
+        "reference": "expanded_control1024",
+        "delta_rmsd": 0.07427173148487753,
+        "per_noise": [
+          {
+            "seed": 600001,
+            "delta_rmsd": 0.07345100016610573
+          },
+          {
+            "seed": 600011,
+            "delta_rmsd": 0.07509246280364978
+          }
+        ]
+      },
+      {
+        "cohort": "train32",
+        "group_id": "3bcc0f8608e401c8a6d8236fb8da27512e3cf3ffd41866c76882d918b70bf46d",
+        "candidate": "coordinate_zero1024",
+        "reference": "expanded_control1024",
+        "delta_rmsd": 0.006059580487908001,
+        "per_noise": [
+          {
+            "seed": 600001,
+            "delta_rmsd": 0.017814691867083843
+          },
+          {
+            "seed": 600011,
+            "delta_rmsd": -0.0056955308912679525
+          }
+        ]
+      },
+      {
+        "cohort": "train32",
+        "group_id": "3fee8c07616cbd0056d1196ee9e92f11b2166f19cb837a4e70d64d21ea4be6a3",
+        "candidate": "coordinate_zero1024",
+        "reference": "expanded_control1024",
+        "delta_rmsd": 0.08809382816757227,
+        "per_noise": [
+          {
+            "seed": 600001,
+            "delta_rmsd": 0.11789740734440435
+          },
+          {
+            "seed": 600011,
+            "delta_rmsd": 0.05829024899073998
+          }
+        ]
+      },
+      {
+        "cohort": "train32",
+        "group_id": "449497bdd616e4dfa12b2cc08b6f8c2e3acf06c3ca09cffa1888d8456dc652a6",
+        "candidate": "coordinate_zero1024",
+        "reference": "expanded_control1024",
+        "delta_rmsd": 0.6776256255194761,
+        "per_noise": [
+          {
+            "seed": 600001,
+            "delta_rmsd": 0.5283620055597344
+          },
+          {
+            "seed": 600011,
+            "delta_rmsd": 0.8268892454792187
+          }
+        ]
+      },
+      {
+        "cohort": "train32",
+        "group_id": "569bdb8e20d6bc3dac0518323e9a83916ae9ed872d93f364340a396bdb936cfc",
+        "candidate": "coordinate_zero1024",
+        "reference": "expanded_control1024",
+        "delta_rmsd": -0.019501712264538673,
+        "per_noise": [
+          {
+            "seed": 600001,
+            "delta_rmsd": -0.017552047731862253
+          },
+          {
+            "seed": 600011,
+            "delta_rmsd": -0.021451376797215094
+          }
+        ]
+      },
+      {
+        "cohort": "train32",
+        "group_id": "60fd41b7901a80db6da9fc44473ed34656d4871aec48219500df5dbe28d8aeed",
+        "candidate": "coordinate_zero1024",
+        "reference": "expanded_control1024",
+        "delta_rmsd": 0.009904338184123507,
+        "per_noise": [
+          {
+            "seed": 600001,
+            "delta_rmsd": 0.0034647671612615394
+          },
+          {
+            "seed": 600011,
+            "delta_rmsd": 0.016343909206985474
+          }
+        ]
+      },
+      {
+        "cohort": "train32",
+        "group_id": "736de7cbb5b402907e5d9e3459e67431b58b897639c3fe02ab33121e73be5977",
+        "candidate": "coordinate_zero1024",
+        "reference": "expanded_control1024",
+        "delta_rmsd": 0.005753711814834972,
+        "per_noise": [
+          {
+            "seed": 600001,
+            "delta_rmsd": 0.06331227426059827
+          },
+          {
+            "seed": 600011,
+            "delta_rmsd": -0.05180485063092832
+          }
+        ]
+      },
+      {
+        "cohort": "train32",
+        "group_id": "765fb764abd5e316cab153072b5cd0b29af6ad9c2e601e9d188d40fd2c205cff",
+        "candidate": "coordinate_zero1024",
+        "reference": "expanded_control1024",
+        "delta_rmsd": 0.023413723935661546,
+        "per_noise": [
+          {
+            "seed": 600001,
+            "delta_rmsd": 0.025504381580416347
+          },
+          {
+            "seed": 600011,
+            "delta_rmsd": 0.021323066290906745
+          }
+        ]
+      },
+      {
+        "cohort": "train32",
+        "group_id": "88e19a3f6811d9b1da11d59c43230eae29f2f17544613b02195b70f83023263c",
+        "candidate": "coordinate_zero1024",
+        "reference": "expanded_control1024",
+        "delta_rmsd": -0.04460390246999557,
+        "per_noise": [
+          {
+            "seed": 600001,
+            "delta_rmsd": -0.034133569084563886
+          },
+          {
+            "seed": 600011,
+            "delta_rmsd": -0.05507423585542748
+          }
+        ]
+      },
+      {
+        "cohort": "train32",
+        "group_id": "8abc803a1c0879359fbd2fa6e5e0dd879764b6227500b5b5c1304e9d18200ba4",
+        "candidate": "coordinate_zero1024",
+        "reference": "expanded_control1024",
+        "delta_rmsd": -0.03825018976595551,
+        "per_noise": [
+          {
+            "seed": 600001,
+            "delta_rmsd": 0.03771274987321771
+          },
+          {
+            "seed": 600011,
+            "delta_rmsd": -0.11421312940512918
+          }
+        ]
+      },
+      {
+        "cohort": "train32",
+        "group_id": "8e5953df380af5aa868762e64c8687638c9ce82da2a640ee6b1c8eb5f345326f",
+        "candidate": "coordinate_zero1024",
+        "reference": "expanded_control1024",
+        "delta_rmsd": 1.0300450260551486,
+        "per_noise": [
+          {
+            "seed": 600001,
+            "delta_rmsd": 0.44273416474014127
+          },
+          {
+            "seed": 600011,
+            "delta_rmsd": 1.617355887370156
+          }
+        ]
+      },
+      {
+        "cohort": "train32",
+        "group_id": "a246103220340964cc60e07837c7c56eb4f7b8fb16100ed4e8c608bb70091562",
+        "candidate": "coordinate_zero1024",
+        "reference": "expanded_control1024",
+        "delta_rmsd": 0.11835078577322555,
+        "per_noise": [
+          {
+            "seed": 600001,
+            "delta_rmsd": 0.14732856961161822
+          },
+          {
+            "seed": 600011,
+            "delta_rmsd": 0.08937300193483466
+          }
+        ]
+      },
+      {
+        "cohort": "train32",
+        "group_id": "ac4b0d6e10b5fe5b7e79f7e6e692fff3ae7843963ad19f2f14c95a5f69a9f3cf",
+        "candidate": "coordinate_zero1024",
+        "reference": "expanded_control1024",
+        "delta_rmsd": 0.27511549434748517,
+        "per_noise": [
+          {
+            "seed": 600001,
+            "delta_rmsd": 0.10760417584157977
+          },
+          {
+            "seed": 600011,
+            "delta_rmsd": 0.44262681285339056
+          }
+        ]
+      },
+      {
+        "cohort": "train32",
+        "group_id": "ac4e6d1fb0a98dbad72a9663287334f0b2b7b05400f6c09b4e4f1ba3e29b782f",
+        "candidate": "coordinate_zero1024",
+        "reference": "expanded_control1024",
+        "delta_rmsd": 0.7269349680153772,
+        "per_noise": [
+          {
+            "seed": 600001,
+            "delta_rmsd": 0.556046591668589
+          },
+          {
+            "seed": 600011,
+            "delta_rmsd": 0.8978233443621644
+          }
+        ]
+      },
+      {
+        "cohort": "train32",
+        "group_id": "b23e9c9baa2d9d57d1848c5cef99dc48668af28bd00b3ceab109addf03683328",
+        "candidate": "coordinate_zero1024",
+        "reference": "expanded_control1024",
+        "delta_rmsd": 0.41844463313868996,
+        "per_noise": [
+          {
+            "seed": 600001,
+            "delta_rmsd": 0.48545755347466946
+          },
+          {
+            "seed": 600011,
+            "delta_rmsd": 0.35143171280271
+          }
+        ]
+      },
+      {
+        "cohort": "train32",
+        "group_id": "b3720c71607d41f1d13c0eaf1014fcb3aa8dcb16459f1b97fe9347c3cdc35223",
+        "candidate": "coordinate_zero1024",
+        "reference": "expanded_control1024",
+        "delta_rmsd": 0.0904655282280098,
+        "per_noise": [
+          {
+            "seed": 600001,
+            "delta_rmsd": 0.09886019367648125
+          },
+          {
+            "seed": 600011,
+            "delta_rmsd": 0.08207086277953923
+          }
+        ]
+      },
+      {
+        "cohort": "train32",
+        "group_id": "b39dc28758a783962593c6afc6fbc268be4a05b05f3bbbea4cceb5b6440f940d",
+        "candidate": "coordinate_zero1024",
+        "reference": "expanded_control1024",
+        "delta_rmsd": 0.32923385106882286,
+        "per_noise": [
+          {
+            "seed": 600001,
+            "delta_rmsd": 0.4434829293824025
+          },
+          {
+            "seed": 600011,
+            "delta_rmsd": 0.2149847727552423
+          }
+        ]
+      },
+      {
+        "cohort": "train32",
+        "group_id": "bbf5fd23b56264807aeb67ce638aa8b21726fbad2f1f57adfc6f5a9797d45f39",
+        "candidate": "coordinate_zero1024",
+        "reference": "expanded_control1024",
+        "delta_rmsd": 0.0025987524881216917,
+        "per_noise": [
+          {
+            "seed": 600001,
+            "delta_rmsd": -0.0040658253206951045
+          },
+          {
+            "seed": 600011,
+            "delta_rmsd": 0.009263330296938488
+          }
+        ]
+      },
+      {
+        "cohort": "train32",
+        "group_id": "c3fd561aae9106f4c44c9e81112ef4376f26c3084c51f1745d68c57291af2278",
+        "candidate": "coordinate_zero1024",
+        "reference": "expanded_control1024",
+        "delta_rmsd": 0.01121362540853399,
+        "per_noise": [
+          {
+            "seed": 600001,
+            "delta_rmsd": 0.014860280227238398
+          },
+          {
+            "seed": 600011,
+            "delta_rmsd": 0.007566970589829802
+          }
+        ]
+      },
+      {
+        "cohort": "train32",
+        "group_id": "d2597b559b17d37477b3e04d627e378589c0578087a8757a7b598154800a1b9a",
+        "candidate": "coordinate_zero1024",
+        "reference": "expanded_control1024",
+        "delta_rmsd": 0.012753029898778578,
+        "per_noise": [
+          {
+            "seed": 600001,
+            "delta_rmsd": 0.05225245100090081
+          },
+          {
+            "seed": 600011,
+            "delta_rmsd": -0.026746391203343656
+          }
+        ]
+      },
+      {
+        "cohort": "train32",
+        "group_id": "e2e1feb9566c1d6e41881ac7ee2dd1a92c274905a9c583c064afd25694cf5e1c",
+        "candidate": "coordinate_zero1024",
+        "reference": "expanded_control1024",
+        "delta_rmsd": 0.044081337550536226,
+        "per_noise": [
+          {
+            "seed": 600001,
+            "delta_rmsd": 0.04236251619914255
+          },
+          {
+            "seed": 600011,
+            "delta_rmsd": 0.0458001589019299
+          }
+        ]
+      },
+      {
+        "cohort": "train32",
+        "group_id": "f2f998f23ec55e9ea710bf585807aefa1a21cfd2abf4072aea36f50422a93845",
+        "candidate": "coordinate_zero1024",
+        "reference": "expanded_control1024",
+        "delta_rmsd": -0.0250471935244046,
+        "per_noise": [
+          {
+            "seed": 600001,
+            "delta_rmsd": -0.022444776745653816
+          },
+          {
+            "seed": 600011,
+            "delta_rmsd": -0.02764961030315538
+          }
+        ]
+      },
+      {
+        "cohort": "train32",
+        "group_id": "fad4577bf4818f602706bf882e26a57cd1d26e8812e617826b6a4d47f109b150",
+        "candidate": "coordinate_zero1024",
+        "reference": "expanded_control1024",
+        "delta_rmsd": -0.019665684058341126,
+        "per_noise": [
+          {
+            "seed": 600001,
+            "delta_rmsd": -0.01821392156809787
+          },
+          {
+            "seed": 600011,
+            "delta_rmsd": -0.021117446548584606
+          }
+        ]
+      },
+      {
+        "cohort": "train32",
+        "group_id": "fc7f09f37843169ec7f55d8e0dbcd046067071e3017c953a18d9bd617b6e17c1",
+        "candidate": "coordinate_zero1024",
+        "reference": "expanded_control1024",
+        "delta_rmsd": -0.00020977373078601147,
+        "per_noise": [
+          {
+            "seed": 600001,
+            "delta_rmsd": -0.010295708794415326
+          },
+          {
+            "seed": 600011,
+            "delta_rmsd": 0.009876161332843303
+          }
+        ]
+      },
+      {
+        "cohort": "train32",
+        "group_id": "080d2ae5b45caf390ef1d5dec5ca4a9dddf9d8ee15705263873be3702b731f61",
+        "candidate": "coordinate_zero1024",
+        "reference": "retained_start",
+        "delta_rmsd": 0.8205118210331186,
+        "per_noise": [
+          {
+            "seed": 600001,
+            "delta_rmsd": 1.100106981027487
+          },
+          {
+            "seed": 600011,
+            "delta_rmsd": 0.5409166610387501
+          }
+        ]
+      },
+      {
+        "cohort": "train32",
+        "group_id": "162849ed3aff3411d9670efb4df8558e0fe678f8cab72d46bc06769149a63757",
+        "candidate": "coordinate_zero1024",
+        "reference": "retained_start",
+        "delta_rmsd": 0.0005620076897698834,
+        "per_noise": [
+          {
+            "seed": 600001,
+            "delta_rmsd": 0.008734434808379765
+          },
+          {
+            "seed": 600011,
+            "delta_rmsd": -0.007610419428839887
+          }
+        ]
+      },
+      {
+        "cohort": "train32",
+        "group_id": "1c33967c905c32f24961c0698d1d5f3a2aedbed4b00a2b9bcab9e682a7bede5c",
+        "candidate": "coordinate_zero1024",
+        "reference": "retained_start",
+        "delta_rmsd": -0.0615509172962696,
+        "per_noise": [
+          {
+            "seed": 600001,
+            "delta_rmsd": -0.020298884008604468
+          },
+          {
+            "seed": 600011,
+            "delta_rmsd": -0.10280295058393496
+          }
+        ]
+      },
+      {
+        "cohort": "train32",
+        "group_id": "1d5b774c4752d42bf98b61cdc3c083a7c95b6de45c6db732598274f3785c919e",
+        "candidate": "coordinate_zero1024",
+        "reference": "retained_start",
+        "delta_rmsd": -0.009768066050414248,
+        "per_noise": [
+          {
+            "seed": 600001,
+            "delta_rmsd": -0.01284556611629828
+          },
+          {
+            "seed": 600011,
+            "delta_rmsd": -0.006690565984530439
+          }
+        ]
+      },
+      {
+        "cohort": "train32",
+        "group_id": "216ccdb0edff45ebdf045962f35396f85d040e390f0ebd87b59750e79af7c3ba",
+        "candidate": "coordinate_zero1024",
+        "reference": "retained_start",
+        "delta_rmsd": -0.011654969431498019,
+        "per_noise": [
+          {
+            "seed": 600001,
+            "delta_rmsd": -0.013739287116593335
+          },
+          {
+            "seed": 600011,
+            "delta_rmsd": -0.009570651746402925
+          }
+        ]
+      },
+      {
+        "cohort": "train32",
+        "group_id": "246654afaa6ad91106a86ede46fc185657226e88a7f83d34a92a999f2e274407",
+        "candidate": "coordinate_zero1024",
+        "reference": "retained_start",
+        "delta_rmsd": 2.6188871237269726,
+        "per_noise": [
+          {
+            "seed": 600001,
+            "delta_rmsd": 2.638156959699071
+          },
+          {
+            "seed": 600011,
+            "delta_rmsd": 2.5996172877548744
+          }
+        ]
+      },
+      {
+        "cohort": "train32",
+        "group_id": "2939ec7cb19df0f621215dbc39968a241056e44c950918e37830286c0d3718fc",
+        "candidate": "coordinate_zero1024",
+        "reference": "retained_start",
+        "delta_rmsd": 0.05897072796782998,
+        "per_noise": [
+          {
+            "seed": 600001,
+            "delta_rmsd": 0.13734110304960567
+          },
+          {
+            "seed": 600011,
+            "delta_rmsd": -0.019399647113945706
+          }
+        ]
+      },
+      {
+        "cohort": "train32",
+        "group_id": "2a9dc9d359b223c23bce11939b03b010026157015b16adc19767cd83408be451",
+        "candidate": "coordinate_zero1024",
+        "reference": "retained_start",
+        "delta_rmsd": -0.0542420551872681,
+        "per_noise": [
+          {
+            "seed": 600001,
+            "delta_rmsd": -0.08030268406553431
+          },
+          {
+            "seed": 600011,
+            "delta_rmsd": -0.028181426309001778
+          }
+        ]
+      },
+      {
+        "cohort": "train32",
+        "group_id": "2f702dcb8c10feb28f9bb3a949d1142ba1099bec8130e0b6c8cd04b13aeabdd8",
+        "candidate": "coordinate_zero1024",
+        "reference": "retained_start",
+        "delta_rmsd": 0.05434479348062515,
+        "per_noise": [
+          {
+            "seed": 600001,
+            "delta_rmsd": 0.021485290322942774
+          },
+          {
+            "seed": 600011,
+            "delta_rmsd": 0.08720429663830753
+          }
+        ]
+      },
+      {
+        "cohort": "train32",
+        "group_id": "3bcc0f8608e401c8a6d8236fb8da27512e3cf3ffd41866c76882d918b70bf46d",
+        "candidate": "coordinate_zero1024",
+        "reference": "retained_start",
+        "delta_rmsd": -0.014142505742535949,
+        "per_noise": [
+          {
+            "seed": 600001,
+            "delta_rmsd": -0.03395511613396207
+          },
+          {
+            "seed": 600011,
+            "delta_rmsd": 0.005670104648890173
+          }
+        ]
+      },
+      {
+        "cohort": "train32",
+        "group_id": "3fee8c07616cbd0056d1196ee9e92f11b2166f19cb837a4e70d64d21ea4be6a3",
+        "candidate": "coordinate_zero1024",
+        "reference": "retained_start",
+        "delta_rmsd": -0.007208913038834419,
+        "per_noise": [
+          {
+            "seed": 600001,
+            "delta_rmsd": -0.02626401672262313
+          },
+          {
+            "seed": 600011,
+            "delta_rmsd": 0.01184619064495429
+          }
+        ]
+      },
+      {
+        "cohort": "train32",
+        "group_id": "449497bdd616e4dfa12b2cc08b6f8c2e3acf06c3ca09cffa1888d8456dc652a6",
+        "candidate": "coordinate_zero1024",
+        "reference": "retained_start",
+        "delta_rmsd": 0.45546333212486,
+        "per_noise": [
+          {
+            "seed": 600001,
+            "delta_rmsd": 0.23122992872412773
+          },
+          {
+            "seed": 600011,
+            "delta_rmsd": 0.6796967355255914
+          }
+        ]
+      },
+      {
+        "cohort": "train32",
+        "group_id": "569bdb8e20d6bc3dac0518323e9a83916ae9ed872d93f364340a396bdb936cfc",
+        "candidate": "coordinate_zero1024",
+        "reference": "retained_start",
+        "delta_rmsd": -0.01324014167911347,
+        "per_noise": [
+          {
+            "seed": 600001,
+            "delta_rmsd": -0.01578423418962238
+          },
+          {
+            "seed": 600011,
+            "delta_rmsd": -0.01069604916860456
+          }
+        ]
+      },
+      {
+        "cohort": "train32",
+        "group_id": "60fd41b7901a80db6da9fc44473ed34656d4871aec48219500df5dbe28d8aeed",
+        "candidate": "coordinate_zero1024",
+        "reference": "retained_start",
+        "delta_rmsd": -0.006573455048750398,
+        "per_noise": [
+          {
+            "seed": 600001,
+            "delta_rmsd": -0.02506741199028739
+          },
+          {
+            "seed": 600011,
+            "delta_rmsd": 0.011920501892786595
+          }
+        ]
+      },
+      {
+        "cohort": "train32",
+        "group_id": "736de7cbb5b402907e5d9e3459e67431b58b897639c3fe02ab33121e73be5977",
+        "candidate": "coordinate_zero1024",
+        "reference": "retained_start",
+        "delta_rmsd": -0.22710303741051363,
+        "per_noise": [
+          {
+            "seed": 600001,
+            "delta_rmsd": -0.07634984023974667
+          },
+          {
+            "seed": 600011,
+            "delta_rmsd": -0.37785623458128037
+          }
+        ]
+      },
+      {
+        "cohort": "train32",
+        "group_id": "765fb764abd5e316cab153072b5cd0b29af6ad9c2e601e9d188d40fd2c205cff",
+        "candidate": "coordinate_zero1024",
+        "reference": "retained_start",
+        "delta_rmsd": 0.02930658685540921,
+        "per_noise": [
+          {
+            "seed": 600001,
+            "delta_rmsd": 0.011801409610910252
+          },
+          {
+            "seed": 600011,
+            "delta_rmsd": 0.04681176409990817
+          }
+        ]
+      },
+      {
+        "cohort": "train32",
+        "group_id": "88e19a3f6811d9b1da11d59c43230eae29f2f17544613b02195b70f83023263c",
+        "candidate": "coordinate_zero1024",
+        "reference": "retained_start",
+        "delta_rmsd": -0.11782762770743949,
+        "per_noise": [
+          {
+            "seed": 600001,
+            "delta_rmsd": -0.1990266476803031
+          },
+          {
+            "seed": 600011,
+            "delta_rmsd": -0.03662860773457566
+          }
+        ]
+      },
+      {
+        "cohort": "train32",
+        "group_id": "8abc803a1c0879359fbd2fa6e5e0dd879764b6227500b5b5c1304e9d18200ba4",
+        "candidate": "coordinate_zero1024",
+        "reference": "retained_start",
+        "delta_rmsd": -0.36741865836628707,
+        "per_noise": [
+          {
+            "seed": 600001,
+            "delta_rmsd": -0.39567698261810547
+          },
+          {
+            "seed": 600011,
+            "delta_rmsd": -0.3391603341144691
+          }
+        ]
+      },
+      {
+        "cohort": "train32",
+        "group_id": "8e5953df380af5aa868762e64c8687638c9ce82da2a640ee6b1c8eb5f345326f",
+        "candidate": "coordinate_zero1024",
+        "reference": "retained_start",
+        "delta_rmsd": 0.44058387729364057,
+        "per_noise": [
+          {
+            "seed": 600001,
+            "delta_rmsd": 0.08542319097815287
+          },
+          {
+            "seed": 600011,
+            "delta_rmsd": 0.7957445636091283
+          }
+        ]
+      },
+      {
+        "cohort": "train32",
+        "group_id": "a246103220340964cc60e07837c7c56eb4f7b8fb16100ed4e8c608bb70091562",
+        "candidate": "coordinate_zero1024",
+        "reference": "retained_start",
+        "delta_rmsd": 0.029754720351185426,
+        "per_noise": [
+          {
+            "seed": 600001,
+            "delta_rmsd": 0.06631159019219979
+          },
+          {
+            "seed": 600011,
+            "delta_rmsd": -0.006802149489828935
+          }
+        ]
+      },
+      {
+        "cohort": "train32",
+        "group_id": "ac4b0d6e10b5fe5b7e79f7e6e692fff3ae7843963ad19f2f14c95a5f69a9f3cf",
+        "candidate": "coordinate_zero1024",
+        "reference": "retained_start",
+        "delta_rmsd": 0.28730317757682045,
+        "per_noise": [
+          {
+            "seed": 600001,
+            "delta_rmsd": 0.06492264639377154
+          },
+          {
+            "seed": 600011,
+            "delta_rmsd": 0.5096837087598658
+          }
+        ]
+      },
+      {
+        "cohort": "train32",
+        "group_id": "ac4e6d1fb0a98dbad72a9663287334f0b2b7b05400f6c09b4e4f1ba3e29b782f",
+        "candidate": "coordinate_zero1024",
+        "reference": "retained_start",
+        "delta_rmsd": 0.27732024931383226,
+        "per_noise": [
+          {
+            "seed": 600001,
+            "delta_rmsd": 0.013660589183028371
+          },
+          {
+            "seed": 600011,
+            "delta_rmsd": 0.5409799094446353
+          }
+        ]
+      },
+      {
+        "cohort": "train32",
+        "group_id": "b23e9c9baa2d9d57d1848c5cef99dc48668af28bd00b3ceab109addf03683328",
+        "candidate": "coordinate_zero1024",
+        "reference": "retained_start",
+        "delta_rmsd": 0.34073944552845736,
+        "per_noise": [
+          {
+            "seed": 600001,
+            "delta_rmsd": 0.44752961841407846
+          },
+          {
+            "seed": 600011,
+            "delta_rmsd": 0.23394927264283583
+          }
+        ]
+      },
+      {
+        "cohort": "train32",
+        "group_id": "b3720c71607d41f1d13c0eaf1014fcb3aa8dcb16459f1b97fe9347c3cdc35223",
+        "candidate": "coordinate_zero1024",
+        "reference": "retained_start",
+        "delta_rmsd": 0.08952721019745002,
+        "per_noise": [
+          {
+            "seed": 600001,
+            "delta_rmsd": 0.13304904049706412
+          },
+          {
+            "seed": 600011,
+            "delta_rmsd": 0.04600537989783682
+          }
+        ]
+      },
+      {
+        "cohort": "train32",
+        "group_id": "b39dc28758a783962593c6afc6fbc268be4a05b05f3bbbea4cceb5b6440f940d",
+        "candidate": "coordinate_zero1024",
+        "reference": "retained_start",
+        "delta_rmsd": 0.1224826889026982,
+        "per_noise": [
+          {
+            "seed": 600001,
+            "delta_rmsd": 0.32529416791691723
+          },
+          {
+            "seed": 600011,
+            "delta_rmsd": -0.08032879011152083
+          }
+        ]
+      },
+      {
+        "cohort": "train32",
+        "group_id": "bbf5fd23b56264807aeb67ce638aa8b21726fbad2f1f57adfc6f5a9797d45f39",
+        "candidate": "coordinate_zero1024",
+        "reference": "retained_start",
+        "delta_rmsd": -0.006911640131278096,
+        "per_noise": [
+          {
+            "seed": 600001,
+            "delta_rmsd": -0.015535657546882464
+          },
+          {
+            "seed": 600011,
+            "delta_rmsd": 0.001712377284326272
+          }
+        ]
+      },
+      {
+        "cohort": "train32",
+        "group_id": "c3fd561aae9106f4c44c9e81112ef4376f26c3084c51f1745d68c57291af2278",
+        "candidate": "coordinate_zero1024",
+        "reference": "retained_start",
+        "delta_rmsd": -0.05892631235715329,
+        "per_noise": [
+          {
+            "seed": 600001,
+            "delta_rmsd": -0.0328364590012582
+          },
+          {
+            "seed": 600011,
+            "delta_rmsd": -0.08501616571304837
+          }
+        ]
+      },
+      {
+        "cohort": "train32",
+        "group_id": "d2597b559b17d37477b3e04d627e378589c0578087a8757a7b598154800a1b9a",
+        "candidate": "coordinate_zero1024",
+        "reference": "retained_start",
+        "delta_rmsd": -0.02960775878188926,
+        "per_noise": [
+          {
+            "seed": 600001,
+            "delta_rmsd": -0.08403386287621428
+          },
+          {
+            "seed": 600011,
+            "delta_rmsd": 0.02481834531243665
+          }
+        ]
+      },
+      {
+        "cohort": "train32",
+        "group_id": "e2e1feb9566c1d6e41881ac7ee2dd1a92c274905a9c583c064afd25694cf5e1c",
+        "candidate": "coordinate_zero1024",
+        "reference": "retained_start",
+        "delta_rmsd": 0.061387652705507945,
+        "per_noise": [
+          {
+            "seed": 600001,
+            "delta_rmsd": 0.11999342104379274
+          },
+          {
+            "seed": 600011,
+            "delta_rmsd": 0.002781884367223153
+          }
+        ]
+      },
+      {
+        "cohort": "train32",
+        "group_id": "f2f998f23ec55e9ea710bf585807aefa1a21cfd2abf4072aea36f50422a93845",
+        "candidate": "coordinate_zero1024",
+        "reference": "retained_start",
+        "delta_rmsd": -0.010952419326602625,
+        "per_noise": [
+          {
+            "seed": 600001,
+            "delta_rmsd": -0.019299655669454407
+          },
+          {
+            "seed": 600011,
+            "delta_rmsd": -0.0026051829837508422
+          }
+        ]
+      },
+      {
+        "cohort": "train32",
+        "group_id": "fad4577bf4818f602706bf882e26a57cd1d26e8812e617826b6a4d47f109b150",
+        "candidate": "coordinate_zero1024",
+        "reference": "retained_start",
+        "delta_rmsd": 0.028807893292089215,
+        "per_noise": [
+          {
+            "seed": 600001,
+            "delta_rmsd": -0.013641669039331283
+          },
+          {
+            "seed": 600011,
+            "delta_rmsd": 0.07125745562350971
+          }
+        ]
+      },
+      {
+        "cohort": "train32",
+        "group_id": "fc7f09f37843169ec7f55d8e0dbcd046067071e3017c953a18d9bd617b6e17c1",
+        "candidate": "coordinate_zero1024",
+        "reference": "retained_start",
+        "delta_rmsd": -0.023696584102795626,
+        "per_noise": [
+          {
+            "seed": 600001,
+            "delta_rmsd": -0.027739522336506894
+          },
+          {
+            "seed": 600011,
+            "delta_rmsd": -0.01965364586908347
+          }
+        ]
+      }
+    ]
+  }
+}

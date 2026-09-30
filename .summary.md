@@ -1,3 +1,25 @@
+## 2026-09-30 — Matched1024 TRAIN32 retains local/global tradeoff
+
+Currentturn PROGRESS: fixed1024probe completed, verified192coordinatehashes and
+finiteoutputs; archivednew/control1024losslessreports, reusedalreadyarchivedstart.
+Local3reportSHA,64pairs/32proteindenominators,means,severesums andzero+strictcounts
+recomputed. Training662470continues unchanged, evaluationstillpendingafteraudit.
+
+Candidate1024AA .8070031882,CA .8884149722,zero+strict45/64,severe246.
+Matchedexpandedcontrol1024AA .8059087699,CA .8860873575,41/64,severe396.
+DeltaAA+.0010944183,CA+.0023276147,alignedCA_RMSD+.2236564239A(worse).
+22/32AAimproved,24/32RMSDincreased;RMSDpairedworst5mean+1.8121911855A.
+ConditionalTRAINproteinbootstrapRMSDdeltaCI[+.07783642,+.42700046],fixed2noises,
+NOTindependentheldoutconfirmation. Relative retainedstartAA+.0022302969,
+CA+.0027617186,RMSD+.1467227577A. Localquality/chemistryimprovebutglobalerrorcost
+persists. No conclusion of universal improvement, no intermediate promotion.
+
+Archive reports/mini_folding_coordinate_evaluation_2026-09-30/train1024 andupdated
+statusdoc. ReportRMSDsupplement5c4ebb4f alreadycommitted/pushed/deployedbeforeeval
+prepare(noeval lockyet);active traininguntouched. Source changes4focusedtests pass.
+Next fixed2048terminal+audited455comparison; goalactive/unfulfilled. No extraGPU
+inference, trainingbranch, coefficient sweep, ESMCfit ordesign work added.
+
 ## 2026-09-30 — Make prespecified global RMSD visible in terminal report
 
 Previous goal turn VERIFIED WAIT(specific live662470). Current turn revalidated
