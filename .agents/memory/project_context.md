@@ -1,3 +1,46 @@
+## 2026-10-01 — Other directions investigated; fresh-noise matched training pipeline running
+
+User explicitly asks other improvement directions; C4/S1 hard folding first,DiamondHill.
+Two bounded TRAIN-only diagnostics COMPLETE, noDEV/newweightgrid/design.
+1) noise_transfer_v1_20261001: TRAIN32,retained512 vsweak2048,seen600001/600011 and
+new920003/920009/920021/920033,384predictions+56engineering,all8workers0,weakold64exact.
+AAgainseen+.002790775,new+.001356208;interaction-.001434567 CI[-.002802028,-.000220910].
+CAgainseen+.003396003,new+.001709628;interaction-.001686376 CI[-.003640976,-.000155607].
+NewAA gainCIcross0,but28/32positive. Geomzero+strictseen41→48/64,new77→75/128;
+severetotalnew1038→692. Sameproteins,sixnoisesnotindependentproteins/no sequencegeneralization.
+2) ambiguous_labels_v1_20261001: offline128coords,onlyD/E/F/Ycoupled naming,partial
+observedorbitsunchanged;stableobservednonambiguousdistanceMAEselect,notmaxlDDT.
+RetainedAA .804774→.816804,weak .807565→.819398;bothgain~.012,NO predictionchanges.
+Weak1366/3184residue-noiseinstances swapped;smooth.200452→.189014;coordinategradcos
+.9441,relativegradientchange.3326. Not33%wronggradient/notbackbonefix/nothistoricalrelabel.
+OfficialProtenixpermutationandAF2four-residueambiguitysourcescitedinnewdocs.
+
+DECISION:first noise diversity training only;symmetrytraining retainedforlater,notmixed.
+Newprotocol docs/mini_noise_diversity_v1.md;fixed2seeds vsdiverse1800000+i perexposure.
+Same423TRAIN/order/retained512/weakweights/8192exposures2048updates. Oldtraining_seeds
+field retainedONLYforfixedprobes;actualnoises inorders. Newdiagnosticseedsnevertrained.
+BOTHarms regeneratepublicS2teacheronROCm:846old+8192fresh=9038teachers/18076NFE.
+RequiresnewfixedcontroltoavoidCUDAteacher-vsROCmteacherconfound. NotexperimentalGT.
+Originaltrainer/globalhooks unchanged;newcache,contracts/drivers.6focusedtestsPASS.
+
+First preparationrootnoise_diversity_training_v1_20261001 failedKeyErrorweights_sha256
+BEFORE teacherpredictions/updates. PublicweightSHA belongs toevaluationlock,nottraininglock.
+Fixedisolatedretryroot;failedcode/preparation_failure.jsonpreserved. Retrypreparationpassed.
+LIVE DiamondHillphysicalroot/media/IntelSSD/onestepfold/hpc3_mirror_20261001/Folding/
+noise_diversity_training_v1_20261001_retry1;virtual/data/user/shuang886/Folding/... .
+Controller388425,8GCDteacherworkers;~5915/9038teachersafter116s. handles.jsoncontainsPIDs.
+Automaticboundedsequence:teacherworkers->hash/finitecollect->preparefixed/diverse->both
+preflight->sameinitialfingerprint/loss/gradnormpairrelease->trainfixedGCD0/diverseGCD2.
+Eachtrain2048updates,4hlimit,noautoretry/extension. Trainingnotyetstartedatthissnapshot.
+Nextcheckcontroller_execution/handles/cache/audit/pair_release andarmreports;no terminal
+quality claim. Terminalauditor/eval adaptationstillneeded aftertraining. No othermethodarms.
+
+Docs mini_next_directions_2026-10-01.md,mini_noise_transfer_v1.md,mini_ambiguous_label_audit_v1.md,
+mini_noise_diversity_v1.md. Reports mini_noise_transfer_2026-10-01,mini_ambiguous_labels_2026-10-01,
+mini_noise_diversity_2026-10-01. Alltwo diagnosticarchivebindingsverified. Source/noise
+contracthelpers tested,originalinference/scorerunchanged. FullGitNexuscheckbeforecommit;
+preserveunrelatedworktreeedits andolderunstagedjournalchunks.
+
 ## 2026-10-01 — Paired folding batch closed: global improvement/local loss; matched-flag replay explained
 
 Bothtrainingcomplete/audited. 8GCD1820inference allworkers0 in67.84s. Originalcollector
