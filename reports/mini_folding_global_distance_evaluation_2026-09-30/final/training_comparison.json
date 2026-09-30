@@ -1,0 +1,187 @@
+{
+  "complete": true,
+  "summary": {
+    "coordinate_zero": {
+      "checkpoint": {
+        "path": "/data/user/shuang886/Folding/folding_coordinate_ablation_v1_20260930/expanded/update_2048.pt",
+        "sha256": "b5870d959a5ddcf3e85d6008fb3c41db95bace7578ae5000084809c0335c4312"
+      },
+      "clipped_updates": 994,
+      "complete": true,
+      "curves": [
+        {
+          "all_atom_lddt": 0.8047728912676493,
+          "ca_lddt": 0.8856532535990834,
+          "outputs": 64,
+          "proteins": 32,
+          "role": "train_probe_only",
+          "seconds": 41.66950001195073,
+          "severe_pairs": 394,
+          "update": 0,
+          "zero_and_strict": 41
+        },
+        {
+          "all_atom_lddt": 0.8061741571464809,
+          "ca_lddt": 0.8877134239982146,
+          "outputs": 64,
+          "proteins": 32,
+          "role": "train_probe_only",
+          "seconds": 27.838475096970797,
+          "severe_pairs": 306,
+          "update": 512,
+          "zero_and_strict": 41
+        },
+        {
+          "all_atom_lddt": 0.8070031881788301,
+          "ca_lddt": 0.8884149722304284,
+          "outputs": 64,
+          "proteins": 32,
+          "role": "train_probe_only",
+          "seconds": 28.443439649417996,
+          "severe_pairs": 246,
+          "update": 1024,
+          "zero_and_strict": 45
+        },
+        {
+          "all_atom_lddt": 0.8076327796759447,
+          "ca_lddt": 0.8890879066846236,
+          "outputs": 64,
+          "proteins": 32,
+          "role": "train_probe_only",
+          "seconds": 24.752114690840244,
+          "severe_pairs": 203,
+          "update": 2048,
+          "zero_and_strict": 45
+        }
+      ],
+      "exposure_max": 20,
+      "exposure_min": 19,
+      "initial_probe_replay_exact": true,
+      "lock_sha256": "81ee94ffddaacf4d9881d01d4e2b98d308ee151d20a0838e520aa1c815f684ea",
+      "peak_gpu_bytes": 17375580672,
+      "same_exposure_order": true,
+      "same_start": true,
+      "scope": "execution and TRAIN probes; no validation conclusion",
+      "seconds": 5113.442314727232
+    },
+    "expanded_control": {
+      "clipped_updates": 1371,
+      "curves": [
+        {
+          "all_atom_lddt": 0.8047728912676493,
+          "ca_lddt": 0.8856532535990834,
+          "outputs": 64,
+          "proteins": 32,
+          "role": "train_probe_only",
+          "seconds": 42.58067783713341,
+          "severe_pairs": 394,
+          "update": 0,
+          "zero_and_strict": 41
+        },
+        {
+          "all_atom_lddt": 0.8053674334951317,
+          "ca_lddt": 0.8858489427450145,
+          "outputs": 64,
+          "proteins": 32,
+          "role": "train_probe_only",
+          "seconds": 34.603173630777746,
+          "severe_pairs": 382,
+          "update": 512,
+          "zero_and_strict": 42
+        },
+        {
+          "all_atom_lddt": 0.8059087698668171,
+          "ca_lddt": 0.8860873575328109,
+          "outputs": 64,
+          "proteins": 32,
+          "role": "train_probe_only",
+          "seconds": 32.43990078615025,
+          "severe_pairs": 396,
+          "update": 1024,
+          "zero_and_strict": 41
+        },
+        {
+          "all_atom_lddt": 0.8066170396819312,
+          "ca_lddt": 0.8866009876767417,
+          "outputs": 64,
+          "proteins": 32,
+          "role": "train_probe_only",
+          "seconds": 31.561844744719565,
+          "severe_pairs": 378,
+          "update": 2048,
+          "zero_and_strict": 43
+        }
+      ],
+      "exposure_max": 20,
+      "exposure_min": 19,
+      "mean_loss_first512_exposures": 1.110755193207956,
+      "mean_loss_last512_exposures": 0.6603898032936437,
+      "peak_gpu_bytes": 17375580672,
+      "seconds": 6217.358955621719,
+      "train_proteins": 423
+    },
+    "global_distance": {
+      "checkpoint": {
+        "path": "/data/user/shuang886/Folding/folding_global_distance_training_v1_20260930/expanded/update_2048.pt",
+        "sha256": "c8c4a9bc9afc3459f3ec2d5120e39011c93b58dea512c27ed0c327419dd13390"
+      },
+      "clipped_updates": 1010,
+      "complete": true,
+      "curves": [
+        {
+          "all_atom_lddt": 0.8047728912676493,
+          "ca_lddt": 0.8856532535990834,
+          "outputs": 64,
+          "proteins": 32,
+          "role": "train_probe_only",
+          "seconds": 32.94804813526571,
+          "severe_pairs": 394,
+          "update": 0,
+          "zero_and_strict": 41
+        },
+        {
+          "all_atom_lddt": 0.8060597706636794,
+          "ca_lddt": 0.8877550563457071,
+          "outputs": 64,
+          "proteins": 32,
+          "role": "train_probe_only",
+          "seconds": 26.67542447242886,
+          "severe_pairs": 292,
+          "update": 512,
+          "zero_and_strict": 42
+        },
+        {
+          "all_atom_lddt": 0.8068104602672368,
+          "ca_lddt": 0.8883458214258922,
+          "outputs": 64,
+          "proteins": 32,
+          "role": "train_probe_only",
+          "seconds": 26.543917373754084,
+          "severe_pairs": 245,
+          "update": 1024,
+          "zero_and_strict": 44
+        },
+        {
+          "all_atom_lddt": 0.8074562245916713,
+          "ca_lddt": 0.8889666965624798,
+          "outputs": 64,
+          "proteins": 32,
+          "role": "train_probe_only",
+          "seconds": 24.604177433997393,
+          "severe_pairs": 207,
+          "update": 2048,
+          "zero_and_strict": 48
+        }
+      ],
+      "exposure_max": 20,
+      "exposure_min": 19,
+      "initial_probe_replay_exact": true,
+      "lock_sha256": "d266895a7c33f2a6ea4b7f6f492dd7f79bcbb1ec14cd5f2e3cb3088be12d5d27",
+      "peak_gpu_bytes": 17375581184,
+      "same_exposure_order": true,
+      "same_start": true,
+      "scope": "execution/TRAIN only; no held-out conclusion",
+      "seconds": 4963.862866333686
+    }
+  }
+}

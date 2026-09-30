@@ -1,0 +1,37 @@
+import json,gzip,hashlib,pathlib,collections,numpy as np
+r=pathlib.Path('reports/mini_folding_global_distance_evaluation_2026-09-30/final')
+c=json.loads((r/'collection.json').read_text())
+for n,h in c['files'].items():
+ raw=(r/n).read_bytes() if (r/n).exists() else gzip.decompress((r/(n+'.gz')).read_bytes())
+ assert hashlib.sha256(raw).hexdigest()==h,n
+l=json.load(gzip.open(r/'lock.json.gz')); d=json.load(gzip.open(r/'scored_instances.json.gz')); s=json.load(gzip.open(r/'cohorts.json.gz')); g=json.loads((r/'global_structure.json').read_text())
+idx={(x['group_id'],x['seed'],x['model']):x for x in d['records']}; assert len(idx)==5460
+rows={x['group_id']:x for x in l['rows']}; bygroup={}; joined=[]
+for cohort,groups in l['cohorts'].items():
+ for model in l['models']:
+  vals=[]
+  for group in groups:
+   seeds=l['train_seeds'] if rows[group]['role']=='train' else l['validation_seeds']
+   rr=[idx[group,seed,model] for seed in seeds]
+   for x in rr:
+    assert all(np.isfinite(x[k]) for k in ['all_atom_lddt','ca_lddt','ca_aligned_rmsd'])
+   bygroup[group,model]={k:float(np.mean([x[k] for x in rr])) for k in ['all_atom_lddt','ca_lddt','ca_aligned_rmsd']}
+   vals+=rr
+  reported=s['summary'][cohort]['models'][model]
+  for k,col in [('mean_aa','all_atom_lddt'),('mean_ca','ca_lddt')]:assert abs(reported[k]-np.mean([bygroup[x,model][col] for x in groups]))<1e-14
+  assert reported['severe_pairs']==sum(x['geometry']['severe_pairs'] for x in vals)
+  assert reported['zero_and_strict_instances']==sum(x['geometry']['severe_pairs']==0 and x['geometry']['strict_checked_chirality'] for x in vals)
+  assert abs(g['summary'][cohort]['models'][model]['mean']-np.mean([bygroup[x,model]['ca_aligned_rmsd'] for x in groups]))<1e-14
+ for group in groups:
+  a=bygroup[group,'global_distance'];b=bygroup[group,'coordinate_zero']
+  joined.append(dict(cohort=cohort,group_id=group,pdb_id=rows[group]['pdb_id'],length=len(rows[group]['sequence']),delta_aa=a['all_atom_lddt']-b['all_atom_lddt'],delta_ca=a['ca_lddt']-b['ca_lddt'],delta_rmsd=a['ca_aligned_rmsd']-b['ca_aligned_rmsd']))
+for source,key,metric in [(s,'delta_aa','all_atom_lddt'),(s,'delta_ca','ca_lddt'),(g,'delta_rmsd','ca_aligned_rmsd')]:
+ for p in source['paired']:
+  assert abs(p[key]-(bygroup[p['group_id'],p['candidate']][metric]-bygroup[p['group_id'],p['reference']][metric]))<1e-14
+out={'complete':True,'collection_hashes_verified':len(c['files']),'unique_scored_instances':len(idx),'protein_count':len(rows),'quality_paired_rows_checked':len(s['paired']),'rmsd_paired_rows_checked':len(g['paired']),'scope':'independent arithmetic from exported scored instances; no coordinate rescore or bootstrap reimplementation','joint_tradeoff':{}}
+for co in l['cohorts']:
+ rr=[x for x in joined if x['cohort']==co]
+ out['joint_tradeoff'][co]={'n':len(rr),'aa_improved':sum(x['delta_aa']>0 for x in rr),'rmsd_worse':sum(x['delta_rmsd']>0 for x in rr),'aa_improved_and_rmsd_worse':sum(x['delta_aa']>0 and x['delta_rmsd']>0 for x in rr),'largest_rmsd_increases':sorted(rr,key=lambda x:x['delta_rmsd'],reverse=True)[:3]}
+(r/'local_acceptance.json').write_text(json.dumps(out,indent=2)+'\n')
+(r/'quality_global_pairs.json').write_text(json.dumps(joined,indent=2)+'\n')
+print(json.dumps({k:v for k,v in out.items() if k != "joint_tradeoff"},indent=2))

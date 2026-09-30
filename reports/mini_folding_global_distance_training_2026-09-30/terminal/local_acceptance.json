@@ -1,0 +1,18 @@
+{
+  "complete": true,
+  "archive_hashes_verified": 4,
+  "exposures": 8192,
+  "updates": 2048,
+  "unique_train": 423,
+  "exposures_per_target": [
+    19,
+    20
+  ],
+  "order_exact": true,
+  "loss_formula_max_absolute_error": 2.1640794756194737e-07,
+  "loss_formula_max_relative_error": 8.529141388515868e-08,
+  "loss_formula_rel_tol": 1e-06,
+  "loss_formula_abs_tol": 1e-08,
+  "checkpoint_sha256": "c8c4a9bc9afc3459f3ec2d5120e39011c93b58dea512c27ed0c327419dd13390",
+  "note": "Initial local all-rows absolute-only 1e-8 assertion failed (max 2.16408e-7 at loss 37.9181). All rows meet the existing remote audit math.isclose criterion; no experiment or remote tolerance changed. Weighted sum finite precision/operation order, not evidence of training failure."
+}

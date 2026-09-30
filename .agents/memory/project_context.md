@@ -1,3 +1,48 @@
+## 2026-09-30 — Global-distance fixed terminal complete: partial recovery, no promotion
+
+Goal remains active: improve C4/S1 folding; no BindCraft/design/repair/backward work.
+This turn PROGRESS: training662548 COMPLETED0:0 1:22:48, audit662549 36s; prepare
+662557 2:09, eightworkers662558–565 63–81s, score662566 2:04, extent662567 26s,
+report662568 9s, allCOMPLETED0:0. No live jobs remain in this experiment chain.
+423TRAIN,8192orderedexposures/2048updates,19–20perprotein,288diffusiontensors/
+69,777,841parameters; frozenrestunchanged. Training4963.86s,peak16.18GiB,8448
+cachedC4diffusioncalls. TerminalSHA c8c4a9bc9afc3459f3ec2d5120e39011c93b58dea512c27ed0c327419dd13390.
+Same retained512/order/optimizer as expanded andcoordinate_zero. NewGTCAseqgap24
+unbounded-distance SmoothL1beta10 weight.03290655679814053. ESM2/C4S1FP32K1.
+
+5460scores=455proteins×2noise×6models,4550referencesreused,910new+32engineering.
+All5460coordinatehashesrechecked;64terminalTRAIN32coordinatesexactlyreplay.
+Dense-lDDTmax4.44e-16;extentRMSDreplaymax0. Local16archivehashes,3640AA/CApaired
+rows,3640RMSDpairedrows and378extentcohortmeans independentlyreduced,allmatch.
+Full502MBevaluation/per-edgearraysremainremotehashbound;local20MBarchivehasall
+scalar/geometryscores,workers,lock,pairedtables,losslessextentcases/provenance.
+
+DEV32 globalAA.819744/CA.905226/RMSD3.512218/farMAE2.551755. vszeroAA+.000007
+CI[-.000117,+.000125],CA+.000166CIcross0,RMSD-.009183CI[-.023692,+.005472].
+FarMAE-.040460CI[-.070669,-.016111],signedbias+.107864(reducedunderestimation),
+fragment32-.005418CInegative. Severe451→438;zero+strict45→45/64,bothnoises22→21/32;
+newsevere1,stereo0. vs expandedAA+.001341/CA+.002310bothCIpositive,butRMSD+.058484
+CIcross0,farMAE+.054949. vsnativeS1AA+.003827;vsS2-.008260CI[-.012287,-.004776].
+TRAIN128/295 vszeroRMSD-.021453/-.027486CInegative,farMAE-.070433/-.084439;
+but vs expandedRMSD+.337242/+.268911CIpositive,104/128 and243/295worse.
+So newterm has intended effect but most global penalty remains; no defaultpromotion.
+OriginalTRAIN128AA-.000110CInegative vszero;addedTRAINAA+.000100. Do notselect
+favorablecohortsonly. DEV32observeddevelopment,notfreshindependentconfirmation.
+
+LocaltrainingQAinitialabsolute-only1e-8assertfailed:max2.16408e-7atloss37.9181;
+existingremoteisclose(rel1e-6,abs1e-8)all8192pass,maxrelative8.53e-8. Recorded
+explicitly,notchangedexperimentorremotetolerance. Archivescomplete/hashchecked.
+
+ESMCpriorfixedaffinecomparisonnegative:DEVAA-.042589,RMSD+1.384800;retainESM2,
+notESMCintrinsicjudgment. No new nonlinear/MLC/encodertraining. NEXT use existing
+TRAIN history/gradientbudget to clarify weakglobal-effect beforeanotherbounded
+trainingdecision; do notautomaticallyincreaseweightfromDEV or startgrid/infinite
+continuation. Keep fixedcandidate andcontrol. No goal completion/deployment claim.
+Docs mini_folding_global_distance_findings_2026-09-30.md, trainingstatus/overall
+front updated. Reports mini_folding_global_distance_training_2026-09-30/terminal
+andmini_folding_global_distance_evaluation_2026-09-30/final. Preserve unrelated
+worktree edits; selectivejournalstaging only. Source/evaluator unchangedthisturn.
+
 ## 2026-09-30 — ESMC C4/S1 paired comparison complete, negative
 
 Allretryjobs662588–662594COMPLETED0:0;fourworkers82/74/77/75s,score20s.256scores
