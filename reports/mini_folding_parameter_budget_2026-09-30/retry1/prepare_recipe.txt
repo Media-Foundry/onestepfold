@@ -1,0 +1,37 @@
+import json,pathlib,hashlib,subprocess
+b=pathlib.Path('/data/user/shuang886/Folding');r=b/'folding_parameter_budget_v1_20260930_retry1';t=b/'folding_global_distance_training_v1_20260930';sha=lambda p:hashlib.sha256(pathlib.Path(p).read_bytes()).hexdigest()
+panel=json.loads((r/'panel.json').read_text());train=json.loads((t/'lock.json').read_text());assert sha(t/'lock.json')=='d266895a7c33f2a6ea4b7f6f492dd7f79bcbb1ec14cd5f2e3cb3088be12d5d27'
+assert len(panel['groups'])==8 and panel['seed']==600001 and all(x['group_id'] in train['probe_groups'] for x in panel['groups'])
+cp={'retained512':dict(path=train['initial_checkpoint'],sha256=train['initial_checkpoint_sha256']), 'global_distance2048':dict(path=str(t/'expanded/update_2048.pt'),sha256='c8c4a9bc9afc3459f3ec2d5120e39011c93b58dea512c27ed0c327419dd13390')}
+hashes={str(t/'lock.json'):sha(t/'lock.json'),str(r/'panel.json'):sha(r/'panel.json')};refs={}
+for stage,folder in [('retained512',t/'expanded/probe_0000'),('global_distance2048',t/'expanded/probe_2048')]:
+ report=folder/'report.json';records=json.loads(report.read_text())['records'];idx={(x['group_id'],x['seed']):x for x in records};hashes[str(report)]=sha(report);refs[stage]={}
+ for row in panel['groups']:
+  g=row['group_id'];p=folder/f'{g}_600001.npy';h=idx[g,600001]['sha256'];assert sha(p)==h;refs[stage][g]=dict(path=str(p),sha256=h);hashes[str(p)]=h
+for row in panel['groups']:
+ g=row['group_id'];folder=pathlib.Path(train['cache'])/'examples'/g
+ for path,h in train['cache_files'].items():
+  if pathlib.Path(path).parent==folder:assert sha(path)==h;hashes[path]=h
+ for p in [pathlib.Path(train['source'])/'chemistry'/g/'native.pt',pathlib.Path(train['global_distance']['labels'][g]['path'])]:hashes[str(p)]=sha(p)
+for c in cp.values():assert sha(c['path'])==c['sha256'];hashes[c['path']]=c['sha256']
+for p in (r/'code').rglob('*'):
+ if p.is_file() and p.suffix in ['.py','.md','.json']:hashes[str(p)]=sha(p)
+assignments=[[] for _ in range(4)];loads=[0]*4
+for row in sorted(panel['groups'],key=lambda x:(-x['length'],x['group_id'])):
+ i=min(range(4),key=lambda j:(loads[j],j));assignments[i].append(row);loads[i]+=row['length']**2
+lock=dict(training_lock=str(t/'lock.json'),training_lock_sha256=sha(t/'lock.json'),panel_sha256=sha(r/'panel.json'),assignments=assignments,seed=600001,checkpoints=cp,references=refs,hashes=hashes,planned_forwards=16,planned_vjp=48,parameter_updates=0,validation_read=False)
+(r/'lock.json').write_text(json.dumps(lock,indent=2)+'\n')
+batch='''#!/bin/bash
+set -euo pipefail
+ROOT=/data/user/shuang886/Folding/folding_parameter_budget_v1_20260930_retry1
+export OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 LAYERNORM_TYPE=torch
+export PROTENIX_ROOT_DIR=/data/user/shuang886/Folding/protenix_stage0_pkg/v1_1/runtime
+export PYTHONPATH="$ROOT/code/src:$ROOT/code/scripts"
+exec /data/user/shuang886/.conda/envs/fold/bin/python -u "$ROOT/code/scripts/probe_folding_parameter_budget.py" --root "$ROOT" --index "$1"
+'''
+(r/'batch.sh').write_text(batch);jobs=[]
+for i in range(4):
+ args=['sbatch','--parsable','--partition=acd_u','--nodes=1','--nodelist=ACD1-18','--ntasks=1','--cpus-per-task=2','--gres=gpu:1','--mem=32G','--time=00:20:00','--no-requeue','--kill-on-invalid-dep=yes',f'--job-name=fold_param{i}',f'--output={r}/slurm-%j.out']
+ if i:args+=['--dependency=afterok:'+jobs[0]]
+ job=subprocess.check_output(args+[str(r/'batch.sh'),str(i)],text=True).strip();jobs.append(job)
+(r/'submission.json').write_text(json.dumps(dict(jobs=jobs,lock_sha256=sha(r/'lock.json'),assignments=[[x['pdb_id'] for x in rr] for rr in assignments]),indent=2)+'\n');print((r/'submission.json').read_text())

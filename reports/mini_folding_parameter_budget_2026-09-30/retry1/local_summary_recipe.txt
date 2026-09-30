@@ -1,0 +1,21 @@
+import json,gzip,pathlib,hashlib,numpy as np
+r=pathlib.Path('reports/mini_folding_parameter_budget_2026-09-30/retry1');a=json.loads((r/'acceptance.json').read_text());sha=lambda b:hashlib.sha256(b).hexdigest()
+for n,h in a['files'].items():
+ data=(r/n).read_bytes() if (r/n).exists() else gzip.decompress((r/(n+'.gz')).read_bytes());assert sha(data)==h,n
+report=json.load(gzip.open(r/'report.json.gz'));rows=[]
+for x in report['points']:
+ result={k:x[k] for k in ['group_id','pdb_id','length','stage','seed']}
+ for space,g in [('parameter',np.array(x['statistics']['gram'])),('coordinate',np.array(x['coordinate_gram']))]:
+  norm=np.sqrt(g.diagonal());total=np.sqrt(g[1,1]+2*g[1,2]+g[2,2]);result[space]=dict(old_coordinate_norm=norm[0],global_norm=norm[1],rest_norm=norm[2],global_over_old=norm[1]/norm[0],global_over_current_total=norm[1]/total,global_old_cosine=g[0,1]/norm[0]/norm[1],global_rest_cosine=g[1,2]/norm[1]/norm[2])
+ rows.append(result)
+summary={}
+for stage in ['retained512','global_distance2048']:
+ summary[stage]={}
+ for space in ['parameter','coordinate']:
+  summary[stage][space]={}
+  for key in rows[0][space]:
+   values=[x[space][key] for x in rows if x['stage']==stage];summary[stage][space][key]=dict(proteins=len(values),median=float(np.median(values)),min=float(min(values)),max=float(max(values)),negative=int(sum(v<0 for v in values)))
+initial=[x['parameter']['old_coordinate_norm']/x['parameter']['global_norm'] for x in rows if x['stage']=='retained512'];factor=float(np.median(initial));weight=.03290655679814053*factor
+out=dict(complete=True,rows=rows,summary=summary,next_trial_calibration=dict(base_weight=.03290655679814053,initial_median_old_over_current_global=factor,proposed_weight=weight,rule='base_weight * median_8TRAIN_initial(norm(old0.01 coordinate parameter VJP)/norm(current weighted global parameter VJP))',uses_terminal=False,uses_validation=False,scope='TRAIN-derived next-trial design after diagnostic; not result of weight sweep or an optimum'),source_report_sha256=a['files']['report.json'])
+(r/'summary.json').write_text(json.dumps(out,indent=2)+'\n');print(json.dumps(out['next_trial_calibration'],indent=2))
+(r/'local_acceptance.json').write_text(json.dumps(dict(complete=True,source_file_hashes_checked=len(a['files']),points=16,parameters_per_point=288,forward_replay_exact=True,scope='All report/lock/source hashes verified; per-parameter Gram summation and CPU coordinate reference checked remotely; independent scalar reduction locally; no finite difference or Adam attribution'),indent=2)+'\n')

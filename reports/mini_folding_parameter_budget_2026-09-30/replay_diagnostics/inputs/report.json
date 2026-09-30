@@ -1,0 +1,53 @@
+{
+  "stage": "retained512",
+  "group_id": "d2597b559b17d37477b3e04d627e378589c0578087a8757a7b598154800a1b9a",
+  "pdb_id": "3ond",
+  "length": 488,
+  "parameter_fingerprint_mismatches": [],
+  "forwards": {
+    "frozen_no_grad": {
+      "exact": true,
+      "max_abs": 0.0,
+      "rms": 0.0,
+      "grad_enabled": false,
+      "input_sha": "9312253c278e634356a2287c99ab9a112ce5e233fdad4e04991746fa2027a388",
+      "cpu_rng_unchanged": true,
+      "gpu_rng_unchanged": true
+    },
+    "frozen_no_grad_repeat": {
+      "exact": true,
+      "max_abs": 0.0,
+      "rms": 0.0,
+      "grad_enabled": false,
+      "input_sha": "9312253c278e634356a2287c99ab9a112ce5e233fdad4e04991746fa2027a388",
+      "cpu_rng_unchanged": true,
+      "gpu_rng_unchanged": true
+    },
+    "trainable_grad": {
+      "exact": true,
+      "max_abs": 0.0,
+      "rms": 0.0,
+      "grad_enabled": true,
+      "input_sha": "9312253c278e634356a2287c99ab9a112ce5e233fdad4e04991746fa2027a388",
+      "cpu_rng_unchanged": true,
+      "gpu_rng_unchanged": true
+    },
+    "trainable_no_grad": {
+      "exact": true,
+      "max_abs": 0.0,
+      "rms": 0.0,
+      "grad_enabled": false,
+      "input_sha": "9312253c278e634356a2287c99ab9a112ce5e233fdad4e04991746fa2027a388",
+      "cpu_rng_unchanged": true,
+      "gpu_rng_unchanged": true
+    }
+  },
+  "grad_vs_nograd_max_abs": 0.0,
+  "device": "NVIDIA H100 80GB HBM3",
+  "seconds": 41.908437449485064,
+  "torch": "2.7.1+cu128",
+  "model_calls": 4,
+  "deterministic": true,
+  "cublas": ":4096:8",
+  "tf32": false
+}

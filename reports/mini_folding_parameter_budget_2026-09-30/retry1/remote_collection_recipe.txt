@@ -1,0 +1,22 @@
+import json,pathlib,gzip,hashlib,subprocess,numpy as np
+b=pathlib.Path('/data/user/shuang886/Folding');r=b/'folding_parameter_budget_v1_20260930_retry1';sha=lambda p:hashlib.sha256(pathlib.Path(p).read_bytes()).hexdigest();lock=json.loads((r/'lock.json').read_text());workers=[];points=[]
+for i in range(4):
+ p=r/f'worker_{i}/report.json';w=json.loads(p.read_text());assert w['complete'] and w['parameters_unchanged_each_state'] and w['optimizer_updates']==0 and not w['validation_read'];assert w['lock_sha256']==sha(r/'lock.json');assert w['calls']==dict(diffusion=2*len(lock['assignments'][i]),pairformer=0);workers.append(w);points+=w['points']
+assert len(points)==16 and len({(x['group_id'],x['stage']) for x in points})==16
+for p,h in lock['hashes'].items():assert sha(p)==h,p
+budget=b/'folding_gradient_budget_v1_20260930';coordstage={'retained512':'retained','global_distance2048':'global_2048'};train=json.loads(pathlib.Path(lock['training_lock']).read_text());maxcoord=0.;maxsum=0.
+for x in points:
+ assert x['archive_replay_exact'] and x['component_order']==['old_coordinate','global_distance','rest']
+ stats=x['statistics'];assert stats['elements']==69777841 and len(stats['parameters'])==288
+ assert [v['name'] for v in stats['parameters']]==train['selected_names']
+ g=np.asarray(stats['gram']);assert np.isfinite(g).all() and np.allclose(g,g.T,atol=1e-12,rtol=0)
+ rebuilt=np.sum([v['gram'] for v in stats['parameters']],axis=0);delta=float(np.max(np.abs(g-rebuilt)));assert delta<1e-10;maxsum=max(maxsum,delta)
+ file=budget/'gradients'/f"{coordstage[x['stage']]}_{x['group_id']}_{x['seed']}.npz";arrays=dict(np.load(file));arrays.pop('ca_mask')
+ vec=[.01*arrays['coordinate'],train['weights']['global_distance']*arrays['global_distance'],sum(train['weights'][k]*v for k,v in arrays.items() if k not in ['coordinate','global_distance'])];m=np.stack([a.ravel() for a in vec]);expected=m@m.T;actual=np.array(x['coordinate_gram']);relative=float(np.linalg.norm(actual-expected)/np.linalg.norm(expected));x['coordinate_gram_cpu_reference_relative']=relative;maxcoord=max(maxcoord,relative)
+refpath=pathlib.Path(lock['references']['retained512'][points[0]['group_id']]['path']);assert refpath.exists()
+s=subprocess.check_output(['sacct','-n','-X','-j','662636,662637,662638,662639,662640,662642,662650,662651,662652,662653','--format=JobID,State,ExitCode,Elapsed,NodeList','-P'],text=True);byid={line.split('|')[0]:line.split('|') for line in s.strip().splitlines()};assert all(byid[str(j)][1:3]==['COMPLETED','0:0'] for j in [662650,662651,662652,662653])
+(r/'scheduler.txt').write_text(s)
+d=dict(complete=True,points=points,workers=workers,lock_sha256=sha(r/'lock.json'),model_calls=16,weighted_vjps=48,extra_engineering_calls=8,parameter_updates=0,validation_read=False,parameter_gram_sum_max_error=maxsum,coordinate_cpu_reference_gram_relative_max=maxcoord,scope='Fixed TRAIN Euclidean parameter VJPs; not optimizer-step attribution; failedfirst/replaydiagnostics retained')
+(r/'report.json').write_text(json.dumps(d,indent=2)+'\n');(r/'report.json.gz').write_bytes(gzip.compress((r/'report.json').read_bytes(),mtime=0))
+a=dict(complete=True,files={p.name:sha(p) for p in [r/'report.json',r/'report.json.gz',r/'lock.json',r/'submission.json',r/'scheduler.txt']},source_hashes_verified=len(lock['hashes']),all16_exact_forward_replays=True,all_model_parameters_unchanged=True,parameter_gram_sum_max_error=maxsum,coordinate_cpu_reference_gram_relative_max=maxcoord)
+(r/'acceptance.json').write_text(json.dumps(a,indent=2)+'\n');print(json.dumps(a))

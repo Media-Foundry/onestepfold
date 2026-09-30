@@ -1,3 +1,53 @@
+## 2026-09-30 — Parameter budget complete; single stronger-weight trial specified
+
+PreviousgoalturnPROGRESS(coordbudgetec5330a8). ThisturnPROGRESS:newisolated helper
+folding_parameter_budget.py +probe_folding_parameter_budget.py,2new+4existingtests
+pass. ExistingparameterLoRAprobe reusedaspattern,originaldenseloaders/trainerinput
+unchanged. Full288tensors/69,777,841params,notLoRA. Fourbalancedshards,16forward/
+48weightedVJP(old.01coordinate,current.03290656global,remainingobjectives).
+Fixed8TRAIN32,seed600001,retained512andglobal2048. NoDEV/updates/FD. Goalactive.
+
+Firstrootfolding_parameter_budget_v1_20260930:
+662636FAILED1:0 56s on3OND strictreplaybeforeanyVJP;662637–639dependencycancelled.
+662640debugCOMPLETE40s:fullparameterfingerprintsexactbut3forwardmaxdelta.002155/
+.008127/.031376Å. 662642debugCOMPLETE46s with inputnoise/condhashreadback +RNGchecks:
+4forwards(repeatno_grad,grad,trainableno_grad)ALLexact,RNGunchanged. BothACD1-12.
+Notprovenkernel/rootcause. Failedcode/lock/logs and7debugcoordinates preserved.
+
+Retryrootfolding_parameter_budget_v1_20260930_retry1,addinputreadback/sync/envlogging,
+useoriginaltrainingnodeACD1-18;strictbitwiseguard unchanged. Jobs662650–653COMPLETE
+57/40/46/46s,16/16forwardexact,allmodelparamsunchanged,RNGunchanged;48VJPs.
+Additional8engineeringcalls(1failed+3+4debug)retainedasoverhead. Peak5.254GiB.
+LockSHA ca9709d35261b33d670f914e56ca13497f1e7e5dba305bfe5f8db7459bd7fd34.
+ReportSHA ce7157462408ab78a627bbc281424e694204b3c8ed673ae5b7b49e03d9e2c1a0.
+266sourcehashesverified,288blockGramstooverallmaxerror0;coordinatesideGPUGram
+vspriorCPUfullarrayreference maxrelative2.05998e-7. NotAdamstepattribution.
+
+Parametergrad normglobal/old medians initial.181846,end.170829;rangeinitial
+.047766–.578755,end.074212–.857795. global/currenttotalnorm median.044175→.099968;
+ratiosnotcontributionpercentages. global-oldcosmedian.626666→.764414(allpositive).
+global-restcosmedian.010048→.120758;negative4/8→3/8,4HUTinitial-.963418/end-.717961,
+endglobal/total1.187761duecancellation. BudgetweaknessANDdirectionconflictscanbothhold.
+Panel53–488residues,onesinglelockednoise,nolongchain/populationclaim.
+
+NEXTsingletrainingexperiment specified(notyetimplemented/launched): weight
+.1810138829332775 = .03290655679814053 ×median8_INITIAL(normoldweightedcoord/
+normcurrentweightedglobal);factor5.5008454407331415. NotterminalgradientorDEVtuned.
+Use sameretained512parent,423membership/order8192exposures/2048updates,optimizer/
+reset/schedule/accumulation/clip,coordinate0,allotherweights,globaldistancebeta10/
+seqgap24 unchanged. Isolateddriver/newcontract,doNOTmodify originalglobalweight
+constant or its historicalvalidationcontract. Reuse unchanged train_folding_scale
+withglobal_distance_training_hooks afterownnewlockverification. Preflightshort/long
+andinitial64probeexact,thenonecandidateonly. Semanticarmglobal_parameter_matched.
+Newterminal455×2×7=6370scores;reuse6oldmodels,new910+boundedengineering. Compare
+againstglobal_distanceANDexpanded,alsozero/retained/nativeS1/S2,allGTquality/geometry/
+far-distance,tails. Noautopromotion/grid. Protocol docs/mini_folding_global_parameter_weight_v1.md.
+
+Currentdocs mini_folding_parameter_budget_findings_2026-09-30.md andoverallupdated;
+reports/mini_folding_parameter_budget_2026-09-30 includesfailedfirst/diagnostics and
+retry1reports/lock/acceptance/summary. No livejobs remain. Preserve unrelatededits.
+GitNexus impactnewhelperUNKNOWN,textconfirmedonlynewdriver/tests;driverimpactLOW
+singleCLIcaller. Index refreshed,fulluntruncatedchangescheckrequiredbeforecommit.
 ## 2026-09-30 — Gradient diagnostic compatibility correction
 
 Commitdiff after6deabb23 exposed that gradient_budget.py/test_gradient_budget.py

@@ -1,0 +1,32 @@
+{
+  "stage": "retained512",
+  "group_id": "d2597b559b17d37477b3e04d627e378589c0578087a8757a7b598154800a1b9a",
+  "pdb_id": "3ond",
+  "length": 488,
+  "parameter_fingerprint_mismatches": [],
+  "forwards": {
+    "frozen_no_grad": {
+      "exact": false,
+      "max_abs": 0.002155303955078125,
+      "rms": 0.0002042527194134891,
+      "grad_enabled": false
+    },
+    "trainable_grad": {
+      "exact": false,
+      "max_abs": 0.008126974105834961,
+      "rms": 0.0005592659581452608,
+      "grad_enabled": true
+    },
+    "trainable_no_grad": {
+      "exact": false,
+      "max_abs": 0.031375885009765625,
+      "rms": 0.001223588129505515,
+      "grad_enabled": false
+    }
+  },
+  "grad_vs_nograd_max_abs": 0.035671234130859375,
+  "device": "NVIDIA H100 80GB HBM3",
+  "seconds": 36.28860726952553,
+  "torch": "2.7.1+cu128",
+  "model_calls": 3
+}
