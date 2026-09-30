@@ -10,6 +10,7 @@ from pathlib import Path
 from fastglycan.evaluation_reuse import expected_evaluation_calls
 from fastglycan.folding_ablation import verify_coordinate_ablation_lock
 from fastglycan.folding_report import render_folding_scale_report
+from fastglycan.folding_global_metrics import summarize_global_structure
 from fastglycan.paired_teacher_protocol import sha256, write_json
 
 
@@ -112,8 +113,10 @@ def write_coordinate_report(root):
     job=json.loads((root/'submission.json').read_text())['score_job']
     scheduler=subprocess.check_output(['sacct','-j',job,'-n','-X','-P','--format=JobIDRaw,State,ExitCode'],text=True)
     assert f'{job}|COMPLETED|0:0' in scheduler
-    text=render_folding_scale_report(lock,training,evaluation,cohorts)
+    global_structure=summarize_global_structure(evaluation['records'],lock)
+    text=render_folding_scale_report(lock,training,evaluation,cohorts)+'\n'+global_structure.pop('markdown')
     output.mkdir();(output/'report.md').write_text(text)
+    write_json(output/'global_structure.json',dict(evaluation_sha256=sha256(root/'evaluation.json'),**global_structure))
     with (output/'paired.csv').open('w',newline='') as f:
         fields=['cohort','group_id','pdb_id','length','candidate','reference','delta_aa','delta_ca','per_noise']
         writer=csv.DictWriter(f,fieldnames=fields,lineterminator='\n');writer.writeheader()
@@ -126,6 +129,7 @@ def write_coordinate_report(root):
     write_json(output/'provenance.json',dict(complete=True,score_job=job,scheduler=scheduler,
         inputs={str(p):sha256(p) for p in paths},script_sha256=sha256(Path(__file__)),
         report_sha256=sha256(output/'report.md'),paired_csv_sha256=sha256(output/'paired.csv'),
+        global_structure_sha256=sha256(output/'global_structure.json'),
         scope='fixed terminal matched objective ablation; observed validation is development; no model promotion'))
 
 

@@ -1,3 +1,32 @@
+## 2026-09-30 — Make prespecified global RMSD visible in terminal report
+
+Previous goal turn VERIFIED WAIT(specific live662470). Current turn revalidated
+samejob; no restart, no new training arm. At~11:48UTC training904/2048updates,
+1024probe not yet complete. Evaluationprepare662475 stillPENDING,lockabsent.
+
+Found presentation gap: frozen per-case scorer already computes alignedCA_RMSD,
+but terminalMarkdown showed only lDDT/chemistry. Added pure summary module
+folding_global_metrics.py andreportwriterhook to expose this prespecified metric
+by existing128/295/observed32cohorts. Sameperprotein two-noise means,lockedcontrast
+pairs/proteinbootstrap,mean/median/P95/P99/worst5% andpairedRMSDincrease counts.
+PositiveRMSDdelta explicitlyworse(opposite lDDT). No new threshold,promotionrule,
+scoring/alignment/mask/model/inference ortraining change. Fullpernoise andprotein
+RMSD differences retainedglobal_structure.json,boundtocompletedevaluationsha.
+
+4focusedtests pass(global_metrics,folding_report,evaluation_reuse,folding_evaluation).
+Newsummaryreproducesarchived512probe+0.166776536156277A to1e-14; finite,complete,
+uniqueinputandcohortchecks preventpartialdenominators. GitNexusreportwriterimpact
+LOW(oneCLIcaller);newsummaryUNKNOWNnotfoundconfirmedabsentbytextbeforecreation.
+
+Pendingprivateevaluationcodeupdated BEFOREpreparelock, notactivetrainingcode.
+Existing173corefiles/per-case scoring unchanged; traininglock81ee94...unchanged.
+Separate global_reporting_deployment.json preservesoriginaldeploymentobservation;
+newsource/protocoldochasheswillbeincludedinpreparelock. Executiondocscientific
+contract unchanged; additive mini_folding_coordinate_global_reporting.md explains
+presentationaddition after512evidence. No extraGPUcalls. Goalactive/unfulfilled.
+NEXT: fixed1024/2048TRAINprobes andfullterminalcomparison; followqualityANDglobal
+RMSD/chemistry, not lDDT alone. No interimselection. ESMC remains latermatchedtest.
+
 ## 2026-09-30 — First matched coordinate-zero TRAIN32 probe
 
 Previous goal turn PROGRESS(implementation, queued942-NFE evaluation,514d8799).
