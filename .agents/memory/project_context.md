@@ -1,3 +1,48 @@
+## 2026-09-30 — Fixed-backbone sidechain fit gains AA but fails collision nonregression
+
+Previous turn f028e9f6 was progress: read-only additive loss partition. This turn
+implemented/ran one bounded local sidechain fit, no new model inference/training,
+GT fitting, independent32 access or joint solve. New fit_sidechain_projection wraps
+unchanged PoseVariables; only bridge rotations whose moving set excludes N/CA/C/O/OXT
+allowed. All translations/rotations/other angles forcedzero; output nonmobile atoms
+exactinitial via where; full masked vectors saved. Input target RAW only, equal
+nonbone/OXT atom MSE. One zero start LBFGS60/max_eval90,history20,strongwolfe,
+tolgrad1e-8/change1e-12;final iterate no fallback/best/renaming. Ring-only/noDOF
+P/G/A unchanged;raw input graph detached,not differentiable-through-optimizer.
+Uses whole-ideal archive e034567a's14 C4 predictions,7proteins x seeds12345/54321;
+3CR6 unsupported2local slots retained. DOF135–290/structure,1450unique/2900two-seed
+instances;161unique/322two-seed no-mobile residues. Protocol mini_sidechain_fit_v1.md
+locked code/source before run.2CPU FP64 workers one thread,900s ceiling.
+All14 complete60iters61–66closures,mean2.78s(2.36–3.02),RSS809004KiB,pipeline48.75s.
+AA ideal-local .811601496->fitted .815950260,delta+.004348763;all14pred/all7proteins
+positive. CA .900141834 EXACTunchanged;N/CA/C/O/OXT bitwiseunchanged. SideMSE
+.537428387->.265699538A²;heavyRMSvsraw .514152->.368529,maxatom4.70412->4.11328A.
+Strict checkedCA/IT chirality and rawRMSbudget14/14. Still belowrawAA .825157.
+COLLISION SCREENFAIL: severe37->41,zero-severe7->7,maxpenetration2.841236589->
+3.032497078A (meanpercaseworst2.26882->2.24450,doesnotexcusetail).Severeincrease
+3IE9/12345 7->12,4B9P/54321 3->5;2casesimprove10unchanged. Alloldconnectionmetrics
+fail14/14unchanged by fixedbone. CSV initial_joint/final_joint are CONNECTION ONLY
+flags,notfulljointacceptance;documentednaminglimitation,notusedscreen.
+Posthoc frozen-coordinatepairidentity:removed8,new12,shared29;20finalpairsboth
+immutable underthisrepresentationcannotberepairedhere.New12allactualmotionpairs.
+Worstshared W127CZ2–Y129CE2 in4B9P/54321 distance .940046->.367503A,penetration
+2.459954->3.032497A,atomdisplacements.7809/.05986A. Not a newpair. Nominal mobile
+setdoesnotprovenonzerodistancegradient. No force-causality/backwardbug claim.
+Independent NumPy pose replaymax4.44e-15A,metric4.44e-16,bond/angleinvariant4.22e-15;
+forbiddenparamszero,chemicalmapping/masks/hasheschecked.5relatedtests pass.
+Archive143members1,453,715bytes/hashverified;fourruntimecodecopiesexact;posthoc
+collision script/result separatelysavedboundhashes. Reports/mini_sidechain_fit_2026-09-30,
+docs/mini_sidechain_fit_findings_2026-09-30.md. Overall report updated.
+DiamondHill /media/PM982/onestepfold/sidechain_fit_v1_20260930, pipeline233641 and
+controllerterminal/psmissing,exit0,no livejobs. Current version CLOSED; noautomatic
+joint continuation afterfailedlocalscreen,default/oldgatesunchanged.
+Next methodifpursued: one bounded local objective coupling RAWsidechain preservation
+with nonbonded constraints on eligible moving atoms,not morepureMSEiterations or
+class-specifictemplates. Immutable20collisions stillrequirelaterresiduepose stage;
+sidechain-onlycannotbecomefullgeometryrepairbybudget. Locknewprotocolfirst,report
+allpairs includingimmutable,do nothidebadcases. No independent32/Y38/modeltraining
+orclaim of one-step/differentiable solver/design. Original goalactive/unfulfilled.
+
 ## 2026-09-30 — Saved ideal-reference loss partition points to sidechain contact preservation
 
 Previous goal turn e034567a was progress: completed real C4 whole-ideal intervention,

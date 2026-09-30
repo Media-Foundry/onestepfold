@@ -1,0 +1,15 @@
+{
+  "tests": [
+    "tests/test_sidechain_projection_fit.py",
+    "tests/test_local_projection_fit.py"
+  ],
+  "passed": 5,
+  "py_compile_passed": true,
+  "source_sha256": {
+    "src/fastglycan/sidechain_projection_fit.py": "d08ef1f62bf3baa53378bceb0c51fd06c1638f307391b552b3f44cc710f48512",
+    "scripts/run_sidechain_trial.py": "d3a0525a28d9b01892c87cc840fe8e8530a905e5dc221a179e36c1ef43e0c47d",
+    "scripts/audit_sidechain_trial.py": "a6b7680dbdd7045145feb3bf772bd6a94b5a14d4ef457a8ff051ac3eb507a4de",
+    "tests/test_sidechain_projection_fit.py": "dfcfc128aefa84efe1f1e4c0185cdd81ddc44f0057d4a5cd402774da3451bbf3"
+  },
+  "scope": "local fit mathematics and frozen coordinates; not optimizer input-gradient certification"
+}
