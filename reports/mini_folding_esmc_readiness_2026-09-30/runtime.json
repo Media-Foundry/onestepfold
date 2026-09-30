@@ -1,0 +1,14 @@
+{
+  "host": "ACD1-1",
+  "torch": "2.7.1+cu128",
+  "gpu": "NVIDIA H100 80GB HBM3",
+  "packages": {
+    "transformers": "4.57.6",
+    "huggingface_hub": "0.34.4",
+    "tokenizers": "0.22.1",
+    "safetensors": "0.8.0",
+    "regex": "2026.9.29",
+    "psutil": "7.2.2"
+  },
+  "scope": "ESMC features only; no folding prediction, GT read or fitting; active ESM2 training unchanged"
+}

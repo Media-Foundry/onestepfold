@@ -1,0 +1,83 @@
+ESMC: Transformer Engine is not installed; falling back to pure-PyTorch LayerNorm+Linear / LayerNorm+MLP. Outputs will differ numerically - measured on the unnormalized residual stream (before the final LayerNorm), ~O(10) max-diff in fp32 and ~O(100) in bf16; after the final LayerNorm these shrink to a few ULP and perplexity stays within rounding noise. Install with `pip install transformer-engine[pytorch]` to enable fused fp32-reduction LayerNorm.
+ESMC: neither xformers nor flash-attn is installed; falling back to PyTorch ``F.scaled_dot_product_attention``. The attention reduction order in bf16 differs from a fused kernel by ~1 bf16 ULP per attention block; compounded across the 80-block stack this reaches ~O(100) max-diff on the unnormalized residual stream. Install an xformers build matching your PyTorch and CUDA versions for a fused attention kernel.
+ESMC: flash-attn rotary kernel not installed; falling back to pure-PyTorch RoPE. For faster GPU inference run `pip install flash-attn`.
+{
+  "code_commit": null,
+  "code_revision": "bf343ba264b650dff7a073643725f9aaa1fdbe8d",
+  "dtype": "bfloat16",
+  "elapsed_seconds": 7.8913506511598825,
+  "feature_variant": "final",
+  "groups_input": 455,
+  "groups_processed": 455,
+  "hf_revision": "28aed46fcaf217dfa59f78a589bb449aa3ae5d98",
+  "local_files_only": true,
+  "model_id": "biohub/ESMC-600M",
+  "output": "/data/user/shuang886/Folding/folding_esmc_features_v1_20260930/features",
+  "partition_count": 1,
+  "partition_index": 0,
+  "shard_count": 6,
+  "total_residues": 96886
+}
+{
+  "code_revision": "bf343ba264b650dff7a073643725f9aaa1fdbe8d",
+  "dtype": "bfloat16",
+  "feature_variant": "final",
+  "groups_expected": 455,
+  "groups_validated": 455,
+  "hf_revision": "28aed46fcaf217dfa59f78a589bb449aa3ae5d98",
+  "model_id": "biohub/ESMC-600M",
+  "shards_validated": 6,
+  "total_residues": 96886
+}
+{
+  "complete": true,
+  "summary": {
+    "groups_input": 455,
+    "groups_processed": 455,
+    "total_residues": 96886,
+    "shard_count": 6,
+    "feature_variant": "final",
+    "model_id": "biohub/ESMC-600M",
+    "hf_revision": "28aed46fcaf217dfa59f78a589bb449aa3ae5d98",
+    "code_revision": "bf343ba264b650dff7a073643725f9aaa1fdbe8d",
+    "code_commit": null,
+    "local_files_only": true,
+    "partition_count": 1,
+    "partition_index": 0,
+    "dtype": "bfloat16",
+    "elapsed_seconds": 7.8913506511598825,
+    "output": "/data/user/shuang886/Folding/folding_esmc_features_v1_20260930/features"
+  },
+  "audit": {
+    "groups_expected": 455,
+    "groups_validated": 455,
+    "shards_validated": 6,
+    "total_residues": 96886,
+    "feature_variant": "final",
+    "model_id": "biohub/ESMC-600M",
+    "hf_revision": "28aed46fcaf217dfa59f78a589bb449aa3ae5d98",
+    "code_revision": "bf343ba264b650dff7a073643725f9aaa1fdbe8d",
+    "dtype": "bfloat16"
+  },
+  "finite_sequence_verified": 455,
+  "exact_startup_replays": [
+    {
+      "group_id": "1f74f58eabb09ab681f1840aefacb1988f6f1d2b60279adaf17929833d683fdb",
+      "length": 52,
+      "exact_repeat": true
+    },
+    {
+      "group_id": "2bc85e3e9020f945ab6d25997a6948dddfdc58dd394bc6eca5bd0a0582314075",
+      "length": 968,
+      "exact_repeat": true
+    }
+  ],
+  "lock_sha256": "115f98ef16b9eb1b6f2b5515df5c85a964df2f1bf2bd6193df9c994be98a7415",
+  "manifest_sha256": "608c8c3126f4d3b28b02a91b798c2b205e10131b3e0bfd219b9120afcb45f850",
+  "peak_gpu_bytes": 2951665664,
+  "seconds": 60.215223755687475,
+  "old_cache_mixed": false,
+  "old_cache_numerical_equivalence_established": false,
+  "folding_comparison_started": false,
+  "scope": "ESMC features only; no folding prediction, GT read or fitting; active ESM2 training unchanged"
+}

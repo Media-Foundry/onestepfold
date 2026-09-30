@@ -1,3 +1,50 @@
+## 2026-09-30 — ESMC features prepared without changing active folding trial
+
+Previous goal turn was PROGRESS: first fixed TRAIN128 probe verified/archived.
+This turn is PROGRESS: current sequence/cache mismatch identified, uniform ESMC
+features extracted and accepted. Folding-first goal remains active/unfulfilled.
+TRAIN128/TRAIN423 jobs662290/662291 confirmed RUNNING throughout; audit/evaluation
+dependencies remain pending. No checkpoint selection, loss/budget/encoder change.
+Latest independent observation979/707 of2048 updates, no errors. Both512 probes
+exist: common originalTRAIN32 AA train128.807179219,expanded.805367433 versus
+start.804772891; CA.887278297/.885848943 vs.885653254. Severe330/382 vs394,
+zero+strict47/42 of64 vs41. Expanded probe is not held-out data and cannot decide
+generalization. Fixed terminal validation still required.
+
+User's ESMC request now has concrete input readiness. Exact sequence SHA+length
+matching old HPC3 final cache38400 yields only11/455 (3original128,7added295,1VAL32).
+Same11 in prior29769 MLC selection; membership only, not renewed tensor audit.
+Old512 bridge fit has0 exact overlaps, NOT homology certification. Interface is
+ESMC1152→449 versus nativeESM22560→449; prior C1 bridge loss is not a C4 result.
+
+Inventory/deps root /data/user/shuang886/Folding/folding_esmc_readiness_v1_20260930.
+662348 FAILED4s on optional gt_catalog package initializer import, beforemodel.
+Preserve original root. Retry /data/user/shuang886/Folding/folding_esmc_features_v1_20260930
+isolates package initializers only; deps/wheels are explicit symlinks to firstroot.
+662350 COMPLETED0:0 1m02 onH100. Full455/96886residues,6BF16finalshards;52/968
+TRAIN startup exact repeats;all row hashes/lengths/finitevalues/shapes/offsets;
+peak2,951,665,664B. Separate scheduler/hash audit confirms all6checksums and
+unchanged active training lock. Cache code/input/model metadata196hashes bound.
+Torch2.7.1+cu128, Biohub bf343ba, HF28aed46 pinned. NativePyTorch/SDPA fallback,
+no TE/xformers/flash-attn. DeclaredBiohubTorch2.11 requirement not met, but actual
+GPU tests/extraction pass. Do not claim old-cache numerical equivalence. BF16 is
+storage; modelcompute dtype not separately recorded. All455 freshlyextracted,
+not mixing11oldfeatures. Existing4cachecontract tests pass. Pipelineunchanged.
+
+Dependency installs only private deps/PYTHONPATH; live fold environment unmodified.
+HPC3 direct pip download failed; local CPython312 wheels copied/offlineinstalled.
+No ESMC folding inference, GT read, bridge fitting, MLC comparison or modeltraining.
+Next decide matched TRAIN-only interface trial after terminal folding comparison;
+feature readiness is not evidence ESMC improves structure. No newvalidation
+predictions/labels through this branch. 52residue cached example retains native
+ESM2 [52,2560] feature; full future paired-featurecoverage not yet audited.
+
+Docs mini_folding_esmc_readiness_2026-09-30.md; reports same datedname contain
+manifest readiness, lock, uniformfeaturemanifest, acceptance/runtime/execution,
+failed/retrylogs andlauncher. Currentcode wrapper run_folding_esmc_cache.py; reuse
+existing builder/validator. Newfunction impactUNKNOWN, absence confirmed beforeedit.
+No research decision to replaceESM2 yet; no BindCraft/interface-design work.
+
 ## 2026-09-30 — Fixed-terminal folding evaluation implemented and queued
 
 Continue folding FIRST: no BindCraft/target request, mutation search, repair
