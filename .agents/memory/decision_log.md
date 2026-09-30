@@ -1,3 +1,34 @@
+## 2026-09-30 — Matched ESMC C4/S1 structural comparison running
+
+PriorgoalturnPROGRESS(TRAIN423bridgefit48cb3e89). CurrentPROGRESS: standalone
+projectioncontext/evaluator,4focusedtests pass. Fixedretained512(7fc018...829),
+frozenrest,hardchemistry,C4S1FP32K1.64targets=existingTRAIN32+observedDEV32,
+twofixednoises;reuse128references,new128ESMC+8successfulpreflightdiffusioncalls.
+Recompute native/ESMCC4;all64mustreplaynativeconditioningexact. Total544PFstack
+calls(136C4passes),136diffusion. NoESMre-extraction/GTtraining/modelselection.
+
+Firstrootfolding_esmc_comparison_v1_20260930:prepare662578COMPLETE49s;
+preflight662579FAILED1:0 49s,662580–584dependencycancelled. Nativeflat matched;
+unpackednativeviews differed frompacked reference. Corrected onlynativeflat.split/
+reshape,keepscience/thresholds. Failedroot/script/report/log preserved.
+Retryrootfolding_esmc_comparison_v1_20260930_retry1:prepare662588COMPLETE50s;
+preflight662589COMPLETE1m39s,compute93.91s.50/968residuecasesnativecoordinateexact,
+nativeconditioningexact,ESMCrestore/reloadrepeatsexact,fullmodelstaterestored.
+8diffusion/32PFcalls,peak34589424640B. Fourworkers662590–593RUNNING,score662594
+pending. Retrylockfd2a68328345a425cfde1b6cd89b2d52bc3b0df31596e04605fbe29766054b13.
+
+Documentationerratum: lockedprotocoltextsaidshortest52(reusedformerpanelnumber),
+butfrozencode/IDsselectshortestfrom423TRAIN,whichis50. Localauditcaughtthenumeric
+textmismatch;correctedreportingwithoutchangingIDs,thresholdsorjobs. ExistingGT
+scorer/cohort/RMSDmathunchanged.256completeoutputsrequired,pairedtails/chemistry,
+notencoder-onlysuperiority. Localpreflight/source/lockhashesverified.
+
+Main662548stilllive,1057updates/4228exposures lastobservation.1024TRAIN32AA/CA
+ global.80681046/.88834582 versuszero.80700319/.88841497,clashes245vs246,
+zero+strict44vs45/64. Training-onlylocalmetrics,notglobalshaperecovery.
+NEXTcollectESMCscoreandglobalfixedterminal;keepglobalterminalchainunchanged.
+Noextraaffinefits/methodmatrix. Goalactive;preserveunrelatedworktreechanges.
+
 ## 2026-09-30 — Separate TRAIN-only ESMC bridge initialization complete
 
 Previous goal turn VERIFIED WAIT onlive662548. CurrentturnPROGRESS: used independent

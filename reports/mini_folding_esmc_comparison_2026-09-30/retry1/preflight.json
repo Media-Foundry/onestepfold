@@ -1,0 +1,41 @@
+{
+  "complete": true,
+  "counts": {
+    "diffusion": 8,
+    "pairformer": 32
+  },
+  "device": "NVIDIA H100 80GB HBM3",
+  "lock_sha256": "fd2a68328345a425cfde1b6cd89b2d52bc3b0df31596e04605fbe29766054b13",
+  "model_restored_exact": true,
+  "peak_gpu_bytes": 34589424640,
+  "rows": [
+    {
+      "entries": [],
+      "esmc_conditioning_seconds": [
+        0.3021514192223549,
+        0.3043306437321007
+      ],
+      "esmc_repeat_exact": true,
+      "group_id": "544b739de6227a88734fb8178434fd4ee3fc73cd4a0e0150cb5f3f48414753ca",
+      "lock_sha256": "fd2a68328345a425cfde1b6cd89b2d52bc3b0df31596e04605fbe29766054b13",
+      "native_conditioning_exact": true,
+      "native_coordinate_replay": true,
+      "role": "train"
+    },
+    {
+      "entries": [],
+      "esmc_conditioning_seconds": [
+        13.461019399110228,
+        13.465944780036807
+      ],
+      "esmc_repeat_exact": true,
+      "group_id": "2bc85e3e9020f945ab6d25997a6948dddfdc58dd394bc6eca5bd0a0582314075",
+      "lock_sha256": "fd2a68328345a425cfde1b6cd89b2d52bc3b0df31596e04605fbe29766054b13",
+      "native_conditioning_exact": true,
+      "native_coordinate_replay": true,
+      "role": "train"
+    }
+  ],
+  "seconds": 93.9104128968902,
+  "timing_scope": "cached sequence features; C4 recomputed, ESM encoder time excluded"
+}
