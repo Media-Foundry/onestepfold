@@ -1,0 +1,1590 @@
+{
+  "cases": 14,
+  "complete": true,
+  "contrasts": [
+    [
+      "start",
+      "local"
+    ],
+    [
+      "warm_final",
+      "start"
+    ],
+    [
+      "zero_final",
+      "local"
+    ],
+    [
+      "warm_final",
+      "zero_final"
+    ],
+    [
+      "warm_final",
+      "raw"
+    ],
+    [
+      "zero_final",
+      "raw"
+    ]
+  ],
+  "hashes": {
+    "/home/husrcf/Code/onestepfold/scripts/analyze_joint_tradeoffs.py": "3a86281043ea470386e8d8de573bb2a7c5c9c3444fc4473b88b090191d1fe732",
+    "docs/mini_joint_tradeoff_attribution_v1.md": "9abc5be623d633a57adb98e0e78d93c9450600b9386041eb43fb279bf0e722e2",
+    "reports/mini_sidechain_joint_start_2026-09-30/artifact_manifest.json": "1c95d5fe17733b9df8db556676cd52d1c75ca065c3ee53b300dcad90b781d132",
+    "reports/mini_sidechain_joint_start_2026-09-30/artifacts.tar.gz": "30d5cee500e04f89ad2b0b6f099aaf26fd45b6e8b1bcebb23a6e2cab1d84ba99",
+    "reports/mini_sidechain_joint_start_2026-09-30/audit.json": "156d5bc0879cee5cdf48557eea06b4d00c6099a2652bdfc71beb689bcc54e379",
+    "reports/mini_sidechain_joint_start_2026-09-30/lock.json": "01904693d37d3a5d2c1446c5684d18443d53f3e445511441098818ddfcd4302e",
+    "reports/mini_sidechain_joint_start_2026-09-30/pipeline_exit.json": "8cc0ab04f0fd6f7d754f9fd512b931be6c9a520f5a5b1ff12507be9ae03ddcfb",
+    "reports/mini_sidechain_joint_start_2026-09-30/report.json": "72586105a310011e17ff6035667cb2d15415238c7e55f722858305226e490162",
+    "src/fastglycan/lddt_attribution.py": "3292b3ba246ca7c81ede80477928fe130648107a5ed90eadddd4d186adf0f1c2"
+  },
+  "max_objective_error": 6.816769371198461e-14,
+  "max_source_score_error": 2.220446049250313e-16,
+  "metrics": [
+    "aa",
+    "ca"
+  ],
+  "proteins": 7,
+  "repulsion_scope": "frozen terms reused from independently audited source; other objective terms recomputed",
+  "scope": "descriptive attribution; no new inference, solving, GT-dependent selection or acceptance change",
+  "skipped": [
+    {
+      "pdb_id": "3cr6",
+      "reason": "Traceback (most recent call last):\n  File \"/media/PM982/onestepfold/local_fit_gt_source_v1_20260930_code/preflight_isolated_chemistry.py\", line 49, in check\n    if unsupported:raise ValueError('source covalent connection outside supported chemistry')\n                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nValueError: source covalent connection outside supported chemistry\n",
+      "seed": 12345
+    },
+    {
+      "pdb_id": "3cr6",
+      "reason": "Traceback (most recent call last):\n  File \"/media/PM982/onestepfold/local_fit_gt_source_v1_20260930_code/preflight_isolated_chemistry.py\", line 49, in check\n    if unsupported:raise ValueError('source covalent connection outside supported chemistry')\n                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nValueError: source covalent connection outside supported chemistry\n",
+      "seed": 54321
+    }
+  ],
+  "source": "reports/mini_sidechain_joint_start_2026-09-30",
+  "stages": 5,
+  "summary": [
+    {
+      "contrast": "start-local",
+      "group": "BB:1",
+      "gt_distance_mae": -1.0842021724855044e-19,
+      "metric": "aa",
+      "partition": "cross",
+      "raw_distance_mae": -1.0842021724855044e-19,
+      "score": 0.0
+    },
+    {
+      "contrast": "start-local",
+      "group": "BB:2-4",
+      "gt_distance_mae": -1.2390881971262907e-19,
+      "metric": "aa",
+      "partition": "cross",
+      "raw_distance_mae": -2.0135183203302226e-19,
+      "score": 0.0
+    },
+    {
+      "contrast": "start-local",
+      "group": "BB:5+",
+      "gt_distance_mae": -2.4781763942525816e-18,
+      "metric": "aa",
+      "partition": "cross",
+      "raw_distance_mae": 1.2390881971262907e-19,
+      "score": 0.0
+    },
+    {
+      "contrast": "start-local",
+      "group": "BO:1",
+      "gt_distance_mae": -0.000553785845441944,
+      "metric": "aa",
+      "partition": "cross",
+      "raw_distance_mae": -0.0008273353895006316,
+      "score": 0.00013606557003474181
+    },
+    {
+      "contrast": "start-local",
+      "group": "BO:2-4",
+      "gt_distance_mae": -0.0015732977302643507,
+      "metric": "aa",
+      "partition": "cross",
+      "raw_distance_mae": -0.003810805172202996,
+      "score": 0.00039458280907080784
+    },
+    {
+      "contrast": "start-local",
+      "group": "BO:5+",
+      "gt_distance_mae": -0.005636528189368754,
+      "metric": "aa",
+      "partition": "cross",
+      "raw_distance_mae": -0.019186111161703014,
+      "score": 0.0018043936322092963
+    },
+    {
+      "contrast": "start-local",
+      "group": "OO:1",
+      "gt_distance_mae": -0.0008185105047656828,
+      "metric": "aa",
+      "partition": "cross",
+      "raw_distance_mae": -0.0008034287688037908,
+      "score": 0.0001822356479814777
+    },
+    {
+      "contrast": "start-local",
+      "group": "OO:2-4",
+      "gt_distance_mae": -0.000938377359459156,
+      "metric": "aa",
+      "partition": "cross",
+      "raw_distance_mae": -0.003006560274463174,
+      "score": 0.0002613935226451089
+    },
+    {
+      "contrast": "start-local",
+      "group": "OO:5+",
+      "gt_distance_mae": -0.004563946198515967,
+      "metric": "aa",
+      "partition": "cross",
+      "raw_distance_mae": -0.015256013492452118,
+      "score": 0.0012487799769558144
+    },
+    {
+      "contrast": "start-local",
+      "group": "BB",
+      "gt_distance_mae": -2.4781763942525816e-18,
+      "metric": "aa",
+      "partition": "pair_type",
+      "raw_distance_mae": -1.2390881971262908e-18,
+      "score": 0.0
+    },
+    {
+      "contrast": "start-local",
+      "group": "BO",
+      "gt_distance_mae": -0.007763611765075003,
+      "metric": "aa",
+      "partition": "pair_type",
+      "raw_distance_mae": -0.02382425172340662,
+      "score": 0.0023350420113148473
+    },
+    {
+      "contrast": "start-local",
+      "group": "OO",
+      "gt_distance_mae": -0.006320834062740796,
+      "metric": "aa",
+      "partition": "pair_type",
+      "raw_distance_mae": -0.019066002535719075,
+      "score": 0.0016924091475824005
+    },
+    {
+      "contrast": "start-local",
+      "group": "1",
+      "gt_distance_mae": -0.0013722963502076258,
+      "metric": "aa",
+      "partition": "separation",
+      "raw_distance_mae": -0.001630764158304422,
+      "score": 0.0003183012180162187
+    },
+    {
+      "contrast": "start-local",
+      "group": "2-4",
+      "gt_distance_mae": -0.0025116750897235173,
+      "metric": "aa",
+      "partition": "separation",
+      "raw_distance_mae": -0.006817365446666168,
+      "score": 0.0006559763317159202
+    },
+    {
+      "contrast": "start-local",
+      "group": "5+",
+      "gt_distance_mae": -0.010200474387884712,
+      "metric": "aa",
+      "partition": "separation",
+      "raw_distance_mae": -0.03444212465415511,
+      "score": 0.003053173609165072
+    },
+    {
+      "contrast": "start-local",
+      "group": "0.5",
+      "metric": "aa",
+      "partition": "threshold",
+      "score": 0.0021009279468955128
+    },
+    {
+      "contrast": "start-local",
+      "group": "1.0",
+      "metric": "aa",
+      "partition": "threshold",
+      "score": 0.0011354804495981446
+    },
+    {
+      "contrast": "start-local",
+      "group": "2.0",
+      "metric": "aa",
+      "partition": "threshold",
+      "score": 0.0005607278589442817
+    },
+    {
+      "contrast": "start-local",
+      "group": "4.0",
+      "metric": "aa",
+      "partition": "threshold",
+      "score": 0.0002303149034593047
+    },
+    {
+      "contrast": "start-local",
+      "group": "BB:1",
+      "gt_distance_mae": 0.0,
+      "metric": "ca",
+      "partition": "cross",
+      "raw_distance_mae": 0.0,
+      "score": 0.0
+    },
+    {
+      "contrast": "start-local",
+      "group": "BB:2-4",
+      "gt_distance_mae": 0.0,
+      "metric": "ca",
+      "partition": "cross",
+      "raw_distance_mae": 0.0,
+      "score": 0.0
+    },
+    {
+      "contrast": "start-local",
+      "group": "BB:5+",
+      "gt_distance_mae": 0.0,
+      "metric": "ca",
+      "partition": "cross",
+      "raw_distance_mae": 0.0,
+      "score": 0.0
+    },
+    {
+      "contrast": "start-local",
+      "group": "BB",
+      "gt_distance_mae": 0.0,
+      "metric": "ca",
+      "partition": "pair_type",
+      "raw_distance_mae": 0.0,
+      "score": 0.0
+    },
+    {
+      "contrast": "start-local",
+      "group": "1",
+      "gt_distance_mae": 0.0,
+      "metric": "ca",
+      "partition": "separation",
+      "raw_distance_mae": 0.0,
+      "score": 0.0
+    },
+    {
+      "contrast": "start-local",
+      "group": "2-4",
+      "gt_distance_mae": 0.0,
+      "metric": "ca",
+      "partition": "separation",
+      "raw_distance_mae": 0.0,
+      "score": 0.0
+    },
+    {
+      "contrast": "start-local",
+      "group": "5+",
+      "gt_distance_mae": 0.0,
+      "metric": "ca",
+      "partition": "separation",
+      "raw_distance_mae": 0.0,
+      "score": 0.0
+    },
+    {
+      "contrast": "start-local",
+      "group": "0.5",
+      "metric": "ca",
+      "partition": "threshold",
+      "score": 0.0
+    },
+    {
+      "contrast": "start-local",
+      "group": "1.0",
+      "metric": "ca",
+      "partition": "threshold",
+      "score": 0.0
+    },
+    {
+      "contrast": "start-local",
+      "group": "2.0",
+      "metric": "ca",
+      "partition": "threshold",
+      "score": 0.0
+    },
+    {
+      "contrast": "start-local",
+      "group": "4.0",
+      "metric": "ca",
+      "partition": "threshold",
+      "score": 0.0
+    },
+    {
+      "contrast": "warm_final-start",
+      "group": "BB:1",
+      "gt_distance_mae": -0.0009744550876590472,
+      "metric": "aa",
+      "partition": "cross",
+      "raw_distance_mae": 0.0010207063888283904,
+      "score": 0.00023779068395331077
+    },
+    {
+      "contrast": "warm_final-start",
+      "group": "BB:2-4",
+      "gt_distance_mae": -0.0012302938805068902,
+      "metric": "aa",
+      "partition": "cross",
+      "raw_distance_mae": 0.0031060415853614294,
+      "score": 0.00018837676453460354
+    },
+    {
+      "contrast": "warm_final-start",
+      "group": "BB:5+",
+      "gt_distance_mae": 0.0018661528924302179,
+      "metric": "aa",
+      "partition": "cross",
+      "raw_distance_mae": 0.011959189548018207,
+      "score": -0.0004993387194051049
+    },
+    {
+      "contrast": "warm_final-start",
+      "group": "BO:1",
+      "gt_distance_mae": -0.0010436012345636677,
+      "metric": "aa",
+      "partition": "cross",
+      "raw_distance_mae": 0.0016057505911748556,
+      "score": 0.00026562717322669806
+    },
+    {
+      "contrast": "warm_final-start",
+      "group": "BO:2-4",
+      "gt_distance_mae": -0.0018922355088764524,
+      "metric": "aa",
+      "partition": "cross",
+      "raw_distance_mae": 0.003374059526792708,
+      "score": 0.00034093112801344673
+    },
+    {
+      "contrast": "warm_final-start",
+      "group": "BO:5+",
+      "gt_distance_mae": 0.0018430168029394578,
+      "metric": "aa",
+      "partition": "cross",
+      "raw_distance_mae": 0.007945802064858867,
+      "score": 0.00010926969622430354
+    },
+    {
+      "contrast": "warm_final-start",
+      "group": "OO:1",
+      "gt_distance_mae": -0.00037554139022653345,
+      "metric": "aa",
+      "partition": "cross",
+      "raw_distance_mae": 0.0008912605731059024,
+      "score": 6.787632785311849e-05
+    },
+    {
+      "contrast": "warm_final-start",
+      "group": "OO:2-4",
+      "gt_distance_mae": -0.0006215226401313077,
+      "metric": "aa",
+      "partition": "cross",
+      "raw_distance_mae": 0.0006643533891585362,
+      "score": 0.0001080843053235421
+    },
+    {
+      "contrast": "warm_final-start",
+      "group": "OO:5+",
+      "gt_distance_mae": 0.000550286488673561,
+      "metric": "aa",
+      "partition": "cross",
+      "raw_distance_mae": 0.0008785195986326452,
+      "score": 0.0004060114753405316
+    },
+    {
+      "contrast": "warm_final-start",
+      "group": "BB",
+      "gt_distance_mae": -0.0003385960757357282,
+      "metric": "aa",
+      "partition": "pair_type",
+      "raw_distance_mae": 0.01608593752220802,
+      "score": -7.317127091720023e-05
+    },
+    {
+      "contrast": "warm_final-start",
+      "group": "BO",
+      "gt_distance_mae": -0.0010928199405006503,
+      "metric": "aa",
+      "partition": "pair_type",
+      "raw_distance_mae": 0.012925612182826425,
+      "score": 0.0007158279974644466
+    },
+    {
+      "contrast": "warm_final-start",
+      "group": "OO",
+      "gt_distance_mae": -0.0004467775416843,
+      "metric": "aa",
+      "partition": "pair_type",
+      "raw_distance_mae": 0.0024341335608970833,
+      "score": 0.0005819721085172032
+    },
+    {
+      "contrast": "warm_final-start",
+      "group": "1",
+      "gt_distance_mae": -0.0023935977124492497,
+      "metric": "aa",
+      "partition": "separation",
+      "raw_distance_mae": 0.0035177175531091484,
+      "score": 0.0005712941850331302
+    },
+    {
+      "contrast": "warm_final-start",
+      "group": "2-4",
+      "gt_distance_mae": -0.0037440520295146393,
+      "metric": "aa",
+      "partition": "separation",
+      "raw_distance_mae": 0.007144454501312673,
+      "score": 0.0006373921978715956
+    },
+    {
+      "contrast": "warm_final-start",
+      "group": "5+",
+      "gt_distance_mae": 0.004259456184043252,
+      "metric": "aa",
+      "partition": "separation",
+      "raw_distance_mae": 0.02078351121150972,
+      "score": 1.5942452159713382e-05
+    },
+    {
+      "contrast": "warm_final-start",
+      "group": "0.5",
+      "metric": "aa",
+      "partition": "threshold",
+      "score": 0.0010469563685266434
+    },
+    {
+      "contrast": "warm_final-start",
+      "group": "1.0",
+      "metric": "aa",
+      "partition": "threshold",
+      "score": 0.00042113538622799506
+    },
+    {
+      "contrast": "warm_final-start",
+      "group": "2.0",
+      "metric": "aa",
+      "partition": "threshold",
+      "score": -2.7672873608251625e-05
+    },
+    {
+      "contrast": "warm_final-start",
+      "group": "4.0",
+      "metric": "aa",
+      "partition": "threshold",
+      "score": -0.00021579004608193928
+    },
+    {
+      "contrast": "warm_final-start",
+      "group": "BB:1",
+      "gt_distance_mae": -0.006060625614414157,
+      "metric": "ca",
+      "partition": "cross",
+      "raw_distance_mae": 0.006822010226198307,
+      "score": 0.0014145980880318244
+    },
+    {
+      "contrast": "warm_final-start",
+      "group": "BB:2-4",
+      "gt_distance_mae": -0.005293887559890973,
+      "metric": "ca",
+      "partition": "cross",
+      "raw_distance_mae": 0.01833182519756044,
+      "score": 0.0009960626780078333
+    },
+    {
+      "contrast": "warm_final-start",
+      "group": "BB:5+",
+      "gt_distance_mae": 0.011295049931645153,
+      "metric": "ca",
+      "partition": "cross",
+      "raw_distance_mae": 0.06867344581016863,
+      "score": -0.002351693434005399
+    },
+    {
+      "contrast": "warm_final-start",
+      "group": "BB",
+      "gt_distance_mae": -5.9463242659975125e-05,
+      "metric": "ca",
+      "partition": "pair_type",
+      "raw_distance_mae": 0.09382728123392738,
+      "score": 5.896733203421466e-05
+    },
+    {
+      "contrast": "warm_final-start",
+      "group": "1",
+      "gt_distance_mae": -0.006060625614414157,
+      "metric": "ca",
+      "partition": "separation",
+      "raw_distance_mae": 0.006822010226198307,
+      "score": 0.0014145980880318244
+    },
+    {
+      "contrast": "warm_final-start",
+      "group": "2-4",
+      "gt_distance_mae": -0.005293887559890973,
+      "metric": "ca",
+      "partition": "separation",
+      "raw_distance_mae": 0.01833182519756044,
+      "score": 0.0009960626780078333
+    },
+    {
+      "contrast": "warm_final-start",
+      "group": "5+",
+      "gt_distance_mae": 0.011295049931645153,
+      "metric": "ca",
+      "partition": "separation",
+      "raw_distance_mae": 0.06867344581016863,
+      "score": -0.002351693434005399
+    },
+    {
+      "contrast": "warm_final-start",
+      "group": "0.5",
+      "metric": "ca",
+      "partition": "threshold",
+      "score": 0.0004167880975775901
+    },
+    {
+      "contrast": "warm_final-start",
+      "group": "1.0",
+      "metric": "ca",
+      "partition": "threshold",
+      "score": 0.00010665138557731737
+    },
+    {
+      "contrast": "warm_final-start",
+      "group": "2.0",
+      "metric": "ca",
+      "partition": "threshold",
+      "score": -0.00015946995897827315
+    },
+    {
+      "contrast": "warm_final-start",
+      "group": "4.0",
+      "metric": "ca",
+      "partition": "threshold",
+      "score": -0.000305002192142384
+    },
+    {
+      "contrast": "zero_final-local",
+      "group": "BB:1",
+      "gt_distance_mae": -0.0009631143021150017,
+      "metric": "aa",
+      "partition": "cross",
+      "raw_distance_mae": 0.0010729669012395642,
+      "score": 0.00023656928165298043
+    },
+    {
+      "contrast": "zero_final-local",
+      "group": "BB:2-4",
+      "gt_distance_mae": -0.0012170926163793123,
+      "metric": "aa",
+      "partition": "cross",
+      "raw_distance_mae": 0.0033432353165101084,
+      "score": 0.00019851350481518804
+    },
+    {
+      "contrast": "zero_final-local",
+      "group": "BB:5+",
+      "gt_distance_mae": 0.002144910595513467,
+      "metric": "aa",
+      "partition": "cross",
+      "raw_distance_mae": 0.01334396857704188,
+      "score": -0.0005627769182718603
+    },
+    {
+      "contrast": "zero_final-local",
+      "group": "BO:1",
+      "gt_distance_mae": -0.0013740320709997131,
+      "metric": "aa",
+      "partition": "cross",
+      "raw_distance_mae": 0.001178507677497859,
+      "score": 0.00033127999488682426
+    },
+    {
+      "contrast": "zero_final-local",
+      "group": "BO:2-4",
+      "gt_distance_mae": -0.0030598654574604867,
+      "metric": "aa",
+      "partition": "cross",
+      "raw_distance_mae": 0.00099506849739907,
+      "score": 0.0006447206222429684
+    },
+    {
+      "contrast": "zero_final-local",
+      "group": "BO:5+",
+      "gt_distance_mae": -0.0030398401427752975,
+      "metric": "aa",
+      "partition": "cross",
+      "raw_distance_mae": -0.004192268981974383,
+      "score": 0.0017273335085257588
+    },
+    {
+      "contrast": "zero_final-local",
+      "group": "OO:1",
+      "gt_distance_mae": -0.0007141547773536337,
+      "metric": "aa",
+      "partition": "cross",
+      "raw_distance_mae": 0.0003773444734188697,
+      "score": 0.00014164320709781158
+    },
+    {
+      "contrast": "zero_final-local",
+      "group": "OO:2-4",
+      "gt_distance_mae": -0.001377139333763343,
+      "metric": "aa",
+      "partition": "cross",
+      "raw_distance_mae": -0.001262346311577028,
+      "score": 0.000344254543148791
+    },
+    {
+      "contrast": "zero_final-local",
+      "group": "OO:5+",
+      "gt_distance_mae": -0.003222207928439452,
+      "metric": "aa",
+      "partition": "cross",
+      "raw_distance_mae": -0.008900943186720764,
+      "score": 0.001533813730596498
+    },
+    {
+      "contrast": "zero_final-local",
+      "group": "BB",
+      "gt_distance_mae": -3.5296322980849546e-05,
+      "metric": "aa",
+      "partition": "pair_type",
+      "raw_distance_mae": 0.01776017079479155,
+      "score": -0.00012769413180368266
+    },
+    {
+      "contrast": "zero_final-local",
+      "group": "BO",
+      "gt_distance_mae": -0.007473737671235446,
+      "metric": "aa",
+      "partition": "pair_type",
+      "raw_distance_mae": -0.002018692807077433,
+      "score": 0.002703334125655571
+    },
+    {
+      "contrast": "zero_final-local",
+      "group": "OO",
+      "gt_distance_mae": -0.005313502039556445,
+      "metric": "aa",
+      "partition": "pair_type",
+      "raw_distance_mae": -0.009785945024878917,
+      "score": 0.002019711480843101
+    },
+    {
+      "contrast": "zero_final-local",
+      "group": "1",
+      "gt_distance_mae": -0.0030513011504683463,
+      "metric": "aa",
+      "partition": "separation",
+      "raw_distance_mae": 0.002628819052156294,
+      "score": 0.0007094924836376151
+    },
+    {
+      "contrast": "zero_final-local",
+      "group": "2-4",
+      "gt_distance_mae": -0.005654097407603147,
+      "metric": "aa",
+      "partition": "separation",
+      "raw_distance_mae": 0.0030759575023321514,
+      "score": 0.001187488670206944
+    },
+    {
+      "contrast": "zero_final-local",
+      "group": "5+",
+      "gt_distance_mae": -0.004117137475701277,
+      "metric": "aa",
+      "partition": "separation",
+      "raw_distance_mae": 0.000250756408346758,
+      "score": 0.0026983703208503357
+    },
+    {
+      "contrast": "zero_final-local",
+      "group": "0.5",
+      "metric": "aa",
+      "partition": "threshold",
+      "score": 0.0028229290697526816
+    },
+    {
+      "contrast": "zero_final-local",
+      "group": "1.0",
+      "metric": "aa",
+      "partition": "threshold",
+      "score": 0.0013392081561952002
+    },
+    {
+      "contrast": "zero_final-local",
+      "group": "2.0",
+      "metric": "aa",
+      "partition": "threshold",
+      "score": 0.0005042617553876709
+    },
+    {
+      "contrast": "zero_final-local",
+      "group": "4.0",
+      "metric": "aa",
+      "partition": "threshold",
+      "score": -7.104750664058532e-05
+    },
+    {
+      "contrast": "zero_final-local",
+      "group": "BB:1",
+      "gt_distance_mae": -0.006093048687525992,
+      "metric": "ca",
+      "partition": "cross",
+      "raw_distance_mae": 0.00692450379915074,
+      "score": 0.001406406454502634
+    },
+    {
+      "contrast": "zero_final-local",
+      "group": "BB:2-4",
+      "gt_distance_mae": -0.005497954985077506,
+      "metric": "ca",
+      "partition": "cross",
+      "raw_distance_mae": 0.019063148271568988,
+      "score": 0.001141400790539683
+    },
+    {
+      "contrast": "zero_final-local",
+      "group": "BB:5+",
+      "gt_distance_mae": 0.011815713728962039,
+      "metric": "ca",
+      "partition": "cross",
+      "raw_distance_mae": 0.07282989332051835,
+      "score": -0.00212693609016685
+    },
+    {
+      "contrast": "zero_final-local",
+      "group": "BB",
+      "gt_distance_mae": 0.00022471005635852994,
+      "metric": "ca",
+      "partition": "pair_type",
+      "raw_distance_mae": 0.09881754539123809,
+      "score": 0.00042087115487547477
+    },
+    {
+      "contrast": "zero_final-local",
+      "group": "1",
+      "gt_distance_mae": -0.006093048687525992,
+      "metric": "ca",
+      "partition": "separation",
+      "raw_distance_mae": 0.00692450379915074,
+      "score": 0.001406406454502634
+    },
+    {
+      "contrast": "zero_final-local",
+      "group": "2-4",
+      "gt_distance_mae": -0.005497954985077506,
+      "metric": "ca",
+      "partition": "separation",
+      "raw_distance_mae": 0.019063148271568988,
+      "score": 0.001141400790539683
+    },
+    {
+      "contrast": "zero_final-local",
+      "group": "5+",
+      "gt_distance_mae": 0.011815713728962039,
+      "metric": "ca",
+      "partition": "separation",
+      "raw_distance_mae": 0.07282989332051835,
+      "score": -0.00212693609016685
+    },
+    {
+      "contrast": "zero_final-local",
+      "group": "0.5",
+      "metric": "ca",
+      "partition": "threshold",
+      "score": 0.0005131004166811821
+    },
+    {
+      "contrast": "zero_final-local",
+      "group": "1.0",
+      "metric": "ca",
+      "partition": "threshold",
+      "score": 0.00019036482318111298
+    },
+    {
+      "contrast": "zero_final-local",
+      "group": "2.0",
+      "metric": "ca",
+      "partition": "threshold",
+      "score": 3.183491492863725e-05
+    },
+    {
+      "contrast": "zero_final-local",
+      "group": "4.0",
+      "metric": "ca",
+      "partition": "threshold",
+      "score": -0.00031442899991545947
+    },
+    {
+      "contrast": "warm_final-zero_final",
+      "group": "BB:1",
+      "gt_distance_mae": -1.1340785544045663e-05,
+      "metric": "aa",
+      "partition": "cross",
+      "raw_distance_mae": -5.226051241117385e-05,
+      "score": 1.2214023003303602e-06
+    },
+    {
+      "contrast": "warm_final-zero_final",
+      "group": "BB:2-4",
+      "gt_distance_mae": -1.320126412757814e-05,
+      "metric": "aa",
+      "partition": "cross",
+      "raw_distance_mae": -0.00023719373114867927,
+      "score": -1.0136740280584475e-05
+    },
+    {
+      "contrast": "warm_final-zero_final",
+      "group": "BB:5+",
+      "gt_distance_mae": -0.00027875770308325137,
+      "metric": "aa",
+      "partition": "cross",
+      "raw_distance_mae": -0.0013847790290236763,
+      "score": 6.343819886675539e-05
+    },
+    {
+      "contrast": "warm_final-zero_final",
+      "group": "BO:1",
+      "gt_distance_mae": -0.00022335500900589844,
+      "metric": "aa",
+      "partition": "cross",
+      "raw_distance_mae": -0.00040009247582363484,
+      "score": 7.04127483746156e-05
+    },
+    {
+      "contrast": "warm_final-zero_final",
+      "group": "BO:2-4",
+      "gt_distance_mae": -0.00040566778168031663,
+      "metric": "aa",
+      "partition": "cross",
+      "raw_distance_mae": -0.0014318141428093585,
+      "score": 9.07933148412862e-05
+    },
+    {
+      "contrast": "warm_final-zero_final",
+      "group": "BO:5+",
+      "gt_distance_mae": -0.0007536712436539991,
+      "metric": "aa",
+      "partition": "cross",
+      "raw_distance_mae": -0.007048040114869762,
+      "score": 0.00018632981990784097
+    },
+    {
+      "contrast": "warm_final-zero_final",
+      "group": "OO:1",
+      "gt_distance_mae": -0.00047989711763858254,
+      "metric": "aa",
+      "partition": "cross",
+      "raw_distance_mae": -0.0002895126691167582,
+      "score": 0.00010846876873678463
+    },
+    {
+      "contrast": "warm_final-zero_final",
+      "group": "OO:2-4",
+      "gt_distance_mae": -0.0001827606658271207,
+      "metric": "aa",
+      "partition": "cross",
+      "raw_distance_mae": -0.0010798605737276092,
+      "score": 2.522328481985997e-05
+    },
+    {
+      "contrast": "warm_final-zero_final",
+      "group": "OO:5+",
+      "gt_distance_mae": -0.0007914517814029538,
+      "metric": "aa",
+      "partition": "cross",
+      "raw_distance_mae": -0.005476550707098708,
+      "score": 0.00012097772169984799
+    },
+    {
+      "contrast": "warm_final-zero_final",
+      "group": "BB",
+      "gt_distance_mae": -0.0003032997527548812,
+      "metric": "aa",
+      "partition": "pair_type",
+      "raw_distance_mae": -0.001674233272583528,
+      "score": 5.452286088648244e-05
+    },
+    {
+      "contrast": "warm_final-zero_final",
+      "group": "BO",
+      "gt_distance_mae": -0.001382694034340207,
+      "metric": "aa",
+      "partition": "pair_type",
+      "raw_distance_mae": -0.008879946733502762,
+      "score": 0.00034753588312372297
+    },
+    {
+      "contrast": "warm_final-zero_final",
+      "group": "OO",
+      "gt_distance_mae": -0.0014541095648686509,
+      "metric": "aa",
+      "partition": "pair_type",
+      "raw_distance_mae": -0.006845923949943078,
+      "score": 0.0002546697752565029
+    },
+    {
+      "contrast": "warm_final-zero_final",
+      "group": "1",
+      "gt_distance_mae": -0.0007145929121885289,
+      "metric": "aa",
+      "partition": "separation",
+      "raw_distance_mae": -0.000741865657351568,
+      "score": 0.0001801029194117337
+    },
+    {
+      "contrast": "warm_final-zero_final",
+      "group": "2-4",
+      "gt_distance_mae": -0.0006016297116350102,
+      "metric": "aa",
+      "partition": "separation",
+      "raw_distance_mae": -0.0027488684476856466,
+      "score": 0.00010587985938057185
+    },
+    {
+      "contrast": "warm_final-zero_final",
+      "group": "5+",
+      "gt_distance_mae": -0.001823880728140183,
+      "metric": "aa",
+      "partition": "separation",
+      "raw_distance_mae": -0.013909369850992153,
+      "score": 0.0003707457404744493
+    },
+    {
+      "contrast": "warm_final-zero_final",
+      "group": "0.5",
+      "metric": "aa",
+      "partition": "threshold",
+      "score": 0.00032495524566947465
+    },
+    {
+      "contrast": "warm_final-zero_final",
+      "group": "1.0",
+      "metric": "aa",
+      "partition": "threshold",
+      "score": 0.00021740767963093963
+    },
+    {
+      "contrast": "warm_final-zero_final",
+      "group": "2.0",
+      "metric": "aa",
+      "partition": "threshold",
+      "score": 2.8793229948359138e-05
+    },
+    {
+      "contrast": "warm_final-zero_final",
+      "group": "4.0",
+      "metric": "aa",
+      "partition": "threshold",
+      "score": 8.557236401795074e-05
+    },
+    {
+      "contrast": "warm_final-zero_final",
+      "group": "BB:1",
+      "gt_distance_mae": 3.242307311183489e-05,
+      "metric": "ca",
+      "partition": "cross",
+      "raw_distance_mae": -0.00010249357295243274,
+      "score": 8.191633529190568e-06
+    },
+    {
+      "contrast": "warm_final-zero_final",
+      "group": "BB:2-4",
+      "gt_distance_mae": 0.00020406742518653428,
+      "metric": "ca",
+      "partition": "cross",
+      "raw_distance_mae": -0.0007313230740085482,
+      "score": -0.00014533811253184973
+    },
+    {
+      "contrast": "warm_final-zero_final",
+      "group": "BB:5+",
+      "gt_distance_mae": -0.0005206637973168857,
+      "metric": "ca",
+      "partition": "cross",
+      "raw_distance_mae": -0.004156447510349718,
+      "score": -0.00022475734383854893
+    },
+    {
+      "contrast": "warm_final-zero_final",
+      "group": "BB",
+      "gt_distance_mae": -0.0002841732990185051,
+      "metric": "ca",
+      "partition": "pair_type",
+      "raw_distance_mae": -0.004990264157310712,
+      "score": -0.00036190382284126014
+    },
+    {
+      "contrast": "warm_final-zero_final",
+      "group": "1",
+      "gt_distance_mae": 3.242307311183489e-05,
+      "metric": "ca",
+      "partition": "separation",
+      "raw_distance_mae": -0.00010249357295243274,
+      "score": 8.191633529190568e-06
+    },
+    {
+      "contrast": "warm_final-zero_final",
+      "group": "2-4",
+      "gt_distance_mae": 0.00020406742518653428,
+      "metric": "ca",
+      "partition": "separation",
+      "raw_distance_mae": -0.0007313230740085482,
+      "score": -0.00014533811253184973
+    },
+    {
+      "contrast": "warm_final-zero_final",
+      "group": "5+",
+      "gt_distance_mae": -0.0005206637973168857,
+      "metric": "ca",
+      "partition": "separation",
+      "raw_distance_mae": -0.004156447510349718,
+      "score": -0.00022475734383854893
+    },
+    {
+      "contrast": "warm_final-zero_final",
+      "group": "0.5",
+      "metric": "ca",
+      "partition": "threshold",
+      "score": -9.631231910359195e-05
+    },
+    {
+      "contrast": "warm_final-zero_final",
+      "group": "1.0",
+      "metric": "ca",
+      "partition": "threshold",
+      "score": -8.37134376037956e-05
+    },
+    {
+      "contrast": "warm_final-zero_final",
+      "group": "2.0",
+      "metric": "ca",
+      "partition": "threshold",
+      "score": -0.0001913048739069104
+    },
+    {
+      "contrast": "warm_final-zero_final",
+      "group": "4.0",
+      "metric": "ca",
+      "partition": "threshold",
+      "score": 9.42680777307549e-06
+    },
+    {
+      "contrast": "warm_final-raw",
+      "group": "BB:1",
+      "gt_distance_mae": -0.0010195647010358762,
+      "metric": "aa",
+      "partition": "cross",
+      "raw_distance_mae": 0.0018464894110840158,
+      "score": 0.00026733019443262455
+    },
+    {
+      "contrast": "warm_final-raw",
+      "group": "BB:2-4",
+      "gt_distance_mae": -0.0009330670341388993,
+      "metric": "aa",
+      "partition": "cross",
+      "raw_distance_mae": 0.005366109010417564,
+      "score": 0.0001392875939343098
+    },
+    {
+      "contrast": "warm_final-raw",
+      "group": "BB:5+",
+      "gt_distance_mae": 0.002761568978441144,
+      "metric": "aa",
+      "partition": "cross",
+      "raw_distance_mae": 0.02300230438075371,
+      "score": -0.0006451391649962438
+    },
+    {
+      "contrast": "warm_final-raw",
+      "group": "BO:1",
+      "gt_distance_mae": -0.0010373119785842247,
+      "metric": "aa",
+      "partition": "cross",
+      "raw_distance_mae": 0.006976607951826862,
+      "score": 0.00028323867852722014
+    },
+    {
+      "contrast": "warm_final-raw",
+      "group": "BO:2-4",
+      "gt_distance_mae": 0.0006673434518852074,
+      "metric": "aa",
+      "partition": "cross",
+      "raw_distance_mae": 0.018968778078752902,
+      "score": -0.00023893507114773515
+    },
+    {
+      "contrast": "warm_final-raw",
+      "group": "BO:5+",
+      "gt_distance_mae": 0.018562123461330356,
+      "metric": "aa",
+      "partition": "cross",
+      "raw_distance_mae": 0.08231043782432783,
+      "score": -0.004532965663823928
+    },
+    {
+      "contrast": "warm_final-raw",
+      "group": "OO:1",
+      "gt_distance_mae": 9.995803199817847e-05,
+      "metric": "aa",
+      "partition": "cross",
+      "raw_distance_mae": 0.005039507548691541,
+      "score": -9.107269747128542e-05
+    },
+    {
+      "contrast": "warm_final-raw",
+      "group": "OO:2-4",
+      "gt_distance_mae": 0.0014426412780369974,
+      "metric": "aa",
+      "partition": "cross",
+      "raw_distance_mae": 0.011656013308879363,
+      "score": -0.0003714656920622534
+    },
+    {
+      "contrast": "warm_final-raw",
+      "group": "OO:5+",
+      "gt_distance_mae": 0.013485904838840703,
+      "metric": "aa",
+      "partition": "cross",
+      "raw_distance_mae": 0.05348714318005312,
+      "score": -0.0031138351746583626
+    },
+    {
+      "contrast": "warm_final-raw",
+      "group": "BB",
+      "gt_distance_mae": 0.0008089372432663769,
+      "metric": "aa",
+      "partition": "pair_type",
+      "raw_distance_mae": 0.030214902802255295,
+      "score": -0.00023852137662930855
+    },
+    {
+      "contrast": "warm_final-raw",
+      "group": "BO",
+      "gt_distance_mae": 0.018192154934631413,
+      "metric": "aa",
+      "partition": "pair_type",
+      "raw_distance_mae": 0.10825582385490759,
+      "score": -0.004488662056444445
+    },
+    {
+      "contrast": "warm_final-raw",
+      "group": "OO",
+      "gt_distance_mae": 0.015028504148875882,
+      "metric": "aa",
+      "partition": "pair_type",
+      "raw_distance_mae": 0.07018266403762403,
+      "score": -0.0035763735641918953
+    },
+    {
+      "contrast": "warm_final-raw",
+      "group": "1",
+      "gt_distance_mae": -0.001956918647621924,
+      "metric": "aa",
+      "partition": "separation",
+      "raw_distance_mae": 0.013862604911602417,
+      "score": 0.0004594961754885594
+    },
+    {
+      "contrast": "warm_final-raw",
+      "group": "2-4",
+      "gt_distance_mae": 0.001176917695783319,
+      "metric": "aa",
+      "partition": "separation",
+      "raw_distance_mae": 0.03599090039804983,
+      "score": -0.00047111316927567697
+    },
+    {
+      "contrast": "warm_final-raw",
+      "group": "5+",
+      "gt_distance_mae": 0.034809597278612284,
+      "metric": "aa",
+      "partition": "separation",
+      "raw_distance_mae": 0.15879988538513468,
+      "score": -0.008291940003478517
+    },
+    {
+      "contrast": "warm_final-raw",
+      "group": "0.5",
+      "metric": "aa",
+      "partition": "threshold",
+      "score": -0.003566255054739361
+    },
+    {
+      "contrast": "warm_final-raw",
+      "group": "1.0",
+      "metric": "aa",
+      "partition": "threshold",
+      "score": -0.002369022087799752
+    },
+    {
+      "contrast": "warm_final-raw",
+      "group": "2.0",
+      "metric": "aa",
+      "partition": "threshold",
+      "score": -0.0016696748423412503
+    },
+    {
+      "contrast": "warm_final-raw",
+      "group": "4.0",
+      "metric": "aa",
+      "partition": "threshold",
+      "score": -0.0006986050123853001
+    },
+    {
+      "contrast": "warm_final-raw",
+      "group": "BB:1",
+      "gt_distance_mae": -0.006060625614414157,
+      "metric": "ca",
+      "partition": "cross",
+      "raw_distance_mae": 0.006822010226198307,
+      "score": 0.0014145980880318244
+    },
+    {
+      "contrast": "warm_final-raw",
+      "group": "BB:2-4",
+      "gt_distance_mae": -0.005293887559890973,
+      "metric": "ca",
+      "partition": "cross",
+      "raw_distance_mae": 0.01833182519756044,
+      "score": 0.0009960626780078333
+    },
+    {
+      "contrast": "warm_final-raw",
+      "group": "BB:5+",
+      "gt_distance_mae": 0.011295049931645153,
+      "metric": "ca",
+      "partition": "cross",
+      "raw_distance_mae": 0.06867344581016863,
+      "score": -0.002351693434005399
+    },
+    {
+      "contrast": "warm_final-raw",
+      "group": "BB",
+      "gt_distance_mae": -5.9463242659975125e-05,
+      "metric": "ca",
+      "partition": "pair_type",
+      "raw_distance_mae": 0.09382728123392738,
+      "score": 5.896733203421466e-05
+    },
+    {
+      "contrast": "warm_final-raw",
+      "group": "1",
+      "gt_distance_mae": -0.006060625614414157,
+      "metric": "ca",
+      "partition": "separation",
+      "raw_distance_mae": 0.006822010226198307,
+      "score": 0.0014145980880318244
+    },
+    {
+      "contrast": "warm_final-raw",
+      "group": "2-4",
+      "gt_distance_mae": -0.005293887559890973,
+      "metric": "ca",
+      "partition": "separation",
+      "raw_distance_mae": 0.01833182519756044,
+      "score": 0.0009960626780078333
+    },
+    {
+      "contrast": "warm_final-raw",
+      "group": "5+",
+      "gt_distance_mae": 0.011295049931645153,
+      "metric": "ca",
+      "partition": "separation",
+      "raw_distance_mae": 0.06867344581016863,
+      "score": -0.002351693434005399
+    },
+    {
+      "contrast": "warm_final-raw",
+      "group": "0.5",
+      "metric": "ca",
+      "partition": "threshold",
+      "score": 0.0004167880975775901
+    },
+    {
+      "contrast": "warm_final-raw",
+      "group": "1.0",
+      "metric": "ca",
+      "partition": "threshold",
+      "score": 0.00010665138557731737
+    },
+    {
+      "contrast": "warm_final-raw",
+      "group": "2.0",
+      "metric": "ca",
+      "partition": "threshold",
+      "score": -0.00015946995897827315
+    },
+    {
+      "contrast": "warm_final-raw",
+      "group": "4.0",
+      "metric": "ca",
+      "partition": "threshold",
+      "score": -0.000305002192142384
+    },
+    {
+      "contrast": "zero_final-raw",
+      "group": "BB:1",
+      "gt_distance_mae": -0.0010082239154918307,
+      "metric": "aa",
+      "partition": "cross",
+      "raw_distance_mae": 0.0018987499234951897,
+      "score": 0.0002661087921322942
+    },
+    {
+      "contrast": "zero_final-raw",
+      "group": "BB:2-4",
+      "gt_distance_mae": -0.0009198657700113212,
+      "metric": "aa",
+      "partition": "cross",
+      "raw_distance_mae": 0.005603302741566244,
+      "score": 0.00014942433421489428
+    },
+    {
+      "contrast": "zero_final-raw",
+      "group": "BB:5+",
+      "gt_distance_mae": 0.0030403266815243954,
+      "metric": "aa",
+      "partition": "cross",
+      "raw_distance_mae": 0.02438708340977739,
+      "score": -0.0007085773638629991
+    },
+    {
+      "contrast": "zero_final-raw",
+      "group": "BO:1",
+      "gt_distance_mae": -0.0008139569695783262,
+      "metric": "aa",
+      "partition": "cross",
+      "raw_distance_mae": 0.0073767004276504965,
+      "score": 0.00021282593015260455
+    },
+    {
+      "contrast": "zero_final-raw",
+      "group": "BO:2-4",
+      "gt_distance_mae": 0.001073011233565524,
+      "metric": "aa",
+      "partition": "cross",
+      "raw_distance_mae": 0.020400592221562264,
+      "score": -0.00032972838598902134
+    },
+    {
+      "contrast": "zero_final-raw",
+      "group": "BO:5+",
+      "gt_distance_mae": 0.019315794704984356,
+      "metric": "aa",
+      "partition": "cross",
+      "raw_distance_mae": 0.0893584779391976,
+      "score": -0.004719295483731769
+    },
+    {
+      "contrast": "zero_final-raw",
+      "group": "OO:1",
+      "gt_distance_mae": 0.000579855149636761,
+      "metric": "aa",
+      "partition": "cross",
+      "raw_distance_mae": 0.005329020217808299,
+      "score": -0.00019954146620807005
+    },
+    {
+      "contrast": "zero_final-raw",
+      "group": "OO:2-4",
+      "gt_distance_mae": 0.001625401943864118,
+      "metric": "aa",
+      "partition": "cross",
+      "raw_distance_mae": 0.012735873882606974,
+      "score": -0.00039668897688211336
+    },
+    {
+      "contrast": "zero_final-raw",
+      "group": "OO:5+",
+      "gt_distance_mae": 0.014277356620243657,
+      "metric": "aa",
+      "partition": "cross",
+      "raw_distance_mae": 0.05896369388715183,
+      "score": -0.0032348128963582104
+    },
+    {
+      "contrast": "zero_final-raw",
+      "group": "BB",
+      "gt_distance_mae": 0.001112236996021258,
+      "metric": "aa",
+      "partition": "pair_type",
+      "raw_distance_mae": 0.03188913607483882,
+      "score": -0.000293044237515791
+    },
+    {
+      "contrast": "zero_final-raw",
+      "group": "BO",
+      "gt_distance_mae": 0.01957484896897162,
+      "metric": "aa",
+      "partition": "pair_type",
+      "raw_distance_mae": 0.11713577058841033,
+      "score": -0.004836197939568168
+    },
+    {
+      "contrast": "zero_final-raw",
+      "group": "OO",
+      "gt_distance_mae": 0.016482613713744532,
+      "metric": "aa",
+      "partition": "pair_type",
+      "raw_distance_mae": 0.07702858798756711,
+      "score": -0.0038310433394483983
+    },
+    {
+      "contrast": "zero_final-raw",
+      "group": "1",
+      "gt_distance_mae": -0.0012423257354333952,
+      "metric": "aa",
+      "partition": "separation",
+      "raw_distance_mae": 0.014604470568953986,
+      "score": 0.0002793932560768257
+    },
+    {
+      "contrast": "zero_final-raw",
+      "group": "2-4",
+      "gt_distance_mae": 0.001778547407418329,
+      "metric": "aa",
+      "partition": "separation",
+      "raw_distance_mae": 0.03873976884573548,
+      "score": -0.0005769930286562489
+    },
+    {
+      "contrast": "zero_final-raw",
+      "group": "5+",
+      "gt_distance_mae": 0.036633478006752464,
+      "metric": "aa",
+      "partition": "separation",
+      "raw_distance_mae": 0.17270925523612682,
+      "score": -0.008662685743952967
+    },
+    {
+      "contrast": "zero_final-raw",
+      "group": "0.5",
+      "metric": "aa",
+      "partition": "threshold",
+      "score": -0.003891210300408836
+    },
+    {
+      "contrast": "zero_final-raw",
+      "group": "1.0",
+      "metric": "aa",
+      "partition": "threshold",
+      "score": -0.002586429767430692
+    },
+    {
+      "contrast": "zero_final-raw",
+      "group": "2.0",
+      "metric": "aa",
+      "partition": "threshold",
+      "score": -0.0016984680722896095
+    },
+    {
+      "contrast": "zero_final-raw",
+      "group": "4.0",
+      "metric": "aa",
+      "partition": "threshold",
+      "score": -0.0007841773764032509
+    },
+    {
+      "contrast": "zero_final-raw",
+      "group": "BB:1",
+      "gt_distance_mae": -0.006093048687525992,
+      "metric": "ca",
+      "partition": "cross",
+      "raw_distance_mae": 0.00692450379915074,
+      "score": 0.001406406454502634
+    },
+    {
+      "contrast": "zero_final-raw",
+      "group": "BB:2-4",
+      "gt_distance_mae": -0.005497954985077506,
+      "metric": "ca",
+      "partition": "cross",
+      "raw_distance_mae": 0.019063148271568988,
+      "score": 0.001141400790539683
+    },
+    {
+      "contrast": "zero_final-raw",
+      "group": "BB:5+",
+      "gt_distance_mae": 0.011815713728962039,
+      "metric": "ca",
+      "partition": "cross",
+      "raw_distance_mae": 0.07282989332051835,
+      "score": -0.00212693609016685
+    },
+    {
+      "contrast": "zero_final-raw",
+      "group": "BB",
+      "gt_distance_mae": 0.00022471005635852994,
+      "metric": "ca",
+      "partition": "pair_type",
+      "raw_distance_mae": 0.09881754539123809,
+      "score": 0.00042087115487547477
+    },
+    {
+      "contrast": "zero_final-raw",
+      "group": "1",
+      "gt_distance_mae": -0.006093048687525992,
+      "metric": "ca",
+      "partition": "separation",
+      "raw_distance_mae": 0.00692450379915074,
+      "score": 0.001406406454502634
+    },
+    {
+      "contrast": "zero_final-raw",
+      "group": "2-4",
+      "gt_distance_mae": -0.005497954985077506,
+      "metric": "ca",
+      "partition": "separation",
+      "raw_distance_mae": 0.019063148271568988,
+      "score": 0.001141400790539683
+    },
+    {
+      "contrast": "zero_final-raw",
+      "group": "5+",
+      "gt_distance_mae": 0.011815713728962039,
+      "metric": "ca",
+      "partition": "separation",
+      "raw_distance_mae": 0.07282989332051835,
+      "score": -0.00212693609016685
+    },
+    {
+      "contrast": "zero_final-raw",
+      "group": "0.5",
+      "metric": "ca",
+      "partition": "threshold",
+      "score": 0.0005131004166811821
+    },
+    {
+      "contrast": "zero_final-raw",
+      "group": "1.0",
+      "metric": "ca",
+      "partition": "threshold",
+      "score": 0.00019036482318111298
+    },
+    {
+      "contrast": "zero_final-raw",
+      "group": "2.0",
+      "metric": "ca",
+      "partition": "threshold",
+      "score": 3.183491492863725e-05
+    },
+    {
+      "contrast": "zero_final-raw",
+      "group": "4.0",
+      "metric": "ca",
+      "partition": "threshold",
+      "score": -0.00031442899991545947
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "python": "3.12.7",
+  "numpy": "1.26.4",
+  "scipy": "1.17.0",
+  "torch": "2.9.1+rocm7.2.0.git7e1940d4",
+  "device": "CPU",
+  "new_model_calls": 0,
+  "new_solver_calls": 0,
+  "commands": [
+    "PYTHONPATH=src python scripts/analyze_joint_tradeoffs.py --source reports/mini_sidechain_joint_start_2026-09-30 --output reports/mini_joint_tradeoff_attribution_2026-09-30",
+    "PYTHONPATH=src python scripts/verify_joint_tradeoffs.py --root reports/mini_joint_tradeoff_attribution_2026-09-30"
+  ],
+  "exit_codes": [
+    0,
+    0
+  ]
+}

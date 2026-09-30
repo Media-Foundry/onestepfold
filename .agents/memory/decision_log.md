@@ -1,3 +1,44 @@
+## 2026-09-30 — Archived joint tradeoff attribution completed; stop initialization tracing
+
+Previous760c55ea was progress:14new global solves+14controls, qualityscreenFAIL but
+lower objective12/14. This turn performed CPU read-only attribution of that SAME
+archive; no model/solver/training/GT-dependent selection/independent32 access.
+Five states raw/local/start/zero_final/warm_final xAA/CA independently normalized:
+140 dense matrices,2100 additive partitions,1440 protein/overallcontrast rows all
+verified;maxpartition6.66e-16,summary0,objectivesum6.82e-14. Source/member/report/
+code hashes bound. New scripts analyze_joint_tradeoffs.py,verify_joint_tradeoffs.py;
+protocol mini_joint_tradeoff_attribution_v1.md; findings mini_joint_tradeoff_findings_2026-09-30.md;
+reports/mini_joint_tradeoff_attribution_2026-09-30. Local Python/NumPy/SciPy/Torch
+versions+commands inruntime.json. All processes terminal, no remote compute launched.
+Objective mean reduction-.042491:rawcoordinateanchor-.0466813,rotation-.0001006,
+torsion+.0003957,connection+.0001660,meanrepulsion+.0037292,tail/budget0. Anchor/
+angles/connection/budget recomputed;repulsionterms reuse prior independently audited
+source explicitly. Additive accounting is notcausal mechanism.
+CA-lDDT -.000361904 but continuousGT distanceMAE .487798640->.487514467 (BETTER),
+rawdistanceMAE .098817545->.093827281.5/7proteins CA GTMAE improve vs2/7CA-lDDT.
+Old FAIL retained; do notclaimglobalbone worsening or change gate toMAE. CAthreshold
+contributions(.5/1/2/4):-.00009631/-.00008371/-.00019130/+.00000943. Notroundingproof.
+Warm joint still improves its ownstart AA+.001224629,GTdistanceMAE-.001878194;
+shrinking relativeadvantage also includeszero armcatch-up, notwholesale destruction.
+Warm joint-start AAsep1/2–4/5+: +.00057129/+.00063739/+.00001594;
+GT distance MAE:-.00239360/-.00374405/+.00425946. Far-sequence contacts can worsen
+whileproximal improve. All assessedGT spatialdist<15A.
+Warmfinal-rawAA -.008303557:BB-.000238521,BO-.004488662,OO-.003576374;
+sep1+.000459496,2–4-.000471113,5+-.008291940. SupportsBB27.1%,BO49.7%,OO23.3%,
+sep5+79.8%; no percentagecausalclaim. Rawdistance error improves7/7warmvszeroAA,
+but2FC3/4B9P GTMAE worsen+.005890665/+.004562437A and AAdecrease;
+5GU9/3D8LGTMAE improve-.013272465/-.014604507A. More rawpreservation != guaranteeGT.
+DECISION: end read-only initialization attribution. Next one bounded METHOD contrast:
+whole-ideal ZERO-start samejointbaseline vsadding explicit raw inter-residue distance
+preservation term. Runtimepairselection/targets MUST raw+native topology only, NEVER
+this GT-selected diagnosticpairlist. Freeze oneformula/weight/budget beforeexecution;
+no weightgrid, no failedwarmstart mixture. Use same14developmentinputs andarchived
+controls, originalgates unchanged;no newmodel callsneeded. This is hypothesis, not
+promisedfix; if fails, stop incrementalraw-preservation patching and consider independently
+GT-supervisedoutputmapping. Do notreopen FD/numerical investigations, CAdistancegate
+rescue, ind32 retuning or GTchoice of perproteinarm. Full one-step differentiable
+chemicallyvaliddesign goal remains ACTIVE, unfulfilled; no productionpromotion.
+
 ## 2026-09-30 — Saved sidechain-angle joint start closes with mixed quality, screen FAIL
 
 Previous1ab2fb55 local screen was positive, sufficient to run this single bounded
