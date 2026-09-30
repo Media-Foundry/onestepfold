@@ -1,0 +1,62 @@
+{
+  "checkpoint": {
+    "path": "/data/user/shuang886/Folding/folding_coordinate_ablation_v1_20260930/expanded/update_2048.pt",
+    "sha256": "b5870d959a5ddcf3e85d6008fb3c41db95bace7578ae5000084809c0335c4312"
+  },
+  "complete": true,
+  "curves": [
+    {
+      "all_atom_lddt": 0.8047728912676493,
+      "ca_lddt": 0.8856532535990834,
+      "outputs": 64,
+      "proteins": 32,
+      "role": "train_probe_only",
+      "seconds": 41.66950001195073,
+      "severe_pairs": 394,
+      "update": 0,
+      "zero_and_strict": 41
+    },
+    {
+      "all_atom_lddt": 0.8061741571464809,
+      "ca_lddt": 0.8877134239982146,
+      "outputs": 64,
+      "proteins": 32,
+      "role": "train_probe_only",
+      "seconds": 27.838475096970797,
+      "severe_pairs": 306,
+      "update": 512,
+      "zero_and_strict": 41
+    },
+    {
+      "all_atom_lddt": 0.8070031881788301,
+      "ca_lddt": 0.8884149722304284,
+      "outputs": 64,
+      "proteins": 32,
+      "role": "train_probe_only",
+      "seconds": 28.443439649417996,
+      "severe_pairs": 246,
+      "update": 1024,
+      "zero_and_strict": 45
+    },
+    {
+      "all_atom_lddt": 0.8076327796759447,
+      "ca_lddt": 0.8890879066846236,
+      "outputs": 64,
+      "proteins": 32,
+      "role": "train_probe_only",
+      "seconds": 24.752114690840244,
+      "severe_pairs": 203,
+      "update": 2048,
+      "zero_and_strict": 45
+    }
+  ],
+  "exposure_max": 20,
+  "exposure_min": 19,
+  "initial_probe_replay_exact": true,
+  "lock_sha256": "81ee94ffddaacf4d9881d01d4e2b98d308ee151d20a0838e520aa1c815f684ea",
+  "peak_gpu_bytes": 17375580672,
+  "same_exposure_order": true,
+  "same_start": true,
+  "scope": "execution and TRAIN probes; no validation conclusion",
+  "seconds": 5113.442314727232
+}

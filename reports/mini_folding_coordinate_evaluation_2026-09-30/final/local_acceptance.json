@@ -1,0 +1,116 @@
+{
+  "complete": true,
+  "collection_hashes_verified": 12,
+  "unique_scored_instances": 4550,
+  "protein_count": 455,
+  "quality_paired_rows_checked": 2730,
+  "rmsd_paired_rows_checked": 2730,
+  "scope": "independent arithmetic from exported scored instances; no coordinate rescore or bootstrap reimplementation",
+  "joint_tradeoff": {
+    "added_train295": {
+      "n": 295,
+      "aa_improved": 154,
+      "rmsd_worse": 244,
+      "aa_improved_and_rmsd_worse": 121,
+      "largest_rmsd_increases": [
+        {
+          "cohort": "added_train295",
+          "group_id": "c17e68654397a055603f7df97103f7d38e0098e4688d98da76791e8066e37307",
+          "pdb_id": "5to5",
+          "length": 141,
+          "delta_aa": -0.006676678867027275,
+          "delta_ca": -0.007109859039655164,
+          "delta_rmsd": 11.621863957309671
+        },
+        {
+          "cohort": "added_train295",
+          "group_id": "6c88d9d21d19b5f93ab49de9657c6ed4bc7cbf15e5bc5f71daa13cd0487d0df7",
+          "pdb_id": "5oi7",
+          "length": 88,
+          "delta_aa": 0.045562048277381084,
+          "delta_ca": 0.06017044089816004,
+          "delta_rmsd": 5.591001400358003
+        },
+        {
+          "cohort": "added_train295",
+          "group_id": "c03c84c2ce78435ae9d256c85f6713d2de49da2fffb47a1b2cc9a93d56ae43c1",
+          "pdb_id": "6ejq",
+          "length": 141,
+          "delta_aa": -0.002827051361913191,
+          "delta_ca": 0.0007516568248565614,
+          "delta_rmsd": 3.164668656823208
+        }
+      ]
+    },
+    "observed_validation32": {
+      "n": 32,
+      "aa_improved": 26,
+      "rmsd_worse": 15,
+      "aa_improved_and_rmsd_worse": 11,
+      "largest_rmsd_increases": [
+        {
+          "cohort": "observed_validation32",
+          "group_id": "3b4039d1b63ccfda21b731c71d473b12ab82ff094632e6e6557955de939ff4a1",
+          "pdb_id": "3u59",
+          "length": 101,
+          "delta_aa": -0.0017268620202832707,
+          "delta_ca": -0.002506372428570769,
+          "delta_rmsd": 1.198920402085955
+        },
+        {
+          "cohort": "observed_validation32",
+          "group_id": "3cac0b6d3f7228ede3995a3a979b8bd912b056ba6c5378c2f8d6324af2410d67",
+          "pdb_id": "1qex",
+          "length": 288,
+          "delta_aa": 0.004172747083811101,
+          "delta_ca": 0.012611867128977994,
+          "delta_rmsd": 0.5897783832402368
+        },
+        {
+          "cohort": "observed_validation32",
+          "group_id": "c1874e4a2a96216109a3cabf02a9d5841209f7eb273f766971fc49bee6d42452",
+          "pdb_id": "1r89",
+          "length": 437,
+          "delta_aa": 0.001775833519153669,
+          "delta_ca": 0.0018685968999407887,
+          "delta_rmsd": 0.5232694460501817
+        }
+      ]
+    },
+    "original_train128": {
+      "n": 128,
+      "aa_improved": 81,
+      "rmsd_worse": 102,
+      "aa_improved_and_rmsd_worse": 62,
+      "largest_rmsd_increases": [
+        {
+          "cohort": "original_train128",
+          "group_id": "feb0543bde55af69ea26b2072feccc747421b54c375e7b229da06a4ec357f74a",
+          "pdb_id": "2v66",
+          "length": 111,
+          "delta_aa": 0.0061201697596712235,
+          "delta_ca": 0.008466079073664146,
+          "delta_rmsd": 5.065790037425048
+        },
+        {
+          "cohort": "original_train128",
+          "group_id": "79cdb9e6a16f28a96bd45367f209b4a504ab8cc75e11bae1eb54ab1fe7593a53",
+          "pdb_id": "1aa0",
+          "length": 113,
+          "delta_aa": 0.0377550879696783,
+          "delta_ca": 0.05772882540722557,
+          "delta_rmsd": 4.993186630342208
+        },
+        {
+          "cohort": "original_train128",
+          "group_id": "f772f2e081cbf2f15ae9af6ac34df18e39621dfea9b0bd9a5a42fcfe2266d7f5",
+          "pdb_id": "5w6h",
+          "length": 697,
+          "delta_aa": 0.04220002806043888,
+          "delta_ca": 0.053279092878688816,
+          "delta_rmsd": 4.310513079141632
+        }
+      ]
+    }
+  }
+}

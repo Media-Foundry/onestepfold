@@ -1,3 +1,36 @@
+## 2026-09-30 — Coordinate-zero terminal completes; local/global tradeoff retained
+
+Current turn collected final artifacts, independently checked hashes and score
+arithmetic, and closed the bounded ablation. All13 jobs662470/471/475–485 completed
+0:0. Training2048updates/8192exposures on unchanged423TRAIN; candidate terminalSHA
+b5870d959a5ddcf3e85d6008fb3c41db95bace7578ae5000084809c0335c4312.
+4550scores,455proteins,910newprediction+32engineeringNFEs. Dense metricmax4.44e-16.
+
+ObservedDEV32 coordinate_zero AA.8197366321,CA.9050593078,RMSD3.521401A,
+zero+strict45/64,both22/32,severe451. Versus matchedexpanded AA+.001334
+CI[+.000729,+.002046],CA+.002144,RMSD+.067667A CI[-.015687,+.174349];
+26/32AAimprove,15/32RMSDworse,11both. Newsevere1/newstereofailure1 vscontrol.
+Versusretained AA+.002072,CA+.002147,RMSD+.059461,newsevere4/stereo1.
+VersusnativeS1 AA+.003820;versusS2 AA-.008267. NoAA drops<-.05 versuscontrol.
+OriginalTRAIN128 RMSD+.358695A(102/128worse);addedTRAIN295+.296397A(244/295),
+bothCIspositive despitepositiveAAdeltas. WorstaddedTRAIN5TO5+11.621864A;
+5OI7AA+.045562,RMSD+5.591001A. These areposthocdescriptions,notmechanismproof.
+
+Decision: retaincandidate/control; noautomaticpromotion,coefficientsweep,extension,
+newtraining,repair/designorbackwarddebugging. Coordinateobjectivehaslocal/global
+tradeoff,notuseless. Nextboundedanalysis canuseexistingcoordinates toseparate
+localizeddisplacementfrombroadstructurechange beforechoosingnextsupervision.
+ESMCpaired455featuresready butbridgeNOTfit/C4foldingNOTtested.11newsourcesremain
+reserved,not32confirmation. CurrentDEV32alreadyobserved;notfreshvalidation.
+
+Docs mini_folding_coordinate_findings_2026-09-30.md,overallfront/statusupdated.
+Archive reports/mini_folding_coordinate_evaluation_2026-09-30/final includes
+fullreport/pairedCSV/globalRMSD,compressedscoredinstances(excludesverboseconnection
+arrays retainedremote),cohorts,locks/audit/provenance/scheduler,independentscalar
+QA andscatterPNG/PDF.12archivehashes/8provenanceinputs checked;4550uniqueinstances,
+2730quality/2730RMSDpairrows independentlyrecomputed. No newcoordinate inference.
+Activegoal stillunfulfilled;do not markcomplete. Priorunrelatedworktreepreserved.
+
 ## 2026-09-30 — Alternate source qualification completes with11 reserved groups
 
 PreviousgoalturnPROGRESS(sourceinventory). CurrentturnPROGRESS: implemented
