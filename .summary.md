@@ -1,3 +1,64 @@
+## 2026-09-30 — Evaluation v2 recorded; matched S2/S5 resolves severe2B0A raw failures
+
+Previous c6a1d98f completedfresh8; userreviewstale f471a100 pendingstatus corrected.
+Added docs/mini_evaluation_layers_v2.md BEFOREnewrun: legacyjoint historicalonly,
+notsolemethodveto; fourlayers data/chemistry/GTquality/taskcompute. Frozen32calibration
+transPro/nonPro equalproteinq95/q99 descriptivecounts/fractions/positions, cisunsupported;
+no newchemicalpass/nosevereanglecutoffs/no posthocnoninferiority margins. Historical32
+andfresh8 unchanged. New connection_diagnostics helper3testsPASS; nohistoryscoring/
+model/solveredits. Overviewfront nowfresh8 ANDcompletedrawstepattribution.
+
+Root /media/PM982/onestepfold/failure_step_reference_v1_20260930 controller259025
+COMPLETED all4pipelinecodes0,75.734115s.2GCDnativeFP32C4sharedpackedconditioning,
+2B0Afailure+2Z0Jfirstorderedcontrol;noises400009/400031;S1/S2/S5rawONLY.
+S1fourarchivedoutputsbitwiseexact;RNG/noise/conditioningunchanged;PF4/diff16perprotein.
+NoGTinforward/noextraaug/noMC/nochurn;identitynoise2560Z/stableEulerunchanged.
+Schedules S1[2560,0],S2[2560,55.97478485,0],S5[2560,704.56433105,144.69450378,
+18.64899826,1.01703489,0]. Differentintegrationrules nottrajectorytruncation/nativeS5.
+NetworkquerytimedoutafterPIDreturned;reconnectedfoundcomplete.NOduplicatesubmission.
+OnlylocalhungSSHquery3081883terminated, notremoteexperiment.
+
+2B0A400009 S1/S2/S5:
+AA .500971/.885966/.875385;CA .550419/.969970/.962752;
+GTalignedCArms5.0586/.6505/.7554;severe139/0/0;BBsevere40/0/0;
+CAwrong25/0/0,ITwrong7/0/0;GTbranchmismatch12/0/0.
+2B0A400031:
+AA .415650/.875720/.869427;CA .436508/.957012/.957022;
+GTalignedCArms10.8798/1.3147/.7447;severe466/0/0;BB133/0/0;
+CAwrong41/0/0,ITwrong12/0/0;GTbranchmismatch26/0/0.
+BothS2/S5basicabsoluteandstrictcheckedchiralitypass. S2AAimprovement+.384994/+.460070.
+S5bond/peptidegeometrybetter;notuniversalqualitywinner.
+2Z0J400009 AA .887992/.896354/.890109;CA .964658/.972219/.966060;
+severe2/1/0;400031 AA .894305/.898130/.893099;CA .971168/.973622/.970084;
+severe1/2/0. Allstrictchiralitycorrect.S2stilltruecollisions(maxpen2.4402/2.5748),
+GTbranchmismatch0/1respectively;S5basicgeometrypassbothbut400031AA/CAregressvsS1
+-.001206/-.001084. S2NOTautomaticallyclean teacher. No populationclaim from2proteins.
+S5transCNq99exceedcounts36/42/40/33 despitezero severe,notfullchemistryguarantee.
+
+PosthocdescriptiveS2vsS1alignedCAdisplacement2B0A5.0285/10.0995A,unaligned9.1758/
+13.9201A;controlaligned.2765/.1751. SameCAuniformRMS/optimalrigidtrianglebound:
+ifrawunalignedRMS<=1,2B0AGTalignedRMS>=4.0586/9.8798. Thuslocalrawbudgetcannot
+reproduce observedS2largefoldcorrection;NOTproofno nearbychemicallyfeasiblestructure.
+Don'trelaxoldbudgetretroactively;largefoldcorrectionwouldbe differenttask.
+
+12GTmetric/geometry/identityauditsPASSmaxerror2.22e-16;39member529038bytearchive
+SHAallverified andruntimecorrespondingcodeexactlocal. PeakGPU11.374/11.392GiB;
+workers53.985/56.183s;load+conditioning49.85/51.72s.FirstS1~3.7s vslater~21ms,
+S2~38-40ms/S5~89-93ms;NOTwarmupmatchedlatency/fullmodelbenchmark.
+Reports mini_failure_step_reference_2026-09-30; findingsdocs
+mini_failure_step_reference_findings_2026-09-30.md. Collectionhelper
+/tmp/collect_step_reference.py;fullcode/protocol/hasharchive retained.
+
+DECISION: thisbatchCLOSED; noextra targets/noiseseeds/repairgrid/LoRA. KeepC4/S1
+finalobjective. We nowhaveexplicitselectedfailure evidence thatextra pretrained
+ denoising supplieslargefoldandchemistrycorrection, notmerelylocalclashrepair.
+Nextmethoddecision: separateboundedlocalgeometryprojection fromlearningmissing
+ denoisingcorrection, withindependenttrainingdata/experimentalGTanchor/chemistry
+checks andfrozenvalidation. DoNOTuse2B0Aor2Z0Jasnewindependenttest, don'tpretendS2
+teacheruniversallyclean; don'treopenclosedFD/backwarddebugging. Currentfullsequence
+throughnewoutputgradient/harddesignutility/one-stepcompression stillUNFULFILLED.
+Goal consistentlypushworkforward remainsACTIVE. No jobsleftfromthisbatch.
+
 ## 2026-09-30 — Fresh8 paired repair completed: small quality gain, real geometry failures remain
 
 Previous f471a100 was PROGRESS: fresh8sources+16C4/S1raw predictions verified. This

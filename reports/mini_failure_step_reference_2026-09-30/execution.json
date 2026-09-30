@@ -1,0 +1,48 @@
+{
+  "complete": true,
+  "commands": [
+    [
+      "/home/pc/anaconda3/envs/fold/bin/python",
+      "/media/PM982/onestepfold/failure_step_reference_v1_20260930/code/scripts/run_failure_step_reference.py",
+      "--root",
+      "/media/PM982/onestepfold/failure_step_reference_v1_20260930",
+      "--previous",
+      "/media/PM982/onestepfold/fresh_contact_predictions_v1_1_20260930",
+      "--mode",
+      "prepare"
+    ],
+    [
+      "/home/pc/anaconda3/envs/fold/bin/python",
+      "/media/PM982/onestepfold/failure_step_reference_v1_20260930/code/scripts/run_failure_step_reference.py",
+      "--root",
+      "/media/PM982/onestepfold/failure_step_reference_v1_20260930",
+      "--mode",
+      "case",
+      "--index",
+      "0"
+    ],
+    [
+      "/home/pc/anaconda3/envs/fold/bin/python",
+      "/media/PM982/onestepfold/failure_step_reference_v1_20260930/code/scripts/run_failure_step_reference.py",
+      "--root",
+      "/media/PM982/onestepfold/failure_step_reference_v1_20260930",
+      "--mode",
+      "case",
+      "--index",
+      "1"
+    ],
+    [
+      "/home/pc/anaconda3/envs/fold/bin/python",
+      "/media/PM982/onestepfold/failure_step_reference_v1_20260930/code/scripts/audit_failure_step_reference.py",
+      "--root",
+      "/media/PM982/onestepfold/failure_step_reference_v1_20260930"
+    ]
+  ],
+  "returncodes": [
+    0,
+    0,
+    0,
+    0
+  ],
+  "seconds": 75.73411543401016
+}
