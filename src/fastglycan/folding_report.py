@@ -9,15 +9,18 @@ def render_folding_scale_report(lock, training, evaluation, cohorts):
     counts={k:len(v) for k,v in lock['cohorts'].items()}
     if set(cohorts['summary'])!=set(counts) or any(cohorts['summary'][k]['proteins']!=n for k,n in counts.items()):
         raise ValueError('cohort denominator differs from the frozen plan')
-    lines=['# C4/S1 fixed-terminal folding comparison','',
-        'Frozen ESM2 + C4 conditioning; only the native diffusion parameters were trained. '
+    order=lock.get('cohort_order',['new_validation32','original_train128','added_train295'])
+    if 'cohort_order' in lock and (len(order)!=len(set(order)) or set(order)!=set(counts)):
+        raise ValueError('report order must include every cohort exactly once')
+    lines=[lock.get('report_title','# C4/S1 fixed-terminal folding comparison'),'',
+        lock.get('report_intro','Frozen ESM2 + C4 conditioning; only the native diffusion parameters were trained. '
         'Both arms start from the retained checkpoint, reset optimizer state and receive '
-        '2048 new updates / 8192 new exposures. This is not training from zero.','',
+        '2048 new updates / 8192 new exposures. This is not training from zero.'),'',
         'Scores use observed experimental GT. Each protein contributes the mean of its two '
         'fixed noises; no best-of-noise or intermediate-checkpoint selection. Geometry '
         'counts describe the explicit severe-collision and checked-stereocentre criteria, '
         'not comprehensive chemical correctness or deployment approval.','']
-    for cohort in ['new_validation32','original_train128','added_train295']:
+    for cohort in order:
         if cohort not in counts:continue
         c=cohorts['summary'][cohort];n=c['proteins']
         lines.extend([f'## {cohort}: {n} proteins','',
@@ -48,8 +51,8 @@ def render_folding_scale_report(lock, training, evaluation, cohorts):
                     lines.append(f"|{name}|{s['proteins']}|{p['candidate']} − {p['reference']}|{p['mean_delta_aa']:+.6f}|{p['mean_delta_ca']:+.6f}|")
         lines.append('')
     lines.extend(['## Matched original-TRAIN32 learning curves','',
-        'These are training probes, not validation learning curves. The expanded arm exposes '
-        'each original protein less often at equal total updates.','',
+        lock.get('training_curve_note','These are training probes, not validation learning curves. The expanded arm exposes '
+        'each original protein less often at equal total updates.'),'',
         '|Arm|New update|AA-lDDT|Cα-lDDT|Zero severe + strict stereo / 64|Severe pairs|',
         '|---|---:|---:|---:|---:|---:|'])
     for arm,s in training['summary'].items():
@@ -66,9 +69,9 @@ def render_folding_scale_report(lock, training, evaluation, cohorts):
         'Inference timings in evaluation.json cover diffusion with cached conditioning only. '
         'They omit live ESM2 and Pairformer, and are not end-to-end folding speed. Equal '
         'updates/exposures are not equal GPU time, FLOPs, or per-protein exposure.','',
-        'Original128, added295 and new validation32 remain distinct cohorts. Most sources '
+        lock.get('cohort_scope_note','Original128, added295 and new validation32 remain distinct cohorts. Most sources '
         'are complete single chains extracted from homooligomers. The scope is supported '
-        'single-chain prediction; assembly context and pretraining exposure remain limitations.','',
+        'single-chain prediction; assembly context and pretraining exposure remain limitations.'),'',
         'No model is automatically promoted by this report. Review mean quality, paired tails '
         'and newly introduced chemical failures jointly. This experiment does not establish '
         'BindCraft utility, binding affinity or a gradient through a changed output function.',''])

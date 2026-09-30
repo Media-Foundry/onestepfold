@@ -13,6 +13,7 @@ import traceback
 import numpy as np
 import torch
 from fastglycan.paired_teacher_protocol import sha256, write_json
+from fastglycan.evaluation_reuse import evaluation_prediction_source, expected_evaluation_calls
 
 
 def prepare_diffusion_evaluation(root):
@@ -56,6 +57,7 @@ def run_diffusion_evaluation(root,index):
     folder=root/f'worker_{index}';folder.mkdir(exist_ok=False);start=time.monotonic()
     report=dict(complete=False,index=index,rows=[],lock_sha256=sha256(root/'lock.json'))
     try:
+        expected_calls=expected_evaluation_calls(lock,lock['assignments'][index])
         for path,digest in lock['hashes'].items():assert sha256(Path(path))==digest
         for path,stat in lock['weight_stats'].items():assert [Path(path).stat().st_size,Path(path).stat().st_mtime_ns]==stat
         torch.set_num_threads(1);runner=rt.runner_setup(folder/'work');runner.configs.dtype='fp32'
@@ -131,11 +133,9 @@ def run_diffusion_evaluation(root,index):
                     noise=identity_noise(atoms,seed,device='cuda')
                     for name in lock['models']:
                         file=target/f'{name}_seed{seed}.npy';steps=2 if name=='native_s2' else 1
-                        reused=lock.get('reuse_models',{}).get(name)
-                        cached=row['role']=='train' and (name.startswith('native') or reused is not None)
+                        previous=evaluation_prediction_source(lock,row,name,seed)
+                        cached=previous is not None
                         if cached:
-                            previous=(Path(reused['root'])/g/f'{reused["model"]}_seed{seed}.npy'
-                                if reused else data/f's{steps}_seed{seed}.npy')
                             assert sha256(previous)==lock['input_hashes'][str(previous)];shutil.copyfile(previous,file);seconds=None
                         else:
                             selected=models['native' if name.startswith('native') else name]
@@ -147,14 +147,13 @@ def run_diffusion_evaluation(root,index):
                             assert torch.equal(cpu_rng,torch.get_rng_state()) and torch.equal(gpu_rng,torch.cuda.get_rng_state())
                             np.save(file,coordinate.cpu().numpy());del coordinate
                         entries.append(dict(model=name,seed=seed,name=file.name,sha256=sha256(file),
-                            cached_native_train=cached and name.startswith('native'),
+                            cached_native_train=cached and row['role']=='train' and name.startswith('native'),
                             reused_prediction=cached,nfe=0 if cached else steps,seconds=seconds))
                 result=dict(group_id=g,role=row['role'],entries=entries,lock_sha256=sha256(root/'lock.json'))
                 write_json(target/'report.json',result);report['rows'].append(result);write_json(folder/'report.json',report)
                 del saved,flat,features,conditioning,atoms,noise
                 torch.cuda.empty_cache()
-        nval=sum(r['role']=='validation' for r in lock['assignments'][index]);n=len(lock['assignments'][index])
-        assert calls==dict(native=6*nval,**{arm:2*n for arm in lock['checkpoints']})
+        assert calls==expected_calls
         for h in handles:h.remove()
         report.update(complete=True,calls=calls,peak_gpu_bytes=torch.cuda.max_memory_allocated(),
             timing_scope='diffusion only with cached conditioning; includes reference cache rebuild, not ESM/PF runtime')

@@ -12,6 +12,7 @@ import torch
 from scipy.spatial.distance import cdist
 from fastglycan.diffusion_pilot_metrics import prepare_pilot_scoring, score_diffusion_pilot
 from fastglycan.paired_teacher_protocol import sha256, write_json
+from fastglycan.evaluation_reuse import expected_evaluation_calls
 from onestepfold.data.gt_materializer import ATOM37_INDEX
 
 
@@ -75,9 +76,8 @@ def summarize_diffusion_evaluation(root,workers):
         assert [r['group_id'] for r in report['rows']]==[r['group_id'] for r in assigned]
         for name in totals:totals[name]+=report['calls'][name]
         seen.extend(r['group_id'] for r in report['rows'])
-    nval=sum(r['role']=='validation' for r in lock['rows'])
     assert len(seen)==len(set(seen))==planned
-    assert totals==dict(native=6*nval,**{arm:2*planned for arm in lock['checkpoints']})
+    assert totals==expected_evaluation_calls(lock,lock['rows'])
     with ProcessPoolExecutor(max_workers=workers) as pool:
         results=list(pool.map(score_diffusion_case,[(str(root),r) for r in lock['rows']]))
     failures=[dict(group_id=r['group_id'],role=r['role'],error=r['error']) for r in results if not r['complete']]

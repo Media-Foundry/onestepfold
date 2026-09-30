@@ -22,6 +22,20 @@ def test_folding_report_keeps_damage_and_cohort_denominators():
     assert '[-0.002000, +0.004000]' in text and '|expanded − train128|1|1|' in text
     assert '|1/2|0/1|10|' in text and 'not comprehensive chemical correctness' in text
     assert '|-0.060000|-0.050000|-0.060000|1/1|' in text
+    observed=copy.deepcopy(lock);observed_cohorts=copy.deepcopy(cohorts)
+    observed['cohorts']['observed_validation32']=observed['cohorts'].pop('new_validation32')
+    observed_cohorts['summary']['observed_validation32']=observed_cohorts['summary'].pop('new_validation32')
+    observed['cohort_order']=['observed_validation32','original_train128','added_train295']
+    observed['report_intro']='Matched coordinate-weight ablation.'
+    observed['training_curve_note']='Same ordered exposures.'
+    observed['cohort_scope_note']='Observed validation is development, not fresh confirmation.'
+    text=render_folding_scale_report(observed,training,evaluation,observed_cohorts)
+    assert '## observed_validation32: 1 proteins' in text and 'new_validation32' not in text
+    assert 'Same ordered exposures.' in text and 'less often' not in text
+    assert 'not fresh confirmation' in text
+    observed['cohort_order'].pop()
+    with pytest.raises(ValueError,match='every cohort'):
+        render_folding_scale_report(observed,training,evaluation,observed_cohorts)
     for change in ['incomplete','outputs','cohort']:
         e=copy.deepcopy(evaluation);c=copy.deepcopy(cohorts)
         if change=='incomplete':e['complete']=False

@@ -1,3 +1,40 @@
+## 2026-09-30 — Coordinate-zero terminal evaluation implemented and queued
+
+Folding-first mainline continues. Candidate training662470 still RUNNING;
+2026-09-30T11:27:18Z observation1537/8192 exposures,384/2048 completed updates.
+No candidate terminal quality claim and no incumbent replacement.
+
+Implemented separate fixed-terminal evaluation root:
+/data/user/shuang886/Folding/folding_coordinate_evaluation_v1_20260930.
+Training private code untouched. New prepare/report wrapper binds audited candidate
+terminal (internal arm expanded, new lock), original control and old evaluation
+execution/worker hashes. Reuses all3640 nativeS1/nativeS2/retained/expanded
+coordinates on455proteins/two assigned noises. Only coordinate_zero newly inferred:
+910 prediction+32 engineeringNFEs=942. All4550 outputs independently rescored
+against experimental GT; per-case scoring AST unchanged. Six focused tests pass;
+173 existing deployed source files unchanged; seven new/modified deployment files
+match local SHA256. Runtime loader/parity gates still pending future execution.
+
+Queued acd_u/no-requeue/kill-invalid-dep: audit662471 -> prepare662475 ->
+worker0 662476 -> workers662477-662483 -> score662484 -> report662485.
+Dependencies independently checked via scontrol. CPU phases hide reserved GPU.
+Worker0 gates otherseven. No rerun of references or extra checkpoint selection.
+Original128/added295/observed_validation32 separately reported; observed32 is
+DEVELOPMENT, not fresh confirmation. Primary coordinate_zero minus matched expanded;
+secondary retained/nativeS1/nativeS2. No ESMC switch, output repair or design.
+
+New helpers explicit role-scoped reuse and NFE accounting retain legacy default
+TRAIN-only behavior. Optional locked report labels/order prevent silently omitting
+renamed observed-validation cohort or claiming mismatched exposures. Evidence:
+reports/mini_folding_coordinate_evaluation_2026-09-30; execution protocol and Chinese
+status docs share prefix. Existing scientific training protocol remains unchanged.
+
+NEXT: collect audited terminal and automatically queued evaluation; check complete
+4550 denominator, metric agreement, hashes, cohort quality/tails/new chemistry
+failures. Interpret single-factor result against expanded AND retained; no automatic
+promotion/coefficient sweep. ESMC remains feature/audit ready only, no bridge fit.
+Goal remains active/unfulfilled. Preserve unrelated pre-existing worktree edits.
+
 ## 2026-09-30 — Coordinate-zero matched candidate implemented and running
 
 Previous turn PROGRESS(finalscalingreport/protocol). Currentturn PROGRESS: implemented
