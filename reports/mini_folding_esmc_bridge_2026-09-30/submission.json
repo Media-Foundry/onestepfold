@@ -1,0 +1,20 @@
+{
+  "job": "662574",
+  "command": [
+    "sbatch",
+    "--parsable",
+    "-p",
+    "acd_u",
+    "--gres=gpu:1",
+    "--nodes=1",
+    "--ntasks=1",
+    "--cpus-per-task=4",
+    "--mem=16G",
+    "--time=00:20:00",
+    "--no-requeue",
+    "--job-name=esmc_bridge_fit",
+    "--output=/data/user/shuang886/Folding/folding_esmc_bridge_v1_20260930/logs/fit_%j.out",
+    "/data/user/shuang886/Folding/folding_esmc_bridge_v1_20260930/batch.sh"
+  ],
+  "scope": "CPU-only TRAIN423 interface initialization; no folding calls"
+}

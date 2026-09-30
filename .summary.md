@@ -1,3 +1,33 @@
+## 2026-09-30 — Separate TRAIN-only ESMC bridge initialization complete
+
+Previous goal turn VERIFIED WAIT onlive662548. CurrentturnPROGRESS: used independent
+CPU work to prepare user's requested ESMC comparison, without changing active
+ESM2 global-distance experiment. Existing ProjectionMoments reused unchanged;
+newstrict TRAINpairloader/driver and4tests pass. Fixednewprotocol beforefit.
+
+HPC3rootfolding_esmc_bridge_v1_20260930,job662574COMPLETED0:0 2m11s,compute126.81s,
+4CPU,GPUhidden(acd_u reservesoneGPU).423TRAIN/88012residues only;32DEV identities
+checkedforexclusion,zeroDEVfeaturereads,zeroGTcoordinatereads,zeromodelcalls.
+Nativefrozen449×2560projection targets,ESMC1152final BF16cache inputs;protein-equal
+ridge.001/floor1e-8 FP64moments/solve,FP32weight/bias. NativeGPUprojectionbitparity
+notclaimed: targetscomputedCPUFP32. Nohyperparameterselection/MLC/nonlinearbranch.
+
+TRAINMSE1.02771283,meanbaseline1.64735043,meanperproteinrelativeMSE.61930003;
+original128relative.62008117,added295.61896109. Descriptivein-sampleinterfacefit,
+notfoldingquality or ESMC superiority. Pairedtensorhashesbothpasses,6shards,native
+checkpoint,423membership,save/reloadfinite checks pass. FullESM2containerhashes
+inheritedoldaudit; unusedstructuraltensorsnotaccessed. Activeglobaltrainlockunchanged.
+Localreport/bridge/lockhashesmatchremote;summaryindependentlyreducedmaxerror0.
+BridgeSHA bf06a64050ffc74e4d0aeb68025c42493e7fcfa8a2e6bdae39d3ad282fbf949e;
+lockSHA cec494be3aa3f76760cebb78c0264ab12174bef961ec65a41708be56e4481035.
+
+Docsmini_folding_esmc_bridge_v1 andfindings;reportsmini_folding_esmc_bridge_2026-09-30
+completeweights+provenance. Main662548stilllive; terminalchainunchanged.
+NEXT primarycollectglobalfixedterminal; ESMCseparatefuturematchedC4S1structural
+checkmustrecomputeconditioning,verifyhardnativeprojectionparity/frozenweights,
+lockcheckpoint/noises/cohorts beforeprediction. NoESMCfoldingstarted/promoted.
+Goalactive; preserveunrelatedworktree/journalchanges.
+
 ## 2026-09-30 — Global-distance TRAIN32 probe512 and read-only readiness audit
 
 Prior goal turn PROGRESS (terminal evaluation deployed/queued/pushed4713577c).

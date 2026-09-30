@@ -1,5 +1,13 @@
 # ESMC readiness for the folding mainline
 
+**Update2026-09-30:** a separate TRAIN-only interface initialization completed
+(job662574, COMPLETED0:0,2m11s). It reuses the paired cache below and the existing fixed ridge method.
+No folding prediction or core update is added, and global-distance training662548
+continues unchanged. This supersedes only the earlier “not yet fit” execution
+status below; the historical extraction/audit results remain unchanged. See
+[locked bridge protocol](mini_folding_esmc_bridge_v1.md) and
+[completed fit](mini_folding_esmc_bridge_findings_2026-09-30.md).
+
 The current TRAIN128/TRAIN423 comparison keeps ESM2 and its frozen C4 conditioning.
 This work prepares an ESMC alternative requested by the user; it does not alter
 either training arm, generate validation structures, fit an interface, or choose

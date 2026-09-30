@@ -1,0 +1,20 @@
+import hashlib,json
+from pathlib import Path
+base=Path('/data/user/shuang886/Folding');root=base/'folding_esmc_bridge_v1_20260930'
+assert not (root/'lock.json').exists()
+def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
+pair=base/'folding_esm_pair_audit_v1_20260930/report.json'
+assert sha(pair)=='47e08e63e6689a61e49eb80294092c4d77226e65005dc50b0b0cc8c2512ef092'
+training=base/'folding_scale_training_v1_20260930/lock.json';active=base/'folding_global_distance_training_v1_20260930/lock.json'
+audit=json.loads(pair.read_text());t=json.loads(training.read_text());cache=Path(t['cache'])/'lock.json'
+assert audit['complete'] and audit['training_lock_sha256']==sha(training) and audit['cache_lock_sha256']==sha(cache)
+cp=base/'protenix_stage0_pkg/v1_1/runtime/checkpoint/protenix_mini_esm_v0.5.0.pt'
+assert sha(cp)==json.loads(cache.read_text())['weights_sha256'][str(cp)]
+paths=[pair,training,active,cache,cp,root/'batch.sh',root/'prepare.py']+list((root/'code').rglob('*.py'))+list((root/'code').rglob('*.md'))
+ids=sorted(r['group_id'] for r in t['rows'] if r['role']=='train');assert len(ids)==len(set(ids))==423
+lock=dict(schema='folding_esmc_affine_bridge_v1',training_lock=str(training),paired_audit=str(pair),native_checkpoint=str(cp),
+ feature_root=str(base/'folding_esmc_features_v1_20260930/features'),fit_group_ids=ids,ridge=.001,variance_floor=1e-8,
+ active_training_lock=str(active),active_training_lock_sha256=sha(active),hashes={str(p):sha(p) for p in paths},
+ validation_role='IDs checked only; no validation feature reads, fitting or model selection',folding_calls=0)
+(root/'lock.json').write_text(json.dumps(lock,indent=2,sort_keys=True)+'\n')
+print(json.dumps(dict(complete=True,fit_proteins=len(ids),lock_sha256=sha(root/'lock.json'))))
