@@ -1,3 +1,42 @@
+## 2026-09-30 — Both training terminals audited; full evaluation started
+
+Previous goal turn VERIFIED WAIT (specific662291 live, advancing). Current turn
+waited againstlive662291throughcompletion,thenPROGRESS: collectedauditandpaired
+terminaltrainingprobeevidence. No newmodelruns,budgetchangesorintervention.
+Goalactive/unfulfilled; held-outfoldingperformance stillunmeasuredatthispoint.
+
+662290 TRAIN128 COMPLETED0:0 1h17m08;662291 TRAIN423 COMPLETED0:0 1h43m44.
+662294 independenttrainingaudit COMPLETED0:0 21s. Both2048updates8192exposures,
+lockedorder/LR/optimizer2048step/scope/finiteweights/hashverified;512probeoutputs
+hash/finite/coverageverified;identicalstartparametersandinitial64predictions.
+Excludedparameter/noVAL assertionscheckedfromtrainingreports. Auditdoesnot
+independentlyrerunfullmodelorGTscoring. Both8448NFEs,cachedC4,onlydiffusiontrained.
+ExpandedSHA3e6c6e1b1a493215adba31df1106efa9e30218c5f92846f4ca4d2e3a6fd17b09;
+TRAIN128SHA3cabef69073f4a21aa92c25f7dfafd9ec3816fee53e27af37be1dcd0898a5e84.
+AuditSHA1fb825c03bb9da8c48a10ce9bef0e1c2eeb9c4e81875564f5697fceb524dade7.
+
+TerminalcommonoriginalTRAIN32twonoises:
+TRAIN128AA .811420360/CA .890676190/zero+strict52/64/severe166;
+TRAIN423AA .806617040/CA .886600988/zero+strict43/64/severe378;
+startAA .804772891/CA .885653254/zero+strict41/severe394.
+AApositive30/32vs28/32;meanAA<-.05both0;CA<-.05TRAIN1281expanded0.
+Newseverefromstart1vs2,loststrict0vs1. Expanded-minus128AAmean-.004803320,
+2/32positive. BothworstAAprotein1MV8:relative-startmeans-.047521731vs-.005544832.
+LargeroriginalTRAINfittinggainversuslessworstcaseregressionarenotheld-outclaims.
+Originalsampleexposures64vs19–20; cannotjudgedatascalingfromthisprobealone.
+Expandedpeak17,375,580,672B;clipped1371/2048vs1128/2048,notcausaldiagnosis.
+
+662313evaluationprepareCOMPLETED0:0 1m12;662314firstworkerRUNNING,othersretain
+afterok662314,then662322score/662360report. No partialVALqualityselection.
+Docs mini_folding_training_status_2026-09-30.md nowfrontscomplete-trainingstatus;
+terminal/training_audit.json,matched_terminal_observation.json and reproducible
+observe_folding_terminals.py archived underreports/mini_folding_training_2026-09-30.
+LocaltransferauditSHAverified; matchedprobe exactcoverage andsource-reporthashes
+retained. No bestcheckpoint,noprotocolchange,noBindCraft/repair/ESMCfit.
+
+Subsequent live check: firstevalworker662314 COMPLETED0:0 1m16; allseven
+remainingworkers662315–662321RUNNING, independent score662322pending.
+
 ## 2026-09-30 — Paired ESM2/ESMC feature readiness established
 
 Previous turn PROGRESS (TRAIN128terminalcompletion andprobeaudit). Currentturn

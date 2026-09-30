@@ -1,11 +1,50 @@
-# TRAIN128 versus TRAIN423: continuation started on HPC3
+# TRAIN128 versus TRAIN423: training complete, evaluation running
 
 This is the folding mainline, with ESM2 and C4/S1/K1 fixed. BindCraft/interface
 work remains deferred; ESMC is a later matched conditioner-interface comparison.
 The scientific protocol is [folding scaling cycle v1](mini_folding_scaling_cycle_v1.md).
-No new held-out model-quality result is available at launch.
+Both training jobs and their independent execution audit have completed. The
+fixed-terminal evaluation has started; new held-out quality is not yet available.
 
-## TRAIN128 terminal completed; expanded arm still running
+## Both fixed terminals passed execution audit
+
+TRAIN128 job662290 completed0:0 in1h17m08s; TRAIN423 job662291 completed0:0 in
+1h43m44s. Audit662294 completed0:0 in21s, confirming2048 updates and8192 exposures
+per arm, exact locked sample orders and LR schedule, optimizer step counts and
+settings, selected288 tensors/69,777,841 parameters, finite terminal tensors,
+checkpoint hashes, all512 saved probe coordinates, and identical initial parameter
+fingerprints/predictions. It also checks the training reports' unchanged-excluded-
+parameter and no-validation-use assertions. Both remain fixed-terminal candidates,
+not promoted models.
+
+|Common original-TRAIN32, two training noises|Start|TRAIN128 terminal|TRAIN423 terminal|
+|---|---:|---:|---:|
+|AA-lDDT|0.804772891|0.811420360|0.806617040|
+|Cα-lDDT|0.885653254|0.890676190|0.886600988|
+|Zero severe + strict checked stereo|41/64|52/64|43/64|
+|Severe pairs total|394|166|378|
+|Proteins with positive mean AA change|—|30/32|28/32|
+|Proteins with mean AA change < −0.05|—|0/32|0/32|
+|New severe instances from initially zero|—|1|2|
+|Lost strict-stereo instances|—|0|1|
+
+The expanded arm changes AA by−0.004803 versus TRAIN128 on this original-TRAIN
+probe, with only2/32 protein means positive. Conversely, its worst protein's AA
+change from the retained start is only−0.005545, versus−0.047522 in TRAIN128; both
+worst cases are1MV8. Mean fitting strength and tail preservation still differ.
+TRAIN128 also has one protein-mean Cα loss below−0.05; expanded has none here.
+These are training observations, not evidence for or against held-out data scaling.
+Original samples receive64 new exposures in TRAIN128 versus19–20 in TRAIN423.
+
+Evaluation preparation662313 completed0:0 in1m12s; first worker662314 completed0:0
+in1m16s. The remaining seven workers662315–662321 have all started after that
+success; independent GT scoring and reporting follow. No partial validation metrics have
+been used for selection. Audit and paired terminal observations are archived in
+`reports/mini_folding_training_2026-09-30/terminal/`, including a reproducible
+saved-report aggregation script. Expanded terminal SHA256:
+`3e6c6e1b1a493215adba31df1106efa9e30218c5f92846f4ca4d2e3a6fd17b09`.
+
+## Earlier observation: TRAIN128 completed before the expanded arm
 
 Job662290 completed0:0 in1h17m08s with2048 new updates and8192 exposures.
 The terminal checkpoint SHA256 is
@@ -107,7 +146,7 @@ the two timepoints were checked for hashes and finite values. This is an interim
 artifact check, not the final independent training audit or GT score recomputation.
 Files: `reports/mini_folding_training_2026-09-30/interim/`.
 
-## Terminal evaluation now queued
+## Evaluation submission and frozen protocol
 
 The fixed-terminal pipeline is implemented and submitted under `acd_u` in a
 separate frozen-code root. Training is still running: at the archived observation,
@@ -122,7 +161,7 @@ These counters do not establish quality improvement.
 |662322|scheduler/coverage audit, GT scoring and cohort summaries|all eight shards|
 |662360|Markdown report and full paired-quality CSV|completed scoring662322|
 
-All evaluation jobs are currently dependency-pending, not completed predictions.
+At submission, all evaluation jobs were dependency-pending, not completed predictions.
 Any failed dependency cancels downstream work. GPU workers use one H100 allocation
 each; preparation/scoring reserve a hidden unused GPU as required by `acd_u`.
 CPU scoring has12 single-thread workers. No active training code or scientific
