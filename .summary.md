@@ -1,3 +1,31 @@
+## 2026-10-01 — User authorizes DiamondHill migration; transfer and gated preflight running
+
+HPC3 ACD nodes under maintenance per user; login/data remain available. User explicitly
+moves following experiments toDiamondHill, superseding earlier no-new-DiamondHill rule.
+Old hardwarememorycorruption remains inhistory; bounded8GCD FP32 arithmetic/repeatability/
+simpleAD smoke all8exit0, not fullhardwarecertification. EightGCDsidleinitially.
+Protenix/runner107pyfiles exactHPC3;Torch2.12devHIP7.14 vs2.7CUDA,NumPy2.5.2vs2.1.2.
+User-local proot5.1 pathmapping+GPUmatrixpasses; no systempermission/package changes.
+
+24,397 files85,646,726,779B selectiveexperimentdependencies fromHPC3 toDiamondHill
+/media/IntelSSD/onestepfold/hpc3_mirror_20261001/Folding. PM982only252GBfree;
+IntelSSD1.7TBfree. Metadata/controllers at/media/IntelSSD/onestepfold/diamondhill_migration_20261001.
+Live verified transfercontroller364282/rsync364292; ~26.6GB31%after6min.
+HashmanifestSHA8602dcb700696e27b7392e2ab0b3cf9c5b96d6c5e97e73d400d4f48b35eb8418;
+16,792 frozenhashes reused,7,605 sourcehashes newlycomputed. Sourcefiles untouched.
+Verifier365245waitsactualtransfer_result then4threadallfilehashcheck; noautorestart.
+Preflightcontroller365702waitsverification thenunchangednewcandidateprepare/preflight
+underproot mapping tooriginal/data/.../Folding;GCD0,originaltolerancesunchanged.
+NOautomatictrain! Review results/environment differences first,mayneedmatchedMI250
+oldweightcontrol;CUDAoldterminal notpureweightcomparison withROCmnewtraining.
+
+Docs mini_diamondhill_migration_2026-10-01.md, reports samebasename includepackagehashes,
+8GCDresults,handles,controllers,compressedmanifest. No newmodelquality/checkpoint yet.
+Nextinspect transfer_result.json,verification.json,model_preflight_execution.json/logs
+andlivehandles;neverrestartsolelyduetimeout. OriginalHPC3rootsleftintact.
+Goaltool wasstillblocked fromHPC3restriction;userhasauthorizedandworkresumedhere,
+buttoolhasnoactive/resumeoperation. Do notmarkcomplete; coreobjectiveunfinished.
+
 ## 2026-09-30 — Seven-model evaluation implemented while HPC3 access remains restricted
 
 Previous goalturn PROGRESS: training implementation4ce2f169 pushed. This turn PROGRESS:

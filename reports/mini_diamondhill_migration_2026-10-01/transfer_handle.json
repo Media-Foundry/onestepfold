@@ -1,0 +1,15 @@
+{
+  "controller_pid": 364282,
+  "rsync_pid": 364292,
+  "start_unix": 1790786164.10532,
+  "command": [
+    "rsync",
+    "-a",
+    "--partial",
+    "--partial-dir=.rsync-partial",
+    "--info=progress2",
+    "--files-from=/media/IntelSSD/onestepfold/diamondhill_migration_20261001/files.txt",
+    "hpc3:/data/user/shuang886/Folding/",
+    "/media/IntelSSD/onestepfold/hpc3_mirror_20261001/Folding/"
+  ]
+}
