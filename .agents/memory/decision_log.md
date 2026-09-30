@@ -1,3 +1,50 @@
+## 2026-09-30 — Saved ideal-reference loss partition points to sidechain contact preservation
+
+Previous goal turn e034567a was progress: completed real C4 whole-ideal intervention,
+partial AA gain but failed predeclared two-metric screen. This turn did bounded
+READ-ONLY analysis of its saved coordinates, no new inference/solver/training or
+ind32 access. New src/fastglycan/lddt_attribution.py preserves exact original AA
+metric: GT<15Å, exclude same residue, strict .5/1/2/4 thresholds, atom-average.
+Pair weights=(1/n_i+1/n_j)/N_valid; atom/pair partitions sum to original score.
+Protocol mini_ideal_reference_error_partition_v1.md fixed atom classes/AA/termini,
+raw-active/mismatched-branch neighbourhoods, pair types/separation/thresholds.
+Seven supported proteins x2 seeds x5 stages=70 vectors,3CR6 skipped slots retained.
+Equal proteins after within-protein seed averaging; absent classes zero additive
+contribution, not denominator deletion. No GT input changes or symmetry remapping.
+Ideal final−raw AA−.008960286 partitions: backbone-backbone−.000293044(weight.271),
+backbone-other−.004836198(.497),other-other−.003831043(.233). Backbone=N/CA/C/O;
+other includes sidechains and OXT. Atom-centred sidechain−.006355500(weight.487),
+OXT−.000023519;NCA CO combined−.0025813. CA-centred AA includes sidechain partners,
+so its decline does not contradict CA-only lDDT improving vsraw. Not causal proof
+that only sidechain motion caused loss. Both sidechain-involving pair classes
+negative in all7 proteins; bonebone positive in3.
+Sequence separation1 contribution+.000279393(weight.053),2–4−.000576993(.149),
+>=5−.008662686(.798). Sequence distant, not spatially >15Å. Four threshold
+contributions−.00389121/−.00258643/−.00169847/−.00078418. No numerical-error claim.
+Ideal local−raw loss−.013555637, mostly sidechain pairs; joint adds+.004595351
+(bonebone−.00012769,cross+.00270333,otherother+.00201971). Whole-ideal vsnativefinal
++.003499055 also mostly sidechain-involving. All20 AA final-vsraw contributions
+negative. L/P/R largest weighted deficits but not frequency-normalized causal ranks;
+F small negative vsnative, other19 positive. No residue-specific template selection.
+Raw-active connection neighbourhood covers100% atoms: UNINFORMATIVE contrast,not
+connection-causality evidence. Raw/GT branch-mismatch neighbourhood only4B9P,weight
+.0035,contribution−.0000206,others−.0089397;cannot explain all loss by local centres,
+but does not exclude nonlocal branch effects.3IE9 negative case retained.
+Independent dense directed-matrix verifier70 vectors2670 partitionrows328 summaries;
+maxatom5.55e-16,partition9.99e-16. Source archive/member/report hashes and original
+scores bound. Shared chemistry/connection helper disclosed.2 focused tests pass,
+py_compilepass.70vectorarchive474539bytes/hashverified;unpacked atoms retainedlocal
+but onlyarchive tracked. Reports/mini_ideal_reference_errors_2026-09-30;findingsdoc
+mini_ideal_reference_error_findings_2026-09-30.md;overall updated. No runningjobs.
+Next single candidate: FIX ideal local N/CA/C/O and each residue global pose;
+fit ONLY bridge torsions whose moving atoms exclude all backbone/OXT, against RAW
+sidechain coordinates (notGT). Proper local chemistry/rings remain fixed; Pro/no
+eligibleDOF unchanged. First bounded LOCAL screen, no joint extension until quality,
+backbone invariance and geometry evidence supports it. Distinct from failed old
+all-pose fitted initialization; no promise MSE fit improveslDDT. Must lock protocol
+before solving. Do not alter whole-ideal failed gate/default, retune weights, reopen
+ind32/Y38, or claim differentiable solver/deployment. Original goalactive/unfulfilled.
+
 ## 2026-09-30 — Whole ideal-reference C4 intervention closed with partial AA benefit
 
 Previous turn e8de8479 established positive GT-oracle local representation evidence;

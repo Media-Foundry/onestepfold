@@ -1,0 +1,2997 @@
+{
+  "cases": 14,
+  "complete": true,
+  "hashes": {
+    "/home/husrcf/Code/onestepfold/scripts/analyze_ideal_reference_errors.py": "2b54e6423d8cffc5b53d7eef8534b07850d659c71908294e4b4f2326c75380ce",
+    "docs/mini_ideal_reference_error_partition_v1.md": "89f44fad354c81267a48dc7743c0e299689ec8621f2e9486bf614ef4fd2bdcb2",
+    "reports/mini_c4_ideal_reference_2026-09-30/artifact_manifest.json": "112b1d7e89715d909a8680749b323805524b407034d8b0dd0b8a14600dbd00f0",
+    "reports/mini_c4_ideal_reference_2026-09-30/artifacts.tar.gz": "e82917ff0f30539b3f3afdc0afc5420de16fd5ed6b3ae2de8bba533793b21f4f",
+    "reports/mini_c4_ideal_reference_2026-09-30/audit.json": "2ad19b098e6f5487f1ef7fa3197fd2b66d833f18a6b730ce46da6b35328a04e0",
+    "reports/mini_c4_ideal_reference_2026-09-30/lock.json": "a791abafe5bb97669894d3e7e4691fd5f1c4d6f192fd41b66a16235555e747e4",
+    "reports/mini_c4_ideal_reference_2026-09-30/pipeline_exit.json": "0ef2f484a006cc1a2bd3bf2f4fcbd00b23c02a3a85cfa6ca9482bf02713445f9",
+    "reports/mini_c4_ideal_reference_2026-09-30/report.json": "ea153d4ccf3e5ecaeabf994a68fd7496c0e2c8079aa918df9b0c9827b57eccc4",
+    "src/fastglycan/lddt_attribution.py": "3292b3ba246ca7c81ede80477928fe130648107a5ed90eadddd4d186adf0f1c2"
+  },
+  "max_partition_error": 3.3306690738754696e-16,
+  "max_source_score_error": 2.220446049250313e-16,
+  "proteins": 7,
+  "scope": "observational additive partitions; fixed original scores; no objective-term causal attribution",
+  "skipped": [
+    {
+      "pdb_id": "3cr6",
+      "seed": 12345,
+      "source_failure": "Traceback (most recent call last):\n  File \"/media/PM982/onestepfold/local_fit_gt_source_v1_20260930_code/preflight_isolated_chemistry.py\", line 49, in check\n    if unsupported:raise ValueError('source covalent connection outside supported chemistry')\n                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nValueError: source covalent connection outside supported chemistry\n"
+    },
+    {
+      "pdb_id": "3cr6",
+      "seed": 54321,
+      "source_failure": "Traceback (most recent call last):\n  File \"/media/PM982/onestepfold/local_fit_gt_source_v1_20260930_code/preflight_isolated_chemistry.py\", line 49, in check\n    if unsupported:raise ValueError('source covalent connection outside supported chemistry')\n                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nValueError: source covalent connection outside supported chemistry\n"
+    }
+  ],
+  "source": "reports/mini_c4_ideal_reference_2026-09-30",
+  "stages": 5,
+  "summary": [
+    {
+      "contrast": "native_local-raw",
+      "delta_contribution": -0.0006010781937285199,
+      "group": "A",
+      "partition": "amino_acid",
+      "proteins_with_support": 7,
+      "space": "atom",
+      "support_weight": 0.04984268221345683
+    },
+    {
+      "contrast": "native_local-raw",
+      "delta_contribution": -0.00011159145897516192,
+      "group": "C",
+      "partition": "amino_acid",
+      "proteins_with_support": 4,
+      "space": "atom",
+      "support_weight": 0.007170793525497015
+    },
+    {
+      "contrast": "native_local-raw",
+      "delta_contribution": -0.0009920893339696976,
+      "group": "D",
+      "partition": "amino_acid",
+      "proteins_with_support": 7,
+      "space": "atom",
+      "support_weight": 0.0647738659362984
+    },
+    {
+      "contrast": "native_local-raw",
+      "delta_contribution": -0.0023213175857191423,
+      "group": "E",
+      "partition": "amino_acid",
+      "proteins_with_support": 7,
+      "space": "atom",
+      "support_weight": 0.09789338930692837
+    },
+    {
+      "contrast": "native_local-raw",
+      "delta_contribution": -0.0009082127235178426,
+      "group": "F",
+      "partition": "amino_acid",
+      "proteins_with_support": 6,
+      "space": "atom",
+      "support_weight": 0.043417966947595844
+    },
+    {
+      "contrast": "native_local-raw",
+      "delta_contribution": -0.00047933785201587754,
+      "group": "G",
+      "partition": "amino_acid",
+      "proteins_with_support": 7,
+      "space": "atom",
+      "support_weight": 0.037083773844271965
+    },
+    {
+      "contrast": "native_local-raw",
+      "delta_contribution": -0.00043747902340076516,
+      "group": "H",
+      "partition": "amino_acid",
+      "proteins_with_support": 5,
+      "space": "atom",
+      "support_weight": 0.01961830240278344
+    },
+    {
+      "contrast": "native_local-raw",
+      "delta_contribution": -0.0010495192201295744,
+      "group": "I",
+      "partition": "amino_acid",
+      "proteins_with_support": 7,
+      "space": "atom",
+      "support_weight": 0.06570792431697194
+    },
+    {
+      "contrast": "native_local-raw",
+      "delta_contribution": -0.0018961950419042115,
+      "group": "K",
+      "partition": "amino_acid",
+      "proteins_with_support": 7,
+      "space": "atom",
+      "support_weight": 0.08667805480445348
+    },
+    {
+      "contrast": "native_local-raw",
+      "delta_contribution": -0.0026448518918614394,
+      "group": "L",
+      "partition": "amino_acid",
+      "proteins_with_support": 7,
+      "space": "atom",
+      "support_weight": 0.0746687705451127
+    },
+    {
+      "contrast": "native_local-raw",
+      "delta_contribution": -0.00045771957921691324,
+      "group": "M",
+      "partition": "amino_acid",
+      "proteins_with_support": 5,
+      "space": "atom",
+      "support_weight": 0.021665603312277345
+    },
+    {
+      "contrast": "native_local-raw",
+      "delta_contribution": -0.0004996436776502584,
+      "group": "N",
+      "partition": "amino_acid",
+      "proteins_with_support": 7,
+      "space": "atom",
+      "support_weight": 0.03561294057537638
+    },
+    {
+      "contrast": "native_local-raw",
+      "delta_contribution": -0.0019583732998994345,
+      "group": "P",
+      "partition": "amino_acid",
+      "proteins_with_support": 6,
+      "space": "atom",
+      "support_weight": 0.043328025968407
+    },
+    {
+      "contrast": "native_local-raw",
+      "delta_contribution": -0.0008293100894882722,
+      "group": "Q",
+      "partition": "amino_acid",
+      "proteins_with_support": 6,
+      "space": "atom",
+      "support_weight": 0.04087121952693275
+    },
+    {
+      "contrast": "native_local-raw",
+      "delta_contribution": -0.0021951581974433156,
+      "group": "R",
+      "partition": "amino_acid",
+      "proteins_with_support": 7,
+      "space": "atom",
+      "support_weight": 0.05159752084872484
+    },
+    {
+      "contrast": "native_local-raw",
+      "delta_contribution": -0.0005434340654811772,
+      "group": "S",
+      "partition": "amino_acid",
+      "proteins_with_support": 7,
+      "space": "atom",
+      "support_weight": 0.03826587199985998
+    },
+    {
+      "contrast": "native_local-raw",
+      "delta_contribution": -0.0006488781669493825,
+      "group": "T",
+      "partition": "amino_acid",
+      "proteins_with_support": 7,
+      "space": "atom",
+      "support_weight": 0.05790385816080038
+    },
+    {
+      "contrast": "native_local-raw",
+      "delta_contribution": -0.0012039630341888158,
+      "group": "V",
+      "partition": "amino_acid",
+      "proteins_with_support": 7,
+      "space": "atom",
+      "support_weight": 0.08573850552193092
+    },
+    {
+      "contrast": "native_local-raw",
+      "delta_contribution": -0.0009774380422213629,
+      "group": "W",
+      "partition": "amino_acid",
+      "proteins_with_support": 4,
+      "space": "atom",
+      "support_weight": 0.020388897969214632
+    },
+    {
+      "contrast": "native_local-raw",
+      "delta_contribution": -0.001459060961877475,
+      "group": "Y",
+      "partition": "amino_acid",
+      "proteins_with_support": 6,
+      "space": "atom",
+      "support_weight": 0.05777203227310584
+    },
+    {
+      "contrast": "native_local-raw",
+      "delta_contribution": -0.001610225091142177,
+      "group": "C",
+      "partition": "atom_class",
+      "proteins_with_support": 7,
+      "space": "atom",
+      "support_weight": 0.12807077680754583
+    },
+    {
+      "contrast": "native_local-raw",
+      "delta_contribution": -0.0015457581540919032,
+      "group": "CA",
+      "partition": "atom_class",
+      "proteins_with_support": 7,
+      "space": "atom",
+      "support_weight": 0.12807077680754583
+    },
+    {
+      "contrast": "native_local-raw",
+      "delta_contribution": -0.0016122622268551223,
+      "group": "N",
+      "partition": "atom_class",
+      "proteins_with_support": 7,
+      "space": "atom",
+      "support_weight": 0.12807077680754583
+    },
+    {
+      "contrast": "native_local-raw",
+      "delta_contribution": -0.0016939844529047867,
+      "group": "O",
+      "partition": "atom_class",
+      "proteins_with_support": 7,
+      "space": "atom",
+      "support_weight": 0.12807077680754583
+    },
+    {
+      "contrast": "native_local-raw",
+      "delta_contribution": -1.4565657153517167e-05,
+      "group": "OXT",
+      "partition": "atom_class",
+      "proteins_with_support": 7,
+      "space": "atom",
+      "support_weight": 0.001190905591248428
+    },
+    {
+      "contrast": "native_local-raw",
+      "delta_contribution": -0.01573785585749112,
+      "group": "sidechain",
+      "partition": "atom_class",
+      "proteins_with_support": 7,
+      "space": "atom",
+      "support_weight": 0.48652598717856815
+    },
+    {
+      "contrast": "native_local-raw",
+      "delta_contribution": -0.021947297907012036,
+      "group": "interior",
+      "partition": "position",
+      "proteins_with_support": 7,
+      "space": "atom",
+      "support_weight": 0.9813990931619035
+    },
+    {
+      "contrast": "native_local-raw",
+      "delta_contribution": -0.00026735353262657854,
+      "group": "terminal",
+      "partition": "position",
+      "proteins_with_support": 7,
+      "space": "atom",
+      "support_weight": 0.01860090683809635
+    },
+    {
+      "contrast": "native_local-raw",
+      "delta_contribution": 4.4961687468091e-06,
+      "group": "near",
+      "partition": "raw_branch_mismatch",
+      "proteins_with_support": 1,
+      "space": "atom",
+      "support_weight": 0.0035286569717707444
+    },
+    {
+      "contrast": "native_local-raw",
+      "delta_contribution": -0.02221914760838544,
+      "group": "other",
+      "partition": "raw_branch_mismatch",
+      "proteins_with_support": 7,
+      "space": "atom",
+      "support_weight": 0.9964713430282293
+    },
+    {
+      "contrast": "native_local-raw",
+      "delta_contribution": -0.02221465143963864,
+      "group": "near",
+      "partition": "raw_connection_active",
+      "proteins_with_support": 7,
+      "space": "atom",
+      "support_weight": 1.0
+    },
+    {
+      "contrast": "native_local-raw",
+      "delta_contribution": -0.00034107341897464193,
+      "group": "backbone_backbone",
+      "partition": "pair_type",
+      "proteins_with_support": 7,
+      "space": "pair",
+      "support_weight": 0.27059897220171863
+    },
+    {
+      "contrast": "native_local-raw",
+      "delta_contribution": -0.012677308289478348,
+      "group": "backbone_other",
+      "partition": "pair_type",
+      "proteins_with_support": 7,
+      "space": "pair",
+      "support_weight": 0.4966774301585738
+    },
+    {
+      "contrast": "native_local-raw",
+      "delta_contribution": -0.009196269731185648,
+      "group": "other_other",
+      "partition": "pair_type",
+      "proteins_with_support": 7,
+      "space": "pair",
+      "support_weight": 0.23272359763970749
+    },
+    {
+      "contrast": "native_local-raw",
+      "delta_contribution": -0.0005422182101263931,
+      "group": "1",
+      "partition": "separation",
+      "proteins_with_support": 7,
+      "space": "pair",
+      "support_weight": 0.05258673874476833
+    },
+    {
+      "contrast": "native_local-raw",
+      "delta_contribution": -0.00258684416214339,
+      "group": "2-4",
+      "partition": "separation",
+      "proteins_with_support": 7,
+      "space": "pair",
+      "support_weight": 0.14922356325654076
+    },
+    {
+      "contrast": "native_local-raw",
+      "delta_contribution": -0.019085589067368815,
+      "group": "5+",
+      "partition": "separation",
+      "proteins_with_support": 7,
+      "space": "pair",
+      "support_weight": 0.798189697998691
+    },
+    {
+      "contrast": "native_local-raw",
+      "delta_contribution": -0.011454807703181072,
+      "group": "0.5",
+      "partition": "threshold",
+      "proteins_with_support": 7,
+      "space": "pair",
+      "support_weight": 0.25
+    },
+    {
+      "contrast": "native_local-raw",
+      "delta_contribution": -0.006844499977709479,
+      "group": "1.0",
+      "partition": "threshold",
+      "proteins_with_support": 7,
+      "space": "pair",
+      "support_weight": 0.25
+    },
+    {
+      "contrast": "native_local-raw",
+      "delta_contribution": -0.003168407529238607,
+      "group": "2.0",
+      "partition": "threshold",
+      "proteins_with_support": 7,
+      "space": "pair",
+      "support_weight": 0.25
+    },
+    {
+      "contrast": "native_local-raw",
+      "delta_contribution": -0.0007469362295094964,
+      "group": "4.0",
+      "partition": "threshold",
+      "proteins_with_support": 7,
+      "space": "pair",
+      "support_weight": 0.25
+    },
+    {
+      "contrast": "native_final-raw",
+      "delta_contribution": -0.00023179652727819605,
+      "group": "A",
+      "partition": "amino_acid",
+      "proteins_with_support": 7,
+      "space": "atom",
+      "support_weight": 0.04984268221345683
+    },
+    {
+      "contrast": "native_final-raw",
+      "delta_contribution": -5.5571828192443675e-05,
+      "group": "C",
+      "partition": "amino_acid",
+      "proteins_with_support": 4,
+      "space": "atom",
+      "support_weight": 0.007170793525497015
+    },
+    {
+      "contrast": "native_final-raw",
+      "delta_contribution": -0.0004567236257886547,
+      "group": "D",
+      "partition": "amino_acid",
+      "proteins_with_support": 7,
+      "space": "atom",
+      "support_weight": 0.0647738659362984
+    },
+    {
+      "contrast": "native_final-raw",
+      "delta_contribution": -0.0010502353758064051,
+      "group": "E",
+      "partition": "amino_acid",
+      "proteins_with_support": 7,
+      "space": "atom",
+      "support_weight": 0.09789338930692837
+    },
+    {
+      "contrast": "native_final-raw",
+      "delta_contribution": -0.00041064352895357943,
+      "group": "F",
+      "partition": "amino_acid",
+      "proteins_with_support": 6,
+      "space": "atom",
+      "support_weight": 0.043417966947595844
+    },
+    {
+      "contrast": "native_final-raw",
+      "delta_contribution": -0.0001527085986475709,
+      "group": "G",
+      "partition": "amino_acid",
+      "proteins_with_support": 7,
+      "space": "atom",
+      "support_weight": 0.037083773844271965
+    },
+    {
+      "contrast": "native_final-raw",
+      "delta_contribution": -0.00024050747799239707,
+      "group": "H",
+      "partition": "amino_acid",
+      "proteins_with_support": 5,
+      "space": "atom",
+      "support_weight": 0.01961830240278344
+    },
+    {
+      "contrast": "native_final-raw",
+      "delta_contribution": -0.0005561441019618083,
+      "group": "I",
+      "partition": "amino_acid",
+      "proteins_with_support": 7,
+      "space": "atom",
+      "support_weight": 0.06570792431697194
+    },
+    {
+      "contrast": "native_final-raw",
+      "delta_contribution": -0.0008246547663078194,
+      "group": "K",
+      "partition": "amino_acid",
+      "proteins_with_support": 7,
+      "space": "atom",
+      "support_weight": 0.08667805480445348
+    },
+    {
+      "contrast": "native_final-raw",
+      "delta_contribution": -0.002017507161625979,
+      "group": "L",
+      "partition": "amino_acid",
+      "proteins_with_support": 7,
+      "space": "atom",
+      "support_weight": 0.0746687705451127
+    },
+    {
+      "contrast": "native_final-raw",
+      "delta_contribution": -0.0002542311755124173,
+      "group": "M",
+      "partition": "amino_acid",
+      "proteins_with_support": 5,
+      "space": "atom",
+      "support_weight": 0.021665603312277345
+    },
+    {
+      "contrast": "native_final-raw",
+      "delta_contribution": -0.00032090805497510575,
+      "group": "N",
+      "partition": "amino_acid",
+      "proteins_with_support": 7,
+      "space": "atom",
+      "support_weight": 0.03561294057537638
+    },
+    {
+      "contrast": "native_final-raw",
+      "delta_contribution": -0.0015837790123932852,
+      "group": "P",
+      "partition": "amino_acid",
+      "proteins_with_support": 6,
+      "space": "atom",
+      "support_weight": 0.043328025968407
+    },
+    {
+      "contrast": "native_final-raw",
+      "delta_contribution": -0.0006703980386221128,
+      "group": "Q",
+      "partition": "amino_acid",
+      "proteins_with_support": 6,
+      "space": "atom",
+      "support_weight": 0.04087121952693275
+    },
+    {
+      "contrast": "native_final-raw",
+      "delta_contribution": -0.0010145400945152149,
+      "group": "R",
+      "partition": "amino_acid",
+      "proteins_with_support": 7,
+      "space": "atom",
+      "support_weight": 0.05159752084872484
+    },
+    {
+      "contrast": "native_final-raw",
+      "delta_contribution": -0.00033176174161653627,
+      "group": "S",
+      "partition": "amino_acid",
+      "proteins_with_support": 7,
+      "space": "atom",
+      "support_weight": 0.03826587199985998
+    },
+    {
+      "contrast": "native_final-raw",
+      "delta_contribution": -0.0005255496320639934,
+      "group": "T",
+      "partition": "amino_acid",
+      "proteins_with_support": 7,
+      "space": "atom",
+      "support_weight": 0.05790385816080038
+    },
+    {
+      "contrast": "native_final-raw",
+      "delta_contribution": -0.0007877450783597214,
+      "group": "V",
+      "partition": "amino_acid",
+      "proteins_with_support": 7,
+      "space": "atom",
+      "support_weight": 0.08573850552193092
+    },
+    {
+      "contrast": "native_final-raw",
+      "delta_contribution": -0.00044897303556025485,
+      "group": "W",
+      "partition": "amino_acid",
+      "proteins_with_support": 4,
+      "space": "atom",
+      "support_weight": 0.020388897969214632
+    },
+    {
+      "contrast": "native_final-raw",
+      "delta_contribution": -0.0005249611882247559,
+      "group": "Y",
+      "partition": "amino_acid",
+      "proteins_with_support": 6,
+      "space": "atom",
+      "support_weight": 0.05777203227310584
+    },
+    {
+      "contrast": "native_final-raw",
+      "delta_contribution": -0.0008705820704335575,
+      "group": "C",
+      "partition": "atom_class",
+      "proteins_with_support": 7,
+      "space": "atom",
+      "support_weight": 0.12807077680754583
+    },
+    {
+      "contrast": "native_final-raw",
+      "delta_contribution": -0.0008269320599518197,
+      "group": "CA",
+      "partition": "atom_class",
+      "proteins_with_support": 7,
+      "space": "atom",
+      "support_weight": 0.12807077680754583
+    },
+    {
+      "contrast": "native_final-raw",
+      "delta_contribution": -0.0008610664848202511,
+      "group": "N",
+      "partition": "atom_class",
+      "proteins_with_support": 7,
+      "space": "atom",
+      "support_weight": 0.12807077680754583
+    },
+    {
+      "contrast": "native_final-raw",
+      "delta_contribution": -0.0011665480422114699,
+      "group": "O",
+      "partition": "atom_class",
+      "proteins_with_support": 7,
+      "space": "atom",
+      "support_weight": 0.12807077680754583
+    },
+    {
+      "contrast": "native_final-raw",
+      "delta_contribution": -1.7483010850715473e-05,
+      "group": "OXT",
+      "partition": "atom_class",
+      "proteins_with_support": 7,
+      "space": "atom",
+      "support_weight": 0.001190905591248428
+    },
+    {
+      "contrast": "native_final-raw",
+      "delta_contribution": -0.008716728376130427,
+      "group": "sidechain",
+      "partition": "atom_class",
+      "proteins_with_support": 7,
+      "space": "atom",
+      "support_weight": 0.48652598717856815
+    },
+    {
+      "contrast": "native_final-raw",
+      "delta_contribution": -0.012510433050076661,
+      "group": "interior",
+      "partition": "position",
+      "proteins_with_support": 7,
+      "space": "atom",
+      "support_weight": 0.9813990931619035
+    },
+    {
+      "contrast": "native_final-raw",
+      "delta_contribution": 5.109300567838913e-05,
+      "group": "terminal",
+      "partition": "position",
+      "proteins_with_support": 7,
+      "space": "atom",
+      "support_weight": 0.01860090683809635
+    },
+    {
+      "contrast": "native_final-raw",
+      "delta_contribution": -1.8673552833929482e-05,
+      "group": "near",
+      "partition": "raw_branch_mismatch",
+      "proteins_with_support": 1,
+      "space": "atom",
+      "support_weight": 0.0035286569717707444
+    },
+    {
+      "contrast": "native_final-raw",
+      "delta_contribution": -0.012440666491564325,
+      "group": "other",
+      "partition": "raw_branch_mismatch",
+      "proteins_with_support": 7,
+      "space": "atom",
+      "support_weight": 0.9964713430282293
+    },
+    {
+      "contrast": "native_final-raw",
+      "delta_contribution": -0.012459340044398257,
+      "group": "near",
+      "partition": "raw_connection_active",
+      "proteins_with_support": 7,
+      "space": "atom",
+      "support_weight": 1.0
+    },
+    {
+      "contrast": "native_final-raw",
+      "delta_contribution": -0.00041422200642653964,
+      "group": "backbone_backbone",
+      "partition": "pair_type",
+      "proteins_with_support": 7,
+      "space": "pair",
+      "support_weight": 0.27059897220171863
+    },
+    {
+      "contrast": "native_final-raw",
+      "delta_contribution": -0.006874332699914685,
+      "group": "backbone_other",
+      "partition": "pair_type",
+      "proteins_with_support": 7,
+      "space": "pair",
+      "support_weight": 0.4966774301585738
+    },
+    {
+      "contrast": "native_final-raw",
+      "delta_contribution": -0.005170785338057056,
+      "group": "other_other",
+      "partition": "pair_type",
+      "proteins_with_support": 7,
+      "space": "pair",
+      "support_weight": 0.23272359763970749
+    },
+    {
+      "contrast": "native_final-raw",
+      "delta_contribution": 0.0002761095182517268,
+      "group": "1",
+      "partition": "separation",
+      "proteins_with_support": 7,
+      "space": "pair",
+      "support_weight": 0.05258673874476833
+    },
+    {
+      "contrast": "native_final-raw",
+      "delta_contribution": -0.001000747350100879,
+      "group": "2-4",
+      "partition": "separation",
+      "proteins_with_support": 7,
+      "space": "pair",
+      "support_weight": 0.14922356325654076
+    },
+    {
+      "contrast": "native_final-raw",
+      "delta_contribution": -0.01173470221254906,
+      "group": "5+",
+      "partition": "separation",
+      "proteins_with_support": 7,
+      "space": "pair",
+      "support_weight": 0.798189697998691
+    },
+    {
+      "contrast": "native_final-raw",
+      "delta_contribution": -0.005947600584542572,
+      "group": "0.5",
+      "partition": "threshold",
+      "proteins_with_support": 7,
+      "space": "pair",
+      "support_weight": 0.25
+    },
+    {
+      "contrast": "native_final-raw",
+      "delta_contribution": -0.0039030073517207103,
+      "group": "1.0",
+      "partition": "threshold",
+      "proteins_with_support": 7,
+      "space": "pair",
+      "support_weight": 0.25
+    },
+    {
+      "contrast": "native_final-raw",
+      "delta_contribution": -0.0019234533943097015,
+      "group": "2.0",
+      "partition": "threshold",
+      "proteins_with_support": 7,
+      "space": "pair",
+      "support_weight": 0.25
+    },
+    {
+      "contrast": "native_final-raw",
+      "delta_contribution": -0.00068527871382529,
+      "group": "4.0",
+      "partition": "threshold",
+      "proteins_with_support": 7,
+      "space": "pair",
+      "support_weight": 0.25
+    },
+    {
+      "contrast": "ideal_local-raw",
+      "delta_contribution": -0.00035838015606327346,
+      "group": "A",
+      "partition": "amino_acid",
+      "proteins_with_support": 7,
+      "space": "atom",
+      "support_weight": 0.04984268221345683
+    },
+    {
+      "contrast": "ideal_local-raw",
+      "delta_contribution": -7.982498082122426e-05,
+      "group": "C",
+      "partition": "amino_acid",
+      "proteins_with_support": 4,
+      "space": "atom",
+      "support_weight": 0.007170793525497015
+    },
+    {
+      "contrast": "ideal_local-raw",
+      "delta_contribution": -0.0007390930837204747,
+      "group": "D",
+      "partition": "amino_acid",
+      "proteins_with_support": 7,
+      "space": "atom",
+      "support_weight": 0.0647738659362984
+    },
+    {
+      "contrast": "ideal_local-raw",
+      "delta_contribution": -0.001034218511606608,
+      "group": "E",
+      "partition": "amino_acid",
+      "proteins_with_support": 7,
+      "space": "atom",
+      "support_weight": 0.09789338930692837
+    },
+    {
+      "contrast": "ideal_local-raw",
+      "delta_contribution": -0.00047701365138932365,
+      "group": "F",
+      "partition": "amino_acid",
+      "proteins_with_support": 6,
+      "space": "atom",
+      "support_weight": 0.043417966947595844
+    },
+    {
+      "contrast": "ideal_local-raw",
+      "delta_contribution": -0.00032148499611611453,
+      "group": "G",
+      "partition": "amino_acid",
+      "proteins_with_support": 7,
+      "space": "atom",
+      "support_weight": 0.037083773844271965
+    },
+    {
+      "contrast": "ideal_local-raw",
+      "delta_contribution": -0.00039233377964550617,
+      "group": "H",
+      "partition": "amino_acid",
+      "proteins_with_support": 5,
+      "space": "atom",
+      "support_weight": 0.01961830240278344
+    },
+    {
+      "contrast": "ideal_local-raw",
+      "delta_contribution": -0.0006019876176956067,
+      "group": "I",
+      "partition": "amino_acid",
+      "proteins_with_support": 7,
+      "space": "atom",
+      "support_weight": 0.06570792431697194
+    },
+    {
+      "contrast": "ideal_local-raw",
+      "delta_contribution": -0.0012794516438748298,
+      "group": "K",
+      "partition": "amino_acid",
+      "proteins_with_support": 7,
+      "space": "atom",
+      "support_weight": 0.08667805480445348
+    },
+    {
+      "contrast": "ideal_local-raw",
+      "delta_contribution": -0.0010493466816110658,
+      "group": "L",
+      "partition": "amino_acid",
+      "proteins_with_support": 7,
+      "space": "atom",
+      "support_weight": 0.0746687705451127
+    },
+    {
+      "contrast": "ideal_local-raw",
+      "delta_contribution": -0.0004002427960322511,
+      "group": "M",
+      "partition": "amino_acid",
+      "proteins_with_support": 5,
+      "space": "atom",
+      "support_weight": 0.021665603312277345
+    },
+    {
+      "contrast": "ideal_local-raw",
+      "delta_contribution": -0.00038793068279286075,
+      "group": "N",
+      "partition": "amino_acid",
+      "proteins_with_support": 7,
+      "space": "atom",
+      "support_weight": 0.03561294057537638
+    },
+    {
+      "contrast": "ideal_local-raw",
+      "delta_contribution": -0.0011840224325985582,
+      "group": "P",
+      "partition": "amino_acid",
+      "proteins_with_support": 6,
+      "space": "atom",
+      "support_weight": 0.043328025968407
+    },
+    {
+      "contrast": "ideal_local-raw",
+      "delta_contribution": -0.0005302049295742896,
+      "group": "Q",
+      "partition": "amino_acid",
+      "proteins_with_support": 6,
+      "space": "atom",
+      "support_weight": 0.04087121952693275
+    },
+    {
+      "contrast": "ideal_local-raw",
+      "delta_contribution": -0.0014861559769422537,
+      "group": "R",
+      "partition": "amino_acid",
+      "proteins_with_support": 7,
+      "space": "atom",
+      "support_weight": 0.05159752084872484
+    },
+    {
+      "contrast": "ideal_local-raw",
+      "delta_contribution": -0.0003516580645478762,
+      "group": "S",
+      "partition": "amino_acid",
+      "proteins_with_support": 7,
+      "space": "atom",
+      "support_weight": 0.03826587199985998
+    },
+    {
+      "contrast": "ideal_local-raw",
+      "delta_contribution": -0.0004546375513771144,
+      "group": "T",
+      "partition": "amino_acid",
+      "proteins_with_support": 7,
+      "space": "atom",
+      "support_weight": 0.05790385816080038
+    },
+    {
+      "contrast": "ideal_local-raw",
+      "delta_contribution": -0.0007314045452938436,
+      "group": "V",
+      "partition": "amino_acid",
+      "proteins_with_support": 7,
+      "space": "atom",
+      "support_weight": 0.08573850552193092
+    },
+    {
+      "contrast": "ideal_local-raw",
+      "delta_contribution": -0.0006469818709868411,
+      "group": "W",
+      "partition": "amino_acid",
+      "proteins_with_support": 4,
+      "space": "atom",
+      "support_weight": 0.020388897969214632
+    },
+    {
+      "contrast": "ideal_local-raw",
+      "delta_contribution": -0.0010492630385374399,
+      "group": "Y",
+      "partition": "amino_acid",
+      "proteins_with_support": 6,
+      "space": "atom",
+      "support_weight": 0.05777203227310584
+    },
+    {
+      "contrast": "ideal_local-raw",
+      "delta_contribution": -0.0009612457685416345,
+      "group": "C",
+      "partition": "atom_class",
+      "proteins_with_support": 7,
+      "space": "atom",
+      "support_weight": 0.12807077680754583
+    },
+    {
+      "contrast": "ideal_local-raw",
+      "delta_contribution": -0.000909114366208114,
+      "group": "CA",
+      "partition": "atom_class",
+      "proteins_with_support": 7,
+      "space": "atom",
+      "support_weight": 0.12807077680754583
+    },
+    {
+      "contrast": "ideal_local-raw",
+      "delta_contribution": -0.0009334349067641309,
+      "group": "N",
+      "partition": "atom_class",
+      "proteins_with_support": 7,
+      "space": "atom",
+      "support_weight": 0.12807077680754583
+    },
+    {
+      "contrast": "ideal_local-raw",
+      "delta_contribution": -0.000956856576083195,
+      "group": "O",
+      "partition": "atom_class",
+      "proteins_with_support": 7,
+      "space": "atom",
+      "support_weight": 0.12807077680754583
+    },
+    {
+      "contrast": "ideal_local-raw",
+      "delta_contribution": -2.1126265888045885e-05,
+      "group": "OXT",
+      "partition": "atom_class",
+      "proteins_with_support": 7,
+      "space": "atom",
+      "support_weight": 0.001190905591248428
+    },
+    {
+      "contrast": "ideal_local-raw",
+      "delta_contribution": -0.009773859107742252,
+      "group": "sidechain",
+      "partition": "atom_class",
+      "proteins_with_support": 7,
+      "space": "atom",
+      "support_weight": 0.48652598717856815
+    },
+    {
+      "contrast": "ideal_local-raw",
+      "delta_contribution": -0.013269333721987155,
+      "group": "interior",
+      "partition": "position",
+      "proteins_with_support": 7,
+      "space": "atom",
+      "support_weight": 0.9813990931619035
+    },
+    {
+      "contrast": "ideal_local-raw",
+      "delta_contribution": -0.0002863032692401977,
+      "group": "terminal",
+      "partition": "position",
+      "proteins_with_support": 7,
+      "space": "atom",
+      "support_weight": 0.01860090683809635
+    },
+    {
+      "contrast": "ideal_local-raw",
+      "delta_contribution": 5.78149989900373e-06,
+      "group": "near",
+      "partition": "raw_branch_mismatch",
+      "proteins_with_support": 1,
+      "space": "atom",
+      "support_weight": 0.0035286569717707444
+    },
+    {
+      "contrast": "ideal_local-raw",
+      "delta_contribution": -0.013561418491126362,
+      "group": "other",
+      "partition": "raw_branch_mismatch",
+      "proteins_with_support": 7,
+      "space": "atom",
+      "support_weight": 0.9964713430282293
+    },
+    {
+      "contrast": "ideal_local-raw",
+      "delta_contribution": -0.013555636991227376,
+      "group": "near",
+      "partition": "raw_connection_active",
+      "proteins_with_support": 7,
+      "space": "atom",
+      "support_weight": 1.0
+    },
+    {
+      "contrast": "ideal_local-raw",
+      "delta_contribution": -0.00016535010571210835,
+      "group": "backbone_backbone",
+      "partition": "pair_type",
+      "proteins_with_support": 7,
+      "space": "pair",
+      "support_weight": 0.27059897220171863
+    },
+    {
+      "contrast": "ideal_local-raw",
+      "delta_contribution": -0.007539532065223739,
+      "group": "backbone_other",
+      "partition": "pair_type",
+      "proteins_with_support": 7,
+      "space": "pair",
+      "support_weight": 0.4966774301585738
+    },
+    {
+      "contrast": "ideal_local-raw",
+      "delta_contribution": -0.005850754820291499,
+      "group": "other_other",
+      "partition": "pair_type",
+      "proteins_with_support": 7,
+      "space": "pair",
+      "support_weight": 0.23272359763970749
+    },
+    {
+      "contrast": "ideal_local-raw",
+      "delta_contribution": -0.0004300992275607894,
+      "group": "1",
+      "partition": "separation",
+      "proteins_with_support": 7,
+      "space": "pair",
+      "support_weight": 0.05258673874476833
+    },
+    {
+      "contrast": "ideal_local-raw",
+      "delta_contribution": -0.0017644816988631928,
+      "group": "2-4",
+      "partition": "separation",
+      "proteins_with_support": 7,
+      "space": "pair",
+      "support_weight": 0.14922356325654076
+    },
+    {
+      "contrast": "ideal_local-raw",
+      "delta_contribution": -0.011361056064803301,
+      "group": "5+",
+      "partition": "separation",
+      "proteins_with_support": 7,
+      "space": "pair",
+      "support_weight": 0.798189697998691
+    },
+    {
+      "contrast": "ideal_local-raw",
+      "delta_contribution": -0.006714139370161518,
+      "group": "0.5",
+      "partition": "threshold",
+      "proteins_with_support": 7,
+      "space": "pair",
+      "support_weight": 0.25
+    },
+    {
+      "contrast": "ideal_local-raw",
+      "delta_contribution": -0.003925637923625892,
+      "group": "1.0",
+      "partition": "threshold",
+      "proteins_with_support": 7,
+      "space": "pair",
+      "support_weight": 0.25
+    },
+    {
+      "contrast": "ideal_local-raw",
+      "delta_contribution": -0.0022027298276772805,
+      "group": "2.0",
+      "partition": "threshold",
+      "proteins_with_support": 7,
+      "space": "pair",
+      "support_weight": 0.25
+    },
+    {
+      "contrast": "ideal_local-raw",
+      "delta_contribution": -0.0007131298697626655,
+      "group": "4.0",
+      "partition": "threshold",
+      "proteins_with_support": 7,
+      "space": "pair",
+      "support_weight": 0.25
+    },
+    {
+      "contrast": "ideal_final-raw",
+      "delta_contribution": -0.00013489943639491644,
+      "group": "A",
+      "partition": "amino_acid",
+      "proteins_with_support": 7,
+      "space": "atom",
+      "support_weight": 0.04984268221345683
+    },
+    {
+      "contrast": "ideal_final-raw",
+      "delta_contribution": -4.769959730700533e-05,
+      "group": "C",
+      "partition": "amino_acid",
+      "proteins_with_support": 4,
+      "space": "atom",
+      "support_weight": 0.007170793525497015
+    },
+    {
+      "contrast": "ideal_final-raw",
+      "delta_contribution": -0.00039889276916054865,
+      "group": "D",
+      "partition": "amino_acid",
+      "proteins_with_support": 7,
+      "space": "atom",
+      "support_weight": 0.0647738659362984
+    },
+    {
+      "contrast": "ideal_final-raw",
+      "delta_contribution": -0.0005416427572896293,
+      "group": "E",
+      "partition": "amino_acid",
+      "proteins_with_support": 7,
+      "space": "atom",
+      "support_weight": 0.09789338930692837
+    },
+    {
+      "contrast": "ideal_final-raw",
+      "delta_contribution": -0.0004885624899971725,
+      "group": "F",
+      "partition": "amino_acid",
+      "proteins_with_support": 6,
+      "space": "atom",
+      "support_weight": 0.043417966947595844
+    },
+    {
+      "contrast": "ideal_final-raw",
+      "delta_contribution": -8.555619253026978e-05,
+      "group": "G",
+      "partition": "amino_acid",
+      "proteins_with_support": 7,
+      "space": "atom",
+      "support_weight": 0.037083773844271965
+    },
+    {
+      "contrast": "ideal_final-raw",
+      "delta_contribution": -0.0002395214103792749,
+      "group": "H",
+      "partition": "amino_acid",
+      "proteins_with_support": 5,
+      "space": "atom",
+      "support_weight": 0.01961830240278344
+    },
+    {
+      "contrast": "ideal_final-raw",
+      "delta_contribution": -0.0004222598716779067,
+      "group": "I",
+      "partition": "amino_acid",
+      "proteins_with_support": 7,
+      "space": "atom",
+      "support_weight": 0.06570792431697194
+    },
+    {
+      "contrast": "ideal_final-raw",
+      "delta_contribution": -0.0006127735137827836,
+      "group": "K",
+      "partition": "amino_acid",
+      "proteins_with_support": 7,
+      "space": "atom",
+      "support_weight": 0.08667805480445348
+    },
+    {
+      "contrast": "ideal_final-raw",
+      "delta_contribution": -0.0009925518890354487,
+      "group": "L",
+      "partition": "amino_acid",
+      "proteins_with_support": 7,
+      "space": "atom",
+      "support_weight": 0.0746687705451127
+    },
+    {
+      "contrast": "ideal_final-raw",
+      "delta_contribution": -0.00024074398909807023,
+      "group": "M",
+      "partition": "amino_acid",
+      "proteins_with_support": 5,
+      "space": "atom",
+      "support_weight": 0.021665603312277345
+    },
+    {
+      "contrast": "ideal_final-raw",
+      "delta_contribution": -0.0002807188183122014,
+      "group": "N",
+      "partition": "amino_acid",
+      "proteins_with_support": 7,
+      "space": "atom",
+      "support_weight": 0.03561294057537638
+    },
+    {
+      "contrast": "ideal_final-raw",
+      "delta_contribution": -0.0009755487334809267,
+      "group": "P",
+      "partition": "amino_acid",
+      "proteins_with_support": 6,
+      "space": "atom",
+      "support_weight": 0.043328025968407
+    },
+    {
+      "contrast": "ideal_final-raw",
+      "delta_contribution": -0.0005774682557212683,
+      "group": "Q",
+      "partition": "amino_acid",
+      "proteins_with_support": 6,
+      "space": "atom",
+      "support_weight": 0.04087121952693275
+    },
+    {
+      "contrast": "ideal_final-raw",
+      "delta_contribution": -0.0008764904782388623,
+      "group": "R",
+      "partition": "amino_acid",
+      "proteins_with_support": 7,
+      "space": "atom",
+      "support_weight": 0.05159752084872484
+    },
+    {
+      "contrast": "ideal_final-raw",
+      "delta_contribution": -0.0002234753797940681,
+      "group": "S",
+      "partition": "amino_acid",
+      "proteins_with_support": 7,
+      "space": "atom",
+      "support_weight": 0.03826587199985998
+    },
+    {
+      "contrast": "ideal_final-raw",
+      "delta_contribution": -0.0004783203565142812,
+      "group": "T",
+      "partition": "amino_acid",
+      "proteins_with_support": 7,
+      "space": "atom",
+      "support_weight": 0.05790385816080038
+    },
+    {
+      "contrast": "ideal_final-raw",
+      "delta_contribution": -0.0005680002325671166,
+      "group": "V",
+      "partition": "amino_acid",
+      "proteins_with_support": 7,
+      "space": "atom",
+      "support_weight": 0.08573850552193092
+    },
+    {
+      "contrast": "ideal_final-raw",
+      "delta_contribution": -0.00036941367128412266,
+      "group": "W",
+      "partition": "amino_acid",
+      "proteins_with_support": 4,
+      "space": "atom",
+      "support_weight": 0.020388897969214632
+    },
+    {
+      "contrast": "ideal_final-raw",
+      "delta_contribution": -0.0004057456739665128,
+      "group": "Y",
+      "partition": "amino_acid",
+      "proteins_with_support": 6,
+      "space": "atom",
+      "support_weight": 0.05777203227310584
+    },
+    {
+      "contrast": "ideal_final-raw",
+      "delta_contribution": -0.000637756841861092,
+      "group": "C",
+      "partition": "atom_class",
+      "proteins_with_support": 7,
+      "space": "atom",
+      "support_weight": 0.12807077680754583
+    },
+    {
+      "contrast": "ideal_final-raw",
+      "delta_contribution": -0.0005759557693021865,
+      "group": "CA",
+      "partition": "atom_class",
+      "proteins_with_support": 7,
+      "space": "atom",
+      "support_weight": 0.12807077680754583
+    },
+    {
+      "contrast": "ideal_final-raw",
+      "delta_contribution": -0.0005676737218370977,
+      "group": "N",
+      "partition": "atom_class",
+      "proteins_with_support": 7,
+      "space": "atom",
+      "support_weight": 0.12807077680754583
+    },
+    {
+      "contrast": "ideal_final-raw",
+      "delta_contribution": -0.0007998799669912483,
+      "group": "O",
+      "partition": "atom_class",
+      "proteins_with_support": 7,
+      "space": "atom",
+      "support_weight": 0.12807077680754583
+    },
+    {
+      "contrast": "ideal_final-raw",
+      "delta_contribution": -2.3519413419431775e-05,
+      "group": "OXT",
+      "partition": "atom_class",
+      "proteins_with_support": 7,
+      "space": "atom",
+      "support_weight": 0.001190905591248428
+    },
+    {
+      "contrast": "ideal_final-raw",
+      "delta_contribution": -0.006355499803121318,
+      "group": "sidechain",
+      "partition": "atom_class",
+      "proteins_with_support": 7,
+      "space": "atom",
+      "support_weight": 0.48652598717856815
+    },
+    {
+      "contrast": "ideal_final-raw",
+      "delta_contribution": -0.0089894929227926,
+      "group": "interior",
+      "partition": "position",
+      "proteins_with_support": 7,
+      "space": "atom",
+      "support_weight": 0.9813990931619035
+    },
+    {
+      "contrast": "ideal_final-raw",
+      "delta_contribution": 2.92074062602257e-05,
+      "group": "terminal",
+      "partition": "position",
+      "proteins_with_support": 7,
+      "space": "atom",
+      "support_weight": 0.01860090683809635
+    },
+    {
+      "contrast": "ideal_final-raw",
+      "delta_contribution": -2.0605812332040972e-05,
+      "group": "near",
+      "partition": "raw_branch_mismatch",
+      "proteins_with_support": 1,
+      "space": "atom",
+      "support_weight": 0.0035286569717707444
+    },
+    {
+      "contrast": "ideal_final-raw",
+      "delta_contribution": -0.008939679704200352,
+      "group": "other",
+      "partition": "raw_branch_mismatch",
+      "proteins_with_support": 7,
+      "space": "atom",
+      "support_weight": 0.9964713430282293
+    },
+    {
+      "contrast": "ideal_final-raw",
+      "delta_contribution": -0.008960285516532393,
+      "group": "near",
+      "partition": "raw_connection_active",
+      "proteins_with_support": 7,
+      "space": "atom",
+      "support_weight": 1.0
+    },
+    {
+      "contrast": "ideal_final-raw",
+      "delta_contribution": -0.000293044237515791,
+      "group": "backbone_backbone",
+      "partition": "pair_type",
+      "proteins_with_support": 7,
+      "space": "pair",
+      "support_weight": 0.27059897220171863
+    },
+    {
+      "contrast": "ideal_final-raw",
+      "delta_contribution": -0.004836197939568168,
+      "group": "backbone_other",
+      "partition": "pair_type",
+      "proteins_with_support": 7,
+      "space": "pair",
+      "support_weight": 0.4966774301585738
+    },
+    {
+      "contrast": "ideal_final-raw",
+      "delta_contribution": -0.0038310433394483983,
+      "group": "other_other",
+      "partition": "pair_type",
+      "proteins_with_support": 7,
+      "space": "pair",
+      "support_weight": 0.23272359763970749
+    },
+    {
+      "contrast": "ideal_final-raw",
+      "delta_contribution": 0.0002793932560768257,
+      "group": "1",
+      "partition": "separation",
+      "proteins_with_support": 7,
+      "space": "pair",
+      "support_weight": 0.05258673874476833
+    },
+    {
+      "contrast": "ideal_final-raw",
+      "delta_contribution": -0.0005769930286562489,
+      "group": "2-4",
+      "partition": "separation",
+      "proteins_with_support": 7,
+      "space": "pair",
+      "support_weight": 0.14922356325654076
+    },
+    {
+      "contrast": "ideal_final-raw",
+      "delta_contribution": -0.008662685743952967,
+      "group": "5+",
+      "partition": "separation",
+      "proteins_with_support": 7,
+      "space": "pair",
+      "support_weight": 0.798189697998691
+    },
+    {
+      "contrast": "ideal_final-raw",
+      "delta_contribution": -0.003891210300408836,
+      "group": "0.5",
+      "partition": "threshold",
+      "proteins_with_support": 7,
+      "space": "pair",
+      "support_weight": 0.25
+    },
+    {
+      "contrast": "ideal_final-raw",
+      "delta_contribution": -0.002586429767430692,
+      "group": "1.0",
+      "partition": "threshold",
+      "proteins_with_support": 7,
+      "space": "pair",
+      "support_weight": 0.25
+    },
+    {
+      "contrast": "ideal_final-raw",
+      "delta_contribution": -0.0016984680722896095,
+      "group": "2.0",
+      "partition": "threshold",
+      "proteins_with_support": 7,
+      "space": "pair",
+      "support_weight": 0.25
+    },
+    {
+      "contrast": "ideal_final-raw",
+      "delta_contribution": -0.0007841773764032509,
+      "group": "4.0",
+      "partition": "threshold",
+      "proteins_with_support": 7,
+      "space": "pair",
+      "support_weight": 0.25
+    },
+    {
+      "contrast": "native_final-native_local",
+      "delta_contribution": 0.0003692816664503238,
+      "group": "A",
+      "partition": "amino_acid",
+      "proteins_with_support": 7,
+      "space": "atom",
+      "support_weight": 0.04984268221345683
+    },
+    {
+      "contrast": "native_final-native_local",
+      "delta_contribution": 5.6019630782718254e-05,
+      "group": "C",
+      "partition": "amino_acid",
+      "proteins_with_support": 4,
+      "space": "atom",
+      "support_weight": 0.007170793525497015
+    },
+    {
+      "contrast": "native_final-native_local",
+      "delta_contribution": 0.000535365708181043,
+      "group": "D",
+      "partition": "amino_acid",
+      "proteins_with_support": 7,
+      "space": "atom",
+      "support_weight": 0.0647738659362984
+    },
+    {
+      "contrast": "native_final-native_local",
+      "delta_contribution": 0.0012710822099127367,
+      "group": "E",
+      "partition": "amino_acid",
+      "proteins_with_support": 7,
+      "space": "atom",
+      "support_weight": 0.09789338930692837
+    },
+    {
+      "contrast": "native_final-native_local",
+      "delta_contribution": 0.0004975691945642631,
+      "group": "F",
+      "partition": "amino_acid",
+      "proteins_with_support": 6,
+      "space": "atom",
+      "support_weight": 0.043417966947595844
+    },
+    {
+      "contrast": "native_final-native_local",
+      "delta_contribution": 0.00032662925336830663,
+      "group": "G",
+      "partition": "amino_acid",
+      "proteins_with_support": 7,
+      "space": "atom",
+      "support_weight": 0.037083773844271965
+    },
+    {
+      "contrast": "native_final-native_local",
+      "delta_contribution": 0.00019697154540836812,
+      "group": "H",
+      "partition": "amino_acid",
+      "proteins_with_support": 5,
+      "space": "atom",
+      "support_weight": 0.01961830240278344
+    },
+    {
+      "contrast": "native_final-native_local",
+      "delta_contribution": 0.000493375118167766,
+      "group": "I",
+      "partition": "amino_acid",
+      "proteins_with_support": 7,
+      "space": "atom",
+      "support_weight": 0.06570792431697194
+    },
+    {
+      "contrast": "native_final-native_local",
+      "delta_contribution": 0.0010715402755963922,
+      "group": "K",
+      "partition": "amino_acid",
+      "proteins_with_support": 7,
+      "space": "atom",
+      "support_weight": 0.08667805480445348
+    },
+    {
+      "contrast": "native_final-native_local",
+      "delta_contribution": 0.0006273447302354606,
+      "group": "L",
+      "partition": "amino_acid",
+      "proteins_with_support": 7,
+      "space": "atom",
+      "support_weight": 0.0746687705451127
+    },
+    {
+      "contrast": "native_final-native_local",
+      "delta_contribution": 0.00020348840370449593,
+      "group": "M",
+      "partition": "amino_acid",
+      "proteins_with_support": 5,
+      "space": "atom",
+      "support_weight": 0.021665603312277345
+    },
+    {
+      "contrast": "native_final-native_local",
+      "delta_contribution": 0.00017873562267515264,
+      "group": "N",
+      "partition": "amino_acid",
+      "proteins_with_support": 7,
+      "space": "atom",
+      "support_weight": 0.03561294057537638
+    },
+    {
+      "contrast": "native_final-native_local",
+      "delta_contribution": 0.00037459428750614927,
+      "group": "P",
+      "partition": "amino_acid",
+      "proteins_with_support": 6,
+      "space": "atom",
+      "support_weight": 0.043328025968407
+    },
+    {
+      "contrast": "native_final-native_local",
+      "delta_contribution": 0.0001589120508661594,
+      "group": "Q",
+      "partition": "amino_acid",
+      "proteins_with_support": 6,
+      "space": "atom",
+      "support_weight": 0.04087121952693275
+    },
+    {
+      "contrast": "native_final-native_local",
+      "delta_contribution": 0.001180618102928101,
+      "group": "R",
+      "partition": "amino_acid",
+      "proteins_with_support": 7,
+      "space": "atom",
+      "support_weight": 0.05159752084872484
+    },
+    {
+      "contrast": "native_final-native_local",
+      "delta_contribution": 0.00021167232386464088,
+      "group": "S",
+      "partition": "amino_acid",
+      "proteins_with_support": 7,
+      "space": "atom",
+      "support_weight": 0.03826587199985998
+    },
+    {
+      "contrast": "native_final-native_local",
+      "delta_contribution": 0.00012332853488538901,
+      "group": "T",
+      "partition": "amino_acid",
+      "proteins_with_support": 7,
+      "space": "atom",
+      "support_weight": 0.05790385816080038
+    },
+    {
+      "contrast": "native_final-native_local",
+      "delta_contribution": 0.0004162179558290944,
+      "group": "V",
+      "partition": "amino_acid",
+      "proteins_with_support": 7,
+      "space": "atom",
+      "support_weight": 0.08573850552193092
+    },
+    {
+      "contrast": "native_final-native_local",
+      "delta_contribution": 0.000528465006661108,
+      "group": "W",
+      "partition": "amino_acid",
+      "proteins_with_support": 4,
+      "space": "atom",
+      "support_weight": 0.020388897969214632
+    },
+    {
+      "contrast": "native_final-native_local",
+      "delta_contribution": 0.000934099773652719,
+      "group": "Y",
+      "partition": "amino_acid",
+      "proteins_with_support": 6,
+      "space": "atom",
+      "support_weight": 0.05777203227310584
+    },
+    {
+      "contrast": "native_final-native_local",
+      "delta_contribution": 0.0007396430207086195,
+      "group": "C",
+      "partition": "atom_class",
+      "proteins_with_support": 7,
+      "space": "atom",
+      "support_weight": 0.12807077680754583
+    },
+    {
+      "contrast": "native_final-native_local",
+      "delta_contribution": 0.0007188260941400834,
+      "group": "CA",
+      "partition": "atom_class",
+      "proteins_with_support": 7,
+      "space": "atom",
+      "support_weight": 0.12807077680754583
+    },
+    {
+      "contrast": "native_final-native_local",
+      "delta_contribution": 0.0007511957420348712,
+      "group": "N",
+      "partition": "atom_class",
+      "proteins_with_support": 7,
+      "space": "atom",
+      "support_weight": 0.12807077680754583
+    },
+    {
+      "contrast": "native_final-native_local",
+      "delta_contribution": 0.0005274364106933169,
+      "group": "O",
+      "partition": "atom_class",
+      "proteins_with_support": 7,
+      "space": "atom",
+      "support_weight": 0.12807077680754583
+    },
+    {
+      "contrast": "native_final-native_local",
+      "delta_contribution": -2.917353697198306e-06,
+      "group": "OXT",
+      "partition": "atom_class",
+      "proteins_with_support": 7,
+      "space": "atom",
+      "support_weight": 0.001190905591248428
+    },
+    {
+      "contrast": "native_final-native_local",
+      "delta_contribution": 0.007021127481360689,
+      "group": "sidechain",
+      "partition": "atom_class",
+      "proteins_with_support": 7,
+      "space": "atom",
+      "support_weight": 0.48652598717856815
+    },
+    {
+      "contrast": "native_final-native_local",
+      "delta_contribution": 0.009436864856935376,
+      "group": "interior",
+      "partition": "position",
+      "proteins_with_support": 7,
+      "space": "atom",
+      "support_weight": 0.9813990931619035
+    },
+    {
+      "contrast": "native_final-native_local",
+      "delta_contribution": 0.0003184465383049677,
+      "group": "terminal",
+      "partition": "position",
+      "proteins_with_support": 7,
+      "space": "atom",
+      "support_weight": 0.01860090683809635
+    },
+    {
+      "contrast": "native_final-native_local",
+      "delta_contribution": -2.316972158073858e-05,
+      "group": "near",
+      "partition": "raw_branch_mismatch",
+      "proteins_with_support": 1,
+      "space": "atom",
+      "support_weight": 0.0035286569717707444
+    },
+    {
+      "contrast": "native_final-native_local",
+      "delta_contribution": 0.009778481116821114,
+      "group": "other",
+      "partition": "raw_branch_mismatch",
+      "proteins_with_support": 7,
+      "space": "atom",
+      "support_weight": 0.9964713430282293
+    },
+    {
+      "contrast": "native_final-native_local",
+      "delta_contribution": 0.009755311395240385,
+      "group": "near",
+      "partition": "raw_connection_active",
+      "proteins_with_support": 7,
+      "space": "atom",
+      "support_weight": 1.0
+    },
+    {
+      "contrast": "native_final-native_local",
+      "delta_contribution": -7.31485874518977e-05,
+      "group": "backbone_backbone",
+      "partition": "pair_type",
+      "proteins_with_support": 7,
+      "space": "pair",
+      "support_weight": 0.27059897220171863
+    },
+    {
+      "contrast": "native_final-native_local",
+      "delta_contribution": 0.005802975589563664,
+      "group": "backbone_other",
+      "partition": "pair_type",
+      "proteins_with_support": 7,
+      "space": "pair",
+      "support_weight": 0.4966774301585738
+    },
+    {
+      "contrast": "native_final-native_local",
+      "delta_contribution": 0.004025484393128593,
+      "group": "other_other",
+      "partition": "pair_type",
+      "proteins_with_support": 7,
+      "space": "pair",
+      "support_weight": 0.23272359763970749
+    },
+    {
+      "contrast": "native_final-native_local",
+      "delta_contribution": 0.0008183277283781198,
+      "group": "1",
+      "partition": "separation",
+      "proteins_with_support": 7,
+      "space": "pair",
+      "support_weight": 0.05258673874476833
+    },
+    {
+      "contrast": "native_final-native_local",
+      "delta_contribution": 0.0015860968120425107,
+      "group": "2-4",
+      "partition": "separation",
+      "proteins_with_support": 7,
+      "space": "pair",
+      "support_weight": 0.14922356325654076
+    },
+    {
+      "contrast": "native_final-native_local",
+      "delta_contribution": 0.007350886854819756,
+      "group": "5+",
+      "partition": "separation",
+      "proteins_with_support": 7,
+      "space": "pair",
+      "support_weight": 0.798189697998691
+    },
+    {
+      "contrast": "native_final-native_local",
+      "delta_contribution": 0.0055072071186385,
+      "group": "0.5",
+      "partition": "threshold",
+      "proteins_with_support": 7,
+      "space": "pair",
+      "support_weight": 0.25
+    },
+    {
+      "contrast": "native_final-native_local",
+      "delta_contribution": 0.0029414926259887686,
+      "group": "1.0",
+      "partition": "threshold",
+      "proteins_with_support": 7,
+      "space": "pair",
+      "support_weight": 0.25
+    },
+    {
+      "contrast": "native_final-native_local",
+      "delta_contribution": 0.0012449541349289059,
+      "group": "2.0",
+      "partition": "threshold",
+      "proteins_with_support": 7,
+      "space": "pair",
+      "support_weight": 0.25
+    },
+    {
+      "contrast": "native_final-native_local",
+      "delta_contribution": 6.165751568420632e-05,
+      "group": "4.0",
+      "partition": "threshold",
+      "proteins_with_support": 7,
+      "space": "pair",
+      "support_weight": 0.25
+    },
+    {
+      "contrast": "ideal_final-ideal_local",
+      "delta_contribution": 0.00022348071966835702,
+      "group": "A",
+      "partition": "amino_acid",
+      "proteins_with_support": 7,
+      "space": "atom",
+      "support_weight": 0.04984268221345683
+    },
+    {
+      "contrast": "ideal_final-ideal_local",
+      "delta_contribution": 3.212538351421893e-05,
+      "group": "C",
+      "partition": "amino_acid",
+      "proteins_with_support": 4,
+      "space": "atom",
+      "support_weight": 0.007170793525497015
+    },
+    {
+      "contrast": "ideal_final-ideal_local",
+      "delta_contribution": 0.00034020031455992604,
+      "group": "D",
+      "partition": "amino_acid",
+      "proteins_with_support": 7,
+      "space": "atom",
+      "support_weight": 0.0647738659362984
+    },
+    {
+      "contrast": "ideal_final-ideal_local",
+      "delta_contribution": 0.0004925757543169788,
+      "group": "E",
+      "partition": "amino_acid",
+      "proteins_with_support": 7,
+      "space": "atom",
+      "support_weight": 0.09789338930692837
+    },
+    {
+      "contrast": "ideal_final-ideal_local",
+      "delta_contribution": -1.1548838607848828e-05,
+      "group": "F",
+      "partition": "amino_acid",
+      "proteins_with_support": 6,
+      "space": "atom",
+      "support_weight": 0.043417966947595844
+    },
+    {
+      "contrast": "ideal_final-ideal_local",
+      "delta_contribution": 0.00023592880358584478,
+      "group": "G",
+      "partition": "amino_acid",
+      "proteins_with_support": 7,
+      "space": "atom",
+      "support_weight": 0.037083773844271965
+    },
+    {
+      "contrast": "ideal_final-ideal_local",
+      "delta_contribution": 0.0001528123692662313,
+      "group": "H",
+      "partition": "amino_acid",
+      "proteins_with_support": 5,
+      "space": "atom",
+      "support_weight": 0.01961830240278344
+    },
+    {
+      "contrast": "ideal_final-ideal_local",
+      "delta_contribution": 0.00017972774601770006,
+      "group": "I",
+      "partition": "amino_acid",
+      "proteins_with_support": 7,
+      "space": "atom",
+      "support_weight": 0.06570792431697194
+    },
+    {
+      "contrast": "ideal_final-ideal_local",
+      "delta_contribution": 0.0006666781300920462,
+      "group": "K",
+      "partition": "amino_acid",
+      "proteins_with_support": 7,
+      "space": "atom",
+      "support_weight": 0.08667805480445348
+    },
+    {
+      "contrast": "ideal_final-ideal_local",
+      "delta_contribution": 5.6794792575617135e-05,
+      "group": "L",
+      "partition": "amino_acid",
+      "proteins_with_support": 7,
+      "space": "atom",
+      "support_weight": 0.0746687705451127
+    },
+    {
+      "contrast": "ideal_final-ideal_local",
+      "delta_contribution": 0.00015949880693418085,
+      "group": "M",
+      "partition": "amino_acid",
+      "proteins_with_support": 5,
+      "space": "atom",
+      "support_weight": 0.021665603312277345
+    },
+    {
+      "contrast": "ideal_final-ideal_local",
+      "delta_contribution": 0.00010721186448065934,
+      "group": "N",
+      "partition": "amino_acid",
+      "proteins_with_support": 7,
+      "space": "atom",
+      "support_weight": 0.03561294057537638
+    },
+    {
+      "contrast": "ideal_final-ideal_local",
+      "delta_contribution": 0.00020847369911763152,
+      "group": "P",
+      "partition": "amino_acid",
+      "proteins_with_support": 6,
+      "space": "atom",
+      "support_weight": 0.043328025968407
+    },
+    {
+      "contrast": "ideal_final-ideal_local",
+      "delta_contribution": -4.726332614697874e-05,
+      "group": "Q",
+      "partition": "amino_acid",
+      "proteins_with_support": 6,
+      "space": "atom",
+      "support_weight": 0.04087121952693275
+    },
+    {
+      "contrast": "ideal_final-ideal_local",
+      "delta_contribution": 0.0006096654987033914,
+      "group": "R",
+      "partition": "amino_acid",
+      "proteins_with_support": 7,
+      "space": "atom",
+      "support_weight": 0.05159752084872484
+    },
+    {
+      "contrast": "ideal_final-ideal_local",
+      "delta_contribution": 0.00012818268475380809,
+      "group": "S",
+      "partition": "amino_acid",
+      "proteins_with_support": 7,
+      "space": "atom",
+      "support_weight": 0.03826587199985998
+    },
+    {
+      "contrast": "ideal_final-ideal_local",
+      "delta_contribution": -2.3682805137166828e-05,
+      "group": "T",
+      "partition": "amino_acid",
+      "proteins_with_support": 7,
+      "space": "atom",
+      "support_weight": 0.05790385816080038
+    },
+    {
+      "contrast": "ideal_final-ideal_local",
+      "delta_contribution": 0.0001634043127267269,
+      "group": "V",
+      "partition": "amino_acid",
+      "proteins_with_support": 7,
+      "space": "atom",
+      "support_weight": 0.08573850552193092
+    },
+    {
+      "contrast": "ideal_final-ideal_local",
+      "delta_contribution": 0.0002775681997027184,
+      "group": "W",
+      "partition": "amino_acid",
+      "proteins_with_support": 4,
+      "space": "atom",
+      "support_weight": 0.020388897969214632
+    },
+    {
+      "contrast": "ideal_final-ideal_local",
+      "delta_contribution": 0.000643517364570927,
+      "group": "Y",
+      "partition": "amino_acid",
+      "proteins_with_support": 6,
+      "space": "atom",
+      "support_weight": 0.05777203227310584
+    },
+    {
+      "contrast": "ideal_final-ideal_local",
+      "delta_contribution": 0.00032348892668054255,
+      "group": "C",
+      "partition": "atom_class",
+      "proteins_with_support": 7,
+      "space": "atom",
+      "support_weight": 0.12807077680754583
+    },
+    {
+      "contrast": "ideal_final-ideal_local",
+      "delta_contribution": 0.00033315859690592753,
+      "group": "CA",
+      "partition": "atom_class",
+      "proteins_with_support": 7,
+      "space": "atom",
+      "support_weight": 0.12807077680754583
+    },
+    {
+      "contrast": "ideal_final-ideal_local",
+      "delta_contribution": 0.0003657611849270332,
+      "group": "N",
+      "partition": "atom_class",
+      "proteins_with_support": 7,
+      "space": "atom",
+      "support_weight": 0.12807077680754583
+    },
+    {
+      "contrast": "ideal_final-ideal_local",
+      "delta_contribution": 0.00015697660909194666,
+      "group": "O",
+      "partition": "atom_class",
+      "proteins_with_support": 7,
+      "space": "atom",
+      "support_weight": 0.12807077680754583
+    },
+    {
+      "contrast": "ideal_final-ideal_local",
+      "delta_contribution": -2.393147531385889e-06,
+      "group": "OXT",
+      "partition": "atom_class",
+      "proteins_with_support": 7,
+      "space": "atom",
+      "support_weight": 0.001190905591248428
+    },
+    {
+      "contrast": "ideal_final-ideal_local",
+      "delta_contribution": 0.0034183593046209332,
+      "group": "sidechain",
+      "partition": "atom_class",
+      "proteins_with_support": 7,
+      "space": "atom",
+      "support_weight": 0.48652598717856815
+    },
+    {
+      "contrast": "ideal_final-ideal_local",
+      "delta_contribution": 0.004279840799194555,
+      "group": "interior",
+      "partition": "position",
+      "proteins_with_support": 7,
+      "space": "atom",
+      "support_weight": 0.9813990931619035
+    },
+    {
+      "contrast": "ideal_final-ideal_local",
+      "delta_contribution": 0.0003155106755004234,
+      "group": "terminal",
+      "partition": "position",
+      "proteins_with_support": 7,
+      "space": "atom",
+      "support_weight": 0.01860090683809635
+    },
+    {
+      "contrast": "ideal_final-ideal_local",
+      "delta_contribution": -2.6387312231044703e-05,
+      "group": "near",
+      "partition": "raw_branch_mismatch",
+      "proteins_with_support": 1,
+      "space": "atom",
+      "support_weight": 0.0035286569717707444
+    },
+    {
+      "contrast": "ideal_final-ideal_local",
+      "delta_contribution": 0.004621738786926011,
+      "group": "other",
+      "partition": "raw_branch_mismatch",
+      "proteins_with_support": 7,
+      "space": "atom",
+      "support_weight": 0.9964713430282293
+    },
+    {
+      "contrast": "ideal_final-ideal_local",
+      "delta_contribution": 0.004595351474694983,
+      "group": "near",
+      "partition": "raw_connection_active",
+      "proteins_with_support": 7,
+      "space": "atom",
+      "support_weight": 1.0
+    },
+    {
+      "contrast": "ideal_final-ideal_local",
+      "delta_contribution": -0.00012769413180368266,
+      "group": "backbone_backbone",
+      "partition": "pair_type",
+      "proteins_with_support": 7,
+      "space": "pair",
+      "support_weight": 0.27059897220171863
+    },
+    {
+      "contrast": "ideal_final-ideal_local",
+      "delta_contribution": 0.002703334125655571,
+      "group": "backbone_other",
+      "partition": "pair_type",
+      "proteins_with_support": 7,
+      "space": "pair",
+      "support_weight": 0.4966774301585738
+    },
+    {
+      "contrast": "ideal_final-ideal_local",
+      "delta_contribution": 0.002019711480843101,
+      "group": "other_other",
+      "partition": "pair_type",
+      "proteins_with_support": 7,
+      "space": "pair",
+      "support_weight": 0.23272359763970749
+    },
+    {
+      "contrast": "ideal_final-ideal_local",
+      "delta_contribution": 0.0007094924836376151,
+      "group": "1",
+      "partition": "separation",
+      "proteins_with_support": 7,
+      "space": "pair",
+      "support_weight": 0.05258673874476833
+    },
+    {
+      "contrast": "ideal_final-ideal_local",
+      "delta_contribution": 0.001187488670206944,
+      "group": "2-4",
+      "partition": "separation",
+      "proteins_with_support": 7,
+      "space": "pair",
+      "support_weight": 0.14922356325654076
+    },
+    {
+      "contrast": "ideal_final-ideal_local",
+      "delta_contribution": 0.0026983703208503357,
+      "group": "5+",
+      "partition": "separation",
+      "proteins_with_support": 7,
+      "space": "pair",
+      "support_weight": 0.798189697998691
+    },
+    {
+      "contrast": "ideal_final-ideal_local",
+      "delta_contribution": 0.0028229290697526816,
+      "group": "0.5",
+      "partition": "threshold",
+      "proteins_with_support": 7,
+      "space": "pair",
+      "support_weight": 0.25
+    },
+    {
+      "contrast": "ideal_final-ideal_local",
+      "delta_contribution": 0.0013392081561952002,
+      "group": "1.0",
+      "partition": "threshold",
+      "proteins_with_support": 7,
+      "space": "pair",
+      "support_weight": 0.25
+    },
+    {
+      "contrast": "ideal_final-ideal_local",
+      "delta_contribution": 0.0005042617553876709,
+      "group": "2.0",
+      "partition": "threshold",
+      "proteins_with_support": 7,
+      "space": "pair",
+      "support_weight": 0.25
+    },
+    {
+      "contrast": "ideal_final-ideal_local",
+      "delta_contribution": -7.104750664058532e-05,
+      "group": "4.0",
+      "partition": "threshold",
+      "proteins_with_support": 7,
+      "space": "pair",
+      "support_weight": 0.25
+    },
+    {
+      "contrast": "ideal_local-native_local",
+      "delta_contribution": 0.00024269803766524645,
+      "group": "A",
+      "partition": "amino_acid",
+      "proteins_with_support": 7,
+      "space": "atom",
+      "support_weight": 0.04984268221345683
+    },
+    {
+      "contrast": "ideal_local-native_local",
+      "delta_contribution": 3.1766478153937675e-05,
+      "group": "C",
+      "partition": "amino_acid",
+      "proteins_with_support": 4,
+      "space": "atom",
+      "support_weight": 0.007170793525497015
+    },
+    {
+      "contrast": "ideal_local-native_local",
+      "delta_contribution": 0.000252996250249223,
+      "group": "D",
+      "partition": "amino_acid",
+      "proteins_with_support": 7,
+      "space": "atom",
+      "support_weight": 0.0647738659362984
+    },
+    {
+      "contrast": "ideal_local-native_local",
+      "delta_contribution": 0.001287099074112534,
+      "group": "E",
+      "partition": "amino_acid",
+      "proteins_with_support": 7,
+      "space": "atom",
+      "support_weight": 0.09789338930692837
+    },
+    {
+      "contrast": "ideal_local-native_local",
+      "delta_contribution": 0.000431199072128519,
+      "group": "F",
+      "partition": "amino_acid",
+      "proteins_with_support": 6,
+      "space": "atom",
+      "support_weight": 0.043417966947595844
+    },
+    {
+      "contrast": "ideal_local-native_local",
+      "delta_contribution": 0.000157852855899763,
+      "group": "G",
+      "partition": "amino_acid",
+      "proteins_with_support": 7,
+      "space": "atom",
+      "support_weight": 0.037083773844271965
+    },
+    {
+      "contrast": "ideal_local-native_local",
+      "delta_contribution": 4.5145243755259e-05,
+      "group": "H",
+      "partition": "amino_acid",
+      "proteins_with_support": 5,
+      "space": "atom",
+      "support_weight": 0.01961830240278344
+    },
+    {
+      "contrast": "ideal_local-native_local",
+      "delta_contribution": 0.00044753160243396755,
+      "group": "I",
+      "partition": "amino_acid",
+      "proteins_with_support": 7,
+      "space": "atom",
+      "support_weight": 0.06570792431697194
+    },
+    {
+      "contrast": "ideal_local-native_local",
+      "delta_contribution": 0.0006167433980293817,
+      "group": "K",
+      "partition": "amino_acid",
+      "proteins_with_support": 7,
+      "space": "atom",
+      "support_weight": 0.08667805480445348
+    },
+    {
+      "contrast": "ideal_local-native_local",
+      "delta_contribution": 0.0015955052102503736,
+      "group": "L",
+      "partition": "amino_acid",
+      "proteins_with_support": 7,
+      "space": "atom",
+      "support_weight": 0.0746687705451127
+    },
+    {
+      "contrast": "ideal_local-native_local",
+      "delta_contribution": 5.747678318466215e-05,
+      "group": "M",
+      "partition": "amino_acid",
+      "proteins_with_support": 5,
+      "space": "atom",
+      "support_weight": 0.021665603312277345
+    },
+    {
+      "contrast": "ideal_local-native_local",
+      "delta_contribution": 0.00011171299485739765,
+      "group": "N",
+      "partition": "amino_acid",
+      "proteins_with_support": 7,
+      "space": "atom",
+      "support_weight": 0.03561294057537638
+    },
+    {
+      "contrast": "ideal_local-native_local",
+      "delta_contribution": 0.0007743508673008762,
+      "group": "P",
+      "partition": "amino_acid",
+      "proteins_with_support": 6,
+      "space": "atom",
+      "support_weight": 0.043328025968407
+    },
+    {
+      "contrast": "ideal_local-native_local",
+      "delta_contribution": 0.00029910515991398264,
+      "group": "Q",
+      "partition": "amino_acid",
+      "proteins_with_support": 6,
+      "space": "atom",
+      "support_weight": 0.04087121952693275
+    },
+    {
+      "contrast": "ideal_local-native_local",
+      "delta_contribution": 0.0007090022205010619,
+      "group": "R",
+      "partition": "amino_acid",
+      "proteins_with_support": 7,
+      "space": "atom",
+      "support_weight": 0.05159752084872484
+    },
+    {
+      "contrast": "ideal_local-native_local",
+      "delta_contribution": 0.00019177600093330096,
+      "group": "S",
+      "partition": "amino_acid",
+      "proteins_with_support": 7,
+      "space": "atom",
+      "support_weight": 0.03826587199985998
+    },
+    {
+      "contrast": "ideal_local-native_local",
+      "delta_contribution": 0.00019424061557226806,
+      "group": "T",
+      "partition": "amino_acid",
+      "proteins_with_support": 7,
+      "space": "atom",
+      "support_weight": 0.05790385816080038
+    },
+    {
+      "contrast": "ideal_local-native_local",
+      "delta_contribution": 0.0004725584888949723,
+      "group": "V",
+      "partition": "amino_acid",
+      "proteins_with_support": 7,
+      "space": "atom",
+      "support_weight": 0.08573850552193092
+    },
+    {
+      "contrast": "ideal_local-native_local",
+      "delta_contribution": 0.00033045617123452176,
+      "group": "W",
+      "partition": "amino_acid",
+      "proteins_with_support": 4,
+      "space": "atom",
+      "support_weight": 0.020388897969214632
+    },
+    {
+      "contrast": "ideal_local-native_local",
+      "delta_contribution": 0.00040979792334003507,
+      "group": "Y",
+      "partition": "amino_acid",
+      "proteins_with_support": 6,
+      "space": "atom",
+      "support_weight": 0.05777203227310584
+    },
+    {
+      "contrast": "ideal_local-native_local",
+      "delta_contribution": 0.0006489793226005425,
+      "group": "C",
+      "partition": "atom_class",
+      "proteins_with_support": 7,
+      "space": "atom",
+      "support_weight": 0.12807077680754583
+    },
+    {
+      "contrast": "ideal_local-native_local",
+      "delta_contribution": 0.0006366437878837892,
+      "group": "CA",
+      "partition": "atom_class",
+      "proteins_with_support": 7,
+      "space": "atom",
+      "support_weight": 0.12807077680754583
+    },
+    {
+      "contrast": "ideal_local-native_local",
+      "delta_contribution": 0.0006788273200909913,
+      "group": "N",
+      "partition": "atom_class",
+      "proteins_with_support": 7,
+      "space": "atom",
+      "support_weight": 0.12807077680754583
+    },
+    {
+      "contrast": "ideal_local-native_local",
+      "delta_contribution": 0.0007371278768215916,
+      "group": "O",
+      "partition": "atom_class",
+      "proteins_with_support": 7,
+      "space": "atom",
+      "support_weight": 0.12807077680754583
+    },
+    {
+      "contrast": "ideal_local-native_local",
+      "delta_contribution": -6.56060873452872e-06,
+      "group": "OXT",
+      "partition": "atom_class",
+      "proteins_with_support": 7,
+      "space": "atom",
+      "support_weight": 0.001190905591248428
+    },
+    {
+      "contrast": "ideal_local-native_local",
+      "delta_contribution": 0.0059639967497488655,
+      "group": "sidechain",
+      "partition": "atom_class",
+      "proteins_with_support": 7,
+      "space": "atom",
+      "support_weight": 0.48652598717856815
+    },
+    {
+      "contrast": "ideal_local-native_local",
+      "delta_contribution": 0.008677964185024882,
+      "group": "interior",
+      "partition": "position",
+      "proteins_with_support": 7,
+      "space": "atom",
+      "support_weight": 0.9813990931619035
+    },
+    {
+      "contrast": "ideal_local-native_local",
+      "delta_contribution": -1.894973661361912e-05,
+      "group": "terminal",
+      "partition": "position",
+      "proteins_with_support": 7,
+      "space": "atom",
+      "support_weight": 0.01860090683809635
+    },
+    {
+      "contrast": "ideal_local-native_local",
+      "delta_contribution": 1.2853311521946305e-06,
+      "group": "near",
+      "partition": "raw_branch_mismatch",
+      "proteins_with_support": 1,
+      "space": "atom",
+      "support_weight": 0.0035286569717707444
+    },
+    {
+      "contrast": "ideal_local-native_local",
+      "delta_contribution": 0.008657729117259079,
+      "group": "other",
+      "partition": "raw_branch_mismatch",
+      "proteins_with_support": 7,
+      "space": "atom",
+      "support_weight": 0.9964713430282293
+    },
+    {
+      "contrast": "ideal_local-native_local",
+      "delta_contribution": 0.008659014448411264,
+      "group": "near",
+      "partition": "raw_connection_active",
+      "proteins_with_support": 7,
+      "space": "atom",
+      "support_weight": 1.0
+    },
+    {
+      "contrast": "ideal_local-native_local",
+      "delta_contribution": 0.00017572331326253361,
+      "group": "backbone_backbone",
+      "partition": "pair_type",
+      "proteins_with_support": 7,
+      "space": "pair",
+      "support_weight": 0.27059897220171863
+    },
+    {
+      "contrast": "ideal_local-native_local",
+      "delta_contribution": 0.00513777622425461,
+      "group": "backbone_other",
+      "partition": "pair_type",
+      "proteins_with_support": 7,
+      "space": "pair",
+      "support_weight": 0.4966774301585738
+    },
+    {
+      "contrast": "ideal_local-native_local",
+      "delta_contribution": 0.0033455149108941496,
+      "group": "other_other",
+      "partition": "pair_type",
+      "proteins_with_support": 7,
+      "space": "pair",
+      "support_weight": 0.23272359763970749
+    },
+    {
+      "contrast": "ideal_local-native_local",
+      "delta_contribution": 0.00011211898256560363,
+      "group": "1",
+      "partition": "separation",
+      "proteins_with_support": 7,
+      "space": "pair",
+      "support_weight": 0.05258673874476833
+    },
+    {
+      "contrast": "ideal_local-native_local",
+      "delta_contribution": 0.0008223624632801971,
+      "group": "2-4",
+      "partition": "separation",
+      "proteins_with_support": 7,
+      "space": "pair",
+      "support_weight": 0.14922356325654076
+    },
+    {
+      "contrast": "ideal_local-native_local",
+      "delta_contribution": 0.007724533002565513,
+      "group": "5+",
+      "partition": "separation",
+      "proteins_with_support": 7,
+      "space": "pair",
+      "support_weight": 0.798189697998691
+    },
+    {
+      "contrast": "ideal_local-native_local",
+      "delta_contribution": 0.004740668333019555,
+      "group": "0.5",
+      "partition": "threshold",
+      "proteins_with_support": 7,
+      "space": "pair",
+      "support_weight": 0.25
+    },
+    {
+      "contrast": "ideal_local-native_local",
+      "delta_contribution": 0.002918862054083587,
+      "group": "1.0",
+      "partition": "threshold",
+      "proteins_with_support": 7,
+      "space": "pair",
+      "support_weight": 0.25
+    },
+    {
+      "contrast": "ideal_local-native_local",
+      "delta_contribution": 0.000965677701561327,
+      "group": "2.0",
+      "partition": "threshold",
+      "proteins_with_support": 7,
+      "space": "pair",
+      "support_weight": 0.25
+    },
+    {
+      "contrast": "ideal_local-native_local",
+      "delta_contribution": 3.380635974683085e-05,
+      "group": "4.0",
+      "partition": "threshold",
+      "proteins_with_support": 7,
+      "space": "pair",
+      "support_weight": 0.25
+    },
+    {
+      "contrast": "ideal_final-native_final",
+      "delta_contribution": 9.689709088327963e-05,
+      "group": "A",
+      "partition": "amino_acid",
+      "proteins_with_support": 7,
+      "space": "atom",
+      "support_weight": 0.04984268221345683
+    },
+    {
+      "contrast": "ideal_final-native_final",
+      "delta_contribution": 7.872230885438349e-06,
+      "group": "C",
+      "partition": "amino_acid",
+      "proteins_with_support": 4,
+      "space": "atom",
+      "support_weight": 0.007170793525497015
+    },
+    {
+      "contrast": "ideal_final-native_final",
+      "delta_contribution": 5.7830856628106035e-05,
+      "group": "D",
+      "partition": "amino_acid",
+      "proteins_with_support": 7,
+      "space": "atom",
+      "support_weight": 0.0647738659362984
+    },
+    {
+      "contrast": "ideal_final-native_final",
+      "delta_contribution": 0.0005085926185167759,
+      "group": "E",
+      "partition": "amino_acid",
+      "proteins_with_support": 7,
+      "space": "atom",
+      "support_weight": 0.09789338930692837
+    },
+    {
+      "contrast": "ideal_final-native_final",
+      "delta_contribution": -7.791896104359304e-05,
+      "group": "F",
+      "partition": "amino_acid",
+      "proteins_with_support": 6,
+      "space": "atom",
+      "support_weight": 0.043417966947595844
+    },
+    {
+      "contrast": "ideal_final-native_final",
+      "delta_contribution": 6.715240611730113e-05,
+      "group": "G",
+      "partition": "amino_acid",
+      "proteins_with_support": 7,
+      "space": "atom",
+      "support_weight": 0.037083773844271965
+    },
+    {
+      "contrast": "ideal_final-native_final",
+      "delta_contribution": 9.860676131221994e-07,
+      "group": "H",
+      "partition": "amino_acid",
+      "proteins_with_support": 5,
+      "space": "atom",
+      "support_weight": 0.01961830240278344
+    },
+    {
+      "contrast": "ideal_final-native_final",
+      "delta_contribution": 0.00013388423028390162,
+      "group": "I",
+      "partition": "amino_acid",
+      "proteins_with_support": 7,
+      "space": "atom",
+      "support_weight": 0.06570792431697194
+    },
+    {
+      "contrast": "ideal_final-native_final",
+      "delta_contribution": 0.00021188125252503569,
+      "group": "K",
+      "partition": "amino_acid",
+      "proteins_with_support": 7,
+      "space": "atom",
+      "support_weight": 0.08667805480445348
+    },
+    {
+      "contrast": "ideal_final-native_final",
+      "delta_contribution": 0.0010249552725905304,
+      "group": "L",
+      "partition": "amino_acid",
+      "proteins_with_support": 7,
+      "space": "atom",
+      "support_weight": 0.0746687705451127
+    },
+    {
+      "contrast": "ideal_final-native_final",
+      "delta_contribution": 1.348718641434709e-05,
+      "group": "M",
+      "partition": "amino_acid",
+      "proteins_with_support": 5,
+      "space": "atom",
+      "support_weight": 0.021665603312277345
+    },
+    {
+      "contrast": "ideal_final-native_final",
+      "delta_contribution": 4.0189236662904366e-05,
+      "group": "N",
+      "partition": "amino_acid",
+      "proteins_with_support": 7,
+      "space": "atom",
+      "support_weight": 0.03561294057537638
+    },
+    {
+      "contrast": "ideal_final-native_final",
+      "delta_contribution": 0.0006082302789123586,
+      "group": "P",
+      "partition": "amino_acid",
+      "proteins_with_support": 6,
+      "space": "atom",
+      "support_weight": 0.043328025968407
+    },
+    {
+      "contrast": "ideal_final-native_final",
+      "delta_contribution": 9.29297829008445e-05,
+      "group": "Q",
+      "partition": "amino_acid",
+      "proteins_with_support": 6,
+      "space": "atom",
+      "support_weight": 0.04087121952693275
+    },
+    {
+      "contrast": "ideal_final-native_final",
+      "delta_contribution": 0.00013804961627635247,
+      "group": "R",
+      "partition": "amino_acid",
+      "proteins_with_support": 7,
+      "space": "atom",
+      "support_weight": 0.05159752084872484
+    },
+    {
+      "contrast": "ideal_final-native_final",
+      "delta_contribution": 0.00010828636182246816,
+      "group": "S",
+      "partition": "amino_acid",
+      "proteins_with_support": 7,
+      "space": "atom",
+      "support_weight": 0.03826587199985998
+    },
+    {
+      "contrast": "ideal_final-native_final",
+      "delta_contribution": 4.722927554971221e-05,
+      "group": "T",
+      "partition": "amino_acid",
+      "proteins_with_support": 7,
+      "space": "atom",
+      "support_weight": 0.05790385816080038
+    },
+    {
+      "contrast": "ideal_final-native_final",
+      "delta_contribution": 0.00021974484579260475,
+      "group": "V",
+      "partition": "amino_acid",
+      "proteins_with_support": 7,
+      "space": "atom",
+      "support_weight": 0.08573850552193092
+    },
+    {
+      "contrast": "ideal_final-native_final",
+      "delta_contribution": 7.955936427613221e-05,
+      "group": "W",
+      "partition": "amino_acid",
+      "proteins_with_support": 4,
+      "space": "atom",
+      "support_weight": 0.020388897969214632
+    },
+    {
+      "contrast": "ideal_final-native_final",
+      "delta_contribution": 0.00011921551425824303,
+      "group": "Y",
+      "partition": "amino_acid",
+      "proteins_with_support": 6,
+      "space": "atom",
+      "support_weight": 0.05777203227310584
+    },
+    {
+      "contrast": "ideal_final-native_final",
+      "delta_contribution": 0.00023282522857246551,
+      "group": "C",
+      "partition": "atom_class",
+      "proteins_with_support": 7,
+      "space": "atom",
+      "support_weight": 0.12807077680754583
+    },
+    {
+      "contrast": "ideal_final-native_final",
+      "delta_contribution": 0.0002509762906496333,
+      "group": "CA",
+      "partition": "atom_class",
+      "proteins_with_support": 7,
+      "space": "atom",
+      "support_weight": 0.12807077680754583
+    },
+    {
+      "contrast": "ideal_final-native_final",
+      "delta_contribution": 0.0002933927629831533,
+      "group": "N",
+      "partition": "atom_class",
+      "proteins_with_support": 7,
+      "space": "atom",
+      "support_weight": 0.12807077680754583
+    },
+    {
+      "contrast": "ideal_final-native_final",
+      "delta_contribution": 0.0003666680752202215,
+      "group": "O",
+      "partition": "atom_class",
+      "proteins_with_support": 7,
+      "space": "atom",
+      "support_weight": 0.12807077680754583
+    },
+    {
+      "contrast": "ideal_final-native_final",
+      "delta_contribution": -6.036402568716303e-06,
+      "group": "OXT",
+      "partition": "atom_class",
+      "proteins_with_support": 7,
+      "space": "atom",
+      "support_weight": 0.001190905591248428
+    },
+    {
+      "contrast": "ideal_final-native_final",
+      "delta_contribution": 0.0023612285730091093,
+      "group": "sidechain",
+      "partition": "atom_class",
+      "proteins_with_support": 7,
+      "space": "atom",
+      "support_weight": 0.48652598717856815
+    },
+    {
+      "contrast": "ideal_final-native_final",
+      "delta_contribution": 0.0035209401272840606,
+      "group": "interior",
+      "partition": "position",
+      "proteins_with_support": 7,
+      "space": "atom",
+      "support_weight": 0.9813990931619035
+    },
+    {
+      "contrast": "ideal_final-native_final",
+      "delta_contribution": -2.188559941816343e-05,
+      "group": "terminal",
+      "partition": "position",
+      "proteins_with_support": 7,
+      "space": "atom",
+      "support_weight": 0.01860090683809635
+    },
+    {
+      "contrast": "ideal_final-native_final",
+      "delta_contribution": -1.932259498111491e-06,
+      "group": "near",
+      "partition": "raw_branch_mismatch",
+      "proteins_with_support": 1,
+      "space": "atom",
+      "support_weight": 0.0035286569717707444
+    },
+    {
+      "contrast": "ideal_final-native_final",
+      "delta_contribution": 0.003500986787363975,
+      "group": "other",
+      "partition": "raw_branch_mismatch",
+      "proteins_with_support": 7,
+      "space": "atom",
+      "support_weight": 0.9964713430282293
+    },
+    {
+      "contrast": "ideal_final-native_final",
+      "delta_contribution": 0.0034990545278658636,
+      "group": "near",
+      "partition": "raw_connection_active",
+      "proteins_with_support": 7,
+      "space": "atom",
+      "support_weight": 1.0
+    },
+    {
+      "contrast": "ideal_final-native_final",
+      "delta_contribution": 0.00012117776891074865,
+      "group": "backbone_backbone",
+      "partition": "pair_type",
+      "proteins_with_support": 7,
+      "space": "pair",
+      "support_weight": 0.27059897220171863
+    },
+    {
+      "contrast": "ideal_final-native_final",
+      "delta_contribution": 0.0020381347603465167,
+      "group": "backbone_other",
+      "partition": "pair_type",
+      "proteins_with_support": 7,
+      "space": "pair",
+      "support_weight": 0.4966774301585738
+    },
+    {
+      "contrast": "ideal_final-native_final",
+      "delta_contribution": 0.0013397419986086575,
+      "group": "other_other",
+      "partition": "pair_type",
+      "proteins_with_support": 7,
+      "space": "pair",
+      "support_weight": 0.23272359763970749
+    },
+    {
+      "contrast": "ideal_final-native_final",
+      "delta_contribution": 3.283737825098891e-06,
+      "group": "1",
+      "partition": "separation",
+      "proteins_with_support": 7,
+      "space": "pair",
+      "support_weight": 0.05258673874476833
+    },
+    {
+      "contrast": "ideal_final-native_final",
+      "delta_contribution": 0.0004237543214446302,
+      "group": "2-4",
+      "partition": "separation",
+      "proteins_with_support": 7,
+      "space": "pair",
+      "support_weight": 0.14922356325654076
+    },
+    {
+      "contrast": "ideal_final-native_final",
+      "delta_contribution": 0.0030720164685960932,
+      "group": "5+",
+      "partition": "separation",
+      "proteins_with_support": 7,
+      "space": "pair",
+      "support_weight": 0.798189697998691
+    },
+    {
+      "contrast": "ideal_final-native_final",
+      "delta_contribution": 0.0020563902841337365,
+      "group": "0.5",
+      "partition": "threshold",
+      "proteins_with_support": 7,
+      "space": "pair",
+      "support_weight": 0.25
+    },
+    {
+      "contrast": "ideal_final-native_final",
+      "delta_contribution": 0.0013165775842900185,
+      "group": "1.0",
+      "partition": "threshold",
+      "proteins_with_support": 7,
+      "space": "pair",
+      "support_weight": 0.25
+    },
+    {
+      "contrast": "ideal_final-native_final",
+      "delta_contribution": 0.0002249853220200921,
+      "group": "2.0",
+      "partition": "threshold",
+      "proteins_with_support": 7,
+      "space": "pair",
+      "support_weight": 0.25
+    },
+    {
+      "contrast": "ideal_final-native_final",
+      "delta_contribution": -9.889866257796079e-05,
+      "group": "4.0",
+      "partition": "threshold",
+      "proteins_with_support": 7,
+      "space": "pair",
+      "support_weight": 0.25
+    }
+  ],
+  "totals": {
+    "ideal_final-ideal_local": 0.004595351474694983,
+    "ideal_final-native_final": 0.0034990545278658636,
+    "ideal_final-raw": -0.008960285516532393,
+    "ideal_local-native_local": 0.008659014448411264,
+    "ideal_local-raw": -0.013555636991227376,
+    "native_final-native_local": 0.009755311395240385,
+    "native_final-raw": -0.012459340044398257,
+    "native_local-raw": -0.02221465143963864
+  }
+}
