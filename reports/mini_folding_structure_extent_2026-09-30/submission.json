@@ -1,0 +1,20 @@
+{
+  "job": "662522",
+  "argv": [
+    "sbatch",
+    "--parsable",
+    "--partition=acd_u",
+    "--job-name=fold_extent",
+    "--nodes=1",
+    "--ntasks=1",
+    "--cpus-per-task=8",
+    "--gres=gpu:1",
+    "--mem=32G",
+    "--time=00:20:00",
+    "--no-requeue",
+    "--output=/data/user/shuang886/Folding/folding_structure_extent_v1_20260930/slurm-%j.log",
+    "/data/user/shuang886/Folding/folding_structure_extent_v1_20260930/batch.sh"
+  ],
+  "manifest_sha256": "a8f100352ccd5491b419ee6042df624c8e24b1bcd0a48a09c076b43fb0c7d6ca",
+  "batch_sha256": "15af5b7972e98072c76f6ade221e4686c7000fbb12469d3517ed373ef7b70197"
+}

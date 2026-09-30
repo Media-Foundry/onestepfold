@@ -1,3 +1,36 @@
+## 2026-09-30 — Existing-coordinate extent analysis locates global-distance loss
+
+PreviousgoalturnPROGRESS(terminalablationaccepted/archived). CurrentturnPROGRESS:
+newindependentstructure_extent module/script/protocol; completedCPUdiagnosticall
+455proteins×5models×2noises=4550outputs. No model/inference/training/repair.
+HPC3job662522COMPLETED0:0 15s(compute10.11s),8singlethreadworkers,GPUhidden.
+Firstsubmissionusedincorrectaccountacd_u/partitiondebug andwasrejectedwithnojob;
+correctedpartitionacd_u(inheritedshuang886account),preservedrejection. No code or
+scientificinputs changed. Immutable root folding_structure_extent_v1_20260930.
+
+Verifiedmapping/GT/coordinatehashes,observedCAatom37identity,RMSDreplaymax0.
+NativeGTcoordinateRMSD,worst5%residualSSE,remaining95%RMSDfixedalignment,
+32residueindependentfragmentfits,pairdistancebands(sequencegap>=24,GTdist<15/
+15–30/>=30),RG. ALL5models; nullbandskeptwithdenominators.3synthetictests+1old
+RMSDtestpass.15inputhashesrechecked;local7archivehashes and315model/cohort/metric
+means independentlyrecomputed from4550cases. Archives11MBgzipcasecoordinates
+residuals(notpredictions),report/manifest/submission/acceptance.
+
+Zero-minuscontrol:remaining95%RMSD originalTRAIN+.291391,newTRAIN+.234393,
+DEV+.067693A. LongGTdistanceMAE +.305417/+.249670/+.095410A;DEV95%CI
+[+.018666,+.186347]. Signedfar-distanceerror more negative(-.327552/-.237100/
+-.221951A);RG ratioslower. Fragment32errors+.050038/+.071561/+.008816A.
+Supportsdistributedglobaldistancecost;notjustoneoutlieroronlysizechange.3U59RG
+unchangedwhileRMSDworse.5OI7near-nonlocalGTpairs<30Aabsent,AAimproveswhile
+farMAEworsens. Exploratoryposthoc,notnewconfirmation orproofoftopologyfailure.
+
+Codeaudit:GTsmoothlddt uses<15A, BUT nativeS2allatomalignedMSE auxiliary still
+providesglobalpreservation; do notsayallglobalsupervisionremoved. Nextsingle
+candidateplanned:experimentalGTrobustCApairdistance(withno upperdistancecutoff)
+plusunchangedzero-coordinate recipe. NeedimplementandTRAIN-onlyscalecalibration
+beforelockingtraining; no newloss/trainingyet. Same retained512/423/2048budget
+planned; no coefficientgrid/noESMCsimultaneouschange. Goalactive/unfulfilled.
+Docsstructure_extent_v1/findings andglobal_distance_plan_v1;overallfrontupdated.
 ## 2026-09-30 — Coordinate-zero terminal completes; local/global tradeoff retained
 
 Current turn collected final artifacts, independently checked hashes and score
