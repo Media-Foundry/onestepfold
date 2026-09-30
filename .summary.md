@@ -1,3 +1,42 @@
+## 2026-09-30 — Global CA distance loss implemented and TRAIN scale locked
+
+PreviousgoalturnPROGRESS(4550existing-coordinateanalysis). CurrentturnPROGRESS:
+implementedobservedGTglobalCApairlabels/loss,3focusedtests;CPU-onlyTRAIN32scale
+calibrationcompleteandaudited. No newfoldingprediction/networkbackward/training.
+Root folding_global_distance_calibration_v1_20260930;job662526COMPLETE0:0 11s,
+compute6.60s,8singlethreadCPUworkers,GPUhidden(partitionreserves1GPU).
+
+Newglobal_distance_supervision.py:observedsamechainCA,sequencegap>=24,noGTdistance
+uppercutoff,meanSmoothL1distanceerrorbeta10A;maskbeforearithmetic;emptyconnected
+zero;65536pairchunks. 3testsrigidinvariance/mask/empty/identity/rigidcompression/
+tailresponse/directionalFD/chunkreduction,7testswitholdstructuraldiagnostics pass.
+Originalcontrolcodefilescopiedhash-identical;nooldtrainer/scorerchanged.
+
+Calibrationusesoldexpanded/probe0000 commonretained512,32originalTRAIN×2seeds;
+64coordinateSHAalsomatchretainedreferencepredictions. GTlabels/masksandCAatom37
+mappingchecked. NoDEVcoordinates/scores. Fixedrulemedian_g(mean_seedold0.01GT
+coordinateCAgradientnorm / mean_seedunweightedglobalCAnorm),noexclusions/clipping.
+Weight=0.03290655679814053. ManifestSHA
+c867845c2410e1001cae3c48573ed195e36c2ddad5adcb9564cc3ff3a38b21b5.
+64finitegradients,globalnonCAzero,pairs435–107880. WeightednewCAgradientmedian
+.000384113;oldcoordinate.000325214;perproteinbudgetratiomin/max.312384/2.133651.
+GlobalvsGTcoordinateCAcosinemedian.678378(all64positive),vsGTsmooth.255193(all
+positive),vsteacher.018123(30/64negative). Localcoordinate-sidebudgetonly,not
+parameter-updatebudgetortrainingquality. Teacherunchanged.
+
+434input/codehashesrechecked;64NPZvectorsindependentlyreducedwithmaxnormdiff
+2.77556e-17,weight.03290655679814052. Localtarall64members/6filesSHAcheckedand
+samevectorarithmeticverified. Reportsmini_folding_global_distance_calibration_2026-09-30.
+Docs calibration_v1/findings,training_v1;plansteps1–2complete,overallfrontupdated.
+
+NEXT: implementisolatedinput/loss wrapper aroundunchangedtrain_folding_scale,
+locksame423/order/2048budget/retained512parent,coord0+newglobalweight(allotherterms
+same),GPUshortest/longestpreflight thenonecandidate. TrainingNOTstarted. Newlocked
+scientificsettings docs/mini_folding_global_distance_training_v1.md require6model
+terminalcomparison5460scores(reuse5x910oldoutputs),910newprediction+lockedprobes.
+NoESMC/noise/data/optimizerchanges,coefficientsweep,repair/design. Activegoal
+unfulfilled. Keepunrelatedworktreeandolderexperimentsunchanged.
+
 ## 2026-09-30 — Existing-coordinate extent analysis locates global-distance loss
 
 PreviousgoalturnPROGRESS(terminalablationaccepted/archived). CurrentturnPROGRESS:

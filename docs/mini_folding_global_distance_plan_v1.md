@@ -1,6 +1,9 @@
 # Next C4/S1 candidate: experimental global-distance supervision
 
-Implementation plan, **not a locked training protocol or a launched experiment**.
+Original implementation plan. Steps1–2 are now completed; see
+[TRAIN calibration findings](mini_folding_global_distance_calibration_findings_2026-09-30.md)
+and the [locked single-candidate settings](mini_folding_global_distance_training_v1.md).
+Training integration/GPU preflight/submission remain pending.
 The completed coordinate-zero ablation gains local lDDT/chemistry but loses global
 GT accuracy. Existing-coordinate analysis shows persistent errors after worst5%
 exclusion and increased long-distance underestimation. Preserve the retained512

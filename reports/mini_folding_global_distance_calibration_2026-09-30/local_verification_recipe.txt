@@ -1,0 +1,18 @@
+import pathlib,json,hashlib,tarfile,io,numpy as np
+r=pathlib.Path('reports/mini_folding_global_distance_calibration_2026-09-30');a=json.loads((r/'acceptance.json').read_text());report=json.loads((r/'report.json').read_text())
+for n,h in a['files'].items():assert hashlib.sha256((r/n).read_bytes()).hexdigest()==h,n
+lookup={(x['group_id'],x['seed']):x for x in report['records']};ratios={};maxerr=0.
+with tarfile.open(r/'gradients.tar.gz','r:gz') as t:
+ files=[m for m in t.getmembers() if m.isfile()];assert len(files)==64
+ for member in files:
+  b=t.extractfile(member).read();assert hashlib.sha256(b).hexdigest()==a['gradient_member_hashes'][member.name]
+  name=pathlib.Path(member.name).stem;g,seed=name.rsplit('_',1);record=lookup[g,int(seed)];d=dict(np.load(io.BytesIO(b)));mask=d.pop('ca_mask')
+  assert np.count_nonzero(d['global_distance'][~mask])==0
+  for key,grad in d.items():
+   assert np.isfinite(grad).all()
+   for kind,sub in [('all',grad),('ca',grad[mask])]:maxerr=max(maxerr,abs(np.linalg.norm(sub)-record['parts'][key][kind+'_norm']))
+  ratios.setdefault(g,[]).append((np.linalg.norm(d['coordinate'][mask]),np.linalg.norm(d['global_distance'][mask])))
+assert maxerr<1e-12 and len(ratios)==32
+w=float(np.median([np.mean([a for a,b in v])/np.mean([b for a,b in v]) for v in ratios.values()]));assert abs(w-report['coefficient'])<1e-14
+out=dict(complete=True,gradient_files=64,proteins=32,norm_max_abs=maxerr,independent_coefficient=w,archive_files_verified=len(a['files']),scope='independent saved-vector arithmetic; no network calls')
+(r/'local_acceptance.json').write_text(json.dumps(out,indent=2)+'\n');print(json.dumps(out))
