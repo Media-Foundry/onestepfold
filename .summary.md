@@ -1,3 +1,29 @@
+## 2026-09-30 — First matched coordinate-zero TRAIN32 probe
+
+Previous goal turn PROGRESS(implementation, queued942-NFE evaluation,514d8799).
+Current turn verified job662470 live, then obtained new completed fixed512 TRAIN32
+probe; training continues unchanged. No terminal/held-out conclusion. Audit662471
+and eval662475-662485 remain queued by dependencies; no restart or added arm.
+
+Observed2026-09-30T11:33:23Z, same32 originalTRAIN proteins,2 assigned noises.
+Retainedstart: AA .8047728913, CA .8856532536, zero+strict41/64,severe394.
+Expandedcontrol512: AA .8053674335, CA .8858489427, zero+strict42/64,severe382.
+Coordinatezero512: AA .8061741571, CA .8877134240, zero+strict41/64,severe306.
+Candidate-control protein-mean AA+.0008067237, CA+.0018644813, alignedCA_RMSD
++.1667765362 A(worse).22/32AApositive;AAchanges[-.00597353,+.00660319].
+Versusretained AA+.0014012659,CA+.0020601704,RMSD+.1332062901A;27/32AApositive.
+Thus localdistance metric improvement is accompanied by worse global coordinate
+error and no jointchemical-count gain. Do not call universally better or promote.
+Continue to2048 and fixed455 evaluation; no bestcheckpoint or schedule changes.
+
+Remote192coordinatehashes/finiteness checked across3probes. Local3losslessgzip
+reports SHAverified;64uniquepairs/32protein denominators,AA/CAmeans,severesums and
+zero+strictcounts independently recomputed. Archive reports/mini_folding_coordinate_
+evaluation_2026-09-30/train512 includes observation with perprotein deltas and
+local_acceptance. State doc latestfindingsprepended; old19:27snapshotretained.
+No GPU inference added; these are plannedTRAINprobes, not freshconfirmation.
+NEXT: collect fixed terminal/audit/evaluation. Goalactive, unfulfilled.
+
 ## 2026-09-30 — Coordinate-zero terminal evaluation implemented and queued
 
 Folding-first mainline continues. Candidate training662470 still RUNNING;
