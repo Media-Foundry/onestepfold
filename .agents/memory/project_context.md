@@ -1,3 +1,23 @@
+Archive note: subsequent SSH timeout interrupted launch download; pair release and
+fixed report39updates captured, diverse preflight proven by pair/controller release
+but its separate files not yet downloaded. No evidence of training failure; remote
+current progress must be rechecked on reconnect. Never duplicate detached jobs.
+
+## 2026-10-01 — Noise-diversity paired training released and running
+
+Supersedes preparation-only snapshot below. 9038 native S2 teachers/18076 NFE
+completed on eight DiamondHill GCD; cache hash/finite audit complete. Both arm
+preflights exit0; pair_release proves same initial fingerprints and identical
+preflight loss/gradient norm. Training PIDs390455/390456 on GCD0/2, controller388425.
+Fixed arm archived live report reached39updates; no terminal quality claim.
+Same TRAIN423/order/8192exposures/2048updates/weak objective; only training noise
+changes. Holds four diagnostic seeds out. No naming/symmetry training mixed in.
+Remote root noise_diversity_training_v1_20261001_retry1 under IntelSSD mirror.
+Launch/cache evidence reports/mini_noise_diversity_2026-10-01; docs findings updated.
+Next collect terminal checkpoints, audit matched requires_grad replay, evaluate
+all original cohorts and held-noise TRAIN32. No auto terminal evaluator scheduled;
+controller only prepares/preflights/trains, stops on failure or bounded completion.
+
 ## 2026-10-01 — Other directions investigated; fresh-noise matched training pipeline running
 
 User explicitly asks other improvement directions; C4/S1 hard folding first,DiamondHill.
