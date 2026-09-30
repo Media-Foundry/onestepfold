@@ -1,32 +1,34 @@
-"""Signed component-gradient diagnostics; these are not causal error fractions."""
-import torch
+"""Coordinate-side loss-gradient accounting; not an optimizer-update attribution."""
+import numpy as np
 
 
-def component_gradient_statistics(gradients,names,weights):
-    g=torch.as_tensor(gradients).detach().cpu().double()
-    required=['coordinate','smooth_lddt','bond','chirality','clash','teacher']
-    if list(names)!=required or g.ndim!=2 or len(g)!=6 or not torch.isfinite(g).all():
-        raise ValueError('invalid component gradients/order')
-    scale=torch.tensor([weights[n] for n in names],dtype=torch.float64)
-    if not torch.isfinite(scale).all() or (scale<0).any():raise ValueError('invalid weights')
-    gram=g@g.T;weighted=g*scale[:,None];weighted_gram=weighted@weighted.T
-    norms=gram.diagonal().clamp_min(0).sqrt();wnorms=weighted_gram.diagonal().clamp_min(0).sqrt()
-    vectors=dict(structure=weighted[:3].sum(0),chemistry=weighted[3:5].sum(0),
-        gt=weighted[:5].sum(0),teacher=weighted[5],gt_s2=weighted.sum(0))
-    group_norms={n:float(v.norm()) for n,v in vectors.items()}
-    cosines={}
-    for a,b in [('structure','chemistry'),('teacher','gt'),('gt','gt_s2')]:
-        denom=group_norms[a]*group_norms[b]
-        cosines[a+'_vs_'+b]=float(torch.dot(vectors[a],vectors[b])/denom) if denom>0 else None
-    pairwise=[]
-    for i in range(6):
-        pairwise.append([float(gram[i,j]/(norms[i]*norms[j])) if norms[i]*norms[j]>0 else None for j in range(6)])
-    denominator=group_norms['gt']**2
-    projection={names[i]:float(torch.dot(weighted[i],vectors['gt'])/denominator) if denominator>0 else None for i in range(5)}
-    return dict(raw_gram=gram.tolist(),weighted_gram=weighted_gram.tolist(),
-        raw_norm=dict(zip(names,norms.tolist())),weighted_norm=dict(zip(names,wnorms.tolist())),
-        pairwise_cosine=pairwise,group_norms=group_norms,group_cosines=cosines,
-        teacher_to_gt_norm_ratio=group_norms['teacher']/group_norms['gt'] if group_norms['gt'] else None,
-        chemistry_to_structure_norm_ratio=group_norms['chemistry']/group_norms['structure'] if group_norms['structure'] else None,
-        signed_projection_onto_gt=projection,
-        interpretation='Euclidean parameter-space diagnostics; signed projections may exceed one or be negative, not causal percentages')
+def coordinate_gradient_budget(gradients, weights, ca_mask):
+    """Keep signed Gram products and cancellation; undefined cosines remain None."""
+    keys=sorted(gradients)
+    if not keys or set(keys)!=set(weights):
+        raise ValueError('gradient/weight keys must match')
+    arrays=[np.asarray(gradients[k],dtype=np.float64) for k in keys]
+    shape=arrays[0].shape
+    mask=np.asarray(ca_mask)
+    if len(shape)!=2 or shape[1]!=3 or mask.shape!=(shape[0],) or mask.dtype!=bool:
+        raise ValueError('expected N x 3 gradients and boolean CA mask')
+    if any(a.shape!=shape or not np.isfinite(a).all() for a in arrays):
+        raise ValueError('gradient shape or finite values invalid')
+    w=np.array([weights[k] for k in keys],dtype=np.float64)
+    if not np.isfinite(w).all() or (w<0).any():
+        raise ValueError('weights must be finite and nonnegative')
+    out={'keys':keys,'weights':dict(weights),'spaces':{}}
+    for name,sel in [('all',slice(None)),('ca',mask)]:
+        matrix=np.stack([a[sel].reshape(-1) for a in arrays]);gram=matrix@matrix.T
+        weighted=matrix*w[:,None];total=weighted.sum(0);norm=float(np.linalg.norm(total))
+        norms=np.linalg.norm(weighted,axis=1);rawnorms=np.linalg.norm(matrix,axis=1)
+        terms={}
+        for i,k in enumerate(keys):
+            rest=total-weighted[i];rn=float(np.linalg.norm(rest));gn=float(norms[i])
+            terms[k]={'raw_norm':float(rawnorms[i]),'weighted_norm':gn,
+                      'ratio_to_total_norm':gn/norm if norm>0 else None,
+                      'cosine_with_rest':float(weighted[i]@rest/(gn*rn)) if gn>0 and rn>0 else None,
+                      'signed_projection_on_total':float(weighted[i]@total/norm) if norm>0 else None}
+        out['spaces'][name]={'raw_gram':gram.tolist(),'total_norm':norm,'sum_term_norms':float(norms.sum()),
+                            'cancellation_ratio':norm/float(norms.sum()) if norms.sum()>0 else None,'terms':terms}
+    return out

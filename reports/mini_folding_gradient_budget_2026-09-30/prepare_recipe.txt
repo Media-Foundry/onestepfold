@@ -1,0 +1,20 @@
+import pathlib,json,hashlib,copy
+b=pathlib.Path('/data/user/shuang886/Folding');r=b/'folding_gradient_budget_v1_20260930';sha=lambda p:hashlib.sha256(pathlib.Path(p).read_bytes()).hexdigest()
+cal=b/'folding_global_distance_calibration_v1_20260930';cm=json.loads((cal/'manifest.json').read_text());training=b/'folding_global_distance_training_v1_20260930';lock=json.loads((training/'lock.json').read_text());assert set(cm['groups'])==set(lock['probe_groups']) and set(cm['groups'])<=set(lock['arms']['expanded'])
+assert sha(training/'lock.json')=='d266895a7c33f2a6ea4b7f6f492dd7f79bcbb1ec14cd5f2e3cb3088be12d5d27'
+old=b/'folding_scale_training_v1_20260930'/'expanded';zero=b/'folding_coordinate_ablation_v1_20260930'/'expanded';new=training/'expanded'
+stages={'retained':old/'probe_0000','global_0512':new/'probe_0512','global_1024':new/'probe_1024','global_2048':new/'probe_2048','zero_2048':zero/'probe_2048','expanded_2048':old/'probe_2048'}
+hashes={};cases=[]
+for stage,folder in stages.items():
+ report=folder/'report.json';d=json.loads(report.read_text());assert len(d['records'])==64 and d['role']=='train_probe_only';hashes[str(report)]=sha(report);idx={(x['group_id'],x['seed']):x for x in d['records']}
+ for case in cm['cases']:
+  c=copy.deepcopy(case);g=c['group_id'];seed=c['seed'];p=folder/f'{g}_{seed}.npy';assert sha(p)==idx[g,seed]['sha256'];c['stage']=stage;c['coordinate']=str(p);hashes[str(p)]=sha(p)
+  for key in ['gt','mapping','labels','teacher']:
+   p=c[key];assert sha(p)==cm['hashes'][p];hashes[p]=cm['hashes'][p]
+  cases.append(c)
+for p in [cal/'manifest.json',training/'lock.json',new/'history.jsonl',new/'report.json']:hashes[str(p)]=sha(p)
+for p in (r/'code').rglob('*'):
+ if p.is_file() and p.suffix in ['.py','.md','.json']:hashes[str(p)]=sha(p)
+recipes={'expanded':dict(cm['weights'],global_distance=0.),'coordinate_zero':dict(cm['weights'],coordinate=0.,global_distance=0.),'global_distance':lock['weights']}
+m=dict(protocol='mini_folding_gradient_budget_v1',stages={k:str(v) for k,v in stages.items()},train_groups=cm['groups'],seeds=cm['seeds'],cases=cases,recipes=recipes,smooth_temperature=cm['smooth_temperature'],hashes=hashes,history=str(new/'history.jsonl'),scope='384 archived TRAIN coordinates; no model, no validation, no parameter update, no coefficient selection')
+(r/'manifest.json').write_text(json.dumps(m,indent=2)+'\n');print(json.dumps(dict(cases=len(cases),hashes=len(hashes),manifest_sha256=sha(r/'manifest.json'))))

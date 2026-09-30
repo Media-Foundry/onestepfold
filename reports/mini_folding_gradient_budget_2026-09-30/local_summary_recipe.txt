@@ -1,0 +1,30 @@
+import pathlib,json,gzip,numpy as np
+r=pathlib.Path('reports/mini_folding_gradient_budget_2026-09-30');m=json.loads((r/'manifest.json').read_text());d=json.load(gzip.open(r/'report.json.gz'));bycase={(x['stage'],x['group_id'],x['seed']):x for x in d['records']};assert len(bycase)==384 and all(x['complete'] for x in bycase.values())
+rows=[];summary={}
+for stage in m['stages']:
+ for group in m['train_groups']:
+  cases=[bycase[stage,group,s] for s in m['seeds']];fields={}
+  for space in ['all','ca']:
+   rr=[x['recipes']['global_distance']['spaces'][space] for x in cases];cc=[x['recipes']['expanded']['spaces'][space] for x in cases]
+   values={
+    'global_over_old_coordinate':[a['terms']['global_distance']['weighted_norm']/b['terms']['coordinate']['weighted_norm'] for a,b in zip(rr,cc)],
+    'global_over_total':[a['terms']['global_distance']['ratio_to_total_norm'] for a in rr],
+    'global_rest_cosine':[a['terms']['global_distance']['cosine_with_rest'] for a in rr],
+    'cancellation_ratio':[a['cancellation_ratio'] for a in rr]}
+   for k in m['recipes']['global_distance']:
+    values[k+'_norm']=[a['terms'][k]['weighted_norm'] for a in rr]
+   cos=[]
+   for x in cases:
+    z=x['recipes']['global_distance'];keys=z['keys'];i=keys.index('global_distance');j=keys.index('coordinate');g=np.asarray(z['spaces'][space]['raw_gram']);den=np.sqrt(g[i,i]*g[j,j]);cos.append(float(g[i,j]/den) if den>0 else None)
+   values['global_old_coordinate_cosine']=cos
+   for k,v in values.items():fields[space+'.'+k]=float(np.mean(v)) if all(x is not None for x in v) else None
+  for key in cases[0]['losses']:fields['loss.'+key]=float(np.mean([x['losses'][key] for x in cases]))
+  rows.append(dict(stage=stage,group_id=group,values=fields))
+ summary[stage]={}
+ for key in rows[-1]['values']:
+  vals=[x['values'][key] for x in rows if x['stage']==stage and x['values'][key] is not None]
+  summary[stage][key]=dict(proteins=len(vals),mean=float(np.mean(vals)),median=float(np.median(vals)),p05=float(np.quantile(vals,.05)),p95=float(np.quantile(vals,.95)),negative=int(sum(x<0 for x in vals))) if vals else dict(proteins=0)
+out=dict(complete=True,summary=summary,protein_rows=rows,scope='Each reported scalar averaged over2noises withinprotein, then summarized across32. Nulls excluded with support, no norm percentages or parameter influence claim.')
+(r/'summary.json').write_text(json.dumps(out,indent=2)+'\n')
+for stage,s in summary.items():
+ print(stage,{k:{x:s[k][x] for x in ['median','p05','p95','negative']} for k in ['all.global_over_old_coordinate','ca.global_over_old_coordinate','all.global_over_total','ca.global_over_total','ca.global_rest_cosine','all.global_old_coordinate_cosine']})

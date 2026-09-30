@@ -1,0 +1,21 @@
+import pathlib,json,hashlib,numpy as np,subprocess,gzip
+r=pathlib.Path('/data/user/shuang886/Folding/folding_gradient_budget_v1_20260930');sha=lambda p:hashlib.sha256(pathlib.Path(p).read_bytes()).hexdigest();m=json.loads((r/'manifest.json').read_text());d=json.loads((r/'report.json').read_text());assert d['complete'] and d['manifest_sha256']==sha(r/'manifest.json') and len(d['records'])==384
+for p,h in m['hashes'].items():assert sha(p)==h,p
+initial_max=0.;verified=0;budget_max=0.
+cal=r.parent/'folding_global_distance_calibration_v1_20260930'
+for x in d['records']:
+ p=r/'gradients'/f"{x['stage']}_{x['group_id']}_{x['seed']}.npz";assert sha(p)==x['gradient_sha256'];g=dict(np.load(p));ca=g.pop('ca_mask')
+ if x['stage']=='retained':
+  old=dict(np.load(cal/'gradients'/f"{x['group_id']}_{x['seed']}.npz"));assert np.array_equal(old.pop('ca_mask'),ca)
+  for k,v in g.items():
+   w=1 if k=='global_distance' else m['recipes']['expanded'][k];err=float(np.max(np.abs(v*w-old[k])));assert err==0;initial_max=max(initial_max,err)
+ for recipe,stats in x['recipes'].items():
+  keys=stats['keys'];w=np.array([stats['weights'][k] for k in keys])
+  for space,sel in [('all',slice(None)),('ca',ca)]:
+   a=np.stack([g[k][sel].ravel() for k in keys]);gram=a@a.T;assert np.array_equal(gram,stats['spaces'][space]['raw_gram'])
+   total=sum(g[k][sel]*stats['weights'][k] for k in keys);err=abs(float(np.linalg.norm(total))-stats['spaces'][space]['total_norm']);assert err<1e-12;budget_max=max(budget_max,err)
+ verified+=1
+s=subprocess.check_output(['sacct','-n','-X','-j','662633','--format=JobID,State,ExitCode,Elapsed','-P'],text=True);assert '|COMPLETED|0:0|' in s
+(r/'scheduler.txt').write_text(s)
+out=dict(complete=True,cases_verified=verified,source_hashes_verified=len(m['hashes']),initial_calibration_gradient_arrays_exact=64*7,initial_max_error=initial_max,total_gradient_norm_reduction_max_error=budget_max,model_calls=0,parameter_updates=0,files={p.name:sha(p) for p in [r/'manifest.json',r/'report.json',r/'scheduler.txt',r/'slurm-662633.out']},scope='All384 full coordinate-gradient arrays hash/Gram/summed-norm verified; all64 initial raw arrays match original calibration after its weights; no parameter-gradient conclusion')
+(r/'acceptance.json').write_text(json.dumps(out,indent=2)+'\n');print(json.dumps(out))

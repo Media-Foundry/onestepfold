@@ -1,3 +1,49 @@
+## 2026-09-30 — TRAIN coordinate-gradient budget measured, no new training
+
+Previous goalturn PROGRESS (globalterminal6cc0dc7e). Thisturn PROGRESS: new isolated
+coordinate_gradient_budget helper + measurementdriver,3focusedtestspass. No existing
+loss/trainer/model edits. GitNexus query/context used;newhelper impactUNKNOWN (no
+resolvedcallers),confirmedtextcalls onlynewdriver/tests,notinproduction. Graphabsence
+notinterpretedasunused. Preserve unrelated edits. Goalactive,foldingfirst.
+
+HPC3 acd_u662633COMPLETED0:0 18s;actual15.4919s,8CPUworkersinternalthreads1,GPUhidden
+butpartitionreservesone. Rootfolding_gradient_budget_v1_20260930. ManifestSHA
+2c11146c9dabfba6d25ac546c8d1b22c5434b1be1d8b8350f213b57d93bd9756.
+384frozenTRAINoutputs=original32×2noises×retained/global512/1024/2048/zero2048/
+expanded2048. No new folding/parameterupdates/DEVreading/coefficientselection.
+Recomputeoriginal7lossgradients FP32coords,FP64Gram;all/CAmasks;3fixedrecipeweights
+atallstates,fullrawgradarraysremote. 733sourcehashesverified;384gradientGram/norm
+audits pass,max1.04e-17;64×7initialarraysmatcholdcalibrationweightedarrays EXACT.
+Localarchive/deployed3sourceparity checked;192protein-state summaryrows complete.
+
+Median protein(mean2noise scalar) retained→global2048:
+ global/old.01coordinate norm all .293923→.280426;CA1.000382→.974104.
+ global/total norm all .023038→.030224;CA .113612→.158347.
+ global-oldcoordinate cosine all .175286→.167189;CA .675240→.671010.
+ global-rest CA cosine .230560→.182239;negativeproteinmean5/32→4/32.
+ These are coordinate-gradient NORM RATIOS,notadditivecontributionpercentages,
+ parameter influence or Adamsteps. Confirms CAnormmatching≠full-budgetmatching,
+ notthatmultiplyweightby3/10willwork. TRAIN32length53–488,no>512evidence.
+
+Matchedhistoryepoch0vs18complete423/samegroupandnoise:globalweightedmean
+.042573→.042867,262/423decrease;coordinateunweighted52.1466→56.0822,217decrease.
+Smooth .201656→.196992(378),bond .037158→.017248(422),teacher .068060→.030382(359).
+Trajectorymeasurements,notfixedcheckpointfullTRAIN;lossmagnitude≠gradientbudget.
+
+NEXT oneparameter-sideboundedcheck beforetrainingdecision:8fixedexistingTRAIN32
+orderstatistics by(length,groupID),indices[0, 4, 8, 13, 17, 22, 26, 31],actualIDs archived
+next_parameter_panel.json. 6icr53,2w0g129,4uc2156,4hut191,2fv2268,6iul314,5w8p370,
+3ond488. Noise600001,retained512andglobal2048:16forward,3VJPeach(oldweightedcoord,
+newweightedglobal,restcurrentobjective),no parameterupdates/noDEV. Need implement
+withfrozenoriginaldiffusion/trainerinputs,strictforwardreplay;notyetstarted.
+Do notgeneralizepaneltolongerchains. Objective remains improveC4S1,not gradient
+certificationorBindCraft. No automatic weightgrid/continuation/modelpromotion.
+
+Docs mini_folding_gradient_budget_v1.md,mini_folding_gradient_budget_findings_2026-09-30.md;
+reports/mini_folding_gradient_budget_2026-09-30 containsmanifest,summary,384-case
+compressedreport,matchedhistory,acceptance/recipes,scheduler andnextpanel. Overall
+front updated. No live job remainsfromthis diagnostic.
+
 ## 2026-09-30 — Global-distance fixed terminal complete: partial recovery, no promotion
 
 Goal remains active: improve C4/S1 folding; no BindCraft/design/repair/backward work.
