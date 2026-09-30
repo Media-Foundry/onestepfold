@@ -5,6 +5,40 @@ work remains deferred; ESMC is a later matched conditioner-interface comparison.
 The scientific protocol is [folding scaling cycle v1](mini_folding_scaling_cycle_v1.md).
 No new held-out model-quality result is available at launch.
 
+## Matched 1024-update TRAIN probe: mean and tail disagree
+
+Both arms now have the same1024-new-update/4096-exposure probe. All384 saved
+coordinate files across both arms and0/512/1024 were checked for hash/finite values
+and exact target/noise coverage. The numbers below remain training diagnostics;
+the final independent audit and held-out evaluation have not yet run.
+
+|Common original-TRAIN32, two noises|Start|TRAIN128 +1024|TRAIN423 +1024|
+|---|---:|---:|---:|
+|AA-lDDT|0.804772891|0.808697454|0.805908770|
+|Cα-lDDT|0.885653254|0.888008539|0.886087358|
+|Zero severe + strict checked stereo|41/64|52/64|41/64|
+|Severe pairs total|394|209|396|
+|Proteins with positive mean AA change|—|30/32|26/32|
+|Proteins with mean AA change < −0.05|—|1/32|0/32|
+|New severe collision instances from zero|—|0|2|
+|Lost strict-stereo instances|—|0|1|
+
+The apparent mean advantage does not imply uniform quality preservation. In the
+post-hoc worst case,1MV8(436residues), TRAIN128 changes AA-lDDT by−0.000269 at
+noise600001 and−0.136026 at600011; the protein mean is−0.068147. Cα changes are
+−0.002698/−0.168916, mean−0.085807. TRAIN423's mean AA change on that same protein
+is−0.005012. This is a saved TRAIN case diagnosis, not a new validation result or
+evidence identifying a structural failure mechanism.
+
+Original proteins receive32 new exposures in the128 arm and9–10 in the423 arm
+at this update. Larger-data quality cannot be judged from original-TRAIN32 alone.
+Do not select a checkpoint, remove1MV8, or change the fixed terminal budget from
+this observation. The predeclared held-out paired tails and new damage remain
+essential. Compact evidence: `interim/matched_probe1024_observation.json` and
+`interim/probe1024_worst_case.json` under the training report directory.
+
+![Fixed TRAIN32 mean and the post-hoc 1MV8 case; no held-out result](../reports/mini_folding_training_2026-09-30/interim/probe1024_mean_and_tail.png)
+
 ## First TRAIN128 probe: modest fitting improvement, new damage remains
 
 At512 new updates, the locked original-TRAIN32 probe (two training noises each)

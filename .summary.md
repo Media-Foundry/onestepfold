@@ -1,3 +1,33 @@
+## 2026-09-30 — Matched1024 TRAIN probe exposes a mean/tail tradeoff
+
+Previous goal turn PROGRESS: final report stage queued. This turn initially a
+VERIFIED WAIT (live662290/662291 polled, counters advancing), then PROGRESS:
+expanded1024 probe completed and saved-output pairing exposed a substantial
+TRAIN128 tail regression. Main training continues unchanged to2048; all downstream
+audits/evaluation/reporting remain queued. Goal active/unfulfilled, no modelchoice.
+
+All384 coordinates across2arms×3updates(0,512,1024)×64outputs checked forhash,
+finitevalues and exact locked target/noise coverage. Compact observation archived
+reports/mini_folding_training_2026-09-30/interim/matched_probe1024_observation.json.
+At1024 AA/CA: original128 .808697454/.888008539; expanded423 .805908770/.886087358;
+start .804772891/.885653254. Zero+strict52/64 versus41/64(start41). Severe209vs396
+(start394). AApositive30/32vs26/32. MeanAA loss<-.05:1vs0. Newsevere0vs2,
+loststrict0vs1. Countsrelative tostart; no claim allformerbad geometriesfixed.
+
+Post-hoc worst case1MV8,L436,noise600011:TRAIN128 AA .794474→.658448(-.136026),
+CA .869626→.700710(-.168916);meanover2noises AA-.068147,CA-.085807. Expanded same
+targetmeanAA-.005012. It is not a uniformly better model despite meanimprovement.
+Savedreported CA alignedRMSD moves23.3909→19.9757 whilelDDTfalls; no causal
+mechanism claimed and no independentRMSD audit yet. Casejson retains all3points
+botharms/twonoises inclcoordinatequality/geometry andreporthashes, noextraGPUcalls.
+Originalsamples have32newexposures in128arm vs9–10 in423arm at1024; thisTRAIN-only
+panel cannot establish data-scaling generalization. No newcase/seeds, no resampling,
+checkpointselection orlosschange. Full held-out mean/tail/chemistry result required.
+
+Docs trainingstatus updated with matched table andnegativecase. Next collect
+terminalresults; if diagnosing tail, use savedmetrics/outputs before inventing a
+mechanism or opening a methodmatrix. No backward/BindCraft/repair branch reopened.
+
 ## 2026-09-30 — Fixed-terminal human-readable report queued
 
 Previous goal turn PROGRESS: complete455 ESMC feature preparation accepted. This
