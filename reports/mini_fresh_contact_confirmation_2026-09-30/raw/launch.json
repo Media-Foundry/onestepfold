@@ -1,0 +1,25 @@
+{
+  "pid": 251400,
+  "commands": [
+    [
+      "/home/pc/anaconda3/envs/fold/bin/python",
+      "/media/PM982/onestepfold/fresh_contact_predictions_v1_1_20260930/code/scripts/run_fresh_contact_predictions.py",
+      "--root",
+      "/media/PM982/onestepfold/fresh_contact_predictions_v1_1_20260930",
+      "--mode",
+      "prepare",
+      "--source",
+      "/media/PM982/onestepfold/fresh_contact_source_v1_20260930"
+    ],
+    [
+      "/home/pc/anaconda3/envs/fold/bin/python",
+      "/media/PM982/onestepfold/fresh_contact_predictions_v1_1_20260930/code/scripts/run_fresh_contact_predictions.py",
+      "--root",
+      "/media/PM982/onestepfold/fresh_contact_predictions_v1_1_20260930",
+      "--mode",
+      "batch"
+    ]
+  ],
+  "PROTENIX_ROOT_DIR": "/media/PM982/onestepfold/protenix_stage0_pkg/v1_1/runtime",
+  "previous_attempt": "fresh_contact_predictions_v1_20260930: terminated8 downloads,0 predictions"
+}

@@ -1,0 +1,723 @@
+[
+  {
+    "chemistry": {
+      "atom_count": 728,
+      "cif_sha256": "729f71f168aea0cb450c0fed2508600f38366c5fc9ff0135d0eb7359d68e417b",
+      "files": {
+        "mapping.npz": "0d7cb380076ef261e7be20e7561859e6eb73d47e5e5bcc595a5ab74f8e110f6a",
+        "native.pt": "7ddabdde002b76252b735a2e24d46388af17c49f38fa3b54a3006e63cfba1c4e",
+        "variants.json": "d75a2ea6404543f99a121814964c745a51983bedf2a569d09cabb448bdfd30b1"
+      },
+      "group_id": "fc4a0437159d532fd51c630c1aa4f4ee7a946d953f3a3894b0c6d1f370da4d10",
+      "length": 92,
+      "observed_atoms": 727,
+      "passed": true,
+      "pdb_id": "4qbo",
+      "reference_replay_max_abs": 2.6645352591003757e-15,
+      "source_hashes": {
+        "gt.json": "e531ecf0fe091d35dfda50d5fab1e2777a823140dce5bf3542dedc7ff7ef8372",
+        "gt.npz": "ada647c24f8b584d3810a86455b283fac6f9e1aede2cb048a93cd6c561bf6d03",
+        "input_provenance.json": "9aee4027ec399899c56782d0f78a4911ae3dd9ba5302dfdab9e69bf66389a25f",
+        "prepared.json": "fbb781d89a1d2484f951b9214fa92d10105ca95abcbb0ab24c2f3fa6f5915180"
+      },
+      "unsupported_source_connections": []
+    },
+    "error": "Traceback (most recent call last):\n  File \"/media/PM982/onestepfold/fresh_contact_source_v1_20260930/code/scripts/prepare_fresh_contact_panel.py\", line 45, in qualify_fresh_contact_source\n    assert mapped['mask'].all(), 'incomplete native heavy-atom GT'\n           ^^^^^^^^^^^^^^^^^^^^\nAssertionError: incomplete native heavy-atom GT\n",
+    "group_id": "fc4a0437159d532fd51c630c1aa4f4ee7a946d953f3a3894b0c6d1f370da4d10",
+    "passed": false,
+    "pdb_id": "4qbo"
+  },
+  {
+    "chemistry": {
+      "atom_count": 1743,
+      "cif_sha256": "9ce727bcfaed30047dde726c7fb54dfe63d43b52811677935452850ab34ddf94",
+      "files": {
+        "mapping.npz": "f152a51e97272793e6795cd87914ec84ccd6ec8a724ce63840cf6c548ab247b5",
+        "native.pt": "84a513b68a22a7e3ed3b44d73b98cc275227b8e6bbd3e789907273080c828e1c",
+        "variants.json": "be5877288be3ad55bcf33ab1df2105393332326e79e0d8aa09410234ffd1dd4a"
+      },
+      "group_id": "31332c7e80d8ab813c6a25354c81a6c9fe4b5c4763ea5147549ca713b36897a8",
+      "length": 237,
+      "observed_atoms": 1743,
+      "passed": true,
+      "pdb_id": "2z0j",
+      "reference_replay_max_abs": 2.6645352591003757e-15,
+      "source_hashes": {
+        "gt.json": "c73e20c9bf489a70441beda9bca944543cf4b6882ef125fc9d4c4a16fa3e2ff2",
+        "gt.npz": "41d59d59fa9a2a2f590e767d50e611ae9008b591fc9af5ed491446f4fc5a60cf",
+        "input_provenance.json": "6be8b8fe59175daa1dd5254546699e3206edad04de55507af0a33a4e2f6d30ed",
+        "prepared.json": "dc0d284f4fd07d156000c52a9b7c2b30b05989f55fb744df2e98635d85223df1"
+      },
+      "unsupported_source_connections": []
+    },
+    "chemistry_packet": "/media/PM982/onestepfold/fresh_contact_source_v1_20260930/chemistry/31332c7e80d8ab813c6a25354c81a6c9fe4b5c4763ea5147549ca713b36897a8",
+    "group_id": "31332c7e80d8ab813c6a25354c81a6c9fe4b5c4763ea5147549ca713b36897a8",
+    "passed": true,
+    "pdb_id": "2z0j",
+    "source": "/media/PM982/onestepfold/fresh_contact_source_v1_20260930/data/examples/31332c7e80d8ab813c6a25354c81a6c9fe4b5c4763ea5147549ca713b36897a8"
+  },
+  {
+    "chemistry": {
+      "error": "Traceback (most recent call last):\n  File \"/media/PM982/onestepfold/fresh_contact_source_v1_20260930/code/scripts/preflight_isolated_chemistry.py\", line 49, in check\n    if unsupported:raise ValueError('source covalent connection outside supported chemistry')\n                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nValueError: source covalent connection outside supported chemistry\n",
+      "group_id": "148eddcf08c125921f35c6b07a6596fc35d5d2a1fb01b136bef809618a96569c",
+      "length": 98,
+      "passed": false,
+      "pdb_id": "4fp5",
+      "unsupported_source_connections": [
+        {
+          "atoms": [
+            "SG",
+            "SG"
+          ],
+          "chains": [
+            "A",
+            "A"
+          ],
+          "residues": [
+            "10",
+            "81"
+          ],
+          "type": "disulf"
+        }
+      ]
+    },
+    "error": "Traceback (most recent call last):\n  File \"/media/PM982/onestepfold/fresh_contact_source_v1_20260930/code/scripts/prepare_fresh_contact_panel.py\", line 43, in qualify_fresh_contact_source\n    assert chemistry['passed'], chemistry.get('error')\n           ~~~~~~~~~^^^^^^^^^^\nAssertionError: Traceback (most recent call last):\n  File \"/media/PM982/onestepfold/fresh_contact_source_v1_20260930/code/scripts/preflight_isolated_chemistry.py\", line 49, in check\n    if unsupported:raise ValueError('source covalent connection outside supported chemistry')\n                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nValueError: source covalent connection outside supported chemistry\n\n",
+    "group_id": "148eddcf08c125921f35c6b07a6596fc35d5d2a1fb01b136bef809618a96569c",
+    "passed": false,
+    "pdb_id": "4fp5"
+  },
+  {
+    "chemistry": {
+      "atom_count": 2499,
+      "cif_sha256": "e24a3afe026ea26e2a546074fb7beaa44e1db805b4e69f556a37eed8430e2d81",
+      "files": {
+        "mapping.npz": "0f7a3050b8680da1179ec019fcffc4b80e3f8d37c3136d7f3f0f6d3d08fe093f",
+        "native.pt": "fbd874991317a6a0c91f1cdb1e6aec870b1b1f424524ffa937112e4fea3fa892",
+        "variants.json": "7092cf262a98892665be32cce17201e6e844633f5f3ab779e790b987db04f5f1"
+      },
+      "group_id": "fa104fc7d76d3a7747bca11db41eabd106a0eafd21ba924026156060358a8bcb",
+      "length": 309,
+      "observed_atoms": 2499,
+      "passed": true,
+      "pdb_id": "6yex",
+      "reference_replay_max_abs": 2.6645352591003757e-15,
+      "source_hashes": {
+        "gt.json": "dcb24877e23bf27e5d239fb2a233ee5d4358dd13bb54748076aa7770934c7a22",
+        "gt.npz": "9ca146cd1465851a5c5563925dc65265c40b64d2e67cb51d6568df20a7f0917c",
+        "input_provenance.json": "91b3434139e42839d91d4bbba05bbe36e4f5c7188613f42076a7d0945af5cfc9",
+        "prepared.json": "93d544a76a14e0327a443f4acafd614e723f231982c09c8b8640424d56dc719b"
+      },
+      "unsupported_source_connections": []
+    },
+    "chemistry_packet": "/media/PM982/onestepfold/fresh_contact_source_v1_20260930/chemistry/fa104fc7d76d3a7747bca11db41eabd106a0eafd21ba924026156060358a8bcb",
+    "group_id": "fa104fc7d76d3a7747bca11db41eabd106a0eafd21ba924026156060358a8bcb",
+    "passed": true,
+    "pdb_id": "6yex",
+    "source": "/media/PM982/onestepfold/fresh_contact_source_v1_20260930/data/examples/fa104fc7d76d3a7747bca11db41eabd106a0eafd21ba924026156060358a8bcb"
+  },
+  {
+    "chemistry": {
+      "error": "Traceback (most recent call last):\n  File \"/media/PM982/onestepfold/fresh_contact_source_v1_20260930/code/scripts/preflight_isolated_chemistry.py\", line 49, in check\n    if unsupported:raise ValueError('source covalent connection outside supported chemistry')\n                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nValueError: source covalent connection outside supported chemistry\n",
+      "group_id": "d623f663af5090cf1a4b2852e15600f4b3eb516c30e0744280fc8ff823b62d7d",
+      "length": 263,
+      "passed": false,
+      "pdb_id": "3u2u",
+      "unsupported_source_connections": [
+        {
+          "atoms": [
+            "OH",
+            "C1"
+          ],
+          "chains": [
+            "A",
+            "C"
+          ],
+          "residues": [
+            "196",
+            false
+          ],
+          "type": "covale"
+        }
+      ]
+    },
+    "error": "Traceback (most recent call last):\n  File \"/media/PM982/onestepfold/fresh_contact_source_v1_20260930/code/scripts/prepare_fresh_contact_panel.py\", line 43, in qualify_fresh_contact_source\n    assert chemistry['passed'], chemistry.get('error')\n           ~~~~~~~~~^^^^^^^^^^\nAssertionError: Traceback (most recent call last):\n  File \"/media/PM982/onestepfold/fresh_contact_source_v1_20260930/code/scripts/preflight_isolated_chemistry.py\", line 49, in check\n    if unsupported:raise ValueError('source covalent connection outside supported chemistry')\n                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nValueError: source covalent connection outside supported chemistry\n\n",
+    "group_id": "d623f663af5090cf1a4b2852e15600f4b3eb516c30e0744280fc8ff823b62d7d",
+    "passed": false,
+    "pdb_id": "3u2u"
+  },
+  {
+    "chemistry": {
+      "atom_count": 1487,
+      "cif_sha256": "c86217aff1d6df371d46d07f4ac73fd5c17b6697176a14cb9f00f0f39ca7fd99",
+      "files": {
+        "mapping.npz": "d2f70b4f1e83223385c9bd12c463a6eb11d499bfb9ddc67c1256cbc2ae7cb89a",
+        "native.pt": "50ba33d37626f3fc730599e252b434e7aa58b95d9c24ba27f6f1bbfdcc3eef5e",
+        "variants.json": "01009ff3d57666b6e2155497090bb7a42d7fa05986fe8e41ea1ab0bf96ea8b38"
+      },
+      "group_id": "e62f176cf206ad6a1033639b760476f79b86864012b6e55255302f637c7e4f65",
+      "length": 186,
+      "observed_atoms": 1487,
+      "passed": true,
+      "pdb_id": "2b0a",
+      "reference_replay_max_abs": 3.1086244689504383e-15,
+      "source_hashes": {
+        "gt.json": "589afbb0e9ff26c14c27ca8f49272f7a667c0834d2b71fd5149a1bf5140ccfb8",
+        "gt.npz": "3092f4ffe785ddc057bec7419802041fe6622c9d52b1bc260df487ee9786b5b1",
+        "input_provenance.json": "de70dad6df31459ab2ad4f69d92ba8d4244efcf26c3d3d8e411a37e02e4a685c",
+        "prepared.json": "950818b052486a41bb9355003d3ff632e76872371e0c7c81270b3ce757f59ab4"
+      },
+      "unsupported_source_connections": []
+    },
+    "chemistry_packet": "/media/PM982/onestepfold/fresh_contact_source_v1_20260930/chemistry/e62f176cf206ad6a1033639b760476f79b86864012b6e55255302f637c7e4f65",
+    "group_id": "e62f176cf206ad6a1033639b760476f79b86864012b6e55255302f637c7e4f65",
+    "passed": true,
+    "pdb_id": "2b0a",
+    "source": "/media/PM982/onestepfold/fresh_contact_source_v1_20260930/data/examples/e62f176cf206ad6a1033639b760476f79b86864012b6e55255302f637c7e4f65"
+  },
+  {
+    "chemistry": {
+      "error": "Traceback (most recent call last):\n  File \"/media/PM982/onestepfold/fresh_contact_source_v1_20260930/code/scripts/preflight_isolated_chemistry.py\", line 49, in check\n    if unsupported:raise ValueError('source covalent connection outside supported chemistry')\n                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nValueError: source covalent connection outside supported chemistry\n",
+      "group_id": "ab7fe8d22cc37fc45ea2cadad74f77cae69896ecba617d3b7de4daa149d5509f",
+      "length": 103,
+      "passed": false,
+      "pdb_id": "5elb",
+      "unsupported_source_connections": [
+        {
+          "atoms": [
+            "SG",
+            "SG"
+          ],
+          "chains": [
+            "A",
+            "A"
+          ],
+          "residues": [
+            "9",
+            "86"
+          ],
+          "type": "disulf"
+        }
+      ]
+    },
+    "error": "Traceback (most recent call last):\n  File \"/media/PM982/onestepfold/fresh_contact_source_v1_20260930/code/scripts/prepare_fresh_contact_panel.py\", line 43, in qualify_fresh_contact_source\n    assert chemistry['passed'], chemistry.get('error')\n           ~~~~~~~~~^^^^^^^^^^\nAssertionError: Traceback (most recent call last):\n  File \"/media/PM982/onestepfold/fresh_contact_source_v1_20260930/code/scripts/preflight_isolated_chemistry.py\", line 49, in check\n    if unsupported:raise ValueError('source covalent connection outside supported chemistry')\n                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nValueError: source covalent connection outside supported chemistry\n\n",
+    "group_id": "ab7fe8d22cc37fc45ea2cadad74f77cae69896ecba617d3b7de4daa149d5509f",
+    "passed": false,
+    "pdb_id": "5elb"
+  },
+  {
+    "chemistry": {
+      "atom_count": 574,
+      "cif_sha256": "aac596ad0ac02b4cd07f6babc706019f0cbe3b3f0e9cbce5d22ac512dca8fc15",
+      "files": {
+        "mapping.npz": "43c024b3b2f63e359788e931edf73a6bca66c28d8a4e83898e07a281fe66f84c",
+        "native.pt": "08ab9326b77451d720e9036cf4428d19fb58d7118a60c8ee8d7803be0dbe4a74",
+        "variants.json": "611726e5ff02ea4657c7d62f6bae52c0d78402ca43c6d7477d34744a691247ec"
+      },
+      "group_id": "27f71f355058e26571d1b56593e25d0729981aca5e472a5af8291fb721c7b901",
+      "length": 70,
+      "observed_atoms": 573,
+      "passed": true,
+      "pdb_id": "6xfu",
+      "reference_replay_max_abs": 2.220446049250313e-15,
+      "source_hashes": {
+        "gt.json": "0ab207e0bb63dd1fbebff24153f88b20672ca7298f2df8d593c66251ab280f1e",
+        "gt.npz": "701562e0d4c9be3bbb49d47e68f8692ebbdd7ed0ece7d7ac24b05ac732247be3",
+        "input_provenance.json": "a9c35cb2a5d698e2115691d4cec42015b86de2a0d2e2aacc8c940ee86a487f5f",
+        "prepared.json": "d7ab9a791c38db0693f804e5f5aead7c60e33a062736e5ece9da4da2ef34ac5f"
+      },
+      "unsupported_source_connections": []
+    },
+    "error": "Traceback (most recent call last):\n  File \"/media/PM982/onestepfold/fresh_contact_source_v1_20260930/code/scripts/prepare_fresh_contact_panel.py\", line 45, in qualify_fresh_contact_source\n    assert mapped['mask'].all(), 'incomplete native heavy-atom GT'\n           ^^^^^^^^^^^^^^^^^^^^\nAssertionError: incomplete native heavy-atom GT\n",
+    "group_id": "27f71f355058e26571d1b56593e25d0729981aca5e472a5af8291fb721c7b901",
+    "passed": false,
+    "pdb_id": "6xfu"
+  },
+  {
+    "chemistry": {
+      "atom_count": 2084,
+      "cif_sha256": "b45c7796089fa3ddb4072d3c8503b9fa7f319cfa6e94726a65e85a2dbb973203",
+      "files": {
+        "mapping.npz": "52563b40fdef3d9ca1426d7d9f3ce0e0f3cfaad34f24e474289522630f48a364",
+        "native.pt": "98a0a644468272aaaea2825e1c9159afa996c6d5d90a7d199f5cc46b8be3e6b1",
+        "variants.json": "7e2c534ead5d6eac974adb990345363b2694c0d849c036abc40033014fe30e8c"
+      },
+      "group_id": "d73c5282c185ff9d5fa7aa2252be038db3d19026447e727cc1f341f84bc1c697",
+      "length": 264,
+      "observed_atoms": 2083,
+      "passed": true,
+      "pdb_id": "3mbk",
+      "reference_replay_max_abs": 2.6645352591003757e-15,
+      "source_hashes": {
+        "gt.json": "88a13522bc5ff6062e89c1891c07b8e578a4774b82039dde1ed37f9db28117f5",
+        "gt.npz": "36b2e403f48167af0e4562e5b808a81c601ef3a983529e5bd55585d1048f0d8f",
+        "input_provenance.json": "ce5ee3285988db484bf84b90ab05b3a8f16b4389d18bb2b91c49db4a88eba07a",
+        "prepared.json": "bfdd4feb1eead564286ce7ed0667ddb511a10d2c8bd0b59b980f7715552e88a6"
+      },
+      "unsupported_source_connections": []
+    },
+    "error": "Traceback (most recent call last):\n  File \"/media/PM982/onestepfold/fresh_contact_source_v1_20260930/code/scripts/prepare_fresh_contact_panel.py\", line 45, in qualify_fresh_contact_source\n    assert mapped['mask'].all(), 'incomplete native heavy-atom GT'\n           ^^^^^^^^^^^^^^^^^^^^\nAssertionError: incomplete native heavy-atom GT\n",
+    "group_id": "d73c5282c185ff9d5fa7aa2252be038db3d19026447e727cc1f341f84bc1c697",
+    "passed": false,
+    "pdb_id": "3mbk"
+  },
+  {
+    "chemistry": {
+      "atom_count": 1174,
+      "cif_sha256": "4d87eb482f9358895bec005f5fc2cadaac5be7931b4d7d7e16d560e3d63a0a83",
+      "files": {
+        "mapping.npz": "77956bbab4f61f8ad1c91f6ea1fd9826e15a096d3eed231b72074fedca43064d",
+        "native.pt": "4a2a7344ddbf0b06d23c0b2c64e5ac4fee1e8b004d14aed844923ce76cc0359a",
+        "variants.json": "0675ba2c52bfdc917d17235e56fe5ab5b3db2e2df7195892d5424219a513dd46"
+      },
+      "group_id": "05e2ce081fb2065f2938b81bd991714a4aa5dd8c38185e7780972c7734018266",
+      "length": 148,
+      "observed_atoms": 1174,
+      "passed": true,
+      "pdb_id": "4yl1",
+      "reference_replay_max_abs": 2.6645352591003757e-15,
+      "source_hashes": {
+        "gt.json": "86578ece83aaa08e7ce4c2b869756110385c6745e5e76430ed095426defc726f",
+        "gt.npz": "6f6b9217f307712205bba83359470f8b2264d3d2990aee970ef7cfc58a7b7df5",
+        "input_provenance.json": "fcb920ece6c976c9c76f67146264e17dd648de45208aca02bcba5d00f101882a",
+        "prepared.json": "23fa470975929b9f7740584aac38066791e3a2a77b70fd3c75f652de160b4435"
+      },
+      "unsupported_source_connections": []
+    },
+    "chemistry_packet": "/media/PM982/onestepfold/fresh_contact_source_v1_20260930/chemistry/05e2ce081fb2065f2938b81bd991714a4aa5dd8c38185e7780972c7734018266",
+    "group_id": "05e2ce081fb2065f2938b81bd991714a4aa5dd8c38185e7780972c7734018266",
+    "passed": true,
+    "pdb_id": "4yl1",
+    "source": "/media/PM982/onestepfold/fresh_contact_source_v1_20260930/data/examples/05e2ce081fb2065f2938b81bd991714a4aa5dd8c38185e7780972c7734018266"
+  },
+  {
+    "chemistry": {
+      "atom_count": 932,
+      "cif_sha256": "2b3bd3c01555b5660c1478db47ab6a0c3d59b0b34861aefea6332f1dc5d697a4",
+      "files": {
+        "mapping.npz": "1416c0ec24bb4396328ff8aa52e4f9b3e16c9db8e4e3347a63e6db94a9f5266e",
+        "native.pt": "4c2a5c562b3c906f53ea452a146d6bf790f699eda886ab2011304ee762465875",
+        "variants.json": "42da4116a04a76b0f7ff194993a667c5721eff5f68287e4f254bede68bf49dd5"
+      },
+      "group_id": "0fc343a518577a0f49da7c62666a6fdcd9ab1cca5bfb53b2026b3b8be1769ea7",
+      "length": 117,
+      "observed_atoms": 932,
+      "passed": true,
+      "pdb_id": "1t6u",
+      "reference_replay_max_abs": 3.552713678800501e-15,
+      "source_hashes": {
+        "gt.json": "61a1a525a8787e5264c458a1236165c2c0392c7d78dd651bb06dc549b9626493",
+        "gt.npz": "e019eb7f8e191bdc1302d4f8780d53a3b18ad6505993168d0a9cd2167aee911c",
+        "input_provenance.json": "8f44dbef871b574162c9beb0ed80d738eb3848affc16826fa74c664d67393e3a",
+        "prepared.json": "8299e5201d5e9e8da4c1997caf5a375d69a48125ff8183b93b67b4ab4be85d56"
+      },
+      "unsupported_source_connections": []
+    },
+    "chemistry_packet": "/media/PM982/onestepfold/fresh_contact_source_v1_20260930/chemistry/0fc343a518577a0f49da7c62666a6fdcd9ab1cca5bfb53b2026b3b8be1769ea7",
+    "group_id": "0fc343a518577a0f49da7c62666a6fdcd9ab1cca5bfb53b2026b3b8be1769ea7",
+    "passed": true,
+    "pdb_id": "1t6u",
+    "source": "/media/PM982/onestepfold/fresh_contact_source_v1_20260930/data/examples/0fc343a518577a0f49da7c62666a6fdcd9ab1cca5bfb53b2026b3b8be1769ea7"
+  },
+  {
+    "chemistry": {
+      "atom_count": 892,
+      "cif_sha256": "b6358b31d7e1fa5696d33088f5035ca40ebb50c7d6a9c051a452c23d56627026",
+      "files": {
+        "mapping.npz": "e32e82ed955753247cd16beac8d4c0cf3d7ef35a622bdf8a05f1afdd26cc630e",
+        "native.pt": "f2f95ebdc74aa2f2fa7d1a485f85e0b5f0acdc0b7b96aa9c9a6e97eb6f4ce63d",
+        "variants.json": "62bfea8bbda54334b354a43be8eb852fd2f8a0e25c7e6d41458f31df7a2e7bb2"
+      },
+      "group_id": "ed9a9e1ed45123835b5c92d089f52d5df82b02efc73ac06444b8061310dffa61",
+      "length": 115,
+      "observed_atoms": 891,
+      "passed": true,
+      "pdb_id": "6e71",
+      "reference_replay_max_abs": 1.9984014443252818e-15,
+      "source_hashes": {
+        "gt.json": "41df3e04cc4bc9cc0565ab969b0b040d901bbbdb3f4312ae5ce4075619497aff",
+        "gt.npz": "fe2510256d7e074b2bfa8f54af79b30f8ce8b11b93af6fcff091c91b754a9608",
+        "input_provenance.json": "b7abf594fedcb54caebe9e33db99a570ad3a02a4719d7ee39cb3d0c57fdfd345",
+        "prepared.json": "b172a7d730c58562dae4bd3ebf2de83650d22fb505cb45b45f8d3e001a2f23e7"
+      },
+      "unsupported_source_connections": []
+    },
+    "error": "Traceback (most recent call last):\n  File \"/media/PM982/onestepfold/fresh_contact_source_v1_20260930/code/scripts/prepare_fresh_contact_panel.py\", line 45, in qualify_fresh_contact_source\n    assert mapped['mask'].all(), 'incomplete native heavy-atom GT'\n           ^^^^^^^^^^^^^^^^^^^^\nAssertionError: incomplete native heavy-atom GT\n",
+    "group_id": "ed9a9e1ed45123835b5c92d089f52d5df82b02efc73ac06444b8061310dffa61",
+    "passed": false,
+    "pdb_id": "6e71"
+  },
+  {
+    "chemistry": {
+      "atom_count": 3057,
+      "cif_sha256": "a2711280f7b92109b29045725746a72edab22994a19694e61d0699d36fa257dd",
+      "files": {
+        "mapping.npz": "faf18e142e29977dfe0b5f4d3df36aad1d1514526943a451b5436057d413a3c9",
+        "native.pt": "9b9861f58189c4425f3a2e0d04988e364fa96a32ace7e0f413a3da0064161234",
+        "variants.json": "04a75da48a7c7858c183bd806faa3875d008de9b72bee2bf1e70084adbbd1746"
+      },
+      "group_id": "a06716be546e3a923c1d5e21dc855d76d242a87e982149353a006ebe0b7a06b3",
+      "length": 382,
+      "observed_atoms": 3053,
+      "passed": true,
+      "pdb_id": "5vg3",
+      "reference_replay_max_abs": 2.220446049250313e-15,
+      "source_hashes": {
+        "gt.json": "ee915fba9489ea8609495950f9519953da2ac7f81383ba58b244d6e9f50d0ab1",
+        "gt.npz": "6d577701a3ac2b621da3d508ec08fe72ae526179214beb2b25a1244c747237db",
+        "input_provenance.json": "1920e3c569eae438509cb86e8968d741666b77a7c707ca36e723f4f13a0c751f",
+        "prepared.json": "25011443d6fd9299228db31e775703abcb0ff2d00af0b3f6810632c0396609f9"
+      },
+      "unsupported_source_connections": []
+    },
+    "error": "Traceback (most recent call last):\n  File \"/media/PM982/onestepfold/fresh_contact_source_v1_20260930/code/scripts/prepare_fresh_contact_panel.py\", line 45, in qualify_fresh_contact_source\n    assert mapped['mask'].all(), 'incomplete native heavy-atom GT'\n           ^^^^^^^^^^^^^^^^^^^^\nAssertionError: incomplete native heavy-atom GT\n",
+    "group_id": "a06716be546e3a923c1d5e21dc855d76d242a87e982149353a006ebe0b7a06b3",
+    "passed": false,
+    "pdb_id": "5vg3"
+  },
+  {
+    "chemistry": {
+      "atom_count": 962,
+      "cif_sha256": "94d038ae42b37e01466f9168950ea44e778b13c4dca11def4392343b7af57cc5",
+      "files": {
+        "mapping.npz": "7af801e8c8b632814f346c27cf5288e0057d9630daf15080d1bf45cec08866d5",
+        "native.pt": "ad393f4d65b5cea7fe694fbab0e7031fab2ffe9a05dd918254775db08a0f74ef",
+        "variants.json": "edddba38e8df8c4886f8dd1c4e6d732fe5615c17540b8591aa8684509e51c502"
+      },
+      "group_id": "bf6606bd36305f2c18147be1ba9beb1fbed26a4b988e963c919b85dad7146626",
+      "length": 138,
+      "observed_atoms": 962,
+      "passed": true,
+      "pdb_id": "2r6q",
+      "reference_replay_max_abs": 1.7763568394002505e-15,
+      "source_hashes": {
+        "gt.json": "aa700743ea9d4a14ef0e3acfd7cb0e6458ede6628becb17cfc515910de393296",
+        "gt.npz": "ed3370a7150e139f534d9c355bb40b93ff41aa8a20e788517a86c4a6e1364f11",
+        "input_provenance.json": "74d76e7673a0de8a94e9426c033d689677a3f0b0cd563b0face3fd9f72b686de",
+        "prepared.json": "7d4a686507e3801ae2f88f38ea10baac96ae0e3bee6242928fc166f874ecf5dc"
+      },
+      "unsupported_source_connections": []
+    },
+    "chemistry_packet": "/media/PM982/onestepfold/fresh_contact_source_v1_20260930/chemistry/bf6606bd36305f2c18147be1ba9beb1fbed26a4b988e963c919b85dad7146626",
+    "group_id": "bf6606bd36305f2c18147be1ba9beb1fbed26a4b988e963c919b85dad7146626",
+    "passed": true,
+    "pdb_id": "2r6q",
+    "source": "/media/PM982/onestepfold/fresh_contact_source_v1_20260930/data/examples/bf6606bd36305f2c18147be1ba9beb1fbed26a4b988e963c919b85dad7146626"
+  },
+  {
+    "chemistry": {
+      "atom_count": 500,
+      "cif_sha256": "819e4e59cfbee776390acf35e932f712e7b2bd58157be5716629507c512572b4",
+      "files": {
+        "mapping.npz": "5a22bab37c87a96a9694862a44c2424bdc1902cd54cb66d2e41398e96593967e",
+        "native.pt": "a6389cef3bc7d522f93dc15ef427ea90135e159c208b0da6f3e1ad09f0a8f413",
+        "variants.json": "cd2a5684f6e0c46423a29438131c84ca4de8eaf70b743588f6fdde6d125e9313"
+      },
+      "group_id": "056c4e6daa78828524dae4ba40e2738162388dcaa94adac9a488c457c9eddbfc",
+      "length": 67,
+      "observed_atoms": 500,
+      "passed": true,
+      "pdb_id": "1fr3",
+      "reference_replay_max_abs": 1.7763568394002505e-15,
+      "source_hashes": {
+        "gt.json": "c2d6060330cb1b08bccfbacd327b0a79b246c456f16c8c976980928b9c1b05e3",
+        "gt.npz": "68dec1818d82d987d21d8e2ebc9389549a951a4a1a01fc50842db4d7eaed5d83",
+        "input_provenance.json": "7342f11a182e12f2092dc5ddd517a50329ed3bee84d98638eb3c8b5368c95a01",
+        "prepared.json": "6890662480e988be787dad33dd60690ff8882bc26d3eebeca82820824be973c7"
+      },
+      "unsupported_source_connections": []
+    },
+    "chemistry_packet": "/media/PM982/onestepfold/fresh_contact_source_v1_20260930/chemistry/056c4e6daa78828524dae4ba40e2738162388dcaa94adac9a488c457c9eddbfc",
+    "group_id": "056c4e6daa78828524dae4ba40e2738162388dcaa94adac9a488c457c9eddbfc",
+    "passed": true,
+    "pdb_id": "1fr3",
+    "source": "/media/PM982/onestepfold/fresh_contact_source_v1_20260930/data/examples/056c4e6daa78828524dae4ba40e2738162388dcaa94adac9a488c457c9eddbfc"
+  },
+  {
+    "chemistry": {
+      "atom_count": 928,
+      "cif_sha256": "25bd715dae1ad27255a4c9b2aed3fc2dc098fa1a8a0b660ef2e6e7a4a8b334d7",
+      "files": {
+        "mapping.npz": "6cf998a18f4764ccb1928e1c5c1fce0bfad9fcc761b99498d70fe4067c38f350",
+        "native.pt": "f6c724f518d2f8ab35479e800c15640cfd4496725cf376b7f41b032a00975e5a",
+        "variants.json": "ab48ec3803f61982adf0043c6bb99c77b19a203546cea1ac67ca450f4d7f457d"
+      },
+      "group_id": "5e689795718f44003ae6ced672097fc061ae979d2110a6d4cf71be1247c3d239",
+      "length": 115,
+      "observed_atoms": 927,
+      "passed": true,
+      "pdb_id": "7b5j",
+      "reference_replay_max_abs": 2.220446049250313e-15,
+      "source_hashes": {
+        "gt.json": "ee92e274328c528a27ce029c89b4cce7e5864819a5a21706fd8cdbd829148f21",
+        "gt.npz": "4726891ddc0f215c4b17cfb43d2207370424e05bb64e3de06d6a332855ff9429",
+        "input_provenance.json": "77c9d9f85cba1dd2b4b117b0a6619dc642a1d15b845f564ec4aaad1cecdabdc2",
+        "prepared.json": "901bcfdf7bf488514c85a308933d937fd4869e3a5133f3c0d770a2a48fbf3756"
+      },
+      "unsupported_source_connections": []
+    },
+    "error": "Traceback (most recent call last):\n  File \"/media/PM982/onestepfold/fresh_contact_source_v1_20260930/code/scripts/prepare_fresh_contact_panel.py\", line 45, in qualify_fresh_contact_source\n    assert mapped['mask'].all(), 'incomplete native heavy-atom GT'\n           ^^^^^^^^^^^^^^^^^^^^\nAssertionError: incomplete native heavy-atom GT\n",
+    "group_id": "5e689795718f44003ae6ced672097fc061ae979d2110a6d4cf71be1247c3d239",
+    "passed": false,
+    "pdb_id": "7b5j"
+  },
+  {
+    "chemistry": {
+      "error": "Traceback (most recent call last):\n  File \"/media/PM982/onestepfold/fresh_contact_source_v1_20260930/code/scripts/preflight_isolated_chemistry.py\", line 49, in check\n    if unsupported:raise ValueError('source covalent connection outside supported chemistry')\n                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nValueError: source covalent connection outside supported chemistry\n",
+      "group_id": "5863980f5a3ae26ac1250be33898bb2990c792f69450589c6941e947cd4a47f0",
+      "length": 94,
+      "passed": false,
+      "pdb_id": "4nds",
+      "unsupported_source_connections": [
+        {
+          "atoms": [
+            "SG",
+            "SG"
+          ],
+          "chains": [
+            "A",
+            "A"
+          ],
+          "residues": [
+            "2",
+            "68"
+          ],
+          "type": "disulf"
+        },
+        {
+          "atoms": [
+            "SG",
+            "SG"
+          ],
+          "chains": [
+            "A",
+            "A"
+          ],
+          "residues": [
+            "8",
+            "91"
+          ],
+          "type": "disulf"
+        },
+        {
+          "atoms": [
+            "SG",
+            "SG"
+          ],
+          "chains": [
+            "A",
+            "A"
+          ],
+          "residues": [
+            "27",
+            "57"
+          ],
+          "type": "disulf"
+        }
+      ]
+    },
+    "error": "Traceback (most recent call last):\n  File \"/media/PM982/onestepfold/fresh_contact_source_v1_20260930/code/scripts/prepare_fresh_contact_panel.py\", line 43, in qualify_fresh_contact_source\n    assert chemistry['passed'], chemistry.get('error')\n           ~~~~~~~~~^^^^^^^^^^\nAssertionError: Traceback (most recent call last):\n  File \"/media/PM982/onestepfold/fresh_contact_source_v1_20260930/code/scripts/preflight_isolated_chemistry.py\", line 49, in check\n    if unsupported:raise ValueError('source covalent connection outside supported chemistry')\n                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nValueError: source covalent connection outside supported chemistry\n\n",
+    "group_id": "5863980f5a3ae26ac1250be33898bb2990c792f69450589c6941e947cd4a47f0",
+    "passed": false,
+    "pdb_id": "4nds"
+  },
+  {
+    "chemistry": {
+      "atom_count": 1537,
+      "cif_sha256": "a11b62f6baa62bef45b643bef621d09cf2d5b7f7330538db782f948b0df3c855",
+      "files": {
+        "mapping.npz": "64c17517967ebe09133ebf80896a20e40ae7d19d47b5cca7486978a8870a4a85",
+        "native.pt": "9e0b4a4185c5c99b0b624964e0e7fab25321313a76b8fe21cc30b04d9900eb1b",
+        "variants.json": "d865ba54d2ea7f42fcf41bd2080594b5f03dccc5eed2d80a5692f83e62733d5c"
+      },
+      "group_id": "6906ee0f39e6f5d06ac35f9d34ec81b76007eec7224cc89f90d2cb7c190d20d5",
+      "length": 198,
+      "observed_atoms": 1537,
+      "passed": true,
+      "pdb_id": "1ocy",
+      "reference_replay_max_abs": 3.552713678800501e-15,
+      "source_hashes": {
+        "gt.json": "199dcfff464b1b050ed75125e91518c92ee721e74e7352544ac55fe069bdd0b1",
+        "gt.npz": "283529b1f2281f50082e2d24e8efb714f9d801438ca7e77f49293fb8388eb63a",
+        "input_provenance.json": "9682436be7704b7ac5ae72f0351b60687969b77c882977c34a2759d529a04379",
+        "prepared.json": "b31a3b06f3025a8b12094ac546caf7c50babf457c09b8d06f0032d612c441570"
+      },
+      "unsupported_source_connections": []
+    },
+    "chemistry_packet": "/media/PM982/onestepfold/fresh_contact_source_v1_20260930/chemistry/6906ee0f39e6f5d06ac35f9d34ec81b76007eec7224cc89f90d2cb7c190d20d5",
+    "group_id": "6906ee0f39e6f5d06ac35f9d34ec81b76007eec7224cc89f90d2cb7c190d20d5",
+    "passed": true,
+    "pdb_id": "1ocy",
+    "source": "/media/PM982/onestepfold/fresh_contact_source_v1_20260930/data/examples/6906ee0f39e6f5d06ac35f9d34ec81b76007eec7224cc89f90d2cb7c190d20d5"
+  },
+  {
+    "chemistry": {
+      "atom_count": 963,
+      "cif_sha256": "0cef078abead1098e8a43f9a2940fab24ac1176045482d1538f05b2632949d8b",
+      "files": {
+        "mapping.npz": "bfb719a08f958da0fccc7d6a158d361e3aee42156396671f9b6ad1702dfd18f9",
+        "native.pt": "54887a5f6f6d6f8f377930c79914e427ae325a209a376a69199ec3d3f6c0c0aa",
+        "variants.json": "a804c3b02400d2136e0c29c6bedea73c17783553500991c4fe7fb6376a61bbe2"
+      },
+      "group_id": "7274b14e3b3c18bc3d1d6a3cdf49ea2f69984a26880c0b3ea881917ad7fea8e1",
+      "length": 126,
+      "observed_atoms": 962,
+      "passed": true,
+      "pdb_id": "6zrw",
+      "reference_replay_max_abs": 2.6645352591003757e-15,
+      "source_hashes": {
+        "gt.json": "7607588aa96f80e7f514a3b047cf9ffeacda736e706fb62fda1666abf47ff6ae",
+        "gt.npz": "94f75e8983190f61c24171a17cc18d4f5433fb642c272bc7756323758d3d5e72",
+        "input_provenance.json": "2f5123aaec78c7ae069c7233b355d4fefdb4321040ca12fb83b227327f4820d0",
+        "prepared.json": "7acb22d374851e7ca911c55010da48b507b6241b3ab05802efdf96742d7fad27"
+      },
+      "unsupported_source_connections": []
+    },
+    "error": "Traceback (most recent call last):\n  File \"/media/PM982/onestepfold/fresh_contact_source_v1_20260930/code/scripts/prepare_fresh_contact_panel.py\", line 45, in qualify_fresh_contact_source\n    assert mapped['mask'].all(), 'incomplete native heavy-atom GT'\n           ^^^^^^^^^^^^^^^^^^^^\nAssertionError: incomplete native heavy-atom GT\n",
+    "group_id": "7274b14e3b3c18bc3d1d6a3cdf49ea2f69984a26880c0b3ea881917ad7fea8e1",
+    "passed": false,
+    "pdb_id": "6zrw"
+  },
+  {
+    "chemistry": {
+      "atom_count": 744,
+      "cif_sha256": "19a4149f6ee71548002a91109c5e6295d61bcca82118f067ed5ce89aea9708de",
+      "files": {
+        "mapping.npz": "8183090fe3caa0adaa00e088ed74b1f366745a7602403b98f31618ac04897a3b",
+        "native.pt": "2153f00893e73ee4953c966d25c3996ab7b47d251fd76ab8c95754d136fa391a",
+        "variants.json": "a9b166cf2d5b9f7e6d2f56f73e0c539a065011e4896a99d0b0c00862374a8aa4"
+      },
+      "group_id": "2632f1826d3d92ae6b7bca38213792cc6d6ba98a972c62ddcee3d54b81ed90d4",
+      "length": 94,
+      "observed_atoms": 727,
+      "passed": true,
+      "pdb_id": "6tcb",
+      "reference_replay_max_abs": 2.6645352591003757e-15,
+      "source_hashes": {
+        "gt.json": "18868aee9bac5290b3688a2bdc0320a6f15b93a40e4e1f7bfb8ffd43a1e9f9e9",
+        "gt.npz": "8750412fe28d3b62617fb0856ede7bed9cc057932b773239e1393cd53ed3d188",
+        "input_provenance.json": "ec00791866a9dc2bf74e2ef476f4bcf412d56475c1b8e416f35a6c2709f14473",
+        "prepared.json": "5fafd29ab9abd052b7be209e1421ddb5b754bc62386316bbcdbfe920e63e4cda"
+      },
+      "unsupported_source_connections": []
+    },
+    "error": "Traceback (most recent call last):\n  File \"/media/PM982/onestepfold/fresh_contact_source_v1_20260930/code/scripts/prepare_fresh_contact_panel.py\", line 45, in qualify_fresh_contact_source\n    assert mapped['mask'].all(), 'incomplete native heavy-atom GT'\n           ^^^^^^^^^^^^^^^^^^^^\nAssertionError: incomplete native heavy-atom GT\n",
+    "group_id": "2632f1826d3d92ae6b7bca38213792cc6d6ba98a972c62ddcee3d54b81ed90d4",
+    "passed": false,
+    "pdb_id": "6tcb"
+  },
+  {
+    "chemistry": {
+      "error": "Traceback (most recent call last):\n  File \"/media/PM982/onestepfold/fresh_contact_source_v1_20260930/code/scripts/preflight_isolated_chemistry.py\", line 49, in check\n    if unsupported:raise ValueError('source covalent connection outside supported chemistry')\n                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nValueError: source covalent connection outside supported chemistry\n",
+      "group_id": "6528da2fb2fd758b7465250fc1a0ffa6d7bd7e4d5f3ac335d4620ab79b8f1db6",
+      "length": 360,
+      "passed": false,
+      "pdb_id": "1w23",
+      "unsupported_source_connections": [
+        {
+          "atoms": [
+            "NZ",
+            "C4A"
+          ],
+          "chains": [
+            "A",
+            "J"
+          ],
+          "residues": [
+            "196",
+            false
+          ],
+          "type": "covale"
+        }
+      ]
+    },
+    "error": "Traceback (most recent call last):\n  File \"/media/PM982/onestepfold/fresh_contact_source_v1_20260930/code/scripts/prepare_fresh_contact_panel.py\", line 43, in qualify_fresh_contact_source\n    assert chemistry['passed'], chemistry.get('error')\n           ~~~~~~~~~^^^^^^^^^^\nAssertionError: Traceback (most recent call last):\n  File \"/media/PM982/onestepfold/fresh_contact_source_v1_20260930/code/scripts/preflight_isolated_chemistry.py\", line 49, in check\n    if unsupported:raise ValueError('source covalent connection outside supported chemistry')\n                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nValueError: source covalent connection outside supported chemistry\n\n",
+    "group_id": "6528da2fb2fd758b7465250fc1a0ffa6d7bd7e4d5f3ac335d4620ab79b8f1db6",
+    "passed": false,
+    "pdb_id": "1w23"
+  },
+  {
+    "chemistry": {
+      "atom_count": 710,
+      "cif_sha256": "23ca27bd5ee6226931bdc0a418bf97639f4bcb52abbd500300ed356c896efd94",
+      "files": {
+        "mapping.npz": "3c804c0e5604acc08024f90ed4b3ddb9d05db9ea97a6595cc636a1c9b49580d5",
+        "native.pt": "9e80e2cb40b58739018d37fa03fb33f08f4eb546293673cb4f7536d5f6aaea97",
+        "variants.json": "61ad48d76874335e8a396b9a5622c70b49c8fc148b5bab3faf6a219b4676d07d"
+      },
+      "group_id": "845b7151e1cd70ab51a196d726ba16bb58387812a09406e969421606d05926ba",
+      "length": 90,
+      "observed_atoms": 710,
+      "passed": true,
+      "pdb_id": "1u07",
+      "reference_replay_max_abs": 2.6645352591003757e-15,
+      "source_hashes": {
+        "gt.json": "27177fad98fd34e2ee26f456f553395cd426d69d634eed68be7d8d128f7832dc",
+        "gt.npz": "87f597772f1b2991796f28c1b1a090970b258172e28febbda774182974d57822",
+        "input_provenance.json": "25b314b76265777b36812e341fb771946027d2e8ff2c18955e10afe3fb418c3f",
+        "prepared.json": "9358cbb310291f5e5803162f18846072b6b56dc6c215efc0bee97c56936327a9"
+      },
+      "unsupported_source_connections": []
+    },
+    "chemistry_packet": "/media/PM982/onestepfold/fresh_contact_source_v1_20260930/chemistry/845b7151e1cd70ab51a196d726ba16bb58387812a09406e969421606d05926ba",
+    "group_id": "845b7151e1cd70ab51a196d726ba16bb58387812a09406e969421606d05926ba",
+    "passed": true,
+    "pdb_id": "1u07",
+    "source": "/media/PM982/onestepfold/fresh_contact_source_v1_20260930/data/examples/845b7151e1cd70ab51a196d726ba16bb58387812a09406e969421606d05926ba"
+  },
+  {
+    "chemistry": {
+      "atom_count": 1511,
+      "cif_sha256": "dc8dcd02a144863c7dc918f7bc0dc905daeb6829052d95f3249e8ed2a1ced356",
+      "files": {
+        "mapping.npz": "3860973f5bfcd9eee52955d307a2d86bca4db58415d27982a25b0e99a84937b1",
+        "native.pt": "265e4db84a021de3c21f4ef009d3ee43cee5fcb5ea2a4846a10856ec77e856a3",
+        "variants.json": "4f5725a3c9afd33681b5ccd3a8274af24683696fb4b107ca61092de33354e4f8"
+      },
+      "group_id": "3c36e22728603beeb569b9513547339cd551311eee9cb4499fbe5a4459257794",
+      "length": 189,
+      "observed_atoms": 1510,
+      "passed": true,
+      "pdb_id": "4luk",
+      "reference_replay_max_abs": 2.220446049250313e-15,
+      "source_hashes": {
+        "gt.json": "c25a011234e037586ba51142c8166741c157d78f7b6a81c32644f29851c9b986",
+        "gt.npz": "90eef3972bd8883d5b7d55d83d5da9d76ff7cee4f7af0f54f2d9e9ba3e0fdd00",
+        "input_provenance.json": "680b2e9ca6ce86fb19f584403e08bda2d9b7b2bf2d5484a659da6d722778b821",
+        "prepared.json": "63a51c51b326fa62de8476dd9e6d0e24e6f03d5185543f3229f9a2649ac669ee"
+      },
+      "unsupported_source_connections": []
+    },
+    "error": "Traceback (most recent call last):\n  File \"/media/PM982/onestepfold/fresh_contact_source_v1_20260930/code/scripts/prepare_fresh_contact_panel.py\", line 45, in qualify_fresh_contact_source\n    assert mapped['mask'].all(), 'incomplete native heavy-atom GT'\n           ^^^^^^^^^^^^^^^^^^^^\nAssertionError: incomplete native heavy-atom GT\n",
+    "group_id": "3c36e22728603beeb569b9513547339cd551311eee9cb4499fbe5a4459257794",
+    "passed": false,
+    "pdb_id": "4luk"
+  },
+  {
+    "chemistry": {
+      "atom_count": 1302,
+      "cif_sha256": "0855075a7448557e5a857d1cdb37d0a40a378bb6e59ea5d10ed0ef5d0a0545ed",
+      "files": {
+        "mapping.npz": "4fb11927240d8d0b07ca6f9ed65067bf3c1107fe0062660cf895d84f86f1613c",
+        "native.pt": "fbad81414961d7d489192074b6793634fc0e7c2ffe262faabec9dc29109e9110",
+        "variants.json": "1fb2408605ed32f327a2d679bfe8182732ccc79b109e1cf23473729aa7213c83"
+      },
+      "group_id": "69dfefac60e9099de522fc50590aff21c4680419fe4269ad80bb17ae28c50742",
+      "length": 168,
+      "observed_atoms": 1297,
+      "passed": true,
+      "pdb_id": "7bx9",
+      "reference_replay_max_abs": 2.220446049250313e-15,
+      "source_hashes": {
+        "gt.json": "7db508f6250623f1ba27c4f98afcaaf159df9764f6260019836bca98f19578df",
+        "gt.npz": "29237c57db440aea7ef8493a96febd9f547e262bee9ba7d3db6225d59b777b33",
+        "input_provenance.json": "65cc2a5811979a01ea6df7de6e8307c78db0ff8629dce4c13a4157fccfac9906",
+        "prepared.json": "4e7b7c457ab9357c3cd8a7f083ae37ecb1ecbe213e3fa9764e0d097b7e89b04b"
+      },
+      "unsupported_source_connections": []
+    },
+    "error": "Traceback (most recent call last):\n  File \"/media/PM982/onestepfold/fresh_contact_source_v1_20260930/code/scripts/prepare_fresh_contact_panel.py\", line 45, in qualify_fresh_contact_source\n    assert mapped['mask'].all(), 'incomplete native heavy-atom GT'\n           ^^^^^^^^^^^^^^^^^^^^\nAssertionError: incomplete native heavy-atom GT\n",
+    "group_id": "69dfefac60e9099de522fc50590aff21c4680419fe4269ad80bb17ae28c50742",
+    "passed": false,
+    "pdb_id": "7bx9"
+  }
+]

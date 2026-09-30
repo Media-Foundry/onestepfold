@@ -1,3 +1,53 @@
+## 2026-09-30 — Fresh contact confirmation sources and C4/S1 raw predictions complete
+
+Previous user-question turn was PROGRESS: actual code/calibration review established
+legacy joint gate mixes pilot chemistry, strict checked stereocentres, raw RMS and
+chainwise maximum ideal connections; both experimental32 halves rejected all chains.
+Preserve legacy results, stop interpreting0/N alone as method rejection. Do not
+substitute fittedq99 as chemical acceptance. New protocol retains same bounded
+AA/CA positive means+safety nondecrease screen and separate chemistry/GT/cost outputs.
+
+This turn froze docs/mini_fresh_contact_confirmation_v1.md BEFORE predictions.
+Source extension pool remainder:24 source/backbone-qualified, excludes historical
+21070 refs,reserved32/localfit8,and all64 connection calibration/heldout by original
+HSP+PDB/accession. Reused SHA order, no GT residual/model/repair selection.
+CPU native/fullheavyGT preflight24:9pass,10missingheavyGT,5unsupportedsourcecovalence;
+first8selected,9thunused. All homooligomer chains,highresolution1.3–1.5A,length67–309:
+2Z0J237,6YEX309,2B0A186,4YL1148,1T6U117,2R6Q138,1FR367,1OCY198.
+No longchain/monomer/pretrainingisolation claim;selectionbiasedbycompleteGT/chemistry.
+Source GT rematerialization arrays/meta exact; all nativeheavyobserved/mappingfinite;
+chemicalreference replaypasses. Independent parser audited14416HSPs andallselected
+identities,masks,GTmapping,hashes. Source17.45s4CPUprocessesexit0.
+Source remote fresh_contact_source_v1_20260930;214member2,765,976bytearchive SHAverified.
+
+Raw reuses audited raw_c4_confirmation function,process-localSEEDS fromlock400009/
+400031;FP32MiniESM/ESM2-3B,C4/S1,K1,noMCdropout,identityaug/noise,gamma0=0,lambda=1,
+eta=1. First launch fresh_contact_predictions_v1_20260930 lackedPROTENIX_ROOT_DIR;
+8workers began redundantHOMEcheckpointdownloads. Terminatedspecific8PIDs;pipeline
+terminal[0,1],0predictions,attemptpreserved. Fixed wrapper asserts runtimeROOTbefore
+native imports; new v1_1root,weights rehashed. Source HOMECCD vsruntimeCCD2files SHA
+identical (not same inode),audit retained;no source replacement needed.
+Runtime v1_1 PID251400 terminal[0,0]85.115s,all8GCDworkers exited.16rawcoordinates
+and8bitwise replays verified;perproteinPF4/diffusion3,schedule[2560,0],nativeFP32,
+noGTinmodel,atomidentity/configload_checkpoint_dir/source/weights audited.
+Raw41member287,075bytearchive everyhash verified. Reports
+reports/mini_fresh_contact_confirmation_2026-09-30;doc mini_fresh_contact_preparation_2026-09-30.md.
+No solver/quality scores onfreshpanel yet. No live jobsremain.
+
+NEXT: run32 matched fresh solves (8x2noisesx2arms) frozenwholeidealZERO/calibrated
+vs+rawcontact,3x60LBFGS;botharmsnew, no old7control reuse. Existingwindowdriver assumes
+contact zero uses archivedbaseline, audit/report hardcodeoldseeds and7supported;
+MUST adaptexplicit freshcontract beforeuse,keep old behavior and shadowaudits. Graph
+impact run_window_case/report_connection_window_trial LOW directdispatchonly;
+NO EDITS totheseexistingfunctions yet. Existingnewraw/source scripts committed thisturn.
+Need newsolver runtime lock/preflightmatchingchartsandobjectives,NumPyauditall32,
+16paired inputs,reportGTmeans/tails/chemistryconnectiondistributions/cost independently.
+Use source fresh_contact_predictions_v1_1_20260930/source (data/g/native_seed.npy,
+inventory.npz,GTlinks;chemistrylinks), notsourceprepdata/examplespath.
+Originalcalibration/templates fromraw_contact_v1_20260930 lockunchanged.
+Do not retune onthispanel,no32/noMini training,noqualityclaimfromrawcompletion.
+Full differentiableone-stepchemicallyvaliddesigngoal ACTIVE/unfulfilled. No newFDdebug.
+
 ## 2026-09-30 — Raw-only contact preservation passes bounded development screen
 
 Previousafa79dc7 read-only attribution was PROGRESS: located rawanchor/objective
