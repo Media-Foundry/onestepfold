@@ -1,0 +1,46 @@
+{
+  "chain_max_abs": 3.6899336919304915e-09,
+  "complete": true,
+  "gp_norm": 0.4625151753425598,
+  "gq_norm": 3.090231621172279e-05,
+  "gradient_nfe": 1,
+  "gradient_seconds": 18.030488574004266,
+  "gradient_sha256": "cf040eb6881ff589269bdad04b45c09c569558b77dc086915e97757e9de565c5",
+  "lock_sha256": "fe34e1759316e639e3cb4208dd889745296fc660f491d21bc447e908fe293708",
+  "mode": "propose",
+  "objective": {
+    "geometry": {
+      "atom_count": 1180,
+      "bond_rmse": 0.11562950164079666,
+      "chirality_fraction": 1.0,
+      "max_penetration": 1.1291030645370483,
+      "peptide_mae": 0.058955248445272446,
+      "severe_pairs": 0,
+      "severe_pairs_per_atom": 0.0
+    },
+    "geometry_terms": {
+      "bond": 0.014476234093308449,
+      "chirality": 0.0,
+      "clash": 0.0,
+      "peptide": 0.005872014909982681
+    },
+    "task": -0.04037236181801994,
+    "task_components": {
+      "chain": 0.010848052274945395,
+      "clash": 0.0,
+      "contact": 0.04145716704551448
+    },
+    "total": -0.014152097904746128
+  },
+  "peak_memory_bytes": 14269196288,
+  "positions": {
+    "gradient": 135,
+    "random": 85
+  },
+  "proposal_sha256": "f8cba6a72b3fcf934f851c776105288aa9ffa6e50007f65104b642aa826b70ff",
+  "records": [],
+  "seconds": 67.19990580200101,
+  "stage": "complete",
+  "unique_sequences": 39,
+  "worker": 3
+}

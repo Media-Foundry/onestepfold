@@ -1,0 +1,46 @@
+{
+  "chain_max_abs": 4.296595079722465e-09,
+  "complete": true,
+  "gp_norm": 0.46842581033706665,
+  "gq_norm": 3.4663782571442425e-05,
+  "gradient_nfe": 1,
+  "gradient_seconds": 17.04967343399767,
+  "gradient_sha256": "0485aab22d5864fd267270b2a285e1bdfea3e327c4161e7c29808b85f15d2a5a",
+  "lock_sha256": "fe34e1759316e639e3cb4208dd889745296fc660f491d21bc447e908fe293708",
+  "mode": "propose",
+  "objective": {
+    "geometry": {
+      "atom_count": 805,
+      "bond_rmse": 0.1228422224521637,
+      "chirality_fraction": 1.0,
+      "max_penetration": 1.2725694179534912,
+      "peptide_mae": 0.050846729427576065,
+      "severe_pairs": 0,
+      "severe_pairs_per_atom": 0.0
+    },
+    "geometry_terms": {
+      "bond": 0.016617795452475548,
+      "chirality": 0.0,
+      "clash": 0.0,
+      "peptide": 0.004045779816806316
+    },
+    "task": -0.07585371096754286,
+    "task_components": {
+      "chain": 0.00502076668399468,
+      "clash": 0.0,
+      "contact": 0.07635578763594232
+    },
+    "total": -0.051144355881454676
+  },
+  "peak_memory_bytes": 13144369664,
+  "positions": {
+    "gradient": 30,
+    "random": 30
+  },
+  "proposal_sha256": "0d575745d6e89e4a992f8724ad41b5e3d448576eba2646fc0e3ffea311e33188",
+  "records": [],
+  "seconds": 71.30447786100558,
+  "stage": "complete",
+  "unique_sequences": 20,
+  "worker": 1
+}

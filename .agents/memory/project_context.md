@@ -1,3 +1,71 @@
+## 2026-09-30 — Frozen learned S1 hard-position pilot completed; prospective selection 0/4
+
+Previous0d3d5e8b was PROGRESS: fresh32 forward confirmation completed/pushed.
+This turn locked and completed bounded hard-position utility on OLDTRAIN only.
+OverallgoalACTIVE/UNFULFILLED; no deployment or binder success, no current jobs.
+No fresh32 reuse, no model training/relaxation/threshold sweep, no Y38 expansion.
+
+Protocol docs/mini_position_utility_v1.md, fourTRAIN parents80–160 by fixedSHAorder,
+no chemistry/qualityfilter:2FIP115,1BFT101,1QSM152,5CPG155. Full512 samecheckpoint
+7fc01820269b6f376f8313b79c4ab2bf8fcfd2a0b2a017a432033a51b73fd829.
+LiveESM2/ERC/4cycles,FP32native reverse,S1,noMCdropout/churn. Nearhardalpha.001,
+one probabilitygradient perparent. Position=min alternative gp difference;
+all19real substitutions atchosenposition vsuniformrandomposition,allowoverlap.
+Positionsgradient/random: Y16/G84,K31/K31,Y135/Q26,M136/T86 (one-based).
+1BFTnaturallyoverlaps;no redraw. 76candidateidentitiesperarm,133uniquemutants+
+4parents=137sequences×3noise=411outputs. Proposal800011,confirm800029/800053.
+NativehardESM/chemistry/inventory/C4rebuilt EVERYsequence,identitynoisecommons.
+Originaloldmonomercontact+geometryobjective retained explicitly(legacyrefbonds,
+notcalibratedchemicaltruth);no mutantGT invented. Evaluationlayers separate.
+
+DiamondHill /media/PM982/onestepfold/position_utility_v1_20260930 ORIGINAL
+controller321019,proposals321029–32 terminal,77.07s.2FIP/1QSM failedmanualFP32
+softmaxchain allclose;allgp/gqfinite,1BFT/5CPGpass. NOhard inference released.
+Nevereditoriginalfrozenroot. Retryengineeringprotocolmini_position_utility_chain_audit_v1:
+ /media/PM982/onestepfold/position_utility_chain_v1_20260930
+controller322229,proposals322241–44,eval322655–62 allterminal0/procabsent.
+Exactreconstructedp;freshlocalsoftmaxVJP(gp) equalsfullgq4/4. Oldmanualcheck
+still2/4fail,FP32maxerrors1.63e−8/4.30e−9/1.08e−8/3.69e−9;
+FP64algebrarelL2 .0073%–.0213%. Variable-routing check ONLY,notindependent
+fullpathADcertification. Originalsuccess2cases q/p/gp/gq/X/candidates replayEXACT.
+Retryproposal74.33s,eval8GCD113.22s,controller189.22s. Actualgradient16.7–18.2s
+perparent,12.24–13.29GiB. Count8inputgradientsinclinitialbatch+411hardNFEs.
+
+CONFIRM endpoints gradient/random(76each): taskimprove22/21;
+task+legacy-nonregression3/3;task+zero severe+strictcheckedCA/IT1/0;
+oldhard_accept1/0. Equalparentmean taskdelta−.01063324/−.00549246.
+Thismean drivenby2FIP:gradient−.0429093/random−.0211486 butsevere ranges30–261/
+2–191vsparent38/40. Nojointutilitythere. Other3mean posthoc+.00012545/−.00027375,
+notnewdenominator. Goodparents1BFT/5CPGzero severe/strictatallnoisesbutneithergroup
+hasanymutantwithbothconfirmtaskgain>1e−4.
+
+Onlyjointcase1QSM Y135I:confirmtask−.00182838/−.00469365,zero severe,strictall,
+penetration1.58365/1.62605,oldhard_acceptpassboth. BUTproposalnoiseCAwrong1,
+soineligibleunderprelockedsearchselection. Cannotretroselectfromconfirmation.
+Prelockedruleminproposalhardtotal amongtaskgain+zero severe+strict:
+select2/4parentsperarm,confirmed0/4BOTHarms.
+1BFTsameK31G:oneconfirmlossincreases;5CPGgradientM136Wfailsboth,
+randomT86Himprovesonlyone. Noallthree-noisejointcandidatefound.
+Legacyhard_accept != oldjointconnection/displacementcheck;neitherisdeployment.
+
+IndependentCPU411coords (137sequences) sparsecovalentexclusion/determinantstereo
+matchesallsevere/chiralitycounts;FP64contactmaxerror2.65e−8,
+penetrationmax2.49e−7Å. Initialsourcepreflight4parentchemcounts matchedprior
+scores,referencepenetration<1e−7difference from FP32radii;notthresholdchange.
+10focusedtestspass inclTHRflipnotmissedwhenCAallpass. LocalaggregateEXACT.
+974archivemembershashverified;8executedsource/protocolparitychecks. AllPIDsabsent.
+Artifacts reports/mini_position_utility_2026-09-30 inclfullcoords/topologies/gradients.
+Findings docs/mini_position_utility_findings_2026-09-30.md;overallreportfrontupdated.
+Unrelatedworktree changes preserved;stageonlyownfiles+journalentries.
+
+Decision:closefourparents,retainY135Ilimitedregressioncase;notclaimgradientpositions
+outperformrandom or modelinvalid. Forwardconfirmedmeanbenefitstillstands. Current
+oldmonomerproxy+single-noiseproposal/selection hasno demonstrated robusthardsearch
+success. Nextmethoddecisionmustaddress task/selection noise consistency and genuine
+chemicalfailures,notmorecandidateshere/backwarddebugging. No nextprotocol locked,
+no unseen-independentdata claimed. Main accurate/chemical/differentiableC4S1design
+oracle remains incomplete. Needinspectactualstate and chooseevidence-basednextaction.
+
 ## 2026-09-30 — Frozen full diffusion: fresh32 confirmation completed, average AA gain confirmed
 
 Previous5a97fcec was PROGRESS (fullTRAIN scope comparison and frozen candidate).

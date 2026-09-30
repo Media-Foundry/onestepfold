@@ -1,0 +1,54 @@
+{
+  "chain_audit": {
+    "legacy_manual_allclose": false,
+    "local_softmax_vjp_exact": true,
+    "local_softmax_vjp_max_abs": 0.0,
+    "manual_fp32_max_abs": 1.629086909815669e-08,
+    "manual_fp64_max_abs": 1.0798618308312615e-08,
+    "manual_fp64_relative_l2": 0.00021267101366060238
+  },
+  "chain_max_abs": 1.629086909815669e-08,
+  "complete": true,
+  "gp_norm": 1.87073814868927,
+  "gq_norm": 0.00011924991849809885,
+  "gradient_nfe": 1,
+  "gradient_seconds": 17.14319728699047,
+  "gradient_sha256": "e782ac29b2a6728e437cd629ad0e9d402db6f16ff68ee7406ea5a75f1d51f008",
+  "lock_sha256": "2a54f468e2f4365468146c0552dea29f662d7f09351999ba9cc6104c5702c40d",
+  "mode": "propose",
+  "objective": {
+    "geometry": {
+      "atom_count": 981,
+      "bond_rmse": 0.2803933322429657,
+      "chirality_fraction": 0.9819819819819819,
+      "max_penetration": 2.921518325805664,
+      "peptide_mae": 0.19113609194755554,
+      "severe_pairs": 49,
+      "severe_pairs_per_atom": 0.04994903160040775
+    },
+    "geometry_terms": {
+      "bond": 0.07910862565040588,
+      "chirality": 0.0016287820180878043,
+      "clash": 0.07998979091644287,
+      "peptide": 0.07478750497102737
+    },
+    "task": -0.052907104489048964,
+    "task_components": {
+      "chain": 0.2605598602785265,
+      "clash": 0.000738234764540201,
+      "contact": 0.07970132528144182
+    },
+    "total": 0.2560920784292929
+  },
+  "peak_memory_bytes": 13414028800,
+  "positions": {
+    "gradient": 15,
+    "random": 83
+  },
+  "proposal_sha256": "ce17620626c22ed524347c95bb65c7114da8b81f72313fb2eb4dc4b7931c150a",
+  "records": [],
+  "seconds": 65.70547482802067,
+  "stage": "complete",
+  "unique_sequences": 39,
+  "worker": 0
+}
