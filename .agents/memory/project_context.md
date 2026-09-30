@@ -1,3 +1,27 @@
+## 2026-09-30 — Seven-model evaluation implemented while HPC3 access remains restricted
+
+Previous goalturn PROGRESS: training implementation4ce2f169 pushed. This turn PROGRESS:
+new folding_parameter_evaluation module + evaluate_folding_global_parameter driver,
+14 tests pass (real455 membership, six-model reuse, rejection of denominator/noise drift,
+synthetic seventh-model identity statistics, terminal64 replay and score release guards).
+Original runner/scorer/extent modules unchanged. New910+32engineering NFE; all6370
+outputs, primarycandidate-global_distance ANDcandidate-expanded, no noise/modelselection.
+Hard GT quality/globalextent/geometry/tails separate; observedDEV32 remains development.
+
+Remote folding_global_parameter_evaluation_v1_20260930/code staged from oldglobal
+reference snapshot;189 oldsourcefilesexact,4newfilesmatchlocal. readiness.json is NOT
+scientificlock or checkpoint evidence. No newjobs/lock/terminal/predictions. Training
+stillblocked by acd_u AllowGroups=admin vsuserformal,verifiedagainthisturn; sameblocker
+secondgoalturn,notyetimpasse becauseevaluationimplementationcompleted. Noacd_ue/bypass.
+Newprotocol docs/mini_folding_global_parameter_evaluation_v1.md;executionorderprepare,
+8workers,collect+score(with64exactterminalreplay),extent,report. Collectors requireactual
+Slurm IDs. Script ready, no evaluationjobsubmitteryet; inspectexistingjobsbeforeretry.
+
+GitNexus newhelperimpactUNKNOWN; rg confirmsnewdriver/tests callers. Do notinferunused.
+Index refreshed;fullnonpartialchangescheckbeforecommit. Preserve unrelatedworktreeedits.
+Goalactive; next meaningful work: resume singletraining afterpartitionaccessrestored,
+then execute frozen evaluation. No reason to expand methods while awaiting this result.
+
 ## 2026-09-30 — Stronger global coefficient implemented; scheduler access prevents launch
 
 Implemented isolated global_parameter_training contract and train_folding_global_parameter
