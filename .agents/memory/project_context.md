@@ -1,3 +1,38 @@
+## 2026-09-30 — Fixed-terminal human-readable report queued
+
+Previous goal turn PROGRESS: complete455 ESMC feature preparation accepted. This
+turn PROGRESS: terminal reporting implemented/tested/deployed as separate stage.
+Main goal remains active and unfinished; no new method/encoder/training budget.
+ESMC branch stays feature-only until the current folding comparison is reviewed.
+
+HPC3 training662290/662291 authoritatively RUNNING at48m27/48m15; downstream
+audit662294/evaluation662313–662322 pending. Last recorded counters1044/766;
+TRAIN1281024 probe AA.808697454,CA.888008539,severe209,zero+strict52/64, compared
+start.804772891/.885653254,severe394,joint41/64. This is TRAIN-only worker scoring,
+not a new independent validation result. Do not select1024checkpoint or alterbudget.
+
+New reporting root /data/user/shuang886/Folding/folding_scale_reporting_v1_20260930.
+Job662360 afterok:662322,kill-on-invalid-dep,no-requeue,acd_u1hiddenunusedGPU,
+1CPU24GB20m cap. Small isolated package avoids optional structure imports. Private
+code SHA check before execution. Frozen training/evaluation roots unmodified.
+It verifies completedscorejob,input hashlinkage,completeflags,4550outputs and
+cohort denominators, then writes result/report.md,paired.csv,provenance.json.
+NewVAL first; original128/added295 separately. AA/CAmean,pairedCI/P01/P05/worst5,
+severe losscounts,newcollision/stereodamage,descriptive strata,TRAIN32curves,cost.
+No automaticpromotion or deployment/binding claim; cached diffusion timing not
+live ESM/PF latency. No plot dependency installed intoactivefold environment.
+Two focused rendering/cohort tests pass: preserve adversegeometry,CIcrosszero,
+noise/protein denominators,reject incomplete/missingoutput/cohortcounts. Syntax
+and deployedlauncher checked. No actualterminal report yet becausejobs pending.
+
+Files: scripts/report_folding_scale.py,src/fastglycan/folding_report.py,
+tests/test_folding_report.py; docs trainingstatus updated, submission/launcher/hash
+archived reports/mini_folding_evaluation_2026-09-30/reporting. Newfunction impacts
+UNKNOWN with literal absenceconfirmed; graphchangeanalysis requiredbeforebackup.
+Next: collect training/audit/evaluation and renderedreport, inspect fullTRAIN
+cohorts versus freshVAL before selecting the next bounded improvement. Do not
+reopen design/backward/repair branches or fitESMC before that decision.
+
 ## 2026-09-30 — ESMC features prepared without changing active folding trial
 
 Previous goal turn was PROGRESS: first fixed TRAIN128 probe verified/archived.

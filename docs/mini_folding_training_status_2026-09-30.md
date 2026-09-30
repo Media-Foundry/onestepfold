@@ -43,6 +43,7 @@ These counters do not establish quality improvement.
 |662314|first of eight evaluation shards|prepare662313|
 |662315–662321|remaining seven evaluation shards|first shard662314|
 |662322|scheduler/coverage audit, GT scoring and cohort summaries|all eight shards|
+|662360|Markdown report and full paired-quality CSV|completed scoring662322|
 
 All evaluation jobs are currently dependency-pending, not completed predictions.
 Any failed dependency cancels downstream work. GPU workers use one H100 allocation
@@ -67,6 +68,19 @@ Protocol: [fixed terminal evaluation](mini_folding_terminal_evaluation_v1.md).
 Remote: `/data/user/shuang886/Folding/folding_scale_evaluation_v1_20260930`.
 Submission, scheduler observation, deployed hashes and launcher:
 `reports/mini_folding_evaluation_2026-09-30/`.
+
+The final rendering job uses a separate code root and leaves all frozen scientific
+code/locks unchanged. It checks score-job COMPLETED0:0, input hash linkage and
+planned denominators before writing. Validation appears first, with AA/Cα paired
+intervals, P01/P05/worst5% differences, severe quality losses and newly introduced
+geometry damage; original and added TRAIN follow separately. Common-TRAIN32 curves
+are clearly identified as training curves. Cost excludes live ESM/Pairformer and
+is not an end-to-end folding latency claim. No model is automatically promoted.
+Two focused cohort/rendering tests pass, including adverse geometry and an interval
+crossing zero. Root: `/data/user/shuang886/Folding/folding_scale_reporting_v1_20260930`.
+Output will be `result/report.md`, `paired.csv`, and `provenance.json`; none exists
+yet while its dependency is pending. No Matplotlib dependency was added to the
+active folding environment.
 
 ## Cache audit completed
 
