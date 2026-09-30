@@ -1,3 +1,34 @@
+## 2026-09-30 — Alternate source records remain for failed representatives
+
+Previous goal turn PROGRESS(1024TRAINprobe andglobalRMSDreport). Currentturn
+revalidatedtraining662470live; frozenablation/evaluation unchanged. Performed
+boundedread-onlysourceinventory whilewaiting. Job662496COMPLETED0:0 in6s onacd_u,
+8CPUworkers,GPUhidden(no model). No newGT/nativepreflight/BLAST/panel/predictions.
+
+Graph-firstsourceinspection found currentpipeline selectsonebestresolutionrecord
+perexactsequence beforequalifying; remainder excludeswholeoldpoolgroups. Thus
+representative exhaustion is not all alternate-record exhaustion. Same frozen256
+cataloghashes andunchangedscan_adapter_sources:26268admittedmetadatarecords.
+Oldexpansion783+remainder66=849attemptedgroups;438failedrepresentatives,84passed
+butunselected(new_train_conflict). Failuregroups have242otherPDB/source-chain
+records across118groups; dedupassemblyaliases thenexcludeallknownPDB/accessions
+inclcurrent455 leaves234records/113groups. Length50-255:79groups;256-511:31;
+512-1024:3. TheseareNOTqualifiedorindependentproteins. NeednewcompleteHSPisolation
+againstcurrent455+historicalreferences andunchangednative/GTpreflight first.
+
+Newscriptinventory_folding_source_variants.py; protocolmini_folding_source_variant_
+inventory_v1.md; findingsdocsameprefix; reports/mini_folding_source_variant_inventory_
+2026-09-30 storeslosslessinventorygzip,scheduler/codehashes,localacceptance,batch.
+Remote folding_unseen_source_inventory_v1_20260930. Sourceinputsrehashedafterrun;
+localinventorySHA/script/scannerSHA/sequences/counts/uniquenessverified. No masks,
+thresholds, source-scanner rules, activecode ortraining data changed. Scope isone
+metadata-completechainperassembly fromexistingscanner,notallpossiblechains.
+
+NEXT: preserve fixedterminalablation andevaluatewhenready. Source-onlyfollow-up
+canlockalternate-recordvisitorder, rechecksequenceisolation andqualifyagainst
+existingrules beforefreezinganynewconfirmationpanel. Do notclaim113freshproteins
+oruse84knownconflictsasindependent. Do notpromotefromTRAINprobes. Goalactive.
+
 ## 2026-09-30 — Matched1024 TRAIN32 retains local/global tradeoff
 
 Currentturn PROGRESS: fixed1024probe completed, verified192coordinatehashes and
