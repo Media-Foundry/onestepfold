@@ -1,3 +1,70 @@
+## 2026-09-30 — Fresh8 paired repair completed: small quality gain, real geometry failures remain
+
+Previous f471a100 was PROGRESS: fresh8sources+16C4/S1raw predictions verified. This
+turn ran32NEW jointsolves8x2noisex2arms, no oldcontrol reuse. Root
+/media/PM982/onestepfold/fresh_contact_solves_v1_20260930; PID254124 pipeline all7
+returncodes0,871.257s,controller254506finished/allprocessesterminal.2CPUFP64workers
+singlethread,no newGPU/training/ind32/Y38/parameter tuning. All method code/templates/
+calibration identical to30301dd6; explicitfreshcontract onlychangesexecution/control
+reuse and newseeds400009/400031.16startsbitwiseequal,baseobjective/hash/preflight32
+matches. Existingdriver/audit/reportsmallfreshbranch; GitNexus pre-editLOW direct
+entrycallers, newhelpersUNKNOWN resolvednewnames/sourceread.5existingfocusedtestsPASS.
+Oldraw-contact28outputshadowaudit and14summaryfields numeric/classification identical.
+
+Fresh confirmation screen PASS:AA .774637909790 -> .775457250964,delta+.000819341173;
+CA .845514690177 -> .845723424746,delta+.000208734569. AA8/8proteinmeans15/16pred;
+CA3/8means8/16pred. FiveproteinCAmeansnegative;largestpositive2B0A+ .001181202,
+1FR3+.000945686. SoleAAnegative2B0A400031 -.000289683;worstCA -.000478292.
+RawAA .778863399913,remainingcandidate-raw -.003406148950,only4/16betterthanraw;
+rawCA .838381339190,so repairCAmeanimproves. Do notcompareacrossold7/new8 aslearningcurve.
+Botharms:zero-severe+strictcheckedCA/ITchirality+rawRMS14/16 SAMEtargetidentity,
+strictchirality16/16,basicabsolute13/16,legacyjoint0/16connectiongatesfail.
+Rawsevere773/rawzero4/rawstrictchirality9;zero-finalsevere418/contact393(allremaining
+in2B0A). Maxpenetration2.522514->2.560349;maxatom24.752191->24.755717A.
+CArawRMSmeans .418413->.414112,heavy .883385->.867487.
+
+2B0A BOTHnoisesrealgeometry/RMSFAIL, notjustoldwindowissue.400009rawAA.500971/CA.550419,
+rawbondRMSE1.1478,chirality.8538,severe139 -> candidate4,heavyRMS2.36947/CA1.04308.
+400031rawAA.415650/CA.436508,bondRMSE.85536,chirality.76023,severe466 ->389,
+109remainingBB-BB pairs,heavy2.57331/CA1.04504. Firstnoise maxatomres1O(backbone)
+24.7557A already24.6004A atlocalstart;secondmaxres1OE1 20.8183,backbone7.8701A.
+1OCY400009zero severe butmaxpen2.005217 failsoldabsolute,CE1res116-Nres147d1.244783.
+Do notwaivemarginalfailure. Newcarbonyl max1.994814 vsbaseline.676290 at2B0A400031;
+notordinarymildwindowexceedance. Allresidualvectors/quantiles/worstpairs stored.
+
+Raw-selectedcontactMAE .437059323 -> .426736926;cost .412916500 -> .400807876,
+both15/16improve. CommonNEWobjective12/16lower butmean1011.955385 ->1363.309123
+WORSE, dominated2B0A:4000093022.4206->3182.9380(contactitselfworse),40003113060.9009
+->18495.7029(othertermsworse);both1OCYalsohigher. No universaloptimizationclaim.
+Sameobjectivemeans inobjective_comparison.json;not mixingdifferentlosses.
+
+Solvermean40.71798->45.40896s(+11.52%),fullcase41.76970->49.17919s;maxRSS1.14/1.56GiB.
+Budget3x60 unchanged;actual174–180:case11contact174,18zero177,27contact176,others180;
+closures187–244. Collectscriptinitiallyassumedall180 andasserted;correctedreporting
+onlyto<=180,NO solver rerun/newbudget. Notconvergenceclaim (evalcaps/stoppingrules).
+32pose/GTmetrics/chemistry/reference/objectiveaudits16pairsPASS;maxpose2.459e-10A,
+metric8.88e-16,baseobjective3.638e-12,idealbond5.833e-13. Fullfreshgeometrydescriptions
+pluscommonobjectiveanalysis,localindependentsummaryarithmetic validated.
+Archive216members55,668,355bytes allmember/SHAverified,runtimecode matcheslocal.
+Reports mini_fresh_contact_confirmation_2026-09-30/solves;docs
+mini_fresh_contact_findings_2026-09-30.md. Sourcepreparationdoclinksnewresult.
+
+DECISION: retain frozen raw-contact smallcrossprotein qualitybenefit,STOPthis8panel
+tuning. LimitedconfirmPASS isNOTgeometryreliability/deployment/clean-teacherapproval.
+Realbad2B0Ainputs/someworseendpoints aren'texplainedawaybyoverstrictlegacygates.
+NEXT boundeddiagnostic: matched controlledS1/S2/S5rawforward for2B0A failure and
+preselectednormalcontrol2Z0J(firstsourcepanelrow), same2noiseidentities400009/400031,
+S1exactreplayagainstarchive. Freezeprotocol BEFOREnewoutputs; no solverretuning,
+noLoRA/noMini training, no freshgeneralization/prevalenceclaim onthisselectedfailure
+panel. Question:do extra denoisingcalls fixrawgeometry/quality, ordoesproblemremain?
+May start RAWONLY first, no automatic64extrarepairgrid. Inspectdiffusionpaththrough
+GitNexus beforeadapting. Existingfunctionraw_c4_confirmation hardcodessteps1/count3;
+newwrapperpreviousSEEDS only, don'tpretendsettingrunnerstepconfigchangesmanualcall.
+Preserve originaldeploymentC4/S1 goal, S2/S5diagnostic/teacherrefs only. Frozenfresh8
+resultsunchanged, original32untouched. Globalchemicallyvaliddifferentiableone-step
+designoraclegoalACTIVE/unfulfilled;currentprojectiondetachediterative,noinputgradient
+orhardmutationutilityestablished. No newFDdebugreason. All jobsendedthisturn.
+
 ## 2026-09-30 — Fresh contact confirmation sources and C4/S1 raw predictions complete
 
 Previous user-question turn was PROGRESS: actual code/calibration review established

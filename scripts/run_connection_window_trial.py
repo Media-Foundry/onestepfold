@@ -68,6 +68,9 @@ def run_window_case(root, index):
     fitted_trial = lock.get('initialization_contract') == 'calibrated_c4_fitted_start_v1'
     warm_trial = lock.get('initialization_contract') == 'calibrated_c4_sidechain_repulsion_start_v1'
     contact_trial = lock.get('objective_contract') == 'calibrated_c4_raw_contact_v1'
+    fresh_trial = lock.get('confirmation_contract') == 'fresh_contact_v1'
+    if fresh_trial:
+        assert contact_trial and lock['baseline'] is None and lock['seeds'] == [400009, 400031]
     if 'objective_contract' in lock:
         assert contact_trial and lock['arms'] == ['zero', 'contact'] and not fitted_trial and not warm_trial
     ideal_trial = contact_trial or warm_trial or lock.get('reference_contract') == 'calibrated_c4_ideal_reference_v1'
@@ -90,7 +93,7 @@ def run_window_case(root, index):
         chemistry = json.loads((packet / 'report.json').read_text())
         if not chemistry['passed']:
             result.update(not_run=True, source_failure=chemistry['error']); return
-        if ((fitted_trial or warm_trial or contact_trial) and arm == 'zero') or (reference_trial and arm == 'native_ref'):
+        if not fresh_trial and (((fitted_trial or warm_trial or contact_trial) and arm == 'zero') or (reference_trial and arm == 'native_ref')):
             previous = Path(lock['baseline']) / 'cases' / f'{index // 2 * 2 + 1:02d}'
             saved = json.loads((previous / 'report.json').read_text())
             assert saved['success'] and saved['arm'] == ('ideal_ref' if warm_trial or contact_trial else 'calibrated')
@@ -187,7 +190,7 @@ def run_window_case(root, index):
         base = TailObjective(*args)
         objective = base if not fitted_trial and not reference_trial and arm == 'original' else CalibratedConnectionObjective(
             *args, json.loads(Path(lock['calibration']).read_text()))
-        if contact_trial:
+        if contact_trial and arm == 'contact':
             assert arm == 'contact'
             result['calibrated_objective_sha256'] = buffer_digest(objective)
             objective = RawContactObjective(*args, json.loads(Path(lock['calibration']).read_text()), residues)
@@ -222,7 +225,7 @@ def run_window_case(root, index):
                       target=mapping['coordinates'].astype(np.float64))
         if reference_trial:
             arrays['output_reference'] = output_reference
-        if contact_trial:
+        if contact_trial and arm == 'contact':
             arrays.update(contact_pairs=objective.contacts.contact_pairs.numpy(),
                 contact_target=objective.contacts.contact_target.numpy(),contact_weights=objective.contacts.contact_weights.numpy())
         ca = names == 'CA'; bone = np.isin(names, ['N', 'CA', 'C', 'O'])
@@ -259,7 +262,7 @@ def run_window_case(root, index):
             a, _ = base(final, variables.variables, 100.)
             b, _ = CalibratedConnectionObjective(*args, json.loads(Path(lock['calibration']).read_text()))(final, variables.variables, 100.)
         result['final_cross_objectives'] = dict(original=float(a), calibrated=float(b))
-        if contact_trial:
+        if contact_trial and arm == 'contact':
             with torch.no_grad():
                 c, terms = objective(final, variables.variables, 100.)
             result['final_cross_objectives'].update(contact=float(c), raw_contact=float(terms['raw_contact']))

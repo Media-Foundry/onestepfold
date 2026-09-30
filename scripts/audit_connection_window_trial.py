@@ -23,6 +23,9 @@ def audit_connection_window_trial(root):
     fitted_trial = lock.get('initialization_contract') == 'calibrated_c4_fitted_start_v1'
     warm_trial = lock.get('initialization_contract') == 'calibrated_c4_sidechain_repulsion_start_v1'
     contact_trial = lock.get('objective_contract') == 'calibrated_c4_raw_contact_v1'
+    fresh_trial = lock.get('confirmation_contract') == 'fresh_contact_v1'
+    if fresh_trial:
+        assert contact_trial and lock['baseline'] is None and lock['seeds'] == [400009, 400031]
     if 'objective_contract' in lock:
         assert contact_trial and lock['arms'] == ['zero', 'contact'] and not fitted_trial and not warm_trial
     ideal_trial = contact_trial or warm_trial or lock.get('reference_contract') == 'calibrated_c4_ideal_reference_v1'
@@ -47,7 +50,7 @@ def audit_connection_window_trial(root):
             outcomes.append(dict(index=index, verified=False, source_skipped=not chemistry['passed'],
                                  reason=row.get('source_failure', row.get('error', 'unknown'))))
             continue
-        assert row['group_id'] == group and row['seed'] == [12345, 54321][(index // 2) % 2]
+        assert row['group_id'] == group and row['seed'] == lock['seeds'][(index // 2) % 2]
         assert row['arm'] == lock['arms'][index % 2]
         folder = root / 'cases' / f'{index:02d}'
         for file, key in [('coordinates.npz', 'coordinates_sha256'), ('values.pt', 'values_sha256')]:
@@ -247,6 +250,9 @@ def audit_connection_window_trial(root):
                 assert abs(cv-found) < 1e-10
             assert abs(row['final_cross_objectives']['contact']-row['final_cross_objectives']['calibrated']-cv) < 1e-8
             assert abs(row['history'][-1]['loss']-row['final_cross_objectives']['contact']) < 1e-8
+        if fresh_trial and row['arm'] == 'zero':
+            assert 'reused_control' not in row
+            assert abs(row['history'][-1]['loss']-row['final_cross_objectives']['calibrated']) < 1e-8
         assert metric_error < 1e-8
         outcomes.append(dict(index=index, verified=True, pose_max_abs=error, metric_max_abs=metric_error,
                              objective_max_abs=objective_error, reference_length_max_abs=reference_length_error))

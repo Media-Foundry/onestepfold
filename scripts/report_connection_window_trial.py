@@ -15,6 +15,7 @@ def report_connection_window_trial(root):
     assert audit['complete'] and audit['report_sha256'] == sha256(root / 'report.json')
     rows = {r['index']: r for r in report['rows']}
     lock = json.loads((root / 'lock.json').read_text())
+    fresh_trial = lock.get('confirmation_contract') == 'fresh_contact_v1'
     control, candidate_arm = lock['arms']
     assert [control, candidate_arm] in [['original', 'calibrated'], ['zero', 'fitted'], ['native_ref','length_ref'], ['native_ref','ideal_ref'], ['zero','sidechain'], ['zero','contact']]
     arms = {}
@@ -52,7 +53,7 @@ def report_connection_window_trial(root):
     pairs = []
     for i in range(0, 32, 2):
         old, new = rows[i], rows[i+1]
-        pair = dict(source_slot=i//4, seed=[12345, 54321][(i//2)%2], paired=old['success'] and new['success'])
+        pair = dict(source_slot=i//4, seed=lock['seeds'][(i//2)%2], paired=old['success'] and new['success'])
         if pair['paired']:
             x, y = old['metrics']['final'], new['metrics']['final']; raw = old['metrics']['raw']
             pair.update(group_id=old['group_id'], pdb_id=old['pdb_id'], raw_aa=raw['all_atom_lddt'], raw_ca=raw['ca_lddt'],
@@ -76,7 +77,8 @@ def report_connection_window_trial(root):
         proteins.append(protein)
     good = [p for p in proteins if p['complete']]
     da = float(np.mean([p['delta_aa'] for p in good])); dc = float(np.mean([p['delta_ca'] for p in good]))
-    complete = audit['verified'] == 28 and audit['paired'] == 14 and len(good) == 7
+    expected_proteins = 8 if fresh_trial else 7
+    complete = audit['verified'] == expected_proteins*4 and audit['paired'] == expected_proteins*2 and len(good) == expected_proteins
     candidate = complete and da > 0 and dc > 0 and (
         arms[candidate_arm]['stages']['final']['zero_severe_chirality_budget'] >=
         arms[control]['stages']['final']['zero_severe_chirality_budget'])
@@ -88,7 +90,9 @@ def report_connection_window_trial(root):
         reused_controls=sum('reused_control' in r for r in rows.values()),
         newly_computed_solves=sum(r['success'] and 'reused_control' not in r for r in rows.values()),
         comparison=dict(control=control, candidate=candidate_arm),
-        scope='seven supported development proteins; eight-source denominator retained; unchanged old acceptance')
+        legacy_joint_label='legacy geometry joint check, not a universal chemical standard',
+        scope=('eight fresh source proteins; full denominator; frozen confirmation screen; no chemistry certification'
+            if fresh_trial else 'seven supported development proteins; eight-source denominator retained; unchanged old acceptance'))
     write_json(root / 'summary.json', summary)
     for name, records in [('paired_proteins', proteins), ('paired_predictions', pairs)]:
         with (root / (name + '.csv')).open('w', newline='') as out:
