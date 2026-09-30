@@ -1,3 +1,32 @@
+## 2026-09-30 — Fixed-terminal global-distance evaluation submitted
+
+C4/S1 folding remains the active mainline. Training662548 remains RUNNING unchanged;
+21:36 Hong Kong observation362/2048updates,1450/8192exposures. No terminal quality
+claim. Implemented six-model fixed-terminal evaluation, reuse4550 hash-bound old
+coordinates, add910 candidate predictions plus32 engineering calls;5460 scores.
+Primary global_distance versus coordinate_zero AND expanded; retained/nativeS1/S2
+references preserved. TRAIN128,TRAIN295,observedDEV32 separate, no best-of-noise.
+
+HPC3 acd_u submitted:662557prepare afteraudit662549;662558worker0;
+662559–662565sevenworkers afterworker0;662566score afterall8;662567extent;
+662568report. All no-requeue/kill-invalid-dependency. Verified14schedulerrecords.
+Original182inheritedcodefiles identical; inference/scoring unchanged. Eight focused
+tests pass. Extent primary contrast configurable with legacydefault retained;
+new report includes GTfar-distanceMAE/signederror,fragment32,remaining95%,Rg ratio.
+No model calls for distance diagnostics. Source/hash/GT/identity checks fail closed.
+
+Protocol docs/mini_folding_global_distance_evaluation_v1.md frozen beforeterminal;
+launch archives reports/mini_folding_global_distance_evaluation_2026-09-30/launch.
+Three remote launchfiles hash-verified locally; scheduler/status retained. Query
+attempt with comma-list scontrol unsupported, corrected individual queries; initial
+history parse encountered blank lines, corrected blank-line filtering; neither
+observation issue touched running training. ESMC pairedfeatures ready but no fitting.
+
+NEXT: collect662548/662549 audit then662557–662568 outcomes; preserve failed jobs
+and complete denominators. Do not restart or changecheckpoint/budget based onpartial
+scores. Full goal remains unfulfilled; no automatic model promotion. Preserve all
+unrelated worktree/journal changes.
+
 ## 2026-09-30 — Global-distance candidate preflight passes; training live
 
 PreviousgoalturnPROGRESS(loss/calibrationcomplete). CurrentturnPROGRESS: added

@@ -55,6 +55,10 @@ def summarize_structure_extent(destination,workers):
     destination=Path(destination);manifest=json.loads((destination/'manifest.json').read_text())
     for path,digest in manifest['hashes'].items():assert extent_sha(path)==digest,path
     root=Path(manifest['evaluation_root']);lock=json.loads((root/'lock.json').read_text())
+    pair_candidate=manifest.get('diagnostic_candidate','coordinate_zero')
+    pair_reference=manifest.get('diagnostic_reference','expanded')
+    if pair_candidate not in lock['models'] or pair_reference not in lock['models'] or pair_candidate==pair_reference:
+        raise ValueError('invalid diagnostic model contrast')
     (destination/'cases').mkdir(exist_ok=False);start=time.monotonic()
     with ProcessPoolExecutor(max_workers=workers) as pool:results=list(pool.map(analyze_structure_extent_case,[(str(destination),r) for r in lock['rows']]))
     failures=[r for r in results if not r['complete']]
@@ -94,13 +98,14 @@ def summarize_structure_extent(destination,workers):
         for group in groups:
             concentration=[]
             for seed in sorted({s for _,s in lookup[group]}):
-                a=lookup[group]['coordinate_zero',seed];b=lookup[group]['expanded',seed]
+                a=lookup[group][pair_candidate,seed];b=lookup[group][pair_reference,seed]
                 positive=np.maximum(0,np.square(a['aligned_residual'])-np.square(b['aligned_residual']));total=positive.sum()
                 concentration.append(float(np.sort(positive)[-a['top5_count']:].sum()/total) if total>1e-20 else None)
             paired.append(dict(cohort=cohort,group_id=group,pdb_id=next(r['pdb_id'] for r in results if r['group_id']==group),
-                candidate=means[group,'coordinate_zero'],reference=means[group,'expanded'],positive_sse_increase_top5_fraction=concentration))
+                candidate=means[group,pair_candidate],reference=means[group,pair_reference],positive_sse_increase_top5_fraction=concentration))
     output=dict(complete=True,proteins=len(results),outputs=sum(len(r['records']) for r in results),summary=summary,paired=paired,
                 rmsd_replay_max=max(x['rmsd_replay_error'] for r in results for x in r['records']),seconds=time.monotonic()-start,
+                diagnostic_candidate=pair_candidate,diagnostic_reference=pair_reference,
                 manifest_sha256=extent_sha(destination/'manifest.json'),scope='posthoc existing-coordinate diagnostic; no new model calls or gate')
     (destination/'report.json').write_text(json.dumps(output,indent=2)+'\n')
     with gzip.open(destination/'cases.json.gz','wt') as f:json.dump(results,f,sort_keys=True)
