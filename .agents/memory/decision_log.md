@@ -1,3 +1,19 @@
+## 2026-09-30 — Stronger global coefficient implemented; scheduler access prevents launch
+
+Implemented isolated global_parameter_training contract and train_folding_global_parameter
+prepare/preflight/train/audit driver; 7 focused tests pass. Original trainer/hooks and
+completed global trial remain unchanged. Only coefficient .03290655679814053 →
+.1810138829332775; same TRAIN423, 8192 exposures/2048 updates, retained512 parent.
+Frozen code copied to HPC3 folding_global_parameter_training_v1_20260930/code.
+No jobs/lock/preflight/training yet. Submission rejected: User's group not permitted.
+At 15:44 UTC scontrol -a shows acd_u AllowGroups=admin, user shuang886 group formal.
+Earlier non-a query hid partition; not evidence of wrong cluster/deleted partition.
+Historical 662548/662650 completed same user/account/partition. Await access restoration,
+never switch to acd_ue or bypass. First goal turn with this blocker; goal remains active.
+Saved planned submitter is non-idempotent: check submission.json/squeue before retry.
+Seven-model terminal evaluation remains planned, driver not implemented yet.
+Status docs/mini_folding_global_parameter_training_status_2026-09-30.md; no quality claim.
+
 ## 2026-09-30 — Parameter budget complete; single stronger-weight trial specified
 
 PreviousgoalturnPROGRESS(coordbudgetec5330a8). ThisturnPROGRESS:newisolated helper
