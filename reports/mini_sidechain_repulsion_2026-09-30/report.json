@@ -1,0 +1,2862 @@
+{
+  "complete": true,
+  "execution": [
+    {
+      "index": 0,
+      "returncode": 0
+    },
+    {
+      "index": 1,
+      "returncode": 0
+    },
+    {
+      "index": 2,
+      "returncode": 0
+    },
+    {
+      "index": 3,
+      "returncode": 0
+    },
+    {
+      "index": 4,
+      "returncode": 0
+    },
+    {
+      "index": 5,
+      "returncode": 0
+    },
+    {
+      "index": 6,
+      "returncode": 0
+    },
+    {
+      "index": 7,
+      "returncode": 0
+    },
+    {
+      "index": 8,
+      "returncode": 0
+    },
+    {
+      "index": 9,
+      "returncode": 0
+    },
+    {
+      "index": 10,
+      "returncode": 0
+    },
+    {
+      "index": 11,
+      "returncode": 0
+    },
+    {
+      "index": 12,
+      "returncode": 0
+    },
+    {
+      "index": 13,
+      "returncode": 0
+    },
+    {
+      "index": 14,
+      "returncode": 0
+    },
+    {
+      "index": 15,
+      "returncode": 0
+    }
+  ],
+  "lock_sha256": "0b43ecadb0837133e2276e4152a2da1bdef60734716d3822b8f39a0c553c60c2",
+  "rows": [
+    {
+      "backbone_max_abs": 0.0,
+      "collision": {
+        "excluded_pairs": 139657,
+        "final": {
+          "mean": 0.013801113481893421,
+          "tail": 3.170108959147101
+        },
+        "final_objective": 3.6732502896295514,
+        "initial": {
+          "mean": 0.03897414985310616,
+          "tail": 12.572212346642308
+        },
+        "initial_objective": 13.219580073945215,
+        "pairs": 182353,
+        "weight": 1.0
+      },
+      "coordinates_sha256": "9c3e7130286c42492d18720591adbbf047a1486c57102871a08fb3dc10e72784",
+      "fit": {
+        "closure_calls": 87,
+        "eligible": [
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            2,
+            3,
+            4
+          ],
+          [],
+          [
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [],
+          [
+            1
+          ],
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1
+          ],
+          [],
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            1
+          ],
+          [
+            1,
+            2,
+            3
+          ]
+        ],
+        "eligible_dof": 168,
+        "final_gradient_norm": 0.03896559390509162,
+        "final_mse": 0.4893402170005569,
+        "improved": true,
+        "initial_mse": 0.6083935774498016,
+        "iterations": 60
+      },
+      "fit_seconds": 6.087966059989412,
+      "group_id": "0072dd8add7a9d9ae2c92c66ffd4af7849b91cc6bd4ee4b24e156e77cb83a832",
+      "index": 0,
+      "lock_sha256": "0b43ecadb0837133e2276e4152a2da1bdef60734716d3822b8f39a0c553c60c2",
+      "metrics": {
+        "final": {
+          "all_atom_lddt": 0.7559655244142611,
+          "ca_lddt": 0.8130854936457046,
+          "checked_chirality": true,
+          "connection_max": {
+            "angle_c": 1.3675352329836086,
+            "angle_n": 1.5135862220818512,
+            "carbonyl": 1.9766540709006186,
+            "cn": 0.8545575288270347,
+            "omega": 1.9822950733492013
+          },
+          "connection_pass": false,
+          "geometry": {
+            "atom_count": 807,
+            "bond_rmse": 0.07226554367012762,
+            "chirality_fraction": 1.0,
+            "max_penetration": 2.5867999712115903,
+            "peptide_mae": 0.10946746227427137,
+            "severe_pairs": 4,
+            "severe_pairs_per_atom": 0.004956629491945477
+          },
+          "preservation": {
+            "accepted": true,
+            "ca_aligned_rms": 1.0526962791402817e-14,
+            "ca_distance_rms": 0.0,
+            "ca_rms": 0.0,
+            "heavy_rms": 0.502125189664599,
+            "max_displacement": 4.249824149709057
+          }
+        },
+        "initial": {
+          "all_atom_lddt": 0.7525416821403347,
+          "ca_lddt": 0.8130854936457046,
+          "checked_chirality": true,
+          "connection_max": {
+            "angle_c": 1.3675352329836086,
+            "angle_n": 1.5135862220818512,
+            "carbonyl": 1.9766540709006186,
+            "cn": 0.8545575288270347,
+            "omega": 1.9822950733492013
+          },
+          "connection_pass": false,
+          "geometry": {
+            "atom_count": 807,
+            "bond_rmse": 0.07226554367012762,
+            "chirality_fraction": 1.0,
+            "max_penetration": 2.5425973272925564,
+            "peptide_mae": 0.10946746227427137,
+            "severe_pairs": 7,
+            "severe_pairs_per_atom": 0.008674101610904586
+          },
+          "preservation": {
+            "accepted": true,
+            "ca_aligned_rms": 1.0526962791402817e-14,
+            "ca_distance_rms": 0.0,
+            "ca_rms": 0.0,
+            "heavy_rms": 0.5559448569383396,
+            "max_displacement": 4.2186737191004395
+          }
+        }
+      },
+      "no_mobile_residues": [
+        3,
+        6,
+        10,
+        12,
+        13,
+        14,
+        17,
+        19,
+        20,
+        26,
+        33,
+        40,
+        50,
+        52,
+        59,
+        60,
+        63,
+        65,
+        66,
+        69,
+        70,
+        77,
+        85,
+        86,
+        94,
+        96,
+        100
+      ],
+      "pdb_id": "3ie9",
+      "peak_rss_kib": 805624,
+      "seconds": 6.477226058006636,
+      "seed": 12345,
+      "success": true,
+      "values_sha256": "9d0290f57399bb318e69be16d5dc1f3763abf7453b819e4b25106fcab8b6cb7e"
+    },
+    {
+      "backbone_max_abs": 0.0,
+      "collision": {
+        "excluded_pairs": 139657,
+        "final": {
+          "mean": 0.016233542512474535,
+          "tail": 2.252851335189244
+        },
+        "final_objective": 2.7021968530904483,
+        "initial": {
+          "mean": 0.036513888354334806,
+          "tail": 11.197987904530274
+        },
+        "initial_objective": 11.960968452020257,
+        "pairs": 182353,
+        "weight": 1.0
+      },
+      "coordinates_sha256": "cd77cd38449ce00afa1ddcb13fe6d6058df97adc3f7a1381154edd95abf2d333",
+      "fit": {
+        "closure_calls": 89,
+        "eligible": [
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            2,
+            3,
+            4
+          ],
+          [],
+          [
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [],
+          [
+            1
+          ],
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1
+          ],
+          [],
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            1
+          ],
+          [
+            1,
+            2,
+            3
+          ]
+        ],
+        "eligible_dof": 168,
+        "final_gradient_norm": 0.06028496673033123,
+        "final_mse": 0.4331119753887294,
+        "improved": true,
+        "initial_mse": 0.7264666591356469,
+        "iterations": 60
+      },
+      "fit_seconds": 6.2255158459884115,
+      "group_id": "0072dd8add7a9d9ae2c92c66ffd4af7849b91cc6bd4ee4b24e156e77cb83a832",
+      "index": 1,
+      "lock_sha256": "0b43ecadb0837133e2276e4152a2da1bdef60734716d3822b8f39a0c553c60c2",
+      "metrics": {
+        "final": {
+          "all_atom_lddt": 0.7533527810966317,
+          "ca_lddt": 0.8093014493511954,
+          "checked_chirality": true,
+          "connection_max": {
+            "angle_c": 1.420429966284156,
+            "angle_n": 1.379975226158482,
+            "carbonyl": 1.9541435586748543,
+            "cn": 0.781300759645365,
+            "omega": 1.495188268570077
+          },
+          "connection_pass": false,
+          "geometry": {
+            "atom_count": 807,
+            "bond_rmse": 0.07658628002605461,
+            "chirality_fraction": 1.0,
+            "max_penetration": 2.769911076362501,
+            "peptide_mae": 0.11479092152159193,
+            "severe_pairs": 6,
+            "severe_pairs_per_atom": 0.007434944237918215
+          },
+          "preservation": {
+            "accepted": true,
+            "ca_aligned_rms": 1.017503616922789e-14,
+            "ca_distance_rms": 0.0,
+            "ca_rms": 0.0,
+            "heavy_rms": 0.47399639653072645,
+            "max_displacement": 3.8210338773689094
+          }
+        },
+        "initial": {
+          "all_atom_lddt": 0.7513737448649758,
+          "ca_lddt": 0.8093014493511954,
+          "checked_chirality": true,
+          "connection_max": {
+            "angle_c": 1.420429966284156,
+            "angle_n": 1.379975226158482,
+            "carbonyl": 1.9541435586748543,
+            "cn": 0.781300759645365,
+            "omega": 1.495188268570077
+          },
+          "connection_pass": false,
+          "geometry": {
+            "atom_count": 807,
+            "bond_rmse": 0.0765862800260546,
+            "chirality_fraction": 1.0,
+            "max_penetration": 2.769911076362501,
+            "peptide_mae": 0.11479092152159193,
+            "severe_pairs": 9,
+            "severe_pairs_per_atom": 0.011152416356877323
+          },
+          "preservation": {
+            "accepted": true,
+            "ca_aligned_rms": 1.017503616922789e-14,
+            "ca_distance_rms": 0.0,
+            "ca_rms": 0.0,
+            "heavy_rms": 0.6041427438614434,
+            "max_displacement": 4.4423336794603925
+          }
+        }
+      },
+      "no_mobile_residues": [
+        3,
+        6,
+        10,
+        12,
+        13,
+        14,
+        17,
+        19,
+        20,
+        26,
+        33,
+        40,
+        50,
+        52,
+        59,
+        60,
+        63,
+        65,
+        66,
+        69,
+        70,
+        77,
+        85,
+        86,
+        94,
+        96,
+        100
+      ],
+      "pdb_id": "3ie9",
+      "peak_rss_kib": 802892,
+      "seconds": 6.6271617929887725,
+      "seed": 54321,
+      "success": true,
+      "values_sha256": "c2baea1d14910c7db7a803fea0fe79b5f7715d1585975a4f526915d10ef71f17"
+    },
+    {
+      "backbone_max_abs": 0.0,
+      "collision": {
+        "excluded_pairs": 344085,
+        "final": {
+          "mean": 3.0327348008676675e-05,
+          "tail": 0.0
+        },
+        "final_objective": 0.20447177950993256,
+        "initial": {
+          "mean": 0.00400062921911776,
+          "tail": 1.8534858447033662
+        },
+        "initial_objective": 2.3036679615820166,
+        "pairs": 495067,
+        "weight": 1.0
+      },
+      "coordinates_sha256": "b996c82a92a58da08d4677ead15a393a3e28383b9f5f145172989fd361f0492c",
+      "fit": {
+        "closure_calls": 65,
+        "eligible": [
+          [
+            1,
+            2
+          ],
+          [],
+          [
+            1,
+            2
+          ],
+          [
+            1
+          ],
+          [],
+          [
+            1
+          ],
+          [],
+          [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1
+          ],
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            2,
+            3,
+            4
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            2,
+            3
+          ]
+        ],
+        "eligible_dof": 271,
+        "final_gradient_norm": 0.0004849214341726306,
+        "final_mse": 0.2044414521619239,
+        "improved": true,
+        "initial_mse": 0.44618148765953264,
+        "iterations": 60
+      },
+      "fit_seconds": 9.601486314990325,
+      "group_id": "01346c25afe3e7dece8308723752e3816befcc83a75c9126d1d8faf1debe7f11",
+      "index": 2,
+      "lock_sha256": "0b43ecadb0837133e2276e4152a2da1bdef60734716d3822b8f39a0c553c60c2",
+      "metrics": {
+        "final": {
+          "all_atom_lddt": 0.8530096401115885,
+          "ca_lddt": 0.9342232620630294,
+          "checked_chirality": true,
+          "connection_max": {
+            "angle_c": 1.3578710680093966,
+            "angle_n": 1.3589359160016363,
+            "carbonyl": 1.5663289297521772,
+            "cn": 0.8082582289817717,
+            "omega": 0.891382416660958
+          },
+          "connection_pass": false,
+          "geometry": {
+            "atom_count": 1300,
+            "bond_rmse": 0.06498933814288846,
+            "chirality_fraction": 1.0,
+            "max_penetration": 2.3907120085444937,
+            "peptide_mae": 0.10309473921893987,
+            "severe_pairs": 1,
+            "severe_pairs_per_atom": 0.0007692307692307692
+          },
+          "preservation": {
+            "accepted": true,
+            "ca_aligned_rms": 1.2743834638758901e-14,
+            "ca_distance_rms": 0.0,
+            "ca_rms": 0.0,
+            "heavy_rms": 0.3309350457305915,
+            "max_displacement": 1.9850153947218152
+          }
+        },
+        "initial": {
+          "all_atom_lddt": 0.8448633834221098,
+          "ca_lddt": 0.9342232620630294,
+          "checked_chirality": true,
+          "connection_max": {
+            "angle_c": 1.3578710680093966,
+            "angle_n": 1.3589359160016363,
+            "carbonyl": 1.5663289297521772,
+            "cn": 0.8082582289817717,
+            "omega": 0.891382416660958
+          },
+          "connection_pass": false,
+          "geometry": {
+            "atom_count": 1300,
+            "bond_rmse": 0.06498933814288843,
+            "chirality_fraction": 1.0,
+            "max_penetration": 2.400184123413594,
+            "peptide_mae": 0.10309473921893987,
+            "severe_pairs": 3,
+            "severe_pairs_per_atom": 0.002307692307692308
+          },
+          "preservation": {
+            "accepted": true,
+            "ca_aligned_rms": 1.2743834638758901e-14,
+            "ca_distance_rms": 0.0,
+            "ca_rms": 0.0,
+            "heavy_rms": 0.47707307002137267,
+            "max_displacement": 2.9023053622704293
+          }
+        }
+      },
+      "no_mobile_residues": [
+        2,
+        5,
+        7,
+        8,
+        11,
+        14,
+        17,
+        18,
+        19,
+        26,
+        28,
+        32,
+        37,
+        38,
+        45,
+        48,
+        50,
+        51,
+        54,
+        57,
+        63,
+        74,
+        75,
+        84,
+        89,
+        99,
+        102,
+        105,
+        115,
+        119,
+        124,
+        135,
+        140,
+        146,
+        149,
+        151,
+        156,
+        160
+      ],
+      "pdb_id": "4a02",
+      "peak_rss_kib": 887148,
+      "seconds": 10.12701829499565,
+      "seed": 12345,
+      "success": true,
+      "values_sha256": "7af3d39a048614fc885a5e8dea86f4c0ebee9bad22ec1c0a40cd24ed98a0f2c8"
+    },
+    {
+      "backbone_max_abs": 0.0,
+      "collision": {
+        "excluded_pairs": 344085,
+        "final": {
+          "mean": 0.0018670775210554516,
+          "tail": 1.94515297253465e-05
+        },
+        "final_objective": 0.21317936691738598,
+        "initial": {
+          "mean": 0.009505976753419543,
+          "tail": 5.942436313434282
+        },
+        "initial_objective": 6.3091269672198536,
+        "pairs": 495067,
+        "weight": 1.0
+      },
+      "coordinates_sha256": "f3d264287c2247275e4cff2dd4e85ba00694430233a54ffea5baf1e12c00adf8",
+      "fit": {
+        "closure_calls": 81,
+        "eligible": [
+          [
+            1,
+            2
+          ],
+          [],
+          [
+            1,
+            2
+          ],
+          [
+            1
+          ],
+          [],
+          [
+            1
+          ],
+          [],
+          [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1
+          ],
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            2,
+            3,
+            4
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            2,
+            3
+          ]
+        ],
+        "eligible_dof": 271,
+        "final_gradient_norm": 0.014943596741527424,
+        "final_mse": 0.2112928378666052,
+        "improved": true,
+        "initial_mse": 0.3571846770321519,
+        "iterations": 60
+      },
+      "fit_seconds": 11.565677980994224,
+      "group_id": "01346c25afe3e7dece8308723752e3816befcc83a75c9126d1d8faf1debe7f11",
+      "index": 3,
+      "lock_sha256": "0b43ecadb0837133e2276e4152a2da1bdef60734716d3822b8f39a0c553c60c2",
+      "metrics": {
+        "final": {
+          "all_atom_lddt": 0.8622840064040229,
+          "ca_lddt": 0.9367965083108862,
+          "checked_chirality": true,
+          "connection_max": {
+            "angle_c": 1.3101906679766124,
+            "angle_n": 1.3848624370825022,
+            "carbonyl": 1.9745052580146345,
+            "cn": 0.7239308133043041,
+            "omega": 1.4615515580635823
+          },
+          "connection_pass": false,
+          "geometry": {
+            "atom_count": 1300,
+            "bond_rmse": 0.057483287111451446,
+            "chirality_fraction": 1.0,
+            "max_penetration": 1.9495758367150415,
+            "peptide_mae": 0.07567245642387034,
+            "severe_pairs": 0,
+            "severe_pairs_per_atom": 0.0
+          },
+          "preservation": {
+            "accepted": true,
+            "ca_aligned_rms": 1.1163479132721903e-14,
+            "ca_distance_rms": 0.0,
+            "ca_rms": 0.0,
+            "heavy_rms": 0.3371568969523671,
+            "max_displacement": 2.828933795872825
+          }
+        },
+        "initial": {
+          "all_atom_lddt": 0.8572845482475322,
+          "ca_lddt": 0.9367965083108862,
+          "checked_chirality": true,
+          "connection_max": {
+            "angle_c": 1.3101906679766124,
+            "angle_n": 1.3848624370825022,
+            "carbonyl": 1.9745052580146345,
+            "cn": 0.7239308133043041,
+            "omega": 1.4615515580635823
+          },
+          "connection_pass": false,
+          "geometry": {
+            "atom_count": 1300,
+            "bond_rmse": 0.057483287111451446,
+            "chirality_fraction": 1.0,
+            "max_penetration": 2.5994651447026875,
+            "peptide_mae": 0.07567245642387034,
+            "severe_pairs": 2,
+            "severe_pairs_per_atom": 0.0015384615384615385
+          },
+          "preservation": {
+            "accepted": true,
+            "ca_aligned_rms": 1.1163479132721903e-14,
+            "ca_distance_rms": 0.0,
+            "ca_rms": 0.0,
+            "heavy_rms": 0.4300433994032874,
+            "max_displacement": 3.0097353873838526
+          }
+        }
+      },
+      "no_mobile_residues": [
+        2,
+        5,
+        7,
+        8,
+        11,
+        14,
+        17,
+        18,
+        19,
+        26,
+        28,
+        32,
+        37,
+        38,
+        45,
+        48,
+        50,
+        51,
+        54,
+        57,
+        63,
+        74,
+        75,
+        84,
+        89,
+        99,
+        102,
+        105,
+        115,
+        119,
+        124,
+        135,
+        140,
+        146,
+        149,
+        151,
+        156,
+        160
+      ],
+      "pdb_id": "4a02",
+      "peak_rss_kib": 886628,
+      "seconds": 12.093895336001879,
+      "seed": 54321,
+      "success": true,
+      "values_sha256": "991b5833a5edfb71a7d7e9ab1cdee3d4d8537c9df2d64ff5b292a71c0cbee80a"
+    },
+    {
+      "backbone_max_abs": 0.0,
+      "collision": {
+        "excluded_pairs": 62471,
+        "final": {
+          "mean": 0.0,
+          "tail": 0.0
+        },
+        "final_objective": 0.27668910128432206,
+        "initial": {
+          "mean": 0.0,
+          "tail": 0.0
+        },
+        "initial_objective": 0.629698815086052,
+        "pairs": 80421,
+        "weight": 1.0
+      },
+      "coordinates_sha256": "530003b1663b6354b2c56174fe5ce1b73e0767503cd82825d3eb28c9747e994b",
+      "fit": {
+        "closure_calls": 62,
+        "eligible": [
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1
+          ],
+          [
+            1
+          ],
+          [],
+          [],
+          [],
+          [
+            1,
+            2,
+            3,
+            4
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1
+          ],
+          []
+        ],
+        "eligible_dof": 135,
+        "final_gradient_norm": 0.003996329285959772,
+        "final_mse": 0.27668910128432206,
+        "improved": true,
+        "initial_mse": 0.629698815086052,
+        "iterations": 60
+      },
+      "fit_seconds": 3.141568824998103,
+      "group_id": "01bd6cfdb3f2d3019c1e7489787d722d4b8e9e703a25f4899f8d7228c0f4c6da",
+      "index": 4,
+      "lock_sha256": "0b43ecadb0837133e2276e4152a2da1bdef60734716d3822b8f39a0c553c60c2",
+      "metrics": {
+        "final": {
+          "all_atom_lddt": 0.845793722763789,
+          "ca_lddt": 0.9427097477555219,
+          "checked_chirality": true,
+          "connection_max": {
+            "angle_c": 1.1458454817285915,
+            "angle_n": 1.3492343626624488,
+            "carbonyl": 0.6074055066149988,
+            "cn": 0.7278952529898504,
+            "omega": 0.43807423691965913
+          },
+          "connection_pass": false,
+          "geometry": {
+            "atom_count": 539,
+            "bond_rmse": 0.05754331413903692,
+            "chirality_fraction": 1.0,
+            "max_penetration": 2.0351203475853548,
+            "peptide_mae": 0.062448423038612054,
+            "severe_pairs": 0,
+            "severe_pairs_per_atom": 0.0
+          },
+          "preservation": {
+            "accepted": true,
+            "ca_aligned_rms": 1.0037086200987753e-14,
+            "ca_distance_rms": 0.0,
+            "ca_rms": 0.0,
+            "heavy_rms": 0.36977178315139025,
+            "max_displacement": 1.7650029250263999
+          }
+        },
+        "initial": {
+          "all_atom_lddt": 0.8379127766107126,
+          "ca_lddt": 0.9427097477555219,
+          "checked_chirality": true,
+          "connection_max": {
+            "angle_c": 1.1458454817285915,
+            "angle_n": 1.3492343626624488,
+            "carbonyl": 0.6074055066149988,
+            "cn": 0.7278952529898504,
+            "omega": 0.43807423691965913
+          },
+          "connection_pass": false,
+          "geometry": {
+            "atom_count": 539,
+            "bond_rmse": 0.05754331413903694,
+            "chirality_fraction": 1.0,
+            "max_penetration": 2.0351203475853548,
+            "peptide_mae": 0.062448423038612054,
+            "severe_pairs": 0,
+            "severe_pairs_per_atom": 0.0
+          },
+          "preservation": {
+            "accepted": true,
+            "ca_aligned_rms": 1.0037086200987753e-14,
+            "ca_distance_rms": 0.0,
+            "ca_rms": 0.0,
+            "heavy_rms": 0.550531146475403,
+            "max_displacement": 4.607562971970227
+          }
+        }
+      },
+      "no_mobile_residues": [
+        7,
+        8,
+        10,
+        11,
+        21,
+        27,
+        29,
+        35,
+        43,
+        45,
+        48,
+        58,
+        64,
+        66,
+        71
+      ],
+      "pdb_id": "5gu9",
+      "peak_rss_kib": 780296,
+      "seconds": 3.466163286997471,
+      "seed": 12345,
+      "success": true,
+      "values_sha256": "2c1e23eeb6ddd1638ccfb6a141a0a93c9b4f9ad30eee87a7d9e6c8d5ec5962ea"
+    },
+    {
+      "backbone_max_abs": 0.0,
+      "collision": {
+        "excluded_pairs": 62471,
+        "final": {
+          "mean": 1.8433462854844277e-05,
+          "tail": 0.0
+        },
+        "final_objective": 0.3647688960937369,
+        "initial": {
+          "mean": 0.00230768681658127,
+          "tail": 0.03955247383676674
+        },
+        "initial_objective": 0.9490089031488056,
+        "pairs": 80421,
+        "weight": 1.0
+      },
+      "coordinates_sha256": "65d2173d4a474623aefc9ebab64ec6f828ecf4ffda7afa83322bcf65497fd8a9",
+      "fit": {
+        "closure_calls": 79,
+        "eligible": [
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1
+          ],
+          [
+            1
+          ],
+          [],
+          [],
+          [],
+          [
+            1,
+            2,
+            3,
+            4
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1
+          ],
+          []
+        ],
+        "eligible_dof": 135,
+        "final_gradient_norm": 0.00042085475015605063,
+        "final_mse": 0.36475046263088207,
+        "improved": true,
+        "initial_mse": 0.9071487424954576,
+        "iterations": 60
+      },
+      "fit_seconds": 3.7317812469991622,
+      "group_id": "01bd6cfdb3f2d3019c1e7489787d722d4b8e9e703a25f4899f8d7228c0f4c6da",
+      "index": 5,
+      "lock_sha256": "0b43ecadb0837133e2276e4152a2da1bdef60734716d3822b8f39a0c553c60c2",
+      "metrics": {
+        "final": {
+          "all_atom_lddt": 0.8454152459383474,
+          "ca_lddt": 0.9410416744171973,
+          "checked_chirality": true,
+          "connection_max": {
+            "angle_c": 0.9973563104095755,
+            "angle_n": 1.1380072502953866,
+            "carbonyl": 0.6090041433500599,
+            "cn": 0.8179541610382918,
+            "omega": 0.35801445070043597
+          },
+          "connection_pass": false,
+          "geometry": {
+            "atom_count": 539,
+            "bond_rmse": 0.05960474549451892,
+            "chirality_fraction": 1.0,
+            "max_penetration": 2.1392479442287815,
+            "peptide_mae": 0.07280844180666839,
+            "severe_pairs": 0,
+            "severe_pairs_per_atom": 0.0
+          },
+          "preservation": {
+            "accepted": true,
+            "ca_aligned_rms": 8.304386643645248e-15,
+            "ca_distance_rms": 0.0,
+            "ca_rms": 0.0,
+            "heavy_rms": 0.42566956666343847,
+            "max_displacement": 2.3121250917413523
+          }
+        },
+        "initial": {
+          "all_atom_lddt": 0.8379700696672768,
+          "ca_lddt": 0.9410416744171973,
+          "checked_chirality": true,
+          "connection_max": {
+            "angle_c": 0.9973563104095755,
+            "angle_n": 1.1380072502953866,
+            "carbonyl": 0.6090041433500599,
+            "cn": 0.8179541610382918,
+            "omega": 0.35801445070043597
+          },
+          "connection_pass": false,
+          "geometry": {
+            "atom_count": 539,
+            "bond_rmse": 0.05960474549451892,
+            "chirality_fraction": 1.0,
+            "max_penetration": 2.1392479442287815,
+            "peptide_mae": 0.07280844180666839,
+            "severe_pairs": 0,
+            "severe_pairs_per_atom": 0.0
+          },
+          "preservation": {
+            "accepted": true,
+            "ca_aligned_rms": 8.304386643645248e-15,
+            "ca_distance_rms": 0.0,
+            "ca_rms": 0.0,
+            "heavy_rms": 0.6609054362968062,
+            "max_displacement": 4.704119602129749
+          }
+        }
+      },
+      "no_mobile_residues": [
+        7,
+        8,
+        10,
+        11,
+        21,
+        27,
+        29,
+        35,
+        43,
+        45,
+        48,
+        58,
+        64,
+        66,
+        71
+      ],
+      "pdb_id": "5gu9",
+      "peak_rss_kib": 780300,
+      "seconds": 4.054592363987467,
+      "seed": 54321,
+      "success": true,
+      "values_sha256": "cd64061904c4b6168bf8fbcdd26c7b9834d53242645df7ba9619c781b069dc31"
+    },
+    {
+      "backbone_max_abs": 0.0,
+      "collision": {
+        "excluded_pairs": 195615,
+        "final": {
+          "mean": 0.0,
+          "tail": 0.0
+        },
+        "final_objective": 0.20371751345650316,
+        "initial": {
+          "mean": 0.0014639555453528743,
+          "tail": 0.12019941375592967
+        },
+        "initial_objective": 0.5995985675072192,
+        "pairs": 258073,
+        "weight": 1.0
+      },
+      "coordinates_sha256": "c87af130538918af5c71989df89f2d2d561d5374a5fc7f616070ca496488393c",
+      "fit": {
+        "closure_calls": 67,
+        "eligible": [
+          [],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1
+          ],
+          [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            2
+          ],
+          [],
+          [
+            1,
+            2,
+            3,
+            4
+          ],
+          [
+            1
+          ],
+          [],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1
+          ],
+          [
+            1
+          ],
+          [
+            1
+          ]
+        ],
+        "eligible_dof": 230,
+        "final_gradient_norm": 0.0012519029642444161,
+        "final_mse": 0.20371751345650316,
+        "improved": true,
+        "initial_mse": 0.4779351982059366,
+        "iterations": 60
+      },
+      "fit_seconds": 5.543997011991451,
+      "group_id": "022901870b670cb8a8f68c4588c6da43aa3fa2cc58a81137cc5afd8a7aa061f8",
+      "index": 6,
+      "lock_sha256": "0b43ecadb0837133e2276e4152a2da1bdef60734716d3822b8f39a0c553c60c2",
+      "metrics": {
+        "final": {
+          "all_atom_lddt": 0.8740164497155642,
+          "ca_lddt": 0.9690132012708464,
+          "checked_chirality": true,
+          "connection_max": {
+            "angle_c": 0.20126799905711804,
+            "angle_n": 0.16414866281213192,
+            "carbonyl": 0.37249272484870954,
+            "cn": 0.3221438770857965,
+            "omega": 0.3932296152742861
+          },
+          "connection_pass": false,
+          "geometry": {
+            "atom_count": 957,
+            "bond_rmse": 0.04730083710427299,
+            "chirality_fraction": 1.0,
+            "max_penetration": 1.4743058150648864,
+            "peptide_mae": 0.059624375506428316,
+            "severe_pairs": 0,
+            "severe_pairs_per_atom": 0.0
+          },
+          "preservation": {
+            "accepted": true,
+            "ca_aligned_rms": 2.012549360038445e-15,
+            "ca_distance_rms": 0.0,
+            "ca_rms": 0.0,
+            "heavy_rms": 0.3184345187592619,
+            "max_displacement": 1.4447173770244883
+          }
+        },
+        "initial": {
+          "all_atom_lddt": 0.873636004369977,
+          "ca_lddt": 0.9690132012708464,
+          "checked_chirality": true,
+          "connection_max": {
+            "angle_c": 0.20126799905711804,
+            "angle_n": 0.16414866281213192,
+            "carbonyl": 0.37249272484870954,
+            "cn": 0.3221438770857965,
+            "omega": 0.3932296152742861
+          },
+          "connection_pass": false,
+          "geometry": {
+            "atom_count": 957,
+            "bond_rmse": 0.047300837104273,
+            "chirality_fraction": 1.0,
+            "max_penetration": 2.038679148399998,
+            "peptide_mae": 0.059624375506428316,
+            "severe_pairs": 0,
+            "severe_pairs_per_atom": 0.0
+          },
+          "preservation": {
+            "accepted": true,
+            "ca_aligned_rms": 2.012549360038445e-15,
+            "ca_distance_rms": 0.0,
+            "ca_rms": 0.0,
+            "heavy_rms": 0.4829165727998106,
+            "max_displacement": 3.322207419461881
+          }
+        }
+      },
+      "no_mobile_residues": [
+        1,
+        9,
+        13,
+        16,
+        19,
+        23,
+        27,
+        32,
+        39,
+        43,
+        45,
+        51,
+        56,
+        57,
+        64,
+        73,
+        78,
+        84,
+        86,
+        87,
+        88,
+        92,
+        93,
+        94,
+        97,
+        101,
+        102,
+        104,
+        120,
+        122,
+        123
+      ],
+      "pdb_id": "2fc3",
+      "peak_rss_kib": 827560,
+      "seconds": 5.9629415219969815,
+      "seed": 12345,
+      "success": true,
+      "values_sha256": "dcc56da89e7b9b4f5ea5781a864a1b5dc764fc4b6fa058127c0358197afd547e"
+    },
+    {
+      "backbone_max_abs": 0.0,
+      "collision": {
+        "excluded_pairs": 195615,
+        "final": {
+          "mean": 0.0,
+          "tail": 0.0
+        },
+        "final_objective": 0.2218814445188489,
+        "initial": {
+          "mean": 0.001959260328668668,
+          "tail": 0.19276421587004394
+        },
+        "initial_objective": 0.6948822462473463,
+        "pairs": 258073,
+        "weight": 1.0
+      },
+      "coordinates_sha256": "540d8102e2f9dfb95918d79d675b1393214407f3b86e7ba1553227a6ea424337",
+      "fit": {
+        "closure_calls": 64,
+        "eligible": [
+          [],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1
+          ],
+          [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            2
+          ],
+          [],
+          [
+            1,
+            2,
+            3,
+            4
+          ],
+          [
+            1
+          ],
+          [],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1
+          ],
+          [
+            1
+          ],
+          [
+            1
+          ]
+        ],
+        "eligible_dof": 230,
+        "final_gradient_norm": 0.0023005177627818136,
+        "final_mse": 0.2218814445188489,
+        "improved": true,
+        "initial_mse": 0.5001587700486336,
+        "iterations": 60
+      },
+      "fit_seconds": 5.817403369001113,
+      "group_id": "022901870b670cb8a8f68c4588c6da43aa3fa2cc58a81137cc5afd8a7aa061f8",
+      "index": 7,
+      "lock_sha256": "0b43ecadb0837133e2276e4152a2da1bdef60734716d3822b8f39a0c553c60c2",
+      "metrics": {
+        "final": {
+          "all_atom_lddt": 0.8743164946944149,
+          "ca_lddt": 0.9727876884533818,
+          "checked_chirality": true,
+          "connection_max": {
+            "angle_c": 0.2059488253676339,
+            "angle_n": 0.17958630393724012,
+            "carbonyl": 0.5328705423066009,
+            "cn": 0.3288967812640793,
+            "omega": 0.31003819553505213
+          },
+          "connection_pass": false,
+          "geometry": {
+            "atom_count": 957,
+            "bond_rmse": 0.04575828508032901,
+            "chirality_fraction": 1.0,
+            "max_penetration": 1.3553816716855225,
+            "peptide_mae": 0.05491207723962471,
+            "severe_pairs": 0,
+            "severe_pairs_per_atom": 0.0
+          },
+          "preservation": {
+            "accepted": true,
+            "ca_aligned_rms": 5.1576468905882625e-15,
+            "ca_distance_rms": 0.0,
+            "ca_rms": 0.0,
+            "heavy_rms": 0.33416525923289453,
+            "max_displacement": 1.4336114749090263
+          }
+        },
+        "initial": {
+          "all_atom_lddt": 0.8742491156706181,
+          "ca_lddt": 0.9727876884533818,
+          "checked_chirality": true,
+          "connection_max": {
+            "angle_c": 0.2059488253676339,
+            "angle_n": 0.17958630393724012,
+            "carbonyl": 0.5328705423066009,
+            "cn": 0.3288967812640793,
+            "omega": 0.31003819553505213
+          },
+          "connection_pass": false,
+          "geometry": {
+            "atom_count": 957,
+            "bond_rmse": 0.045758285080329024,
+            "chirality_fraction": 1.0,
+            "max_penetration": 2.0756196872198758,
+            "peptide_mae": 0.05491207723962471,
+            "severe_pairs": 0,
+            "severe_pairs_per_atom": 0.0
+          },
+          "preservation": {
+            "accepted": true,
+            "ca_aligned_rms": 5.1576468905882625e-15,
+            "ca_distance_rms": 0.0,
+            "ca_rms": 0.0,
+            "heavy_rms": 0.49540451805702473,
+            "max_displacement": 2.908497655534047
+          }
+        }
+      },
+      "no_mobile_residues": [
+        1,
+        9,
+        13,
+        16,
+        19,
+        23,
+        27,
+        32,
+        39,
+        43,
+        45,
+        51,
+        56,
+        57,
+        64,
+        73,
+        78,
+        84,
+        86,
+        87,
+        88,
+        92,
+        93,
+        94,
+        97,
+        101,
+        102,
+        104,
+        120,
+        122,
+        123
+      ],
+      "pdb_id": "2fc3",
+      "peak_rss_kib": 822572,
+      "seconds": 6.228630846992019,
+      "seed": 54321,
+      "success": true,
+      "values_sha256": "d0c64d30077fbf55725e2cd62200463d20fcac75ec9067dc80e0ea4767fee9fa"
+    },
+    {
+      "backbone_max_abs": 0.0,
+      "collision": {
+        "excluded_pairs": 348243,
+        "final": {
+          "mean": 0.0002367109384984237,
+          "tail": 0.0
+        },
+        "final_objective": 0.3252484659375176,
+        "initial": {
+          "mean": 0.003770588810095964,
+          "tail": 0.5082820323789676
+        },
+        "initial_objective": 1.0017230743721872,
+        "pairs": 538182,
+        "weight": 1.0
+      },
+      "coordinates_sha256": "ed123830c62a950b3b91419f66f23f78bb4ecbe26dc645753543751cc440c134",
+      "fit": {
+        "closure_calls": 73,
+        "eligible": [
+          [
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            2,
+            3,
+            4
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            1,
+            2,
+            3
+          ],
+          [],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          [
+            1
+          ],
+          [],
+          [],
+          [
+            1
+          ],
+          [
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            1,
+            2
+          ],
+          []
+        ],
+        "eligible_dof": 290,
+        "final_gradient_norm": 0.0059360562705147646,
+        "final_mse": 0.3250117549990192,
+        "improved": true,
+        "initial_mse": 0.4896704531831236,
+        "iterations": 60
+      },
+      "fit_seconds": 10.866891605997807,
+      "group_id": "02713dc891a01ad3eb8e81a43a282cbb37d7e12a617c86bff3d91bbd9204dfe8",
+      "index": 8,
+      "lock_sha256": "0b43ecadb0837133e2276e4152a2da1bdef60734716d3822b8f39a0c553c60c2",
+      "metrics": {
+        "final": {
+          "all_atom_lddt": 0.7667360324131229,
+          "ca_lddt": 0.8500183201280331,
+          "checked_chirality": true,
+          "connection_max": {
+            "angle_c": 1.2862548492703954,
+            "angle_n": 1.5122456714873191,
+            "carbonyl": 1.6470991788714864,
+            "cn": 0.9545368548727076,
+            "omega": 0.7077354754875068
+          },
+          "connection_pass": false,
+          "geometry": {
+            "atom_count": 1336,
+            "bond_rmse": 0.07858224492789073,
+            "chirality_fraction": 1.0,
+            "max_penetration": 1.8509570849490933,
+            "peptide_mae": 0.12145934572676702,
+            "severe_pairs": 0,
+            "severe_pairs_per_atom": 0.0
+          },
+          "preservation": {
+            "accepted": true,
+            "ca_aligned_rms": 3.653289395320821e-15,
+            "ca_distance_rms": 0.0,
+            "ca_rms": 0.0,
+            "heavy_rms": 0.41484990900941243,
+            "max_displacement": 2.7379113727141724
+          }
+        },
+        "initial": {
+          "all_atom_lddt": 0.764326850719867,
+          "ca_lddt": 0.8500183201280331,
+          "checked_chirality": true,
+          "connection_max": {
+            "angle_c": 1.2862548492703954,
+            "angle_n": 1.5122456714873191,
+            "carbonyl": 1.6470991788714864,
+            "cn": 0.9545368548727076,
+            "omega": 0.7077354754875068
+          },
+          "connection_pass": false,
+          "geometry": {
+            "atom_count": 1336,
+            "bond_rmse": 0.07858224492789073,
+            "chirality_fraction": 1.0,
+            "max_penetration": 2.1620651928869705,
+            "peptide_mae": 0.12145934572676702,
+            "severe_pairs": 0,
+            "severe_pairs_per_atom": 0.0
+          },
+          "preservation": {
+            "accepted": true,
+            "ca_aligned_rms": 3.653289395320821e-15,
+            "ca_distance_rms": 0.0,
+            "ca_rms": 0.0,
+            "heavy_rms": 0.5047767216135394,
+            "max_displacement": 3.7067411147660647
+          }
+        }
+      },
+      "no_mobile_residues": [
+        11,
+        25,
+        33,
+        36,
+        72,
+        80,
+        82,
+        84,
+        91,
+        96,
+        97,
+        101,
+        102,
+        112,
+        116,
+        120,
+        122,
+        123,
+        158,
+        163,
+        166
+      ],
+      "pdb_id": "4b9p",
+      "peak_rss_kib": 882576,
+      "seconds": 11.376158573999419,
+      "seed": 12345,
+      "success": true,
+      "values_sha256": "9f9bb2861ba5177af1381babe777d56a128ebb488bbc1632770012946dc6691d"
+    },
+    {
+      "backbone_max_abs": 0.0,
+      "collision": {
+        "excluded_pairs": 348243,
+        "final": {
+          "mean": 0.002216771658127842,
+          "tail": 9.217641351902265e-08
+        },
+        "final_objective": 0.3128916798620704,
+        "initial": {
+          "mean": 0.015871110131068338,
+          "tail": 7.583450245520314
+        },
+        "initial_objective": 8.041911091732334,
+        "pairs": 538182,
+        "weight": 1.0
+      },
+      "coordinates_sha256": "9f1627490650d3641b06fc6f275907947665f1b99587b1a1d81f717fcd3bb2fb",
+      "fit": {
+        "closure_calls": 91,
+        "eligible": [
+          [
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            2,
+            3,
+            4
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            1,
+            2,
+            3
+          ],
+          [],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          [
+            1
+          ],
+          [],
+          [],
+          [
+            1
+          ],
+          [
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            1,
+            2
+          ],
+          []
+        ],
+        "eligible_dof": 290,
+        "final_gradient_norm": 0.027691740570098575,
+        "final_mse": 0.31067481602752905,
+        "improved": true,
+        "initial_mse": 0.4425897360809517,
+        "iterations": 51
+      },
+      "fit_seconds": 13.22244624599989,
+      "group_id": "02713dc891a01ad3eb8e81a43a282cbb37d7e12a617c86bff3d91bbd9204dfe8",
+      "index": 9,
+      "lock_sha256": "0b43ecadb0837133e2276e4152a2da1bdef60734716d3822b8f39a0c553c60c2",
+      "metrics": {
+        "final": {
+          "all_atom_lddt": 0.7718335315813963,
+          "ca_lddt": 0.854943076968462,
+          "checked_chirality": true,
+          "connection_max": {
+            "angle_c": 1.0096976392886994,
+            "angle_n": 1.0823207995315673,
+            "carbonyl": 1.8285690515107624,
+            "cn": 0.8426260521629909,
+            "omega": 0.5283737398877995
+          },
+          "connection_pass": false,
+          "geometry": {
+            "atom_count": 1336,
+            "bond_rmse": 0.0698337015122315,
+            "chirality_fraction": 1.0,
+            "max_penetration": 1.9001055667387603,
+            "peptide_mae": 0.09815870350002094,
+            "severe_pairs": 0,
+            "severe_pairs_per_atom": 0.0
+          },
+          "preservation": {
+            "accepted": true,
+            "ca_aligned_rms": 6.846212604032209e-15,
+            "ca_distance_rms": 0.0,
+            "ca_rms": 0.0,
+            "heavy_rms": 0.4061943849139865,
+            "max_displacement": 2.630508586900953
+          }
+        },
+        "initial": {
+          "all_atom_lddt": 0.7709423203582523,
+          "ca_lddt": 0.854943076968462,
+          "checked_chirality": true,
+          "connection_max": {
+            "angle_c": 1.0096976392886994,
+            "angle_n": 1.0823207995315673,
+            "carbonyl": 1.8285690515107624,
+            "cn": 0.8426260521629909,
+            "omega": 0.5283737398877995
+          },
+          "connection_pass": false,
+          "geometry": {
+            "atom_count": 1336,
+            "bond_rmse": 0.0698337015122315,
+            "chirality_fraction": 1.0,
+            "max_penetration": 2.4599536754305618,
+            "peptide_mae": 0.09815870350002094,
+            "severe_pairs": 3,
+            "severe_pairs_per_atom": 0.002245508982035928
+          },
+          "preservation": {
+            "accepted": true,
+            "ca_aligned_rms": 6.846212604032209e-15,
+            "ca_distance_rms": 0.0,
+            "ca_rms": 0.0,
+            "heavy_rms": 0.48088205882545426,
+            "max_displacement": 2.6874204134410995
+          }
+        }
+      },
+      "no_mobile_residues": [
+        11,
+        25,
+        33,
+        36,
+        72,
+        80,
+        82,
+        84,
+        91,
+        96,
+        97,
+        101,
+        102,
+        112,
+        116,
+        120,
+        122,
+        123,
+        158,
+        163,
+        166
+      ],
+      "pdb_id": "4b9p",
+      "peak_rss_kib": 885308,
+      "seconds": 13.731887098998413,
+      "seed": 54321,
+      "success": true,
+      "values_sha256": "53c118e934b98f3519a6ecac9573778d5fa846a53da98b67c8ba576c2977fbb0"
+    },
+    {
+      "group_id": "043c60570e2de5fbc9bc1508703db8029ff8959f5fe6cc11f52ecae2c33e62e9",
+      "index": 10,
+      "lock_sha256": "0b43ecadb0837133e2276e4152a2da1bdef60734716d3822b8f39a0c553c60c2",
+      "not_run": true,
+      "pdb_id": "3cr6",
+      "seconds": 0.08047297099255957,
+      "seed": 12345,
+      "source_failure": "Traceback (most recent call last):\n  File \"/media/PM982/onestepfold/local_fit_gt_source_v1_20260930_code/preflight_isolated_chemistry.py\", line 49, in check\n    if unsupported:raise ValueError('source covalent connection outside supported chemistry')\n                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nValueError: source covalent connection outside supported chemistry\n",
+      "success": false
+    },
+    {
+      "group_id": "043c60570e2de5fbc9bc1508703db8029ff8959f5fe6cc11f52ecae2c33e62e9",
+      "index": 11,
+      "lock_sha256": "0b43ecadb0837133e2276e4152a2da1bdef60734716d3822b8f39a0c553c60c2",
+      "not_run": true,
+      "pdb_id": "3cr6",
+      "seconds": 0.08044693899864797,
+      "seed": 54321,
+      "source_failure": "Traceback (most recent call last):\n  File \"/media/PM982/onestepfold/local_fit_gt_source_v1_20260930_code/preflight_isolated_chemistry.py\", line 49, in check\n    if unsupported:raise ValueError('source covalent connection outside supported chemistry')\n                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nValueError: source covalent connection outside supported chemistry\n",
+      "success": false
+    },
+    {
+      "backbone_max_abs": 0.0,
+      "collision": {
+        "excluded_pairs": 99266,
+        "final": {
+          "mean": 0.001754824570690618,
+          "tail": 4.9141582138864e-06
+        },
+        "final_objective": 0.27718607523955185,
+        "initial": {
+          "mean": 0.012620602188379763,
+          "tail": 3.4270272016831544
+        },
+        "initial_objective": 4.067800745610412,
+        "pairs": 173504,
+        "weight": 1.0
+      },
+      "coordinates_sha256": "aa4f67cef824f3aa2a950dd93a8e1b5f0b2d3f57f44ab18efce5b71a0a10cb81",
+      "fit": {
+        "closure_calls": 77,
+        "eligible": [
+          [],
+          [],
+          [
+            1,
+            2,
+            3,
+            4
+          ],
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1
+          ],
+          [
+            1
+          ],
+          [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        "eligible_dof": 195,
+        "final_gradient_norm": 0.005325633778841649,
+        "final_mse": 0.27542633651064735,
+        "improved": true,
+        "initial_mse": 0.6281529417388776,
+        "iterations": 60
+      },
+      "fit_seconds": 5.1167275219922885,
+      "group_id": "06ae9c160e97843eff74a485534ecc35e7e28ab988afb09701cb838d2f9c891c",
+      "index": 12,
+      "lock_sha256": "0b43ecadb0837133e2276e4152a2da1bdef60734716d3822b8f39a0c553c60c2",
+      "metrics": {
+        "final": {
+          "all_atom_lddt": 0.7073838554782386,
+          "ca_lddt": 0.8042104217189863,
+          "checked_chirality": true,
+          "connection_max": {
+            "angle_c": 1.316843321029953,
+            "angle_n": 1.3992527862330282,
+            "carbonyl": 0.9936093136782085,
+            "cn": 1.0722484675345485,
+            "omega": 0.6010776282297702
+          },
+          "connection_pass": false,
+          "geometry": {
+            "atom_count": 743,
+            "bond_rmse": 0.0810197416452668,
+            "chirality_fraction": 1.0,
+            "max_penetration": 2.7115299988329826,
+            "peptide_mae": 0.12284837921016582,
+            "severe_pairs": 3,
+            "severe_pairs_per_atom": 0.004037685060565276
+          },
+          "preservation": {
+            "accepted": true,
+            "ca_aligned_rms": 5.450101765759498e-14,
+            "ca_distance_rms": 0.0,
+            "ca_rms": 0.0,
+            "heavy_rms": 0.39109044259701814,
+            "max_displacement": 1.9701696855770328
+          }
+        },
+        "initial": {
+          "all_atom_lddt": 0.7006476801295116,
+          "ca_lddt": 0.8042104217189863,
+          "checked_chirality": true,
+          "connection_max": {
+            "angle_c": 1.316843321029953,
+            "angle_n": 1.3992527862330282,
+            "carbonyl": 0.9936093136782085,
+            "cn": 1.0722484675345485,
+            "omega": 0.6010776282297702
+          },
+          "connection_pass": false,
+          "geometry": {
+            "atom_count": 743,
+            "bond_rmse": 0.08101974164526679,
+            "chirality_fraction": 1.0,
+            "max_penetration": 2.7115299988329826,
+            "peptide_mae": 0.12284837921016582,
+            "severe_pairs": 4,
+            "severe_pairs_per_atom": 0.005383580080753701
+          },
+          "preservation": {
+            "accepted": true,
+            "ca_aligned_rms": 5.450101765759498e-14,
+            "ca_distance_rms": 0.0,
+            "ca_rms": 0.0,
+            "heavy_rms": 0.5765421071217322,
+            "max_displacement": 3.3950742553211963
+          }
+        }
+      },
+      "no_mobile_residues": [
+        1,
+        2,
+        8,
+        16,
+        25,
+        35,
+        47,
+        51,
+        60,
+        77,
+        79
+      ],
+      "pdb_id": "3d8l",
+      "peak_rss_kib": 808244,
+      "seconds": 5.485302490007598,
+      "seed": 12345,
+      "success": true,
+      "values_sha256": "45a2083a3dd5a4f90edfd46ca62e7d1db10c918782eada3e142c5488803488aa"
+    },
+    {
+      "backbone_max_abs": 0.0,
+      "collision": {
+        "excluded_pairs": 99266,
+        "final": {
+          "mean": 0.0025798785431795724,
+          "tail": 2.7361484141756272e-06
+        },
+        "final_objective": 0.2777334462645804,
+        "initial": {
+          "mean": 0.02406833541385329,
+          "tail": 7.977716970384392
+        },
+        "initial_objective": 8.698104920403697,
+        "pairs": 173504,
+        "weight": 1.0
+      },
+      "coordinates_sha256": "c75f86a455dc86fcdd4a59028935ebb2fc00402c9e1c22283ecaba38e840d610",
+      "fit": {
+        "closure_calls": 82,
+        "eligible": [
+          [],
+          [],
+          [
+            1,
+            2,
+            3,
+            4
+          ],
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1
+          ],
+          [
+            1
+          ],
+          [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        "eligible_dof": 195,
+        "final_gradient_norm": 0.011077170497277813,
+        "final_mse": 0.27515083157298664,
+        "improved": true,
+        "initial_mse": 0.6963196146054521,
+        "iterations": 60
+      },
+      "fit_seconds": 5.383137584998622,
+      "group_id": "06ae9c160e97843eff74a485534ecc35e7e28ab988afb09701cb838d2f9c891c",
+      "index": 13,
+      "lock_sha256": "0b43ecadb0837133e2276e4152a2da1bdef60734716d3822b8f39a0c553c60c2",
+      "metrics": {
+        "final": {
+          "all_atom_lddt": 0.717325329329263,
+          "ca_lddt": 0.8157175283193749,
+          "checked_chirality": true,
+          "connection_max": {
+            "angle_c": 1.298036685547699,
+            "angle_n": 1.3631640050305247,
+            "carbonyl": 0.6702226666229535,
+            "cn": 0.8301006637865707,
+            "omega": 0.5594913639475843
+          },
+          "connection_pass": false,
+          "geometry": {
+            "atom_count": 743,
+            "bond_rmse": 0.07819730635384145,
+            "chirality_fraction": 1.0,
+            "max_penetration": 2.753696897024762,
+            "peptide_mae": 0.1233989672940794,
+            "severe_pairs": 8,
+            "severe_pairs_per_atom": 0.010767160161507403
+          },
+          "preservation": {
+            "accepted": true,
+            "ca_aligned_rms": 9.953071842608523e-15,
+            "ca_distance_rms": 0.0,
+            "ca_rms": 0.0,
+            "heavy_rms": 0.3945925730901169,
+            "max_displacement": 1.768476944913154
+          }
+        },
+        "initial": {
+          "all_atom_lddt": 0.7120778465671534,
+          "ca_lddt": 0.8157175283193749,
+          "checked_chirality": true,
+          "connection_max": {
+            "angle_c": 1.298036685547699,
+            "angle_n": 1.3631640050305247,
+            "carbonyl": 0.6702226666229535,
+            "cn": 0.8301006637865707,
+            "omega": 0.5594913639475843
+          },
+          "connection_pass": false,
+          "geometry": {
+            "atom_count": 743,
+            "bond_rmse": 0.07819730635384148,
+            "chirality_fraction": 1.0,
+            "max_penetration": 2.8412365888979707,
+            "peptide_mae": 0.1233989672940794,
+            "severe_pairs": 9,
+            "severe_pairs_per_atom": 0.012113055181695828
+          },
+          "preservation": {
+            "accepted": true,
+            "ca_aligned_rms": 9.953071842608523e-15,
+            "ca_distance_rms": 0.0,
+            "ca_rms": 0.0,
+            "heavy_rms": 0.6082534081650808,
+            "max_displacement": 3.7110811227558615
+          }
+        }
+      },
+      "no_mobile_residues": [
+        1,
+        2,
+        8,
+        16,
+        25,
+        35,
+        47,
+        51,
+        60,
+        77,
+        79
+      ],
+      "pdb_id": "3d8l",
+      "peak_rss_kib": 801440,
+      "seconds": 5.754564725997625,
+      "seed": 54321,
+      "success": true,
+      "values_sha256": "8b49ded9b53e5f6b66c21a64737b2f541c6d817c7a134b9d4113c202c860c527"
+    },
+    {
+      "backbone_max_abs": 0.0,
+      "collision": {
+        "excluded_pairs": 118355,
+        "final": {
+          "mean": 2.052015307404864e-07,
+          "tail": 0.0
+        },
+        "final_objective": 0.18141301921489703,
+        "initial": {
+          "mean": 1.1012761583231404e-05,
+          "tail": 0.0
+        },
+        "initial_objective": 0.3264881874543186,
+        "pairs": 159558,
+        "weight": 1.0
+      },
+      "coordinates_sha256": "68083b792fffdd4753b93493cc11bb8297584ecb4f994948fc188a9e5c079d75",
+      "fit": {
+        "closure_calls": 63,
+        "eligible": [
+          [],
+          [
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            2,
+            3,
+            4
+          ],
+          [
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            2,
+            3
+          ],
+          [],
+          [
+            1,
+            2
+          ],
+          [],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            1
+          ],
+          [
+            1
+          ],
+          [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        "eligible_dof": 161,
+        "final_gradient_norm": 0.0009216701241905162,
+        "final_mse": 0.18141281401336629,
+        "improved": true,
+        "initial_mse": 0.3264771746927354,
+        "iterations": 60
+      },
+      "fit_seconds": 4.280623229991761,
+      "group_id": "099569e958ae139a87cc08f1ba8a3f537f540fb6684feb2fefacb373339e330e",
+      "index": 14,
+      "lock_sha256": "0b43ecadb0837133e2276e4152a2da1bdef60734716d3822b8f39a0c553c60c2",
+      "metrics": {
+        "final": {
+          "all_atom_lddt": 0.8962362589207817,
+          "ca_lddt": 0.9783771569319836,
+          "checked_chirality": true,
+          "connection_max": {
+            "angle_c": 0.13543118589375397,
+            "angle_n": 0.2619101327100526,
+            "carbonyl": 0.46182499869178517,
+            "cn": 0.1917793960742875,
+            "omega": 0.351488302252368
+          },
+          "connection_pass": false,
+          "geometry": {
+            "atom_count": 750,
+            "bond_rmse": 0.04361042373818665,
+            "chirality_fraction": 1.0,
+            "max_penetration": 1.5062028450741447,
+            "peptide_mae": 0.055519084301088616,
+            "severe_pairs": 0,
+            "severe_pairs_per_atom": 0.0
+          },
+          "preservation": {
+            "accepted": true,
+            "ca_aligned_rms": 2.608394379282699e-15,
+            "ca_distance_rms": 0.0,
+            "ca_rms": 0.0,
+            "heavy_rms": 0.2976868236617736,
+            "max_displacement": 2.00335115544619
+          }
+        },
+        "initial": {
+          "all_atom_lddt": 0.8932158816051909,
+          "ca_lddt": 0.9783771569319836,
+          "checked_chirality": true,
+          "connection_max": {
+            "angle_c": 0.13543118589375397,
+            "angle_n": 0.2619101327100526,
+            "carbonyl": 0.46182499869178517,
+            "cn": 0.1917793960742875,
+            "omega": 0.351488302252368
+          },
+          "connection_pass": false,
+          "geometry": {
+            "atom_count": 750,
+            "bond_rmse": 0.043610423738186646,
+            "chirality_fraction": 1.0,
+            "max_penetration": 1.5454410915015901,
+            "peptide_mae": 0.055519084301088616,
+            "severe_pairs": 0,
+            "severe_pairs_per_atom": 0.0
+          },
+          "preservation": {
+            "accepted": true,
+            "ca_aligned_rms": 2.608394379282699e-15,
+            "ca_distance_rms": 0.0,
+            "ca_rms": 0.0,
+            "heavy_rms": 0.3970744019264092,
+            "max_displacement": 2.3555030960328205
+          }
+        }
+      },
+      "no_mobile_residues": [
+        1,
+        11,
+        13,
+        21,
+        29,
+        30,
+        34,
+        38,
+        43,
+        44,
+        45,
+        50,
+        51,
+        56,
+        73,
+        74,
+        81,
+        83
+      ],
+      "pdb_id": "1j7b",
+      "peak_rss_kib": 803208,
+      "seconds": 4.651374361987109,
+      "seed": 12345,
+      "success": true,
+      "values_sha256": "b15a3a8e489a8fc502d3444e82e81f3bfc2efd4288ed90d9c0f056cd0168a42d"
+    },
+    {
+      "backbone_max_abs": 0.0,
+      "collision": {
+        "excluded_pairs": 118355,
+        "final": {
+          "mean": 5.552123545687326e-05,
+          "tail": 0.0
+        },
+        "final_objective": 0.1802908167167485,
+        "initial": {
+          "mean": 0.0,
+          "tail": 0.0
+        },
+        "initial_objective": 0.2876195715204568,
+        "pairs": 159558,
+        "weight": 1.0
+      },
+      "coordinates_sha256": "0fd31550895380b58fb037700f9d77cb60ada2e4dfa4149632819fa929ef9148",
+      "fit": {
+        "closure_calls": 64,
+        "eligible": [
+          [],
+          [
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            2,
+            3,
+            4
+          ],
+          [
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            2,
+            3
+          ],
+          [],
+          [
+            1,
+            2
+          ],
+          [],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            1
+          ],
+          [
+            1
+          ],
+          [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        "eligible_dof": 161,
+        "final_gradient_norm": 0.0001450346776944009,
+        "final_mse": 0.1802352954812916,
+        "improved": true,
+        "initial_mse": 0.2876195715204568,
+        "iterations": 60
+      },
+      "fit_seconds": 4.334281536997878,
+      "group_id": "099569e958ae139a87cc08f1ba8a3f537f540fb6684feb2fefacb373339e330e",
+      "index": 15,
+      "lock_sha256": "0b43ecadb0837133e2276e4152a2da1bdef60734716d3822b8f39a0c553c60c2",
+      "metrics": {
+        "final": {
+          "all_atom_lddt": 0.8951363917858768,
+          "ca_lddt": 0.9797601497004127,
+          "checked_chirality": true,
+          "connection_max": {
+            "angle_c": 0.2709189173909167,
+            "angle_n": 0.19694500510668633,
+            "carbonyl": 0.3349177070194342,
+            "cn": 0.24093075703655886,
+            "omega": 0.3164577660213147
+          },
+          "connection_pass": false,
+          "geometry": {
+            "atom_count": 750,
+            "bond_rmse": 0.044928337349413004,
+            "chirality_fraction": 1.0,
+            "max_penetration": 1.5974176386785637,
+            "peptide_mae": 0.06076704355292749,
+            "severe_pairs": 0,
+            "severe_pairs_per_atom": 0.0
+          },
+          "preservation": {
+            "accepted": true,
+            "ca_aligned_rms": 4.1510150512734505e-14,
+            "ca_distance_rms": 0.0,
+            "ca_rms": 0.0,
+            "heavy_rms": 0.2974781238810735,
+            "max_displacement": 1.7140264646236052
+          }
+        },
+        "initial": {
+          "all_atom_lddt": 0.8913790440492246,
+          "ca_lddt": 0.9797601497004127,
+          "checked_chirality": true,
+          "connection_max": {
+            "angle_c": 0.2709189173909167,
+            "angle_n": 0.19694500510668633,
+            "carbonyl": 0.3349177070194342,
+            "cn": 0.24093075703655886,
+            "omega": 0.3164577660213147
+          },
+          "connection_pass": false,
+          "geometry": {
+            "atom_count": 750,
+            "bond_rmse": 0.04492833734941301,
+            "chirality_fraction": 1.0,
+            "max_penetration": 1.4424298574554537,
+            "peptide_mae": 0.06076704355292749,
+            "severe_pairs": 0,
+            "severe_pairs_per_atom": 0.0
+          },
+          "preservation": {
+            "accepted": true,
+            "ca_aligned_rms": 4.1510150512734505e-14,
+            "ca_distance_rms": 0.0,
+            "ca_rms": 0.0,
+            "heavy_rms": 0.3736417396148962,
+            "max_displacement": 2.390593217877447
+          }
+        }
+      },
+      "no_mobile_residues": [
+        1,
+        11,
+        13,
+        21,
+        29,
+        30,
+        34,
+        38,
+        43,
+        44,
+        45,
+        50,
+        51,
+        56,
+        73,
+        74,
+        81,
+        83
+      ],
+      "pdb_id": "1j7b",
+      "peak_rss_kib": 801756,
+      "seconds": 4.717209353999351,
+      "seed": 54321,
+      "success": true,
+      "values_sha256": "50e27c4ae26ebdc2e6939cc0950dbe73ba3395f928f887d9166dc0a8aed95da3"
+    }
+  ]
+}

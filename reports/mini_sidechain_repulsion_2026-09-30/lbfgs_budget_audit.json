@@ -1,0 +1,79 @@
+{
+  "torch_version": "2.12.0a0+git78258b9",
+  "source_path": "/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/torch/optim/lbfgs.py",
+  "source_sha256": "a1bcd0a4650af947d74d73bdc5955860c7fceec84250784e0de82c37ea18f84f",
+  "evaluation_counter_source": [
+    {
+      "line": 48,
+      "text": "ls_func_evals = 1"
+    },
+    {
+      "line": 92,
+      "text": "ls_func_evals += 1"
+    },
+    {
+      "line": 158,
+      "text": "ls_func_evals += 1"
+    },
+    {
+      "line": 203,
+      "text": "return f_new, g_new, t, ls_func_evals"
+    },
+    {
+      "line": 230,
+      "text": "max_eval (int, optional): maximal number of function evaluations per optimization"
+    },
+    {
+      "line": 245,
+      "text": "max_eval: int | None = None,"
+    },
+    {
+      "line": 255,
+      "text": "if max_eval is None:"
+    },
+    {
+      "line": 256,
+      "text": "max_eval = max_iter * 5 // 4"
+    },
+    {
+      "line": 260,
+      "text": "\"max_eval\": max_eval,"
+    },
+    {
+      "line": 344,
+      "text": "max_eval = group[\"max_eval\"]"
+    },
+    {
+      "line": 359,
+      "text": "current_evals = 1"
+    },
+    {
+      "line": 460,
+      "text": "ls_func_evals = 0"
+    },
+    {
+      "line": 471,
+      "text": "loss, flat_grad, t, ls_func_evals = _strong_wolfe("
+    },
+    {
+      "line": 479,
+      "text": "max_ls=max_eval - current_evals,"
+    },
+    {
+      "line": 495,
+      "text": "ls_func_evals = 1"
+    },
+    {
+      "line": 498,
+      "text": "current_evals += ls_func_evals"
+    },
+    {
+      "line": 499,
+      "text": "state[\"func_evals\"] += ls_func_evals"
+    },
+    {
+      "line": 507,
+      "text": "if current_evals >= max_eval:"
+    }
+  ]
+}

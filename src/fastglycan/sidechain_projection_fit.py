@@ -3,9 +3,10 @@ import numpy as np
 import torch
 
 from .anchored_geometry import PoseVariables
+from .sidechain_repulsion import sidechain_pair_mask, sidechain_repulsion
 
 
-def fit_sidechain_projection(adapter, raw, atom_names, *, max_iter=60, max_eval=90):
+def fit_sidechain_projection(adapter, raw, atom_names, *, max_iter=60, max_eval=90, collision_pairs=None, collision_radii=None):
     """Fit legal bridge angles only; not a differentiable optimizer layer.
 
     The target is the raw prediction, never experimental GT. Return final iterate
@@ -32,9 +33,24 @@ def fit_sidechain_projection(adapter, raw, atom_names, *, max_iter=60, max_eval=
     def coordinates():
         x=pose.coordinates(tuple(q*m for q,m in zip(pose.variables,masks,strict=True)))
         return torch.where(mobile[:,None],x,initial)
-    def objective(x):
+    def mse(x):
         return (x[side]-target[side]).square().sum(-1).mean() if bool(side.any()) else x.sum()*0
-    start_mse=float(objective(initial));calls=0;iterations=0;gradient_norm=0.
+    coupled=collision_pairs is not None
+    if coupled != (collision_radii is not None):raise ValueError('pairs and radii must be provided together')
+    pair_mask=None
+    if coupled:
+        pair_mask=sidechain_pair_mask(adapter,names,collision_pairs.detach().cpu().numpy())
+        active_pairs=collision_pairs.to(device=raw.device,dtype=torch.long)[torch.as_tensor(pair_mask,device=raw.device)]
+        radii=collision_radii.to(raw)
+        if radii.shape!=(len(raw),) or not torch.isfinite(radii).all() or not bool((radii>0).all()):raise ValueError('invalid collision radii')
+    def objective(x):
+        return mse(x)+sidechain_repulsion(x,active_pairs,radii)[0] if coupled else mse(x)
+    start_mse=float(mse(initial));calls=0;iterations=0;gradient_norm=0.
+    initial_collision=None
+    if coupled:
+        _,terms=sidechain_repulsion(initial,active_pairs,radii)
+        initial_collision={k:float(v) for k,v in terms.items()}
+
     if bool(mobile.any()):
         optimizer=torch.optim.LBFGS(pose.parameters(),lr=1.,max_iter=max_iter,max_eval=max_eval,
             history_size=20,line_search_fn='strong_wolfe',tolerance_grad=1e-8,tolerance_change=1e-12)
@@ -57,8 +73,15 @@ def fit_sidechain_projection(adapter, raw, atom_names, *, max_iter=60, max_eval=
     values=tuple((q*m).detach().clone() for q,m in zip(pose.variables,masks,strict=True))
     assert all(torch.count_nonzero(q[m==0])==0 for q,m in zip(values,masks,strict=True))
     assert torch.equal(final[~mobile],initial[~mobile])
-    return dict(initial=initial,coordinates=final.detach(),values=values,
+    result=dict(initial=initial,coordinates=final.detach(),values=values,
         masks=tuple(m.detach().clone() for m in masks),mobile=mobile,eligible=eligible,
-        initial_mse=start_mse,final_mse=float(loss.detach()),iterations=iterations,
+        initial_mse=start_mse,final_mse=float(mse(final).detach()),iterations=iterations,
         closure_calls=calls,final_gradient_norm=gradient_norm,eligible_dof=sum(int(m.sum()) for m in masks),
-        improved=float(loss.detach())<start_mse)
+        improved=float(mse(final).detach())<start_mse)
+    if coupled:
+        _,terms=sidechain_repulsion(final,active_pairs,radii)
+        result['collision_pair_mask']=pair_mask
+        result['collision']=dict(initial=initial_collision,final={k:float(v.detach()) for k,v in terms.items()},
+            pairs=int(pair_mask.sum()),excluded_pairs=int((~pair_mask).sum()),weight=1.,
+            initial_objective=start_mse+sum(initial_collision.values()),final_objective=float(loss.detach()))
+    return result

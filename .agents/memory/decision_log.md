@@ -1,3 +1,51 @@
+## 2026-09-30 — Coupled sidechain preservation/repulsion passes bounded LOCAL screen
+
+Previous goal turn581d6d47 was progress: pure fixed-backbone fit AA positive but
+collision tailfailed. This turn ran ONEpredeclared coupled local objective on same
+14saved C4 predictions,7proteins x2noises;3CR6 two sourcefailure slots retained.
+No model/training/GT-fitting/ind32/Y38 or global joint solve. Baseline original whole-
+ideal local zero angles;notcontinuingpurefit. Same fixedposes,N/CA/C/O/OXT,legalSC
+angles. Optional collision args preserve olddefault;case0purefit replay BITWISE
+exact60iters63closures,2.88s;old14savedpurefits re-auditedsuccessfully.
+New objective:sidechain rawMSE+frozenmeanrep(sumrelu(depth-1.5)^2/N/.25)+top16
+mean(relu(depth-1.9)/.1)^2,weight1fixed,no schedule/sweep. Pair support is union of
+allowed rotations separating endpoints after excluding axis endpoints/same rigid
+side. Conservative potentialdistancechange,notnonzerolocalderivativeclaim.
+Onlythissupportinoptimization;ALLoriginalpairsinmetrics. Excluded21initialsevere
+distances invariantmax7.11e-15A;old20both-nominal-immobilecount was differentdefinition.
+Local AA .811601496->.815628947,delta+.004027451,all14/all7positive.CA .900141834
+exactunchanged,allbone/nonmobilebitwise. SCrawMSE.537428->.282367,heavyRMS.378153,
+maxatom4.249824A. Strictcheckedchirality+rawRMSbudget14/14. RelativepurefitAA.815950,
+trade−.000321312 forcollisionimprovement. Local AAstillbelowraw.825157.
+Allpair severe37->22,zero-severe7->9,worst2.841236589->2.769911076A;localSCREENPASS.
+Variable-support severe16->1;excluded21->21. Onevariable remainder3IE9/12345:C1–CG1
+res5,distance.813200A,penetration2.586800. Per-case severe neverincreasesbutworst
+penetration increases3IE9/12345 2.5426->2.5868and1J7B/54321 1.4424->1.5974;do not
+claimpercasenonregression/fullchemistry. Alloldconnectionsstillfail/fixedbone.
+Objectivecomponentsmean:rawMSE.53743->.28237,meanrep.01079->.00277,tail3.67251->
+.38736,total4.22073->.67249. ReportMSEseparatecomposite,gradientnormcomposite.
+2CPUFP64workersone thread,13fits60iters,4B9P/54321 51iters91closures(gradientnorm
+.02769),others62–90closures. Configmax_eval90 isnot per-closure hardcut:installed
+Torch2.12.0a0git78258b9 LBFGS sourcecounterpositions+hashsaved;actual91not hidden,
+noadditionaloptimizerloop/noconvergenceclaim.Mean6.78median5.68s,range3.14–13.22,
+RSS887148KiB,pipeline97.48s exit0. Pipeline236237/controllerterminalpsmissing.
+IndependentNumPy14pose/metric/invariants/pairsupport/terms verified:maxpose5.33e-15,
+metric4.44e-16,invariant4.44e-15,objective3.55e-15.7tests pass. Oldpure14shadowaudit
+pass.146memberarchive1,548,199byteshashverified;6runtimefilesexact. Remote
+/media/PM982/onestepfold/sidechain_repulsion_v1_20260930;reports/mini_sidechain_repulsion_2026-09-30;
+docs/mini_sidechain_repulsion_findings_2026-09-30.md. No livejobs. MethodnowFROZEN.
+NEXT:one bounded GLOBAL endpoint comparison on same14rawC4,wholeidealreference,
+calibrated jointobjective/oldgates/rawcis-trans/3x60LBFGS. Control reuse archived
+WHOLE-IDEAL ZERO joint endpoints in c4_ideal_reference_v1_20260930(cases2*i+1,
+armideal_ref). Candidate loadTHISrun saved full angle vectors(casesi) into SAME
+originalraw/idealchart;do not reconstruct chart/rawanchor/regularization aroundfit.
+Use geometry_start helper semantics, verifyinitialcoordinates matchsavedlocalfit;
+originalrawcoordinate anchor remainsoriginal.14new jointsolves+14reusedcontrols,
+not more local fitting. Freeze newprotocol before run,paired AA/CA/chemistry/oldjoint
+andcost.A localPASS supports test,NOTdefault/deployment/independentgeneralization/
+differentiableoptimizer/designclaim. Full originalgoalactive/unfulfilled;ind32old
+rejectionunchanged. Do not chase3IE9weights or prolonglocalbudget.
+
 ## 2026-09-30 — Fixed-backbone sidechain fit gains AA but fails collision nonregression
 
 Previous turn f028e9f6 was progress: read-only additive loss partition. This turn

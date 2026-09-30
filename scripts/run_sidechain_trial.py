@@ -46,6 +46,8 @@ def prepare_sidechain_trial(root,baseline):
 
 def run_sidechain_case(root,index):
     torch.set_num_threads(1);lock=json.loads((root/'lock.json').read_text());source=Path(lock['source'])
+    coupled=lock['contract']=='fixed_backbone_sidechain_repulsion_v1'
+    assert coupled or lock['contract']=='fixed_backbone_sidechain_fit_v1'
     selection=json.loads((source/'selection.json').read_text());item=selection[index//2];seed=lock['seeds'][index%2]
     folder=root/'cases'/f'{index:02d}';folder.mkdir(parents=True,exist_ok=False);started=time.monotonic()
     row=dict(index=index,pdb_id=item['pdb_id'],group_id=item['group_id'],seed=seed,success=False,lock_sha256=sha256(root/'lock.json'))
@@ -60,11 +62,18 @@ def run_sidechain_case(root,index):
         names=data['atom_names'];res=data['residue_ids'];seq=item['sequence']
         assert np.array_equal(data['target'],m['coordinates']) and np.array_equal(names,m['atom_names']) and np.array_equal(res,m['residue_ids'])
         adapter=ArticulatedOutput(data['output_reference'],names,res,seq,json.loads((packet/'variants.json').read_text())).double()
-        start=time.monotonic();fit=fit_sidechain_projection(adapter,torch.tensor(data['raw']),names,max_iter=lock['max_iter'],max_eval=lock['max_eval'])
+        collision_args={}
+        if coupled:
+            native_atoms=torch.load(packet/'native.pt',weights_only=False,map_location='cpu')['atoms']
+            native_top=GeometryTopology(native_atoms,m['reference'])
+            collision_args=dict(collision_pairs=native_top.pairs,collision_radii=native_top.radii)
+        start=time.monotonic();fit=fit_sidechain_projection(adapter,torch.tensor(data['raw']),names,max_iter=lock['max_iter'],max_eval=lock['max_eval'],**collision_args)
         row['fit_seconds']=time.monotonic()-start
         assert np.max(np.abs(fit['initial'].numpy()-data['local']))<1e-8
         arrays=dict(raw=data['raw'],initial=fit['initial'].numpy(),final=fit['coordinates'].numpy(),target=data['target'],output_reference=data['output_reference'],atom_names=names,residue_ids=res,mobile=fit['mobile'].numpy())
         assert np.array_equal(arrays['initial'][~arrays['mobile']],arrays['final'][~arrays['mobile']])
+        if coupled:
+            row['collision']=fit['collision'];arrays['collision_pair_mask']=fit['collision_pair_mask']
         row['fit']={k:fit[k] for k in ['initial_mse','final_mse','iterations','closure_calls','final_gradient_norm','eligible_dof','improved','eligible']}
         row['no_mobile_residues']=[int(i) for i in np.unique(res) if not arrays['mobile'][res==i].any()]
         atoms=torch.load(packet/'native.pt',weights_only=False,map_location='cpu')['atoms'];top=GeometryTopology(atoms,m['reference'])

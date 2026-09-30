@@ -20,6 +20,8 @@ from fastglycan.paired_teacher_protocol import sha256,write_json
 
 def audit_sidechain_trial(root):
     torch.set_num_threads(1);lock=json.loads((root/'lock.json').read_text());source=Path(lock['source'])
+    coupled=lock['contract']=='fixed_backbone_sidechain_repulsion_v1'
+    assert coupled or lock['contract']=='fixed_backbone_sidechain_fit_v1'
     report=json.loads((root/'report.json').read_text());selection=json.loads((source/'selection.json').read_text())
     assert report['complete'] and report['lock_sha256']==sha256(root/'lock.json') and len(report['rows'])==16
     for p,h in lock['hashes'].items():assert sha256(Path(p))==h
@@ -61,6 +63,25 @@ def audit_sidechain_trial(root):
         assert invariant<1e-8
         atoms=torch.load(packet/'native.pt',weights_only=False,map_location='cpu')['atoms'];top=GeometryTopology(atoms,m['reference'])
         bonds=top.bonds.numpy();pairs_ix=top.pairs.numpy();ca,n,c,cb=top.centres.numpy().T;ca_mask=names=='CA';bone=np.isin(names,['N','CA','C','O','OXT'])
+        if coupled:
+            variable=np.zeros(len(pairs_ix),bool)
+            for group in adapter.groups:
+                nn=names[group.indices[0].numpy()]
+                for rotation in group.rotations:
+                    if set(nn[list(rotation.moving)]).intersection({'N','CA','C','O','OXT'}):continue
+                    for ii in group.indices.numpy():
+                        moving=set(ii[list(rotation.moving)])-set(ii[[rotation.parent,rotation.child]])
+                        other=set(range(len(names)))-set(ii[list(rotation.moving)])-{int(ii[rotation.parent])}
+                        x=np.isin(pairs_ix[:,0],list(moving));y=np.isin(pairs_ix[:,1],list(other))
+                        z=np.isin(pairs_ix[:,1],list(moving));w=np.isin(pairs_ix[:,0],list(other))
+                        variable|=(x&y)|(z&w)
+            assert np.array_equal(variable,d['collision_pair_mask']) and int(variable.sum())==row['collision']['pairs']
+            assert row['collision']['excluded_pairs']==int((~variable).sum()) and row['collision']['weight']==1.
+            ix=pairs_ix[~variable]
+            fixed_distance_error=float(np.max(np.abs(np.linalg.norm(d['initial'][ix[:,0]]-d['initial'][ix[:,1]],axis=1)-np.linalg.norm(d['final'][ix[:,0]]-d['final'][ix[:,1]],axis=1)))) if len(ix) else 0.
+            assert fixed_distance_error<1e-8
+        collision_error=0.;collision_diagnostics={}
+
         anchors=np.array([[np.flatnonzero((res==r)&(names==n))[0] for n in ['N','CA','C','O']] for r in range(1,len(seq)+1)])
         raw_branch=measure_connections(d['raw'],anchors,seq)['nearest_omega_sign'];metric_error=0.
         side=np.array([[np.flatnonzero((res==r)&(names==n))[0] for n in ['CB','CA','CG1' if aa=='I' else 'OG1','CG2']] for r,aa in enumerate(seq,1) if aa in 'IT'],int).reshape(-1,4)
@@ -83,9 +104,23 @@ def audit_sidechain_trial(root):
             checks += [(hr,saved['preservation']['heavy_rms']),(cr,saved['preservation']['ca_rms']),(float(np.sqrt(squared.max())),saved['preservation']['max_displacement'])]
             assert saved['preservation']['accepted']==(hr<=2 and cr<=1)
             checks.append((float(squared[~bone].mean()),row['fit']['initial_mse' if label=='initial' else 'final_mse']))
+            if coupled:
+                vdepth=depths[variable];mean=float(np.maximum(vdepth-1.5,0).dot(np.maximum(vdepth-1.5,0))/len(x)/.25)
+                tail=float(np.mean(np.maximum(np.sort(vdepth)[-16:]-1.9,0)**2/.01)) if len(vdepth) else 0.
+                largest=int(np.argmax(depths))
+                collision_diagnostics[label]=dict(variable_severe=int((distances[variable]<1).sum()),
+                    excluded_severe=int((distances[~variable]<1).sum()),
+                    variable_max_penetration=float(np.maximum(0,vdepth).max()) if len(vdepth) else 0.,
+                    excluded_max_penetration=float(np.maximum(0,depths[~variable]).max()) if (~variable).any() else 0.,
+                    worst_pair=[dict(residue=int(res[i]),atom=str(names[i])) for i in pairs_ix[largest]],
+                    worst_pair_variable=bool(variable[largest]),worst_distance=float(distances[largest]))
+                saved_terms=row['collision'][label]
+                collision_error=max(collision_error,abs(mean-saved_terms['mean']),abs(tail-saved_terms['tail']),abs(mean+tail+squared[~bone].mean()-row['collision'][label+'_objective']))
+                assert collision_error<1e-8
+
             metric_error=max(metric_error,max(abs(float(a)-float(b)) for a,b in checks))
         assert metric_error<1e-8 and np.array_equal(d['initial'][bone],d['final'][bone])
-        outcomes.append(dict(index=row['index'],verified=True,pose_max_abs=error,metric_max_abs=metric_error,invariant_max_abs=invariant))
+        outcomes.append(dict(index=row['index'],verified=True,pose_max_abs=error,metric_max_abs=metric_error,invariant_max_abs=invariant,collision_objective_max_abs=collision_error,excluded_distance_max_abs=fixed_distance_error if coupled else None,collision_diagnostics=collision_diagnostics))
         a=row['metrics']['initial'];b=row['metrics']['final']
         pairs.append(dict(pdb_id=item['pdb_id'],seed=row['seed'],delta_aa=b['all_atom_lddt']-a['all_atom_lddt'],delta_ca=b['ca_lddt']-a['ca_lddt'],
             initial_aa=a['all_atom_lddt'],final_aa=b['all_atom_lddt'],initial_severe=a['geometry']['severe_pairs'],final_severe=b['geometry']['severe_pairs'],
