@@ -1,3 +1,67 @@
+## 2026-09-30 — TRAIN component-gradient audit completed; next minimal factorial specified
+
+Previous40bc604f was PROGRESS: real512training+new32evaluation completed,veryweakgain.
+This turn closes96point TRAIN-only gradient diagnosis, derives ONE calibratedobjective,
+and locks nextcomparisonproposal. NO newtraining/optimizerstep/validationread.
+GoalACTIVE/UNFULFILLED; chemicalvalidone-stepdesignoracle stillnotachieved.
+
+DiamondHill /media/PM982/onestepfold/diffusion_gradient_budget_v1_20260930.
+16TRAIN,4each50-127/128-255/256-511/512-1024, SHA rank
+'diffusion-gradient-budget-v1:20260930:'+group, nooutcomeselection. Bothoriginaltraining
+noises600001/600011;statesinitialzero-adapter,GT512,GT+S2512.96fwd/768VJPs(6component
++2directtotal each). CachedC4only, nativeFP32. All96exactTRAINcoordinatereplays.
+Original1613parameter tensorsunchanged,no leafgrad accumulation,optimizerupdates0.
+Controller287337/workers287344–287351 allterminalexit0,/procabsent,54.721s.
+Peakallocated2.676GiB.CPUindependentrawvectoraudit10.280s,96points;Gramrelative4.09e-14,
+GT/directweightedreconstructionmax6.1905e-6;plus5.1609e-6. Initialdown-gradientzero
+expectedzero-upLoRA,notdisconnect. FocusedtestPASSfornegative/>1projection,cancellation,
+zeros. NooldFDpipeline reopened.
+
+Normratios reportedfirstmean2noise perproteinthenmedian16. Initialteacher/GTtotal
+.00275322 (0.2753%),GTterminal.00254570,GT+S2terminal.00253339.
+Same-stateGT vsGT+S2 directioncosmedian .999993714/.999994721/.999994721.
+HereGTtotal=A/100+D+10B+C+.1R, NOTpureGTcoordinate;teacherweighted.0025T.
+Initialweightednormmedians A.022853694,D.011853143,B.151810621,C.000629033,
+R3.462549184,T.002242635. Largestcomponent17clash/13bond/2coordinate of32points,
+sameclassificationcountsallstates. No proofS2generalinefficacy: oldteacherperturbation
+veryweak. Structure(A+D+B) vschemistry(C+R) negative8/27definedinitialpoints;5zero
+chemistrycasesundefined. Notallsignalsconflict,notcausalerrorpercentages. Length-
+balanced16 isdiagnostic,notprevalenceestimate. LocalgradientstatsnotAdam dynamics.
+
+TRAIN-initialONLYcalibrationderivedONEcandidate: preserveA=.01,D=1,C=1;
+B=1.505408125612628,R=.0006600251156855778,T=.025476389066842815.
+Formula targetmedianprotein(mean_noise(||.01g_A||))=.022853694257384722 dividedby
+medianprotein(mean_noise(||g_j||)),j=B/R/T. No terminal/VALqualitypickedweights.
+It matchesONEEuclidean gradientstatistic, notper-target/Adam/chemicalguarantee.
+On32initialpoints (differentaggregation!), newteacher/GTnormratio median.25796027;
+old/newtotalcosmedian.70851641. NOnewcoordinates/qualityevidence fornewrecipe.
+LowerRweightdoesnotrelaxevaluationchemistry/S2notcleantruth/GTanchorretained.
+
+Nextscientificcontract docs/mini_diffusion_recipe_scale_v1.md (NOTRUN): 2x2
+old/calibratedobjective ×1x/10xLR. Reuseold_low=completedoriginalgt_s2 at512,
+only3newarmsold_high,calibrated_low,calibrated_high. AllFROMPUBLICzero-adapter,
+same128TRAIN/order/noise/16epochs/accum4/512updates. LRmultipliersapplyentirewarm32
+cosine (peaks1e-5/1e-4,ends1e-6/1e-5);clip1,beta/eps/decayunchanged.
+FirstevaluateFULLTRAINat2oldseeds only (nativeS1/S2,oldlow,3newstudents),nooldVAL
+reuseforselection. Ifusefuljointprogress,lockNEWisolatedconfirmationpanel later.
+No automaticLRgrid/extraepochs/methodtree ordeploymentgate. OldpilotSTOPunchanged.
+Need IMPLEMENT configurabletrainer/prepare+audit+evaluation toexecute3arms nextturn;
+existing trainer hardcodesarmteacher/LR/sharedlossweights, MUSTnotblindlyrunnewlocks.
+Can add explicitbackward-compatibleconfigpaths ornewdriver afterGitNexusimpact;
+privateoldrun codes/locks remainimmutable. No3newGCD jobs currentlysubmitted.
+
+Newsrc fastglycan/gradient_budget.py; scripts probe_diffusion_gradient_budget.py,
+audit_diffusion_gradient_budget.py,calibrate_diffusion_objective.py;test_gradient_budget.py.
+Docs mini_diffusion_gradient_budget_v1.md,findings_2026-09-30.md,nextrecipe_scale_v1;
+overviewupdated. reports/mini_diffusion_gradient_budget_2026-09-30 containsallmetadata,
+summary,objective_calibration,gradientmanifest,audit,derived_statistics_audit.
+96rawgradientpt total2,568,264,480bytes stayremote (NOTGitbackedup),hashesallverified.
+245member610687byte metadatapackSHA9776111b1e7c6f084072b1c875d938e9d1345a2e2069c9fb1dddb6def0b2896b.
+Allmembers/sourceparityverifiedlocally,allcalibrationweightsindependentlyrecalculated.
+ExtraCPUderivedratio/projectionaudit96points usesauditednorms/Gram,nopredictions.
+Helpers/tmp/launch_gradient_budget.py,/tmp/collect_gradient_budget_remote.py.
+UseexplicitPROTENIX_ROOT_DIR,LAYERNORM_TYPE=torch,foldPython,8GCDenvironment asusual.
+
 ## 2026-09-30 — Two-arm512 pilot COMPLETE: tiny quality gain, chemistry largely unchanged
 
 Previous a8f40af4 was PROGRESS (auditedcache + reallearningstarted). This turn collects
