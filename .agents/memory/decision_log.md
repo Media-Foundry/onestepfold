@@ -1,3 +1,40 @@
+## 2026-09-30 — Global-distance candidate preflight passes; training live
+
+PreviousgoalturnPROGRESS(loss/calibrationcomplete). CurrentturnPROGRESS: added
+isolatedglobal_distance_training contract/hooks andtrain_folding_global_distance
+prepare/preflight/train/auditdriver;6focusedtests pass. Original172controlcodefiles
+byte-identical; no originaltrainer/model/scorer edits. SeparateimmutableHPC3root
+folding_global_distance_training_v1_20260930,partitionacd_u.
+
+662545prepareCOMPLETE0:0 25s:423TRAINglobalCA labels,10,999,748pairs,originalGT
+mapping/CAatom37exactchecks,sourceandlabelhashesbound. NewlockSHA
+ d266895a7c33f2a6ea4b7f6f492dd7f79bcbb1ec14cd5f2e3cb3088be12d5d27.
+662546GPUpreflightCOMPLETE0:0 47s (compute42.63):52/968residueengineering,
+retainedforwardmaxabs0 both,old6partsidentical,newtotalformula/independentCPU64
+losschecks pass,newcoordinategradientfinite/nonzeroCA-only,288selectedtensor
+gradientsfinite/nonzero,checkpointreplayexact,parametersunchanged. Peak15.61GiB.
+Initialfingerprintdcac9c0a9b34b9576f4413ee4416f5621d0be62e8c88dab3350f5c4f1a389a3d.
+
+Formaltraining662548RUNNING;terminalaudit662549PENDINGafterok,killinvaliddep,
+no-requeue. Laststartupobservation10updates/43exposures at1m40s;initialTRAIN32
+64coordinatehashesexactlymatchcontrolprobe0000 andfinite. Noqualityclaim.
+Newglobalweight.03290655679814053,coord0,otherweights/423order/noises/retained512/
+2048updates/8192exposures/288tensors/C4S1FP32 allfixed. OneH100. Estimated1.5–2h
+frompriorrun;4hSlurmcapnotincreasedscientificbudget. ESMC/design/repairunchanged.
+
+HookaddsGTpairlabelbundleboundtogroup/atomnames/residues/chains,CPUcache;original
+inputobjectsretained,originalpartsunchanged,newpartadded. Restoresfunctionsafter
+normal/error exit; testscheckidentitymismatchandcontractdriftrejection. Newsource
+hashesmatchremote. Startupmetadata8fileslosslessarchived(localhashverified),
+reportsmini_folding_global_distance_training_2026-09-30;statusdocsameprefixand
+overallfrontupdated. Originalprotocolfileunchangedafterlocking.
+
+NEXT: keeptraininglive unchanged; implementfixedterminal6model455×2evaluation
+(reuse5references;new910+planned32engineeringcalls),bindglobal_training_audit.json
+andnewcheckpointlock. EvaluationNOTyetqueued. Checkexisting662548handlebefore
+any action; no restartifobservationtimeout. Audit662549alreadyqueued. Activegoal
+unfulfilled. Preserveunrelatedworktree/journalspriorunstagedcontent.
+
 ## 2026-09-30 — Global CA distance loss implemented and TRAIN scale locked
 
 PreviousgoalturnPROGRESS(4550existing-coordinateanalysis). CurrentturnPROGRESS:

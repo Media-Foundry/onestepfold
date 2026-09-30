@@ -1,0 +1,47 @@
+{
+  "jobs": {
+    "train": "662548",
+    "audit": "662549"
+  },
+  "commands": [
+    [
+      "sbatch",
+      "--parsable",
+      "-p",
+      "acd_u",
+      "--job-name=global_train",
+      "--gres=gpu:1",
+      "--cpus-per-task=8",
+      "--mem=64G",
+      "--time=04:00:00",
+      "--no-requeue",
+      "--kill-on-invalid-dep=yes",
+      "--dependency=afterok:662546",
+      "--output=/data/user/shuang886/Folding/folding_global_distance_training_v1_20260930/logs/%x_%j.out",
+      "/data/user/shuang886/Folding/folding_global_distance_training_v1_20260930/batch.sh",
+      "train"
+    ],
+    [
+      "sbatch",
+      "--parsable",
+      "-p",
+      "acd_u",
+      "--job-name=global_audit",
+      "--gres=gpu:1",
+      "--cpus-per-task=8",
+      "--mem=64G",
+      "--time=00:20:00",
+      "--no-requeue",
+      "--kill-on-invalid-dep=yes",
+      "--dependency=afterok:662548",
+      "--output=/data/user/shuang886/Folding/folding_global_distance_training_v1_20260930/logs/%x_%j.out",
+      "/data/user/shuang886/Folding/folding_global_distance_training_v1_20260930/batch.sh",
+      "audit"
+    ]
+  ],
+  "lock_sha256": "d266895a7c33f2a6ea4b7f6f492dd7f79bcbb1ec14cd5f2e3cb3088be12d5d27",
+  "release_sha256": "6cf69a477e5d04e01c962fb4068add04459b001de799beaacee172f3feced277",
+  "objective_preflight_sha256": "70c1f9e7de4d3a8eee5e58f5f345da8485cf5d7600c5c2b4fcc65cd1648b4385",
+  "scheduler_preflight": "662545|COMPLETED|0:0\n662546|COMPLETED|0:0\n",
+  "all_input_hashes_rechecked": 1453
+}
