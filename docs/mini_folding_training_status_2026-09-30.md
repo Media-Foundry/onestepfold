@@ -1,10 +1,22 @@
-# TRAIN128 versus TRAIN423: training complete, evaluation running
+# TRAIN128 versus TRAIN423: completed fixed-terminal comparison
 
 This is the folding mainline, with ESM2 and C4/S1/K1 fixed. BindCraft/interface
 work remains deferred; ESMC is a later matched conditioner-interface comparison.
 The scientific protocol is [folding scaling cycle v1](mini_folding_scaling_cycle_v1.md).
-Both training jobs and their independent execution audit have completed. The
-fixed-terminal evaluation has started; new held-out quality is not yet available.
+Both training jobs, independent execution audit, all eight evaluation workers,
+independent GT scoring and final rendering have completed0:0. All4550 outputs
+over455 proteins are present; independent AA/Cα score discrepancy is at most4.44e−16.
+
+**No terminal replaces the retained checkpoint.** On newVAL32, TRAIN423 beats
+TRAIN128 by AA+0.001739 (95%CI[+0.000876,+0.002794]), but versus the retained
+checkpoint its AA+0.000738 interval crosses zero and Cα has no established
+improvement. Both new terminals introduce six severe-collision
+instances relative to retained previously clean predictions. TRAIN128 improves
+its training cohort but loses held-out AA/Cα quality. See the
+[completed findings and next bounded experiment](mini_folding_scaling_findings_2026-09-30.md)
+and [full tables](../reports/mini_folding_evaluation_2026-09-30/final/report.md).
+Below are the execution history and training-only observations; they do not replace
+this final validation conclusion.
 
 ## Both fixed terminals passed execution audit
 

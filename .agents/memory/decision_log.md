@@ -1,3 +1,60 @@
+## 2026-09-30 — Full scaling comparison complete; no incumbent replacement
+
+Previous turn PROGRESS(trainingaudit/evalstart). Currentturn PROGRESS: scoring662322
+COMPLETED0:0 2m11s andreport662360 COMPLETED0:0 5s. All14training/audit/prepare/
+worker/score/report jobscomplete. 455proteins4550outputs,independentGTdistance
+maximumerror4.44e-16. No remaininglivejobsinthiscycle. Goalactive/unfulfilled.
+No newcandidate launched thisturn; next actionimplementlockedcoordinateablation.
+
+NEWVAL32 currentmatchedmeans AA/CA;zero+strictinstances/bothnoiseproteins/severe:
+nativeS1 .815917/.899536;30/64,9/32,902;
+nativeS2 .828004/.910778;37/64,15/32,353;
+retained .817664/.902912;46/64,20/32,562;
+TRAIN128 .816664/.900883;42/64,18/32,523;
+expanded423 .818402/.902915;44/64,20/32,540.
+Expanded-minus128AA+.001739 CI[.000876,.002794],CA+.002032CI[.001070,.003189].
+128-minusretainedAA-.001001CI[-.001803,-.000281],CA-.002029CI[-.003088,-.001084].
+Expanded-minusretainedAA+.000738CI[-.000080,.001503],CA+.000003CI[-.000888,.000863].
+Thus expansionbeatscontinued128onnewVAL,notestablishedbetterthanincumbent.
+Bothterminalsnewseverefromretainedzero6/64;loststrict4vs1. Expandedzero+strict44
+versusretained46. No promotion. Expanded-minusS2AA-.009601CI[-.013642,-.006038].
+Expanded-minusnativeS1AA+.002485CI[.000761,.004271],butnotnewgainversusretained.
+Bothterminalsvsretained0AAproteindrops<-.05;expandedpairedAAP01-.005954,
+worst5mean-.005071. No uniformquality/chemistrypreservationclaimed.
+
+OriginalTRAIN128 AAchangesfromretained:128+.007065;expanded+.001658.
+AddedTRAIN295:128-.000644;expanded+.004734. NewVAL:128-.001001;expanded+.000738.
+Consistentwithoverfitting/retentionlimits;dataexpansionhelpsrelative128butnot
+strongscalingclaim. Added295unseenby128armusesTRAINnoise,soVALnoisealonecannot
+explainallunseensequencedecline; sequence/noiseeffectnotfullyseparated. Conditions
+notpurecausaldatasize(equalupdatesnotperproteinexposure/compute). NewVAL31/32
+homooligomerchains,only1>511aa; nowrevealed, future reuseisdevelopmentnotfresh.
+
+Archives reports/mini_folding_evaluation_2026-09-30/final: fullgeneratedreport.md,
+4095-rowpaired.csv,provenance/execution,schedulerall14,losslesscohorts.json.gz,
+local_acceptance.json,plottedAA/CAcohortchangesPNG/PDF/reproduciblescript.
+TransfersSHAverifiedagainstprovenance;all455*9CSVrowsunique,twonoiseaveragesand
+all27contrastmeansrecomputedexactly,denominators128/295/32checked. Full419MBeval
+andcoordinatesremainHPC3folding_scale_evaluation_v1_20260930;notcommittedhugefile.
+EvaluationSHA5ff7052c9d2111d11ff54455b5bba83c3ae573772ab855398d905d56bfa6741d.
+CohortsSHA7033d7dad31e1cfe7ae7dbb715ea977c21d0a21f9a1c475e6ba17be85caf1983.
+
+Docs mini_folding_scaling_findings_2026-09-30.md containfullinterpretation;
+overallreportandtrainingstatusfrontupdated, no designfocusoroldqualityconflation.
+Nextscientificprotocol docs/mini_folding_coordinate_ablation_v1.md: SINGLEnewarm,
+startsameRETAINEDparent(notexpandedterminal),same423groups/order/seeds/2048steps/
+8192exposures/optimizer/schedule/scope;onlycoordinateweight.01→0. AllotherGTsmooth/
+chemistrytermsandnativeS2auxunchanged;computecoordinateforlogging. ExperimentalGT
+notreplacedbyteacher. NewprivateHPC3root/acd_u1H100;reuseimmutableexpandedcontrol,
+no extra controltraining. Preflightoutputparity/losstermdifference/finitegradient
+andlockedreleasebeforetraining. Newcandidate910evalpredictionNFEs;engineering
+countmustbelockedbeforelaunch. Reuseoldreferenceoutputs;nowobservedVAL32only
+explicitdevelopment, laterfreshconfirmneeded. Noautoextension/weightgrid/ESMC
+switch/repair/LoRA/BindCraft. ThisablationisnotproofMSEcausesallgeneralization
+problems; diagnosticscopeandpossibleglobal/localtradeoffmustremainexplicit.
+
+CSV retains originalCRLFforhashparity. Use git -c core.whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol diff --cached --check; itpasses. Do notnormalizefrozenCSVsilently.
+
 ## 2026-09-30 — Both training terminals audited; full evaluation started
 
 Previous goal turn VERIFIED WAIT (specific662291 live, advancing). Current turn
