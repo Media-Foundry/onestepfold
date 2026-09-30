@@ -1,3 +1,71 @@
+## 2026-09-30 — Isolated native diffusion pilot data128TRAIN+32VALIDATION ready
+
+Previous7c6979e8PROGRESS: nativeadapteroneupdate/mergepathpassed; nottrainingefficacy.
+ThisturncompletedSOURCEONLYdataforfirstboundedlearningpilot. Nativeone-stepmodel,
+GT/teacherlossrecipe/scales/budget/evaluationstillneedlockbeforepredictions/training.
+NoGPU,teachercoordinates,inference,weightsupdates orold32outcomereuse thisturn.
+
+DiamondHillroot /media/PM982/onestepfold/diffusion_training_sources_v1_20260930.
+Controller274484/worker274491bothterminal/procabsent,exit0,93.85614s;CPUindependentaudit
+exit0,11.59138s.16CPUscan/BLAST,8singlethreadnativepreflightworkers.128TRAIN/32VAL
+complete,each64/16perstratum50-255/256-1024. SourcecontractlockedBEFOREscan.
+Full256shardrawcatalog,structureconstructsequence, Xray<=2.5A,release<=2021-09-30,
+oneexperimentalmodel,authorassemblymonomer/homooligomer,nootherpolymer/nucleicacid,
+canonical50-1024,SIFTSaccession. Preferlexicalfullyobservedchain beforeGTgeometry/
+modeloutcomes,thenbestresolution/PDB/chain/assembly representativepersequenceSHA.
+Ligand/assemblycontextsretained,notclaimingmissingpartnersirrelevant.
+
+References21175 =earlier21102 plus64calibrations+fresh8+1U07;PDB/accessionexclusions
+includeoriginal32/localfit8metadata. Bothtrainingandvalidationnoveltotheseoperational
+refs;strictpairwiseHSP/PDB/accessionisolationwithin/acrossbothroles. No claimofMini/
+ESMpretrainingindependence/unrelatedfolds. BLAST2.17samecalibratedword3/BLOSUM62/gaps
+11/1,SEG/compstats,E.001,originaldbsize5755138,alltargetlimit,16threads;near>=50aligned,
+identity>=.3,shortercoverage>=.7,E<=.001 ORdomain>=50aligned,E<=1e-5 excluded.
+Hashrank'diffusion-sources-v1:20260930:'+group,cap2048eachstratum,4096queries.
+26,268sourceeligiblerecords,17,693historicalidentityrecordsremoved,4390sequencegroups.
+AfterBLAST1298eligible.348native/sourcepreflights:222pass,126fail.160selected,
+43pair/identityconflicts,19passbutquotafilledwithinbatch. Roleseveryfifthacceptedper
+stratumvalidation;stop80/stratum.Batches32 nooutcome/adaptivemethodscoreselection.
+
+DATA CONTRACTchangeintentional: NOTearlierall-heavy-observedrepairrestriction.
+RequirefullfinitecontinuousN/CA/C/O,no modifiedresidue/chainbreak,sourcecrosslinks
+unsupportedrejected,unannotatedSGpair<2.3Aexcluded. Nativeheavyobserved>=.90,allmissing
+GTcoordszeroPLACEHOLDERS+boolmask.NEVERtrain/scorezero placeholders.Nativeinventory
+geometryevaluatedfullincludingunobservedGTatoms. FuturetrainerMUSTuseGTmask before
+arithmetic;DO NOTcopy1U07preflightmask=torch.ones. Originalgtatom37correspondence
+andnativeidentity/masks/referencereplay/peptidegraphaudited. SourceGTmaterializedtwice
+identical,nomodelorconnectionwindowselection. Chemistry/geometrythresholdsnotwaived.
+
+TRAIN128length52-968 median256.5,4bins50-127/128-255/256-511/512-1024=[22,42,55,9].
+269493nativeatoms268933observed560missing;61partialproteins,mincoverage.9204545.
+5monomer/123homooligomersources,resolution.98-2.5.
+VAL32length60-662median240,bins[9,7,15,1];65012atoms64941observed71missing;
+13partial,mincoverage.9895437.1monomer/31homooligomersources,resolution1.2-2.5.
+ThusNOTbroadlongchainorpuremonomervalidation. This128isboundedFIRSTtrial,notfinal
+trainingcorpuscap;larger29ktrainingassetsremainbutnewVALmuststayexcluded.
+
+IndependentHSPformula(no HSP.evidence reuse)reparsed91468rows,checkedIDs/lengths,
+reconstructedallbadsets/pairedges/greedyrolesexactly. All2234preflightdataartifacthashes
+verified(includingunselectedcases),selected160GTmask/identitymappingpassed.4source
+screenunit testsPASS. Metadataevidence39members18,596,269bytesallSHA/runtimecode/
+auditscriptexactlocalverified. Selectednative+GTpackets9,488,511,591bytesremainremote,
+NOTinGitarchive;Gitstoresfullsource/search/split/hash/auditmetadata,not9.49GBpackets.
+reports/mini_diffusion_training_sources_2026-09-30/evidence_metadata.tar.gz contains
+pool/selection/preflight/searchlocks/HSPS/fasta/protocol/sourcecode. Readableaudit,
+summary,selection_lockfilesbesideit. Sourceindexmodule src/fastglycan/adapter_sources.py,
+scripts prepare_diffusion_training_sources.py and audit_diffusion_training_sources.py.
+Docs mini_diffusion_training_sources_v1.md andfindings_2026-09-30.md;overviewupdated.
+Collectionhelper/tmp/collect_adapter_sources.py.
+
+NEXT: lockformalboundedlearningexperiment,GTauthoritativeandS2syntheticpotentially
+chemicallywrong;defineGTmask-awareloss/chemistry/scales,updatebudget/terminalvalidation
+beforegeneratingteacher/predictionresults. NeedcachednativeC4conditioning forfrozenPF
+trainingonly,notfakesequencegradient. Canuse8GCDforindependentcachegeneration ifuseful,
+reuseperproteinESM/trunk,avoidredundantloading.No oldY38/2B0Atuning,noFDreopening.
+Role=validation NEVERinoptimization/teachertraininglabel/lossweightselection. Native
+adapter835584paramsvalidatedlastturnready. Newdata9.49GBpathabove. Finalone-step
+chemicaloutputandharddesignutility remainUNFULFILLED;goalACTIVE,nojobsleftthisbatch.
+
 ## 2026-09-30 — Native one-step diffusion adapter engineering preflight completed
 
 Previous51f2d387wasPROGRESS: matched2B0AS2/S5rescuedbadraw, separateevaluationv2.

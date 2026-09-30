@@ -1,0 +1,54 @@
+{
+  "role_counts": {
+    "train": 128,
+    "validation": 32
+  },
+  "hsps_reparsed": 91468,
+  "audit_seconds": 11.591377131000627,
+  "source_seconds": 93.85614070500014,
+  "data_files": 2234,
+  "roles": {
+    "train": {
+      "proteins": 128,
+      "length_min": 52,
+      "length_max": 968,
+      "length_median": 256.5,
+      "length_bins": [
+        22,
+        42,
+        55,
+        9
+      ],
+      "native_atoms": 269493,
+      "observed_atoms": 268933,
+      "missing_atoms": 560,
+      "partial_gt_proteins": 61,
+      "min_observed_fraction": 0.9204545454545454,
+      "monomer_sources": 5,
+      "homooligomer_sources": 123,
+      "resolution_min": 0.98,
+      "resolution_max": 2.5
+    },
+    "validation": {
+      "proteins": 32,
+      "length_min": 60,
+      "length_max": 662,
+      "length_median": 240.0,
+      "length_bins": [
+        9,
+        7,
+        15,
+        1
+      ],
+      "native_atoms": 65012,
+      "observed_atoms": 64941,
+      "missing_atoms": 71,
+      "partial_gt_proteins": 13,
+      "min_observed_fraction": 0.9895437262357415,
+      "monomer_sources": 1,
+      "homooligomer_sources": 31,
+      "resolution_min": 1.2,
+      "resolution_max": 2.5
+    }
+  }
+}
