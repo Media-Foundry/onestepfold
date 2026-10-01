@@ -1,0 +1,137 @@
+{
+  "complete": true,
+  "controller_pid": 442342,
+  "jobs": [
+    {
+      "mode": "prepare",
+      "index": 0,
+      "pid": 442352,
+      "command": [
+        "timeout",
+        "1800",
+        "/media/IntelSSD/onestepfold/diamondhill_migration_20261001/tools/proot/usr/bin/proot",
+        "-b",
+        "/media/IntelSSD/onestepfold/hpc3_mirror_20261001/Folding:/data/user/shuang886/Folding",
+        "/home/pc/anaconda3/envs/fold/bin/python",
+        "-u",
+        "/data/user/shuang886/Folding/backbone_sequence_pilot_v1_20261001_retry1/code/scripts/run_backbone_sequence_pilot.py",
+        "--root",
+        "/data/user/shuang886/Folding/backbone_sequence_pilot_v1_20261001_retry1",
+        "--mode",
+        "prepare",
+        "--index",
+        "0"
+      ],
+      "started": 1790843422.7769315,
+      "exit_code": 0,
+      "seconds": 9.42793607711792
+    },
+    {
+      "mode": "audit",
+      "index": 0,
+      "pid": 442357,
+      "command": [
+        "timeout",
+        "1800",
+        "/media/IntelSSD/onestepfold/diamondhill_migration_20261001/tools/proot/usr/bin/proot",
+        "-b",
+        "/media/IntelSSD/onestepfold/hpc3_mirror_20261001/Folding:/data/user/shuang886/Folding",
+        "/home/pc/anaconda3/envs/fold/bin/python",
+        "-u",
+        "/data/user/shuang886/Folding/backbone_sequence_pilot_v1_20261001_retry1/code/scripts/run_backbone_sequence_pilot.py",
+        "--root",
+        "/data/user/shuang886/Folding/backbone_sequence_pilot_v1_20261001_retry1",
+        "--mode",
+        "audit",
+        "--index",
+        "0"
+      ],
+      "started": 1790843432.2092168,
+      "exit_code": 0,
+      "seconds": 96.88440871238708
+    },
+    {
+      "mode": "audit",
+      "index": 1,
+      "pid": 442358,
+      "command": [
+        "timeout",
+        "1800",
+        "/media/IntelSSD/onestepfold/diamondhill_migration_20261001/tools/proot/usr/bin/proot",
+        "-b",
+        "/media/IntelSSD/onestepfold/hpc3_mirror_20261001/Folding:/data/user/shuang886/Folding",
+        "/home/pc/anaconda3/envs/fold/bin/python",
+        "-u",
+        "/data/user/shuang886/Folding/backbone_sequence_pilot_v1_20261001_retry1/code/scripts/run_backbone_sequence_pilot.py",
+        "--root",
+        "/data/user/shuang886/Folding/backbone_sequence_pilot_v1_20261001_retry1",
+        "--mode",
+        "audit",
+        "--index",
+        "1"
+      ],
+      "started": 1790843432.2102726,
+      "exit_code": 0,
+      "seconds": 96.88411092758179
+    },
+    {
+      "mode": "audit",
+      "index": 2,
+      "pid": 442360,
+      "command": [
+        "timeout",
+        "1800",
+        "/media/IntelSSD/onestepfold/diamondhill_migration_20261001/tools/proot/usr/bin/proot",
+        "-b",
+        "/media/IntelSSD/onestepfold/hpc3_mirror_20261001/Folding:/data/user/shuang886/Folding",
+        "/home/pc/anaconda3/envs/fold/bin/python",
+        "-u",
+        "/data/user/shuang886/Folding/backbone_sequence_pilot_v1_20261001_retry1/code/scripts/run_backbone_sequence_pilot.py",
+        "--root",
+        "/data/user/shuang886/Folding/backbone_sequence_pilot_v1_20261001_retry1",
+        "--mode",
+        "audit",
+        "--index",
+        "2"
+      ],
+      "started": 1790843432.210971,
+      "exit_code": 0,
+      "seconds": 96.88392043113708
+    },
+    {
+      "mode": "audit",
+      "index": 3,
+      "pid": 442361,
+      "command": [
+        "timeout",
+        "1800",
+        "/media/IntelSSD/onestepfold/diamondhill_migration_20261001/tools/proot/usr/bin/proot",
+        "-b",
+        "/media/IntelSSD/onestepfold/hpc3_mirror_20261001/Folding:/data/user/shuang886/Folding",
+        "/home/pc/anaconda3/envs/fold/bin/python",
+        "-u",
+        "/data/user/shuang886/Folding/backbone_sequence_pilot_v1_20261001_retry1/code/scripts/run_backbone_sequence_pilot.py",
+        "--root",
+        "/data/user/shuang886/Folding/backbone_sequence_pilot_v1_20261001_retry1",
+        "--mode",
+        "audit",
+        "--index",
+        "3"
+      ],
+      "started": 1790843432.2119744,
+      "exit_code": 0,
+      "seconds": 96.88332748413086
+    }
+  ],
+  "phase": "stopped_at_audit",
+  "started": 1790843422.7762206,
+  "audit_gates": [
+    true,
+    false,
+    true,
+    true
+  ],
+  "success": false,
+  "reason": "no hard evaluation released",
+  "seconds": 106.32508730888367
+}

@@ -1,3 +1,38 @@
+## 2026-10-01 — C4/S1 sequence/backbone pilot COMPLETE; gradients consistent, selection0/4 vs1/4
+
+User fixes C4/S1/K1; no recycle compression. Mainline now full sequence gradient
+and valid hard utility, not more hard-folding training as prerequisite. fixed2048
+is development checkpoint,retained512 global-quality reference,diverse archived;
+symmetry unstarted. No binder/deployment or global soft-chemistry claim.
+New protocol mini_backbone_sequence_pilot_v1; four hash-selected TRAIN parents
+1EN7/157,5I27/87,2D00/109,3PMD/153. Target observed parent CA-pair Huber loss,
+NOT mutant experimental GT, not contact compaction. All live ERC+ESM2+C4+S1.
+Four exact hard endpoints, exact repeat coordinates/gp/gq, complete native/math
+logits VJP relativeL2 4.89e-5–8.29e-5,12 true original-q JVP projections agree
+<.125% native/<.142% reference. All hard/near zero severe and strict checked chirality.
+Original v1 gate3/4:5I27 amplitudes<1e-6 despite relative agreement<.1% and
+nonzero fullgradient. Preserved stopped_at_audit. BEFORE any candidate outputs,
+disclosed POST-AUDIT v1a release requires relative-only5% ALL directions, full
+nonzero VJP1%,other gates unchanged. No relabeling originalpass or preregistration.
+One gradient-selected vs random position,parent;all19 substitutions each;156
+sequences468hard predictions. Proposal211001,confirmation211013/211021. All
+worker exits0. Confirmed candidates17/76 vs9/76, but prespecified selection0/4
+vs1/4. Only random1EN7D139E confirmed. Selected candidates all confirmation-task
+improved,zero severe/strict chirality; failures are bond/penetration nonregression,
+not severe collapse. No posthoc selection,thresholdrelaxation or extra mutations.
+Native whole F/B repeat1.75–2.10s,allocated12.03–13.33GiB on MI25087–157aa;
+not long-chain benchmark,total search cost or speedup. audit106.3s,utility113.4s.
+CPU independent468coords matched counts,penetrationerr9.54e-8,targeterr1.29e-6;
+24 AD projections recomputederr8.47e-21,selection audit exact,9focusedtestsPASS.
+Initial root missingcalibration failed BEFOREgradient;retry1samebands hashfixed.
+Local CPU audit hit Biotite pickleversion issue;ran same independentCPUformulas
+in originalenvironment,noGPUrerun. All672archive membershashverified.
+Report docs/mini_backbone_sequence_findings_2026-10-01.md;reports/mini_backbone_sequence_2026-10-01.
+Remote IntelSSD mirror/backbone_sequence_pilot_v1_20261001_retry1;controllers
+442342 and443105 done. No active jobs. Close this batch; next candidate ONLY if
+continued:prelocked multiple development-noise selection with separateconfirmation.
+Do not reopen old backward debugging or continue these fourcandidate lists.
+
 ## 2026-10-01 — Noise-diversity assessment COMPLETE; keep fixed development control
 
 Assessmentretry1/controller432109 complete,true all20jobs exit0. Original455x2x2=1820;
