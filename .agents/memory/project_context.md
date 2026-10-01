@@ -1,3 +1,26 @@
+## 2026-10-01 — Noise-diversity assessment COMPLETE; keep fixed development control
+
+Assessmentretry1/controller432109 complete,true all20jobs exit0. Original455x2x2=1820;
+TRAIN32sixnoise384,128old outputs exactduplicate;matchedflag256all exact;engineering112.
+Allcohort/RMSDstatsrecomputedlocallyexact,denselDDTerr<4.5e-16,parent128inputhashesmatch.
+CPUfar-distanceanalysis1820coords complete RMSDreplay0, no newGPUcalls.
+NewTRAIN32fournoise diverse-fixed AA -.00003161 CI[-.00032935,+.00025496],CA-.00004246;
+geometry73→80/128,all4pass10→14/32;instances10gains3losses,protein5gains1loss.
+InteractionAA+.0021265 CIpositive:gapshrink NOT actualprecisionwin.
+DEV32 AA+.00032994 CIcross0,CA+.00016849 CIcross0;geom48→46/64,all2pass23→21/32;
+severe430→411,RMSD3.50990→3.50091 CIcross0,farMAE2.54650→2.53023 CIcross0.
+IMPORTANT correctedusernoisechart:DEV seeds810013/810029 NOT TRAIN600001/600011.
+DEVnoisesuntrainedbutdevelopment-observed;DEVxfourdiagnosticnoisesnotmeasured.
+OriginalTRAIN128AA-.00241814,added295AA-.00254345,CInegative;geom190→157/256,
+464→403/590;target2V66AAmean-.05254,3RBYseed600001-.09689,retainpairedtails.
+ParentTRAIN32new:fixedAA+.00136794/diverse+.00133633,bothCIcross0;
+RMSD+.07922 CIpositive/+.06636 CIcross0;parentall4geom15/32,fixed10,diverse14.
+DECISION keepfixed asnextmatcheddevelopmentcontrol,keepretained512globalreference,
+doNOTpromotediverse/deployment,extendtraining,restartdesign,orlaunchnewconfirmation.
+Nextcandidateifrequested:isolatedsymmetry-supervision trial,old/newmetricsboth;notlaunched.
+Allremotejobsdone,norestartneeded. Fullreport docs/mini_noise_diversity_findings_2026-10-01.md;
+archive assessment_complete,analysis,assessment_acceptance.json underreports/mini_noise_diversity_2026-10-01.
+
 Assessment follow-up: original8workers entered model initialization; SSH then timed out
 again. Terminal training archive complete, assessment archive partial (noise lock download
 missing). Controller432109 detached; do not duplicate. Runtime path attempts preserved,
