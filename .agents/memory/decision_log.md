@@ -1,3 +1,24 @@
+Assessment follow-up: original8workers entered model initialization; SSH then timed out
+again. Terminal training archive complete, assessment archive partial (noise lock download
+missing). Controller432109 detached; do not duplicate. Runtime path attempts preserved,
+final virtual alias resolve verified equal to native runtime. No completed inference claim.
+
+## 2026-10-01 — Both noise-diversity trainings complete; terminal audit passed
+
+fixed/diverse2048updates8192exposuresTRAIN423 exit0,46.98/47.56min.
+TRAIN32 oldnoise probes AA .807539522/.805381357;CA .889036918/.886825405;
+severe201/268,zero+strict47/41of64. Sameinitial64exact. Oldnoise favorsfixed;
+not held-noise/DEV evidence. Terminal auditor verified orders/loss/LR/Adam/weights/hashes.
+Archive reports/mini_noise_diversity_2026-10-01/terminal, findings
+ docs/mini_noise_diversity_status_2026-10-01.md.
+Assessment first root failed missingevaluation_reuse BEFORE prediction; retained.
+Retry noise_diversity_assessment_v1_20261001_retry1 controller432109 inference started,
+uses prior evaluation snapshot,8GCDoriginal455x2 then matchedflagreplay and TRAIN32sixnoises
+(old2 separately,new4),CPUscore8workers. No training added or thresholdschanged.
+Controller at root/controller.py; next inspect handles/controller_execution/prepare.log,
+original/report.json and noise/report.json. Root under IntelSSD mirror.
+No held-noise/DEV conclusion yet; no bestseed/checkpoint/model promotion.
+
 Archive note: subsequent SSH timeout interrupted launch download; pair release and
 fixed report39updates captured, diverse preflight proven by pair/controller release
 but its separate files not yet downloaded. No evidence of training failure; remote

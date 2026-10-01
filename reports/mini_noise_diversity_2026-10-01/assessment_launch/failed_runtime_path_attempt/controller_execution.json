@@ -1,0 +1,203 @@
+{
+  "complete": false,
+  "jobs": [
+    {
+      "label": "prepare",
+      "pid": 431036,
+      "command": [
+        "/media/IntelSSD/onestepfold/diamondhill_migration_20261001/tools/proot/usr/bin/proot",
+        "-b",
+        "/media/IntelSSD/onestepfold/hpc3_mirror_20261001/Folding:/data/user/shuang886/Folding",
+        "/home/pc/anaconda3/envs/fold/bin/python",
+        "-u",
+        "/data/user/shuang886/Folding/noise_diversity_assessment_v1_20261001_retry1/tools/assess_noise_diversity.py",
+        "--root",
+        "/data/user/shuang886/Folding/noise_diversity_assessment_v1_20261001_retry1",
+        "--mode",
+        "prepare"
+      ],
+      "start_unix": 1790829848.4730954,
+      "gcd": 0,
+      "exit_code": 0,
+      "seconds": 49.945106506347656
+    },
+    {
+      "label": "original_0",
+      "pid": 431245,
+      "command": [
+        "/media/IntelSSD/onestepfold/diamondhill_migration_20261001/tools/proot/usr/bin/proot",
+        "-b",
+        "/media/IntelSSD/onestepfold/hpc3_mirror_20261001/Folding:/data/user/shuang886/Folding",
+        "/home/pc/anaconda3/envs/fold/bin/python",
+        "-u",
+        "/data/user/shuang886/Folding/noise_diversity_assessment_v1_20261001_retry1/code/scripts/evaluate_diffusion_learning.py",
+        "--root",
+        "/data/user/shuang886/Folding/noise_diversity_assessment_v1_20261001_retry1/original",
+        "--mode",
+        "worker",
+        "--index",
+        "0"
+      ],
+      "start_unix": 1790829898.4198124,
+      "gcd": 0,
+      "exit_code": 1,
+      "seconds": 4.884086847305298
+    },
+    {
+      "label": "original_1",
+      "pid": 431246,
+      "command": [
+        "/media/IntelSSD/onestepfold/diamondhill_migration_20261001/tools/proot/usr/bin/proot",
+        "-b",
+        "/media/IntelSSD/onestepfold/hpc3_mirror_20261001/Folding:/data/user/shuang886/Folding",
+        "/home/pc/anaconda3/envs/fold/bin/python",
+        "-u",
+        "/data/user/shuang886/Folding/noise_diversity_assessment_v1_20261001_retry1/code/scripts/evaluate_diffusion_learning.py",
+        "--root",
+        "/data/user/shuang886/Folding/noise_diversity_assessment_v1_20261001_retry1/original",
+        "--mode",
+        "worker",
+        "--index",
+        "1"
+      ],
+      "start_unix": 1790829898.4211948,
+      "gcd": 1,
+      "exit_code": 1,
+      "seconds": 4.883405447006226
+    },
+    {
+      "label": "original_2",
+      "pid": 431248,
+      "command": [
+        "/media/IntelSSD/onestepfold/diamondhill_migration_20261001/tools/proot/usr/bin/proot",
+        "-b",
+        "/media/IntelSSD/onestepfold/hpc3_mirror_20261001/Folding:/data/user/shuang886/Folding",
+        "/home/pc/anaconda3/envs/fold/bin/python",
+        "-u",
+        "/data/user/shuang886/Folding/noise_diversity_assessment_v1_20261001_retry1/code/scripts/evaluate_diffusion_learning.py",
+        "--root",
+        "/data/user/shuang886/Folding/noise_diversity_assessment_v1_20261001_retry1/original",
+        "--mode",
+        "worker",
+        "--index",
+        "2"
+      ],
+      "start_unix": 1790829898.4225895,
+      "gcd": 2,
+      "exit_code": 1,
+      "seconds": 4.8825647830963135
+    },
+    {
+      "label": "original_3",
+      "pid": 431249,
+      "command": [
+        "/media/IntelSSD/onestepfold/diamondhill_migration_20261001/tools/proot/usr/bin/proot",
+        "-b",
+        "/media/IntelSSD/onestepfold/hpc3_mirror_20261001/Folding:/data/user/shuang886/Folding",
+        "/home/pc/anaconda3/envs/fold/bin/python",
+        "-u",
+        "/data/user/shuang886/Folding/noise_diversity_assessment_v1_20261001_retry1/code/scripts/evaluate_diffusion_learning.py",
+        "--root",
+        "/data/user/shuang886/Folding/noise_diversity_assessment_v1_20261001_retry1/original",
+        "--mode",
+        "worker",
+        "--index",
+        "3"
+      ],
+      "start_unix": 1790829898.4232702,
+      "gcd": 3,
+      "exit_code": 1,
+      "seconds": 4.882523059844971
+    },
+    {
+      "label": "original_4",
+      "pid": 431251,
+      "command": [
+        "/media/IntelSSD/onestepfold/diamondhill_migration_20261001/tools/proot/usr/bin/proot",
+        "-b",
+        "/media/IntelSSD/onestepfold/hpc3_mirror_20261001/Folding:/data/user/shuang886/Folding",
+        "/home/pc/anaconda3/envs/fold/bin/python",
+        "-u",
+        "/data/user/shuang886/Folding/noise_diversity_assessment_v1_20261001_retry1/code/scripts/evaluate_diffusion_learning.py",
+        "--root",
+        "/data/user/shuang886/Folding/noise_diversity_assessment_v1_20261001_retry1/original",
+        "--mode",
+        "worker",
+        "--index",
+        "4"
+      ],
+      "start_unix": 1790829898.4241855,
+      "gcd": 4,
+      "exit_code": 1,
+      "seconds": 4.882149934768677
+    },
+    {
+      "label": "original_5",
+      "pid": 431252,
+      "command": [
+        "/media/IntelSSD/onestepfold/diamondhill_migration_20261001/tools/proot/usr/bin/proot",
+        "-b",
+        "/media/IntelSSD/onestepfold/hpc3_mirror_20261001/Folding:/data/user/shuang886/Folding",
+        "/home/pc/anaconda3/envs/fold/bin/python",
+        "-u",
+        "/data/user/shuang886/Folding/noise_diversity_assessment_v1_20261001_retry1/code/scripts/evaluate_diffusion_learning.py",
+        "--root",
+        "/data/user/shuang886/Folding/noise_diversity_assessment_v1_20261001_retry1/original",
+        "--mode",
+        "worker",
+        "--index",
+        "5"
+      ],
+      "start_unix": 1790829898.4251742,
+      "gcd": 5,
+      "exit_code": 1,
+      "seconds": 4.882726430892944
+    },
+    {
+      "label": "original_6",
+      "pid": 431255,
+      "command": [
+        "/media/IntelSSD/onestepfold/diamondhill_migration_20261001/tools/proot/usr/bin/proot",
+        "-b",
+        "/media/IntelSSD/onestepfold/hpc3_mirror_20261001/Folding:/data/user/shuang886/Folding",
+        "/home/pc/anaconda3/envs/fold/bin/python",
+        "-u",
+        "/data/user/shuang886/Folding/noise_diversity_assessment_v1_20261001_retry1/code/scripts/evaluate_diffusion_learning.py",
+        "--root",
+        "/data/user/shuang886/Folding/noise_diversity_assessment_v1_20261001_retry1/original",
+        "--mode",
+        "worker",
+        "--index",
+        "6"
+      ],
+      "start_unix": 1790829898.425988,
+      "gcd": 6,
+      "exit_code": 1,
+      "seconds": 4.882196664810181
+    },
+    {
+      "label": "original_7",
+      "pid": 431257,
+      "command": [
+        "/media/IntelSSD/onestepfold/diamondhill_migration_20261001/tools/proot/usr/bin/proot",
+        "-b",
+        "/media/IntelSSD/onestepfold/hpc3_mirror_20261001/Folding:/data/user/shuang886/Folding",
+        "/home/pc/anaconda3/envs/fold/bin/python",
+        "-u",
+        "/data/user/shuang886/Folding/noise_diversity_assessment_v1_20261001_retry1/code/scripts/evaluate_diffusion_learning.py",
+        "--root",
+        "/data/user/shuang886/Folding/noise_diversity_assessment_v1_20261001_retry1/original",
+        "--mode",
+        "worker",
+        "--index",
+        "7"
+      ],
+      "start_unix": 1790829898.426667,
+      "gcd": 7,
+      "exit_code": 1,
+      "seconds": 4.881759405136108
+    }
+  ],
+  "controller_pid": 431029,
+  "error": "Traceback (most recent call last):\n  File \"/media/IntelSSD/onestepfold/hpc3_mirror_20261001/Folding/noise_diversity_assessment_v1_20261001_retry1/controller.py\", line 23, in <module>\n    join(batch)\n  File \"/media/IntelSSD/onestepfold/hpc3_mirror_20261001/Folding/noise_diversity_assessment_v1_20261001_retry1/controller.py\", line 17, in join\n    assert all(j['exit_code']==0 for p,j in batch),'stage failed'\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: stage failed\n"
+}
