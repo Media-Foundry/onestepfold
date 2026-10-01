@@ -1,3 +1,39 @@
+## 2026-10-01 — ChordFold hard-condition editing pilot COMPLETE; frozen proxy not promoted
+
+User pivots to (hard source sequence, experimental source structure, hard target
+sequence) editing, FULL target C4 first; not generic C4→C1 compression/BindCraft.
+Preserve completed sequence/backbone pilot and fixed/retained/diverse roles.
+Public Mini esm v0.5.0 used for multi-sigma probe, not high-noise-only fixed2048.
+No training, soft sequence, warm-start, recycle compression or geometry repair.
+Four metadata/hash-selected development pairs:1L12→1L04 N157D164aa,1TAY→1TDY
+A63W130aa,1GOB→2RN2 A77G155aa,1IZR→1IZQ A46V124aa. Selection independently
+reconstructed from7080 eligible/2618single-substitutionpairs;completebackbone,
+sharedSIFTSbounds,noexplicitligand/ion/otherpolymer. Not causal mutant labels or
+pretraining-independenttest. Native inventories allobserved. Two pairs eachhave
+fourSG~2Åcontacts notencodedasnativeS-Sbonds; chemistrycoverage explicitlylimited.
+Protocol chordfold_edit_pilot_v1,noise221003/221021,sigma16/12,refine1,fullC4both.
+Backbone-only coupling of native graph denoisers; direct EDM-sigma weighted proxy,
+NOT transfer of imageChordEdit theorem. Native public controlledcoldS1/S2 refs.
+All4workers exit0,8cases,controller450975complete93.9s inclCPUscore;124actualNFE,
+48recyclecalls inclchecks/replays. ColdS1 exact8/8,noeditfieldcancel8/8,cachedreplay4/4.
+Copy/localRMSD .235136 vs sourceSigma1 .249206,naiveRef .259723,smoothRef .282063;
+localbeatscopy3/8,1/8,1/8 respectively;bothseeds1/4,0/4,0/4. Refinednaive/smooth
+AA .956840/.956396 below simpleSigma1 .957708;all3zero severe+checkedchirality8/8.
+ColdS1/S2 AA .885513/.892440; extraexperimentalinput advantage notChordgain.
+Unrefinednaive/smoothB localRMSD .246849/.274826;averageworsecopy. Noeditrefinement
+moveslocal .128–.264Å despiteexactfieldcancel. No bestseed selection/windowsearch.
+TIMINGcomponents order/compilationaffected,notfairfirsteditbenchmark/no speedupclaim.
+Actual sourcecached SAMEvariant replay targetfeatures+ESM+C4+3D=.564–.832s;
+peakallocated11.54–11.74GiB. Assetprep/startup/CPUscore separatelyexcludedfromthat.
+Independent CPUaudit72backbone+48full scores exactlddt/contact/chirality,
+RMSDerror1.11e-14,fieldreconstruction0;5unit tests. Archive991membersSHAverified.
+Postrunenvironmentinventory first omittedLAYERNORM_TYPE,triggeredfusedimportfailure;
+initialaudit preserved,rerunwithruntime torchLN,noGPUrerun or inferencefailure.
+DECISION closefrozenproxy,doNOTadvance warm-start/training;sourcecopy/simplelow-noise
+arestrongbaselines. Futuremethod needsseparateprotocol,notextrapolateallChordfails.
+Docs chordfold_edit_findings_2026-10-01.md;reports/chordfold_edit_2026-10-01.
+Remote IntelSSD mirror/Folding/chordfold_edit_pilot_v1_20261001,alljobsdone.
+
 ## 2026-10-01 — C4/S1 sequence/backbone pilot COMPLETE; gradients consistent, selection0/4 vs1/4
 
 User fixes C4/S1/K1; no recycle compression. Mainline now full sequence gradient
