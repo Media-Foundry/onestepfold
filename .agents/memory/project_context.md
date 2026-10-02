@@ -1,3 +1,33 @@
+## 2026-10-02 — All12 readout endpoints decoded; pair restores seen-site ranking despite latent gate failure
+
+Completed post-hoc endpoint audit requested after e301abae. ALL12 fixed8192 checkpoints,
+3heads(free_hidden,pair,channel)x2labels(raw,R32matrix)x2seeds231301/231303.
+1W53 T37 only,19nonWT x oldnoises230201/230211; oracle target s, WT s_inputs,
+WT z+predicted delta z, native target chemistry. No training/checkpoint selection/newESM/C4.
+610S1=456student+152four-reference+2WT;640scoredrows include reusedWT, NOT640inferences.
+All comparison numbers below versus Baseline(WTinputs,targetsz), Exact kept separately.
+Freehidden rho .970175-.977193;all4 Top1 2/2,regret0,newgeometry0/38,absolute10-12/38.
+Pair rho .909649-.924561 with rawNMSE .494-.500;rawbothseeds Top1 2/2,regret0;
+R32seed231301 Top1 1/2,meanregret .015849,otherseed2/2. PairNOT functionally WT-z(rho-.012281).
+Channel rho .586842-.813158;three Top1 1/2,one0/2;worstregret .133382.
+All12 have0 localRMSD>1A;pairmax .375393A,channelmax .817623A,freehiddenmax .166142A.
+All8pair/channel endpoints each add1 checked-chirality failure at T37N/noise230211
+(0severe pairs,checkedwrong0->1);same candidate/noise,NOT8 independentevents.
+Pair absolutegeometry15-18/38,channel18-20/38,Baseline9/38;netimprovement cannot hide newfailure.
+Geometrystatus onlyzero-severe+strictcheckedchirality,notcompletechemistry.
+RawNMSEvsrho descriptive correlation-.9650,vsmeanlocalRMSD+.9720;onecorrelatedsite,notgeneralization.
+Oldlatent<=.1 gatesremainfailed;functional evidence means fitgatecannotsolelyblockdecode.
+Do notpromote/freehidden remainsmemorydiagnostic/oracletargets remainsunreplaced.
+Nextproposal:bounded multi-context jointfit+functional assessment;NOT started/approvedautotraining.
+No newcapacitygrid,6UFE92 nottested,oldstresscase remains;taskparentGTCAproxy,notmutantGT/design.
+12terminalNMSEreplays exact,sourceweightsunchanged,20referencecoordinatepacketsbitwise;
+160oldreferencescore rows+24rankingsunchanged;120ranking+96independentlddtchecks,
+20downloadhashes,8focusedtests. Controller194.43s includesloading/IO,notE2Espeedclaim.
+Report docs/mini_readout_endpoint_decode_findings_2026-10-02.md;
+protocol mini_readout_endpoint_decode_v1.md;reports/mini_readout_endpoint_decode_2026-10-02.
+Runtime local /home/husrcf/Code/onestepfold_runtime/readout_endpoint_decode_v1_20261002;
+remote /media/IntelSSD/onestepfold/hpc3_mirror_20261001/Folding/readout_endpoint_decode_v1_20261002.
+
 ## 2026-10-02 — Shared readout v1 COMPLETE, no shared-generator promotion
 
 User requested free hidden+original U/V, shared nonlinear pair readout, nonlinear channel-query factors;

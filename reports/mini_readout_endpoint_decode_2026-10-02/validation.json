@@ -1,0 +1,7 @@
+{
+  "complete": true,
+  "focused_tests": 8,
+  "command": "PYTHONPATH=src OMP_NUM_THREADS=1 python -m pytest -q tests/test_response_readouts.py tests/test_functional_response_rank.py tests/test_hip_device_policy.py",
+  "runner_compilation": "passed",
+  "terminal_replay_and_score_audits": "passed; see replay_audit.json, score_audit.json, reference_score_audit.json"
+}
