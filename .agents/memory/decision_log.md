@@ -1,3 +1,49 @@
+## 2026-10-02 — User-authorized R24 extension and NEW-parent factor student pilot COMPLETE, closed
+
+User explicitly reopened only spatialR24 (R32 already measured), then chose NEW-protein pilot with homology isolation.
+Old AA-axis linear/PCA/Jacobian stop remains. Old50sites NOT used for student parameter updates.
+R24 paired oldpanel:energy89.812%,factor/dense33.867%,rho.985105,Top194/100,bothnoise44/50,
+regret.00006887,localmean.036286A,0/1900>1A,max.3411A,newgeometry24vsBaseline/Exact.
+R16/R24/R32 rho.973632/.985105/.990667;Top186/94/95;newgeom33/24/18.
+R24−R16rho+.011474CI[.007018,.015947],Top1+.08CI[.03,.13],regretdecreaseCInegative.
+R32−R24Top1+.01CI[0,.03].UsefulR24tradeoff,NOTzero-failureelbow. Stop furtherRscans.
+R24 complete696.49s,950SVD,7620S1,0C4/ESM;960Exact+960Baselinebitwisereplay;
+950fullshaminputmax1.455e-11,coords3.529e-5A;50CPUsiteaudits;960packet/4000reference/400lddt/1200rank checks.
+
+Newfactorpilot:24parents(82–191aa),2sites/19nonWT;16train8validation. HistoricalfoldingTRAINpool201eligible;
+BLAST2.17near/domainHSP+sharedaccessionconnectedgroups,excludeoldrankpanelcomponents,oneparentpercomponent.
+24distinctgroups/noaccessionoverlap;notremotehomologyabsence or Mini/ESMpretraining-unseen.
+Validation6AHP/1X8D/2EBE/3SXZ/4PQL/6ZRW/1YSB/2FKZ. Same2noises230201/230211train/val;
+measureproteintransfer,NOTjointnewprotein/newnoise. Selectionbeforeteacheroutputs.
+936hardseq=24WT+912mutants,24WTrepeats=960ESM/C4/3840recycles;3696S1;teacher214.74s.
+Fullconditioning9.660GBremoteonly;nativegraphs/identitynoise/sourcehashespreserved. PublicMini weights frozen.
+Student1598592params,width128,2globalnodeattentionblocks,channel-specificU/Vrank32;WTs/z+site+AAONLY.
+Exacttarget s ONLY decoderoracle,WTs_inputs,targetchemistry. No Delta-s head or completeWT-onlypipeline.
+Use reconstructionDelta-zNMSE not ambiguousSVDfactorlabels. Vzero/Urandom;WTqueryexactzero.
+Twoinitseeds230301/230303resetAFTERrunnersetup;identicalsamplingschedule230401,1024updates(each500uniqueof608trainmutants).
+First256latentwarmup,remaining768nativefrozenS1coordinate/distance/clash/chiralityfeedback;AdamW3e-4;noearlyselection/extraupdates.
+Train315.01sparallel;preflightbaselineexact/nonzerofactorgrad/finitepasses;each784S1/0C4,peak1.579GB.
+EVAL8validationparents16sites32rankings608outputs;4predeclaredTRAINprobeparents8sites16rankings304outputs.
+VAL WTz:rho.300877/Top110/32/NMSE1;oracleR32:.994518/30/32/.0640;
+student0:.305811/9/32/1.0017;student1:.299726/10/32/.9984.
+Studentrho deltaWTz+.004934CI[-.02950,.04397],-.001151CI[-.01228,.01310].No learnedtransferadvantage.
+VALlocal>1A WTz165,oracle0,students168/165;studentmax6.16/6.14A,oracle.5894A.
+VALBaselinesgeometry360/608;oracle353(new13),students357each(new42,recovered39);WTz362(new40).
+Student0regret.341726vsWTz.256189,student1.249414;change largely6ZRW,notrobustimprovement.
+TRAINprobe WTzrho.422807/Top15of16;oracle.995285/15;student0.484649/5/NMSE1.0553,student1.443531/5/.9758.
+LimitedfitonTRAINprobe,NOTonlygeneralizationfailure. Traininglatentlast128 .9838/.9763;notcompleteconvergence.
+No causal attribution to capacity/data/optimization/loss/backward;one bounded configuration failed to learn reliable response.
+OracleR32worksnewcohort:representationpositive retained. Noautomaticlargertraining/Delta-s/productionpromotion.
+20queryheadmedian3.37ms/mean19.48ms/max107.49ms;19nonWTexpansionmedian4.34ms;
+conditionaltimingonly,EXACTtarget s external;noend-to-endspeedupclaim. Batchparitymax7.629e-5within1e-4guard,notbitwise.
+GPUeval315.02s,CPUscore50.01s,totalstudentcontroller742.53s(excludesteacher/R24).
+Independent24group/exposureauditpasses;distinctfinalcheckpointSHA;468coords/924teacherarrays/288lddt/960rankchecksagree;14tests.
+Both checkpoints~6.4MBeach preservedlocal/remote,notpromoted. Two batches CLOSED.
+Docs mini_spatial_rank24_findings_2026-10-02.md and mini_factor_student_pilot_findings_2026-10-02.md.
+Artifacts reports/mini_spatial_rank24_2026-10-02 and reports/mini_factor_student_pilot_2026-10-02.
+Local /home/husrcf/Code/onestepfold_runtime/{spatial_rank24_v1_20261002,factor_student_pilot_v1_20261002};
+remote pc@10.120.16.9:/media/IntelSSD/onestepfold/hpc3_mirror_20261001/Folding/same_names.
+
 ## 2026-10-02 — Spatial Delta-z rank diagnostic COMPLETE; retain spatial factors, not a ready student
 
 User closed AA-axis linear compression and requested residue-space compression of existing hard Delta z.

@@ -1,0 +1,9 @@
+# Factor student pilot: new teacher cohort v1
+
+User chose NEW proteins with sequence-homology isolation, rather than fitting the 50-site archive. Sequence-only selection precedes all new response exports. Source is the historical 423-protein folding TRAIN pool: these are new to the response studies, not claimed new to all previous folding development or pretrained Mini/ESM.
+
+Select24 parents, 8 each in80–112/113–150/151–192aa, deterministic SHA256 ordering; two hash-selected sites/parent, all19nonWT AA each. BLAST2.17 all-v-all among201 eligible source rows plus old rank-panel parents, same prior calibrated HSP policy (near or significant domain). Union qualifying hits AND shared SIFTS accessions. Exclude components containing old rank-panel parents, plus12 prior proposal/ChordPDBIDs. One selected parent per component. In each stratum, first3/3/2 selected parents are validation, remaining16 total are training. Keep full graph/HSPrecords; no output/spectrum/geometry used to choose parents or sites. This is operational sequence isolation, not proof of absence of remote homology.
+
+Public Mini-ESM FP32, native hard features/liveESM2/C4, eval/MCdropoutoff, no warm start. 24WT+912nonWT=936distinctsequence endpoints; repeatWTonce/parent =960C4,3840recycles. Save full s_inputs/s/z, native identity/topology/reference and Exact versus WT-s_inputs decoderBaseline for seeds230201/230211. 3696S1calls; all conditioning/coordinate/data/weights/code hashes. Eightwhole-parentGPUassignments,3600secondboundedexport, only afterR24GPUrelease. Errorsretained, no teacher exclusion based on quality.
+
+Teacher export does not itself train, select a checkpoint, or certify mutant experimental effects. The separate student training protocol must freeze architecture, capacity, losses, training/update/noise budget, validation use and stop condition before parameter fitting. Old50sitesremainregression/stress and do not enter student updates.

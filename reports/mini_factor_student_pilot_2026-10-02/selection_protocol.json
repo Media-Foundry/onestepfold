@@ -1,0 +1,64 @@
+{
+  "commands": [
+    [
+      "/media/PM982/onestepfold/tools/blast_2.17.0/ncbi-blast-2.17.0+/bin/makeblastdb",
+      "-in",
+      "/media/IntelSSD/onestepfold/hpc3_mirror_20261001/Folding/factor_student_pilot_v1_20261002/all.fasta",
+      "-dbtype",
+      "prot",
+      "-parse_seqids",
+      "-out",
+      "/media/IntelSSD/onestepfold/hpc3_mirror_20261001/Folding/factor_student_pilot_v1_20261002/db"
+    ],
+    [
+      "/media/PM982/onestepfold/tools/blast_2.17.0/ncbi-blast-2.17.0+/bin/blastp",
+      "-task",
+      "blastp",
+      "-query",
+      "/media/IntelSSD/onestepfold/hpc3_mirror_20261001/Folding/factor_student_pilot_v1_20261002/all.fasta",
+      "-db",
+      "/media/IntelSSD/onestepfold/hpc3_mirror_20261001/Folding/factor_student_pilot_v1_20261002/db",
+      "-out",
+      "/media/IntelSSD/onestepfold/hpc3_mirror_20261001/Folding/factor_student_pilot_v1_20261002/hits.tsv",
+      "-outfmt",
+      "6 qseqid sseqid qlen slen evalue qseq sseq",
+      "-word_size",
+      "3",
+      "-matrix",
+      "BLOSUM62",
+      "-gapopen",
+      "11",
+      "-gapextend",
+      "1",
+      "-seg",
+      "yes",
+      "-comp_based_stats",
+      "2",
+      "-evalue",
+      "0.001",
+      "-max_target_seqs",
+      "204",
+      "-num_threads",
+      "8"
+    ]
+  ],
+  "old_panel_sha256": "0e83ec480f77182fcd2c913b8712a53790c3c4ec99319b8aef4cc8c3507197c0",
+  "pool_sha256": "903e69ff20e48ee4d05e49a2d896b55f8d4c7470275b7bab3cb5e1a618a423d1",
+  "rule": "reuse calibrated HSP near/domain policy; union with shared accessions; one selected parent per component; exclude old rank-panel components",
+  "sites_per_parent": 2,
+  "source_sha256": "77ccf4146ef65e9d9b8c6ba603b1bcd1745acee5d877d11e15061aa1ba29b675",
+  "split_counts": {
+    "train": 16,
+    "validation": 8
+  },
+  "tools": {
+    "blastp": {
+      "sha256": "5ce267c04e4988c265357bfbedc64e809545b6fcfae7ff6775266fabbee8ba0e",
+      "version": "blastp: 2.17.0+\n Package: blast 2.17.0, build Jul  1 2025 08:59:18\n"
+    },
+    "makeblastdb": {
+      "sha256": "c1ffdcf6f15d1d8d75377cc9f37afa42bc9fa06678903bad77c2641e60778fce",
+      "version": "makeblastdb: 2.17.0+\n Package: blast 2.17.0, build Jul  1 2025 08:59:18\n"
+    }
+  }
+}

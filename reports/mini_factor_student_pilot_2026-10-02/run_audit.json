@@ -1,0 +1,45 @@
+{
+  "complete": true,
+  "coordinate_packets": 468,
+  "distinct_final_checkpoints": true,
+  "identical_exposure_schedule": true,
+  "independent_lddt_checks": 288,
+  "max_lddt_error": 0.0,
+  "no_validation_training": true,
+  "qualifying_nonself_hsp_edges": 8,
+  "ranking_checks": 960,
+  "sequence_components": 24,
+  "teacher_reference_arrays_checked": 924,
+  "training_exposures": [
+    1024,
+    1024
+  ],
+  "training_probe_parents": 4,
+  "validation_parents": 8,
+  "tests_passed": 14,
+  "teacher_counts": {
+    "c4": 960,
+    "nfe": 3696,
+    "recycle": 3840,
+    "wt_replay": 24
+  },
+  "training_counts": [
+    {
+      "nfe": 784,
+      "recycle": 0
+    },
+    {
+      "nfe": 784,
+      "recycle": 0
+    }
+  ],
+  "evaluation_expected_nfe": 5496,
+  "graph": {
+    "all_workspace_risk": "high",
+    "staged_task_risk": "medium",
+    "complete_listing": true,
+    "partial": false,
+    "truncated": false,
+    "note": "Existing unrelated modifications excluded; new diagnostic/student workflows staged. UNKNOWN report-file query resolved by targeted text inspection."
+  }
+}
