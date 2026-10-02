@@ -1,3 +1,38 @@
+## 2026-10-02 — 50-site hard C4 response rank COMPLETE; 3–5-mode95% hypothesis unsupported
+
+User requests 20 hardAA endpoints/site, local C4 s_i,zrow,zcol SVD before anytraining.
+Frozenprotocol mini_hard_response_rank_v1,10hash-selectedTRAINparents×5sites,
+length92–221,distinctSIFTSaccessions,notcluster-independent. PublicMiniESM+ESM2-3B,
+livehardfeatures/chemistry/ESM/fullC4FP32;noMSA/templates,MCdropoutoff,no diffusion.
+Parents6UFE,2VKJ,2SAK,2TRH,2DT4,1BXW,4U5P,1A8R,2DT5,1KUU;siteslockedbeforeoutputs.
+960uniquehardseq +20replays =980C4forwards,3920recyclecalls,0NFE. WTshared5sites.
+All8workers0/collector0,controller476223complete223.14s.20replayslocaloutputs+graph
+metadataEXACT. Savesall20FP32localendpoints,s_inputs_i separately,inventoryhashes.
+FP64-before-subtraction,19responseGram;raw andmutant-mean-centered plusblock,
+perfeature,equalenergy,z_iidiagonal-dedup sensitivities.50sites all informative.
+RAW E1..5=.585277,.725538,.795693,.842567,.876451;E3>=.95 0/50,E5 1/50;
+rank95median9.5 range5–12,rank99median15. CenteredE3.657626/E5.788338,
+0/50both,rank95median12range7–13,rank99median16. RawE3CI[.778927,.811590],
+E5CI[.865284,.887272],10proteinbootstrap10000(no50independentproteinclaim).
+Equalblock E3.780966/E5.861328,rank95median11;centered.626221/.757281,median13.
+Sharedmeanenergyfractionmean.502969. ENTROPYeffectiverankmean4.874 !=5dims95%;
+participationmean2.806;centeredentropyrank7.948. Don't cherry-pick low rankdefinition.
+OnlyrawK5>=95case2DT5G35:E5.957335,E3.919675. No appendedsites/thresholdchanges.
+700spectra independentaudit +100directrectangularSVD,maxenergyerr1.55e-15;
+compactcommittedGramreconstruction700maxerr2.0e-15;3focusedtestsPASS.
+50FP32npzfiles148,922,936bytes verified remote/local;raw endpoints OUTSIDEGit:
+/home/husrcf/Code/onestepfold_runtime/hard_response_rank_v1_20261002;
+DiamondHillIntelSSDmirror/Folding/hard_response_rank_v1_20261002.
+Git containsfullreport.json.gz,per_site.csv,Gram evidence,hashmanifest,protocol/code.
+DECISIONclosebatch;strongK3–5/95%not supported,dominantmodesexist. Noreponsehead,
+noautomaticglobalz/Jacobian-residual/training. Latenttailnotdecoded;notproofalllowrank
+methods useless. Anchor/coeff prediction/globalconditioningstillunmeasured.
+Correctoldinterpretation:previous0/4vs1/4 selectionuseddevelopment-noiseHARDscores,
+notdirectWTJacobian19-AA ranking;outcomealone doesn't diagnose tangentordering.
+Findings docs/mini_hard_response_rank_findings_2026-10-02.md;reports/mini_hard_response_rank_2026-10-02.
+fireprot independentworkspace remains /home/husrcf/Code/fireprot,remote/media/IntelSSD/fireprot,
+fullupstreamv1.1.0git and3publicmodelsmokesready;notmodifiedbythisrankexperiment.
+
 ## 2026-10-01 — ChordFold hard-condition editing pilot COMPLETE; frozen proxy not promoted
 
 User pivots to (hard source sequence, experimental source structure, hard target
