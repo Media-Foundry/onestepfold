@@ -1,0 +1,241 @@
+{
+  "complete": true,
+  "tests_passed": 9,
+  "counts": {
+    "baseline_replay": 960,
+    "deduplicated_calls": 1900,
+    "exact_replay": 960,
+    "hard_rebuild": 960,
+    "jvp": 950,
+    "nfe": 41820,
+    "recycle": 3880,
+    "vjp_forward": 10,
+    "wt_forward": 10
+  },
+  "full_rank_checks": 1900,
+  "full_rank_max_input_error": 9.094947017729282e-13,
+  "full_rank_max_coordinate_error": 0.0,
+  "max_peak_allocated_bytes": 18470199296,
+  "duality": [
+    {
+      "aa": "C",
+      "jvp": -0.08138929269539993,
+      "passed": true,
+      "position": 39,
+      "probe": 0,
+      "relative_error": 1.81297485834785e-05,
+      "vjp": -0.08139076828956604,
+      "parent_index": 7
+    },
+    {
+      "aa": "C",
+      "jvp": 0.36385630503314603,
+      "passed": true,
+      "position": 39,
+      "probe": 1,
+      "relative_error": 1.6909673260966573e-06,
+      "vjp": 0.3638556897640228,
+      "parent_index": 7
+    },
+    {
+      "aa": "A",
+      "jvp": 0.10314154643044735,
+      "passed": true,
+      "position": 208,
+      "probe": 0,
+      "relative_error": 1.4429717668033805e-06,
+      "vjp": 0.10314169526100159,
+      "parent_index": 8
+    },
+    {
+      "aa": "A",
+      "jvp": 0.3185503197130781,
+      "passed": true,
+      "position": 208,
+      "probe": 1,
+      "relative_error": 1.1733234810178516e-06,
+      "vjp": 0.3185499459505081,
+      "parent_index": 8
+    },
+    {
+      "aa": "A",
+      "jvp": -7.675996257316389,
+      "passed": true,
+      "position": 53,
+      "probe": 0,
+      "relative_error": 2.0249382108210737e-06,
+      "vjp": -7.676011800765991,
+      "parent_index": 9
+    },
+    {
+      "aa": "A",
+      "jvp": 2.378876255286883,
+      "passed": true,
+      "position": 53,
+      "probe": 1,
+      "relative_error": 2.586447814993151e-06,
+      "vjp": 2.37888240814209,
+      "parent_index": 9
+    },
+    {
+      "aa": "A",
+      "jvp": 0.5331911225741335,
+      "passed": true,
+      "position": 117,
+      "probe": 0,
+      "relative_error": 1.1746411722733358e-06,
+      "vjp": 0.5331904962658882,
+      "parent_index": 5
+    },
+    {
+      "aa": "A",
+      "jvp": -0.4764517647507262,
+      "passed": true,
+      "position": 117,
+      "probe": 1,
+      "relative_error": 1.5538563862071305e-06,
+      "vjp": -0.4764510244131088,
+      "parent_index": 5
+    },
+    {
+      "aa": "A",
+      "jvp": 2.6856949569791047,
+      "passed": true,
+      "position": 0,
+      "probe": 0,
+      "relative_error": 1.4211195141243935e-07,
+      "vjp": 2.6856945753097534,
+      "parent_index": 4
+    },
+    {
+      "aa": "A",
+      "jvp": -2.1037618223720167,
+      "passed": true,
+      "position": 0,
+      "probe": 1,
+      "relative_error": 6.089626196983852e-07,
+      "vjp": -2.1037631034851074,
+      "parent_index": 4
+    },
+    {
+      "aa": "A",
+      "jvp": 4.733737190463579,
+      "passed": true,
+      "position": 26,
+      "probe": 0,
+      "relative_error": 2.761704758847292e-06,
+      "vjp": 4.733724117279053,
+      "parent_index": 6
+    },
+    {
+      "aa": "A",
+      "jvp": 4.178756572389652,
+      "passed": true,
+      "position": 26,
+      "probe": 1,
+      "relative_error": 9.04500614221159e-06,
+      "vjp": 4.178718775510788,
+      "parent_index": 6
+    },
+    {
+      "aa": "A",
+      "jvp": -0.04719279470452965,
+      "passed": true,
+      "position": 84,
+      "probe": 0,
+      "relative_error": 1.583730056292018e-05,
+      "vjp": -0.04719354212284088,
+      "parent_index": 3
+    },
+    {
+      "aa": "A",
+      "jvp": 0.16616268394983086,
+      "passed": true,
+      "position": 84,
+      "probe": 1,
+      "relative_error": 2.0365067408155574e-06,
+      "vjp": 0.16616234555840492,
+      "parent_index": 3
+    },
+    {
+      "aa": "A",
+      "jvp": 0.7547854512370453,
+      "passed": true,
+      "position": 33,
+      "probe": 0,
+      "relative_error": 1.1489246828306158e-06,
+      "vjp": 0.7547845840454102,
+      "parent_index": 0
+    },
+    {
+      "aa": "A",
+      "jvp": 0.434081998473116,
+      "passed": true,
+      "position": 33,
+      "probe": 1,
+      "relative_error": 6.8525338233681986e-09,
+      "vjp": 0.4340820014476776,
+      "parent_index": 0
+    },
+    {
+      "aa": "A",
+      "jvp": -0.2391043044323934,
+      "passed": true,
+      "position": 10,
+      "probe": 0,
+      "relative_error": 3.5056569078555514e-06,
+      "vjp": -0.23910514265298843,
+      "parent_index": 2
+    },
+    {
+      "aa": "A",
+      "jvp": 0.7723874204092028,
+      "passed": true,
+      "position": 10,
+      "probe": 1,
+      "relative_error": 7.941598998669243e-06,
+      "vjp": 0.7723935544490814,
+      "parent_index": 2
+    },
+    {
+      "aa": "A",
+      "jvp": 0.20636324826401778,
+      "passed": true,
+      "position": 61,
+      "probe": 0,
+      "relative_error": 4.9706323948099396e-06,
+      "vjp": 0.20636427402496338,
+      "parent_index": 1
+    },
+    {
+      "aa": "A",
+      "jvp": 0.3624452052132414,
+      "passed": true,
+      "position": 61,
+      "probe": 1,
+      "relative_error": 2.445562147652315e-06,
+      "vjp": 0.36244431883096695,
+      "parent_index": 1
+    }
+  ],
+  "max_duality_relative_error": 1.81297485834785e-05,
+  "jvp_seconds": {
+    "sum": 2623.951172232977,
+    "mean": 2.762053865508397,
+    "median": 2.4265632364840712,
+    "maximum": 4.186402920051478
+  },
+  "decoder_feature_reads": [
+    "atom_to_token_idx",
+    "d_lm",
+    "pad_info",
+    "ref_atom_name_chars",
+    "ref_charge",
+    "ref_element",
+    "ref_mask",
+    "ref_pos",
+    "relp",
+    "v_lm"
+  ],
+  "independent_gram_max_relative_error": 1.2611044797300771e-14
+}

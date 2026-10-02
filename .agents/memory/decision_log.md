@@ -1,3 +1,42 @@
+## 2026-10-02 — LAST Jacobian+residual rank diagnostic COMPLETE; no functional curve left shift
+
+User requested one final tangent+linear residual test, then move away from AA-axis linear compression if insufficient.
+Frozen mini_jacobian_residual_rank_v1: same10TRAINparents/50sites/950nonWT,2seeds225001/225011/publicMiniESM.
+True torch.func.jvp at EXACT one-hot probability p0, d=e_a-e_WT, full currentERC+ESM2+C4,
+FIXED WT inventory/discrete graph. NOT logit derivative, secant, graph-switch derivative or pure-curvature residual.
+R=hard-WT-T inFP64;raw/balanced joint residualPCA,K0,1,2,3,5,8,10,12,15,18 plus tangent-only.
+All decoder arms WT s_inputs+targetchemistry;two exact references same aspreviousglobalPCA.
+R means/bases/coefficients still oracle all19teachers. No training/Jacobian approximation/extra sites.
+Valid batch jacobian_residual_rank_v1_20261002_retry1 COMPLETE:8GPU/32CPU/collector0;
+prep+GPU928.32s,score99.04s,total1041.61s;950JVP sum2623.95s,mean2.762s,max4.186s;
+maxallocated18.470GB.970WTpathforwards(950JVP+10base+10reverse),3880recycles,41820S1,
+1900duplicateK0calls avoided. T is NOT free; no mutantC4 teacher recomputation or speedup claim.
+Raw direct→T+resid rho/Top1:K5 .824000→.823491 /53→60of100;
+K8 .893860→.891877 /69→71;K12 .950754→.948526 /72→76;K15 .980088→.978702 /84→85.
+RawK5 rho delta-.000509 CI[-.009491,.008948],Top1+.07CI[-.01,.16];K8rho-.001982CIcross0.
+RawK5 localtails43→42of1900,max15.3356A;K8tails37→39,max14.2728A;
+K12tails30→27all6UFE92,max6.2823;K15tails17→17allstress,max3.1374(vsprior2.96696).
+RawK5 newgeometryfails70vsExact/73vsBaseline;K8 62/64;K12 35/36;K15 23/24;K18 3/0.
+DO NOT erase positive details:balancedK8 Top1 63→70 CI+.03to+.11,regret-.001010CInegative;
+but rho .880965 stillbelowdirect.883895,45tails unchanged,max13.57A.RawK12regret improves
+.006230→.001722,mostly6UFEprotein. These do not rescue lowrank reconstruction or establish independentgeneralization.
+Tangent-only rho.294333/Top1 15of100,bothnoise1of50,314localtails,max16.43A,newgeom222vsExact.
+K0(T+oraclemean)rho.305737,Top1 15. Raw residualmedianK95=10vsdirect11;balanced13,s14,z10unchanged.
+ResidualK5energy82.910%vsdirect82.224%;site-mean residual/hard UNcentered energy ratios s.9400,z1.1027.
+All950JVP primals exactWT,20JVP/VJP projectionspass(maxrelative1.813e-5);
+960Exact+960Baseline replays exact.1900K18 maxinput9.095e-13,coords0.
+Independent50siteCPUresidualGram maxrel1.261e-14;960packet,4000reference,2300lddt,8800rank checks exact;9tests pass.
+50fulltangentpackets12.606GB remainremote;source13.005GBstatesimmutable.
+PRE-FUNCTIONAL history retained:uncheckpointedlongVJP64GiBOOM(aftergoodJVP),fixedwithnonreentrantblock/layercheckpoint;
+initialpackage missedonestepfolddependency;thenfirstworkersstoppedatWTfileaxiscomparator([noise,N,3]vs[arm,noise,N,3]).
+Fixedfilecontract+regressiontest;newretryroot;no functional panel results used forselection or protocolchanges.
+DECISION stop AA-axis linear-mode/PCA/K12-head/extreme-AA tuning. Preserve tangent as possibleauxiliarysignal;
+nonlinear low-dimensional AA query +global response propagator NOT ruledout. No modeltraining/promotion/deployment.
+Nextmethodneeds separate protein/homology-split data/training protocol;current50sitesremain development/stress.
+Findings docs/mini_jacobian_residual_rank_findings_2026-10-02.md;reports/mini_jacobian_residual_rank_2026-10-02.
+Local /home/husrcf/Code/onestepfold_runtime/jacobian_residual_rank_v1_20261002_retry1;
+remote pc@10.120.16.9:/media/IntelSSD/onestepfold/hpc3_mirror_20261001/Folding/jacobian_residual_rank_v1_20261002_retry1.
+
 ## 2026-10-02 — Full global s/z functional rank COMPLETE: shared K5/K8 insufficient; no training launched
 
 User requested full global reconstruction following conditioning-path swaps. Frozen mini_global_response_rank_v1:

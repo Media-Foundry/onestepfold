@@ -1,0 +1,44 @@
+2026-10-02 13:17:03,704 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/runner/batch_inference.py:403] INFO runner.batch_inference: Inference by Protenix: model_size: mini, with_feature: esm, model_version: v0.5.0, dtype: bf16
+2026-10-02 13:17:03,704 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/runner/batch_inference.py:408] INFO runner.batch_inference: Triangle_multiplicative kernel: torch, Triangle_attention kernel: torch
+2026-10-02 13:17:03,704 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/runner/batch_inference.py:412] INFO runner.batch_inference: enable_diffusion_shared_vars_cache: True, enable_efficient_fusion: True, enable_tf32: False
+2026-10-02 13:17:03,705 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/runner/inference.py:246] INFO runner.inference: Distributed environment: world size: 1, global rank: 0, local rank: 0
+2026-10-02 13:17:03,705 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/runner/inference.py:98] INFO root: LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [2]
+2026-10-02 13:17:03,705 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/runner/inference.py:127] INFO root: Finished environment initialization.
+train scheduler 16.0
+inference scheduler 16.0
+Diffusion Module has 16.0
+2026-10-02 13:17:20,058 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/runner/inference.py:246] INFO runner.inference: Loading from /data/user/shuang886/Folding/protenix_stage0_pkg/v1_1/runtime/checkpoint/protenix_mini_esm_v0.5.0.pt, strict: False
+2026-10-02 13:17:20,529 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/runner/inference.py:246] INFO runner.inference: Sampled key: module.input_embedder.atom_attention_encoder.linear_no_bias_ref_pos.weight
+2026-10-02 13:17:20,568 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/runner/inference.py:246] INFO runner.inference: Finish loading checkpoint.
+2026-10-02 13:17:20,572 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/runner/inference.py:246] INFO runner.inference: Model parameters: 135.22M
+Try to load ESM language model from  /data/user/shuang886/Folding/protenix_stage0_pkg/v1_1/runtime/checkpoint/esm2_t36_3B_UR50D.pt
+2026-10-02 13:18:01,191 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/data/constraint/constraint_featurizer.py:392] INFO protenix.data.constraint.constraint_featurizer: Loaded constraint feature: #atom contact:0 #contact:0 #pocket:0
+2026-10-02 13:18:01,347 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/data/constraint/constraint_featurizer.py:392] INFO protenix.data.constraint.constraint_featurizer: Loaded constraint feature: #atom contact:0 #contact:0 #pocket:0
+2026-10-02 13:18:01,786 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/data/constraint/constraint_featurizer.py:392] INFO protenix.data.constraint.constraint_featurizer: Loaded constraint feature: #atom contact:0 #contact:0 #pocket:0
+2026-10-02 13:18:01,986 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/data/constraint/constraint_featurizer.py:392] INFO protenix.data.constraint.constraint_featurizer: Loaded constraint feature: #atom contact:0 #contact:0 #pocket:0
+2026-10-02 13:18:02,194 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/data/constraint/constraint_featurizer.py:392] INFO protenix.data.constraint.constraint_featurizer: Loaded constraint feature: #atom contact:0 #contact:0 #pocket:0
+2026-10-02 13:18:02,390 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/data/constraint/constraint_featurizer.py:392] INFO protenix.data.constraint.constraint_featurizer: Loaded constraint feature: #atom contact:0 #contact:0 #pocket:0
+2026-10-02 13:18:02,551 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/data/constraint/constraint_featurizer.py:392] INFO protenix.data.constraint.constraint_featurizer: Loaded constraint feature: #atom contact:0 #contact:0 #pocket:0
+2026-10-02 13:18:02,762 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/data/constraint/constraint_featurizer.py:392] INFO protenix.data.constraint.constraint_featurizer: Loaded constraint feature: #atom contact:0 #contact:0 #pocket:0
+2026-10-02 13:18:02,964 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/data/constraint/constraint_featurizer.py:392] INFO protenix.data.constraint.constraint_featurizer: Loaded constraint feature: #atom contact:0 #contact:0 #pocket:0
+2026-10-02 13:18:03,171 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/data/constraint/constraint_featurizer.py:392] INFO protenix.data.constraint.constraint_featurizer: Loaded constraint feature: #atom contact:0 #contact:0 #pocket:0
+2026-10-02 13:18:03,346 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/data/constraint/constraint_featurizer.py:392] INFO protenix.data.constraint.constraint_featurizer: Loaded constraint feature: #atom contact:0 #contact:0 #pocket:0
+2026-10-02 13:18:03,536 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/data/constraint/constraint_featurizer.py:392] INFO protenix.data.constraint.constraint_featurizer: Loaded constraint feature: #atom contact:0 #contact:0 #pocket:0
+2026-10-02 13:18:03,717 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/data/constraint/constraint_featurizer.py:392] INFO protenix.data.constraint.constraint_featurizer: Loaded constraint feature: #atom contact:0 #contact:0 #pocket:0
+2026-10-02 13:18:03,904 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/data/constraint/constraint_featurizer.py:392] INFO protenix.data.constraint.constraint_featurizer: Loaded constraint feature: #atom contact:0 #contact:0 #pocket:0
+2026-10-02 13:18:04,128 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/data/constraint/constraint_featurizer.py:392] INFO protenix.data.constraint.constraint_featurizer: Loaded constraint feature: #atom contact:0 #contact:0 #pocket:0
+2026-10-02 13:18:04,331 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/data/constraint/constraint_featurizer.py:392] INFO protenix.data.constraint.constraint_featurizer: Loaded constraint feature: #atom contact:0 #contact:0 #pocket:0
+2026-10-02 13:18:04,486 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/data/constraint/constraint_featurizer.py:392] INFO protenix.data.constraint.constraint_featurizer: Loaded constraint feature: #atom contact:0 #contact:0 #pocket:0
+2026-10-02 13:18:04,666 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/data/constraint/constraint_featurizer.py:392] INFO protenix.data.constraint.constraint_featurizer: Loaded constraint feature: #atom contact:0 #contact:0 #pocket:0
+2026-10-02 13:18:04,881 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/data/constraint/constraint_featurizer.py:392] INFO protenix.data.constraint.constraint_featurizer: Loaded constraint feature: #atom contact:0 #contact:0 #pocket:0
+2026-10-02 13:18:05,167 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/data/constraint/constraint_featurizer.py:392] INFO protenix.data.constraint.constraint_featurizer: Loaded constraint feature: #atom contact:0 #contact:0 #pocket:0
+2026-10-02 13:18:05,386 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/data/constraint/constraint_featurizer.py:392] INFO protenix.data.constraint.constraint_featurizer: Loaded constraint feature: #atom contact:0 #contact:0 #pocket:0
+2026-10-02 13:18:09,305 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/data/constraint/constraint_featurizer.py:392] INFO protenix.data.constraint.constraint_featurizer: Loaded constraint feature: #atom contact:0 #contact:0 #pocket:0
+Traceback (most recent call last):
+  File "/data/user/shuang886/Folding/jacobian_residual_rank_v1_20261002/code/scripts/run_jacobian_residual_rank.py", line 130, in <module>
+    elif a.mode=='run':run_jacobian_residual(a.root,a.index)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/user/shuang886/Folding/jacobian_residual_rank_v1_20261002/code/scripts/run_jacobian_residual_rank.py", line 70, in run_jacobian_residual
+    wf,wa,wold=chemical_input(f'p{pi}_wt',seq);wxyz=decode(wf,wa,wt);assert np.array_equal(wxyz,wold[0]) and np.array_equal(wxyz,wold[1]);counts['exact_replay']+=1;counts['baseline_replay']+=1
+                                                                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError

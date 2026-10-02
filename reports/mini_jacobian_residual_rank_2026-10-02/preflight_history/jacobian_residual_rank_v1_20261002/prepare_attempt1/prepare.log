@@ -1,0 +1,14 @@
+Traceback (most recent call last):
+  File "/data/user/shuang886/Folding/jacobian_residual_rank_v1_20261002/code/scripts/run_jacobian_residual_rank.py", line 17, in <module>
+    import run_global_response_rank as scoring
+  File "/data/user/shuang886/Folding/jacobian_residual_rank_v1_20261002/code/scripts/run_global_response_rank.py", line 18, in <module>
+    from fastglycan.adapter_supervision import build_adapter_supervision
+  File "/data/user/shuang886/Folding/jacobian_residual_rank_v1_20261002/code/src/fastglycan/adapter_supervision.py", line 6, in <module>
+    from fastglycan.experimental_training import observed_aligned_mse
+  File "/data/user/shuang886/Folding/jacobian_residual_rank_v1_20261002/code/src/fastglycan/experimental_training.py", line 8, in <module>
+    from fastglycan.experimental_metrics import prediction_atom37, validate_experimental_record
+  File "/data/user/shuang886/Folding/jacobian_residual_rank_v1_20261002/code/src/fastglycan/experimental_metrics.py", line 7, in <module>
+    from fastglycan.all_atom_metrics import compare_coordinates
+  File "/data/user/shuang886/Folding/jacobian_residual_rank_v1_20261002/code/src/fastglycan/all_atom_metrics.py", line 10, in <module>
+    from onestepfold.data.teacher_pair_training import kabsch_align
+ModuleNotFoundError: No module named 'onestepfold.data.teacher_pair_training'

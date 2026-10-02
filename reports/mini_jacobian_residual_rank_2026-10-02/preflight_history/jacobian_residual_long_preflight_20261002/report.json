@@ -1,0 +1,24 @@
+{
+  "complete": false,
+  "error": "Traceback (most recent call last):\n  File \"/data/user/shuang886/Folding/jacobian_residual_long_preflight.py\", line 30, in <module>\n    r['stage']='vjp';save();pp=p.detach().requires_grad_();out=f(pp);gen=torch.Generator(device='cuda').manual_seed(228101);r['duality']=[]\n                                                               ^^^^^\n  File \"/data/user/shuang886/Folding/jacobian_residual_long_preflight.py\", line 22, in f\n    def f(p):return full_recycle_pairformer(m,chart.features(p,check_chart=False),N_cycle=4,inplace_safe=False,mc_dropout=False)[1:]\n                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/data/user/shuang886/Folding/global_response_rank_v1_20261002/code/src/fastglycan/models/differentiable_mini.py\", line 138, in full_recycle_pairformer\n    s, z = self.pairformer_stack(\n           ^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/torch/nn/modules/module.py\", line 1778, in _wrapped_call_impl\n    return self._call_impl(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/torch/nn/modules/module.py\", line 1789, in _call_impl\n    return forward_call(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/model/modules/pairformer.py\", line 335, in forward\n    s, z = checkpoint_blocks(\n           ^^^^^^^^^^^^^^^^^^\n  File \"/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/model/utils.py\", line 866, in checkpoint_blocks\n    return exec(blocks, args)\n           ^^^^^^^^^^^^^^^^^^\n  File \"/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/model/utils.py\", line 853, in exec\n    a = wrap(block(*a))\n             ^^^^^^^^^\n  File \"/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/torch/nn/modules/module.py\", line 1778, in _wrapped_call_impl\n    return self._call_impl(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/torch/nn/modules/module.py\", line 1789, in _call_impl\n    return forward_call(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/model/modules/pairformer.py\", line 216, in forward\n    z = z + self.pair_transition(z)\n            ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/torch/nn/modules/module.py\", line 1778, in _wrapped_call_impl\n    return self._call_impl(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/torch/nn/modules/module.py\", line 1789, in _call_impl\n    return forward_call(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/model/modules/primitives.py\", line 220, in forward\n    a = F.silu(a, True)\n        ^^^^^^^^^^^^^^^\n  File \"/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/torch/nn/functional.py\", line 2396, in silu\n    return torch._C._nn.silu_(input)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^\ntorch.OutOfMemoryError: CUDA out of memory. Tried to allocate 96.00 MiB. GPU 0 has a total capacity of 63.98 GiB of which 14.00 MiB is free. Of the allocated memory 62.00 GiB is allocated by PyTorch, and 1.47 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://docs.pytorch.org/docs/stable/notes/cuda.html#optimizing-memory-usage-with-pytorch-cuda-alloc-conf)\n",
+  "finite": true,
+  "jvp_primal_exact": [
+    true,
+    true
+  ],
+  "jvp_seconds": 4.253016218019184,
+  "primal_exact": [
+    true,
+    true
+  ],
+  "primal_max": [
+    0.0,
+    0.0
+  ],
+  "seconds": 68.61279002099764,
+  "stage": "failed",
+  "tangent_norms": [
+    95.19430836089802,
+    211.67983349219938
+  ]
+}
