@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/data/user/shuang886/Folding/pair_multicontext_v1_20261003/pair_multicontext_reference_metrics.py", line 32, in <module>
+    p=argparse.ArgumentParser();p.add_argument('--root',type=Path,required=True);p.add_argument('--index',type=int,required=True);a=p.parse_args();pair_reference_metrics(a.root,a.index)
+                                                                                                                                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/user/shuang886/Folding/pair_multicontext_v1_20261003/pair_multicontext_reference_metrics.py", line 22, in pair_reference_metrics
+    delta=z.double()-wt.double();u,s,v=torch.linalg.svd(delta.permute(2,0,1),full_matrices=False)
+                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: svd: LAPACK library not found in compilation

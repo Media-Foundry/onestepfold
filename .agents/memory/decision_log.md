@@ -1,3 +1,41 @@
+## 2026-10-03 — Raw pair multi-context v1 COMPLETE; train ranking restored, transfer not established
+
+User authorized current pair/raw only, fresh seeds231301/231303;32768updates each,
+cycle1W53 T37/Y84,1JHG A2,1A7G N65,each8192full19-AA exposures.
+OldNMSE<=.1 gate not changed historically; no latent gate on new decode.
+Shared3,627,904params unchanged,AdamWlr1e-3/wd1e-4/eps1e-8/clip1,purematrixloss.
+All snapshotsglobal8192/16384/32768 decoded;no best-checkpoint selection.
+Heldsites1JHG N25/1A7G S34;heldprotein4PT4 L10/D17 (previously used development assets).
+Oldnoises230201/230211,new270101/270103;candidate score arithmetic means locked.
+Oracle target s+WTs_inputs+native target chemistry retained;student replaces z only.
+Final main statistics below:Baseline-reference19-AA rho on FOUR-noise mean scores,
+site within protein then equal-protein mean (train3proteins4sites;newsite2/2;newprotein1/2).
+Train WT-z .473977;seed231301 .965205 Top14/4;231303 .932456 Top13/4.
+Newsite WT-z .558772;students .516667/.607018,regret .001848/.026233 vs .011671.
+4PT4 WT-z .568421;students .223684/.464912,Top1both1/2. Fresh-noiseTop1231303=2/2
+is retained but not robustreplacement:old-noise selection/new-noise regret .042453/.046006
+vsWT-z .012107;extra regret vsBaseline-oldchoice .023882/.027434.
+FinalrawNMSE train .426420/.436044,newsite1.620089/1.692285,newprotein2.166938/3.042229.
+OracleR32 rho train/newsite/newprotein .9985/.9991/.9939,representation remainsusefulcontrol.
+Atintermediate4096exposures2313034PT4rho .6105;notselected overprelockedterminal.
+Geometry baselinepasses train152/304,newsite80/152,newprotein134/152.
+Students newfailures respectively17/16,6/6,14/6;absolute153/155,86/80,123/134.
+Local>1A counts10/11 train,4/4 newsite,0/0 4PT4;1A7G S34R max5.52A,
+1W53 Y84M max3.69A. No assumptionthatgeometrypass impliesresponsefidelity.
+T37N/noise230211 failure nowlocalized to chainAres25 THR CB/CA/OG1/CG2 centre,
+notmutation37:normalizedorientedvolumeBaseline+.036372,WT-z-.088886,
+student-.078976/-.097106;zerosignruleunchanged.6UFE92notcovered.
+NoS1/geometryloss,Δspredictor,teachercollection,automatic16->8,extraepochs,promotionorbackwardreopening.
+Conclude sharedtrainselectioncanbelearned;stabletransfernotshown;capacity/optimization/data causesnotuniquelyseparated.
+6112S1,0newC4/ESM;maincontroller825.18s.2freshinitaudits,6checkpoints/optimizersteps,
+616old+16newcoordinatereplays,640ranking+480aggregateselection+640NumPytask+640lddt,
+5190chiralitysignchecks,160oldreferencescores,156downloadhashes,12tests.
+AuxCPUreferenceTorchSVD lacksLAPACK;failedattemptretained,NumPyFP64SVD completed8sites,
+no training/decoder output changed. Allscore errors/scales/regret/geometry transitions archived.
+Report docs/mini_pair_multicontext_findings_2026-10-03.md;protocol mini_pair_multicontext_v1.md;
+reports/mini_pair_multicontext_2026-10-03. Localruntime /home/husrcf/Code/onestepfold_runtime/pair_multicontext_v1_20261003;
+remote /media/IntelSSD/onestepfold/hpc3_mirror_20261001/Folding/pair_multicontext_v1_20261003.
+
 ## 2026-10-02 — All12 readout endpoints decoded; pair restores seen-site ranking despite latent gate failure
 
 Completed post-hoc endpoint audit requested after e301abae. ALL12 fixed8192 checkpoints,

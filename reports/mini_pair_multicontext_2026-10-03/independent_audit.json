@@ -1,0 +1,101 @@
+{
+  "audit_source_sha256": "bb577174e9633d08c5f1c9f7ed986615e4437b3afa88f649736e439ac0ef2a5f",
+  "checkpoints": [
+    {
+      "arm": "e2048_s231301",
+      "exposures": [
+        2048,
+        2048,
+        2048,
+        2048
+      ],
+      "optimizer_steps": [
+        8192
+      ],
+      "sha256": "7e35eb24f633c9b2899b0f8c69333736fcec1dd6755a27f437011fd575e9d29b"
+    },
+    {
+      "arm": "e4096_s231301",
+      "exposures": [
+        4096,
+        4096,
+        4096,
+        4096
+      ],
+      "optimizer_steps": [
+        16384
+      ],
+      "sha256": "7f984674d835f98ec0021e8abc2f408be71b857a52439963a13c98e2fd8a4a5a"
+    },
+    {
+      "arm": "e8192_s231301",
+      "exposures": [
+        8192,
+        8192,
+        8192,
+        8192
+      ],
+      "optimizer_steps": [
+        32768
+      ],
+      "sha256": "df9cb21e47effa72cf37884024f355a72f624c3f3427cca959502a05f40c6493"
+    },
+    {
+      "arm": "e2048_s231303",
+      "exposures": [
+        2048,
+        2048,
+        2048,
+        2048
+      ],
+      "optimizer_steps": [
+        8192
+      ],
+      "sha256": "460fc6eb0292563a19e320fb85c11f1d75e846f2f593ae18bd62c76069685907"
+    },
+    {
+      "arm": "e4096_s231303",
+      "exposures": [
+        4096,
+        4096,
+        4096,
+        4096
+      ],
+      "optimizer_steps": [
+        16384
+      ],
+      "sha256": "249e8bb789179086002db23aa9c7c7821141277fd8798c28d260c4c2b9ee1f39"
+    },
+    {
+      "arm": "e8192_s231303",
+      "exposures": [
+        8192,
+        8192,
+        8192,
+        8192
+      ],
+      "optimizer_steps": [
+        32768
+      ],
+      "sha256": "0c5008296e9c0a5be061f7168996b723a6ab19a3212484570e620200cc9bfcbc"
+    }
+  ],
+  "chirality_sign_checks": 5190,
+  "complete": true,
+  "coordinate_packets": 156,
+  "fresh_initializations": [
+    {
+      "fresh_seed_initialization_exact": true,
+      "seed": 231301
+    },
+    {
+      "fresh_seed_initialization_exact": true,
+      "seed": 231303
+    }
+  ],
+  "independent_coordinate_task_checks": 640,
+  "independent_lddt_checks": 640,
+  "prior_reference_score_checks": 160,
+  "ranking_checks": 640,
+  "selection_checks": 480
+}
