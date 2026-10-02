@@ -1,0 +1,28 @@
+"""Decoder closure, using the unchanged v2 replay/scoring path and explicit models."""
+import argparse
+from pathlib import Path
+import torch
+from fastglycan.paired_teacher_protocol import sha256
+from fastglycan.deep_dense_control import GlobalDenseControl
+from fastglycan.response_readouts import NonlinearResponseReadout
+from fastglycan.hip_device_policy import guarded_hip_runtime
+import deep_validation_outputs as output
+
+
+def load_readout_checkpoint(item):
+    p=Path(item['path']);assert sha256(p)==item['sha256'];packet=torch.load(p,map_location='cpu',weights_only=False)
+    if item['family']=='whole_field':net=GlobalDenseControl(**packet['job']['architecture']).cuda()
+    else:net=NonlinearResponseReadout(packet['job']['architecture']).cuda()
+    net.load_state_dict(packet['state_dict']);return net,packet
+
+
+if __name__=='__main__':
+    p=argparse.ArgumentParser();p.add_argument('--root',type=Path,required=True);p.add_argument('--mode',choices=['decode','score','collect'],required=True);p.add_argument('--index',type=int,default=0);a=p.parse_args();panel='closure'
+    if a.mode=='decode':
+        output.gpu_guard=guarded_hip_runtime
+        output.load_deep_checkpoint=load_readout_checkpoint
+        output.decode_deep_panel(a.root,panel,a.index)
+    elif a.mode=='score':
+        output.scoring.ARMS=tuple(output.rt.load_json(a.root/'functional'/panel/'lock.json')['arms'])
+        output.scoring.score_global_response_rank(a.root/'functional'/panel,a.index)
+    else:output.collect_deep_panel(a.root,panel)

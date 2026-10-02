@@ -1,3 +1,37 @@
+## 2026-10-02 — Shared readout v1 COMPLETE, no shared-generator promotion
+
+User requested free hidden+original U/V, shared nonlinear pair readout, nonlinear channel-query factors;
+raw and oracleR32 MATRIX targets (not canonical factors); no new teacher/C4/trainingS1.
+Same1W53 T37 L84,19nonWT,2seeds231301/231303,LR1e-3 fixed fromv2,AdamWwd1e-4/eps1e-8/clip1,
+8192full19-AAupdates each,12runs,checkpoints512/1024/2048/4096/8192.
+Freehidden2,535,424params:rawtargetNMSEmean .179199;R32labelerror .143646,rawerror .184196.
+Pairnonlinear3,627,904params:raw .494479;R32label .483760,raw .500173.
+Channelnonlinear3,586,624params:raw .692328;R32label .687386,raw .704166.
+Bothsharedmodels use oldlargeencoder256x4,readoutwidth128;actualcapacity not matchedto30Mfullfield.
+Allrawtwo-seedfit<=.1 gatesfail. Multi-context did NOT run; this was NOT a zero-shot-newsite veto.
+Newprotocol removes oldsingle-site->unseen-site gate; whenfit permits, train3parents/4sitesjointly,
+then separatenewsite/newprotein development evaluation. No16->8,newteacher,blockwise ortrainingextension.
+Freehidden removingencoder doesnotclosegap vslargefactor .17788; strengthens sharedreadout suspicion,
+butNOT mathematicalfloor/freeU/VhadmoreparamsanddifferentLR;nonlinearvariantsfailurelimitedtothisbudget.
+Doesnotundo wholefielddense single-sitememorization or establish final-state impossibility.
+
+Closure:existingwholefielddenseLR1e-3/8192bothseeds,19AAx2oldnoises230201/230211,oracle target s,
+WTs_inputs + rebuilt targetchemistry;Exact(targets_inputs)/Baseline(WTs_inputs,targetsz) replaybitwise.
+Bothdense vsBaseline rho1,Top12/2,regret0,AAlddt1,localmax .001503/.000327A,newgeom0/38.
+VsExact bothrho .995614 (sameasBaseline);notidenticalcoordinates orallreferencesrho1.
+Baselineanddensegeometrypass9/38only: no newfail NOT chemicallyvalid outputs ordesignsuccess.
+OracleR32vsBaseline rho .978947,Top12/2,newgeom0;WT-z rho-.012281,Top10/2,newgeom1/38.
+Oldnoisesandtrainingsite,NOTindependentvalidation;taskfixedparentGTCA-distanceproxy,notmutantGT/binder.
+Maincontroller513.36s;training0C4/0S1,closure230S1/0C4. Head-only20query~1.08/4.7/5.0ms excludesWTtrunk,
+chemistryanddecoder;shareddevelopmentruntime,NOTcleanE2Espeedclaim.60checkpoint hashes24replays,
+40ranking12independentlddtchecks,NumPyR32maxerror1.14e-13,16focusedtests.
+CurrentGPUlaunchpolicy:HIP-only;verifyPCIbeforemodelallocation;usehip_device_policy.py safeHIP0–3
+intersection onDiamondHill. Never equateHIPordinalwithmanagementGCD; never allocate reservedPCI.
+Report docs/mini_response_readout_findings_2026-10-02.md;protocol mini_response_readout_v1.md.
+Runtime local /home/husrcf/Code/onestepfold_runtime/response_readout_v1_20261002;
+remote /media/IntelSSD/onestepfold/hpc3_mirror_20261001/Folding/response_readout_v1_20261002.
+Frozenexecutedsource retained;committedlaunchcodehascurrentguard,notclaimedbyte-identicaltosnapshot.
+
 ## 2026-10-02 — Deep Validation v2 COMPLETE; whole-field control rescinds all-generator failure
 
 User authorized bounded optimization/capacity/pair-content/oracle-input ladder, only HIP_VISIBLE_DEVICES0–5.

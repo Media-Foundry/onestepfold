@@ -1,0 +1,34 @@
+{
+  "complete": true,
+  "models": [
+    {
+      "kind": "free_hidden",
+      "loss": 0.9720075726509094,
+      "parameters": 2535424,
+      "peak_allocated_bytes": 835517952,
+      "step_seconds": 0.005098020151490345
+    },
+    {
+      "kind": "pair",
+      "loss": 0.9818364381790161,
+      "parameters": 3627904,
+      "peak_allocated_bytes": 1203578368,
+      "step_seconds": 0.013825383500079624
+    },
+    {
+      "kind": "channel",
+      "loss": 0.9990897178649902,
+      "parameters": 3586624,
+      "peak_allocated_bytes": 1756167680,
+      "step_seconds": 0.01578798004775308
+    }
+  ],
+  "retained_checkpoints": false,
+  "runtime": {
+    "cuda_visible": null,
+    "device": "AMD Instinct MI250X / MI250",
+    "hip": "7.14.60850",
+    "hip_visible": "0",
+    "torch": "2.12.0a0+git78258b9"
+  }
+}

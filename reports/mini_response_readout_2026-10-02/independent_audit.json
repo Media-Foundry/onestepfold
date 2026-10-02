@@ -1,0 +1,143 @@
+{
+  "checkpoint_hashes": 60,
+  "checkpoint_replays": [
+    {
+      "job": "single_free_hidden_raw_s231301",
+      "max_nmse_error": 2.220446049250313e-16,
+      "step": 512
+    },
+    {
+      "job": "single_free_hidden_raw_s231301",
+      "max_nmse_error": 2.7755575615628914e-17,
+      "step": 8192
+    },
+    {
+      "job": "single_free_hidden_raw_s231303",
+      "max_nmse_error": 2.220446049250313e-16,
+      "step": 512
+    },
+    {
+      "job": "single_free_hidden_raw_s231303",
+      "max_nmse_error": 5.551115123125783e-17,
+      "step": 8192
+    },
+    {
+      "job": "single_free_hidden_r32_s231301",
+      "max_nmse_error": 2.220446049250313e-16,
+      "step": 512
+    },
+    {
+      "job": "single_free_hidden_r32_s231301",
+      "max_nmse_error": 5.551115123125783e-17,
+      "step": 8192
+    },
+    {
+      "job": "single_free_hidden_r32_s231303",
+      "max_nmse_error": 2.220446049250313e-16,
+      "step": 512
+    },
+    {
+      "job": "single_free_hidden_r32_s231303",
+      "max_nmse_error": 5.551115123125783e-17,
+      "step": 8192
+    },
+    {
+      "job": "single_pair_raw_s231301",
+      "max_nmse_error": 0.0,
+      "step": 512
+    },
+    {
+      "job": "single_pair_raw_s231301",
+      "max_nmse_error": 0.0,
+      "step": 8192
+    },
+    {
+      "job": "single_pair_raw_s231303",
+      "max_nmse_error": 0.0,
+      "step": 512
+    },
+    {
+      "job": "single_pair_raw_s231303",
+      "max_nmse_error": 0.0,
+      "step": 8192
+    },
+    {
+      "job": "single_pair_r32_s231301",
+      "max_nmse_error": 1.1102230246251565e-16,
+      "step": 512
+    },
+    {
+      "job": "single_pair_r32_s231301",
+      "max_nmse_error": 1.1102230246251565e-16,
+      "step": 8192
+    },
+    {
+      "job": "single_pair_r32_s231303",
+      "max_nmse_error": 2.220446049250313e-16,
+      "step": 512
+    },
+    {
+      "job": "single_pair_r32_s231303",
+      "max_nmse_error": 1.1102230246251565e-16,
+      "step": 8192
+    },
+    {
+      "job": "single_channel_raw_s231301",
+      "max_nmse_error": 2.220446049250313e-16,
+      "step": 512
+    },
+    {
+      "job": "single_channel_raw_s231301",
+      "max_nmse_error": 2.220446049250313e-16,
+      "step": 8192
+    },
+    {
+      "job": "single_channel_raw_s231303",
+      "max_nmse_error": 3.3306690738754696e-16,
+      "step": 512
+    },
+    {
+      "job": "single_channel_raw_s231303",
+      "max_nmse_error": 1.1102230246251565e-16,
+      "step": 8192
+    },
+    {
+      "job": "single_channel_r32_s231301",
+      "max_nmse_error": 2.220446049250313e-16,
+      "step": 512
+    },
+    {
+      "job": "single_channel_r32_s231301",
+      "max_nmse_error": 3.3306690738754696e-16,
+      "step": 8192
+    },
+    {
+      "job": "single_channel_r32_s231303",
+      "max_nmse_error": 3.3306690738754696e-16,
+      "step": 512
+    },
+    {
+      "job": "single_channel_r32_s231303",
+      "max_nmse_error": 3.3306690738754696e-16,
+      "step": 8192
+    }
+  ],
+  "complete": true,
+  "coordinates": 20,
+  "lddt_checks": 12,
+  "multicontext_selection_recomputed": true,
+  "numpy_oracle_max_abs": 1.1368683772161603e-13,
+  "ranking_checks": 40,
+  "runtime": {
+    "cuda_visible": null,
+    "device": "AMD Instinct MI250X / MI250",
+    "hip": "7.14.60850",
+    "hip_visible": "0",
+    "management_gcd": 2,
+    "pci_bus_id": "0000:32:00.0",
+    "physical_mapping_verified": true,
+    "rocr_visible": null,
+    "torch": "2.12.0a0+git78258b9"
+  },
+  "training_roles": "train only"
+}
