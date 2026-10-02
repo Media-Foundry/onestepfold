@@ -1,0 +1,521 @@
+{
+  "exact": {
+    "local_ca_rmsd_quantiles": {
+      "p50": 6.840016436957503e-15,
+      "p95": 1.9096183321373616e-14,
+      "p99": 4.330008265673786e-14,
+      "max": 8.851116852440965e-14
+    },
+    "local_over_1a": 0,
+    "sites_local_over_1a": 0,
+    "both_noise_top1_sites": 50,
+    "mean_response_scale": {},
+    "worst_local": [
+      {
+        "pdb_id": "2trh",
+        "position_1based": 36,
+        "aa": "E",
+        "noise": 225001,
+        "rmsd": 8.851116852440965e-14
+      },
+      {
+        "pdb_id": "1kuu",
+        "position_1based": 200,
+        "aa": "N",
+        "noise": 225001,
+        "rmsd": 7.176470744556841e-14
+      },
+      {
+        "pdb_id": "1a8r",
+        "position_1based": 78,
+        "aa": "R",
+        "noise": 225001,
+        "rmsd": 7.163749504988004e-14
+      },
+      {
+        "pdb_id": "1bxw",
+        "position_1based": 118,
+        "aa": "D",
+        "noise": 225011,
+        "rmsd": 6.570086032742289e-14
+      },
+      {
+        "pdb_id": "2trh",
+        "position_1based": 36,
+        "aa": "K",
+        "noise": 225001,
+        "rmsd": 6.56200144372693e-14
+      },
+      {
+        "pdb_id": "1a8r",
+        "position_1based": 196,
+        "aa": "H",
+        "noise": 225001,
+        "rmsd": 6.550524543364407e-14
+      },
+      {
+        "pdb_id": "2dt4",
+        "position_1based": 43,
+        "aa": "K",
+        "noise": 225001,
+        "rmsd": 5.795167859307167e-14
+      },
+      {
+        "pdb_id": "1a8r",
+        "position_1based": 220,
+        "aa": "F",
+        "noise": 225001,
+        "rmsd": 5.6491045170526366e-14
+      },
+      {
+        "pdb_id": "1bxw",
+        "position_1based": 118,
+        "aa": "F",
+        "noise": 225011,
+        "rmsd": 5.4284746817673703e-14
+      },
+      {
+        "pdb_id": "1a8r",
+        "position_1based": 196,
+        "aa": "Q",
+        "noise": 225001,
+        "rmsd": 5.339388967058743e-14
+      }
+    ]
+  },
+  "wt_trunk": {
+    "local_ca_rmsd_quantiles": {
+      "p50": 0.2928546684355397,
+      "p95": 3.000706588198899,
+      "p99": 6.631478950859039,
+      "max": 15.662598214960335
+    },
+    "local_over_1a": 314,
+    "sites_local_over_1a": 25,
+    "both_noise_top1_sites": 0,
+    "mean_response_scale": {
+      "relative_response_l2_error": 0.9551757294838086,
+      "centered_AA_response_l2_error": 0.9633227782836501
+    },
+    "worst_local": [
+      {
+        "pdb_id": "6ufe",
+        "position_1based": 92,
+        "aa": "S",
+        "noise": 225011,
+        "rmsd": 15.662598214960335
+      },
+      {
+        "pdb_id": "6ufe",
+        "position_1based": 92,
+        "aa": "Q",
+        "noise": 225011,
+        "rmsd": 12.950937261029438
+      },
+      {
+        "pdb_id": "6ufe",
+        "position_1based": 92,
+        "aa": "S",
+        "noise": 225001,
+        "rmsd": 10.316664899574926
+      },
+      {
+        "pdb_id": "6ufe",
+        "position_1based": 92,
+        "aa": "K",
+        "noise": 225011,
+        "rmsd": 10.239831706786573
+      },
+      {
+        "pdb_id": "6ufe",
+        "position_1based": 92,
+        "aa": "K",
+        "noise": 225001,
+        "rmsd": 9.83753401191197
+      },
+      {
+        "pdb_id": "6ufe",
+        "position_1based": 92,
+        "aa": "E",
+        "noise": 225011,
+        "rmsd": 9.73149815558633
+      },
+      {
+        "pdb_id": "6ufe",
+        "position_1based": 92,
+        "aa": "E",
+        "noise": 225001,
+        "rmsd": 7.7461640039282615
+      },
+      {
+        "pdb_id": "6ufe",
+        "position_1based": 92,
+        "aa": "Q",
+        "noise": 225001,
+        "rmsd": 7.195874067731876
+      },
+      {
+        "pdb_id": "6ufe",
+        "position_1based": 85,
+        "aa": "E",
+        "noise": 225001,
+        "rmsd": 7.074662795699956
+      },
+      {
+        "pdb_id": "6ufe",
+        "position_1based": 92,
+        "aa": "V",
+        "noise": 225011,
+        "rmsd": 7.058862912339939
+      }
+    ]
+  },
+  "chem_only": {
+    "local_ca_rmsd_quantiles": {
+      "p50": 0.29270161769412695,
+      "p95": 3.069820759341576,
+      "p99": 6.60849460146137,
+      "max": 15.56652905734614
+    },
+    "local_over_1a": 314,
+    "sites_local_over_1a": 25,
+    "both_noise_top1_sites": 0,
+    "mean_response_scale": {
+      "relative_response_l2_error": 0.9551462049359177,
+      "centered_AA_response_l2_error": 0.9632995178718474
+    },
+    "worst_local": [
+      {
+        "pdb_id": "6ufe",
+        "position_1based": 92,
+        "aa": "S",
+        "noise": 225011,
+        "rmsd": 15.56652905734614
+      },
+      {
+        "pdb_id": "6ufe",
+        "position_1based": 92,
+        "aa": "Q",
+        "noise": 225011,
+        "rmsd": 12.879288798127979
+      },
+      {
+        "pdb_id": "6ufe",
+        "position_1based": 92,
+        "aa": "K",
+        "noise": 225011,
+        "rmsd": 10.261389397566985
+      },
+      {
+        "pdb_id": "6ufe",
+        "position_1based": 92,
+        "aa": "S",
+        "noise": 225001,
+        "rmsd": 10.187959382584054
+      },
+      {
+        "pdb_id": "6ufe",
+        "position_1based": 92,
+        "aa": "K",
+        "noise": 225001,
+        "rmsd": 9.84849384115244
+      },
+      {
+        "pdb_id": "6ufe",
+        "position_1based": 92,
+        "aa": "E",
+        "noise": 225011,
+        "rmsd": 9.693901111273172
+      },
+      {
+        "pdb_id": "6ufe",
+        "position_1based": 92,
+        "aa": "E",
+        "noise": 225001,
+        "rmsd": 7.725168440841482
+      },
+      {
+        "pdb_id": "6ufe",
+        "position_1based": 92,
+        "aa": "Q",
+        "noise": 225001,
+        "rmsd": 7.101083592336566
+      },
+      {
+        "pdb_id": "6ufe",
+        "position_1based": 85,
+        "aa": "E",
+        "noise": 225001,
+        "rmsd": 7.0670900709230295
+      },
+      {
+        "pdb_id": "6ufe",
+        "position_1based": 92,
+        "aa": "V",
+        "noise": 225011,
+        "rmsd": 6.949963138566825
+      }
+    ]
+  },
+  "target_trunk_only": {
+    "local_ca_rmsd_quantiles": {
+      "p50": 0.0019740740764444004,
+      "p95": 0.013372528485503472,
+      "p99": 0.16081699092103247,
+      "max": 0.35894067999897655
+    },
+    "local_over_1a": 0,
+    "sites_local_over_1a": 0,
+    "both_noise_top1_sites": 50,
+    "mean_response_scale": {
+      "relative_response_l2_error": 0.007169813487257607,
+      "centered_AA_response_l2_error": 0.007195286839976265
+    },
+    "worst_local": [
+      {
+        "pdb_id": "6ufe",
+        "position_1based": 92,
+        "aa": "F",
+        "noise": 225011,
+        "rmsd": 0.35894067999897655
+      },
+      {
+        "pdb_id": "6ufe",
+        "position_1based": 92,
+        "aa": "N",
+        "noise": 225011,
+        "rmsd": 0.30153241330110364
+      },
+      {
+        "pdb_id": "6ufe",
+        "position_1based": 92,
+        "aa": "F",
+        "noise": 225001,
+        "rmsd": 0.2737287214351442
+      },
+      {
+        "pdb_id": "6ufe",
+        "position_1based": 92,
+        "aa": "I",
+        "noise": 225001,
+        "rmsd": 0.26407895173576745
+      },
+      {
+        "pdb_id": "6ufe",
+        "position_1based": 92,
+        "aa": "I",
+        "noise": 225011,
+        "rmsd": 0.2623501844251596
+      },
+      {
+        "pdb_id": "6ufe",
+        "position_1based": 92,
+        "aa": "L",
+        "noise": 225011,
+        "rmsd": 0.25423826888942264
+      },
+      {
+        "pdb_id": "6ufe",
+        "position_1based": 92,
+        "aa": "V",
+        "noise": 225001,
+        "rmsd": 0.25349590931775867
+      },
+      {
+        "pdb_id": "6ufe",
+        "position_1based": 92,
+        "aa": "V",
+        "noise": 225011,
+        "rmsd": 0.2513946290535232
+      },
+      {
+        "pdb_id": "6ufe",
+        "position_1based": 92,
+        "aa": "T",
+        "noise": 225011,
+        "rmsd": 0.24593095271668294
+      },
+      {
+        "pdb_id": "6ufe",
+        "position_1based": 92,
+        "aa": "M",
+        "noise": 225011,
+        "rmsd": 0.22855335718059036
+      }
+    ]
+  },
+  "local_only": {
+    "local_ca_rmsd_quantiles": {
+      "p50": 0.2469811880469091,
+      "p95": 2.9875146733969986,
+      "p99": 6.174103229016847,
+      "max": 15.322981099973484
+    },
+    "local_over_1a": 283,
+    "sites_local_over_1a": 21,
+    "both_noise_top1_sites": 1,
+    "mean_response_scale": {
+      "relative_response_l2_error": 0.9137870001769136,
+      "centered_AA_response_l2_error": 0.9138662101580693
+    },
+    "worst_local": [
+      {
+        "pdb_id": "6ufe",
+        "position_1based": 92,
+        "aa": "S",
+        "noise": 225011,
+        "rmsd": 15.322981099973484
+      },
+      {
+        "pdb_id": "6ufe",
+        "position_1based": 92,
+        "aa": "Q",
+        "noise": 225011,
+        "rmsd": 12.872007106538767
+      },
+      {
+        "pdb_id": "6ufe",
+        "position_1based": 92,
+        "aa": "S",
+        "noise": 225001,
+        "rmsd": 10.733993738897329
+      },
+      {
+        "pdb_id": "6ufe",
+        "position_1based": 92,
+        "aa": "C",
+        "noise": 225011,
+        "rmsd": 9.79803181892909
+      },
+      {
+        "pdb_id": "6ufe",
+        "position_1based": 92,
+        "aa": "I",
+        "noise": 225011,
+        "rmsd": 9.517826267520375
+      },
+      {
+        "pdb_id": "6ufe",
+        "position_1based": 92,
+        "aa": "K",
+        "noise": 225011,
+        "rmsd": 9.159767788569738
+      },
+      {
+        "pdb_id": "6ufe",
+        "position_1based": 92,
+        "aa": "K",
+        "noise": 225001,
+        "rmsd": 8.699098858094333
+      },
+      {
+        "pdb_id": "6ufe",
+        "position_1based": 92,
+        "aa": "E",
+        "noise": 225011,
+        "rmsd": 8.637545113805011
+      },
+      {
+        "pdb_id": "6ufe",
+        "position_1based": 92,
+        "aa": "E",
+        "noise": 225001,
+        "rmsd": 7.821175081409091
+      },
+      {
+        "pdb_id": "6ufe",
+        "position_1based": 92,
+        "aa": "V",
+        "noise": 225011,
+        "rmsd": 7.6910562370668485
+      }
+    ]
+  },
+  "global_only": {
+    "local_ca_rmsd_quantiles": {
+      "p50": 0.09953889112054196,
+      "p95": 0.9278905342971742,
+      "p99": 2.1855848251527976,
+      "max": 6.98982793062782
+    },
+    "local_over_1a": 87,
+    "sites_local_over_1a": 7,
+    "both_noise_top1_sites": 34,
+    "mean_response_scale": {
+      "relative_response_l2_error": 0.19860714584516154,
+      "centered_AA_response_l2_error": 0.2225120270452997
+    },
+    "worst_local": [
+      {
+        "pdb_id": "6ufe",
+        "position_1based": 92,
+        "aa": "L",
+        "noise": 225011,
+        "rmsd": 6.98982793062782
+      },
+      {
+        "pdb_id": "6ufe",
+        "position_1based": 92,
+        "aa": "C",
+        "noise": 225001,
+        "rmsd": 6.882841045995823
+      },
+      {
+        "pdb_id": "6ufe",
+        "position_1based": 92,
+        "aa": "I",
+        "noise": 225001,
+        "rmsd": 6.836934751335274
+      },
+      {
+        "pdb_id": "6ufe",
+        "position_1based": 92,
+        "aa": "L",
+        "noise": 225001,
+        "rmsd": 5.569393284983722
+      },
+      {
+        "pdb_id": "6ufe",
+        "position_1based": 92,
+        "aa": "C",
+        "noise": 225011,
+        "rmsd": 4.83989873106319
+      },
+      {
+        "pdb_id": "6ufe",
+        "position_1based": 92,
+        "aa": "I",
+        "noise": 225011,
+        "rmsd": 4.734778429622074
+      },
+      {
+        "pdb_id": "6ufe",
+        "position_1based": 92,
+        "aa": "N",
+        "noise": 225001,
+        "rmsd": 4.5732421149763285
+      },
+      {
+        "pdb_id": "6ufe",
+        "position_1based": 92,
+        "aa": "T",
+        "noise": 225011,
+        "rmsd": 3.7688998833183054
+      },
+      {
+        "pdb_id": "6ufe",
+        "position_1based": 92,
+        "aa": "N",
+        "noise": 225011,
+        "rmsd": 3.611812300974653
+      },
+      {
+        "pdb_id": "6ufe",
+        "position_1based": 92,
+        "aa": "M",
+        "noise": 225001,
+        "rmsd": 3.2762229208583045
+      }
+    ]
+  }
+}

@@ -1,3 +1,39 @@
+## 2026-10-02 — Six conditioning-path swaps COMPLETE; global target s/z carries necessary response in tested interface
+
+User prioritizes information-path ablation before global rank/Jacobian/training.
+Frozen mini_conditioning_swaps_v1 reuses prior960 native FP32 states(13.005GB),
+same10TRAINparents/50sites/19nonWT/two noises225001,225011/publicMiniESM+ESM2-3B.
+Every arm uses native target chemistry/inventory/mapping/noise. exact(target inputs,target trunk),
+wt_trunk(target inputs,WT trunk),chem_only(WT inputs,WT trunk),target_trunk_only(WT inputs,target trunk),
+local_only(target inputs,WT complement+target local),global_only(target inputs,target complement+WT local).
+Local=s_i and z row/col union. Target feature cache rebuilt per arm; source files SHA verified.
+No ESM loaded, Pairformer forbidden by runtime hook; actual0recycle/0C4/0ESM,11520NFE,
+960nativechemical rebuilds. Controller487370;8GPU+8CPU+collector exit0,total250.69s
+(prep+GPU184.64,score60.02).960Exact endpoints and allWT arms BITWISE match prior.
+19AA Spearman/Top1: WTtrunk .252386/12of100;chem .251211/13;local .332368/14;
+global .953632/83;targettrunkonly .999316/100. Both-noise sites0,0,1,34,50 of50 respectively.
+Global minus WTtrunk rho +.701246 CI[.610766,.785563],10/10parentmeansimprove;
+local minus WTtrunk+.079982 CI[-.013585,.174354];WTtrunk minuschem+.001175 CIcross0.
+Targettrunkonly rho CI[.999123,.999491],top1regret0;AA fidelity .999999919 is NOT
+coordinate identity:localmean .006732A,max .358941A;3newchemistryfails(888vs884pass).
+WTtrunk AA .974037 yetmeanregret .081457, normalized .34555;global AA .997361,
+regret .002309,localmean .238424A,max6.98983A,87/1900>1A,60newchemfails(865pass).
+WTtrunk/chem/local local>1A314/314/283;meanAA-centered response relativeL2 errors
+.96332/.96330/.91387 vsglobal .22251,targettrunkonly .00720.6UFE92keptstresscase.
+Exact chemistry reference884/1900;no arm called chemically valid or design-ready.
+8tests pass;offline960packetSHA+exactcoords,2000exacttask/geometry parity,
+600independentlddt andallSpearman exact,60allpair/determinant geometry checks pass.
+CRITICAL interpretations: mixed-input conditional interventions, not additive information fractions;
+chem-only still hasWT neural context. Target s/z already computed withtargetESM+C4;
+small direct s_inputs effect does NOT remove upstream targetESM. Globalstates matter,
+not proof Pairformer specifically caused spreading. Cached experiment is NOT cheap-input/end-to-end speed benchmark.
+DECISIONclosebatch;WTtrunk+targetinputs insufficient,global target s/z or usefulapproximation needed.
+Nextcandidate global s/z functional rank with block-scale controls, NOT launched inthisbatch.
+No Jacobian,headtraining,checkpointpromotion or newtargets. Priorarchive untouched.
+Findings docs/mini_conditioning_swaps_findings_2026-10-02.md;reports/mini_conditioning_swaps_2026-10-02.
+Localraw /home/husrcf/Code/onestepfold_runtime/conditioning_swaps_v1_20261002;
+remote pc@10.120.16.9:/media/IntelSSD/onestepfold/hpc3_mirror_20261001/Folding/conditioning_swaps_v1_20261002.
+
 ## 2026-10-02 — Conditional local functional-rank COMPLETE; average fidelity high, nonzero functional tails
 
 User requests centered SVD truncation followed by real S1 decoding, before residual-Jacobian or training.
