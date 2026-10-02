@@ -1,0 +1,83 @@
+{
+  "complete": true,
+  "jobs": [
+    {
+      "job": "global_dense_lr1e-04_s231301",
+      "device": 0,
+      "exit": 0,
+      "seconds": 150.0397334098816
+    },
+    {
+      "job": "global_dense_lr1e-04_s231303",
+      "device": 1,
+      "exit": 0,
+      "seconds": 153.0390179157257
+    },
+    {
+      "job": "global_dense_lr3e-04_s231301",
+      "device": 2,
+      "exit": 0,
+      "seconds": 153.03757548332214
+    },
+    {
+      "job": "global_dense_lr3e-04_s231303",
+      "device": 3,
+      "exit": 0,
+      "seconds": 153.03668689727783
+    },
+    {
+      "job": "global_dense_lr1e-03_s231301",
+      "device": 4,
+      "exit": 0,
+      "seconds": 153.03530478477478
+    },
+    {
+      "job": "global_dense_lr1e-03_s231303",
+      "device": 5,
+      "exit": 0,
+      "seconds": 153.03445959091187
+    }
+  ],
+  "results": [
+    {
+      "lr": 0.0001,
+      "nmse": [
+        0.001842793954705266,
+        0.0018572431963652077
+      ],
+      "centered_nmse": [
+        0.002606905163367836,
+        0.002594756244209657
+      ],
+      "primary": true,
+      "secondary": true
+    },
+    {
+      "lr": 0.0003,
+      "nmse": [
+        1.1380940884651184e-05,
+        4.6608555439684154e-05
+      ],
+      "centered_nmse": [
+        1.3366681065195936e-05,
+        3.076454896492931e-05
+      ],
+      "primary": true,
+      "secondary": true
+    },
+    {
+      "lr": 0.001,
+      "nmse": [
+        7.046133083944081e-07,
+        4.408355134141288e-06
+      ],
+      "centered_nmse": [
+        5.240888878042963e-07,
+        4.595742734099203e-06
+      ],
+      "primary": true,
+      "secondary": true
+    }
+  ],
+  "seconds": 167.98201155662537
+}

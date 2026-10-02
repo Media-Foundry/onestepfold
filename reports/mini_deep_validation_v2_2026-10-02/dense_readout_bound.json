@@ -1,0 +1,47 @@
+{
+  "affine_optimal_nmse": 0.29423860381070627,
+  "complete": true,
+  "explicit_reconstruction_nmse": 0.29423860381070627,
+  "hidden_width": 128,
+  "interpretation": "This bounds this shared row-wise readout only; not every dense head or every WT-only final-state regressor.",
+  "post_hoc": true,
+  "runs": [
+    {
+      "gap_above_affine_bound": 0.0004559585997537252,
+      "job": "A_dense_lr1e-03_s231301",
+      "nmse": 0.29469456241046
+    },
+    {
+      "gap_above_affine_bound": 0.00048403373278227413,
+      "job": "A_dense_lr1e-03_s231303",
+      "nmse": 0.29472263754348854
+    },
+    {
+      "gap_above_affine_bound": 0.005832328580162527,
+      "job": "A_dense_lr1e-04_s231301",
+      "nmse": 0.3000709323908688
+    },
+    {
+      "gap_above_affine_bound": 0.005291403345009271,
+      "job": "A_dense_lr1e-04_s231303",
+      "nmse": 0.29953000715571554
+    },
+    {
+      "gap_above_affine_bound": 0.0014083355053375879,
+      "job": "A_dense_lr3e-04_s231301",
+      "nmse": 0.29564693931604386
+    },
+    {
+      "gap_above_affine_bound": 0.0013421108684612548,
+      "job": "A_dense_lr3e-04_s231303",
+      "nmse": 0.2955807146791675
+    }
+  ],
+  "shape": [
+    1596,
+    10752
+  ],
+  "teacher_weighted_mean_square": 1.0,
+  "training": false,
+  "unconstrained_rank129_lower_bound": 0.2935857331520226
+}

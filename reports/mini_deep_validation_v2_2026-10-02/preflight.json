@@ -1,0 +1,95 @@
+{
+  "complete": true,
+  "retained_checkpoints": false,
+  "runtime": {
+    "cuda_visible": null,
+    "device": "AMD Instinct MI250X / MI250",
+    "hip": "7.14.60850",
+    "hip_visible": "0",
+    "torch": "2.12.0a0+git78258b9"
+  },
+  "variants": [
+    {
+      "architecture": {
+        "content": false,
+        "size": "small"
+      },
+      "loss": 0.9854303598403931,
+      "parameters": 1598592,
+      "peak_allocated_bytes": 760564736,
+      "step_seconds": 0.010174605849897489
+    },
+    {
+      "architecture": {
+        "content": true,
+        "size": "small"
+      },
+      "loss": 0.985052227973938,
+      "parameters": 1598462,
+      "peak_allocated_bytes": 780356608,
+      "step_seconds": 0.012217998501728288
+    },
+    {
+      "architecture": {
+        "content": false,
+        "size": "large"
+      },
+      "loss": 0.9769142866134644,
+      "parameters": 5585152,
+      "peak_allocated_bytes": 903260160,
+      "step_seconds": 0.01414916740031913
+    },
+    {
+      "architecture": {
+        "content": true,
+        "size": "large"
+      },
+      "loss": 0.9739338755607605,
+      "parameters": 5585920,
+      "peak_allocated_bytes": 958459392,
+      "step_seconds": 0.0234173732023919
+    },
+    {
+      "architecture": {
+        "output": "dense"
+      },
+      "loss": 0.9844511151313782,
+      "parameters": 1928832,
+      "peak_allocated_bytes": 1149775360,
+      "step_seconds": 0.009643371051060967
+    },
+    {
+      "architecture": {
+        "content": true,
+        "input_mode": "wt",
+        "size": "large"
+      },
+      "loss": 0.972678542137146,
+      "parameters": 5702018,
+      "peak_allocated_bytes": 1149775360,
+      "step_seconds": 0.018260615199687892
+    },
+    {
+      "architecture": {
+        "content": true,
+        "input_mode": "site",
+        "size": "large"
+      },
+      "loss": 0.9726871848106384,
+      "parameters": 5702018,
+      "peak_allocated_bytes": 1149775360,
+      "step_seconds": 0.017587150449980982
+    },
+    {
+      "architecture": {
+        "content": true,
+        "input_mode": "full",
+        "size": "large"
+      },
+      "loss": 0.9726961851119995,
+      "parameters": 5702018,
+      "peak_allocated_bytes": 1149775360,
+      "step_seconds": 0.017496998549904674
+    }
+  ]
+}

@@ -1,3 +1,35 @@
+## 2026-10-02 — Deep Validation v2 COMPLETE; whole-field control rescinds all-generator failure
+
+User authorized bounded optimization/capacity/pair-content/oracle-input ladder, only HIP_VISIBLE_DEVICES0–5.
+No CUDA_VISIBLE_DEVICES set;6/7 reserved for user's speed work. Original38runs + corrected dense6runs closed.
+1W53 T37 L84,19nonWT,2seeds231301/231303,8192full19updates;5checkpoints512/1024/2048/4096/8192.
+Same archived teacher; latent Δz NMSE only; no training S1/C4, no geometry/functional loss.
+FreeR32 lr.01: .055145/.055146 vs oraclefloor .05513569, optimization gate<=.075 passes.
+Smallbias bestLR1e-3 mean .288486; smallcontent .288672; largebias .177876; largecontent .177042.
+Largeactual5.59M(width256,4blocks),small1.60M; paircontent FFcompensatedparameter match.
+Allfactor primary<=.10/secondary<=.12 fail bothseeds; no C/D/E/F/G transfer/functional/runtimepromotion.
+Matchedlargecontentoracleinputs lr3e-4: WT .18058,site .18072,full .18070; no rescue in this family/budget.
+Not evidence WT information-theoretic insufficiency or all pair-content methods failing.
+Originalrowdense reached .294695 but discovered affine sharedrowspace128 bottleneck:
+weightedoptimal bound .2942386038 on[19*84,84*128], explicitly reconstructed. Originaldense NOT clean outputcontrol.
+Registered amendment BEFORE supplementary outcomes; keep38originalruns/gates/H unchanged.
+Correctedwholefielddense: pooledsmallWTbackbone32queryfeatures->84*84*128,30,350,752params,fixedlength.
+Closedformfeaturedesign rank19/19,oracleNMSE~1e-28(FP64)/1e-13(FP32); oracleweights discarded.
+Sixfreshzero-headruns3LR*2seeds8192: LR1e-4 .001843/.001857;
+LR3e-4 .00001138/.00004661;LR1e-3 .000000705/.000004408. All two-seed fit gates pass.
+CenteredAAerror also nearzero. This is SINGLE-SITE MEMORIZATION, not transfer or cheapdeployable response.
+Changes capacity AND outputorganization; cannot uniquelyattribute cause. Rescinds 'allfinalstate generators failed'.
+Do NOT automatically trainblockwise just because originalcontroller triggered H beforedensecorrection.
+H capturedWT+19hardC4(20) with16blockboundaries+4recycleinputs;20/20finalteacherbitwise replay.
+R32residualmean .01315 atC1block4 -> .05514 atC4block16; descriptive,nottransitionlearnabilityproof.
+OriginalA/B/H1590.70swall; supplementinclpreflight/audit188.39s. No production speedclaim.
+220checkpoint hashes/88independent replays;oldsmallbias512parametersbothseedsbitwise;11focusedtests.
+No Mini/ESM/C4S1 checkpointchange; no design orsoftinputpromotion; no extraupdates ornewteacherbatch.
+Report docs/mini_deep_validation_v2_findings_2026-10-02.md;protocol+explicitdenseamendment;reports/mini_deep_validation_v2_2026-10-02.
+Remote roots /media/IntelSSD/onestepfold/hpc3_mirror_20261001/Folding/deep_validation_v2_20261002 and deep_validation_v2_global_dense_20261002.
+Localmetadata /home/husrcf/Code/onestepfold_runtime/{same names};fullcheckpoints/boundaries remote withhashmanifests.
+Next method remains open: transferable capacity/outputparameterization, not WT-information impossibility.
+
 ## 2026-10-02 — Factor learnability ladder + R32 sparse oracle COMPLETE, first-stage stop
 
 User requested latent-only memorization, canonical SVD-factor supervision and R32+sparse/local residual;
