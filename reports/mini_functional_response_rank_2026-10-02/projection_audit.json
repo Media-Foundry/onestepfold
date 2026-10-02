@@ -1,0 +1,13 @@
+{
+  "comparisons": 500,
+  "max_absolute_float32_vs_direct_svd_error": 6.103515625e-05,
+  "max_error_in_float32_ulps_or_1e8_floor": 0.5000253021717072,
+  "largest_error_case": [
+    "2trh",
+    98,
+    0,
+    1442.0367881373356
+  ],
+  "seconds": 5.753726345021278,
+  "initial_absolute_only_audit_check": "1e-5 failed because truncated large channels are rounded to FP32; replaced by an explicit one-ULP bound, not a model acceptance threshold"
+}

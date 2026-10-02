@@ -1,3 +1,38 @@
+## 2026-10-02 — Conditional local functional-rank COMPLETE; average fidelity high, nonzero functional tails
+
+User requests centered SVD truncation followed by real S1 decoding, before residual-Jacobian or training.
+Protocol mini_functional_response_rank_v1; same 10 TRAIN parents/50 sites, public Mini-ESM+ESM2-3B.
+IMPORTANT old endpoint archive had only s_i,zrow,zcol,s_inputs_i, not full conditioning: recomputed
+960 unique native hard C4 endpoints, verified 1000 site endpoint/identity checks against old archive.
+Truncate ONLY s_i,zrow,zcol, mean over19 nonWT, K1/2/3/5/8/10/12/15 plus K0 and K18 controls.
+All other s/z, entire s_inputs and native chemistry are EXACT TARGET. WT remains exact. This is
+conditional local oracle compression, NOT full-trunk compression, predicted basis, speedup or design.
+Two locked identity-noise seeds225001/225011, controlled stable Euler S1, FP32/eval, no churn/dropout.
+Controller482106; all8GPU workers+8CPU scorers+collector exit0; 366.92s GPU,93.02s score,466.52s total.
+960C4/3840 recycle/21870NFE incl950shams;20920 unique coordinates. All950shams and K18 coordinates
+BITWISE exact; K18 max error0. No production/model edits, no new cases, no training.
+K5 AA fidelity lDDT .999534, CA .999761, local CA RMSDmean .084385A;19AA Spearman .979965
+(protein bootstrap95 [.97223,.98723]), top1 90/100 site-noises,42/50both, top5recall .950.
+K0 already Spearman .959193/top1 85/100: untouched target context carries mutation information.
+K12 top1 93/100,K15 96/100; not universal K5 functional sufficiency.20AA K5top1 91/100,rho .981038.
+K5 localRMSD>1A 24/1900, ALL6UFE site92;worstR92C noise225001 6.19344A (othernoise4.14967A).
+K12/K15 still13/12instances>1A,max3.99728/3.87160A. Do not hide tail with mean lDDT.
+Task=pre-existing parent experimental CA-distance Huber preservation, not mutant GT or binding.
+K5top1regretmean .0016528,max .105633;normalizedregretmean .003409.0low-range comparisons.
+Geometry reference884/1900 pass zero-severe+all checkedCA/ILE/THR;K5 885, but24newfails and25gains.
+Severe totals5952->5919,164instances increase,26increase checked wrong centres. Not chemical safety.
+Supplementary distance-response relativeL2error K5 .074736;AA-centered .097889;descriptive only.
+6tests pass;500 direct SVD comparisons within FP32 rounding (max6.1035e-5, .50003ULP; naive absolute
+1e-5 audit was overstrict for channels~1442; production K18 checks unchanged and exact).1100lddt
+independent recomputations and allSpearman checks exact;950coordinateSHAchecks pass.
+960complete native conditioning files13,005,293,645bytes retained+SHAhashed remotely ONLY;
+local coordinates/inventories/reports at /home/husrcf/Code/onestepfold_runtime/functional_response_rank_v1_20261002.
+Remote pc@10.120.16.9:/media/IntelSSD/onestepfold/hpc3_mirror_20261001/Folding/functional_response_rank_v1_20261002.
+Findings docs/mini_functional_response_rank_findings_2026-10-02.md;reports/mini_functional_response_rank_2026-10-02.
+DECISION close bounded batch; tail demonstrably matters in some cases. No K5/full-trunk promotion,
+no K12 training, no Jacobian-residual or global expansion started. Any global s/z intervention is a
+separate experiment using saved full states; do not misrepresent local exact-target-assisted result.
+
 ## 2026-10-02 — 50-site hard C4 response rank COMPLETE; 3–5-mode95% hypothesis unsupported
 
 User requests 20 hardAA endpoints/site, local C4 s_i,zrow,zcol SVD before anytraining.
