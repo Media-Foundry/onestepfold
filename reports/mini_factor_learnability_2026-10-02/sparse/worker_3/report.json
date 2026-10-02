@@ -1,0 +1,1397 @@
+{
+  "active": "p8_s101_Y",
+  "complete": true,
+  "counts": {
+    "nfe": 534,
+    "recycle": 0,
+    "replayed_packets": 38
+  },
+  "lock_sha256": "742a344f940f06d58a4476f9a2379996092d831d5b12d0289a05498b766c33ad",
+  "parents": [
+    {
+      "parent_index": 8,
+      "sites": [
+        {
+          "mutants": [
+            {
+              "aa": "A",
+              "coordinate_sha256": "2433803caf57d9b61670d13bb1b93999979a523284377db11dfdb45466c66680",
+              "evidence": {
+                "dense_bytes": 10035200,
+                "factor_bytes": 4587520,
+                "latent_nmse": {
+                  "contact": 0.024380289297159376,
+                  "oracle_r32": 0.024478365942150575,
+                  "rowcol": 0.024465478440612597,
+                  "top_contact_budget": 0.023437082181382282,
+                  "top_row_budget": 0.022147980520298
+                },
+                "mask_exact_max_error": {
+                  "contact": 0.0,
+                  "rowcol": 0.0,
+                  "top_contact_budget": 0.0,
+                  "top_row_budget": 0.0
+                },
+                "mask_sha256": "2dffacf3515313d562c4c927ae650ee64d1b5b84888f3b819a9abebb3e5e4c35",
+                "pairs": {
+                  "contact": 81,
+                  "rowcol": 279,
+                  "top_contact_budget": 81,
+                  "top_row_budget": 279
+                },
+                "representation_fraction": {
+                  "contact": 0.46134008290816325,
+                  "oracle_r32": 0.45714285714285713,
+                  "rowcol": 0.4715999681122449,
+                  "top_contact_budget": 0.46134008290816325,
+                  "top_row_budget": 0.4715999681122449
+                }
+              },
+              "label": "p8_s108_A"
+            },
+            {
+              "aa": "C",
+              "coordinate_sha256": "4ade024a83aaa08a0fdbd5586c7268f0bacffb5af98250affba5c962fec59d7a",
+              "evidence": {
+                "dense_bytes": 10035200,
+                "factor_bytes": 4587520,
+                "latent_nmse": {
+                  "contact": 0.02235475605552842,
+                  "oracle_r32": 0.022401297565087474,
+                  "rowcol": 0.02239285883271556,
+                  "top_contact_budget": 0.021343458655743407,
+                  "top_row_budget": 0.020105934667692154
+                },
+                "mask_exact_max_error": {
+                  "contact": 0.0,
+                  "rowcol": 0.0,
+                  "top_contact_budget": 0.0,
+                  "top_row_budget": 0.0
+                },
+                "mask_sha256": "76bf816348c306e33c556c678e7e32e3196f075b9e8fd0f54c085f4e08e3b250",
+                "pairs": {
+                  "contact": 81,
+                  "rowcol": 279,
+                  "top_contact_budget": 81,
+                  "top_row_budget": 279
+                },
+                "representation_fraction": {
+                  "contact": 0.46134008290816325,
+                  "oracle_r32": 0.45714285714285713,
+                  "rowcol": 0.4715999681122449,
+                  "top_contact_budget": 0.46134008290816325,
+                  "top_row_budget": 0.4715999681122449
+                }
+              },
+              "label": "p8_s108_C"
+            },
+            {
+              "aa": "D",
+              "coordinate_sha256": "c0ba29891c4d2648cf1a83a3a6da0a6aaaddcfc8f6b4750d12c614a017a4c6de",
+              "evidence": {
+                "dense_bytes": 10035200,
+                "factor_bytes": 4587520,
+                "latent_nmse": {
+                  "contact": 0.020664058727074167,
+                  "oracle_r32": 0.020721450652468856,
+                  "rowcol": 0.0207091782726078,
+                  "top_contact_budget": 0.019780217065228194,
+                  "top_row_budget": 0.018683373619054516
+                },
+                "mask_exact_max_error": {
+                  "contact": 0.0,
+                  "rowcol": 0.0,
+                  "top_contact_budget": 0.0,
+                  "top_row_budget": 0.0
+                },
+                "mask_sha256": "10bb981520480266102f2d1939009f7e26728877db4a9e597712794e87a77172",
+                "pairs": {
+                  "contact": 81,
+                  "rowcol": 279,
+                  "top_contact_budget": 81,
+                  "top_row_budget": 279
+                },
+                "representation_fraction": {
+                  "contact": 0.46134008290816325,
+                  "oracle_r32": 0.45714285714285713,
+                  "rowcol": 0.4715999681122449,
+                  "top_contact_budget": 0.46134008290816325,
+                  "top_row_budget": 0.4715999681122449
+                }
+              },
+              "label": "p8_s108_D"
+            },
+            {
+              "aa": "F",
+              "coordinate_sha256": "ae5529def41d6fca2376b3ea9d0ac014d013e4a9ea60c2ee3de31d2b5c8aaf78",
+              "evidence": {
+                "dense_bytes": 10035200,
+                "factor_bytes": 4587520,
+                "latent_nmse": {
+                  "contact": 0.023334869519316844,
+                  "oracle_r32": 0.02339707588828964,
+                  "rowcol": 0.023388686587986984,
+                  "top_contact_budget": 0.022318929592978626,
+                  "top_row_budget": 0.021110370044616383
+                },
+                "mask_exact_max_error": {
+                  "contact": 0.0,
+                  "rowcol": 0.0,
+                  "top_contact_budget": 0.0,
+                  "top_row_budget": 0.0
+                },
+                "mask_sha256": "f38a9cc19cee0e0be03806dfd8000655ee51829075708121f08c25d127a2d6a1",
+                "pairs": {
+                  "contact": 81,
+                  "rowcol": 279,
+                  "top_contact_budget": 81,
+                  "top_row_budget": 279
+                },
+                "representation_fraction": {
+                  "contact": 0.46134008290816325,
+                  "oracle_r32": 0.45714285714285713,
+                  "rowcol": 0.4715999681122449,
+                  "top_contact_budget": 0.46134008290816325,
+                  "top_row_budget": 0.4715999681122449
+                }
+              },
+              "label": "p8_s108_F"
+            },
+            {
+              "aa": "G",
+              "coordinate_sha256": "486301aba747e0b8bc55813ddedc7db9de88449b87a254fe98808d9564a7cb6b",
+              "evidence": {
+                "dense_bytes": 10035200,
+                "factor_bytes": 4587520,
+                "latent_nmse": {
+                  "contact": 0.010820453773307101,
+                  "oracle_r32": 0.010834480985560748,
+                  "rowcol": 0.01083336735552886,
+                  "top_contact_budget": 0.01041768043151221,
+                  "top_row_budget": 0.009860736237150343
+                },
+                "mask_exact_max_error": {
+                  "contact": 0.0,
+                  "rowcol": 0.0,
+                  "top_contact_budget": 0.0,
+                  "top_row_budget": 0.0
+                },
+                "mask_sha256": "72b719ba7cc381aa8eab4ef94afb6733933396bb84472c36248c6276e74e74c2",
+                "pairs": {
+                  "contact": 81,
+                  "rowcol": 279,
+                  "top_contact_budget": 81,
+                  "top_row_budget": 279
+                },
+                "representation_fraction": {
+                  "contact": 0.46134008290816325,
+                  "oracle_r32": 0.45714285714285713,
+                  "rowcol": 0.4715999681122449,
+                  "top_contact_budget": 0.46134008290816325,
+                  "top_row_budget": 0.4715999681122449
+                }
+              },
+              "label": "p8_s108_G"
+            },
+            {
+              "aa": "H",
+              "coordinate_sha256": "bad5bd0bffa0ea307dbf2f170312454c1d7d4dc7abeae340d41615b3ae781b48",
+              "evidence": {
+                "dense_bytes": 10035200,
+                "factor_bytes": 4587520,
+                "latent_nmse": {
+                  "contact": 0.024299490929418015,
+                  "oracle_r32": 0.02436252759421409,
+                  "rowcol": 0.024350932607915952,
+                  "top_contact_budget": 0.023229278499247982,
+                  "top_row_budget": 0.021937905480672773
+                },
+                "mask_exact_max_error": {
+                  "contact": 0.0,
+                  "rowcol": 0.0,
+                  "top_contact_budget": 0.0,
+                  "top_row_budget": 0.0
+                },
+                "mask_sha256": "2ebf71cf0615fd6f476037698c4ab67577728e48984eddb2490f8f0073aa13e1",
+                "pairs": {
+                  "contact": 81,
+                  "rowcol": 279,
+                  "top_contact_budget": 81,
+                  "top_row_budget": 279
+                },
+                "representation_fraction": {
+                  "contact": 0.46134008290816325,
+                  "oracle_r32": 0.45714285714285713,
+                  "rowcol": 0.4715999681122449,
+                  "top_contact_budget": 0.46134008290816325,
+                  "top_row_budget": 0.4715999681122449
+                }
+              },
+              "label": "p8_s108_H"
+            },
+            {
+              "aa": "I",
+              "coordinate_sha256": "b3c37391915c82c0acecb5fcae860e0acf8f87fc61fc6cf7ab701ebb95fa3de3",
+              "evidence": {
+                "dense_bytes": 10035200,
+                "factor_bytes": 4587520,
+                "latent_nmse": {
+                  "contact": 0.037382449658123124,
+                  "oracle_r32": 0.03753694047316352,
+                  "rowcol": 0.03750348897802388,
+                  "top_contact_budget": 0.035860392217847696,
+                  "top_row_budget": 0.03390674849746291
+                },
+                "mask_exact_max_error": {
+                  "contact": 0.0,
+                  "rowcol": 0.0,
+                  "top_contact_budget": 0.0,
+                  "top_row_budget": 0.0
+                },
+                "mask_sha256": "f3bad75643671d983ae445a030ab779af62c9ba41c7dee854396a963f4f202e7",
+                "pairs": {
+                  "contact": 81,
+                  "rowcol": 279,
+                  "top_contact_budget": 81,
+                  "top_row_budget": 279
+                },
+                "representation_fraction": {
+                  "contact": 0.46134008290816325,
+                  "oracle_r32": 0.45714285714285713,
+                  "rowcol": 0.4715999681122449,
+                  "top_contact_budget": 0.46134008290816325,
+                  "top_row_budget": 0.4715999681122449
+                }
+              },
+              "label": "p8_s108_I"
+            },
+            {
+              "aa": "K",
+              "coordinate_sha256": "b5c59c32a907f82cd1d6a5afa1f43d7eb510c4891bf82625c6bd7d83eb6295ea",
+              "evidence": {
+                "dense_bytes": 10035200,
+                "factor_bytes": 4587520,
+                "latent_nmse": {
+                  "contact": 0.033812907803019134,
+                  "oracle_r32": 0.033903058221222894,
+                  "rowcol": 0.03388376598873897,
+                  "top_contact_budget": 0.03223724906342701,
+                  "top_row_budget": 0.030342576482000748
+                },
+                "mask_exact_max_error": {
+                  "contact": 0.0,
+                  "rowcol": 0.0,
+                  "top_contact_budget": 0.0,
+                  "top_row_budget": 0.0
+                },
+                "mask_sha256": "66f5aeae94d0a5fa93e210dd072dd5846c482beedf910c99c9652260a7dfbf0e",
+                "pairs": {
+                  "contact": 81,
+                  "rowcol": 279,
+                  "top_contact_budget": 81,
+                  "top_row_budget": 279
+                },
+                "representation_fraction": {
+                  "contact": 0.46134008290816325,
+                  "oracle_r32": 0.45714285714285713,
+                  "rowcol": 0.4715999681122449,
+                  "top_contact_budget": 0.46134008290816325,
+                  "top_row_budget": 0.4715999681122449
+                }
+              },
+              "label": "p8_s108_K"
+            },
+            {
+              "aa": "L",
+              "coordinate_sha256": "668886ce1798a1aaf6245ae2f7ee66fccf5a366780c9edf60b5cc7dedfd5f7f6",
+              "evidence": {
+                "dense_bytes": 10035200,
+                "factor_bytes": 4587520,
+                "latent_nmse": {
+                  "contact": 0.03233525682659336,
+                  "oracle_r32": 0.032462144717563014,
+                  "rowcol": 0.03243786416304574,
+                  "top_contact_budget": 0.031045229556028807,
+                  "top_row_budget": 0.02932183938110223
+                },
+                "mask_exact_max_error": {
+                  "contact": 0.0,
+                  "rowcol": 0.0,
+                  "top_contact_budget": 0.0,
+                  "top_row_budget": 0.0
+                },
+                "mask_sha256": "9598363d44e3edfaa9b49090c5e71ed49b506c76f9c35854324f8702f53f3c20",
+                "pairs": {
+                  "contact": 81,
+                  "rowcol": 279,
+                  "top_contact_budget": 81,
+                  "top_row_budget": 279
+                },
+                "representation_fraction": {
+                  "contact": 0.46134008290816325,
+                  "oracle_r32": 0.45714285714285713,
+                  "rowcol": 0.4715999681122449,
+                  "top_contact_budget": 0.46134008290816325,
+                  "top_row_budget": 0.4715999681122449
+                }
+              },
+              "label": "p8_s108_L"
+            },
+            {
+              "aa": "M",
+              "coordinate_sha256": "56c5eca9e4f33ef67de5efe411cc8afb69f53e4a8961c2f74ca08ec1b48db350",
+              "evidence": {
+                "dense_bytes": 10035200,
+                "factor_bytes": 4587520,
+                "latent_nmse": {
+                  "contact": 0.023044843041721132,
+                  "oracle_r32": 0.023096387307093805,
+                  "rowcol": 0.023084661141771438,
+                  "top_contact_budget": 0.02207256412347134,
+                  "top_row_budget": 0.02080949307749387
+                },
+                "mask_exact_max_error": {
+                  "contact": 0.0,
+                  "rowcol": 0.0,
+                  "top_contact_budget": 0.0,
+                  "top_row_budget": 0.0
+                },
+                "mask_sha256": "3095d869323865706a80bf3c42185874a7c11c84295071ea53519e1ea7d96591",
+                "pairs": {
+                  "contact": 81,
+                  "rowcol": 279,
+                  "top_contact_budget": 81,
+                  "top_row_budget": 279
+                },
+                "representation_fraction": {
+                  "contact": 0.46134008290816325,
+                  "oracle_r32": 0.45714285714285713,
+                  "rowcol": 0.4715999681122449,
+                  "top_contact_budget": 0.46134008290816325,
+                  "top_row_budget": 0.4715999681122449
+                }
+              },
+              "label": "p8_s108_M"
+            },
+            {
+              "aa": "N",
+              "coordinate_sha256": "ed98f8fd04c076dcb650854d4a760ef859dac93008434b037212ba53c7f9e4fa",
+              "evidence": {
+                "dense_bytes": 10035200,
+                "factor_bytes": 4587520,
+                "latent_nmse": {
+                  "contact": 0.01778643667461671,
+                  "oracle_r32": 0.01781252405248353,
+                  "rowcol": 0.017806501341041323,
+                  "top_contact_budget": 0.01704771168715581,
+                  "top_row_budget": 0.016129040835350945
+                },
+                "mask_exact_max_error": {
+                  "contact": 0.0,
+                  "rowcol": 0.0,
+                  "top_contact_budget": 0.0,
+                  "top_row_budget": 0.0
+                },
+                "mask_sha256": "99ccd230fe26c9ba0a0b1c2afc8a21376b88b18c465b7d8a0d9b1e83ccfbeafc",
+                "pairs": {
+                  "contact": 81,
+                  "rowcol": 279,
+                  "top_contact_budget": 81,
+                  "top_row_budget": 279
+                },
+                "representation_fraction": {
+                  "contact": 0.46134008290816325,
+                  "oracle_r32": 0.45714285714285713,
+                  "rowcol": 0.4715999681122449,
+                  "top_contact_budget": 0.46134008290816325,
+                  "top_row_budget": 0.4715999681122449
+                }
+              },
+              "label": "p8_s108_N"
+            },
+            {
+              "aa": "P",
+              "coordinate_sha256": "4951dbe4574fc1e86a9556db0151bc4ce51c9ab1537092cefb5d0619a7d0de74",
+              "evidence": {
+                "dense_bytes": 10035200,
+                "factor_bytes": 4587520,
+                "latent_nmse": {
+                  "contact": 0.07423463058417118,
+                  "oracle_r32": 0.07438189971653934,
+                  "rowcol": 0.07424022133642469,
+                  "top_contact_budget": 0.07108164241539042,
+                  "top_row_budget": 0.06683832351969957
+                },
+                "mask_exact_max_error": {
+                  "contact": 0.0,
+                  "rowcol": 0.0,
+                  "top_contact_budget": 0.0,
+                  "top_row_budget": 0.0
+                },
+                "mask_sha256": "572f530610d9945a4cd1460ebc5d9ff3f0960668e4b7bd9f40d9e1445047c38c",
+                "pairs": {
+                  "contact": 81,
+                  "rowcol": 279,
+                  "top_contact_budget": 81,
+                  "top_row_budget": 279
+                },
+                "representation_fraction": {
+                  "contact": 0.46134008290816325,
+                  "oracle_r32": 0.45714285714285713,
+                  "rowcol": 0.4715999681122449,
+                  "top_contact_budget": 0.46134008290816325,
+                  "top_row_budget": 0.4715999681122449
+                }
+              },
+              "label": "p8_s108_P"
+            },
+            {
+              "aa": "Q",
+              "coordinate_sha256": "6d2bf2fec6e28e390f6b9fdc4be150b1de49d99aff1ba3addec003520bf84981",
+              "evidence": {
+                "dense_bytes": 10035200,
+                "factor_bytes": 4587520,
+                "latent_nmse": {
+                  "contact": 0.03166476611955089,
+                  "oracle_r32": 0.031749846344708996,
+                  "rowcol": 0.03172859562417069,
+                  "top_contact_budget": 0.030249828207623092,
+                  "top_row_budget": 0.028536634210661493
+                },
+                "mask_exact_max_error": {
+                  "contact": 0.0,
+                  "rowcol": 0.0,
+                  "top_contact_budget": 0.0,
+                  "top_row_budget": 0.0
+                },
+                "mask_sha256": "a3e36e02807a37cf18341253904704bd5d999f73771d4f17bb988cf21660fdd4",
+                "pairs": {
+                  "contact": 81,
+                  "rowcol": 279,
+                  "top_contact_budget": 81,
+                  "top_row_budget": 279
+                },
+                "representation_fraction": {
+                  "contact": 0.46134008290816325,
+                  "oracle_r32": 0.45714285714285713,
+                  "rowcol": 0.4715999681122449,
+                  "top_contact_budget": 0.46134008290816325,
+                  "top_row_budget": 0.4715999681122449
+                }
+              },
+              "label": "p8_s108_Q"
+            },
+            {
+              "aa": "R",
+              "coordinate_sha256": "0eb29f25d5e72ad52540b0c4d9e41fe29e70856d62d6c2e057aa96c2288f4347",
+              "evidence": {
+                "dense_bytes": 10035200,
+                "factor_bytes": 4587520,
+                "latent_nmse": {
+                  "contact": 0.027796558926148365,
+                  "oracle_r32": 0.02788202948029565,
+                  "rowcol": 0.027864129461519616,
+                  "top_contact_budget": 0.026592059152033276,
+                  "top_row_budget": 0.02510073770228731
+                },
+                "mask_exact_max_error": {
+                  "contact": 0.0,
+                  "rowcol": 0.0,
+                  "top_contact_budget": 0.0,
+                  "top_row_budget": 0.0
+                },
+                "mask_sha256": "517d7eaf22157dbe07b7aab2fa956d38db60ec0de4f8ae1eaf3741b3ff6e1321",
+                "pairs": {
+                  "contact": 81,
+                  "rowcol": 279,
+                  "top_contact_budget": 81,
+                  "top_row_budget": 279
+                },
+                "representation_fraction": {
+                  "contact": 0.46134008290816325,
+                  "oracle_r32": 0.45714285714285713,
+                  "rowcol": 0.4715999681122449,
+                  "top_contact_budget": 0.46134008290816325,
+                  "top_row_budget": 0.4715999681122449
+                }
+              },
+              "label": "p8_s108_R"
+            },
+            {
+              "aa": "S",
+              "coordinate_sha256": "4771a512f6f697038498b323172cb8778408da1dd84c5e454e57231314b4866e",
+              "evidence": {
+                "dense_bytes": 10035200,
+                "factor_bytes": 4587520,
+                "latent_nmse": {
+                  "contact": 0.023530999519229052,
+                  "oracle_r32": 0.023607197050405624,
+                  "rowcol": 0.023595615199798973,
+                  "top_contact_budget": 0.022563443678316093,
+                  "top_row_budget": 0.021314818559566927
+                },
+                "mask_exact_max_error": {
+                  "contact": 0.0,
+                  "rowcol": 0.0,
+                  "top_contact_budget": 0.0,
+                  "top_row_budget": 0.0
+                },
+                "mask_sha256": "b421c3006321001d895b0eceded06650b458d4a6379f0c2d57b8a99a6cf67bf9",
+                "pairs": {
+                  "contact": 81,
+                  "rowcol": 279,
+                  "top_contact_budget": 81,
+                  "top_row_budget": 279
+                },
+                "representation_fraction": {
+                  "contact": 0.46134008290816325,
+                  "oracle_r32": 0.45714285714285713,
+                  "rowcol": 0.4715999681122449,
+                  "top_contact_budget": 0.46134008290816325,
+                  "top_row_budget": 0.4715999681122449
+                }
+              },
+              "label": "p8_s108_S"
+            },
+            {
+              "aa": "T",
+              "coordinate_sha256": "5d694aea64a82c088395f646247702150f98797ea79bd8de9ea9a3e1d4561020",
+              "evidence": {
+                "dense_bytes": 10035200,
+                "factor_bytes": 4587520,
+                "latent_nmse": {
+                  "contact": 0.021907797317823587,
+                  "oracle_r32": 0.021935818708769244,
+                  "rowcol": 0.021928424662338183,
+                  "top_contact_budget": 0.020978153903460903,
+                  "top_row_budget": 0.019839741634334367
+                },
+                "mask_exact_max_error": {
+                  "contact": 0.0,
+                  "rowcol": 0.0,
+                  "top_contact_budget": 0.0,
+                  "top_row_budget": 0.0
+                },
+                "mask_sha256": "60bef39737c375f4774c820e04f29eda2279c136f9c803b174be492504f85745",
+                "pairs": {
+                  "contact": 81,
+                  "rowcol": 279,
+                  "top_contact_budget": 81,
+                  "top_row_budget": 279
+                },
+                "representation_fraction": {
+                  "contact": 0.46134008290816325,
+                  "oracle_r32": 0.45714285714285713,
+                  "rowcol": 0.4715999681122449,
+                  "top_contact_budget": 0.46134008290816325,
+                  "top_row_budget": 0.4715999681122449
+                }
+              },
+              "label": "p8_s108_T"
+            },
+            {
+              "aa": "V",
+              "coordinate_sha256": "797d2ad5fbb662de2565f94574b61b244059a8ca64f9661563f370fc12b62cd8",
+              "evidence": {
+                "dense_bytes": 10035200,
+                "factor_bytes": 4587520,
+                "latent_nmse": {
+                  "contact": 0.02620924224930854,
+                  "oracle_r32": 0.026271678478203667,
+                  "rowcol": 0.026259430625861193,
+                  "top_contact_budget": 0.02497698412968921,
+                  "top_row_budget": 0.023536834961287768
+                },
+                "mask_exact_max_error": {
+                  "contact": 0.0,
+                  "rowcol": 0.0,
+                  "top_contact_budget": 0.0,
+                  "top_row_budget": 0.0
+                },
+                "mask_sha256": "b7cfbfa3e8fb13c5834319ac456f51cdef36f07bd984f51d88da08f213813b61",
+                "pairs": {
+                  "contact": 81,
+                  "rowcol": 279,
+                  "top_contact_budget": 81,
+                  "top_row_budget": 279
+                },
+                "representation_fraction": {
+                  "contact": 0.46134008290816325,
+                  "oracle_r32": 0.45714285714285713,
+                  "rowcol": 0.4715999681122449,
+                  "top_contact_budget": 0.46134008290816325,
+                  "top_row_budget": 0.4715999681122449
+                }
+              },
+              "label": "p8_s108_V"
+            },
+            {
+              "aa": "W",
+              "coordinate_sha256": "f905047839ce011e35c6ef54f0fa1e768cec72ceb87a07e4f3f3c23a4779b516",
+              "evidence": {
+                "dense_bytes": 10035200,
+                "factor_bytes": 4587520,
+                "latent_nmse": {
+                  "contact": 0.02463032395373669,
+                  "oracle_r32": 0.024714094044177105,
+                  "rowcol": 0.024700814417457615,
+                  "top_contact_budget": 0.023577280760490617,
+                  "top_row_budget": 0.022227920188907395
+                },
+                "mask_exact_max_error": {
+                  "contact": 0.0,
+                  "rowcol": 0.0,
+                  "top_contact_budget": 0.0,
+                  "top_row_budget": 0.0
+                },
+                "mask_sha256": "ff958da517a7b6e4dd8abd99ae14e0443e402d33aeb8338715d725664f5e951b",
+                "pairs": {
+                  "contact": 81,
+                  "rowcol": 279,
+                  "top_contact_budget": 81,
+                  "top_row_budget": 279
+                },
+                "representation_fraction": {
+                  "contact": 0.46134008290816325,
+                  "oracle_r32": 0.45714285714285713,
+                  "rowcol": 0.4715999681122449,
+                  "top_contact_budget": 0.46134008290816325,
+                  "top_row_budget": 0.4715999681122449
+                }
+              },
+              "label": "p8_s108_W"
+            },
+            {
+              "aa": "Y",
+              "coordinate_sha256": "8c2eadd42845c4328c8b10a9340a95e02772e20e9bacf274c60cfdb4c743e823",
+              "evidence": {
+                "dense_bytes": 10035200,
+                "factor_bytes": 4587520,
+                "latent_nmse": {
+                  "contact": 0.02456280123077732,
+                  "oracle_r32": 0.02464406698423344,
+                  "rowcol": 0.024632639762279664,
+                  "top_contact_budget": 0.023554586836006093,
+                  "top_row_budget": 0.022248376321175257
+                },
+                "mask_exact_max_error": {
+                  "contact": 0.0,
+                  "rowcol": 0.0,
+                  "top_contact_budget": 0.0,
+                  "top_row_budget": 0.0
+                },
+                "mask_sha256": "d3592dacd7de69d4dcc78e9e8057a65120e5427f8fdcb4f4d58a3bf56ee47ac7",
+                "pairs": {
+                  "contact": 81,
+                  "rowcol": 279,
+                  "top_contact_budget": 81,
+                  "top_row_budget": 279
+                },
+                "representation_fraction": {
+                  "contact": 0.46134008290816325,
+                  "oracle_r32": 0.45714285714285713,
+                  "rowcol": 0.4715999681122449,
+                  "top_contact_budget": 0.46134008290816325,
+                  "top_row_budget": 0.4715999681122449
+                }
+              },
+              "label": "p8_s108_Y"
+            }
+          ],
+          "position": 107
+        },
+        {
+          "mutants": [
+            {
+              "aa": "A",
+              "coordinate_sha256": "896f9361a8e7dd87b1e3ea650b9e1da9efa7080a95c3298158ece4600d3256ca",
+              "evidence": {
+                "dense_bytes": 10035200,
+                "factor_bytes": 4587520,
+                "latent_nmse": {
+                  "contact": 0.03021423407462003,
+                  "oracle_r32": 0.030336654878911108,
+                  "rowcol": 0.03030684364681965,
+                  "top_contact_budget": 0.028770947326410487,
+                  "top_row_budget": 0.02707694565814394
+                },
+                "mask_exact_max_error": {
+                  "contact": 0.0,
+                  "rowcol": 0.0,
+                  "top_contact_budget": 0.0,
+                  "top_row_budget": 0.0
+                },
+                "mask_sha256": "ac1bea66793e2868d29616bad307d56ca00697258d7c00f2452920623e8800aa",
+                "pairs": {
+                  "contact": 81,
+                  "rowcol": 279,
+                  "top_contact_budget": 81,
+                  "top_row_budget": 279
+                },
+                "representation_fraction": {
+                  "contact": 0.46134008290816325,
+                  "oracle_r32": 0.45714285714285713,
+                  "rowcol": 0.4715999681122449,
+                  "top_contact_budget": 0.46134008290816325,
+                  "top_row_budget": 0.4715999681122449
+                }
+              },
+              "label": "p8_s101_A"
+            },
+            {
+              "aa": "C",
+              "coordinate_sha256": "c1229a2ccd01238ec3888c145b85de9b0c3bd5616a4b15641845ef4a9e8e4f96",
+              "evidence": {
+                "dense_bytes": 10035200,
+                "factor_bytes": 4587520,
+                "latent_nmse": {
+                  "contact": 0.03406756337066319,
+                  "oracle_r32": 0.03418751672647513,
+                  "rowcol": 0.03415278849942409,
+                  "top_contact_budget": 0.03230852226539616,
+                  "top_row_budget": 0.03037075266197631
+                },
+                "mask_exact_max_error": {
+                  "contact": 0.0,
+                  "rowcol": 0.0,
+                  "top_contact_budget": 0.0,
+                  "top_row_budget": 0.0
+                },
+                "mask_sha256": "8c9509852f006b4ef8ba3e2fbe47dad51b82a6899346e9a5c49227551ce17b76",
+                "pairs": {
+                  "contact": 81,
+                  "rowcol": 279,
+                  "top_contact_budget": 81,
+                  "top_row_budget": 279
+                },
+                "representation_fraction": {
+                  "contact": 0.46134008290816325,
+                  "oracle_r32": 0.45714285714285713,
+                  "rowcol": 0.4715999681122449,
+                  "top_contact_budget": 0.46134008290816325,
+                  "top_row_budget": 0.4715999681122449
+                }
+              },
+              "label": "p8_s101_C"
+            },
+            {
+              "aa": "D",
+              "coordinate_sha256": "8d24a0257f507f25d06818303fda72605648aceda30078bb47bfed05fe29311c",
+              "evidence": {
+                "dense_bytes": 10035200,
+                "factor_bytes": 4587520,
+                "latent_nmse": {
+                  "contact": 0.043007801517815435,
+                  "oracle_r32": 0.043222577215990966,
+                  "rowcol": 0.042733881145199874,
+                  "top_contact_budget": 0.04176804272492411,
+                  "top_row_budget": 0.03977531708251
+                },
+                "mask_exact_max_error": {
+                  "contact": 0.0,
+                  "rowcol": 0.0,
+                  "top_contact_budget": 0.0,
+                  "top_row_budget": 0.0
+                },
+                "mask_sha256": "28f8eeec59ff864d43e65eed2b019dfcec6f5aaee8dfa911b302aa4e9a1c62c3",
+                "pairs": {
+                  "contact": 81,
+                  "rowcol": 279,
+                  "top_contact_budget": 81,
+                  "top_row_budget": 279
+                },
+                "representation_fraction": {
+                  "contact": 0.46134008290816325,
+                  "oracle_r32": 0.45714285714285713,
+                  "rowcol": 0.4715999681122449,
+                  "top_contact_budget": 0.46134008290816325,
+                  "top_row_budget": 0.4715999681122449
+                }
+              },
+              "label": "p8_s101_D"
+            },
+            {
+              "aa": "E",
+              "coordinate_sha256": "5c84f4f3dcce838135d26e75fcbaf5337b16dafd3d5e464ed3cb6a83b5493a6d",
+              "evidence": {
+                "dense_bytes": 10035200,
+                "factor_bytes": 4587520,
+                "latent_nmse": {
+                  "contact": 0.07102811884759064,
+                  "oracle_r32": 0.07149426112913439,
+                  "rowcol": 0.07116647470071298,
+                  "top_contact_budget": 0.06790221695266487,
+                  "top_row_budget": 0.06383017609715236
+                },
+                "mask_exact_max_error": {
+                  "contact": 0.0,
+                  "rowcol": 0.0,
+                  "top_contact_budget": 0.0,
+                  "top_row_budget": 0.0
+                },
+                "mask_sha256": "a7e78db4a1e7f2b817be90d4655d382ec38c903db31435c63ac27290ddaa6559",
+                "pairs": {
+                  "contact": 81,
+                  "rowcol": 279,
+                  "top_contact_budget": 81,
+                  "top_row_budget": 279
+                },
+                "representation_fraction": {
+                  "contact": 0.46134008290816325,
+                  "oracle_r32": 0.45714285714285713,
+                  "rowcol": 0.4715999681122449,
+                  "top_contact_budget": 0.46134008290816325,
+                  "top_row_budget": 0.4715999681122449
+                }
+              },
+              "label": "p8_s101_E"
+            },
+            {
+              "aa": "F",
+              "coordinate_sha256": "1412266d1aea50a989ab940905e4cae5f9d3f7c1bd5fc4c994823a791b58d2be",
+              "evidence": {
+                "dense_bytes": 10035200,
+                "factor_bytes": 4587520,
+                "latent_nmse": {
+                  "contact": 0.05100531109020868,
+                  "oracle_r32": 0.05116756377797717,
+                  "rowcol": 0.05109267190704148,
+                  "top_contact_budget": 0.04848713128547972,
+                  "top_row_budget": 0.045698969826329865
+                },
+                "mask_exact_max_error": {
+                  "contact": 0.0,
+                  "rowcol": 0.0,
+                  "top_contact_budget": 0.0,
+                  "top_row_budget": 0.0
+                },
+                "mask_sha256": "eaf24ca5077e1f39ff5f9d384d2c1c9fbd542302f02e87a3802ca91683a296fc",
+                "pairs": {
+                  "contact": 81,
+                  "rowcol": 279,
+                  "top_contact_budget": 81,
+                  "top_row_budget": 279
+                },
+                "representation_fraction": {
+                  "contact": 0.46134008290816325,
+                  "oracle_r32": 0.45714285714285713,
+                  "rowcol": 0.4715999681122449,
+                  "top_contact_budget": 0.46134008290816325,
+                  "top_row_budget": 0.4715999681122449
+                }
+              },
+              "label": "p8_s101_F"
+            },
+            {
+              "aa": "G",
+              "coordinate_sha256": "60242e80d514957411e5db98188c52e19f9f1d03873831e26691fdbd47eaa838",
+              "evidence": {
+                "dense_bytes": 10035200,
+                "factor_bytes": 4587520,
+                "latent_nmse": {
+                  "contact": 0.044761565260688495,
+                  "oracle_r32": 0.044961714003609064,
+                  "rowcol": 0.044914250762291476,
+                  "top_contact_budget": 0.04281683816132863,
+                  "top_row_budget": 0.040350058093566635
+                },
+                "mask_exact_max_error": {
+                  "contact": 0.0,
+                  "rowcol": 0.0,
+                  "top_contact_budget": 0.0,
+                  "top_row_budget": 0.0
+                },
+                "mask_sha256": "f78bb605d814661bb60fa7ca6749ca44fb9e4bbfca3a65608036d20df4c9e4dd",
+                "pairs": {
+                  "contact": 81,
+                  "rowcol": 279,
+                  "top_contact_budget": 81,
+                  "top_row_budget": 279
+                },
+                "representation_fraction": {
+                  "contact": 0.46134008290816325,
+                  "oracle_r32": 0.45714285714285713,
+                  "rowcol": 0.4715999681122449,
+                  "top_contact_budget": 0.46134008290816325,
+                  "top_row_budget": 0.4715999681122449
+                }
+              },
+              "label": "p8_s101_G"
+            },
+            {
+              "aa": "H",
+              "coordinate_sha256": "ce077b120d9ac0ca7785cab85336cc710ca236d5c95920c01a824f6e2de81747",
+              "evidence": {
+                "dense_bytes": 10035200,
+                "factor_bytes": 4587520,
+                "latent_nmse": {
+                  "contact": 0.030531418095106327,
+                  "oracle_r32": 0.030635834093640797,
+                  "rowcol": 0.030597912776210483,
+                  "top_contact_budget": 0.028987142916392355,
+                  "top_row_budget": 0.02732155823020964
+                },
+                "mask_exact_max_error": {
+                  "contact": 0.0,
+                  "rowcol": 0.0,
+                  "top_contact_budget": 0.0,
+                  "top_row_budget": 0.0
+                },
+                "mask_sha256": "4831067b90bcde50e9092fd6ec2b2372b0ead5613ec6ad9d181ae45f857265b5",
+                "pairs": {
+                  "contact": 81,
+                  "rowcol": 279,
+                  "top_contact_budget": 81,
+                  "top_row_budget": 279
+                },
+                "representation_fraction": {
+                  "contact": 0.46134008290816325,
+                  "oracle_r32": 0.45714285714285713,
+                  "rowcol": 0.4715999681122449,
+                  "top_contact_budget": 0.46134008290816325,
+                  "top_row_budget": 0.4715999681122449
+                }
+              },
+              "label": "p8_s101_H"
+            },
+            {
+              "aa": "I",
+              "coordinate_sha256": "0744808f7dc02335b01435984cde024298b667dd47945931c3da00eb232b6b7b",
+              "evidence": {
+                "dense_bytes": 10035200,
+                "factor_bytes": 4587520,
+                "latent_nmse": {
+                  "contact": 0.03617043879532113,
+                  "oracle_r32": 0.03628948846554349,
+                  "rowcol": 0.03625126190473629,
+                  "top_contact_budget": 0.03451161890213094,
+                  "top_row_budget": 0.03254809770656089
+                },
+                "mask_exact_max_error": {
+                  "contact": 0.0,
+                  "rowcol": 0.0,
+                  "top_contact_budget": 0.0,
+                  "top_row_budget": 0.0
+                },
+                "mask_sha256": "755841fbcc1bca1367959bb0ebff340757a0c3a7aa23754a9d9cf01da6be4425",
+                "pairs": {
+                  "contact": 81,
+                  "rowcol": 279,
+                  "top_contact_budget": 81,
+                  "top_row_budget": 279
+                },
+                "representation_fraction": {
+                  "contact": 0.46134008290816325,
+                  "oracle_r32": 0.45714285714285713,
+                  "rowcol": 0.4715999681122449,
+                  "top_contact_budget": 0.46134008290816325,
+                  "top_row_budget": 0.4715999681122449
+                }
+              },
+              "label": "p8_s101_I"
+            },
+            {
+              "aa": "K",
+              "coordinate_sha256": "08803dd9b50263222e4bd6230dc190f2ef108aecb7f4b582636a5f01c702de89",
+              "evidence": {
+                "dense_bytes": 10035200,
+                "factor_bytes": 4587520,
+                "latent_nmse": {
+                  "contact": 0.01845390761574857,
+                  "oracle_r32": 0.018482040846583284,
+                  "rowcol": 0.018473630511637952,
+                  "top_contact_budget": 0.017657920217706968,
+                  "top_row_budget": 0.0166348714607721
+                },
+                "mask_exact_max_error": {
+                  "contact": 0.0,
+                  "rowcol": 0.0,
+                  "top_contact_budget": 0.0,
+                  "top_row_budget": 0.0
+                },
+                "mask_sha256": "a3dff14bb82c55c3f4342d1b53d1a8256ad40bde5fc7def1b80bf062dc91d1f3",
+                "pairs": {
+                  "contact": 81,
+                  "rowcol": 279,
+                  "top_contact_budget": 81,
+                  "top_row_budget": 279
+                },
+                "representation_fraction": {
+                  "contact": 0.46134008290816325,
+                  "oracle_r32": 0.45714285714285713,
+                  "rowcol": 0.4715999681122449,
+                  "top_contact_budget": 0.46134008290816325,
+                  "top_row_budget": 0.4715999681122449
+                }
+              },
+              "label": "p8_s101_K"
+            },
+            {
+              "aa": "L",
+              "coordinate_sha256": "905ad7a364e60631832add088feae7d8d436161041b7064714af1a4fe45b125d",
+              "evidence": {
+                "dense_bytes": 10035200,
+                "factor_bytes": 4587520,
+                "latent_nmse": {
+                  "contact": 0.034024160203742604,
+                  "oracle_r32": 0.034140273048744424,
+                  "rowcol": 0.03410547633877405,
+                  "top_contact_budget": 0.032347716283921454,
+                  "top_row_budget": 0.03042540003256487
+                },
+                "mask_exact_max_error": {
+                  "contact": 0.0,
+                  "rowcol": 0.0,
+                  "top_contact_budget": 0.0,
+                  "top_row_budget": 0.0
+                },
+                "mask_sha256": "916ad00adfa7fe99e105bb1513017e9276a00e3cfb151200954fd4a8a877a1d7",
+                "pairs": {
+                  "contact": 81,
+                  "rowcol": 279,
+                  "top_contact_budget": 81,
+                  "top_row_budget": 279
+                },
+                "representation_fraction": {
+                  "contact": 0.46134008290816325,
+                  "oracle_r32": 0.45714285714285713,
+                  "rowcol": 0.4715999681122449,
+                  "top_contact_budget": 0.46134008290816325,
+                  "top_row_budget": 0.4715999681122449
+                }
+              },
+              "label": "p8_s101_L"
+            },
+            {
+              "aa": "M",
+              "coordinate_sha256": "5754b9c21e81dc518c23ad0af8ddfd980593a2a9420c2497340f5a2082938cc1",
+              "evidence": {
+                "dense_bytes": 10035200,
+                "factor_bytes": 4587520,
+                "latent_nmse": {
+                  "contact": 0.030433926996615644,
+                  "oracle_r32": 0.030543567433254752,
+                  "rowcol": 0.030513309994770883,
+                  "top_contact_budget": 0.02895216299802,
+                  "top_row_budget": 0.02723806484923418
+                },
+                "mask_exact_max_error": {
+                  "contact": 0.0,
+                  "rowcol": 0.0,
+                  "top_contact_budget": 0.0,
+                  "top_row_budget": 0.0
+                },
+                "mask_sha256": "d2d29a5da17a90308a8c0ded44c0fe0cbe289bb3d9458a21f647b4f9c182335c",
+                "pairs": {
+                  "contact": 81,
+                  "rowcol": 279,
+                  "top_contact_budget": 81,
+                  "top_row_budget": 279
+                },
+                "representation_fraction": {
+                  "contact": 0.46134008290816325,
+                  "oracle_r32": 0.45714285714285713,
+                  "rowcol": 0.4715999681122449,
+                  "top_contact_budget": 0.46134008290816325,
+                  "top_row_budget": 0.4715999681122449
+                }
+              },
+              "label": "p8_s101_M"
+            },
+            {
+              "aa": "N",
+              "coordinate_sha256": "27fb80b99c257ad4608e4af336008c016b928a55c8a1e248aab08797d722ae06",
+              "evidence": {
+                "dense_bytes": 10035200,
+                "factor_bytes": 4587520,
+                "latent_nmse": {
+                  "contact": 0.05175226132760905,
+                  "oracle_r32": 0.051953556930937006,
+                  "rowcol": 0.051835426498288234,
+                  "top_contact_budget": 0.04959128595768995,
+                  "top_row_budget": 0.04676029863031432
+                },
+                "mask_exact_max_error": {
+                  "contact": 0.0,
+                  "rowcol": 0.0,
+                  "top_contact_budget": 0.0,
+                  "top_row_budget": 0.0
+                },
+                "mask_sha256": "b30bf22cf3e1d3484815c7bff557dd20eb962b0581337c25b93b5978a028a7c4",
+                "pairs": {
+                  "contact": 81,
+                  "rowcol": 279,
+                  "top_contact_budget": 81,
+                  "top_row_budget": 279
+                },
+                "representation_fraction": {
+                  "contact": 0.46134008290816325,
+                  "oracle_r32": 0.45714285714285713,
+                  "rowcol": 0.4715999681122449,
+                  "top_contact_budget": 0.46134008290816325,
+                  "top_row_budget": 0.4715999681122449
+                }
+              },
+              "label": "p8_s101_N"
+            },
+            {
+              "aa": "P",
+              "coordinate_sha256": "eb4bdbb99f412efd52e8238065ae7e4025921938acf40d74a66bc462af31b95a",
+              "evidence": {
+                "dense_bytes": 10035200,
+                "factor_bytes": 4587520,
+                "latent_nmse": {
+                  "contact": 0.046292008825249496,
+                  "oracle_r32": 0.04638339275366003,
+                  "rowcol": 0.04623576866886417,
+                  "top_contact_budget": 0.044408366542478726,
+                  "top_row_budget": 0.04205609903513843
+                },
+                "mask_exact_max_error": {
+                  "contact": 0.0,
+                  "rowcol": 0.0,
+                  "top_contact_budget": 0.0,
+                  "top_row_budget": 0.0
+                },
+                "mask_sha256": "5b4b167aeb8e8fd467515d17359345a48aaa926021ba75cef08ebb7d1924014c",
+                "pairs": {
+                  "contact": 81,
+                  "rowcol": 279,
+                  "top_contact_budget": 81,
+                  "top_row_budget": 279
+                },
+                "representation_fraction": {
+                  "contact": 0.46134008290816325,
+                  "oracle_r32": 0.45714285714285713,
+                  "rowcol": 0.4715999681122449,
+                  "top_contact_budget": 0.46134008290816325,
+                  "top_row_budget": 0.4715999681122449
+                }
+              },
+              "label": "p8_s101_P"
+            },
+            {
+              "aa": "Q",
+              "coordinate_sha256": "10a99b000ac535f6533f4127ad30d0b9103adb9a9c6c3086963c0886082fac59",
+              "evidence": {
+                "dense_bytes": 10035200,
+                "factor_bytes": 4587520,
+                "latent_nmse": {
+                  "contact": 0.027861801501150724,
+                  "oracle_r32": 0.027961764719406295,
+                  "rowcol": 0.027936345793283926,
+                  "top_contact_budget": 0.0266256073881514,
+                  "top_row_budget": 0.02508231537755396
+                },
+                "mask_exact_max_error": {
+                  "contact": 0.0,
+                  "rowcol": 0.0,
+                  "top_contact_budget": 0.0,
+                  "top_row_budget": 0.0
+                },
+                "mask_sha256": "142c5300e151ecdd4f5dbc8f3059bd68332e54a5e315ece6b14009cbb6c725ea",
+                "pairs": {
+                  "contact": 81,
+                  "rowcol": 279,
+                  "top_contact_budget": 81,
+                  "top_row_budget": 279
+                },
+                "representation_fraction": {
+                  "contact": 0.46134008290816325,
+                  "oracle_r32": 0.45714285714285713,
+                  "rowcol": 0.4715999681122449,
+                  "top_contact_budget": 0.46134008290816325,
+                  "top_row_budget": 0.4715999681122449
+                }
+              },
+              "label": "p8_s101_Q"
+            },
+            {
+              "aa": "S",
+              "coordinate_sha256": "6513314944fa2d9a7975a28c10755d133d65cf23b93518e0d600a8b8fa3b6f03",
+              "evidence": {
+                "dense_bytes": 10035200,
+                "factor_bytes": 4587520,
+                "latent_nmse": {
+                  "contact": 0.05488339311721988,
+                  "oracle_r32": 0.05512720533608351,
+                  "rowcol": 0.05467177225108337,
+                  "top_contact_budget": 0.05334529594186042,
+                  "top_row_budget": 0.05082864903366694
+                },
+                "mask_exact_max_error": {
+                  "contact": 0.0,
+                  "rowcol": 0.0,
+                  "top_contact_budget": 0.0,
+                  "top_row_budget": 0.0
+                },
+                "mask_sha256": "41109716f5fa0e2534b7d8da30f7bffd90bb26037bcc5b9d16db6eebe97d974b",
+                "pairs": {
+                  "contact": 81,
+                  "rowcol": 279,
+                  "top_contact_budget": 81,
+                  "top_row_budget": 279
+                },
+                "representation_fraction": {
+                  "contact": 0.46134008290816325,
+                  "oracle_r32": 0.45714285714285713,
+                  "rowcol": 0.4715999681122449,
+                  "top_contact_budget": 0.46134008290816325,
+                  "top_row_budget": 0.4715999681122449
+                }
+              },
+              "label": "p8_s101_S"
+            },
+            {
+              "aa": "T",
+              "coordinate_sha256": "1d287d3fd9a199e4bd6bb3129ebcbd773703ebeab2c9db919821118430183d82",
+              "evidence": {
+                "dense_bytes": 10035200,
+                "factor_bytes": 4587520,
+                "latent_nmse": {
+                  "contact": 0.04966601362542877,
+                  "oracle_r32": 0.04994589533033928,
+                  "rowcol": 0.04984853104259168,
+                  "top_contact_budget": 0.047609721606089346,
+                  "top_row_budget": 0.044767003474744556
+                },
+                "mask_exact_max_error": {
+                  "contact": 0.0,
+                  "rowcol": 0.0,
+                  "top_contact_budget": 0.0,
+                  "top_row_budget": 0.0
+                },
+                "mask_sha256": "4527f00fd7c8413c9153aa340ff45ac5ff4f5adaec74a34f691653197beeda8f",
+                "pairs": {
+                  "contact": 81,
+                  "rowcol": 279,
+                  "top_contact_budget": 81,
+                  "top_row_budget": 279
+                },
+                "representation_fraction": {
+                  "contact": 0.46134008290816325,
+                  "oracle_r32": 0.45714285714285713,
+                  "rowcol": 0.4715999681122449,
+                  "top_contact_budget": 0.46134008290816325,
+                  "top_row_budget": 0.4715999681122449
+                }
+              },
+              "label": "p8_s101_T"
+            },
+            {
+              "aa": "V",
+              "coordinate_sha256": "9858352d6bd83814cc3fd65bf9acd06cfff097f2447af1dfb0d7624f475b6193",
+              "evidence": {
+                "dense_bytes": 10035200,
+                "factor_bytes": 4587520,
+                "latent_nmse": {
+                  "contact": 0.033380457663628404,
+                  "oracle_r32": 0.03346903695723096,
+                  "rowcol": 0.03344084711662981,
+                  "top_contact_budget": 0.03175005763364443,
+                  "top_row_budget": 0.029924697303240193
+                },
+                "mask_exact_max_error": {
+                  "contact": 0.0,
+                  "rowcol": 0.0,
+                  "top_contact_budget": 0.0,
+                  "top_row_budget": 0.0
+                },
+                "mask_sha256": "0a7ba472d4aaa1ec7b81b4deab53362e9e93b325aa4d55554f6258307d0b6087",
+                "pairs": {
+                  "contact": 81,
+                  "rowcol": 279,
+                  "top_contact_budget": 81,
+                  "top_row_budget": 279
+                },
+                "representation_fraction": {
+                  "contact": 0.46134008290816325,
+                  "oracle_r32": 0.45714285714285713,
+                  "rowcol": 0.4715999681122449,
+                  "top_contact_budget": 0.46134008290816325,
+                  "top_row_budget": 0.4715999681122449
+                }
+              },
+              "label": "p8_s101_V"
+            },
+            {
+              "aa": "W",
+              "coordinate_sha256": "c1d7e80ce2d6e075eabcaed20435202adac29830acbc0814b9bd3e45f052359c",
+              "evidence": {
+                "dense_bytes": 10035200,
+                "factor_bytes": 4587520,
+                "latent_nmse": {
+                  "contact": 0.039559892400348746,
+                  "oracle_r32": 0.03968180087501498,
+                  "rowcol": 0.03964533960408166,
+                  "top_contact_budget": 0.03773200918955973,
+                  "top_row_budget": 0.035572358244450805
+                },
+                "mask_exact_max_error": {
+                  "contact": 0.0,
+                  "rowcol": 0.0,
+                  "top_contact_budget": 0.0,
+                  "top_row_budget": 0.0
+                },
+                "mask_sha256": "8767891d9896c7bf5f94630ac68846b2f4dadcd9f34944c3a691e6735298f345",
+                "pairs": {
+                  "contact": 81,
+                  "rowcol": 279,
+                  "top_contact_budget": 81,
+                  "top_row_budget": 279
+                },
+                "representation_fraction": {
+                  "contact": 0.46134008290816325,
+                  "oracle_r32": 0.45714285714285713,
+                  "rowcol": 0.4715999681122449,
+                  "top_contact_budget": 0.46134008290816325,
+                  "top_row_budget": 0.4715999681122449
+                }
+              },
+              "label": "p8_s101_W"
+            },
+            {
+              "aa": "Y",
+              "coordinate_sha256": "9dc6698c0e2cb68c613f8bd01a511c881dac138000d0d38b6384dc7b6f792a7e",
+              "evidence": {
+                "dense_bytes": 10035200,
+                "factor_bytes": 4587520,
+                "latent_nmse": {
+                  "contact": 0.050080050384648946,
+                  "oracle_r32": 0.05023474971547204,
+                  "rowcol": 0.05016016841873389,
+                  "top_contact_budget": 0.047585169844162986,
+                  "top_row_budget": 0.04484384721853802
+                },
+                "mask_exact_max_error": {
+                  "contact": 0.0,
+                  "rowcol": 0.0,
+                  "top_contact_budget": 0.0,
+                  "top_row_budget": 0.0
+                },
+                "mask_sha256": "d3dd3d1e15a9ec92b4e0c43b145fddb1138b895e05f65dfb02f994a077bffea4",
+                "pairs": {
+                  "contact": 81,
+                  "rowcol": 279,
+                  "top_contact_budget": 81,
+                  "top_row_budget": 279
+                },
+                "representation_fraction": {
+                  "contact": 0.46134008290816325,
+                  "oracle_r32": 0.45714285714285713,
+                  "rowcol": 0.4715999681122449,
+                  "top_contact_budget": 0.46134008290816325,
+                  "top_row_budget": 0.4715999681122449
+                }
+              },
+              "label": "p8_s101_Y"
+            }
+          ],
+          "position": 100
+        }
+      ]
+    }
+  ],
+  "peak_allocated_bytes": 1117827072,
+  "seconds": 200.03545735299122
+}

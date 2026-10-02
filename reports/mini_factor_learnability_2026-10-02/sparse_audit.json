@@ -1,0 +1,108 @@
+{
+  "complete": true,
+  "coordinate_packets": 312,
+  "geometry_transitions": {
+    "contact": {
+      "fixed_r32_failures": [
+        {
+          "aa": "P",
+          "noise": 230201,
+          "parent_index": 2,
+          "position": 29
+        }
+      ],
+      "new_failures_relative_r32": [
+        {
+          "aa": "Y",
+          "baseline_pass": true,
+          "noise": 230211,
+          "parent_index": 16,
+          "position": 109
+        }
+      ]
+    },
+    "rowcol": {
+      "fixed_r32_failures": [
+        {
+          "aa": "P",
+          "noise": 230201,
+          "parent_index": 2,
+          "position": 29
+        }
+      ],
+      "new_failures_relative_r32": [
+        {
+          "aa": "V",
+          "baseline_pass": true,
+          "noise": 230201,
+          "parent_index": 2,
+          "position": 29
+        },
+        {
+          "aa": "Y",
+          "baseline_pass": true,
+          "noise": 230201,
+          "parent_index": 8,
+          "position": 100
+        }
+      ]
+    },
+    "top_contact_budget": {
+      "fixed_r32_failures": [
+        {
+          "aa": "P",
+          "noise": 230201,
+          "parent_index": 2,
+          "position": 29
+        }
+      ],
+      "new_failures_relative_r32": [
+        {
+          "aa": "V",
+          "baseline_pass": true,
+          "noise": 230201,
+          "parent_index": 2,
+          "position": 29
+        }
+      ]
+    },
+    "top_row_budget": {
+      "fixed_r32_failures": [
+        {
+          "aa": "P",
+          "noise": 230201,
+          "parent_index": 2,
+          "position": 29
+        }
+      ],
+      "new_failures_relative_r32": [
+        {
+          "aa": "V",
+          "baseline_pass": true,
+          "noise": 230201,
+          "parent_index": 2,
+          "position": 29
+        },
+        {
+          "aa": "N",
+          "baseline_pass": false,
+          "noise": 230211,
+          "parent_index": 9,
+          "position": 41
+        },
+        {
+          "aa": "M",
+          "baseline_pass": false,
+          "noise": 230201,
+          "parent_index": 9,
+          "position": 88
+        }
+      ]
+    }
+  },
+  "independent_lddt_checks": 112,
+  "mask_budget_checks": 304,
+  "max_lddt_error": 0.0,
+  "prior_array_replays": 920,
+  "ranking_checks": 768
+}

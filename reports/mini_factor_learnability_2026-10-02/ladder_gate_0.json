@@ -1,0 +1,32 @@
+{
+  "advance": false,
+  "complete": true,
+  "criteria": "same network arm mean full-response NMSE <= 0.1 in BOTH seeds",
+  "fits": {
+    "canonical": false,
+    "reconstruction": false
+  },
+  "stage": 0,
+  "values": [
+    {
+      "arm": "reconstruction",
+      "nmse": 0.48293009400367737,
+      "seed": 231301
+    },
+    {
+      "arm": "reconstruction",
+      "nmse": 0.46950327722649826,
+      "seed": 231303
+    },
+    {
+      "arm": "canonical",
+      "nmse": 0.7963044078726518,
+      "seed": 231301
+    },
+    {
+      "arm": "canonical",
+      "nmse": 0.7972479744961387,
+      "seed": 231303
+    }
+  ]
+}

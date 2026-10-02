@@ -1,0 +1,3 @@
+export OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 HIP_VISIBLE_DEVICES='' CUDA_VISIBLE_DEVICES=''
+export PYTHONPATH=/data/user/shuang886/Folding/factor_learnability_v1_20261002/code/src:/data/user/shuang886/Folding/factor_learnability_v1_20261002/code/scripts
+/media/IntelSSD/onestepfold/diamondhill_migration_20261001/tools/proot/usr/bin/proot -b /media/IntelSSD/onestepfold/hpc3_mirror_20261001/Folding:/data/user/shuang886/Folding /home/pc/anaconda3/envs/fold/bin/python /data/user/shuang886/Folding/factor_learnability_v1_20261002/audit_factor_residual_masks.py --root /data/user/shuang886/Folding/factor_learnability_v1_20261002

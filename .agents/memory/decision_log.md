@@ -1,3 +1,43 @@
+## 2026-10-02 — Factor learnability ladder + R32 sparse oracle COMPLETE, first-stage stop
+
+User requested latent-only memorization, canonical SVD-factor supervision and R32+sparse/local residual;
+no extension of old training. Protocol docs/mini_factor_learnability_v1.md locked before outcomes.
+TRAIN 1W53 T37,84aa,19nonWT,2seeds231301/231303;512full19-AA updates=9728candidateexposures/run.
+Original FactorStudent1598592params,width128,2blocks,R32 unchanged;AdamW3e-4/wd1e-4/eps1e-8/clip1.
+ReconstructionNMSE endpoints .482930/.469503 (initial1); canonical .796304/.797248.
+Free per-AA factors control13074432params,lr.01/wd0,initial original network factors: .166799/.167076.
+OracleR32 floor .055136. Free table has more parameters/differentLR, NOT isolated gauge/capacity evidence.
+No network met predeclared meanNMSE<=.1 in BOTH seeds; ladder STOP stage0;2sites/4parents/16parents NOT run.
+No S1/geometry in fitting, no newC4/ESM, no largerpair-aware network/Delta-s/generalization run.
+Reconstruction learns AA-specific response: oracle sharedmean baselineNMSE .765491;
+centerederror .5785/.5656 vs canonical .8292/.8308; not simply zero response basin or only commonmean.
+All curves still falling atfixedendpoint; no convergence/impossibility claim or automaticextra updates.
+FP64SVD signs/balancedfactors scaledR^.25 to match original UV/sqrtR;1%relativegap groups alignedjointProcrustes;
+3018groups6082vectors,162/2432spectra near-degenerate atR32cut. No global smooth factorlabel claim.
+Canonicalfactorloss .719/.721, yet matrixerror~.797; reconstructionfactorloss~2.12 despitebetter matrixfit.
+Canonicalsupervision NOT promoted; gauge as primary cause not established.
+
+Sparseoracle: reused8validationparents16sites304mutants2oldnoises (now representationdevelopment,NOTfreshvalidation).
+Exacttarget s+WTs_inputs+targetnativechemistry; perchannelR32 then exact residual masks;
+rowcol,WTnoise230201 CA8A/seq±2 neighbourhood NxN,topresidualmagnitude with matched row/contactbudgets.
+R32/row/contact/toprow/topcontact rho .994518/.994627/.994682/.995669/.994846;
+Top130/30/30/31/31 of32;newgeometryvsBaseline13/14/13/13/13 of608;no local>1A.
+Eachmask fixes1oforiginal13;newfailvsR32 2/1/3/1 respectively (amongbaselinepass2/1/1/1).
+R32failreasons8clashonly4chiralityonly1both,5parents;Baselineitself360/608geometrypass.
+R32NMSE .063963;toprow .058586. factor+sparsebytes/dense mean50.81/52.42/51.52/52.42/51.52%.
+Top masks use exactteacher residual, NOT deployablepredictors. No selected budgetclearsgeometry.
+RankingproxyfixedparentGTCAHuber,NOTmutantexperimentalGT/design/binder. Densez still expandedforS1.
+
+Sixmemjobs79.56swall;8sparseGPUworkers240.02s/4272S1/0C4;CPUscore40.01s;controller365.02s.
+11tests;6checkpointreplays maxNMSEdifference1.13e-7;312coordpackets920priorarraysbitwise;
+768ranking/112independentlddt checks;304mask/storagechecks,8NumPyCPU SVD checksmax8.8e-14.
+Alljobsclosed;no modelpromotion. Nextifauthorized: newboundedcapacity/pair-content intervention,
+not continuation, no causal conclusion from this one-site/two-seed diagnostic.
+Report docs/mini_factor_learnability_findings_2026-10-02.md;data reports/mini_factor_learnability_2026-10-02.
+Runtime local /home/husrcf/Code/onestepfold_runtime/factor_learnability_v1_20261002;
+remote /media/IntelSSD/onestepfold/hpc3_mirror_20261001/Folding/factor_learnability_v1_20261002.
+Sixcheckpoints+coords local/remote; teacherfullstatesremain previousfactor_student_pilot root.
+
 ## 2026-10-02 — User-authorized R24 extension and NEW-parent factor student pilot COMPLETE, closed
 
 User explicitly reopened only spatialR24 (R32 already measured), then chose NEW-protein pilot with homology isolation.
