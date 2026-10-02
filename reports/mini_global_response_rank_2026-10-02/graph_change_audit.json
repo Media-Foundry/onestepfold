@@ -1,0 +1,702 @@
+{
+  "all": {
+    "summary": {
+      "changed_count": 56,
+      "affected_count": 5,
+      "changed_files": 50,
+      "risk_level": "medium"
+    },
+    "changed_symbols": [
+      {
+        "id": "Section:AGENTS.md:L1:Repository guidance",
+        "name": "Repository guidance",
+        "type": "Section",
+        "filePath": "AGENTS.md",
+        "change_type": "touched"
+      },
+      {
+        "id": "Section:AGENTS.md:L12:GitNexus — Code Intelligence",
+        "name": "GitNexus — Code Intelligence",
+        "type": "Section",
+        "filePath": "AGENTS.md",
+        "change_type": "touched"
+      },
+      {
+        "id": "Section:AGENTS.md:L18:Always Do",
+        "name": "Always Do",
+        "type": "Section",
+        "filePath": "AGENTS.md",
+        "change_type": "touched"
+      },
+      {
+        "id": "Section:AGENTS.md:L27:Never Do",
+        "name": "Never Do",
+        "type": "Section",
+        "filePath": "AGENTS.md",
+        "change_type": "touched"
+      },
+      {
+        "id": "Section:AGENTS.md:L34:Resources",
+        "name": "Resources",
+        "type": "Section",
+        "filePath": "AGENTS.md",
+        "change_type": "touched"
+      },
+      {
+        "id": "Section:AGENTS.md:L43:CLI",
+        "name": "CLI",
+        "type": "Section",
+        "filePath": "AGENTS.md",
+        "change_type": "touched"
+      },
+      {
+        "id": "Section:docs/esmc_cache_v1.md:L1:ESMC cache v1",
+        "name": "ESMC cache v1",
+        "type": "Section",
+        "filePath": "docs/esmc_cache_v1.md",
+        "change_type": "touched"
+      },
+      {
+        "id": "Section:docs/esmc_cache_v1.md:L9:Pinned contract",
+        "name": "Pinned contract",
+        "type": "Section",
+        "filePath": "docs/esmc_cache_v1.md",
+        "change_type": "touched"
+      },
+      {
+        "id": "Section:docs/mini_global_response_rank_findings_2026-10-02.md:L1:完整 s/z functional rank：共享 3–5 维不足，平均排序不能替代尾部",
+        "name": "",
+        "type": "Section",
+        "filePath": "docs/mini_global_response_rank_findings_2026-10-02.md",
+        "change_type": "touched"
+      },
+      {
+        "id": "Section:docs/mini_global_response_rank_findings_2026-10-02.md:L11:固定对象、两个参照与实际成本",
+        "name": "",
+        "type": "Section",
+        "filePath": "docs/mini_global_response_rank_findings_2026-10-02.md",
+        "change_type": "touched"
+      },
+      {
+        "id": "Section:docs/mini_global_response_rank_findings_2026-10-02.md:L24:全局共享 raw 曲线",
+        "name": "",
+        "type": "Section",
+        "filePath": "docs/mini_global_response_rank_findings_2026-10-02.md",
+        "change_type": "touched"
+      },
+      {
+        "id": "Section:docs/mini_global_response_rank_findings_2026-10-02.md:L54:权重平衡与 s/z 容量的区别",
+        "name": "",
+        "type": "Section",
+        "filePath": "docs/mini_global_response_rank_findings_2026-10-02.md",
+        "change_type": "touched"
+      },
+      {
+        "id": "Section:docs/mini_global_response_rank_findings_2026-10-02.md:L86:尾部和几何不能被均值覆盖",
+        "name": "",
+        "type": "Section",
+        "filePath": "docs/mini_global_response_rank_findings_2026-10-02.md",
+        "change_type": "touched"
+      },
+      {
+        "id": "Section:docs/mini_global_response_rank_findings_2026-10-02.md:L99:审计、产物与结论边界",
+        "name": "",
+        "type": "Section",
+        "filePath": "docs/mini_global_response_rank_findings_2026-10-02.md",
+        "change_type": "touched"
+      },
+      {
+        "id": "Section:docs/mini_global_response_rank_v1.md:L1:Global s/z functional-rank v1 — locked before decoding",
+        "name": "",
+        "type": "Section",
+        "filePath": "docs/mini_global_response_rank_v1.md",
+        "change_type": "touched"
+      },
+      {
+        "id": "Section:docs/mini_global_response_rank_v1.md:L8:Projection and decoder inputs",
+        "name": "",
+        "type": "Section",
+        "filePath": "docs/mini_global_response_rank_v1.md",
+        "change_type": "touched"
+      },
+      {
+        "id": "Section:docs/mini_global_response_rank_v1.md:L54:Native replay and execution",
+        "name": "",
+        "type": "Section",
+        "filePath": "docs/mini_global_response_rank_v1.md",
+        "change_type": "touched"
+      },
+      {
+        "id": "Section:docs/mini_global_response_rank_v1.md:L74:Functional endpoints and inference limits",
+        "name": "",
+        "type": "Section",
+        "filePath": "docs/mini_global_response_rank_v1.md",
+        "change_type": "touched"
+      },
+      {
+        "id": "Function:scripts/audit_global_response_rank.py:audit_global_basis",
+        "name": "audit_global_basis",
+        "type": "Function",
+        "filePath": "scripts/audit_global_response_rank.py",
+        "change_type": "touched"
+      },
+      {
+        "id": "Function:scripts/audit_global_response_rank.py:audit_global_outputs",
+        "name": "audit_global_outputs",
+        "type": "Function",
+        "filePath": "scripts/audit_global_response_rank.py",
+        "change_type": "touched"
+      },
+      {
+        "id": "Function:scripts/evaluate_stage0.py:evaluate_row",
+        "name": "evaluate_row",
+        "type": "Function",
+        "filePath": "scripts/evaluate_stage0.py",
+        "change_type": "touched"
+      },
+      {
+        "id": "Variable:scripts/run_global_response_rank.py:ARMS",
+        "name": "ARMS",
+        "type": "Variable",
+        "filePath": "scripts/run_global_response_rank.py",
+        "change_type": "touched"
+      },
+      {
+        "id": "Function:scripts/run_global_response_rank.py:prepare_global_response_rank",
+        "name": "prepare_global_response_rank",
+        "type": "Function",
+        "filePath": "scripts/run_global_response_rank.py",
+        "change_type": "touched"
+      },
+      {
+        "id": "Function:scripts/run_global_response_rank.py:run_global_response_rank",
+        "name": "run_global_response_rank",
+        "type": "Function",
+        "filePath": "scripts/run_global_response_rank.py",
+        "change_type": "touched"
+      },
+      {
+        "id": "Function:scripts/run_global_response_rank.py:run_global_response_rank.save@45:4",
+        "name": "save",
+        "type": "Function",
+        "filePath": "scripts/run_global_response_rank.py",
+        "change_type": "touched"
+      },
+      {
+        "id": "Function:scripts/run_global_response_rank.py:run_global_response_rank.forbidden@48:4",
+        "name": "forbidden",
+        "type": "Function",
+        "filePath": "scripts/run_global_response_rank.py",
+        "change_type": "touched"
+      },
+      {
+        "id": "Function:scripts/run_global_response_rank.py:run_global_response_rank.load_state@51:4",
+        "name": "load_state",
+        "type": "Function",
+        "filePath": "scripts/run_global_response_rank.py",
+        "change_type": "touched"
+      },
+      {
+        "id": "Function:scripts/run_global_response_rank.py:run_global_response_rank.chemical_input@55:4",
+        "name": "chemical_input",
+        "type": "Function",
+        "filePath": "scripts/run_global_response_rank.py",
+        "change_type": "touched"
+      },
+      {
+        "id": "Function:scripts/run_global_response_rank.py:run_global_response_rank.decode@63:4",
+        "name": "decode",
+        "type": "Function",
+        "filePath": "scripts/run_global_response_rank.py",
+        "change_type": "touched"
+      },
+      {
+        "id": "Function:scripts/run_global_response_rank.py:score_global_response_rank",
+        "name": "score_global_response_rank",
+        "type": "Function",
+        "filePath": "scripts/run_global_response_rank.py",
+        "change_type": "touched"
+      },
+      {
+        "id": "Function:scripts/run_global_response_rank.py:collect_global_response_rank",
+        "name": "collect_global_response_rank",
+        "type": "Function",
+        "filePath": "scripts/run_global_response_rank.py",
+        "change_type": "touched"
+      },
+      {
+        "id": "Function:scripts/run_global_response_rank.py:collect_global_response_rank.aggregate@152:4",
+        "name": "aggregate",
+        "type": "Function",
+        "filePath": "scripts/run_global_response_rank.py",
+        "change_type": "touched"
+      },
+      {
+        "id": "Function:src/fastglycan/all_atom_metrics.py:compare_coordinates",
+        "name": "compare_coordinates",
+        "type": "Function",
+        "filePath": "src/fastglycan/all_atom_metrics.py",
+        "change_type": "touched"
+      },
+      {
+        "id": "Function:src/fastglycan/all_atom_metrics.py:compare_coordinates.rmsd@16:4",
+        "name": "rmsd",
+        "type": "Function",
+        "filePath": "src/fastglycan/all_atom_metrics.py",
+        "change_type": "touched"
+      },
+      {
+        "id": "Variable:src/fastglycan/global_response_rank.py:GLOBAL_RANKS",
+        "name": "GLOBAL_RANKS",
+        "type": "Variable",
+        "filePath": "src/fastglycan/global_response_rank.py",
+        "change_type": "touched"
+      },
+      {
+        "id": "Variable:src/fastglycan/global_response_rank.py:GLOBAL_VARIANTS",
+        "name": "GLOBAL_VARIANTS",
+        "type": "Variable",
+        "filePath": "src/fastglycan/global_response_rank.py",
+        "change_type": "touched"
+      },
+      {
+        "id": "Class:src/fastglycan/global_response_rank.py:GlobalResponseBasis",
+        "name": "GlobalResponseBasis",
+        "type": "Class",
+        "filePath": "src/fastglycan/global_response_rank.py",
+        "change_type": "touched"
+      },
+      {
+        "id": "Method:src/fastglycan/global_response_rank.py:GlobalResponseBasis.__init__#4",
+        "name": "__init__",
+        "type": "Method",
+        "filePath": "src/fastglycan/global_response_rank.py",
+        "change_type": "touched"
+      },
+      {
+        "id": "Method:src/fastglycan/global_response_rank.py:GlobalResponseBasis.reconstruct#3",
+        "name": "reconstruct",
+        "type": "Method",
+        "filePath": "src/fastglycan/global_response_rank.py",
+        "change_type": "touched"
+      },
+      {
+        "id": "Method:src/fastglycan/global_response_rank.py:GlobalResponseBasis.evidence#0",
+        "name": "evidence",
+        "type": "Method",
+        "filePath": "src/fastglycan/global_response_rank.py",
+        "change_type": "touched"
+      },
+      {
+        "id": "Class:src/onestepfold/models/coordinate_refiner.py:CoordinateRefinerConfig",
+        "name": "CoordinateRefinerConfig",
+        "type": "Class",
+        "filePath": "src/onestepfold/models/coordinate_refiner.py",
+        "change_type": "touched"
+      },
+      {
+        "id": "Property:src/onestepfold/models/coordinate_refiner.py:CoordinateRefinerConfig.zero_initialize_output",
+        "name": "zero_initialize_output",
+        "type": "Property",
+        "filePath": "src/onestepfold/models/coordinate_refiner.py",
+        "change_type": "touched"
+      },
+      {
+        "id": "Property:src/onestepfold/models/coordinate_refiner.py:CoordinateRefinerConfig.geometry_features",
+        "name": "geometry_features",
+        "type": "Property",
+        "filePath": "src/onestepfold/models/coordinate_refiner.py",
+        "change_type": "touched"
+      },
+      {
+        "id": "Method:src/onestepfold/models/coordinate_refiner.py:CoordinateRefinerConfig.__post_init__#0",
+        "name": "__post_init__",
+        "type": "Method",
+        "filePath": "src/onestepfold/models/coordinate_refiner.py",
+        "change_type": "touched"
+      },
+      {
+        "id": "Function:src/onestepfold/models/coordinate_refiner.py:backbone_frames",
+        "name": "backbone_frames",
+        "type": "Function",
+        "filePath": "src/onestepfold/models/coordinate_refiner.py",
+        "change_type": "touched"
+      },
+      {
+        "id": "Class:src/onestepfold/models/coordinate_refiner.py:GlobalCoordinateRefiner",
+        "name": "GlobalCoordinateRefiner",
+        "type": "Class",
+        "filePath": "src/onestepfold/models/coordinate_refiner.py",
+        "change_type": "touched"
+      },
+      {
+        "id": "Method:src/onestepfold/models/coordinate_refiner.py:GlobalCoordinateRefiner.__init__#1",
+        "name": "__init__",
+        "type": "Method",
+        "filePath": "src/onestepfold/models/coordinate_refiner.py",
+        "change_type": "touched"
+      },
+      {
+        "id": "Method:src/onestepfold/models/coordinate_refiner.py:GlobalCoordinateRefiner.forward#4",
+        "name": "forward",
+        "type": "Method",
+        "filePath": "src/onestepfold/models/coordinate_refiner.py",
+        "change_type": "touched"
+      },
+      {
+        "id": "Function:tests/test_coordinate_refiner.py:test_refiner_is_rigid_transform_consistent",
+        "name": "test_refiner_is_rigid_transform_consistent",
+        "type": "Function",
+        "filePath": "tests/test_coordinate_refiner.py",
+        "change_type": "touched"
+      },
+      {
+        "id": "Function:tests/test_coordinate_refiner.py:test_refiner_zero_initialization_is_exact_c2_fallback",
+        "name": "test_refiner_zero_initialization_is_exact_c2_fallback",
+        "type": "Function",
+        "filePath": "tests/test_coordinate_refiner.py",
+        "change_type": "touched"
+      },
+      {
+        "id": "Function:tests/test_coordinate_refiner.py:test_geometry_changes_local_correction_and_ignores_padding",
+        "name": "test_geometry_changes_local_correction_and_ignores_padding",
+        "type": "Function",
+        "filePath": "tests/test_coordinate_refiner.py",
+        "change_type": "touched"
+      },
+      {
+        "id": "Function:tests/test_coordinate_refiner.py:test_geometry_branch_learns_after_zero_initialized_first_step",
+        "name": "test_geometry_branch_learns_after_zero_initialized_first_step",
+        "type": "Function",
+        "filePath": "tests/test_coordinate_refiner.py",
+        "change_type": "touched"
+      },
+      {
+        "id": "Function:tests/test_coordinate_refiner.py:test_zero_pair_bias_matches_radial_baseline_initialization_and_inference",
+        "name": "test_zero_pair_bias_matches_radial_baseline_initialization_and_inference",
+        "type": "Function",
+        "filePath": "tests/test_coordinate_refiner.py",
+        "change_type": "touched"
+      },
+      {
+        "id": "Function:tests/test_coordinate_refiner.py:test_geometry_preserves_shared_baseline_initialization",
+        "name": "test_geometry_preserves_shared_baseline_initialization",
+        "type": "Function",
+        "filePath": "tests/test_coordinate_refiner.py",
+        "change_type": "touched"
+      },
+      {
+        "id": "Function:tests/test_global_response_rank.py:test_global_weighted_svd_and_controls",
+        "name": "test_global_weighted_svd_and_controls",
+        "type": "Function",
+        "filePath": "tests/test_global_response_rank.py",
+        "change_type": "touched"
+      },
+      {
+        "id": "Function:tests/test_global_response_rank.py:test_zero_block_and_full_rank",
+        "name": "test_zero_block_and_full_rank",
+        "type": "Function",
+        "filePath": "tests/test_global_response_rank.py",
+        "change_type": "touched"
+      }
+    ],
+    "affected_processes": [
+      {
+        "id": "proc_11_main",
+        "name": "Main → _kabsch",
+        "process_type": "intra_community",
+        "step_count": 4,
+        "changed_steps": [
+          {
+            "symbol": "evaluate_row",
+            "step": 2
+          }
+        ]
+      },
+      {
+        "id": "proc_26_compare_experimental",
+        "name": "Compare_experimental → _align_target",
+        "process_type": "cross_community",
+        "step_count": 4,
+        "changed_steps": [
+          {
+            "symbol": "rmsd",
+            "step": 3
+          },
+          {
+            "symbol": "compare_coordinates",
+            "step": 2
+          }
+        ]
+      },
+      {
+        "id": "proc_59_main",
+        "name": "Main → _read_gt",
+        "process_type": "intra_community",
+        "step_count": 3,
+        "changed_steps": [
+          {
+            "symbol": "evaluate_row",
+            "step": 2
+          }
+        ]
+      },
+      {
+        "id": "proc_60_main",
+        "name": "Main → _read_prediction",
+        "process_type": "intra_community",
+        "step_count": 3,
+        "changed_steps": [
+          {
+            "symbol": "evaluate_row",
+            "step": 2
+          }
+        ]
+      },
+      {
+        "id": "proc_113_forward",
+        "name": "Forward → _normalize",
+        "process_type": "intra_community",
+        "step_count": 3,
+        "changed_steps": [
+          {
+            "symbol": "forward",
+            "step": 1
+          },
+          {
+            "symbol": "backbone_frames",
+            "step": 2
+          }
+        ]
+      }
+    ]
+  },
+  "staged": {
+    "summary": {
+      "changed_count": 31,
+      "affected_count": 0,
+      "changed_files": 39,
+      "risk_level": "low"
+    },
+    "changed_symbols": [
+      {
+        "id": "Section:docs/mini_global_response_rank_findings_2026-10-02.md:L1:完整 s/z functional rank：共享 3–5 维不足，平均排序不能替代尾部",
+        "name": "",
+        "type": "Section",
+        "filePath": "docs/mini_global_response_rank_findings_2026-10-02.md",
+        "change_type": "touched"
+      },
+      {
+        "id": "Section:docs/mini_global_response_rank_findings_2026-10-02.md:L11:固定对象、两个参照与实际成本",
+        "name": "",
+        "type": "Section",
+        "filePath": "docs/mini_global_response_rank_findings_2026-10-02.md",
+        "change_type": "touched"
+      },
+      {
+        "id": "Section:docs/mini_global_response_rank_findings_2026-10-02.md:L24:全局共享 raw 曲线",
+        "name": "",
+        "type": "Section",
+        "filePath": "docs/mini_global_response_rank_findings_2026-10-02.md",
+        "change_type": "touched"
+      },
+      {
+        "id": "Section:docs/mini_global_response_rank_findings_2026-10-02.md:L54:权重平衡与 s/z 容量的区别",
+        "name": "",
+        "type": "Section",
+        "filePath": "docs/mini_global_response_rank_findings_2026-10-02.md",
+        "change_type": "touched"
+      },
+      {
+        "id": "Section:docs/mini_global_response_rank_findings_2026-10-02.md:L86:尾部和几何不能被均值覆盖",
+        "name": "",
+        "type": "Section",
+        "filePath": "docs/mini_global_response_rank_findings_2026-10-02.md",
+        "change_type": "touched"
+      },
+      {
+        "id": "Section:docs/mini_global_response_rank_findings_2026-10-02.md:L99:审计、产物与结论边界",
+        "name": "",
+        "type": "Section",
+        "filePath": "docs/mini_global_response_rank_findings_2026-10-02.md",
+        "change_type": "touched"
+      },
+      {
+        "id": "Section:docs/mini_global_response_rank_v1.md:L1:Global s/z functional-rank v1 — locked before decoding",
+        "name": "",
+        "type": "Section",
+        "filePath": "docs/mini_global_response_rank_v1.md",
+        "change_type": "touched"
+      },
+      {
+        "id": "Section:docs/mini_global_response_rank_v1.md:L8:Projection and decoder inputs",
+        "name": "",
+        "type": "Section",
+        "filePath": "docs/mini_global_response_rank_v1.md",
+        "change_type": "touched"
+      },
+      {
+        "id": "Section:docs/mini_global_response_rank_v1.md:L54:Native replay and execution",
+        "name": "",
+        "type": "Section",
+        "filePath": "docs/mini_global_response_rank_v1.md",
+        "change_type": "touched"
+      },
+      {
+        "id": "Section:docs/mini_global_response_rank_v1.md:L74:Functional endpoints and inference limits",
+        "name": "",
+        "type": "Section",
+        "filePath": "docs/mini_global_response_rank_v1.md",
+        "change_type": "touched"
+      },
+      {
+        "id": "Function:scripts/audit_global_response_rank.py:audit_global_basis",
+        "name": "audit_global_basis",
+        "type": "Function",
+        "filePath": "scripts/audit_global_response_rank.py",
+        "change_type": "touched"
+      },
+      {
+        "id": "Function:scripts/audit_global_response_rank.py:audit_global_outputs",
+        "name": "audit_global_outputs",
+        "type": "Function",
+        "filePath": "scripts/audit_global_response_rank.py",
+        "change_type": "touched"
+      },
+      {
+        "id": "Variable:scripts/run_global_response_rank.py:ARMS",
+        "name": "ARMS",
+        "type": "Variable",
+        "filePath": "scripts/run_global_response_rank.py",
+        "change_type": "touched"
+      },
+      {
+        "id": "Function:scripts/run_global_response_rank.py:prepare_global_response_rank",
+        "name": "prepare_global_response_rank",
+        "type": "Function",
+        "filePath": "scripts/run_global_response_rank.py",
+        "change_type": "touched"
+      },
+      {
+        "id": "Function:scripts/run_global_response_rank.py:run_global_response_rank",
+        "name": "run_global_response_rank",
+        "type": "Function",
+        "filePath": "scripts/run_global_response_rank.py",
+        "change_type": "touched"
+      },
+      {
+        "id": "Function:scripts/run_global_response_rank.py:run_global_response_rank.save@45:4",
+        "name": "save",
+        "type": "Function",
+        "filePath": "scripts/run_global_response_rank.py",
+        "change_type": "touched"
+      },
+      {
+        "id": "Function:scripts/run_global_response_rank.py:run_global_response_rank.forbidden@48:4",
+        "name": "forbidden",
+        "type": "Function",
+        "filePath": "scripts/run_global_response_rank.py",
+        "change_type": "touched"
+      },
+      {
+        "id": "Function:scripts/run_global_response_rank.py:run_global_response_rank.load_state@51:4",
+        "name": "load_state",
+        "type": "Function",
+        "filePath": "scripts/run_global_response_rank.py",
+        "change_type": "touched"
+      },
+      {
+        "id": "Function:scripts/run_global_response_rank.py:run_global_response_rank.chemical_input@55:4",
+        "name": "chemical_input",
+        "type": "Function",
+        "filePath": "scripts/run_global_response_rank.py",
+        "change_type": "touched"
+      },
+      {
+        "id": "Function:scripts/run_global_response_rank.py:run_global_response_rank.decode@63:4",
+        "name": "decode",
+        "type": "Function",
+        "filePath": "scripts/run_global_response_rank.py",
+        "change_type": "touched"
+      },
+      {
+        "id": "Function:scripts/run_global_response_rank.py:score_global_response_rank",
+        "name": "score_global_response_rank",
+        "type": "Function",
+        "filePath": "scripts/run_global_response_rank.py",
+        "change_type": "touched"
+      },
+      {
+        "id": "Function:scripts/run_global_response_rank.py:collect_global_response_rank",
+        "name": "collect_global_response_rank",
+        "type": "Function",
+        "filePath": "scripts/run_global_response_rank.py",
+        "change_type": "touched"
+      },
+      {
+        "id": "Function:scripts/run_global_response_rank.py:collect_global_response_rank.aggregate@152:4",
+        "name": "aggregate",
+        "type": "Function",
+        "filePath": "scripts/run_global_response_rank.py",
+        "change_type": "touched"
+      },
+      {
+        "id": "Variable:src/fastglycan/global_response_rank.py:GLOBAL_RANKS",
+        "name": "GLOBAL_RANKS",
+        "type": "Variable",
+        "filePath": "src/fastglycan/global_response_rank.py",
+        "change_type": "touched"
+      },
+      {
+        "id": "Variable:src/fastglycan/global_response_rank.py:GLOBAL_VARIANTS",
+        "name": "GLOBAL_VARIANTS",
+        "type": "Variable",
+        "filePath": "src/fastglycan/global_response_rank.py",
+        "change_type": "touched"
+      },
+      {
+        "id": "Class:src/fastglycan/global_response_rank.py:GlobalResponseBasis",
+        "name": "GlobalResponseBasis",
+        "type": "Class",
+        "filePath": "src/fastglycan/global_response_rank.py",
+        "change_type": "touched"
+      },
+      {
+        "id": "Method:src/fastglycan/global_response_rank.py:GlobalResponseBasis.__init__#4",
+        "name": "__init__",
+        "type": "Method",
+        "filePath": "src/fastglycan/global_response_rank.py",
+        "change_type": "touched"
+      },
+      {
+        "id": "Method:src/fastglycan/global_response_rank.py:GlobalResponseBasis.reconstruct#3",
+        "name": "reconstruct",
+        "type": "Method",
+        "filePath": "src/fastglycan/global_response_rank.py",
+        "change_type": "touched"
+      },
+      {
+        "id": "Method:src/fastglycan/global_response_rank.py:GlobalResponseBasis.evidence#0",
+        "name": "evidence",
+        "type": "Method",
+        "filePath": "src/fastglycan/global_response_rank.py",
+        "change_type": "touched"
+      },
+      {
+        "id": "Function:tests/test_global_response_rank.py:test_global_weighted_svd_and_controls",
+        "name": "test_global_weighted_svd_and_controls",
+        "type": "Function",
+        "filePath": "tests/test_global_response_rank.py",
+        "change_type": "touched"
+      },
+      {
+        "id": "Function:tests/test_global_response_rank.py:test_zero_block_and_full_rank",
+        "name": "test_zero_block_and_full_rank",
+        "type": "Function",
+        "filePath": "tests/test_global_response_rank.py",
+        "change_type": "touched"
+      }
+    ],
+    "affected_processes": []
+  }
+}

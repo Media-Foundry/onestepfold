@@ -1,3 +1,35 @@
+## 2026-10-02 — Full global s/z functional rank COMPLETE: shared K5/K8 insufficient; no training launched
+
+User requested full global reconstruction following conditioning-path swaps. Frozen mini_global_response_rank_v1:
+same10TRAINparents/50sites/950nonWT+10WT, seeds225001/225011,publicMiniESM FP32 controlledS1.
+Reuse960 full states13.005GB;0ESM/0C4/0recycle;95020NFE,3800 duplicateK0 calls avoided.
+All rank arms WT s_inputs+native TARGET chemistry; full s/z replaced, no exact global complement.
+References Exact(target inputs,target trunk) and Baseline(WT inputs,target trunk) BOTH freshly replayed.
+K0,1,2,3,5,8,10,12,15,18;raw Gs+Gz;balanced Gs/Es+Gz/Ez withPREcenter energies;
+s_only keeps exactz,z_only keeps exacts,separate_both uses two coefficient spaces(up to2K).
+GPU8,CPU32,collector exit0;prep+GPU853.52s,score201.05s,total1076.64s;max allocated3.842GB.
+Raw19AA rho/Top1:K0 .286596/14of100;K5 .824000/53;K8 .893860/69;K12 .950754/72;
+K15 .980088/84;K18 .999316/100(toBaseline1.0).Bothnoise sites1,18,27,27,37,50of50.
+RawK5 rho95CI[.76944,.86937],K8[.85675,.92779],K12[.92967,.96896],protein bootstrap10k.
+K5 AAlddt .996619,localmean .226166A but43/1900>1A,max15.50054A;36tails6UFE92.
+K8 tails37(36stress),K12 tails30allstress max6.75266A,K15 tails17allstress max2.96696A.
+RawK5 newgeom failures74vsExact/77vsBaseline;K12 36/37,K15 23/23,K18 3/0.
+Exact geom884/1900,Baseline888,rawK5 885:net counts hide transitions.
+K5 balancedrho .807368/Top1 50,separate .849316/63;balanced-minus-raw CIcross0.
+K0 mean s+exactz rho .856596/68;exacts+meanz .441526/32. z important to ranking,
+but s removal still severe tail17.13A;not additive information fractions or proof s dispensable.
+RawcenteredK5energy .822243,K8 .913054,K12 .967843,medianK95=11;balancedmedian13,s14,z10.
+Complete960Exact+960Baseline bitwise prior replay;all4750K18 coordinatechecks BITWISEbaseline,
+maxinput2.274e-13.IndependentCPU50siteGram maxrel1.702e-14;5200lddt+20400rank+4000reference
+metric checks exact,960packetmanifest;10focusedtests pass. Runtime chemistry/caches and source hashes verified.
+INTERPRETATION current global shared3-5mode PCA fails functional fidelity;K12average .95not certification;
+higher energy does not guarantee monotonicTop1/regret/geometry. WT-only parallel global response concept not ruledout.
+All means/bases/coefficients use19teacher endpoints:in-sample oracle,not learned head or universal functional bound.
+No automaticJacobian,residual/headtraining,adaptivefallback or deployment. Batch CLOSED.
+Findings docs/mini_global_response_rank_findings_2026-10-02.md;reports/mini_global_response_rank_2026-10-02.
+Rawlocal /home/husrcf/Code/onestepfold_runtime/global_response_rank_v1_20261002;
+remote pc@10.120.16.9:/media/IntelSSD/onestepfold/hpc3_mirror_20261001/Folding/global_response_rank_v1_20261002.
+
 ## 2026-10-02 — Six conditioning-path swaps COMPLETE; global target s/z carries necessary response in tested interface
 
 User prioritizes information-path ablation before global rank/Jacobian/training.

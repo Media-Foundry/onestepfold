@@ -1,0 +1,28 @@
+{
+  "complete": true,
+  "tests_passed": 10,
+  "counts": {
+    "baseline_replay": 960,
+    "deduplicated_calls": 3800,
+    "exact_replay": 960,
+    "hard_rebuild": 960,
+    "nfe": 95020,
+    "recycle": 0
+  },
+  "full_rank_checks": 4750,
+  "full_rank_max_input_error": 2.2737367544323206e-13,
+  "full_rank_max_coordinate_error": 0.0,
+  "max_peak_allocated_bytes": 3842349568,
+  "decoder_feature_reads": [
+    "atom_to_token_idx",
+    "d_lm",
+    "pad_info",
+    "ref_atom_name_chars",
+    "ref_charge",
+    "ref_element",
+    "ref_mask",
+    "ref_pos",
+    "relp",
+    "v_lm"
+  ]
+}
