@@ -1,3 +1,49 @@
+## 2026-10-03 — Matched source-AA coverage COMPLETE; no stable cross-protein gain
+
+Follow-up to96a9c665 changes DATA only, unchanged3,627,904-param pair/raw generator.
+Existing24-protein/48-site teacher archive only,0newC4/ESM/downloads.
+Restricted10sites on8proteins:1W53T37/Y84,1JHGA2,1A7GN65,2P7TA44/T86,
+5GPEA11,1DZRA179,2ED6T90,4HUTA44. Expanded retainsfirst6, swapswithinprotein
+D72/L13/V137/I25 respectively. Exactsameproteins/lengths/sitecounts;4sourceAA->8(TYAN+DLVI),
+Sstilluncovered. OriginalheldN25/S34/all4PT4/originalvalidationexcludedfromupdates.
+SourceAAandlocalenvironmentremainconfounded. No claimallAAcoverageunnecessaryorWT-onlyinsufficient.
+Freshpairedseeds231301/231303,AdamWlr1e-3/wd1e-4/eps1e-8/clip1,32760updates=3276exposures/site.
+Snapshots10920/21840/32760;terminalonlyfunctional(noNMSEgate);noextensionsorbestcheckpointchoice.
+Historicalold4had8192exposures/site:old4vsnew10NOTmatched;currenttwoarmsarematched.
+All48sites4noises230201/230211/270101/270103,eightarmsExact/Baseline/WTz/R32+fourstudents.
+Oracle target s+WTs_inputs+native targetchemistry remain;componentonly,notcompleteaccelerator.
+Primaryrho=four-noise mean-score19AA rankingvsBaseline,sitewithinproteinthenequalproteinweight.
+Owntrain8proteins10sites:restrictedrho.948465/.937171,NMSE.501699/.500878;
+expandedrho.318531/.898684,NMSE.999642/.523843. Expanded231301centeredpredictionenergy=0:
+finitecompletefailedlearningseedretained,notreplaced;capacity/info causesnotuniquelyidentified.
+Commonheld34sites:2seenproteinheld+32sites16unseenproteins. Fixedunseensourcecells:
+coveredboth3sites3proteins,newlycovered14sites10proteins,uncoveredboth15sites11proteins.
+All16unseen:WTzrho.428125,Top18/32,crossold-select/new-evalregret.104054.
+Restrictedrho.403728/.408991,Top17/8of32,crossregret.116080/.093508,NMSE1.457335/1.431663.
+Expandedrho.428947/.369682,Top18/12of32,crossregret.104054/.152233,NMSE.999785/1.211132.
+Two-seedmeanexpanded-restrictedrho-.007045,proteinbootstrap95[-.076098,.061159],developmentonly.
+NewlycoveredDLVIcrossregretrestricted.027021/.021553,expanded.014391/.018809,WTz.014391;
+pairedimprovementvsrestricteddoesNOTbeatWTz;collapsedseedisnearWTz. Nopromotion.
+SameproteinheldmeanrhoWTz.558772,restricted.670175/.650877,expanded.558772/.576316;
+primarilyS34improvesdespiteSremaininguncovered,notanAAcausalproof.
+4PT4WTzcrossregret.012107;restricted.042453/.013386,expanded.012107/.013386.
+Unseen2432instancesbaselinegeometry1112passes;studentsabsolute1036/1014/1057/1039,
+newfail166/178/151/167;local>1A321/312/326/317,max~6.8A.
+OracleR32rho.987061,Top129/32,newfail29,>1A3,max5.738970Aat6ZRWP80L/noise270101.
+ThatBaselinealreadyhas13wrongcentres,new_failure=falseNOTgeometryvalid.
+4HUTI25P/noise270103restricted231303max7.727A(onlyexpandedtrainsI25).
+T37NThr25CBflipretainedallfourstudents;Baselineorientednormalized+.03637,
+students-.06790/-.07125/-.08966/-.06621.Thresholdunchanged;6UFE92notcovered.
+Prior6cp8site912polarrows:4PT4terminalr1.15158/1.44236,cos.10663/.10289,
+teacheroptimalscalarNMSE.98348/.98488:directionpoor,notonlyoverscaling.
+Allprior/newcandidatefloorflagsfalse;oracle scalarsNOTappliedorcalibrated.
+Mainwall2220.43s,audit100.89s;29376S1;3696old+96newbitwisereplays.
+4freshinit/twopairedseedmatches,12cp/optimizer/exposureaudits,3072ranks/2304selections,
+3072NumPytask/3072lddt/25939chirality/160priorrefs/912polar/936downloadhashchecks;15tests.
+Report docs/mini_pair_coverage_findings_2026-10-03.md;protocol mini_pair_coverage_v1.md;
+reports/mini_pair_coverage_2026-10-03;runtimepair_coverage_v1_20261003underusuallocal/remoteparents.
+Batchclosed;noautomaticmoresteps/rank/architecture/blockwise/Δs/functionalloss/teacherexpansion.
+
 ## 2026-10-03 — Raw pair multi-context v1 COMPLETE; train ranking restored, transfer not established
 
 User authorized current pair/raw only, fresh seeds231301/231303;32768updates each,

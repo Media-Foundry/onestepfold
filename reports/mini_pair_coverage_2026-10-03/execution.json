@@ -1,0 +1,128 @@
+{
+  "complete": true,
+  "stages": [
+    {
+      "mode": "prepare",
+      "complete": true,
+      "jobs": [
+        {
+          "index": 0,
+          "exit": 0,
+          "seconds": 10.001171718002297
+        }
+      ]
+    },
+    {
+      "mode": "prior",
+      "complete": true,
+      "jobs": [
+        {
+          "index": 0,
+          "exit": 0,
+          "seconds": 15.002634068019688
+        }
+      ]
+    },
+    {
+      "mode": "train",
+      "complete": true,
+      "jobs": [
+        {
+          "index": 1,
+          "exit": 0,
+          "seconds": 695.1152345640003
+        },
+        {
+          "index": 0,
+          "exit": 0,
+          "seconds": 700.1178826930118
+        },
+        {
+          "index": 2,
+          "exit": 0,
+          "seconds": 700.1143596000038
+        },
+        {
+          "index": 3,
+          "exit": 0,
+          "seconds": 700.1128996040206
+        }
+      ]
+    },
+    {
+      "mode": "freeze",
+      "complete": true,
+      "jobs": [
+        {
+          "index": 0,
+          "exit": 0,
+          "seconds": 10.001393435988575
+        }
+      ]
+    },
+    {
+      "mode": "decode",
+      "complete": true,
+      "jobs": [
+        {
+          "index": 3,
+          "exit": 0,
+          "seconds": 1015.1851797719719
+        },
+        {
+          "index": 1,
+          "exit": 0,
+          "seconds": 1070.2002677930286
+        },
+        {
+          "index": 2,
+          "exit": 0,
+          "seconds": 1070.1988560580066
+        },
+        {
+          "index": 0,
+          "exit": 0,
+          "seconds": 1125.2139815129922
+        }
+      ]
+    },
+    {
+      "mode": "score",
+      "complete": true,
+      "jobs": [
+        {
+          "index": 1,
+          "exit": 0,
+          "seconds": 310.06568057701224
+        },
+        {
+          "index": 0,
+          "exit": 0,
+          "seconds": 315.068433027016
+        },
+        {
+          "index": 3,
+          "exit": 0,
+          "seconds": 325.0663712960086
+        },
+        {
+          "index": 2,
+          "exit": 0,
+          "seconds": 345.07185055996524
+        }
+      ]
+    },
+    {
+      "mode": "collect",
+      "complete": true,
+      "jobs": [
+        {
+          "index": 0,
+          "exit": 0,
+          "seconds": 15.002974013972562
+        }
+      ]
+    }
+  ],
+  "seconds": 2220.432977961027
+}

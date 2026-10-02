@@ -1,0 +1,954 @@
+{
+  "contexts": [
+    {
+      "archive_role": "validation",
+      "common_holdout": true,
+      "component": "439132ab9189a4f09111794dfbe346f3ca8105c64f6dad2c281c635cf4f8fb73",
+      "eligible_train": false,
+      "length": 110,
+      "observed_ca": true,
+      "observed_ca_neighbors8A": 7,
+      "parent_index": 0,
+      "pdb_id": "6ahp",
+      "position": 47,
+      "sequence_window": "ARYHS",
+      "source_aa": "Y",
+      "strata": {
+        "expanded": "unseen_protein_covered_source",
+        "restricted": "unseen_protein_covered_source"
+      }
+    },
+    {
+      "archive_role": "validation",
+      "common_holdout": true,
+      "component": "439132ab9189a4f09111794dfbe346f3ca8105c64f6dad2c281c635cf4f8fb73",
+      "eligible_train": false,
+      "length": 110,
+      "observed_ca": true,
+      "observed_ca_neighbors8A": 10,
+      "parent_index": 0,
+      "pdb_id": "6ahp",
+      "position": 57,
+      "sequence_window": "SLLST",
+      "source_aa": "L",
+      "strata": {
+        "expanded": "unseen_protein_covered_source",
+        "restricted": "unseen_protein_uncovered_source"
+      }
+    },
+    {
+      "archive_role": "validation",
+      "common_holdout": true,
+      "component": "e960c1a5710dc6ce554ab06cd0bd8aca391c7210a3e84b0d9e88e851f3762959",
+      "eligible_train": false,
+      "length": 104,
+      "observed_ca": true,
+      "observed_ca_neighbors8A": 9,
+      "parent_index": 1,
+      "pdb_id": "1x8d",
+      "position": 77,
+      "sequence_window": "WWKYM",
+      "source_aa": "K",
+      "strata": {
+        "expanded": "unseen_protein_uncovered_source",
+        "restricted": "unseen_protein_uncovered_source"
+      }
+    },
+    {
+      "archive_role": "validation",
+      "common_holdout": true,
+      "component": "e960c1a5710dc6ce554ab06cd0bd8aca391c7210a3e84b0d9e88e851f3762959",
+      "eligible_train": false,
+      "length": 104,
+      "observed_ca": true,
+      "observed_ca_neighbors8A": 8,
+      "parent_index": 1,
+      "pdb_id": "1x8d",
+      "position": 24,
+      "sequence_window": "NPIWP",
+      "source_aa": "I",
+      "strata": {
+        "expanded": "unseen_protein_covered_source",
+        "restricted": "unseen_protein_uncovered_source"
+      }
+    },
+    {
+      "archive_role": "validation",
+      "common_holdout": true,
+      "component": "6389c0a1fceffe14fb488b2f4fa523eeb583819ca46b2dbf91d6f880b1a2d124",
+      "eligible_train": false,
+      "length": 106,
+      "observed_ca": true,
+      "observed_ca_neighbors8A": 8,
+      "parent_index": 2,
+      "pdb_id": "2ebe",
+      "position": 29,
+      "sequence_window": "EVAGA",
+      "source_aa": "A",
+      "strata": {
+        "expanded": "unseen_protein_covered_source",
+        "restricted": "unseen_protein_covered_source"
+      }
+    },
+    {
+      "archive_role": "validation",
+      "common_holdout": true,
+      "component": "6389c0a1fceffe14fb488b2f4fa523eeb583819ca46b2dbf91d6f880b1a2d124",
+      "eligible_train": false,
+      "length": 106,
+      "observed_ca": true,
+      "observed_ca_neighbors8A": 5,
+      "parent_index": 2,
+      "pdb_id": "2ebe",
+      "position": 46,
+      "sequence_window": "FFEDG",
+      "source_aa": "E",
+      "strata": {
+        "expanded": "unseen_protein_uncovered_source",
+        "restricted": "unseen_protein_uncovered_source"
+      }
+    },
+    {
+      "archive_role": "train",
+      "common_holdout": false,
+      "component": "9d7fc00661a35cc01269002fe7c06b75e18d4156db537a5354bb45d6b14068e5",
+      "eligible_train": true,
+      "length": 84,
+      "observed_ca": true,
+      "observed_ca_neighbors8A": 10,
+      "parent_index": 3,
+      "pdb_id": "1w53",
+      "position": 36,
+      "sequence_window": "RKTIE",
+      "source_aa": "T",
+      "strata": {
+        "expanded": "train",
+        "restricted": "train"
+      }
+    },
+    {
+      "archive_role": "train",
+      "common_holdout": false,
+      "component": "9d7fc00661a35cc01269002fe7c06b75e18d4156db537a5354bb45d6b14068e5",
+      "eligible_train": true,
+      "length": 84,
+      "observed_ca": true,
+      "observed_ca_neighbors8A": 4,
+      "parent_index": 3,
+      "pdb_id": "1w53",
+      "position": 83,
+      "sequence_window": "MAY",
+      "source_aa": "Y",
+      "strata": {
+        "expanded": "train",
+        "restricted": "train"
+      }
+    },
+    {
+      "archive_role": "train",
+      "common_holdout": false,
+      "component": "618faa8c221c83dd72eba0d6e6a054c6caa40763d8e4eea844f0c6a85790831b",
+      "eligible_train": true,
+      "length": 101,
+      "observed_ca": true,
+      "observed_ca_neighbors8A": 5,
+      "parent_index": 4,
+      "pdb_id": "1jhg",
+      "position": 1,
+      "sequence_window": "SAAM",
+      "source_aa": "A",
+      "strata": {
+        "expanded": "train",
+        "restricted": "train"
+      }
+    },
+    {
+      "archive_role": "train",
+      "common_holdout": true,
+      "component": "618faa8c221c83dd72eba0d6e6a054c6caa40763d8e4eea844f0c6a85790831b",
+      "eligible_train": false,
+      "length": 101,
+      "observed_ca": true,
+      "observed_ca_neighbors8A": 7,
+      "parent_index": 4,
+      "pdb_id": "1jhg",
+      "position": 24,
+      "sequence_window": "YQNDL",
+      "source_aa": "N",
+      "strata": {
+        "expanded": "seen_protein_covered_source",
+        "restricted": "seen_protein_covered_source"
+      }
+    },
+    {
+      "archive_role": "train",
+      "common_holdout": false,
+      "component": "84c2aa6ecd46e56f06bf3aff0b3fe434e5f0144bf8bb675b800c89b929e83ca3",
+      "eligible_train": true,
+      "length": 82,
+      "observed_ca": true,
+      "observed_ca_neighbors8A": 6,
+      "parent_index": 5,
+      "pdb_id": "1a7g",
+      "position": 64,
+      "sequence_window": "FLNTV",
+      "source_aa": "N",
+      "strata": {
+        "expanded": "train",
+        "restricted": "train"
+      }
+    },
+    {
+      "archive_role": "train",
+      "common_holdout": true,
+      "component": "84c2aa6ecd46e56f06bf3aff0b3fe434e5f0144bf8bb675b800c89b929e83ca3",
+      "eligible_train": false,
+      "length": 82,
+      "observed_ca": true,
+      "observed_ca_neighbors8A": 6,
+      "parent_index": 5,
+      "pdb_id": "1a7g",
+      "position": 33,
+      "sequence_window": "VSSTW",
+      "source_aa": "S",
+      "strata": {
+        "expanded": "seen_protein_uncovered_source",
+        "restricted": "seen_protein_uncovered_source"
+      }
+    },
+    {
+      "archive_role": "train",
+      "common_holdout": true,
+      "component": "c806137af9888cbf8b586dba86f54a1ca6768bc67b6fddeb0095db8cc57dc692",
+      "eligible_train": false,
+      "length": 99,
+      "observed_ca": true,
+      "observed_ca_neighbors8A": 9,
+      "parent_index": 6,
+      "pdb_id": "4pt4",
+      "position": 9,
+      "sequence_window": "DVLTQ",
+      "source_aa": "L",
+      "strata": {
+        "expanded": "unseen_protein_covered_source",
+        "restricted": "unseen_protein_uncovered_source"
+      }
+    },
+    {
+      "archive_role": "train",
+      "common_holdout": true,
+      "component": "c806137af9888cbf8b586dba86f54a1ca6768bc67b6fddeb0095db8cc57dc692",
+      "eligible_train": false,
+      "length": 99,
+      "observed_ca": true,
+      "observed_ca_neighbors8A": 7,
+      "parent_index": 6,
+      "pdb_id": "4pt4",
+      "position": 16,
+      "sequence_window": "GSDRR",
+      "source_aa": "D",
+      "strata": {
+        "expanded": "unseen_protein_covered_source",
+        "restricted": "unseen_protein_uncovered_source"
+      }
+    },
+    {
+      "archive_role": "train",
+      "common_holdout": false,
+      "component": "8dc971ede5009755dbdbd03d7f4442e3f8b7c1fdc532055e3cfdfea0318e5db3",
+      "eligible_train": true,
+      "length": 103,
+      "observed_ca": true,
+      "observed_ca_neighbors8A": 14,
+      "parent_index": 7,
+      "pdb_id": "2p7t",
+      "position": 43,
+      "sequence_window": "PRALW",
+      "source_aa": "A",
+      "strata": {
+        "expanded": "train",
+        "restricted": "train"
+      }
+    },
+    {
+      "archive_role": "train",
+      "common_holdout": false,
+      "component": "8dc971ede5009755dbdbd03d7f4442e3f8b7c1fdc532055e3cfdfea0318e5db3",
+      "eligible_train": true,
+      "length": 103,
+      "observed_ca": true,
+      "observed_ca_neighbors8A": 8,
+      "parent_index": 7,
+      "pdb_id": "2p7t",
+      "position": 85,
+      "sequence_window": "LVTAA",
+      "source_aa": "T",
+      "strata": {
+        "expanded": "train",
+        "restricted": "train"
+      }
+    },
+    {
+      "archive_role": "validation",
+      "common_holdout": true,
+      "component": "80e34a1d141b7438e3002c325a28da91a69741bd093938694dc1c84da32f9265",
+      "eligible_train": false,
+      "length": 140,
+      "observed_ca": true,
+      "observed_ca_neighbors8A": 8,
+      "parent_index": 8,
+      "pdb_id": "3sxz",
+      "position": 107,
+      "sequence_window": "LIERI",
+      "source_aa": "E",
+      "strata": {
+        "expanded": "unseen_protein_uncovered_source",
+        "restricted": "unseen_protein_uncovered_source"
+      }
+    },
+    {
+      "archive_role": "validation",
+      "common_holdout": true,
+      "component": "80e34a1d141b7438e3002c325a28da91a69741bd093938694dc1c84da32f9265",
+      "eligible_train": false,
+      "length": 140,
+      "observed_ca": true,
+      "observed_ca_neighbors8A": 10,
+      "parent_index": 8,
+      "pdb_id": "3sxz",
+      "position": 100,
+      "sequence_window": "SNREH",
+      "source_aa": "R",
+      "strata": {
+        "expanded": "unseen_protein_uncovered_source",
+        "restricted": "unseen_protein_uncovered_source"
+      }
+    },
+    {
+      "archive_role": "validation",
+      "common_holdout": true,
+      "component": "3b568bf01f33736414da05710e7df266b8536b6f5cc01b18c1a7ad3dbba1397b",
+      "eligible_train": false,
+      "length": 131,
+      "observed_ca": true,
+      "observed_ca_neighbors8A": 9,
+      "parent_index": 9,
+      "pdb_id": "4pql",
+      "position": 41,
+      "sequence_window": "AILRD",
+      "source_aa": "L",
+      "strata": {
+        "expanded": "unseen_protein_covered_source",
+        "restricted": "unseen_protein_uncovered_source"
+      }
+    },
+    {
+      "archive_role": "validation",
+      "common_holdout": true,
+      "component": "3b568bf01f33736414da05710e7df266b8536b6f5cc01b18c1a7ad3dbba1397b",
+      "eligible_train": false,
+      "length": 131,
+      "observed_ca": true,
+      "observed_ca_neighbors8A": 11,
+      "parent_index": 9,
+      "pdb_id": "4pql",
+      "position": 88,
+      "sequence_window": "GLEND",
+      "source_aa": "E",
+      "strata": {
+        "expanded": "unseen_protein_uncovered_source",
+        "restricted": "unseen_protein_uncovered_source"
+      }
+    },
+    {
+      "archive_role": "validation",
+      "common_holdout": true,
+      "component": "7274b14e3b3c18bc3d1d6a3cdf49ea2f69984a26880c0b3ea881917ad7fea8e1",
+      "eligible_train": false,
+      "length": 126,
+      "observed_ca": true,
+      "observed_ca_neighbors8A": 8,
+      "parent_index": 10,
+      "pdb_id": "6zrw",
+      "position": 79,
+      "sequence_window": "RSPVG",
+      "source_aa": "P",
+      "strata": {
+        "expanded": "unseen_protein_uncovered_source",
+        "restricted": "unseen_protein_uncovered_source"
+      }
+    },
+    {
+      "archive_role": "validation",
+      "common_holdout": true,
+      "component": "7274b14e3b3c18bc3d1d6a3cdf49ea2f69984a26880c0b3ea881917ad7fea8e1",
+      "eligible_train": false,
+      "length": 126,
+      "observed_ca": true,
+      "observed_ca_neighbors8A": 12,
+      "parent_index": 10,
+      "pdb_id": "6zrw",
+      "position": 44,
+      "sequence_window": "GVTKW",
+      "source_aa": "T",
+      "strata": {
+        "expanded": "unseen_protein_covered_source",
+        "restricted": "unseen_protein_covered_source"
+      }
+    },
+    {
+      "archive_role": "train",
+      "common_holdout": true,
+      "component": "f732c40a7c43381c1934f7bd9ddd176068ac742600ac7bed2de7d0f21a169935",
+      "eligible_train": true,
+      "length": 124,
+      "observed_ca": true,
+      "observed_ca_neighbors8A": 14,
+      "parent_index": 11,
+      "pdb_id": "2dp9",
+      "position": 51,
+      "sequence_window": "IGQAD",
+      "source_aa": "Q",
+      "strata": {
+        "expanded": "unseen_protein_uncovered_source",
+        "restricted": "unseen_protein_uncovered_source"
+      }
+    },
+    {
+      "archive_role": "train",
+      "common_holdout": true,
+      "component": "f732c40a7c43381c1934f7bd9ddd176068ac742600ac7bed2de7d0f21a169935",
+      "eligible_train": true,
+      "length": 124,
+      "observed_ca": true,
+      "observed_ca_neighbors8A": 13,
+      "parent_index": 11,
+      "pdb_id": "2dp9",
+      "position": 48,
+      "sequence_window": "GRLIG",
+      "source_aa": "L",
+      "strata": {
+        "expanded": "unseen_protein_covered_source",
+        "restricted": "unseen_protein_uncovered_source"
+      }
+    },
+    {
+      "archive_role": "train",
+      "common_holdout": false,
+      "component": "eb9f1dcdd1f6a64e035e03a405aded3be8cdecf44a4416d50ad5eb78b91b38d9",
+      "eligible_train": true,
+      "length": 129,
+      "observed_ca": true,
+      "observed_ca_neighbors8A": 9,
+      "parent_index": 12,
+      "pdb_id": "5gpe",
+      "position": 10,
+      "sequence_window": "KKADC",
+      "source_aa": "A",
+      "strata": {
+        "expanded": "seen_protein_covered_source",
+        "restricted": "train"
+      }
+    },
+    {
+      "archive_role": "train",
+      "common_holdout": false,
+      "component": "eb9f1dcdd1f6a64e035e03a405aded3be8cdecf44a4416d50ad5eb78b91b38d9",
+      "eligible_train": true,
+      "length": 129,
+      "observed_ca": true,
+      "observed_ca_neighbors8A": 6,
+      "parent_index": 12,
+      "pdb_id": "5gpe",
+      "position": 71,
+      "sequence_window": "LRDRP",
+      "source_aa": "D",
+      "strata": {
+        "expanded": "train",
+        "restricted": "seen_protein_uncovered_source"
+      }
+    },
+    {
+      "archive_role": "train",
+      "common_holdout": true,
+      "component": "bf1da80f7ca488d4a360f401ebefd1f17d651a92b71dcce8a9bf9b1f8e5c0859",
+      "eligible_train": true,
+      "length": 145,
+      "observed_ca": true,
+      "observed_ca_neighbors8A": 7,
+      "parent_index": 13,
+      "pdb_id": "1qvc",
+      "position": 94,
+      "sequence_window": "GQDRY",
+      "source_aa": "D",
+      "strata": {
+        "expanded": "unseen_protein_covered_source",
+        "restricted": "unseen_protein_uncovered_source"
+      }
+    },
+    {
+      "archive_role": "train",
+      "common_holdout": true,
+      "component": "bf1da80f7ca488d4a360f401ebefd1f17d651a92b71dcce8a9bf9b1f8e5c0859",
+      "eligible_train": true,
+      "length": 145,
+      "observed_ca": true,
+      "observed_ca_neighbors8A": 11,
+      "parent_index": 13,
+      "pdb_id": "1qvc",
+      "position": 106,
+      "sequence_window": "VGGTM",
+      "source_aa": "G",
+      "strata": {
+        "expanded": "unseen_protein_uncovered_source",
+        "restricted": "unseen_protein_uncovered_source"
+      }
+    },
+    {
+      "archive_role": "train",
+      "common_holdout": true,
+      "component": "8dded2f456c49c21a3db212c50e4e81b45cb431d45ba1f7c429fd841be736f53",
+      "eligible_train": true,
+      "length": 150,
+      "observed_ca": true,
+      "observed_ca_neighbors8A": 8,
+      "parent_index": 14,
+      "pdb_id": "4akd",
+      "position": 7,
+      "sequence_window": "ITVGP",
+      "source_aa": "V",
+      "strata": {
+        "expanded": "unseen_protein_covered_source",
+        "restricted": "unseen_protein_uncovered_source"
+      }
+    },
+    {
+      "archive_role": "train",
+      "common_holdout": true,
+      "component": "8dded2f456c49c21a3db212c50e4e81b45cb431d45ba1f7c429fd841be736f53",
+      "eligible_train": true,
+      "length": 150,
+      "observed_ca": true,
+      "observed_ca_neighbors8A": 7,
+      "parent_index": 14,
+      "pdb_id": "4akd",
+      "position": 5,
+      "sequence_window": "QTITV",
+      "source_aa": "I",
+      "strata": {
+        "expanded": "unseen_protein_covered_source",
+        "restricted": "unseen_protein_uncovered_source"
+      }
+    },
+    {
+      "archive_role": "train",
+      "common_holdout": true,
+      "component": "75da4c13ad428fda7a6be6241129e1f4243dd0c4ec5dc91dbd057c8f8218d39c",
+      "eligible_train": true,
+      "length": 143,
+      "observed_ca": true,
+      "observed_ca_neighbors8A": 9,
+      "parent_index": 15,
+      "pdb_id": "5mh3",
+      "position": 12,
+      "sequence_window": "TIPDN",
+      "source_aa": "P",
+      "strata": {
+        "expanded": "unseen_protein_uncovered_source",
+        "restricted": "unseen_protein_uncovered_source"
+      }
+    },
+    {
+      "archive_role": "train",
+      "common_holdout": true,
+      "component": "75da4c13ad428fda7a6be6241129e1f4243dd0c4ec5dc91dbd057c8f8218d39c",
+      "eligible_train": true,
+      "length": 143,
+      "observed_ca": true,
+      "observed_ca_neighbors8A": 11,
+      "parent_index": 15,
+      "pdb_id": "5mh3",
+      "position": 65,
+      "sequence_window": "NYEVL",
+      "source_aa": "E",
+      "strata": {
+        "expanded": "unseen_protein_uncovered_source",
+        "restricted": "unseen_protein_uncovered_source"
+      }
+    },
+    {
+      "archive_role": "validation",
+      "common_holdout": true,
+      "component": "ed3d2e9ec77b8155c62c828e29581448bea8efbec49f5c7dbb3c5165a00855fc",
+      "eligible_train": false,
+      "length": 161,
+      "observed_ca": true,
+      "observed_ca_neighbors8A": 14,
+      "parent_index": 16,
+      "pdb_id": "1ysb",
+      "position": 109,
+      "sequence_window": "RCVIG",
+      "source_aa": "V",
+      "strata": {
+        "expanded": "unseen_protein_covered_source",
+        "restricted": "unseen_protein_uncovered_source"
+      }
+    },
+    {
+      "archive_role": "validation",
+      "common_holdout": true,
+      "component": "ed3d2e9ec77b8155c62c828e29581448bea8efbec49f5c7dbb3c5165a00855fc",
+      "eligible_train": false,
+      "length": 161,
+      "observed_ca": true,
+      "observed_ca_neighbors8A": 7,
+      "parent_index": 16,
+      "pdb_id": "1ysb",
+      "position": 4,
+      "sequence_window": "SMVTG",
+      "source_aa": "V",
+      "strata": {
+        "expanded": "unseen_protein_covered_source",
+        "restricted": "unseen_protein_uncovered_source"
+      }
+    },
+    {
+      "archive_role": "validation",
+      "common_holdout": true,
+      "component": "5efecc7ad1bd23787e5e9108c2620b1b689137a9256a5280932fef074b182d6d",
+      "eligible_train": false,
+      "length": 155,
+      "observed_ca": true,
+      "observed_ca_neighbors8A": 9,
+      "parent_index": 17,
+      "pdb_id": "2fkz",
+      "position": 136,
+      "sequence_window": "ETQLD",
+      "source_aa": "Q",
+      "strata": {
+        "expanded": "unseen_protein_uncovered_source",
+        "restricted": "unseen_protein_uncovered_source"
+      }
+    },
+    {
+      "archive_role": "validation",
+      "common_holdout": true,
+      "component": "5efecc7ad1bd23787e5e9108c2620b1b689137a9256a5280932fef074b182d6d",
+      "eligible_train": false,
+      "length": 155,
+      "observed_ca": true,
+      "observed_ca_neighbors8A": 12,
+      "parent_index": 17,
+      "pdb_id": "2fkz",
+      "position": 43,
+      "sequence_window": "KHEYH",
+      "source_aa": "E",
+      "strata": {
+        "expanded": "unseen_protein_uncovered_source",
+        "restricted": "unseen_protein_uncovered_source"
+      }
+    },
+    {
+      "archive_role": "train",
+      "common_holdout": false,
+      "component": "4652d84cf6d7a97c60d8b800c884241f5006c5fe47aed9df404ec5e86cd8ae1d",
+      "eligible_train": true,
+      "length": 183,
+      "observed_ca": true,
+      "observed_ca_neighbors8A": 10,
+      "parent_index": 18,
+      "pdb_id": "1dzr",
+      "position": 178,
+      "sequence_window": "DQALL",
+      "source_aa": "A",
+      "strata": {
+        "expanded": "seen_protein_covered_source",
+        "restricted": "train"
+      }
+    },
+    {
+      "archive_role": "train",
+      "common_holdout": false,
+      "component": "4652d84cf6d7a97c60d8b800c884241f5006c5fe47aed9df404ec5e86cd8ae1d",
+      "eligible_train": true,
+      "length": 183,
+      "observed_ca": true,
+      "observed_ca_neighbors8A": 12,
+      "parent_index": 18,
+      "pdb_id": "1dzr",
+      "position": 12,
+      "sequence_window": "DVLIL",
+      "source_aa": "L",
+      "strata": {
+        "expanded": "train",
+        "restricted": "seen_protein_uncovered_source"
+      }
+    },
+    {
+      "archive_role": "train",
+      "common_holdout": false,
+      "component": "9a2b657da9f7037dc03b10c58c3a4c7592064680c60d87cd4ea7477767f78591",
+      "eligible_train": true,
+      "length": 170,
+      "observed_ca": true,
+      "observed_ca_neighbors8A": 13,
+      "parent_index": 19,
+      "pdb_id": "2ed6",
+      "position": 89,
+      "sequence_window": "EGTFK",
+      "source_aa": "T",
+      "strata": {
+        "expanded": "seen_protein_covered_source",
+        "restricted": "train"
+      }
+    },
+    {
+      "archive_role": "train",
+      "common_holdout": false,
+      "component": "9a2b657da9f7037dc03b10c58c3a4c7592064680c60d87cd4ea7477767f78591",
+      "eligible_train": true,
+      "length": 170,
+      "observed_ca": true,
+      "observed_ca_neighbors8A": 11,
+      "parent_index": 19,
+      "pdb_id": "2ed6",
+      "position": 136,
+      "sequence_window": "DEVGT",
+      "source_aa": "V",
+      "strata": {
+        "expanded": "train",
+        "restricted": "seen_protein_uncovered_source"
+      }
+    },
+    {
+      "archive_role": "train",
+      "common_holdout": true,
+      "component": "66feb5eb41409330549a5ee9a99368a07d84cecde9f4d6347621fa322fc10039",
+      "eligible_train": true,
+      "length": 164,
+      "observed_ca": true,
+      "observed_ca_neighbors8A": 13,
+      "parent_index": 20,
+      "pdb_id": "2arc",
+      "position": 111,
+      "sequence_window": "NTGFF",
+      "source_aa": "G",
+      "strata": {
+        "expanded": "unseen_protein_uncovered_source",
+        "restricted": "unseen_protein_uncovered_source"
+      }
+    },
+    {
+      "archive_role": "train",
+      "common_holdout": true,
+      "component": "66feb5eb41409330549a5ee9a99368a07d84cecde9f4d6347621fa322fc10039",
+      "eligible_train": true,
+      "length": 164,
+      "observed_ca": true,
+      "observed_ca_neighbors8A": 6,
+      "parent_index": 20,
+      "pdb_id": "2arc",
+      "position": 99,
+      "sequence_window": "WHEWL",
+      "source_aa": "E",
+      "strata": {
+        "expanded": "unseen_protein_uncovered_source",
+        "restricted": "unseen_protein_uncovered_source"
+      }
+    },
+    {
+      "archive_role": "train",
+      "common_holdout": true,
+      "component": "d05067d6ede71a300a4ebb787b1a239d4fb9856ac9193372ec9a5da2848f0e7a",
+      "eligible_train": true,
+      "length": 181,
+      "observed_ca": true,
+      "observed_ca_neighbors8A": 7,
+      "parent_index": 21,
+      "pdb_id": "1m4i",
+      "position": 127,
+      "sequence_window": "YASRG",
+      "source_aa": "S",
+      "strata": {
+        "expanded": "unseen_protein_uncovered_source",
+        "restricted": "unseen_protein_uncovered_source"
+      }
+    },
+    {
+      "archive_role": "train",
+      "common_holdout": true,
+      "component": "d05067d6ede71a300a4ebb787b1a239d4fb9856ac9193372ec9a5da2848f0e7a",
+      "eligible_train": true,
+      "length": 181,
+      "observed_ca": true,
+      "observed_ca_neighbors8A": 10,
+      "parent_index": 21,
+      "pdb_id": "1m4i",
+      "position": 22,
+      "sequence_window": "RQDIR",
+      "source_aa": "D",
+      "strata": {
+        "expanded": "unseen_protein_covered_source",
+        "restricted": "unseen_protein_uncovered_source"
+      }
+    },
+    {
+      "archive_role": "train",
+      "common_holdout": false,
+      "component": "080d2ae5b45caf390ef1d5dec5ca4a9dddf9d8ee15705263873be3702b731f61",
+      "eligible_train": true,
+      "length": 191,
+      "observed_ca": true,
+      "observed_ca_neighbors8A": 11,
+      "parent_index": 22,
+      "pdb_id": "4hut",
+      "position": 24,
+      "sequence_window": "RGIII",
+      "source_aa": "I",
+      "strata": {
+        "expanded": "train",
+        "restricted": "seen_protein_uncovered_source"
+      }
+    },
+    {
+      "archive_role": "train",
+      "common_holdout": false,
+      "component": "080d2ae5b45caf390ef1d5dec5ca4a9dddf9d8ee15705263873be3702b731f61",
+      "eligible_train": true,
+      "length": 191,
+      "observed_ca": true,
+      "observed_ca_neighbors8A": 11,
+      "parent_index": 22,
+      "pdb_id": "4hut",
+      "position": 43,
+      "sequence_window": "GTAAR",
+      "source_aa": "A",
+      "strata": {
+        "expanded": "seen_protein_covered_source",
+        "restricted": "train"
+      }
+    },
+    {
+      "archive_role": "train",
+      "common_holdout": true,
+      "component": "fd11aa7b5c57b41a3dbb13f8f2d45befd3e81cd61ae33e0c590a34d73d09bc8c",
+      "eligible_train": true,
+      "length": 164,
+      "observed_ca": true,
+      "observed_ca_neighbors8A": 8,
+      "parent_index": 23,
+      "pdb_id": "4hgr",
+      "position": 67,
+      "sequence_window": "EALKV",
+      "source_aa": "L",
+      "strata": {
+        "expanded": "unseen_protein_covered_source",
+        "restricted": "unseen_protein_uncovered_source"
+      }
+    },
+    {
+      "archive_role": "train",
+      "common_holdout": true,
+      "component": "fd11aa7b5c57b41a3dbb13f8f2d45befd3e81cd61ae33e0c590a34d73d09bc8c",
+      "eligible_train": true,
+      "length": 164,
+      "observed_ca": true,
+      "observed_ca_neighbors8A": 12,
+      "parent_index": 23,
+      "pdb_id": "4hgr",
+      "position": 147,
+      "sequence_window": "EFVEK",
+      "source_aa": "V",
+      "strata": {
+        "expanded": "unseen_protein_covered_source",
+        "restricted": "unseen_protein_uncovered_source"
+      }
+    }
+  ],
+  "sets": {
+    "expanded": [
+      [
+        3,
+        36
+      ],
+      [
+        3,
+        83
+      ],
+      [
+        4,
+        1
+      ],
+      [
+        5,
+        64
+      ],
+      [
+        7,
+        43
+      ],
+      [
+        7,
+        85
+      ],
+      [
+        12,
+        71
+      ],
+      [
+        18,
+        12
+      ],
+      [
+        19,
+        136
+      ],
+      [
+        22,
+        24
+      ]
+    ],
+    "restricted": [
+      [
+        3,
+        36
+      ],
+      [
+        3,
+        83
+      ],
+      [
+        4,
+        1
+      ],
+      [
+        5,
+        64
+      ],
+      [
+        7,
+        43
+      ],
+      [
+        7,
+        85
+      ],
+      [
+        12,
+        10
+      ],
+      [
+        18,
+        178
+      ],
+      [
+        19,
+        89
+      ],
+      [
+        22,
+        43
+      ]
+    ]
+  }
+}
