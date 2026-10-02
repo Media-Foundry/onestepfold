@@ -1,0 +1,41 @@
+{
+  "complete": true,
+  "tests_passed": 10,
+  "counts": {
+    "baseline_replay": 960,
+    "decompositions": 950,
+    "deduplicated_calls": 1900,
+    "exact_replay": 960,
+    "hard_rebuild": 960,
+    "nfe": 28520,
+    "recycle": 0
+  },
+  "full_rank_checks": 1900,
+  "full_rank_max_input_error": 1.4551915228366852e-11,
+  "full_rank_max_coordinate_error": 3.528594970703125e-05,
+  "independent_cpu_sites": 50,
+  "cpu_max_energy_error": 1.474376176702208e-13,
+  "cpu_max_projection_error": 7.62939453125e-06,
+  "max_peak_allocated_bytes": 1229901824,
+  "decoder_feature_reads": [
+    "atom_to_token_idx",
+    "d_lm",
+    "pad_info",
+    "ref_atom_name_chars",
+    "ref_charge",
+    "ref_element",
+    "ref_mask",
+    "ref_pos",
+    "relp",
+    "v_lm"
+  ],
+  "graph_check": {
+    "all_workspace_risk": "high",
+    "staged_task_risk": "medium",
+    "full_listing_verified": true,
+    "partial": false,
+    "truncated": false,
+    "scope_note": "Unrelated existing worktree changes excluded from this commit; staged task affects new spatial diagnostic flow.",
+    "class_impact_note": "SpatialResponseBasis class impact UNKNOWN; text verification found new runner and focused tests. No production symbol edited."
+  }
+}

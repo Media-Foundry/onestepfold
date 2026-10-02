@@ -1,3 +1,34 @@
+## 2026-10-02 — Spatial Delta-z rank diagnostic COMPLETE; retain spatial factors, not a ready student
+
+User closed AA-axis linear compression and requested residue-space compression of existing hard Delta z.
+Locked mini_spatial_response_rank_v1: same10TRAINparents/50sites/950nonWT/2noises;no newESM/C4.
+Per-mutant uncentered Delta z, no AA compression, no symmetrization. Exact target s + WT s_inputs + native targetchemistry.
+Channel: independent128channel matrixSVD;2LRC factors. Shared: HOSVD U,V,core[R,R,C];2LR+R²C.
+These capacities differ; neither is the proposed learned channel-projection network nor a functional optimum.
+R0/4/8/16/32/64/fullL. R0=WTz,NOTpreviousmeanmutantz. Both full-rank representations actually reconstructed/decoded.
+Channel R8 energy70.58%,rho.944544,Top1 80/100,bothnoise33/50,localmean.127893A,0/1900>1A,max.9719A.
+Channel R16 energy83.66%,rho.973632 CI[.96502,.98218],Top1 86/100,bothnoise38/50,regret.000606,
+localmean.061004A,0tails,max.3908A,AAfidelity.999449. Factor/dense mean22.58%,range14.48–34.78%.
+Shared R16 energy49.92%,rho.883298,Top1 70/100,33tails/max2.4379A,factors1.55%dense.
+SharedR32rho.948561/Top178/0tails;R64rho.981421/Top189/0tails,factors22.74%dense(similarAVERAGEbudgettochannelR16,notperchainmatched).
+ChannelR32rho.990667/95,R64.997316/98. Full bothrho.999316/100toExact,reflectknownWTs_inputsbaselineeffect.
+Geometrystilllimits:Baseline888/1900pass;channelR8 905=85recovered−68new;R16 914=59recovered−33new.
+R16newfail33alsoExact;newclashfromzero30,newchiralityfromcorrect32(differentdenominators,notadditive).
+SharedR16pass941 but82newvsBaseline;R64pass902 but42new. NetpassdoesNOTshowfaithful/reliablegeometry.
+Stress6UFE92 maxchannelR8 .7899A,R16 .3838A;sharedR16 2.4379A/8tails;other25tailsspreadotherproteins.
+8GPU/32CPU/collectorall0;prep+GPU788.41s,score72.04s,total876.71s.950decompositions,28520NFE,
+0ESM/0C4/0recycle/0training,1900duplicateR0callsavoided;960chemicalrebuilds.
+960Exact+960BaselinereplaysBITWISE.1900fullrankmaxinput1.455e-11,coords3.529e-5A(notallbitwise),lockedguardspass.
+50siteindependentCPUenergymax1.474e-13,projectionmax7.629e-6;960coordinatepackets/4000references/1600lddt/6000rankingchecksagree;10tests.
+Decompositionmeans3.492s,target-dependentoracle/offlinecost.NOTheadspeedup;densezstillmaterialized/readbyS1.
+DecisionretainspatialfactorcandidatefornonlinearWT→mutantglobalhead;noAAlinearreopening/noRexpansion/noautomatictrainingorpromotion.
+MustpredictfactorsANDsfromWT-onlycontextinactualstudent;teacherbases/exactsareoracleleakageifclaimedinference.
+Currentpanelstilldevelopment/stress,notindependentprotein-levelgeneralizationorharddesigneffect.
+Findings docs/mini_spatial_response_rank_findings_2026-10-02.md;reports/mini_spatial_response_rank_2026-10-02.
+Local /home/husrcf/Code/onestepfold_runtime/spatial_response_rank_v1_20261002;
+remote pc@10.120.16.9:/media/IntelSSD/onestepfold/hpc3_mirror_20261001/Folding/spatial_response_rank_v1_20261002.
+50projectedauditpackets3.910GBremoteonly;original13.005GBstatesunchanged;coordinates/reportscopiedlocal.
+
 ## 2026-10-02 — LAST Jacobian+residual rank diagnostic COMPLETE; no functional curve left shift
 
 User requested one final tangent+linear residual test, then move away from AA-axis linear compression if insufficient.
