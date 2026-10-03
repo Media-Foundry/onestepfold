@@ -1,3 +1,38 @@
+## 2026-10-03 — Student collapse localized; direct-score transfer diagnostic CLOSED
+
+Follow-up to161712a2. Read-only audit: four old runs x initialization/10920/21840/32760
+x10sites=160 forward/backward probes,0updates/ESM/C4/S1; loss replay max8.5579e-8.
+Expanded231301 retains candidate variation in query/node states, but readout.2(secondGELU)
+emits exact zero across10sites/all3trainedstates; final output is shared bias.
+Terminalpreactivationrange[-301.885,-9.745];T37GELUoutput/inputgradnorm1.496e-5/3.259e-29.
+Connected graph with tiny upstream gradients, not Mini AD defect. Firstloggedsteps631-640
+alreadycandidate-invariant; onset/causeunknown,noLR/activationcausalclaim,nooldseedretry.
+
+Separateboundedtask_readout_v1a: two existing10site8proteinlists x context/AA-only x
+seeds231301/231303,all8fresh32760update runs complete,3276exposures/site.
+Context3,780,994params:WTsz+site+AA+explicitgivenparentGTbackbone/mask invariantfeatures.
+AA-only21,377params:source/targetAA only. No target s/z/s_inputs in new forward inputs.
+Mainlabel Exactnative task(mutant)-task(WT),old230201/230211mean;TRAINglobalRMSscale,
+notpersiteNMSE. New270101/270103heldfromlabelsbuthistoricaldevelopment. TaskparentCAHuber,
+notexperimentalmutanteffect. Terminalonlyheldeval; noseed/bestcheckpointselection.
+Fourcontexttrainfour-noiserho .8883/.9101/.9056/.8042;globalMSE/scale² .004424/.000209/.000613/.000300.
+ExpandedAA-onlytrainrho .8241/.8253 shows sourceAA can proxy sparse training contexts.
+Commonunseen32sites16developmentproteins:Exactreference,WTzrho.426151,Top18/32,crossregret.104064.
+Restrictedcontext rho.149726/.018257,Top11/0,crossregret.159085/.164436;
+expandedcontext rho.102138/.003289,Top13/1,crossregret.091772/.152274.
+AA-only rho .062-.100;no stablecontextadvantage vsAA-only orWTz. Worstcontextprotein2EBE.
+Oneexpandedseedregretpositive retained,notpromotion. Allscoretables/referencechangesexplicit.
+Newheadsproduce0coordinates,selectednativeExactgeometryretrievedonly;contextbothnewnoise
+checkedpass12/11 restricted,12/11expanded vsWTz13/32;notgeometryrepair.
+Headwarm20query3.66-3.71ms context,.278-.282msAA-only,excludesWT/prep/validation,noendtoendspeedup.
+Controller615.12s;0newC4/ESM/S1. Firstattemptpreinitmutablemanifestfailurepreserved,
+fixedonly3labelhashselection innewroot;labelsidentical,nooptimizerupdatesinthefailedattempt.
+Independent3840labels/8inits/4matchedpairs/24checkpoints/1152selection/1536geometrychecks;
+maxTRAINpredictionreplay8.3447e-7;13tests. Noautomatictraining/dataexpansion/newarchitecture.
+Directtasknegative doesnotproveWTinformationinsufficient orallsharedscorersimpossible.
+Reports docs/mini_student_collapse_findings_2026-10-03.md and mini_task_readout_findings_2026-10-03.md.
+Runtime task_readout_v1a_20261003; previousfrozenresultspreserved. Bothrequesteddiagnosticsclosed.
+
 ## 2026-10-03 — Matched source-AA coverage COMPLETE; no stable cross-protein gain
 
 Follow-up to96a9c665 changes DATA only, unchanged3,627,904-param pair/raw generator.

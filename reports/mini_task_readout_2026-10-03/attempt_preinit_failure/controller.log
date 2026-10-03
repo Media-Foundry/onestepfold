@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/media/IntelSSD/onestepfold/hpc3_mirror_20261001/Folding/task_readout_v1_20261003/code/scripts/control_task_readout.py", line 79, in <module>
+    control_task_readout(p.parse_args().root)
+  File "/media/IntelSSD/onestepfold/hpc3_mirror_20261001/Folding/task_readout_v1_20261003/code/scripts/control_task_readout.py", line 65, in control_task_readout
+    pool('train', [['--job', f'{arm}_context_s{seed}'] for arm in ('restricted','expanded') for seed in (231301,231303)])
+  File "/media/IntelSSD/onestepfold/hpc3_mirror_20261001/Folding/task_readout_v1_20261003/code/scripts/control_task_readout.py", line 50, in pool
+    raise RuntimeError(f'{mode} worker{index} exit{p.returncode}')
+RuntimeError: train worker0 exit1

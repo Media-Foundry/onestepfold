@@ -1,0 +1,29 @@
+{
+  "complete": false,
+  "error": "RuntimeError('train worker0 exit1')",
+  "stages": [
+    {
+      "mode": "prepare",
+      "complete": true,
+      "jobs": [
+        {
+          "index": 0,
+          "exit": 0,
+          "seconds": 10.001341636001598
+        }
+      ]
+    },
+    {
+      "mode": "train",
+      "complete": false,
+      "jobs": [
+        {
+          "index": 0,
+          "exit": 1,
+          "seconds": 10.006316427025013
+        }
+      ]
+    }
+  ],
+  "seconds": 20.012120563013013
+}

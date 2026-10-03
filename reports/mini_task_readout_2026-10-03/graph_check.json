@@ -1,0 +1,148 @@
+{
+  "all": {
+    "summary": {
+      "changed_count": 79,
+      "affected_count": 5,
+      "changed_files": 119,
+      "risk_level": "medium"
+    },
+    "partial": false,
+    "truncated": false,
+    "full_listing_verified": true,
+    "affected_processes": [
+      {
+        "id": "proc_23_compare_experimental",
+        "name": "Compare_experimental \u2192 _align_target",
+        "process_type": "cross_community",
+        "step_count": 4,
+        "changed_steps": [
+          {
+            "symbol": "rmsd",
+            "step": 3
+          },
+          {
+            "symbol": "compare_coordinates",
+            "step": 2
+          }
+        ]
+      },
+      {
+        "id": "proc_71_train_task_readout",
+        "name": "Train_task_readout \u2192 Task_prediction",
+        "process_type": "intra_community",
+        "step_count": 3,
+        "changed_steps": [
+          {
+            "symbol": "snapshot",
+            "step": 2
+          },
+          {
+            "symbol": "train_task_readout",
+            "step": 1
+          },
+          {
+            "symbol": "task_prediction",
+            "step": 3
+          }
+        ]
+      },
+      {
+        "id": "proc_105_forward",
+        "name": "Forward \u2192 _normalize",
+        "process_type": "intra_community",
+        "step_count": 3,
+        "changed_steps": [
+          {
+            "symbol": "forward",
+            "step": 1
+          },
+          {
+            "symbol": "backbone_frames",
+            "step": 2
+          }
+        ]
+      },
+      {
+        "id": "proc_139_forward",
+        "name": "Forward \u2192 Bias",
+        "process_type": "intra_community",
+        "step_count": 3,
+        "changed_steps": [
+          {
+            "symbol": "forward",
+            "step": 1
+          }
+        ]
+      },
+      {
+        "id": "proc_140_forward",
+        "name": "Forward \u2192 Offset",
+        "process_type": "intra_community",
+        "step_count": 3,
+        "changed_steps": [
+          {
+            "symbol": "forward",
+            "step": 1
+          }
+        ]
+      }
+    ]
+  },
+  "staged": {
+    "summary": {
+      "changed_count": 44,
+      "affected_count": 3,
+      "changed_files": 108,
+      "risk_level": "medium"
+    },
+    "partial": false,
+    "truncated": false,
+    "full_listing_verified": true,
+    "affected_processes": [
+      {
+        "id": "proc_71_train_task_readout",
+        "name": "Train_task_readout \u2192 Task_prediction",
+        "process_type": "intra_community",
+        "step_count": 3,
+        "changed_steps": [
+          {
+            "symbol": "snapshot",
+            "step": 2
+          },
+          {
+            "symbol": "train_task_readout",
+            "step": 1
+          },
+          {
+            "symbol": "task_prediction",
+            "step": 3
+          }
+        ]
+      },
+      {
+        "id": "proc_139_forward",
+        "name": "Forward \u2192 Bias",
+        "process_type": "intra_community",
+        "step_count": 3,
+        "changed_steps": [
+          {
+            "symbol": "forward",
+            "step": 1
+          }
+        ]
+      },
+      {
+        "id": "proc_140_forward",
+        "name": "Forward \u2192 Offset",
+        "process_type": "intra_community",
+        "step_count": 3,
+        "changed_steps": [
+          {
+            "symbol": "forward",
+            "step": 1
+          }
+        ]
+      }
+    ]
+  }
+}

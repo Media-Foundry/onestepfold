@@ -1,0 +1,11 @@
+Traceback (most recent call last):
+  File "/data/user/shuang886/Folding/task_readout_v1_20261003/code/scripts/run_task_readout.py", line 187, in <module>
+    elif a.mode=='train':train_task_readout(a.root,a.job)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/user/shuang886/Folding/task_readout_v1_20261003/code/scripts/run_task_readout.py", line 85, in train_task_readout
+    lock=verify_task_lock(root);job=next(x for x in lock['jobs'] if x['id']==jobid)
+         ^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/user/shuang886/Folding/task_readout_v1_20261003/code/scripts/run_task_readout.py", line 58, in verify_task_lock
+    for p,h in lock[group].items():assert sha256(Path(p))==h,p
+                                          ^^^^^^^^^^^^^^^^^^
+AssertionError: /data/user/shuang886/Folding/task_readout_v1_20261003/status.json

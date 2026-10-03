@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "/media/IntelSSD/onestepfold/hpc3_mirror_20261001/Folding/task_readout_v1_20261003/audit_controller.py", line 9, in <module>
+    if not x['complete']: raise RuntimeError(x)
+                          ^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: {'complete': False, 'error': "RuntimeError('train worker0 exit1')", 'stages': [{'mode': 'prepare', 'complete': True, 'jobs': [{'index': 0, 'exit': 0, 'seconds': 10.001341636001598}]}, {'mode': 'train', 'complete': False, 'jobs': [{'index': 0, 'exit': 1, 'seconds': 10.006316427025013}]}], 'seconds': 20.012120563013013}
