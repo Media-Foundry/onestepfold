@@ -1,0 +1,21 @@
+{
+  "complete": true,
+  "tests_passed": 13,
+  "training_code_modified": false,
+  "parameter_updates": 0,
+  "max_gradient_prediction_replay_error": 8.940696716308594e-08,
+  "code_hashes": {
+    "src/fastglycan/objective_audit.py": "b1fa5e657470131dc1dbf6663abdcbd7178868d782129336bf0d6260c3e5122f",
+    "scripts/audit_score_objective.py": "0646a658c66787c776eaf597a810de7f7a04497f6677b1ba1b15292991067164",
+    "scripts/probe_objective_gradients.py": "ce259931bba45b09cefe77ab2cfef62e603d662aee62a1d5cd579649f45cb9b6",
+    "docs/mini_objective_audit_v1.md": "7cf35458953cda36ac438708342157509db48a917cc1c9e3e1cf4ab09c004580"
+  },
+  "identities": "raw energy=mean energy+centered energy; MSE=mean error+centered error; gradient squared norm identity",
+  "probe_states": [
+    0,
+    32768,
+    131072
+  ],
+  "independent_projection_checks": 3200,
+  "independent_projection_max_abs_error": 2.842170943040401e-14
+}

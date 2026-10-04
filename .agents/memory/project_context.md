@@ -1,3 +1,28 @@
+## 2026-10-05 — Repeated-context batch CLOSED; objective audit complete, no loss training
+
+Supersedes prior RUNNING entry. context_replication_v1 all12runs/28cp/3200eval rows
+and independent audit complete; wall3155.65s. 3120C4/12360S1,all3080nativeinputs;
+no modelpromotion. Confirmation8proteins32sites, fixedexposure context rho
+n8 .00537/.00104, n16 .01617/-.03372, n32 .03696/.01365; all6belowpairedAA-only.
+Fixedupdates likewise no stable gain. Bothheads WT-only+explicitreference, notoracle target s,
+studentgenerates0coordinates. RepeatedADLTcontexts removeidentityshortcutbutnottransfer.
+Originalresults final artifacts reports/mini_context_replication_2026-10-05/final;
+findings docs/mini_context_replication_findings_2026-10-05.md. No additionaltraining.
+
+Read-only objective_audit_v1: all labels/TRAINsnapshots; n32bothheads2seeds
+init/32768/131072 x128sites=1536gradientprobes,0updates/C4/S1. Hashes/unchangedparameters/
+replaymax8.94e-8verified. Full-gradient mean/centerdecomposition, beforeclip1 andsimulatedclip,
+notAdamWupdates/cumulativeinfluence. ExistingglobalMSEscale.575991363fixedconfirmed.
+2V66D43/L61/T75 rawlabelenergy87.6808%,centered89.9248%,mean84.0492%.
+Notcommonoffsetonly. Contextterminalseed301/303heavycenteredresidual17.49%/98.34%,
+fullnormsum65.49%/93.83%,afterclip32.26%/26.04%;cannotcall87.7%updatecontribution.
+TRAINoldrho .3711/.5581,new .2975/.4504; nonpositiveold28/15sites.
+Heavyold/newrhoD43 .4544,L61 .9509,T75 .9316; notallnoise. TRAINoverallold/new.7863.
+Originalfailureunchanged. Evidence motivates boundedcenteredfloor-scaledlosscomparison,
+NOTstarted/protocollocked; no heldscale, no data deletion/newarchitecture or automaticmoresteps.
+Newconfirmation nowobserved; futureuseisdevelopment,notfreshconfirmation.
+13tests;reports/mini_objective_audit_2026-10-05; findings/protocol docs/mini_objective_audit_*.
+
 ## 2026-10-05 — Repeated-context curve AUTHORIZED and RUNNING; no terminal result yet
 
 User approved ce91bb28 continuation. Locked docs/mini_context_replication_v1.md,
