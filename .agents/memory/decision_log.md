@@ -1,3 +1,33 @@
+## 2026-10-04 — Repeated-context DATA audit complete; prospective cohort prepared, no training
+
+User lowers priority of more output-head repairs and asks to separate AA identity
+memorization from context dependence. Read-onlyTRAINlabel audit afterf858c875:
+AA-pair unrestricted table floor=sumwithin-sourceSSE/sumlabel²,oldnoisesonly.
+Restricted10sites4sourceAA(A5/T3/N1/Y1):floor.692869816,actualAA-only.812244/.826008.
+Expanded10sites8types(A2/T2/6singletons):floor.000976847759,actual.001026661/.000995210.
+Sixsingletoncontextscontain99.7143%labelenergy;2ED6V137alone89.46%.
+Independentone-hotlstsqreproducesfloor;orthogonalenergyidentityerror<=1.4e-14.
+ThisexplainsavailabilityoflowglobalTRAINlosswithoutcontext,notneuralalgorithmorsolecausalproof.
+Retainall16commonheldproteins,N25/S34,old50stresssites. ExistinglabelTRAINuniononly
+A5/T3environments,otheravailabletypes<=1;heldA/Tsupportoneproteinpertype,notrobustscaleexperiment.
+No additionaloldarchive training orGELUintervention.
+
+FromexistinghistoricalfoldTRAINpool165referenceeligibleparents/162components,0downloads.
+Reconstructarchived204recordHSP+accessiongraphbyindependentDFS:199components,matchesarchive.
+Exclude34priorresponsecomponents;165/165finiteobservedCAandADLTreferenceavailability.
+Metadata/hash-onlyprospective40parentselection:32TRAIN+8confirmation candidates,
+eachoneA/D/L/Tsite. Nested8/16/32TRAINparents=32/64/128contexts;32confirmationsites.
+Nooverlapcomponentsamongnewsplitoroldresponseparents. Onlyoperationalhomologyisolation,
+notpretrainingunseen;historicalfoldingdata. Native chemistrypreflightnotyetperformed.
+Candidate manifest ONLY,notexecutedteacher/trainingprotocol. Potential3080uniquehardseq,
+3120C4inclWTreplays,12320ExactS1atfournoises. Noneexecuted.
+ProspectivedesignunchangedContextTaskReadout/AA-only,paired2seeds,matched1024exposures
+andcommon32768updatecheckpoint;priorTRAINscale.575991363fixedacrosstiers;noheldscale.
+Executionnoises/nativeinputchecks/failurelockremain to finalizebefore newcollection.
+11tests;noGPUjobs,0C4/S1/updates. No modelpromotion, no prooflargerdatawillwork.
+Docs mini_context_coverage_findings_2026-10-04.md and mini_context_replication_design_v1.md;
+reports/mini_context_coverage_2026-10-04 containslabelsprojection,inventory,candidates,isolationchecks.
+
 ## 2026-10-03 — Student collapse localized; direct-score transfer diagnostic CLOSED
 
 Follow-up to161712a2. Read-only audit: four old runs x initialization/10920/21840/32760

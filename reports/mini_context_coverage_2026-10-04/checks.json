@@ -1,0 +1,27 @@
+{
+  "complete": true,
+  "tests_passed": 11,
+  "new_c4_calls": 0,
+  "new_s1_calls": 0,
+  "optimizer_updates": 0,
+  "reference_files_checked": 165,
+  "code_sha256": {
+    "src/fastglycan/context_coverage.py": "45d851ae989acffcd96e519b454bdd35efa662c0dc4a1ea2b94f298d17a26e14",
+    "scripts/audit_context_coverage.py": "0fcda212b310e4469b8db575a74db0af8c19f0318a0a1ec2549c8156d680b038",
+    "scripts/preflight_context_references.py": "b8a71cf7b975261ea104e8e5ae817a512d111442147c612514af5de00578d869",
+    "scripts/finalize_context_manifest.py": "f1a02351fdc482c9f5ecbafe67f64a0922ae5fe172d8d15ffc16ccf9a42ae561",
+    "tests/test_context_coverage.py": "c718f6d9df4444707c808c5c4d65a0f5dafbda4c08f9290b515dad3f532ede04"
+  },
+  "pre_edit_impact": {
+    "audit_context_coverage": {
+      "risk": "LOW",
+      "direct_callers": 1,
+      "affected_processes": 0
+    },
+    "finalize_context_manifest": {
+      "risk": "LOW",
+      "direct_callers": 1,
+      "affected_processes": 0
+    }
+  }
+}
