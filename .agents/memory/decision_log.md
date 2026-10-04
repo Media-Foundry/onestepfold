@@ -1,3 +1,28 @@
+## 2026-10-05 — Repeated-context curve AUTHORIZED and RUNNING; no terminal result yet
+
+User approved ce91bb28 continuation. Locked docs/mini_context_replication_v1.md,
+rootcontext_replication_v1_20261005 onDiamondHill/localruntime usualbase.
+Original40candidateparents unchanged:32TRAIN nested8/16/32(eachADLT4sites),8confirmation.
+PublicMini-ESM FP32/nativehard/liveESM2/C4/S1,no soft/warmstart/repair. Weight/source hasheslocked.
+All3080nativeinputs passedCPUpreflight(atomorder/refchirality/topology/CA mapping),0failures;
+4workers~105s. Main teacher3120C4/12480recycles,12360S1incl40WTreplays.
+At2026-10-04 17:01:53UTC snapshot1332C4 done,20WTconditioning/S1replays passed;
+NOT allteacherscomplete. No taskscore/transferresult inspected.
+Oldlabelnoises230201/230211;new310003/310019 frozen. Exact-only,noprivilegedWTzablation.
+Saveallnativecoordinates/inventory plusWTconditioning;mutantconditioningtensorsnotretained.
+Headsunchangedf858c875 ContextTaskReadout3,780,994/AA-only21,377;12freshjobs2seedsx3tiersx2heads.
+Fixedscale.5759913630974075,AdamW.001/.0001/eps1e-8/clip1;1024exposures/site,
+32768/65536/131072updates;common32768andterminalevaluatedwithoutcheckpointchoice.
+TrainingfilesOLDlabelsONLY,WTloaderenforcesjobparents;all12finishbeforeconfirmationeval.
+Nooracletargets/z/s_inputs,referenceGTislegalinput. Scoreronly,notstructures/20C4replacement.
+ControllerPID1381854 runsdetached;stagepreflight->teacher->score->labels->train->eval->audit.
+Perworkerfinitebounds;failurehaltsdependentworkwithoutoutcomeretry/sampledrop/budgetextension.
+Remote status.json/execution.json arecurrent;immutablecommittedstartupreportisNOTterminalstate.
+DoNOTduplicatelaunchafterSSHtimeout. Remainingstagesautoqueued;noGELUchangeornewarchitecture.
+11tests;source snapshotverified. Reportstartupdocs/mini_context_replication_status_2026-10-05.md,
+artifactsreports/mini_context_replication_2026-10-05. Post-close script summarize_context_replication.py
+requires executioncomplete AND independent_auditcomplete. Finishanalysis/reportwhenbatchends.
+
 ## 2026-10-04 — Repeated-context DATA audit complete; prospective cohort prepared, no training
 
 User lowers priority of more output-head repairs and asks to separate AA identity
