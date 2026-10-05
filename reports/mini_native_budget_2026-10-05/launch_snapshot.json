@@ -1,0 +1,105 @@
+{
+  "snapshot_utc": "2026-10-05T16:01:17.328936+00:00",
+  "controller": {
+    "complete": false,
+    "phase": "infer",
+    "pending": 0,
+    "active": [
+      {
+        "pid": 1723272,
+        "index": 0,
+        "slot": 0,
+        "seconds": 130.02820035803597
+      },
+      {
+        "pid": 1723273,
+        "index": 1,
+        "slot": 1,
+        "seconds": 130.02682243299205
+      },
+      {
+        "pid": 1723274,
+        "index": 2,
+        "slot": 2,
+        "seconds": 130.02547383797355
+      },
+      {
+        "pid": 1723276,
+        "index": 3,
+        "slot": 3,
+        "seconds": 130.02424061705824
+      }
+    ],
+    "stages": [
+      {
+        "mode": "prepare",
+        "complete": true,
+        "jobs": [
+          {
+            "index": 0,
+            "exit": 0,
+            "seconds": 10.001209449023008
+          }
+        ]
+      },
+      {
+        "mode": "infer",
+        "complete": false,
+        "jobs": []
+      }
+    ],
+    "seconds": 140.033712116885
+  },
+  "workers": [
+    {
+      "worker": "worker_3",
+      "counts": {
+        "conditioning": 84,
+        "coordinate_replays": 112,
+        "recycle": 196,
+        "s1": 336
+      },
+      "complete": false,
+      "seconds": 119.83057962195016
+    },
+    {
+      "worker": "worker_1",
+      "counts": {
+        "conditioning": 69,
+        "coordinate_replays": 92,
+        "recycle": 161,
+        "s1": 276
+      },
+      "complete": false,
+      "seconds": 119.50930695200805
+    },
+    {
+      "worker": "worker_2",
+      "counts": {
+        "conditioning": 78,
+        "coordinate_replays": 104,
+        "recycle": 182,
+        "s1": 312
+      },
+      "complete": false,
+      "seconds": 120.8155758830253
+    },
+    {
+      "worker": "worker_0",
+      "counts": {
+        "conditioning": 63,
+        "coordinate_replays": 84,
+        "recycle": 147,
+        "s1": 252
+      },
+      "complete": false,
+      "seconds": 118.7505060909316
+    }
+  ],
+  "counts": {
+    "conditioning": 294,
+    "coordinate_replays": 392,
+    "recycle": 686,
+    "s1": 1176
+  }
+}

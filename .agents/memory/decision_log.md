@@ -1,3 +1,27 @@
+## 2026-10-05 — Native candidate compute-budget curve RUNNING; score-head route paused
+
+User directs nextstage toward retainednativecandidate computation, notmorefloor/headtraining.
+Reuseaudit: Stage0ninegrid1024parents includesC1/C2/C4S1,but legacysettings,parentGT,
+notmatchedFP32hardmutationranking;256confirmC2S2/C4S2warmratio.585 andlddt-.0072.
+ChordFold didNOTexecutewarmstart. Historicalresultspreserved,notrerunormisusedasfulltiming.
+Newbounded native_budget_v1_20261005 atusualDiamondHill/runtime root;PID1723064,
+started2026-10-05T15:57:04UTC.9parents(all8oldDEV+2V66stress),4ADLTsites/parent,
+693uniquehardseq;C1S1/C2S1/C4S1 eachfreshnativefeatures+ESM+zero-initializedtrunk.
+Allown s_inputs/s/z, noWT/targetlatentoracle/warmstart/repair/confidencehead/student.
+C4defaultunchanged. SamepublicMiniFP32/identity4noise230201/230211/310003/310019.
+Expected2079conditioning/4851recycles/8316S1;all2772C4coordinatesmustreplayarchivebitwise.
+Rotate6budgetorders;everyarmfullfeature+ESM+decode4+task/geometry+NPZwrite measured,
+parentsetupsamecharge,modelloadseparate/firstusesum;offlinefidelity/auditseparate.
+Notofficialconfidence/CIFservice,notideal4xspeedup;sharedCPU/storagecontentionreported.
+GeneratedgeometryandC4structurefidelityactualfullcoords;WTonlyexperimentalGTquality;
+mutantC4refisnotexperimentaltruth. LocalrefC4CA10A;fulltails/transitions retained.
+DEV8and2V66stressseparate;noindependentconfirmationclaim,nocandidatesselectedbynewresults.
+Controllerinfer4GPU->score4CPU->collect->audit->summary;finite3600sworkerbounds.
+Noautomatictraining/promotion/continuation. Startup294/2079conditioning,1176S1,
+392bitwiseC4replayspassed;NOTcomplete. Source1074filesparity,9tests incltaskscoreequivalence.
+Protocol docs/mini_native_budget_v1.md; startup docs/mini_native_budget_status_2026-10-05.md;
+reports/mini_native_budget_2026-10-05. Checkexecutionbeforeanyaction,neverduplicatecontroller.
+
 ## 2026-10-05 — A/B/C objective comparison CLOSED; TRAIN improves, DEV does not
 
 Supersedes priorRUNNING entry. score_objectives_v1_20261005 all12fresh131072update
