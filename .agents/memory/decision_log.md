@@ -1,3 +1,29 @@
+## 2026-10-05 — Fixed-model/data A/B/C score-objective comparison RUNNING
+
+User authorized loss-only12run comparison after175552c4. Runtime score_objectives_v1_20261005,
+DiamondHillusualroot;controllerPID1503425,started2026-10-05T11:19:21UTC.
+Protocol docs/mini_score_objectives_v1.md; startup docs/mini_score_objectives_status_2026-10-05.md.
+Reuse n32TRAIN32proteins128ADLTsites,exactold230201/230211labels,originalscale.5759913630974075.
+Original8confirmationparents are nowDEV; newnoise310003/310019evaluationonly.
+UnchangedContextTaskReadout3,780,994 / AA-only21,377,2seeds231301/231303,3losses:
+ArawglobalMSE;Bseparatelycenterpred/targetMSE;Cweight_i*B.
+TRAINrawcenteredenergylinearq25floor=max(q25,1e-12)=9.30978555588385e-05.
+Inverseflooredweightsnormalizedmean1,range4.1324e-6..2.63943,hashlockedbeforeupdates.
+Noheldnormalization/meaninput/newarchitecture/GELU/optimizer/teacher/rank change.
+Eachfresh131072updates=1024full19AAexposures/site;AdamW.001/wd.0001/eps1e-8/clip1.
+12initialstatesmatchpriorn32andpairedA/B/C. Snapshots0/32768/65536/131072;
+terminalonlyDEVevalafterall12finish,1920rows. IntermediateTRAINonly,nochoice.
+Everyupdateaccumulateweighted/unweightedbasegradnorms andcounterfactualpostclip,
+per-site32768windows,clipcounts/ratios;notAdamWcausalcontribution.
+B/C19mutantrelativeonly,WTzero doesnotfixmutantcommonoffset;rawerrors/regretretained.
+Nooracletargets/z/s_inputs;noS1/C4calls/coordinates;retrieveselectedExactgeometry.
+Allseeds/sites retained,2V66D43/L61/T75singledout;noautopromotion/retries/extensions.
+Atstartupsnapshot4A/Bcontextjobs2560/131072,Cqueued;6AA-onlyCPUlater.
+Controllerautomaticallyeval->collect->audit->summarize;perrun7200sbound.
+17tests (includingactualTorchclipcounterfactual);1066frozenfilesverified.
+Noobjectiveoutcomeortransferconclusionyet. Checkremotestatus/executionbeforeaction;
+DONOTduplicatecontrollerorreadstartupasfinal. Expectedremaining70-85minatstartup.
+
 ## 2026-10-05 — Repeated-context batch CLOSED; objective audit complete, no loss training
 
 Supersedes prior RUNNING entry. context_replication_v1 all12runs/28cp/3200eval rows
