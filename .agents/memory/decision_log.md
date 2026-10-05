@@ -1,3 +1,26 @@
+## 2026-10-05 — A/B/C objective comparison CLOSED; TRAIN improves, DEV does not
+
+Supersedes priorRUNNING entry. score_objectives_v1_20261005 all12fresh131072update
+runscomplete,1920terminalrows;wall4520.795s=75.35min. Audit12inits/36cp/6144loss/
+2640cliptrace/5760selection/7680geometrychecks. FreshA matcheshistoricaln32terminal
+predictions EXACTLY all4head/seedpairs; nooutcome retries/extensions/newC4/S1.
+ContextfournoiseTRAINrhoA .3462/.5162,B .3199/.0996,C .7219/.5951.
+OldTRAINnonpositivecountsA28/15,B28/50,C2/3;C improvesbroadranking.
+DEV8previouslyobservedproteins32sites context rhoA .0370/.0137,B .0957/.0242,
+C-.0416/.0207 vs CAA-only.1432/.1373. No stablecontextadvantage/no promotion.
+ContextcrossregretA .27527/.36840,B .30432/.33932,C .51387/.46724;
+CAA-only.41242/.41242. Cmeans/worsttailsworse despiteDEVproteinmediansbetterthanA.
+C selectedbothnewnoisecheckedgeometry10/10of32,notrepair/comprehensivechemistry.
+Cweightedclipfrequency.02899%/.05264%;bothweighted/unweightedclipped.02289%/.05188%.
+AtCstatesheavy2V66postclipnormshare26.944%/30.701%unweighted ->1.547%/11.779%weighted.
+Notuniversalclipcancellation,notAdamWcausalinfluence. Meanweight1doesnotmatchgradscale.
+2V66D43/L61/T75C oldrho .414/.156/.107 (301),.074/.105/.265(303);
+CcrossregretD43 0/6.283,L61 3.707/5.075,T75 6.459/2.595. Trainingriskalsoincreases.
+Objectivechangehelpstrainbreadthbutdoesnotrepairtransfer;noautomaticfloor/steps/data/newhead.
+NoWTinformationimpossibilityclaim. B/Cmutantoffsetunsupervised,relative19AAonly.
+Report docs/mini_score_objectives_findings_2026-10-05.md;
+artifacts reports/mini_score_objectives_2026-10-05/final. Preserveallseeds/failures.
+
 ## 2026-10-05 — Fixed-model/data A/B/C score-objective comparison RUNNING
 
 User authorized loss-only12run comparison after175552c4. Runtime score_objectives_v1_20261005,
