@@ -1,3 +1,27 @@
+## 2026-10-06 — WT prefix reuse CLOSED; structural benefit, no selection promotion
+
+Supersedes prior RUNNING entry. prefix_reuse_v1b_20261006 complete785.189s=13.09min,
+allstageexit0;initialpre-screen RNG gate stop80.025s preserved separately.
+Audit18inputs/36splits/2772C4+36WTbitwisereplays/11088task/432selectionchecks,
+2763conditioning/6246recycles/11052S1/0updates; no oracle target s.
+DEV8/32sites coldC2,C4,WT2Target2,WT3Target1 respectively:
+rho .574671/1/.559265/.436623;Top1 12/32/14/8 of32;
+crossregret .165709/.045838/.223963/.267797.
+Warm2 meanAAlddttoC4 .958695 vs C2 .923195;localmean1.084961vs1.459478A.
+Newgeo337/0/167/206,repairs297/0/140/148,absolute988/1028/1001/970 of2432;
+local>1A768/0/604/715;warmmax24.783986/24.845132A,p99worse despitebettermeans.
+Stress2V66 warmrho .941228/.85,Top1both3/4 but regretboth1.208368vsC4 .092300;
+T75Achoice regret4.833472 drives it. Geometry3/2 of304; selectedpassboth0.
+RecordedresidentratiosC2 .736132,WT2 .855783,WT3 .724970 vsC4;IMPORTANTtiming
+limitation: sourceWTalwaysfirst;firstperworker17.3–18.1s vs later.61–.66s,
+chargedonlywarmledgers. Candidateorderrotationdoesnotbalancefirst-callcost.
+Keepas-executedledger,notbalancedsteady-statecausalspeedclaim;no posthocsubtraction.
+Qualitydecisionindependentoftiming:no promotion,C4retained,these2pathsclosed.
+NoautomaticWT1/WT4/mixing/adapter/training. Structuralbenefitdoesnotimplychoice
+reliability; allpanelsdevelopment/C4modelrefnotmutantGT/geometrynotfullchemistry.
+Report docs/mini_prefix_reuse_findings_2026-10-06.md;
+terminal artifacts reports/mini_prefix_reuse_2026-10-06/final/.
+
 ## 2026-10-06 — Matched-depth WT prefix reuse RUNNING; integrity passed
 
 User authorizes exactly WT2→Target2 / WT3→Target1, no training/adapters/mixing.
