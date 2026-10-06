@@ -1,3 +1,30 @@
+## 2026-10-06 — Native C4 execution/dependency profile CLOSED; no optimization yet
+
+User redirects from closed prefix approximations to preserving full native C4
+and auditing execution/dependencies. Bounded single-worker execution_profile_v1_20261006
+PID2182636 started10:06:57UTC;controller228.109s/inner218.019s complete,exit0.
+Panel9parents(8DEV+2V66)WT+firstmutantA→C=18inputs,length88–164;not19AAbenchmark.
+99fullC4 workloads:54steady,18warmup,18syncstage,1first,4torchprofile,4cProfile.
+Independent audit396coordinatesbitwisereplayed,396recycles/396S1,0updates.
+FourGPUtracesvalid;8newfiles+1074unchangedbase=1082frozen;4localtests pass.
+Load46.551s;firstworkload16.222s;steady medians.569–.948s,DEVmean.723426s.
+SyncDEVmean.733619s:trunk54.63%,4S1ranges19.28%(includesnoise/cache),native13.60%,
+ESM5.89%,labelsetup4.27%;explicitH2D.36%/D2H.10%,notdominant.
+Profilewalls2.08–2.21s,heavilyinstrumented;do notuseasdeploylatencyor sumoverlapping
+annotation/ATen/kernelstats. Peaksteady12.22–12.45GB;no batchingtested.
+Samecandidatepair/atomcache4recomputationsall18inputs bitwiseequal/RNGunchanged;
+1.91–2.98ms each,nominal3avoidedcopies~1%wholeworkloadonly,notmeasuredspeedup.
+WT/mutant46equal57changedfeatureleaves;relpequal,all s_inputs/s/z different.
+Sourcelead1:identity_noise peratomhash/privateRNG; exactidentity+seedlookuppossible,
+notcrosscandidatechemistrycache. CPUprofile34–65ms self across4noises,profileaffected.
+Sourcelead2:screeningbuild_adapter_supervisionconstructsunusedsmoothlddt/GTbondlabels;
+response_geometryreads excluded/radii/centres/volumes only. Separateminimal
+screenlabelspossible,retaintraininghelperandvalidation. Neither optimization applied.
+Decision:profilebatchclosed,C4unchanged;prioritizeexact-outputhostwork audit-informed
+followup,notnewstateapproximation. Noautooptimizationbatchortrainingstarted.
+Docs mini_execution_profile_v1.md,mini_execution_dependency_audit_2026-10-06.md,
+mini_execution_profile_findings_2026-10-06.md;reports/mini_execution_profile_2026-10-06.
+
 ## 2026-10-06 — WT prefix reuse CLOSED; structural benefit, no selection promotion
 
 Supersedes prior RUNNING entry. prefix_reuse_v1b_20261006 complete785.189s=13.09min,
