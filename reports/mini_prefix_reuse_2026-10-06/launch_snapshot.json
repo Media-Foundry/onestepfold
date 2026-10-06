@@ -1,0 +1,76 @@
+{
+  "complete": false,
+  "phase": "infer",
+  "pending": 0,
+  "active": [
+    {
+      "pid": 2147682,
+      "index": 0,
+      "slot": 0,
+      "seconds": 50.01417549501639
+    },
+    {
+      "pid": 2147683,
+      "index": 1,
+      "slot": 1,
+      "seconds": 50.01251144800335
+    },
+    {
+      "pid": 2147685,
+      "index": 2,
+      "slot": 2,
+      "seconds": 50.01107917795889
+    },
+    {
+      "pid": 2147686,
+      "index": 3,
+      "slot": 3,
+      "seconds": 50.00953988509718
+    }
+  ],
+  "stages": [
+    {
+      "mode": "prepare",
+      "complete": true,
+      "jobs": [
+        {
+          "index": 0,
+          "exit": 0,
+          "seconds": 10.001245519029908
+        }
+      ]
+    },
+    {
+      "mode": "gate",
+      "complete": true,
+      "jobs": [
+        {
+          "index": 0,
+          "exit": 0,
+          "seconds": 80.01927619206253
+        },
+        {
+          "index": 1,
+          "exit": 0,
+          "seconds": 80.01761458499823
+        },
+        {
+          "index": 3,
+          "exit": 0,
+          "seconds": 80.01468130608555
+        },
+        {
+          "index": 2,
+          "exit": 0,
+          "seconds": 85.01718605298083
+        }
+      ]
+    },
+    {
+      "mode": "infer",
+      "complete": false,
+      "jobs": []
+    }
+  ],
+  "seconds": 145.0422514990205
+}

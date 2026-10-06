@@ -1,0 +1,217 @@
+{
+  "complete": true,
+  "model_load_seconds": 47.95946736494079,
+  "records": [
+    {
+      "label": "p27_wt",
+      "native_rng_changed": true,
+      "parent_index": 27,
+      "rng_restored_exactly": true,
+      "rng_trace": [
+        {
+          "module": "input_embedder",
+          "rng_changed": false
+        },
+        {
+          "module": "msa_module",
+          "rng_changed": true
+        },
+        {
+          "module": "pairformer_stack",
+          "rng_changed": false
+        },
+        {
+          "module": "msa_module",
+          "rng_changed": true
+        },
+        {
+          "module": "pairformer_stack",
+          "rng_changed": false
+        },
+        {
+          "module": "msa_module",
+          "rng_changed": true
+        },
+        {
+          "module": "pairformer_stack",
+          "rng_changed": false
+        },
+        {
+          "module": "msa_module",
+          "rng_changed": true
+        },
+        {
+          "module": "pairformer_stack",
+          "rng_changed": false
+        }
+      ],
+      "role": "WT",
+      "split_bitwise": [
+        2,
+        3
+      ],
+      "zero_C4_bitwise": true
+    },
+    {
+      "label": "p27_s69_C",
+      "native_rng_changed": true,
+      "parent_index": 27,
+      "rng_restored_exactly": true,
+      "rng_trace": [
+        {
+          "module": "input_embedder",
+          "rng_changed": false
+        },
+        {
+          "module": "msa_module",
+          "rng_changed": true
+        },
+        {
+          "module": "pairformer_stack",
+          "rng_changed": false
+        },
+        {
+          "module": "msa_module",
+          "rng_changed": true
+        },
+        {
+          "module": "pairformer_stack",
+          "rng_changed": false
+        },
+        {
+          "module": "msa_module",
+          "rng_changed": true
+        },
+        {
+          "module": "pairformer_stack",
+          "rng_changed": false
+        },
+        {
+          "module": "msa_module",
+          "rng_changed": true
+        },
+        {
+          "module": "pairformer_stack",
+          "rng_changed": false
+        }
+      ],
+      "role": "target_audit_only",
+      "split_bitwise": [
+        2,
+        3
+      ],
+      "zero_C4_bitwise": true
+    },
+    {
+      "label": "p2_wt",
+      "native_rng_changed": true,
+      "parent_index": 2,
+      "rng_restored_exactly": true,
+      "rng_trace": [
+        {
+          "module": "input_embedder",
+          "rng_changed": false
+        },
+        {
+          "module": "msa_module",
+          "rng_changed": true
+        },
+        {
+          "module": "pairformer_stack",
+          "rng_changed": false
+        },
+        {
+          "module": "msa_module",
+          "rng_changed": true
+        },
+        {
+          "module": "pairformer_stack",
+          "rng_changed": false
+        },
+        {
+          "module": "msa_module",
+          "rng_changed": true
+        },
+        {
+          "module": "pairformer_stack",
+          "rng_changed": false
+        },
+        {
+          "module": "msa_module",
+          "rng_changed": true
+        },
+        {
+          "module": "pairformer_stack",
+          "rng_changed": false
+        }
+      ],
+      "role": "WT",
+      "split_bitwise": [
+        2,
+        3
+      ],
+      "zero_C4_bitwise": true
+    },
+    {
+      "label": "p2_s76_C",
+      "native_rng_changed": true,
+      "parent_index": 2,
+      "rng_restored_exactly": true,
+      "rng_trace": [
+        {
+          "module": "input_embedder",
+          "rng_changed": false
+        },
+        {
+          "module": "msa_module",
+          "rng_changed": true
+        },
+        {
+          "module": "pairformer_stack",
+          "rng_changed": false
+        },
+        {
+          "module": "msa_module",
+          "rng_changed": true
+        },
+        {
+          "module": "pairformer_stack",
+          "rng_changed": false
+        },
+        {
+          "module": "msa_module",
+          "rng_changed": true
+        },
+        {
+          "module": "pairformer_stack",
+          "rng_changed": false
+        },
+        {
+          "module": "msa_module",
+          "rng_changed": true
+        },
+        {
+          "module": "pairformer_stack",
+          "rng_changed": false
+        }
+      ],
+      "role": "target_audit_only",
+      "split_bitwise": [
+        2,
+        3
+      ],
+      "zero_C4_bitwise": true
+    }
+  ],
+  "runtime": {
+    "cuda_visible": null,
+    "device": "AMD Instinct MI250X / MI250",
+    "hip": "7.14.60850",
+    "hip_visible": "1",
+    "management_gcd": 3,
+    "pci_bus_id": "0000:35:00.0",
+    "physical_mapping_verified": true,
+    "rocr_visible": null,
+    "torch": "2.12.0a0+git78258b9"
+  }
+}

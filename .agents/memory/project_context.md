@@ -1,3 +1,27 @@
+## 2026-10-06 — Matched-depth WT prefix reuse RUNNING; integrity passed
+
+User authorizes exactly WT2→Target2 / WT3→Target1, no training/adapters/mixing.
+C4 default retained; fresh cold C2/C4 references; DEV8+separate2V66 stress unchanged.
+Once/parent WT C4 captures token s/z and execution RNG at2/3. Each candidate/arm
+rebuilds actual native features+liveESM+chemistry; complete target bridge and own
+final s_inputs/s/z feed S1. Each warm ledger pays full once-per-parent WT cost
+plus actual target work; source cloning/read included. No oracle target s.
+Initial prefix_reuse_v1_20261006 stopped at integrity gate80.025s (before any
+quality evaluation): eval MSAModule advances RNG. Initial logs/source preserved.
+Correction captures/restores exactPython/NumPy/torchCPU/device RNG after target
+initialization, before continuation. Native modules/weights/scores unchanged.
+Corrected root prefix_reuse_v1b_20261006 PID2147283 started08:51:11UTC.
+All18WT/target cases pass zero-C4 and36split2/3 bitwise conditioning recovery;
+finalRNG identical; hooks locate consumption inMSAModule; immutableprefix checks.
+8localtests pass,1074oldsourcefilesparity+7new=1081frozenfiles.
+Controller now inference thenCPUscore/collect/audit/summary; check terminal files
+before duplicate actions. Screen expected2763conditioning/6246recycle/11052S1,
+11088logicaloutputs,2772C4archive+36sourceWTreplays;0optimizerupdates.
+Same 4noises,ranking/regret/geometry/tails/timing; noqualityconclusion/no promotion.
+IDs2=coldC2,4=coldC4,22=WT2Target2,31=WT3Target1 (labels,notcyclecounts).
+Protocol docs/mini_prefix_reuse_v1.md; launch docs/mini_prefix_reuse_status_2026-10-06.md;
+reports/mini_prefix_reuse_2026-10-06. No further configuration search automatically.
+
 ## 2026-10-06 — Native C1/C2/C4 hard-mutant budget curve CLOSED; C4 retained
 
 Supersedes prior RUNNING snapshot. native_budget_v1_20261005 completed all stages
