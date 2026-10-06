@@ -1,3 +1,27 @@
+## 2026-10-06 — Native C1/C2/C4 hard-mutant budget curve CLOSED; C4 retained
+
+Supersedes prior RUNNING snapshot. native_budget_v1_20261005 completed all stages
+in 580.121s; audit passed 2079 conditioning,4851 recycles,8316 S1/task checks,
+324 selection checks,2772 bitwise exact archived C4 coordinate replays;0 updates.
+DEV8 proteins/32sites, separate2V66 stress4sites. All arms own fresh native features,
+liveESM, cold-zero trunk and complete s_inputs/s/z; no oracle/warm-start/repair.
+DEV C1/C2/C4 four-noise19AA rho .327961/.574671/1; Top1 7/12/32 of32;
+old-select/new-C4-eval regret .199890/.165709/.045838. Resident matched perprotein
+geomean time ratios .592246/.797816/1 (screen feature+ESM+trunk+4S1+score+NPZ).
+Model loading separate/additive first-use estimate; not confidence/CIF service.
+DEV each2432mutant/noise outputs: geometry pass527/988/1028;
+newfail690/337/0, repaired189/297/0;localRMSD>1A1035/768/0,max27.5205/18.6974/~0.
+C4 reference is model output, not mutantGT or fully chemically valid.
+C2 net geometry−40 hides337 newly failed outputs; selectednewnoise pass12vsC4 8
+is not ranking advantage. WTGT AAlddt .746250/.775179/.787976.
+Stress rho .700877/.842105/1 but regret1.344956/.474544/.092300 and
+local>1A304/227/0; absolutecheckedgeometry0/4/10 of304; no pooling withDEV.
+Decision:no promotion, C4default retained,no automatic continuation/training.
+Native shortening saves time but loses selection/structure; warm-start/blockwise
+not tested and not ruled out. All panels reused development,notindependent.
+Report docs/mini_native_budget_findings_2026-10-06.md;
+terminal artifacts reports/mini_native_budget_2026-10-05/final/ incl SHA256.
+
 ## 2026-10-05 — Native candidate compute-budget curve RUNNING; score-head route paused
 
 User directs nextstage toward retainednativecandidate computation, notmorefloor/headtraining.
