@@ -1,3 +1,28 @@
+## 2026-10-06 — Base model-only delta propagation audit CLOSED
+
+User authorizes delta/invariance audit, then explicitly excludes external MSA/ESM
+preparation and pipeline timing. Base_default_v0.5.0 (official downloaded368M)
+only; query-only dummy MSA, FP32 native C4/48 main blocks percycle; internal MSA
+active. No ESM/MSA search/S1/student/kernel/optimizer. Not default Base C10S200.
+Fixed5OI7 A50 L88,2V66 T75 L111,4LR3 T4 L164;60 WT+19AA inputs.
+Worker436.571s;187C4/748recycles;all60 finalconditioning full-byte hashes match
+plain/observed runs,matching finalRNG. WT45observationpoints repeat numericexact.
+Independent18240 sampledchannel spectra checked by Gram eigenvalues;1086source,
+60input,4installedsource andcheckpoint hashes verified. Sixfocusedtests pass.
+Eight fixed channels only;3development contexts,not independentconfirmation.
+Strict row/column-only support fails in all57 firstgatedA, but posthoc sampled
+outside-row/col energy ~8.60e-12; early nonzero support alone overstates strength.
+FirstTriMul output makes unchanged16x16tileszero. Early actualgatedA R95~1.80,
+maincycle1B8 R95~2.99/R99~8.20;B48 R95~40.87;finalR95~44.24/R32energy89.75%.
+FinalparentR95 26.96/44.50/61.26;R32energy96.07/89.37/83.81%. No decoder fidelity
+inferred. C4 model-onlymeans.956/.980/1.644s;earliestTriMul.780/.868/1.516ms,
+~0.08–0.09% scalecomparison only (separateinstrumentedtiming,not additivebound).
+Conclusion: early structured-delta window exists; no persistentstrictsparsity,
+no costcrossover/kernel/fullaccelerator validated; firstcontraction alone tiny.
+Noautomatic prototype/newbatch. Docs base_delta_propagation_v1.md and
+base_delta_propagation_findings_2026-10-06.md;reports/base_delta_propagation_2026-10-06.
+Runtime /media/IntelSSD/onestepfold/hpc3_mirror_20261001/Folding/base_delta_propagation_v1_20261006.
+
 ## 2026-10-06 — Native C4 execution/dependency profile CLOSED; no optimization yet
 
 User redirects from closed prefix approximations to preserving full native C4
