@@ -1,3 +1,22 @@
+## 2026-10-07 — Base delta window/cost audit CLOSED
+
+Bounded follow-up to60d6a307 completed; Base FP32 C4/query-only MSA,3development
+sites WT+C/V/W,12frozen inputs. NoexternalESM/MSApreparation/S1/training/kernel.
+76C4/304cycles,worker259.16s;allfinals_inputs/s/z matchpriorarchivefullhashes,
+RNGchecks andWT66tensorfull-byte repeats pass. Independent76032 Gram spectra
+verifyall128channels;8focusedtests pass. Actualout/inA/B meanR95 atc1B8/16/24/32/48:
+3.376/9.390/15.109/24.275/43.221;maxR99 34/49/55/70/97.
+c2/c3/c4B1meanR95 37.70/38.28/37.30:no restartedlowrankwindow.
+PlainC4parentmeans.958/.978/1.632s. c1B1–16internalcontraction~.57–.66%plainC4,
+B1–24~.82–1.00%;all4cyclescontraction~6.61–7.96%,wholeTriMul~34.71–36.48%.
+Parent+childtimingoverlap:neveradd. Profilewallmean+4.72%,range+.83–12.53%;
+ratiosaredescriptivescalecomparison,notstrictadditiveboundormeasuredspeedup.
+Decision:earlystructuredwindowconfirmed,butnotjustifiedasmainshortchainC4
+kernelinvestment;noautomaticprototype/newbatch. Notgeneralizedtolongchains,
+richMSA/defaultBaseprotocol. Nocompressioncostordecoderfidelitymeasured.
+Docs base_delta_window_v1.md,base_delta_window_findings_2026-10-06.md;
+reports/base_delta_window_2026-10-06;runtimebase_delta_window_v1_20261006.
+
 ## 2026-10-06 — Base model-only delta propagation audit CLOSED
 
 User authorizes delta/invariance audit, then explicitly excludes external MSA/ESM

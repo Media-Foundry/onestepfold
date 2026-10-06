@@ -1,0 +1,25 @@
+2026-10-06 23:53:00,599 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/runner/batch_inference.py:403] INFO runner.batch_inference: Inference by Protenix: model_size: base, with_feature: default, model_version: v0.5.0, dtype: fp32
+2026-10-06 23:53:00,599 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/runner/batch_inference.py:408] INFO runner.batch_inference: Triangle_multiplicative kernel: torch, Triangle_attention kernel: torch
+2026-10-06 23:53:00,599 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/runner/batch_inference.py:412] INFO runner.batch_inference: enable_diffusion_shared_vars_cache: True, enable_efficient_fusion: True, enable_tf32: False
+2026-10-06 23:53:00,600 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/runner/inference.py:246] INFO runner.inference: Distributed environment: world size: 1, global rank: 0, local rank: 0
+2026-10-06 23:53:00,600 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/runner/inference.py:98] INFO root: LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+2026-10-06 23:53:00,600 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/runner/inference.py:127] INFO root: Finished environment initialization.
+train scheduler 16.0
+inference scheduler 16.0
+Diffusion Module has 16.0
+2026-10-06 23:53:43,358 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/runner/inference.py:246] INFO runner.inference: Loading from /data/user/shuang886/Folding/base_delta_window_v1_20261006/runtime/checkpoint/protenix_base_default_v0.5.0.pt, strict: True
+2026-10-06 23:53:44,564 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/runner/inference.py:246] INFO runner.inference: Sampled key: module.input_embedder.atom_attention_encoder.linear_no_bias_ref_pos.weight
+2026-10-06 23:53:44,671 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/runner/inference.py:246] INFO runner.inference: Finish loading checkpoint.
+2026-10-06 23:53:44,679 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/runner/inference.py:246] INFO runner.inference: Model parameters: 368.09M
+5OI7_50_A 1 [0.9375711829634383, 0.9695629440248013, 0.9443467860110104] spectra 1.2890668585896492e-06
+5OI7_50_C 2 [0.9607097499538213, 0.9721310529857874, 0.9465432449942455] spectra 4.502462095930241
+5OI7_50_V 3 [0.9755016140406951, 0.9630457109306008, 0.9562428530771285] spectra 4.490811888943426
+5OI7_50_W 4 [0.950566875981167, 0.9626777010271326, 0.9674290609546006] spectra 4.505687806056812
+2V66_75_T 5 [0.961292605032213, 0.9738580289995298, 1.0006389110349119] spectra 1.1400552466511726e-06
+2V66_75_C 6 [0.9943984529236332, 0.9650866920128465, 1.0004973080940545] spectra 7.199808779987507
+2V66_75_V 7 [0.9501931500853971, 0.9804240110097453, 0.9810896760318428] spectra 7.194842919008806
+2V66_75_W 8 [1.018034284003079, 0.9485923149622977, 0.9648457980947569] spectra 7.1902699519414455
+4LR3_4_T 9 [1.905580315971747, 1.6322459910297766, 1.6317601539194584] spectra 1.1100200936198235e-06
+4LR3_4_C 10 [1.6318471370032057, 1.6318710290361196, 1.6322350619593635] spectra 16.798040685011074
+4LR3_4_V 11 [1.6313116210512817, 1.6308700119843706, 1.631631123018451] spectra 16.51934953907039
+4LR3_4_W 12 [1.6316605609608814, 1.6306321329902858, 1.6318947019753978] spectra 16.54530400200747
