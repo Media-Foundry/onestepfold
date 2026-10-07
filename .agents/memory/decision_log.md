@@ -1,3 +1,20 @@
+## 2026-10-07 — Mini editor candidate correspondence diagnostic LOCKED
+
+Follow-up to d2da9617 review: investigate whether the workspace regret benefit
+requires correct AA-specific conditioning. Original training study stays closed.
+Four terminal workspace checkpoints (n3/n15,272001/272003),common9development
+proteins/18sites,19nonWT AA,two archived noises. Student-only fullconditioning
+mean across19AA vs original vs one fixed hash-cycle derangement;ALLs_inputs/s/z
+move together. Actual receiver chemistry/noise unchanged;no targetconditioning.
+Correct/donor arms use original tensor values to avoid mean+residual rounding;
+common CPUFP64 mean cast onceFP32. No permutationsweep, scaling, teacher tuning.
+8208newS1 planned,zero updates/C4/ESM;2736original outputs must replay bitwise.
+Independent CPU score preserves prior metrics,rawoldselect/newregret,parent/site
+contributions,centeredresponse,geometry/tails. Allfour runs retained. No speedup
+or independentconfirmation claim. New isolated entrypoints reuse existing frozen
+runtime/editor/metrics;6focused tests pass. Execution not yet started.
+Protocol:docs/mini_reference_editor_intervention_v1.md.
+
 ## 2026-10-07 — Mini multi-reference structure learning CLOSED, no promotion
 
 All eight fixed-budget runs, independent coordinate scoring and 36 checkpoint
