@@ -1,3 +1,30 @@
+## 2026-10-07 — Mini editor multi-reference structure study PREPARED, not run
+
+Following the review of bef762d0, retain the ordinary Mini editor and original
+structure loss; no immediate pair-anchor injection, Diff attention, rank bound
+or Mini/S1 unfreezing. The engineering pilot remains closed and unpromoted.
+Fresh read-only audit verifies all 2808 existing teacher payloads (9721483922B)
+against their manifest SHA256; no new teacher, training or decoder execution.
+Preserve entire4PT4 and Y84/N25/S34 as development holdouts rather than reverting
+to the old16/8 split. Available n15:15train references/27sites/513mutants;
+3same-reference heldsites/57mutants;9heldreferences/18sites/342mutants.
+All reused development data, not independent confirmation. n3 subset chosen by
+minimum parent index per original length stratum:1W53/2DP9/1DZR,5sites/95mutants.
+Prepared 2architectures×2sizes×2seeds comparison:existing9.352387M workspace vs
+specified9.320643M direct global node-MLP writeout, no iterative workspace;
+control not yet implemented. Same all-conditioning/native-chemistry/S1 boundary,
+no oracle target s.64candidate exposures/site (608batch2updates/site),
+3040/16416updates perrun;total77824updates/155648trainingS1 planned,NOT executed.
+Fixed checkpoints and extra equal3040update comparison; decode regardlessNMSE.
+Report changed site/protein membership bysize, rawregret/structuretails/geometry
+separately, and measured costs rather than equating parameters with FLOPs.
+Explicitly clarify old forward retains/concatenates candidate denseoutputs;
+serial execution is not constant-memory streaming. No numerical findings changed.
+Next implementation must freeze code and pass split/init/cache/replay/gradient
+preflight before training. No active run or new quality/speed conclusion.
+Protocol:docs/mini_reference_editor_multiref_v1.md;
+artifacts:reports/mini_reference_editor_multiref_plan_2026-10-07/.
+
 ## 2026-10-07 — Mini reference-editor engineering pilot CLOSED, no promotion
 
 User explicitly retains MINI (not Base) and authorizes architecture prototype.

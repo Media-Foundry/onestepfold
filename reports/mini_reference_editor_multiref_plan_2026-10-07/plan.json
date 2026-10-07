@@ -1,0 +1,1415 @@
+{
+  "schema": "mini_reference_editor_multiref_preparation_v1",
+  "status": "prepared_not_implemented_or_trained",
+  "source_commit": "bef762d03147e1ff821de1b68235047b7f157717",
+  "teacher_metadata_hashes": {
+    "teacher_lock.json": "9c99b5dfcb46ea5f938b8df09de6d66b7ca9bb56c12d33ecbf38f1e789dd34e1",
+    "teacher_manifest.json": "a34c040359e21a73f9f59641ace25ee7ac38795ae88da9b8aeb657f19ff9852f",
+    "teacher_report.json": "938a419bd9825629185cabfeb30304efa6c412c6f23a8e741e6c6d148468caba",
+    "selection.json": "6ae0599eb25f15eb98f5e4b6fef9d7bff892ef3cf44eee891417924ad75eb0fc"
+  },
+  "teacher_weights_sha256": {
+    "/data/user/shuang886/Folding/protenix_stage0_pkg/v1_1/runtime/checkpoint/esm2_t36_3B_UR50D-contact-regression.pt": "4da500eab246481dc9c8c95bc7b1d02f2803d761c380b0e95186d4a07d0fc84e",
+    "/data/user/shuang886/Folding/protenix_stage0_pkg/v1_1/runtime/checkpoint/esm2_t36_3B_UR50D.pt": "7de8b4082ba15891959ab368b77ce3886697af1efb16d3c9e9e7b0c5d3f07500",
+    "/data/user/shuang886/Folding/protenix_stage0_pkg/v1_1/runtime/checkpoint/protenix_mini_esm_v0.5.0.pt": "1301bba9ad322518eace60fd244ded7904439f55317e90d402cc7a0c06026664"
+  },
+  "teacher_noises": [
+    230201,
+    230211
+  ],
+  "historical_development_data": true,
+  "source_root": "/media/IntelSSD/onestepfold/hpc3_mirror_20261001/Folding/factor_student_pilot_v1_20261002",
+  "selection_rule": "original train minus entire 4PT4 and fixed (3,83)/(4,24)/(5,33) sites; n3 selects lowest eligible parent index in each original length stratum",
+  "parents": [
+    {
+      "parent_index": 0,
+      "pdb_id": "6ahp",
+      "length": 110,
+      "sequence_sha256": "439132ab9189a4f09111794dfbe346f3ca8105c64f6dad2c281c635cf4f8fb73",
+      "component": "439132ab9189a4f09111794dfbe346f3ca8105c64f6dad2c281c635cf4f8fb73",
+      "original_role": "validation",
+      "parent_role_n15": "dev_unseen_protein",
+      "length_stratum": [
+        80,
+        112
+      ],
+      "reference_conditioning": {
+        "bytes": 6564100,
+        "path": "teacher_3/p0_wt_conditioning.pt",
+        "sha256": "cfaf2727c35e7403410d835c53d42f95a91a55d89a1baa991a546e844a07a835"
+      }
+    },
+    {
+      "parent_index": 1,
+      "pdb_id": "1x8d",
+      "length": 104,
+      "sequence_sha256": "e960c1a5710dc6ce554ab06cd0bd8aca391c7210a3e84b0d9e88e851f3762959",
+      "component": "e960c1a5710dc6ce554ab06cd0bd8aca391c7210a3e84b0d9e88e851f3762959",
+      "original_role": "validation",
+      "parent_role_n15": "dev_unseen_protein",
+      "length_stratum": [
+        80,
+        112
+      ],
+      "reference_conditioning": {
+        "bytes": 5886660,
+        "path": "teacher_7/p1_wt_conditioning.pt",
+        "sha256": "f8905c7bc3ef19a9ddb0ea21fc60795611be0137361b11c3c8f9b030adc4b40b"
+      }
+    },
+    {
+      "parent_index": 2,
+      "pdb_id": "2ebe",
+      "length": 106,
+      "sequence_sha256": "6389c0a1fceffe14fb488b2f4fa523eeb583819ca46b2dbf91d6f880b1a2d124",
+      "component": "6389c0a1fceffe14fb488b2f4fa523eeb583819ca46b2dbf91d6f880b1a2d124",
+      "original_role": "validation",
+      "parent_role_n15": "dev_unseen_protein",
+      "length_stratum": [
+        80,
+        112
+      ],
+      "reference_conditioning": {
+        "bytes": 6108356,
+        "path": "teacher_5/p2_wt_conditioning.pt",
+        "sha256": "851af82b195b07196caf8acf828ef69fb59ba3ffeeb250d7317206f73df0d7c9"
+      }
+    },
+    {
+      "parent_index": 3,
+      "pdb_id": "1w53",
+      "length": 84,
+      "sequence_sha256": "9d7fc00661a35cc01269002fe7c06b75e18d4156db537a5354bb45d6b14068e5",
+      "component": "9d7fc00661a35cc01269002fe7c06b75e18d4156db537a5354bb45d6b14068e5",
+      "original_role": "train",
+      "parent_role_n15": "train",
+      "length_stratum": [
+        80,
+        112
+      ],
+      "reference_conditioning": {
+        "bytes": 3894852,
+        "path": "teacher_2/p3_wt_conditioning.pt",
+        "sha256": "6b75dd567e10e8f9cffded0d65f27afd0e088bdf3a25a6cf9865cc26caa45246"
+      }
+    },
+    {
+      "parent_index": 4,
+      "pdb_id": "1jhg",
+      "length": 101,
+      "sequence_sha256": "618faa8c221c83dd72eba0d6e6a054c6caa40763d8e4eea844f0c6a85790831b",
+      "component": "618faa8c221c83dd72eba0d6e6a054c6caa40763d8e4eea844f0c6a85790831b",
+      "original_role": "train",
+      "parent_role_n15": "train",
+      "length_stratum": [
+        80,
+        112
+      ],
+      "reference_conditioning": {
+        "bytes": 5561732,
+        "path": "teacher_4/p4_wt_conditioning.pt",
+        "sha256": "89f0e792a2941d691374213cd38085e626512ad040554d92d194eba11ceb8f7f"
+      }
+    },
+    {
+      "parent_index": 5,
+      "pdb_id": "1a7g",
+      "length": 82,
+      "sequence_sha256": "84c2aa6ecd46e56f06bf3aff0b3fe434e5f0144bf8bb675b800c89b929e83ca3",
+      "component": "84c2aa6ecd46e56f06bf3aff0b3fe434e5f0144bf8bb675b800c89b929e83ca3",
+      "original_role": "train",
+      "parent_role_n15": "train",
+      "length_stratum": [
+        80,
+        112
+      ],
+      "reference_conditioning": {
+        "bytes": 3718212,
+        "path": "teacher_0/p5_wt_conditioning.pt",
+        "sha256": "4ba073c9823af87fb02019b2c1e36c203e803036751836e1455a178f9ba177fe"
+      }
+    },
+    {
+      "parent_index": 6,
+      "pdb_id": "4pt4",
+      "length": 99,
+      "sequence_sha256": "c806137af9888cbf8b586dba86f54a1ca6768bc67b6fddeb0095db8cc57dc692",
+      "component": "c806137af9888cbf8b586dba86f54a1ca6768bc67b6fddeb0095db8cc57dc692",
+      "original_role": "train",
+      "parent_role_n15": "dev_unseen_protein",
+      "length_stratum": [
+        80,
+        112
+      ],
+      "reference_conditioning": {
+        "bytes": 5350276,
+        "path": "teacher_1/p6_wt_conditioning.pt",
+        "sha256": "a120c8f8957e0949c9695008989dcf9a058fa060542d0e66f3ca805366be34b0"
+      }
+    },
+    {
+      "parent_index": 7,
+      "pdb_id": "2p7t",
+      "length": 103,
+      "sequence_sha256": "8dc971ede5009755dbdbd03d7f4442e3f8b7c1fdc532055e3cfdfea0318e5db3",
+      "component": "8dc971ede5009755dbdbd03d7f4442e3f8b7c1fdc532055e3cfdfea0318e5db3",
+      "original_role": "train",
+      "parent_role_n15": "train",
+      "length_stratum": [
+        80,
+        112
+      ],
+      "reference_conditioning": {
+        "bytes": 5777284,
+        "path": "teacher_6/p7_wt_conditioning.pt",
+        "sha256": "a1b977dc24c813d776af03126082c68419b3203bf5ca069e6c2377bd7d4f75b3"
+      }
+    },
+    {
+      "parent_index": 8,
+      "pdb_id": "3sxz",
+      "length": 140,
+      "sequence_sha256": "80e34a1d141b7438e3002c325a28da91a69741bd093938694dc1c84da32f9265",
+      "component": "80e34a1d141b7438e3002c325a28da91a69741bd093938694dc1c84da32f9265",
+      "original_role": "validation",
+      "parent_role_n15": "dev_unseen_protein",
+      "length_stratum": [
+        113,
+        150
+      ],
+      "reference_conditioning": {
+        "bytes": 10504004,
+        "path": "teacher_5/p8_wt_conditioning.pt",
+        "sha256": "cbc3dcc7d63ef91b198359962c0de7d303a9d82f046d23e22093c02959f11b1f"
+      }
+    },
+    {
+      "parent_index": 9,
+      "pdb_id": "4pql",
+      "length": 131,
+      "sequence_sha256": "3b568bf01f33736414da05710e7df266b8536b6f5cc01b18c1a7ad3dbba1397b",
+      "component": "3b568bf01f33736414da05710e7df266b8536b6f5cc01b18c1a7ad3dbba1397b",
+      "original_role": "validation",
+      "parent_role_n15": "dev_unseen_protein",
+      "length_stratum": [
+        113,
+        150
+      ],
+      "reference_conditioning": {
+        "bytes": 9225284,
+        "path": "teacher_3/p9_wt_conditioning.pt",
+        "sha256": "85dca9a11477a0466050424d5aa766d54bdf5ba6491b6973df51e58d011c2df6"
+      }
+    },
+    {
+      "parent_index": 10,
+      "pdb_id": "6zrw",
+      "length": 126,
+      "sequence_sha256": "7274b14e3b3c18bc3d1d6a3cdf49ea2f69984a26880c0b3ea881917ad7fea8e1",
+      "component": "7274b14e3b3c18bc3d1d6a3cdf49ea2f69984a26880c0b3ea881917ad7fea8e1",
+      "original_role": "validation",
+      "parent_role_n15": "dev_unseen_protein",
+      "length_stratum": [
+        113,
+        150
+      ],
+      "reference_conditioning": {
+        "bytes": 8550733,
+        "path": "teacher_1/p10_wt_conditioning.pt",
+        "sha256": "d8f62dc5cce709aca5a030f9197b51b2ebd8bf0af6b23a81e53ac3b19247c7ad"
+      }
+    },
+    {
+      "parent_index": 11,
+      "pdb_id": "2dp9",
+      "length": 124,
+      "sequence_sha256": "f732c40a7c43381c1934f7bd9ddd176068ac742600ac7bed2de7d0f21a169935",
+      "component": "f732c40a7c43381c1934f7bd9ddd176068ac742600ac7bed2de7d0f21a169935",
+      "original_role": "train",
+      "parent_role_n15": "train",
+      "length_stratum": [
+        113,
+        150
+      ],
+      "reference_conditioning": {
+        "bytes": 8288013,
+        "path": "teacher_0/p11_wt_conditioning.pt",
+        "sha256": "e51dcabd429b332fd8385e809e09751d3cfe8183f64c1fe55d59943d1954f866"
+      }
+    },
+    {
+      "parent_index": 12,
+      "pdb_id": "5gpe",
+      "length": 129,
+      "sequence_sha256": "eb9f1dcdd1f6a64e035e03a405aded3be8cdecf44a4416d50ad5eb78b91b38d9",
+      "component": "eb9f1dcdd1f6a64e035e03a405aded3be8cdecf44a4416d50ad5eb78b91b38d9",
+      "original_role": "train",
+      "parent_role_n15": "train",
+      "length_stratum": [
+        113,
+        150
+      ],
+      "reference_conditioning": {
+        "bytes": 8952397,
+        "path": "teacher_2/p12_wt_conditioning.pt",
+        "sha256": "a18ac7ad1b41c74c1be3b49f6e69768be6fc32563547ce1d8242ce86483dff4a"
+      }
+    },
+    {
+      "parent_index": 13,
+      "pdb_id": "1qvc",
+      "length": 145,
+      "sequence_sha256": "bf1da80f7ca488d4a360f401ebefd1f17d651a92b71dcce8a9bf9b1f8e5c0859",
+      "component": "bf1da80f7ca488d4a360f401ebefd1f17d651a92b71dcce8a9bf9b1f8e5c0859",
+      "original_role": "train",
+      "parent_role_n15": "train",
+      "length_stratum": [
+        113,
+        150
+      ],
+      "reference_conditioning": {
+        "bytes": 11250317,
+        "path": "teacher_6/p13_wt_conditioning.pt",
+        "sha256": "350bed48e0a61e0f443dda3ff157d422c2481ca2b4586059a11bd9eada71d19f"
+      }
+    },
+    {
+      "parent_index": 14,
+      "pdb_id": "4akd",
+      "length": 150,
+      "sequence_sha256": "f9dc37f5f049b8d22d06e7a1c251428d6180147ddbe35cefa785229dabf76b38",
+      "component": "8dded2f456c49c21a3db212c50e4e81b45cb431d45ba1f7c429fd841be736f53",
+      "original_role": "train",
+      "parent_role_n15": "train",
+      "length_stratum": [
+        113,
+        150
+      ],
+      "reference_conditioning": {
+        "bytes": 12022157,
+        "path": "teacher_7/p14_wt_conditioning.pt",
+        "sha256": "c1191ae08a4601532ee340b6afa855c16bf686470a9274a62e2c0b31fa803e43"
+      }
+    },
+    {
+      "parent_index": 15,
+      "pdb_id": "5mh3",
+      "length": 143,
+      "sequence_sha256": "75da4c13ad428fda7a6be6241129e1f4243dd0c4ec5dc91dbd057c8f8218d39c",
+      "component": "75da4c13ad428fda7a6be6241129e1f4243dd0c4ec5dc91dbd057c8f8218d39c",
+      "original_role": "train",
+      "parent_role_n15": "train",
+      "length_stratum": [
+        113,
+        150
+      ],
+      "reference_conditioning": {
+        "bytes": 10948749,
+        "path": "teacher_4/p15_wt_conditioning.pt",
+        "sha256": "916eec5d559191102b67c6f64c50b544f4de4f8bac1c781fa121b9c81853364b"
+      }
+    },
+    {
+      "parent_index": 16,
+      "pdb_id": "1ysb",
+      "length": 161,
+      "sequence_sha256": "ed3d2e9ec77b8155c62c828e29581448bea8efbec49f5c7dbb3c5165a00855fc",
+      "component": "ed3d2e9ec77b8155c62c828e29581448bea8efbec49f5c7dbb3c5165a00855fc",
+      "original_role": "validation",
+      "parent_role_n15": "dev_unseen_protein",
+      "length_stratum": [
+        151,
+        192
+      ],
+      "reference_conditioning": {
+        "bytes": 13810381,
+        "path": "teacher_6/p16_wt_conditioning.pt",
+        "sha256": "39aa201ae31d3dfe9ec35ec271f58df85b1e5f82955b5ff87a237262dc52cd81"
+      }
+    },
+    {
+      "parent_index": 17,
+      "pdb_id": "2fkz",
+      "length": 155,
+      "sequence_sha256": "5efecc7ad1bd23787e5e9108c2620b1b689137a9256a5280932fef074b182d6d",
+      "component": "5efecc7ad1bd23787e5e9108c2620b1b689137a9256a5280932fef074b182d6d",
+      "original_role": "validation",
+      "parent_role_n15": "dev_unseen_protein",
+      "length_stratum": [
+        151,
+        192
+      ],
+      "reference_conditioning": {
+        "bytes": 12819597,
+        "path": "teacher_7/p17_wt_conditioning.pt",
+        "sha256": "c127c3ee2955426a6b2670602e7bc31339cf41933c4cc54edaea4b5453835ee9"
+      }
+    },
+    {
+      "parent_index": 18,
+      "pdb_id": "1dzr",
+      "length": 183,
+      "sequence_sha256": "4652d84cf6d7a97c60d8b800c884241f5006c5fe47aed9df404ec5e86cd8ae1d",
+      "component": "4652d84cf6d7a97c60d8b800c884241f5006c5fe47aed9df404ec5e86cd8ae1d",
+      "original_role": "train",
+      "parent_role_n15": "train",
+      "length_stratum": [
+        151,
+        192
+      ],
+      "reference_conditioning": {
+        "bytes": 17758541,
+        "path": "teacher_1/p18_wt_conditioning.pt",
+        "sha256": "13d5befb51f7c1191b4cffba25572e48ade03a3b48023ef30c270e3b53a31b6d"
+      }
+    },
+    {
+      "parent_index": 19,
+      "pdb_id": "2ed6",
+      "length": 170,
+      "sequence_sha256": "9a2b657da9f7037dc03b10c58c3a4c7592064680c60d87cd4ea7477767f78591",
+      "component": "9a2b657da9f7037dc03b10c58c3a4c7592064680c60d87cd4ea7477767f78591",
+      "original_role": "train",
+      "parent_role_n15": "train",
+      "length_stratum": [
+        151,
+        192
+      ],
+      "reference_conditioning": {
+        "bytes": 15365645,
+        "path": "teacher_3/p19_wt_conditioning.pt",
+        "sha256": "78cdc96566faefc11aa8ed63bc02acfdda40c915d0c47fdecb15d5ac12ab5092"
+      }
+    },
+    {
+      "parent_index": 20,
+      "pdb_id": "2arc",
+      "length": 164,
+      "sequence_sha256": "66feb5eb41409330549a5ee9a99368a07d84cecde9f4d6347621fa322fc10039",
+      "component": "66feb5eb41409330549a5ee9a99368a07d84cecde9f4d6347621fa322fc10039",
+      "original_role": "train",
+      "parent_role_n15": "train",
+      "length_stratum": [
+        151,
+        192
+      ],
+      "reference_conditioning": {
+        "bytes": 14319565,
+        "path": "teacher_4/p20_wt_conditioning.pt",
+        "sha256": "f5c1e67d51e2cf40e9f416c1b81b581df7e6a1a3821dde2638a69f3920add23a"
+      }
+    },
+    {
+      "parent_index": 21,
+      "pdb_id": "1m4i",
+      "length": 181,
+      "sequence_sha256": "d05067d6ede71a300a4ebb787b1a239d4fb9856ac9193372ec9a5da2848f0e7a",
+      "component": "d05067d6ede71a300a4ebb787b1a239d4fb9856ac9193372ec9a5da2848f0e7a",
+      "original_role": "train",
+      "parent_role_n15": "train",
+      "length_stratum": [
+        151,
+        192
+      ],
+      "reference_conditioning": {
+        "bytes": 17379149,
+        "path": "teacher_2/p21_wt_conditioning.pt",
+        "sha256": "7815d26f71618adbbaa37b5e4b7bd451cca52c86f970bebda1206880ffa1c3f7"
+      }
+    },
+    {
+      "parent_index": 22,
+      "pdb_id": "4hut",
+      "length": 191,
+      "sequence_sha256": "080d2ae5b45caf390ef1d5dec5ca4a9dddf9d8ee15705263873be3702b731f61",
+      "component": "080d2ae5b45caf390ef1d5dec5ca4a9dddf9d8ee15705263873be3702b731f61",
+      "original_role": "train",
+      "parent_role_n15": "train",
+      "length_stratum": [
+        151,
+        192
+      ],
+      "reference_conditioning": {
+        "bytes": 19317133,
+        "path": "teacher_0/p22_wt_conditioning.pt",
+        "sha256": "07e41ce9a9f7a0801600bb5189e62555ba9c1c2e6d7f93defdeec5f9449dc75b"
+      }
+    },
+    {
+      "parent_index": 23,
+      "pdb_id": "4hgr",
+      "length": 164,
+      "sequence_sha256": "fd11aa7b5c57b41a3dbb13f8f2d45befd3e81cd61ae33e0c590a34d73d09bc8c",
+      "component": "fd11aa7b5c57b41a3dbb13f8f2d45befd3e81cd61ae33e0c590a34d73d09bc8c",
+      "original_role": "train",
+      "parent_role_n15": "train",
+      "length_stratum": [
+        151,
+        192
+      ],
+      "reference_conditioning": {
+        "bytes": 14319565,
+        "path": "teacher_5/p23_wt_conditioning.pt",
+        "sha256": "4a415d3a9376668dad660027c8701c5325cb4b2f914eaa9c4e055179af323ea1"
+      }
+    }
+  ],
+  "sites": [
+    {
+      "site_key": "p0_s48",
+      "parent_index": 0,
+      "pdb_id": "6AHP",
+      "position_zero_based": 47,
+      "position_one_based": 48,
+      "original_aa": "Y",
+      "length": 110,
+      "role_n15": "dev_unseen_protein",
+      "role_n3": "dev_unseen_protein",
+      "candidates": "ACDEFGHIKLMNPQRSTVW",
+      "teacher_prefix": "teacher_3/p0_s48_"
+    },
+    {
+      "site_key": "p0_s58",
+      "parent_index": 0,
+      "pdb_id": "6AHP",
+      "position_zero_based": 57,
+      "position_one_based": 58,
+      "original_aa": "L",
+      "length": 110,
+      "role_n15": "dev_unseen_protein",
+      "role_n3": "dev_unseen_protein",
+      "candidates": "ACDEFGHIKMNPQRSTVWY",
+      "teacher_prefix": "teacher_3/p0_s58_"
+    },
+    {
+      "site_key": "p1_s25",
+      "parent_index": 1,
+      "pdb_id": "1X8D",
+      "position_zero_based": 24,
+      "position_one_based": 25,
+      "original_aa": "I",
+      "length": 104,
+      "role_n15": "dev_unseen_protein",
+      "role_n3": "dev_unseen_protein",
+      "candidates": "ACDEFGHKLMNPQRSTVWY",
+      "teacher_prefix": "teacher_7/p1_s25_"
+    },
+    {
+      "site_key": "p1_s78",
+      "parent_index": 1,
+      "pdb_id": "1X8D",
+      "position_zero_based": 77,
+      "position_one_based": 78,
+      "original_aa": "K",
+      "length": 104,
+      "role_n15": "dev_unseen_protein",
+      "role_n3": "dev_unseen_protein",
+      "candidates": "ACDEFGHILMNPQRSTVWY",
+      "teacher_prefix": "teacher_7/p1_s78_"
+    },
+    {
+      "site_key": "p2_s30",
+      "parent_index": 2,
+      "pdb_id": "2EBE",
+      "position_zero_based": 29,
+      "position_one_based": 30,
+      "original_aa": "A",
+      "length": 106,
+      "role_n15": "dev_unseen_protein",
+      "role_n3": "dev_unseen_protein",
+      "candidates": "CDEFGHIKLMNPQRSTVWY",
+      "teacher_prefix": "teacher_5/p2_s30_"
+    },
+    {
+      "site_key": "p2_s47",
+      "parent_index": 2,
+      "pdb_id": "2EBE",
+      "position_zero_based": 46,
+      "position_one_based": 47,
+      "original_aa": "E",
+      "length": 106,
+      "role_n15": "dev_unseen_protein",
+      "role_n3": "dev_unseen_protein",
+      "candidates": "ACDFGHIKLMNPQRSTVWY",
+      "teacher_prefix": "teacher_5/p2_s47_"
+    },
+    {
+      "site_key": "p3_s37",
+      "parent_index": 3,
+      "pdb_id": "1W53",
+      "position_zero_based": 36,
+      "position_one_based": 37,
+      "original_aa": "T",
+      "length": 84,
+      "role_n15": "train",
+      "role_n3": "train",
+      "candidates": "ACDEFGHIKLMNPQRSVWY",
+      "teacher_prefix": "teacher_2/p3_s37_"
+    },
+    {
+      "site_key": "p3_s84",
+      "parent_index": 3,
+      "pdb_id": "1W53",
+      "position_zero_based": 83,
+      "position_one_based": 84,
+      "original_aa": "Y",
+      "length": 84,
+      "role_n15": "dev_new_site",
+      "role_n3": "dev_new_site",
+      "candidates": "ACDEFGHIKLMNPQRSTVW",
+      "teacher_prefix": "teacher_2/p3_s84_"
+    },
+    {
+      "site_key": "p4_s2",
+      "parent_index": 4,
+      "pdb_id": "1JHG",
+      "position_zero_based": 1,
+      "position_one_based": 2,
+      "original_aa": "A",
+      "length": 101,
+      "role_n15": "train",
+      "role_n3": "expansion_sites_not_trained_n3",
+      "candidates": "CDEFGHIKLMNPQRSTVWY",
+      "teacher_prefix": "teacher_4/p4_s2_"
+    },
+    {
+      "site_key": "p4_s25",
+      "parent_index": 4,
+      "pdb_id": "1JHG",
+      "position_zero_based": 24,
+      "position_one_based": 25,
+      "original_aa": "N",
+      "length": 101,
+      "role_n15": "dev_new_site",
+      "role_n3": "dev_transition_parent_unseen_n3_seen_n15",
+      "candidates": "ACDEFGHIKLMPQRSTVWY",
+      "teacher_prefix": "teacher_4/p4_s25_"
+    },
+    {
+      "site_key": "p5_s34",
+      "parent_index": 5,
+      "pdb_id": "1A7G",
+      "position_zero_based": 33,
+      "position_one_based": 34,
+      "original_aa": "S",
+      "length": 82,
+      "role_n15": "dev_new_site",
+      "role_n3": "dev_transition_parent_unseen_n3_seen_n15",
+      "candidates": "ACDEFGHIKLMNPQRTVWY",
+      "teacher_prefix": "teacher_0/p5_s34_"
+    },
+    {
+      "site_key": "p5_s65",
+      "parent_index": 5,
+      "pdb_id": "1A7G",
+      "position_zero_based": 64,
+      "position_one_based": 65,
+      "original_aa": "N",
+      "length": 82,
+      "role_n15": "train",
+      "role_n3": "expansion_sites_not_trained_n3",
+      "candidates": "ACDEFGHIKLMPQRSTVWY",
+      "teacher_prefix": "teacher_0/p5_s65_"
+    },
+    {
+      "site_key": "p6_s10",
+      "parent_index": 6,
+      "pdb_id": "4PT4",
+      "position_zero_based": 9,
+      "position_one_based": 10,
+      "original_aa": "L",
+      "length": 99,
+      "role_n15": "dev_unseen_protein",
+      "role_n3": "dev_unseen_protein",
+      "candidates": "ACDEFGHIKMNPQRSTVWY",
+      "teacher_prefix": "teacher_1/p6_s10_"
+    },
+    {
+      "site_key": "p6_s17",
+      "parent_index": 6,
+      "pdb_id": "4PT4",
+      "position_zero_based": 16,
+      "position_one_based": 17,
+      "original_aa": "D",
+      "length": 99,
+      "role_n15": "dev_unseen_protein",
+      "role_n3": "dev_unseen_protein",
+      "candidates": "ACEFGHIKLMNPQRSTVWY",
+      "teacher_prefix": "teacher_1/p6_s17_"
+    },
+    {
+      "site_key": "p7_s44",
+      "parent_index": 7,
+      "pdb_id": "2P7T",
+      "position_zero_based": 43,
+      "position_one_based": 44,
+      "original_aa": "A",
+      "length": 103,
+      "role_n15": "train",
+      "role_n3": "expansion_sites_not_trained_n3",
+      "candidates": "CDEFGHIKLMNPQRSTVWY",
+      "teacher_prefix": "teacher_6/p7_s44_"
+    },
+    {
+      "site_key": "p7_s86",
+      "parent_index": 7,
+      "pdb_id": "2P7T",
+      "position_zero_based": 85,
+      "position_one_based": 86,
+      "original_aa": "T",
+      "length": 103,
+      "role_n15": "train",
+      "role_n3": "expansion_sites_not_trained_n3",
+      "candidates": "ACDEFGHIKLMNPQRSVWY",
+      "teacher_prefix": "teacher_6/p7_s86_"
+    },
+    {
+      "site_key": "p8_s101",
+      "parent_index": 8,
+      "pdb_id": "3SXZ",
+      "position_zero_based": 100,
+      "position_one_based": 101,
+      "original_aa": "R",
+      "length": 140,
+      "role_n15": "dev_unseen_protein",
+      "role_n3": "dev_unseen_protein",
+      "candidates": "ACDEFGHIKLMNPQSTVWY",
+      "teacher_prefix": "teacher_5/p8_s101_"
+    },
+    {
+      "site_key": "p8_s108",
+      "parent_index": 8,
+      "pdb_id": "3SXZ",
+      "position_zero_based": 107,
+      "position_one_based": 108,
+      "original_aa": "E",
+      "length": 140,
+      "role_n15": "dev_unseen_protein",
+      "role_n3": "dev_unseen_protein",
+      "candidates": "ACDFGHIKLMNPQRSTVWY",
+      "teacher_prefix": "teacher_5/p8_s108_"
+    },
+    {
+      "site_key": "p9_s42",
+      "parent_index": 9,
+      "pdb_id": "4PQL",
+      "position_zero_based": 41,
+      "position_one_based": 42,
+      "original_aa": "L",
+      "length": 131,
+      "role_n15": "dev_unseen_protein",
+      "role_n3": "dev_unseen_protein",
+      "candidates": "ACDEFGHIKMNPQRSTVWY",
+      "teacher_prefix": "teacher_3/p9_s42_"
+    },
+    {
+      "site_key": "p9_s89",
+      "parent_index": 9,
+      "pdb_id": "4PQL",
+      "position_zero_based": 88,
+      "position_one_based": 89,
+      "original_aa": "E",
+      "length": 131,
+      "role_n15": "dev_unseen_protein",
+      "role_n3": "dev_unseen_protein",
+      "candidates": "ACDFGHIKLMNPQRSTVWY",
+      "teacher_prefix": "teacher_3/p9_s89_"
+    },
+    {
+      "site_key": "p10_s45",
+      "parent_index": 10,
+      "pdb_id": "6ZRW",
+      "position_zero_based": 44,
+      "position_one_based": 45,
+      "original_aa": "T",
+      "length": 126,
+      "role_n15": "dev_unseen_protein",
+      "role_n3": "dev_unseen_protein",
+      "candidates": "ACDEFGHIKLMNPQRSVWY",
+      "teacher_prefix": "teacher_1/p10_s45_"
+    },
+    {
+      "site_key": "p10_s80",
+      "parent_index": 10,
+      "pdb_id": "6ZRW",
+      "position_zero_based": 79,
+      "position_one_based": 80,
+      "original_aa": "P",
+      "length": 126,
+      "role_n15": "dev_unseen_protein",
+      "role_n3": "dev_unseen_protein",
+      "candidates": "ACDEFGHIKLMNQRSTVWY",
+      "teacher_prefix": "teacher_1/p10_s80_"
+    },
+    {
+      "site_key": "p11_s49",
+      "parent_index": 11,
+      "pdb_id": "2DP9",
+      "position_zero_based": 48,
+      "position_one_based": 49,
+      "original_aa": "L",
+      "length": 124,
+      "role_n15": "train",
+      "role_n3": "train",
+      "candidates": "ACDEFGHIKMNPQRSTVWY",
+      "teacher_prefix": "teacher_0/p11_s49_"
+    },
+    {
+      "site_key": "p11_s52",
+      "parent_index": 11,
+      "pdb_id": "2DP9",
+      "position_zero_based": 51,
+      "position_one_based": 52,
+      "original_aa": "Q",
+      "length": 124,
+      "role_n15": "train",
+      "role_n3": "train",
+      "candidates": "ACDEFGHIKLMNPRSTVWY",
+      "teacher_prefix": "teacher_0/p11_s52_"
+    },
+    {
+      "site_key": "p12_s11",
+      "parent_index": 12,
+      "pdb_id": "5GPE",
+      "position_zero_based": 10,
+      "position_one_based": 11,
+      "original_aa": "A",
+      "length": 129,
+      "role_n15": "train",
+      "role_n3": "expansion_sites_not_trained_n3",
+      "candidates": "CDEFGHIKLMNPQRSTVWY",
+      "teacher_prefix": "teacher_2/p12_s11_"
+    },
+    {
+      "site_key": "p12_s72",
+      "parent_index": 12,
+      "pdb_id": "5GPE",
+      "position_zero_based": 71,
+      "position_one_based": 72,
+      "original_aa": "D",
+      "length": 129,
+      "role_n15": "train",
+      "role_n3": "expansion_sites_not_trained_n3",
+      "candidates": "ACEFGHIKLMNPQRSTVWY",
+      "teacher_prefix": "teacher_2/p12_s72_"
+    },
+    {
+      "site_key": "p13_s95",
+      "parent_index": 13,
+      "pdb_id": "1QVC",
+      "position_zero_based": 94,
+      "position_one_based": 95,
+      "original_aa": "D",
+      "length": 145,
+      "role_n15": "train",
+      "role_n3": "expansion_sites_not_trained_n3",
+      "candidates": "ACEFGHIKLMNPQRSTVWY",
+      "teacher_prefix": "teacher_6/p13_s95_"
+    },
+    {
+      "site_key": "p13_s107",
+      "parent_index": 13,
+      "pdb_id": "1QVC",
+      "position_zero_based": 106,
+      "position_one_based": 107,
+      "original_aa": "G",
+      "length": 145,
+      "role_n15": "train",
+      "role_n3": "expansion_sites_not_trained_n3",
+      "candidates": "ACDEFHIKLMNPQRSTVWY",
+      "teacher_prefix": "teacher_6/p13_s107_"
+    },
+    {
+      "site_key": "p14_s6",
+      "parent_index": 14,
+      "pdb_id": "4AKD",
+      "position_zero_based": 5,
+      "position_one_based": 6,
+      "original_aa": "I",
+      "length": 150,
+      "role_n15": "train",
+      "role_n3": "expansion_sites_not_trained_n3",
+      "candidates": "ACDEFGHKLMNPQRSTVWY",
+      "teacher_prefix": "teacher_7/p14_s6_"
+    },
+    {
+      "site_key": "p14_s8",
+      "parent_index": 14,
+      "pdb_id": "4AKD",
+      "position_zero_based": 7,
+      "position_one_based": 8,
+      "original_aa": "V",
+      "length": 150,
+      "role_n15": "train",
+      "role_n3": "expansion_sites_not_trained_n3",
+      "candidates": "ACDEFGHIKLMNPQRSTWY",
+      "teacher_prefix": "teacher_7/p14_s8_"
+    },
+    {
+      "site_key": "p15_s13",
+      "parent_index": 15,
+      "pdb_id": "5MH3",
+      "position_zero_based": 12,
+      "position_one_based": 13,
+      "original_aa": "P",
+      "length": 143,
+      "role_n15": "train",
+      "role_n3": "expansion_sites_not_trained_n3",
+      "candidates": "ACDEFGHIKLMNQRSTVWY",
+      "teacher_prefix": "teacher_4/p15_s13_"
+    },
+    {
+      "site_key": "p15_s66",
+      "parent_index": 15,
+      "pdb_id": "5MH3",
+      "position_zero_based": 65,
+      "position_one_based": 66,
+      "original_aa": "E",
+      "length": 143,
+      "role_n15": "train",
+      "role_n3": "expansion_sites_not_trained_n3",
+      "candidates": "ACDFGHIKLMNPQRSTVWY",
+      "teacher_prefix": "teacher_4/p15_s66_"
+    },
+    {
+      "site_key": "p16_s5",
+      "parent_index": 16,
+      "pdb_id": "1YSB",
+      "position_zero_based": 4,
+      "position_one_based": 5,
+      "original_aa": "V",
+      "length": 161,
+      "role_n15": "dev_unseen_protein",
+      "role_n3": "dev_unseen_protein",
+      "candidates": "ACDEFGHIKLMNPQRSTWY",
+      "teacher_prefix": "teacher_6/p16_s5_"
+    },
+    {
+      "site_key": "p16_s110",
+      "parent_index": 16,
+      "pdb_id": "1YSB",
+      "position_zero_based": 109,
+      "position_one_based": 110,
+      "original_aa": "V",
+      "length": 161,
+      "role_n15": "dev_unseen_protein",
+      "role_n3": "dev_unseen_protein",
+      "candidates": "ACDEFGHIKLMNPQRSTWY",
+      "teacher_prefix": "teacher_6/p16_s110_"
+    },
+    {
+      "site_key": "p17_s44",
+      "parent_index": 17,
+      "pdb_id": "2FKZ",
+      "position_zero_based": 43,
+      "position_one_based": 44,
+      "original_aa": "E",
+      "length": 155,
+      "role_n15": "dev_unseen_protein",
+      "role_n3": "dev_unseen_protein",
+      "candidates": "ACDFGHIKLMNPQRSTVWY",
+      "teacher_prefix": "teacher_7/p17_s44_"
+    },
+    {
+      "site_key": "p17_s137",
+      "parent_index": 17,
+      "pdb_id": "2FKZ",
+      "position_zero_based": 136,
+      "position_one_based": 137,
+      "original_aa": "Q",
+      "length": 155,
+      "role_n15": "dev_unseen_protein",
+      "role_n3": "dev_unseen_protein",
+      "candidates": "ACDEFGHIKLMNPRSTVWY",
+      "teacher_prefix": "teacher_7/p17_s137_"
+    },
+    {
+      "site_key": "p18_s13",
+      "parent_index": 18,
+      "pdb_id": "1DZR",
+      "position_zero_based": 12,
+      "position_one_based": 13,
+      "original_aa": "L",
+      "length": 183,
+      "role_n15": "train",
+      "role_n3": "train",
+      "candidates": "ACDEFGHIKMNPQRSTVWY",
+      "teacher_prefix": "teacher_1/p18_s13_"
+    },
+    {
+      "site_key": "p18_s179",
+      "parent_index": 18,
+      "pdb_id": "1DZR",
+      "position_zero_based": 178,
+      "position_one_based": 179,
+      "original_aa": "A",
+      "length": 183,
+      "role_n15": "train",
+      "role_n3": "train",
+      "candidates": "CDEFGHIKLMNPQRSTVWY",
+      "teacher_prefix": "teacher_1/p18_s179_"
+    },
+    {
+      "site_key": "p19_s90",
+      "parent_index": 19,
+      "pdb_id": "2ED6",
+      "position_zero_based": 89,
+      "position_one_based": 90,
+      "original_aa": "T",
+      "length": 170,
+      "role_n15": "train",
+      "role_n3": "expansion_sites_not_trained_n3",
+      "candidates": "ACDEFGHIKLMNPQRSVWY",
+      "teacher_prefix": "teacher_3/p19_s90_"
+    },
+    {
+      "site_key": "p19_s137",
+      "parent_index": 19,
+      "pdb_id": "2ED6",
+      "position_zero_based": 136,
+      "position_one_based": 137,
+      "original_aa": "V",
+      "length": 170,
+      "role_n15": "train",
+      "role_n3": "expansion_sites_not_trained_n3",
+      "candidates": "ACDEFGHIKLMNPQRSTWY",
+      "teacher_prefix": "teacher_3/p19_s137_"
+    },
+    {
+      "site_key": "p20_s100",
+      "parent_index": 20,
+      "pdb_id": "2ARC",
+      "position_zero_based": 99,
+      "position_one_based": 100,
+      "original_aa": "E",
+      "length": 164,
+      "role_n15": "train",
+      "role_n3": "expansion_sites_not_trained_n3",
+      "candidates": "ACDFGHIKLMNPQRSTVWY",
+      "teacher_prefix": "teacher_4/p20_s100_"
+    },
+    {
+      "site_key": "p20_s112",
+      "parent_index": 20,
+      "pdb_id": "2ARC",
+      "position_zero_based": 111,
+      "position_one_based": 112,
+      "original_aa": "G",
+      "length": 164,
+      "role_n15": "train",
+      "role_n3": "expansion_sites_not_trained_n3",
+      "candidates": "ACDEFHIKLMNPQRSTVWY",
+      "teacher_prefix": "teacher_4/p20_s112_"
+    },
+    {
+      "site_key": "p21_s23",
+      "parent_index": 21,
+      "pdb_id": "1M4I",
+      "position_zero_based": 22,
+      "position_one_based": 23,
+      "original_aa": "D",
+      "length": 181,
+      "role_n15": "train",
+      "role_n3": "expansion_sites_not_trained_n3",
+      "candidates": "ACEFGHIKLMNPQRSTVWY",
+      "teacher_prefix": "teacher_2/p21_s23_"
+    },
+    {
+      "site_key": "p21_s128",
+      "parent_index": 21,
+      "pdb_id": "1M4I",
+      "position_zero_based": 127,
+      "position_one_based": 128,
+      "original_aa": "S",
+      "length": 181,
+      "role_n15": "train",
+      "role_n3": "expansion_sites_not_trained_n3",
+      "candidates": "ACDEFGHIKLMNPQRTVWY",
+      "teacher_prefix": "teacher_2/p21_s128_"
+    },
+    {
+      "site_key": "p22_s25",
+      "parent_index": 22,
+      "pdb_id": "4HUT",
+      "position_zero_based": 24,
+      "position_one_based": 25,
+      "original_aa": "I",
+      "length": 191,
+      "role_n15": "train",
+      "role_n3": "expansion_sites_not_trained_n3",
+      "candidates": "ACDEFGHKLMNPQRSTVWY",
+      "teacher_prefix": "teacher_0/p22_s25_"
+    },
+    {
+      "site_key": "p22_s44",
+      "parent_index": 22,
+      "pdb_id": "4HUT",
+      "position_zero_based": 43,
+      "position_one_based": 44,
+      "original_aa": "A",
+      "length": 191,
+      "role_n15": "train",
+      "role_n3": "expansion_sites_not_trained_n3",
+      "candidates": "CDEFGHIKLMNPQRSTVWY",
+      "teacher_prefix": "teacher_0/p22_s44_"
+    },
+    {
+      "site_key": "p23_s68",
+      "parent_index": 23,
+      "pdb_id": "4HGR",
+      "position_zero_based": 67,
+      "position_one_based": 68,
+      "original_aa": "L",
+      "length": 164,
+      "role_n15": "train",
+      "role_n3": "expansion_sites_not_trained_n3",
+      "candidates": "ACDEFGHIKMNPQRSTVWY",
+      "teacher_prefix": "teacher_5/p23_s68_"
+    },
+    {
+      "site_key": "p23_s148",
+      "parent_index": 23,
+      "pdb_id": "4HGR",
+      "position_zero_based": 147,
+      "position_one_based": 148,
+      "original_aa": "V",
+      "length": 164,
+      "role_n15": "train",
+      "role_n3": "expansion_sites_not_trained_n3",
+      "candidates": "ACDEFGHIKLMNPQRSTWY",
+      "teacher_prefix": "teacher_5/p23_s148_"
+    }
+  ],
+  "train_original_aa_coverage": {
+    "A": {
+      "sites": 5,
+      "parents": 5
+    },
+    "D": {
+      "sites": 3,
+      "parents": 3
+    },
+    "E": {
+      "sites": 2,
+      "parents": 2
+    },
+    "G": {
+      "sites": 2,
+      "parents": 2
+    },
+    "I": {
+      "sites": 2,
+      "parents": 2
+    },
+    "L": {
+      "sites": 3,
+      "parents": 3
+    },
+    "N": {
+      "sites": 1,
+      "parents": 1
+    },
+    "P": {
+      "sites": 1,
+      "parents": 1
+    },
+    "Q": {
+      "sites": 1,
+      "parents": 1
+    },
+    "S": {
+      "sites": 1,
+      "parents": 1
+    },
+    "T": {
+      "sites": 3,
+      "parents": 3
+    },
+    "V": {
+      "sites": 3,
+      "parents": 3
+    }
+  },
+  "counts": {
+    "parents": 24,
+    "sites": 48,
+    "non_wt_candidates": 912,
+    "n15_train_parents": 15,
+    "n15_train_sites": 27,
+    "n15_train_candidates": 513,
+    "n3_train_parents": 3,
+    "n3_train_sites": 5,
+    "n3_train_candidates": 95,
+    "common_held_proteins": 9,
+    "common_held_protein_sites": 18,
+    "common_held_protein_candidates": 342,
+    "n15_held_same_protein_sites": 3,
+    "n15_held_same_protein_candidates": 57
+  },
+  "runs": [
+    {
+      "run_id": "n3_workspace_272001",
+      "architecture": "workspace",
+      "seed": 272001,
+      "train_site_keys": [
+        "p3_s37",
+        "p11_s49",
+        "p11_s52",
+        "p18_s13",
+        "p18_s179"
+      ],
+      "updates": 3040,
+      "training_candidate_decodes": 6080,
+      "checkpoints": [
+        0,
+        760,
+        1520,
+        3040
+      ],
+      "additional_equal_update_checkpoint": null
+    },
+    {
+      "run_id": "n3_workspace_272003",
+      "architecture": "workspace",
+      "seed": 272003,
+      "train_site_keys": [
+        "p3_s37",
+        "p11_s49",
+        "p11_s52",
+        "p18_s13",
+        "p18_s179"
+      ],
+      "updates": 3040,
+      "training_candidate_decodes": 6080,
+      "checkpoints": [
+        0,
+        760,
+        1520,
+        3040
+      ],
+      "additional_equal_update_checkpoint": null
+    },
+    {
+      "run_id": "n3_direct_global_272001",
+      "architecture": "direct_global",
+      "seed": 272001,
+      "train_site_keys": [
+        "p3_s37",
+        "p11_s49",
+        "p11_s52",
+        "p18_s13",
+        "p18_s179"
+      ],
+      "updates": 3040,
+      "training_candidate_decodes": 6080,
+      "checkpoints": [
+        0,
+        760,
+        1520,
+        3040
+      ],
+      "additional_equal_update_checkpoint": null
+    },
+    {
+      "run_id": "n3_direct_global_272003",
+      "architecture": "direct_global",
+      "seed": 272003,
+      "train_site_keys": [
+        "p3_s37",
+        "p11_s49",
+        "p11_s52",
+        "p18_s13",
+        "p18_s179"
+      ],
+      "updates": 3040,
+      "training_candidate_decodes": 6080,
+      "checkpoints": [
+        0,
+        760,
+        1520,
+        3040
+      ],
+      "additional_equal_update_checkpoint": null
+    },
+    {
+      "run_id": "n15_workspace_272001",
+      "architecture": "workspace",
+      "seed": 272001,
+      "train_site_keys": [
+        "p3_s37",
+        "p4_s2",
+        "p5_s65",
+        "p7_s44",
+        "p7_s86",
+        "p11_s49",
+        "p11_s52",
+        "p12_s11",
+        "p12_s72",
+        "p13_s95",
+        "p13_s107",
+        "p14_s6",
+        "p14_s8",
+        "p15_s13",
+        "p15_s66",
+        "p18_s13",
+        "p18_s179",
+        "p19_s90",
+        "p19_s137",
+        "p20_s100",
+        "p20_s112",
+        "p21_s23",
+        "p21_s128",
+        "p22_s25",
+        "p22_s44",
+        "p23_s68",
+        "p23_s148"
+      ],
+      "updates": 16416,
+      "training_candidate_decodes": 32832,
+      "checkpoints": [
+        0,
+        4104,
+        8208,
+        16416
+      ],
+      "additional_equal_update_checkpoint": 3040
+    },
+    {
+      "run_id": "n15_workspace_272003",
+      "architecture": "workspace",
+      "seed": 272003,
+      "train_site_keys": [
+        "p3_s37",
+        "p4_s2",
+        "p5_s65",
+        "p7_s44",
+        "p7_s86",
+        "p11_s49",
+        "p11_s52",
+        "p12_s11",
+        "p12_s72",
+        "p13_s95",
+        "p13_s107",
+        "p14_s6",
+        "p14_s8",
+        "p15_s13",
+        "p15_s66",
+        "p18_s13",
+        "p18_s179",
+        "p19_s90",
+        "p19_s137",
+        "p20_s100",
+        "p20_s112",
+        "p21_s23",
+        "p21_s128",
+        "p22_s25",
+        "p22_s44",
+        "p23_s68",
+        "p23_s148"
+      ],
+      "updates": 16416,
+      "training_candidate_decodes": 32832,
+      "checkpoints": [
+        0,
+        4104,
+        8208,
+        16416
+      ],
+      "additional_equal_update_checkpoint": 3040
+    },
+    {
+      "run_id": "n15_direct_global_272001",
+      "architecture": "direct_global",
+      "seed": 272001,
+      "train_site_keys": [
+        "p3_s37",
+        "p4_s2",
+        "p5_s65",
+        "p7_s44",
+        "p7_s86",
+        "p11_s49",
+        "p11_s52",
+        "p12_s11",
+        "p12_s72",
+        "p13_s95",
+        "p13_s107",
+        "p14_s6",
+        "p14_s8",
+        "p15_s13",
+        "p15_s66",
+        "p18_s13",
+        "p18_s179",
+        "p19_s90",
+        "p19_s137",
+        "p20_s100",
+        "p20_s112",
+        "p21_s23",
+        "p21_s128",
+        "p22_s25",
+        "p22_s44",
+        "p23_s68",
+        "p23_s148"
+      ],
+      "updates": 16416,
+      "training_candidate_decodes": 32832,
+      "checkpoints": [
+        0,
+        4104,
+        8208,
+        16416
+      ],
+      "additional_equal_update_checkpoint": 3040
+    },
+    {
+      "run_id": "n15_direct_global_272003",
+      "architecture": "direct_global",
+      "seed": 272003,
+      "train_site_keys": [
+        "p3_s37",
+        "p4_s2",
+        "p5_s65",
+        "p7_s44",
+        "p7_s86",
+        "p11_s49",
+        "p11_s52",
+        "p12_s11",
+        "p12_s72",
+        "p13_s95",
+        "p13_s107",
+        "p14_s6",
+        "p14_s8",
+        "p15_s13",
+        "p15_s66",
+        "p18_s13",
+        "p18_s179",
+        "p19_s90",
+        "p19_s137",
+        "p20_s100",
+        "p20_s112",
+        "p21_s23",
+        "p21_s128",
+        "p22_s25",
+        "p22_s44",
+        "p23_s68",
+        "p23_s148"
+      ],
+      "updates": 16416,
+      "training_candidate_decodes": 32832,
+      "checkpoints": [
+        0,
+        4104,
+        8208,
+        16416
+      ],
+      "additional_equal_update_checkpoint": 3040
+    }
+  ],
+  "budget": {
+    "runs": 8,
+    "optimizer_updates": 77824,
+    "training_candidate_decodes": 155648,
+    "site_updates_terminal": 608,
+    "candidate_batch_size": 2,
+    "exposures_per_non_wt_aa_terminal": 64
+  }
+}
