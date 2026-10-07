@@ -1,0 +1,48 @@
+{
+  "audit_source_sha256": "466d793cb608ec31c0bc9c65d449bf115f32671b3a3d839a43ff456d75967e55",
+  "complete": true,
+  "counts": {
+    "c4": 0,
+    "input_embedder": 0,
+    "s1": 10,
+    "updates": 0
+  },
+  "records": [
+    {
+      "checkpoint_sha256": "15a994af43e7550f828f958a9d19fdae2f05d6a9c784d8d127bfe1e21d8444c5",
+      "coordinate_bitwise": true,
+      "step": 0
+    },
+    {
+      "checkpoint_sha256": "763d51f0971dfaefc9d589eb9cddcfb5416c97c22c54798b56eb542f6d9a7fd8",
+      "coordinate_bitwise": true,
+      "step": 3040
+    },
+    {
+      "checkpoint_sha256": "2ecc71730c6cb2c6a39a5617e4dabe33b00c2edacec02821a17a7f94436813c8",
+      "coordinate_bitwise": true,
+      "step": 4104
+    },
+    {
+      "checkpoint_sha256": "dc2153f8d3ed1df35a4a69aa8b190bace36d3a602b023e55d704770ea934e726",
+      "coordinate_bitwise": true,
+      "step": 8208
+    },
+    {
+      "checkpoint_sha256": "d8f2c371ed3bcd2d0cf0614f4d135646d86d0292a368d2fad63293641c33e8c6",
+      "coordinate_bitwise": true,
+      "step": 16416
+    }
+  ],
+  "runtime": {
+    "cuda_visible": null,
+    "device": "AMD Instinct MI250X / MI250",
+    "hip": "7.14.60850",
+    "hip_visible": "0",
+    "management_gcd": 2,
+    "pci_bus_id": "0000:32:00.0",
+    "physical_mapping_verified": true,
+    "rocr_visible": null,
+    "torch": "2.12.0a0+git78258b9"
+  }
+}

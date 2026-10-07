@@ -1,3 +1,37 @@
+## 2026-10-07 — Mini multi-reference structure learning CLOSED, no promotion
+
+All eight fixed-budget runs, independent coordinate scoring and 36 checkpoint
+replays completed without replacement seeds, retries or budget extensions.
+3/15 references, 5/27 sites, direct/workspace, seeds272001/272003;64 exposures
+per candidate. Actual77824updates/155648training decodes;222260worker S1 plus
+3708preflight and72replay =226040S1;zero new C4/inputencoder. All36 checkpoints
+replay fixedT37A/two noises bitwise;81collected files pass size/SHA256 checks.
+Mini reference/S1 remain frozen;student generates ALLconditioning, nooracle s.
+Nine common held proteins/18sites remain development, not independent confirmation.
+n15 train rho:reference .3501,direct .7371/.7195,workspace .5774/.6720.
+Held rho:reference .1524,direct .0344/.1667,workspace .1176/-.0235.
+Held old-select/new-evaluate rawregret:reference .23250,direct .24737/.33220,
+workspace .22558/.17488;Exact self .00837. All four workspace endpoints including
+n3 improve mean regret;retain this positive signal, not blanket failure.
+Workspace n15seed272003 paired regret interval belowzero but rho interval also
+belowzero;no joint ranking/response/geometry advantage. Both workspace protein
+regret medians are slightly worse than reference. All8 held terminal centered
+CA-distance responseRMSE and AA-lDDT worse than reference. n15 workspace geometry
+430/387 passes vs reference423/684 andExact438/684;opposite seed behavior.
+Equal3040update n15 rho beats n3 in all4 pairs;regret mixed. Fixed equalcandidate
+exposure terminals have no consistent two-seed scale advantage;no posthoc early
+checkpoint promotion. Shared5train contexts fit less well at n15. Not proof of
+capacity limitation, convergence, or WT-information insufficiency.
+Commonheld n15 maxlocal~6.1–6.2A;separate n3 expansion2ARC G112R/noise230211
+reaches18.0388A (not commonheld/n15 claim). T37N Thr25CB restored by onlyone n15
+workspace seed;6ZRWstress retained,6UFE92 absent. Teacher itself not chemical truth.
+Model-only warmed 19candidate direct~.538/.558s vs workspace~.703/.709s;
+concurrentworker descriptive timings, no matched native19C4 or folding speedup.
+No automatic extra training, Diff, pair injection, loss changes or unfreezing.
+Full report:docs/mini_reference_editor_multiref_findings_2026-10-07.md;
+evidence:reports/mini_reference_editor_multiref_2026-10-07/;
+remote root:reference_multiref_v1_20261007. Keep earlier STARTED entries historical.
+
 ## 2026-10-07 — Mini multi-reference structure learning STARTED
 
 User authorizes execution of b44f1f5e protocol. Original workspace unchanged;

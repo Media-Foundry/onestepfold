@@ -1,7 +1,11 @@
 # Mini multi-reference structure learning — execution 2026-10-07
 
-**Status: preflight passed; the fixed eight-run queue is active. No new training
-quality, transfer or acceleration conclusion yet.**
+**Status: CLOSED. All eight runs, independent scoring and 36 checkpoint replays
+completed. No promotion.** Training ranking improves; held-reference response,
+ranking, selection and geometry do not improve together. Workspace mean regret
+has positive observations that are retained separately.
+
+[Full findings](../../docs/mini_reference_editor_multiref_findings_2026-10-07.md).
 
 [Locked protocol](../../docs/mini_reference_editor_multiref_v1.md) and
 [fixed data/run plan](../mini_reference_editor_multiref_plan_2026-10-07/README.md).
@@ -34,14 +38,13 @@ Preflight results:
   initialization, global response, cache/gradient, device-policy and response
   metric checks.
 
-Training executes four n15 runs followed by four n3 runs on available guarded
-workers, without failed-seed retries. Each run has the protocol's fixed update
-budget. An infrastructure timeout (90 minutes preflight, six hours per worker)
-retains an incomplete/failed record; it does not create a replacement seed or
-extend scientific exposure. Fixed checkpoint evaluation is independent of latent
-fit. Total expected training-worker calls, if all complete: 222,260 S1 including
-evaluation and timing, 77,824 optimizer updates. Preflight and later independent
-checkpoint replay are accounted separately.
+All four n15 and four n3 runs completed their fixed budgets without replacement
+seeds or timeouts. Fixed checkpoint evaluation was independent of latent fit.
+Actual training-worker calls: 222,260 S1 including evaluation and timing,
+77,824 optimizer updates. Adding 3,708 preflight and 72 independent checkpoint
+replay calls gives 226,040 S1 calls. No new C4/input-encoder calls. All 36 saved
+checkpoints reproduce the fixed T37A/two-noise coordinates bitwise. Controller
+wall time was 8,298.32 seconds; independent scoring/replay completed subsequently.
 
 The 1,100-file execution snapshot is frozen in `lock.json`. An independent
 coordinate scorer/replayer is separately frozen in `auditor_lock.json`; its
@@ -50,8 +53,27 @@ metrics use the protocol's fixed definitions and parent-level experimental units
 Native preparation and archived ESM/C4 costs are outside model-only timing.
 Concurrent-worker timing is descriptive, not an isolated end-to-end benchmark.
 
-Large checkpoints, prepared chemistry packets and coordinates remain in the
-remote execution root; this directory initially contains lock/preflight/status
-metadata. Terminal reports and independent scoring/replay evidence will be added
-after the queue completes. Prior development holdouts and prior failure records
-remain unchanged.
+Large checkpoints, prepared chemistry packets, coordinates, full `scores.json.gz`
+and `history.jsonl` remain in the remote root:
+`/media/IntelSSD/onestepfold/hpc3_mirror_20261001/Folding/reference_multiref_v1_20261007`.
+Prior development holdouts and prior failure records remain unchanged.
+
+Collected evidence:
+
+- `collection_manifest.json` / `collection_verification.json`: all 81 collected
+  payloads verified by size/SHA-256; ranks and cross-noise regret recomputed;
+  counts, fixed exposure and replay assertions checked. Large files not committed
+  here retain their remote relative path and hash in this manifest.
+- `runs/<run>/report.json`, `summary.json`, `execution.json`, exposure manifests
+  and `checkpoint_replay.json`: complete run and independent audit records.
+- `aggregate.json` and `terminal_tables.md`: automatic terminal summaries, with
+  all seeds and actual size-dependent evaluation strata.
+- `learning_curve.csv`: every fixed evaluation, equal-parent metrics and pooled
+  structure/geometry tails. `sites.csv`: all site-level scores and selections.
+- `training_windows.csv`: losses/gradients/clipping over complete 19-visit AA
+  cycles, retaining the same exposure composition within each run.
+- `derived_analysis.json.gz`: full site score arrays, additional shared-five-site
+  comparisons, named stress cases and sampled worst-output records. This is a
+  descriptive post-run analysis, not a change to the locked main endpoint.
+- `held_learning_curve.png` / `.pdf`: common nine-protein curves; seed-range
+  shading is not a confidence interval. Terminal 64-exposure results remain primary.
