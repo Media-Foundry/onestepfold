@@ -1,3 +1,29 @@
+## 2026-10-07 — Mini compensated last recycle LOCKED
+
+User explicitly retains a native final recycle and approves continuation.
+Primary new experiment: WT completed cycle3 + hard-edit-conditioned residual
+adapter + one frozen native target recycle + frozen S1. S1-internal adapter
+is deferred, not combined. Candidate archived s_inputs and actual chemistry
+are legitimate inputs; this is NOT WT-only. No new ESM/MSA preparation or
+input-embedder invocation. Native MSA module remains part of folding. Target
+final s/z only audit references, never training/inference inputs. Zero heads
+start at unadapted WT3→Target1. Full global dense correction, no rank constraint.
+15 train references/27 sites, prior nine held references/18 sites and three
+same-parent held sites unchanged, all development. Two seeds272001/272003,
+8208updates/run,32exposures per AA; fixed0/4104/8208evals. Original coordinate,
+distance/clash/chirality loss,AdamW1e-4/clip1. No sweep or old-run continuation.
+Correct/disabled/fixedwrong adapter query tested on TRAIN and DEV. Actual target
+s_inputs/chemistry/noise remain actual in all arms. No latent gating or early
+checkpoint selection. Complete cached folding timing, no pipeline-speed claim.
+10localtests pass. New code only; original prefix/native/runtime left unchanged.
+Graph all/staged complete,37stagedsymbols/17flows,critical aggregate risk reviewed.
+Remote v1 import stopped before model load (missing frozen dependency);v1b
+stopped before firstcycle on native empty constraint returningNone. Corrections
+precede outcomes. v1c was never executed; static review fixed schedule field.
+Frozen1110-file execution:compensated_recycle_v1d_20261007. Preflight in progress;
+controller only starts both fixed-budget runs after full replay/gradient gate.
+Protocol docs/mini_compensated_recycle_v1.md. No quality/transfer result yet.
+
 ## 2026-10-07 — Mini editor candidate correspondence diagnostic CLOSED
 
 Four terminal workspace checkpoints (n3/n15,272001/272003),common9development
