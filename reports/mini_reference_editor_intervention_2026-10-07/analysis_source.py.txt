@@ -1,0 +1,73 @@
+from pathlib import Path
+import csv,gzip,json,hashlib
+import numpy as np
+from scipy.stats import spearmanr
+
+root=Path('reports/mini_reference_editor_intervention_2026-10-07')
+collected=Path('/tmp/editor_intervention_collected')
+manifest=json.loads((collected/'collection_manifest.json').read_text())
+for record in manifest['files']:
+ p=collected/record['path'];assert p.stat().st_size==record['bytes']
+ assert hashlib.sha256(p.read_bytes()).hexdigest()==record['sha256']
+lock=json.loads((collected/'intervention_lock.json').read_text())
+assert (root/'intervention_lock.json').read_bytes()==(collected/'intervention_lock.json').read_bytes()
+all_results={};summaries=[];sites=[];contributions=[];energies=[];worst=[];contrasts=[]
+for run in lock['runs']:
+ name=run['run_id']
+ with gzip.open(collected/'runs'/name/'scores.json.gz','rt') as f:r=json.load(f)
+ assert r['complete'] and r['correct_summary_matches_previous']
+ report=json.loads((collected/'runs'/name/'report.json').read_text())
+ assert report['counts']==dict(c4=0,input_embedder=0,s1=2052,updates=0)
+ assert report['original_outputs_replayed_bitwise']==684
+ mapping={(s['site_key'],s['arm']):s for s in r['sites']}
+ for row in r['sites']:
+  exact=np.asarray(mapping[(row['site_key'],'exact')]['tasks']);task=np.asarray(row['tasks'])
+  regret=exact[1,np.argmin(task[0])]-min(exact[1])
+  assert abs(regret-row['old_select_new_regret'])<1e-12
+  rho=spearmanr(exact.mean(0),task.mean(0)).statistic
+  assert abs(rho-row['aggregate_ranking']['spearman'])<1e-12
+  sites.append(dict(run=name,site=row['site_key'],pdb=row['pdb'],position=row['position']+1,
+                    original_aa=row['original_aa'],arm=row['arm'],selected=row['old_selected'],
+                    spearman=rho,regret=regret,local_max=row['local_max'],aa_lddt=row['aa_lddt'],
+                    response_rmse=np.mean([x['centered_response_distance_rmse'] for x in row['response']])))
+ for arm,s in r['summary'].items():
+  summaries.append(dict(run=name,arm=arm,**{k:v for k,v in s.items() if k!='parent_summaries'}))
+ for contrast,metrics in r['contrasts'].items():
+  for metric,v in metrics.items():
+   contrasts.append(dict(run=name,contrast=contrast,metric=metric,mean=v['mean'],lo=v['interval'][0],hi=v['interval'][1]))
+ for s in lock['sites']:
+  key=s['site_key'];correct=mapping[(key,'correct')]
+  for arm in ['common','shuffled','reference_only']:
+   other=mapping[(key,arm)]
+   # Each of the nine proteins has exactly two sites, so mean contribution=diff/18.
+   delta=correct['old_select_new_regret']-other['old_select_new_regret']
+   contributions.append(dict(run=name,site=key,pdb=s['pdb_id'],parent=s['parent_index'],
+                            contrast='correct-'+arm,correct_selected=correct['old_selected'],other_selected=other['old_selected'],
+                            correct_regret=correct['old_select_new_regret'],other_regret=other['old_select_new_regret'],
+                            delta_regret=delta,contribution_to_parent_mean=delta/18,
+                            selection_changed=correct['old_selected']!=other['old_selected']))
+ for d in report['decomposition']:
+  for block,e in d['blocks'].items():energies.append(dict(run=name,site=d['site_key'],block=block,**e))
+ for arm in ['reference_only','correct','common','shuffled']:
+  outputs=[o for o in r['outputs'] if o['arm']==arm]
+  for o in sorted(outputs,key=lambda x:x['fidelity']['local_ca_rmsd_global_frame'],reverse=True)[:5]:
+   worst.append(dict(run=name,arm=arm,label=o['label'],noise=o['noise'],local_rmsd=o['fidelity']['local_ca_rmsd_global_frame'],
+                     geometry=o['geometry'],exact_pass_to_fail=o['exact_pass_to_fail']))
+ all_results[name]=dict(summary=r['summary'],contrasts=r['contrasts'])
+
+def write_csv(name,rows):
+ keys=list(rows[0]);assert all(set(r)==set(keys) for r in rows)
+ with (root/name).open('w') as f:
+  w=csv.DictWriter(f,fieldnames=keys,lineterminator='\n');w.writeheader();w.writerows(rows)
+
+for name,rows in [('summary.csv',summaries),('sites.csv',sites),('regret_contributions.csv',contributions),('conditioning_energy.csv',energies),('paired_contrasts.csv',contrasts)]:write_csv(name,rows)
+(root/'worst_outputs.json').write_text(json.dumps(worst,indent=2)+'\n')
+(root/'analysis.json').write_text(json.dumps(all_results,indent=2)+'\n')
+(root/'collection_verification.json').write_text(json.dumps(dict(complete=True,files_verified=len(manifest['files']),s1=8208,updates=0,c4=0,
+   original_outputs_bitwise=2736,correct_summaries_match_previous=True,site_spearman_and_regret_recomputed=True,
+   analysis_source_sha256=hashlib.sha256(Path(__file__).read_bytes()).hexdigest()),indent=2)+'\n')
+(root/'analysis_source.py.txt').write_bytes(Path(__file__).read_bytes())
+for name,r in all_results.items():
+ print(name)
+ for arm,s in r['summary'].items():print(arm,{k:round(s[k],6) if isinstance(s[k],float) else s[k] for k in ['spearman','regret','regret_parent_median','top1','centered_response_rmse','geometry_pass','local_max']})
+ print('correct vs',r['contrasts'])

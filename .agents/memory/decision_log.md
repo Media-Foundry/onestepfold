@@ -1,3 +1,31 @@
+## 2026-10-07 — Mini editor candidate correspondence diagnostic CLOSED
+
+Four terminal workspace checkpoints (n3/n15,272001/272003),common9development
+proteins/18sites completed original/common/hash-deranged ALLconditioning audit.
+Actual candidate chemistry and both archived noises unchanged.8208S1,zero
+updates/C4/inputencoder.2736original outputs bitwise match prior coordinates;
+all4 correct summaries match previous CPU audit exactly.29collected files hash
+verified,allsite ranks/rawregrets independently recomputed;6focusedtests pass.
+Controller260.05s,not a folding speedup. No retries or changed protocol/permutation.
+Correct/common/shuffled heldregret:
+n3seed1 .21517/.17941/.22583;n3seed2 .16406/.22982/.25321;
+n15seed1 .22558/.23044/.16113;n15seed2 .17488/.22478/.26496;
+reference .23250. All4 common retain some averagegain;correct beats BOTHcontrols
+only in both second-seed models. Allcorrect-minus-common/shuffled regret paired
+intervals crosszero. Do not explain ALLbenefit by common or say specificity useless.
+All4 correct rho belowcommon ANDfixedshuffle. All4 common centeredresponseRMSE
+lower than correct (paired intervals excludezero),yet slightly above reference
+.47805. Candidate chemistry remainsAA-specific evenincommon;not removed allinfo.
+n3seed2 vscommon gain~94%from6ZRWT45; n15seed2 gain~97%from2EBEA30/E47.
+Correct can improve selected highcost cases while worsening overallresponse.
+Geometry and~6A tails not consistently fixed; n3seed1shufflemax7.14974A.
+Fixed19AA centered studentdelta energy substantial,not zeroresponsecollapse.
+No promotion ofmean/shuffle,permutationsearch,trainingextension,ornewarchitecture.
+Singlepermutation/mean may beOOD;development intervention notbiology or fulltransfer.
+Frozen Mini/S1 and oldarchives unchanged;newroot reference_intervention_v1_20261007.
+Protocolimplementation141570e0; findings docs/mini_reference_editor_intervention_findings_2026-10-07.md;
+artifacts reports/mini_reference_editor_intervention_2026-10-07/.
+
 ## 2026-10-07 — Mini editor candidate correspondence diagnostic LOCKED
 
 Follow-up to d2da9617 review: investigate whether the workspace regret benefit

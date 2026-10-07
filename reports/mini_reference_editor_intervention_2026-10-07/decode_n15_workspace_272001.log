@@ -1,0 +1,32 @@
+2026-10-07 21:10:58,825 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/runner/batch_inference.py:403] INFO runner.batch_inference: Inference by Protenix: model_size: mini, with_feature: esm, model_version: v0.5.0, dtype: bf16
+2026-10-07 21:10:58,825 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/runner/batch_inference.py:408] INFO runner.batch_inference: Triangle_multiplicative kernel: torch, Triangle_attention kernel: torch
+2026-10-07 21:10:58,825 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/runner/batch_inference.py:412] INFO runner.batch_inference: enable_diffusion_shared_vars_cache: True, enable_efficient_fusion: True, enable_tf32: False
+2026-10-07 21:10:58,826 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/runner/inference.py:246] INFO runner.inference: Distributed environment: world size: 1, global rank: 0, local rank: 0
+2026-10-07 21:10:58,826 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/runner/inference.py:98] INFO root: LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+2026-10-07 21:10:58,826 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/runner/inference.py:127] INFO root: Finished environment initialization.
+train scheduler 16.0
+inference scheduler 16.0
+Diffusion Module has 16.0
+2026-10-07 21:11:14,814 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/runner/inference.py:246] INFO runner.inference: Loading from /data/user/shuang886/Folding/protenix_stage0_pkg/v1_1/runtime/checkpoint/protenix_mini_esm_v0.5.0.pt, strict: False
+2026-10-07 21:11:15,274 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/runner/inference.py:246] INFO runner.inference: Sampled key: module.input_embedder.atom_attention_encoder.linear_no_bias_ref_pos.weight
+2026-10-07 21:11:15,314 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/runner/inference.py:246] INFO runner.inference: Finish loading checkpoint.
+2026-10-07 21:11:15,317 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/runner/inference.py:246] INFO runner.inference: Model parameters: 135.22M
+SITE_COMPLETE n15_workspace_272001 p0_s48 {'c4': 0, 'input_embedder': 0, 's1': 114, 'updates': 0}
+SITE_COMPLETE n15_workspace_272001 p0_s58 {'c4': 0, 'input_embedder': 0, 's1': 228, 'updates': 0}
+SITE_COMPLETE n15_workspace_272001 p1_s25 {'c4': 0, 'input_embedder': 0, 's1': 342, 'updates': 0}
+SITE_COMPLETE n15_workspace_272001 p1_s78 {'c4': 0, 'input_embedder': 0, 's1': 456, 'updates': 0}
+SITE_COMPLETE n15_workspace_272001 p2_s30 {'c4': 0, 'input_embedder': 0, 's1': 570, 'updates': 0}
+SITE_COMPLETE n15_workspace_272001 p2_s47 {'c4': 0, 'input_embedder': 0, 's1': 684, 'updates': 0}
+SITE_COMPLETE n15_workspace_272001 p6_s10 {'c4': 0, 'input_embedder': 0, 's1': 798, 'updates': 0}
+SITE_COMPLETE n15_workspace_272001 p6_s17 {'c4': 0, 'input_embedder': 0, 's1': 912, 'updates': 0}
+SITE_COMPLETE n15_workspace_272001 p8_s101 {'c4': 0, 'input_embedder': 0, 's1': 1026, 'updates': 0}
+SITE_COMPLETE n15_workspace_272001 p8_s108 {'c4': 0, 'input_embedder': 0, 's1': 1140, 'updates': 0}
+SITE_COMPLETE n15_workspace_272001 p9_s42 {'c4': 0, 'input_embedder': 0, 's1': 1254, 'updates': 0}
+SITE_COMPLETE n15_workspace_272001 p9_s89 {'c4': 0, 'input_embedder': 0, 's1': 1368, 'updates': 0}
+SITE_COMPLETE n15_workspace_272001 p10_s45 {'c4': 0, 'input_embedder': 0, 's1': 1482, 'updates': 0}
+SITE_COMPLETE n15_workspace_272001 p10_s80 {'c4': 0, 'input_embedder': 0, 's1': 1596, 'updates': 0}
+SITE_COMPLETE n15_workspace_272001 p16_s5 {'c4': 0, 'input_embedder': 0, 's1': 1710, 'updates': 0}
+SITE_COMPLETE n15_workspace_272001 p16_s110 {'c4': 0, 'input_embedder': 0, 's1': 1824, 'updates': 0}
+SITE_COMPLETE n15_workspace_272001 p17_s44 {'c4': 0, 'input_embedder': 0, 's1': 1938, 'updates': 0}
+SITE_COMPLETE n15_workspace_272001 p17_s137 {'c4': 0, 'input_embedder': 0, 's1': 2052, 'updates': 0}
+DECODE_COMPLETE n15_workspace_272001 143.04605800800346
