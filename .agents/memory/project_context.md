@@ -1,3 +1,27 @@
+## 2026-10-07 — Mini multi-reference structure learning STARTED
+
+User authorizes execution of b44f1f5e protocol. Original workspace unchanged;
+new DirectReferenceEditModel reuses anchored fullconditioning/cache/writeout,
+uses global edit broadcast plus4nodeMLPs. Parameters9.352387M/9.320643M;
+paired shared tensors byte-identical; separate architecture RNG streams.
+Frozen1100-file execution atreference_multiref_v1_20261007. Preflight PASSED:
+24WT+912mutants×2noises Exact bitwise,4model/seed cache/noedit/order zeroerror,
+all required S1 gradient branches finite/nonzero;Mini frozen.3708S1,zeroC4/
+inputencoder/updates,386.58s. Connectedparams9.351554M/9.319810M;833biasvalues
+excluded equally by inherited anchored heads.14focused localtests pass.
+Eight freshfixed-budget runs active:4n15 then4n3;77824totalupdates,
+155648trainingdecodes,222260totaltraining-workerS1 including fixed eval/timing
+ifallcomplete. Failedruns retained without replacementseeds. Infrastructure
+caps90minpreflight/6hworker;noautomaticexposureextension. No quality conclusion.
+Target conditioning readonly in separated exactpreflight, never in student
+packets. CPU preparedchemistrypacketcache plus8entryGPUcache;rawWT preserved.
+No loss/attention/rank/decoder change. Model-only costs;no newESM/C4/preparation
+pipeline benchmark. Independent coordinate scorer/replayer frozen separately;
+parent-weighted ranking/regret, response differences, full geometry/tails.
+Docs mini_reference_editor_multiref_v1.md; reports mini_reference_editor_multiref_2026-10-07.
+Keep plan and old pilot closed;finish all fixed jobs, scoring, checkpoint replay,
+integrity and final report before drawing research conclusions.
+
 ## 2026-10-07 — Mini editor multi-reference structure study PREPARED, not run
 
 Following the review of bef762d0, retain the ordinary Mini editor and original
