@@ -1,0 +1,150 @@
+2026-10-07 15:49:48,339 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/runner/batch_inference.py:403] INFO runner.batch_inference: Inference by Protenix: model_size: mini, with_feature: esm, model_version: v0.5.0, dtype: bf16
+2026-10-07 15:49:48,339 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/runner/batch_inference.py:408] INFO runner.batch_inference: Triangle_multiplicative kernel: torch, Triangle_attention kernel: torch
+2026-10-07 15:49:48,339 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/runner/batch_inference.py:412] INFO runner.batch_inference: enable_diffusion_shared_vars_cache: True, enable_efficient_fusion: True, enable_tf32: False
+2026-10-07 15:49:48,339 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/runner/inference.py:246] INFO runner.inference: Distributed environment: world size: 1, global rank: 0, local rank: 0
+2026-10-07 15:49:48,339 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/runner/inference.py:98] INFO root: LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+2026-10-07 15:49:48,340 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/runner/inference.py:127] INFO root: Finished environment initialization.
+train scheduler 16.0
+inference scheduler 16.0
+Diffusion Module has 16.0
+2026-10-07 15:50:04,445 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/runner/inference.py:246] INFO runner.inference: Loading from /data/user/shuang886/Folding/protenix_stage0_pkg/v1_1/runtime/checkpoint/protenix_mini_esm_v0.5.0.pt, strict: False
+2026-10-07 15:50:04,886 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/runner/inference.py:246] INFO runner.inference: Sampled key: module.input_embedder.atom_attention_encoder.linear_no_bias_ref_pos.weight
+2026-10-07 15:50:04,927 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/runner/inference.py:246] INFO runner.inference: Finish loading checkpoint.
+2026-10-07 15:50:04,929 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/runner/inference.py:246] INFO runner.inference: Model parameters: 135.22M
+2026-10-07 15:50:11,786 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/data/constraint/constraint_featurizer.py:392] INFO protenix.data.constraint.constraint_featurizer: Loaded constraint feature: #atom contact:0 #contact:0 #pocket:0
+2026-10-07 15:50:20,927 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/data/constraint/constraint_featurizer.py:392] INFO protenix.data.constraint.constraint_featurizer: Loaded constraint feature: #atom contact:0 #contact:0 #pocket:0
+2026-10-07 15:50:21,119 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/data/constraint/constraint_featurizer.py:392] INFO protenix.data.constraint.constraint_featurizer: Loaded constraint feature: #atom contact:0 #contact:0 #pocket:0
+2026-10-07 15:50:21,303 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/data/constraint/constraint_featurizer.py:392] INFO protenix.data.constraint.constraint_featurizer: Loaded constraint feature: #atom contact:0 #contact:0 #pocket:0
+2026-10-07 15:50:21,523 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/data/constraint/constraint_featurizer.py:392] INFO protenix.data.constraint.constraint_featurizer: Loaded constraint feature: #atom contact:0 #contact:0 #pocket:0
+2026-10-07 15:50:21,742 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/data/constraint/constraint_featurizer.py:392] INFO protenix.data.constraint.constraint_featurizer: Loaded constraint feature: #atom contact:0 #contact:0 #pocket:0
+2026-10-07 15:50:21,966 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/data/constraint/constraint_featurizer.py:392] INFO protenix.data.constraint.constraint_featurizer: Loaded constraint feature: #atom contact:0 #contact:0 #pocket:0
+2026-10-07 15:50:22,184 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/data/constraint/constraint_featurizer.py:392] INFO protenix.data.constraint.constraint_featurizer: Loaded constraint feature: #atom contact:0 #contact:0 #pocket:0
+2026-10-07 15:50:22,402 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/data/constraint/constraint_featurizer.py:392] INFO protenix.data.constraint.constraint_featurizer: Loaded constraint feature: #atom contact:0 #contact:0 #pocket:0
+2026-10-07 15:50:22,621 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/data/constraint/constraint_featurizer.py:392] INFO protenix.data.constraint.constraint_featurizer: Loaded constraint feature: #atom contact:0 #contact:0 #pocket:0
+2026-10-07 15:50:22,837 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/data/constraint/constraint_featurizer.py:392] INFO protenix.data.constraint.constraint_featurizer: Loaded constraint feature: #atom contact:0 #contact:0 #pocket:0
+2026-10-07 15:50:23,057 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/data/constraint/constraint_featurizer.py:392] INFO protenix.data.constraint.constraint_featurizer: Loaded constraint feature: #atom contact:0 #contact:0 #pocket:0
+2026-10-07 15:50:23,277 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/data/constraint/constraint_featurizer.py:392] INFO protenix.data.constraint.constraint_featurizer: Loaded constraint feature: #atom contact:0 #contact:0 #pocket:0
+2026-10-07 15:50:23,499 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/data/constraint/constraint_featurizer.py:392] INFO protenix.data.constraint.constraint_featurizer: Loaded constraint feature: #atom contact:0 #contact:0 #pocket:0
+2026-10-07 15:50:23,716 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/data/constraint/constraint_featurizer.py:392] INFO protenix.data.constraint.constraint_featurizer: Loaded constraint feature: #atom contact:0 #contact:0 #pocket:0
+2026-10-07 15:50:23,941 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/data/constraint/constraint_featurizer.py:392] INFO protenix.data.constraint.constraint_featurizer: Loaded constraint feature: #atom contact:0 #contact:0 #pocket:0
+2026-10-07 15:50:24,159 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/data/constraint/constraint_featurizer.py:392] INFO protenix.data.constraint.constraint_featurizer: Loaded constraint feature: #atom contact:0 #contact:0 #pocket:0
+2026-10-07 15:50:24,378 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/data/constraint/constraint_featurizer.py:392] INFO protenix.data.constraint.constraint_featurizer: Loaded constraint feature: #atom contact:0 #contact:0 #pocket:0
+2026-10-07 15:50:24,595 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/data/constraint/constraint_featurizer.py:392] INFO protenix.data.constraint.constraint_featurizer: Loaded constraint feature: #atom contact:0 #contact:0 #pocket:0
+2026-10-07 15:50:24,814 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/data/constraint/constraint_featurizer.py:392] INFO protenix.data.constraint.constraint_featurizer: Loaded constraint feature: #atom contact:0 #contact:0 #pocket:0
+2026-10-07 15:50:25,030 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/data/constraint/constraint_featurizer.py:392] INFO protenix.data.constraint.constraint_featurizer: Loaded constraint feature: #atom contact:0 #contact:0 #pocket:0
+2026-10-07 15:50:25,251 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/data/constraint/constraint_featurizer.py:392] INFO protenix.data.constraint.constraint_featurizer: Loaded constraint feature: #atom contact:0 #contact:0 #pocket:0
+2026-10-07 15:50:25,484 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/data/constraint/constraint_featurizer.py:392] INFO protenix.data.constraint.constraint_featurizer: Loaded constraint feature: #atom contact:0 #contact:0 #pocket:0
+2026-10-07 15:50:25,712 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/data/constraint/constraint_featurizer.py:392] INFO protenix.data.constraint.constraint_featurizer: Loaded constraint feature: #atom contact:0 #contact:0 #pocket:0
+2026-10-07 15:50:25,948 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/data/constraint/constraint_featurizer.py:392] INFO protenix.data.constraint.constraint_featurizer: Loaded constraint feature: #atom contact:0 #contact:0 #pocket:0
+2026-10-07 15:50:26,173 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/data/constraint/constraint_featurizer.py:392] INFO protenix.data.constraint.constraint_featurizer: Loaded constraint feature: #atom contact:0 #contact:0 #pocket:0
+2026-10-07 15:50:26,400 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/data/constraint/constraint_featurizer.py:392] INFO protenix.data.constraint.constraint_featurizer: Loaded constraint feature: #atom contact:0 #contact:0 #pocket:0
+2026-10-07 15:50:26,635 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/data/constraint/constraint_featurizer.py:392] INFO protenix.data.constraint.constraint_featurizer: Loaded constraint feature: #atom contact:0 #contact:0 #pocket:0
+2026-10-07 15:50:26,869 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/data/constraint/constraint_featurizer.py:392] INFO protenix.data.constraint.constraint_featurizer: Loaded constraint feature: #atom contact:0 #contact:0 #pocket:0
+2026-10-07 15:50:27,101 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/data/constraint/constraint_featurizer.py:392] INFO protenix.data.constraint.constraint_featurizer: Loaded constraint feature: #atom contact:0 #contact:0 #pocket:0
+2026-10-07 15:50:27,338 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/data/constraint/constraint_featurizer.py:392] INFO protenix.data.constraint.constraint_featurizer: Loaded constraint feature: #atom contact:0 #contact:0 #pocket:0
+2026-10-07 15:50:27,581 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/data/constraint/constraint_featurizer.py:392] INFO protenix.data.constraint.constraint_featurizer: Loaded constraint feature: #atom contact:0 #contact:0 #pocket:0
+2026-10-07 15:50:27,866 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/data/constraint/constraint_featurizer.py:392] INFO protenix.data.constraint.constraint_featurizer: Loaded constraint feature: #atom contact:0 #contact:0 #pocket:0
+2026-10-07 15:50:28,102 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/data/constraint/constraint_featurizer.py:392] INFO protenix.data.constraint.constraint_featurizer: Loaded constraint feature: #atom contact:0 #contact:0 #pocket:0
+2026-10-07 15:50:28,334 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/data/constraint/constraint_featurizer.py:392] INFO protenix.data.constraint.constraint_featurizer: Loaded constraint feature: #atom contact:0 #contact:0 #pocket:0
+2026-10-07 15:50:28,567 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/data/constraint/constraint_featurizer.py:392] INFO protenix.data.constraint.constraint_featurizer: Loaded constraint feature: #atom contact:0 #contact:0 #pocket:0
+2026-10-07 15:50:28,802 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/data/constraint/constraint_featurizer.py:392] INFO protenix.data.constraint.constraint_featurizer: Loaded constraint feature: #atom contact:0 #contact:0 #pocket:0
+2026-10-07 15:50:29,038 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/data/constraint/constraint_featurizer.py:392] INFO protenix.data.constraint.constraint_featurizer: Loaded constraint feature: #atom contact:0 #contact:0 #pocket:0
+2026-10-07 15:50:29,271 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/data/constraint/constraint_featurizer.py:392] INFO protenix.data.constraint.constraint_featurizer: Loaded constraint feature: #atom contact:0 #contact:0 #pocket:0
+2026-10-07 15:50:29,508 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/data/constraint/constraint_featurizer.py:392] INFO protenix.data.constraint.constraint_featurizer: Loaded constraint feature: #atom contact:0 #contact:0 #pocket:0
+2026-10-07 15:50:29,743 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/data/constraint/constraint_featurizer.py:392] INFO protenix.data.constraint.constraint_featurizer: Loaded constraint feature: #atom contact:0 #contact:0 #pocket:0
+2026-10-07 15:50:29,971 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/data/constraint/constraint_featurizer.py:392] INFO protenix.data.constraint.constraint_featurizer: Loaded constraint feature: #atom contact:0 #contact:0 #pocket:0
+2026-10-07 15:50:30,195 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/data/constraint/constraint_featurizer.py:392] INFO protenix.data.constraint.constraint_featurizer: Loaded constraint feature: #atom contact:0 #contact:0 #pocket:0
+2026-10-07 15:50:30,414 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/data/constraint/constraint_featurizer.py:392] INFO protenix.data.constraint.constraint_featurizer: Loaded constraint feature: #atom contact:0 #contact:0 #pocket:0
+2026-10-07 15:50:30,640 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/data/constraint/constraint_featurizer.py:392] INFO protenix.data.constraint.constraint_featurizer: Loaded constraint feature: #atom contact:0 #contact:0 #pocket:0
+2026-10-07 15:50:30,862 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/data/constraint/constraint_featurizer.py:392] INFO protenix.data.constraint.constraint_featurizer: Loaded constraint feature: #atom contact:0 #contact:0 #pocket:0
+2026-10-07 15:50:31,095 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/data/constraint/constraint_featurizer.py:392] INFO protenix.data.constraint.constraint_featurizer: Loaded constraint feature: #atom contact:0 #contact:0 #pocket:0
+2026-10-07 15:50:31,314 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/data/constraint/constraint_featurizer.py:392] INFO protenix.data.constraint.constraint_featurizer: Loaded constraint feature: #atom contact:0 #contact:0 #pocket:0
+2026-10-07 15:50:31,536 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/data/constraint/constraint_featurizer.py:392] INFO protenix.data.constraint.constraint_featurizer: Loaded constraint feature: #atom contact:0 #contact:0 #pocket:0
+2026-10-07 15:50:31,756 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/data/constraint/constraint_featurizer.py:392] INFO protenix.data.constraint.constraint_featurizer: Loaded constraint feature: #atom contact:0 #contact:0 #pocket:0
+2026-10-07 15:50:31,989 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/data/constraint/constraint_featurizer.py:392] INFO protenix.data.constraint.constraint_featurizer: Loaded constraint feature: #atom contact:0 #contact:0 #pocket:0
+2026-10-07 15:50:32,217 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/data/constraint/constraint_featurizer.py:392] INFO protenix.data.constraint.constraint_featurizer: Loaded constraint feature: #atom contact:0 #contact:0 #pocket:0
+2026-10-07 15:50:32,443 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/data/constraint/constraint_featurizer.py:392] INFO protenix.data.constraint.constraint_featurizer: Loaded constraint feature: #atom contact:0 #contact:0 #pocket:0
+2026-10-07 15:50:32,665 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/data/constraint/constraint_featurizer.py:392] INFO protenix.data.constraint.constraint_featurizer: Loaded constraint feature: #atom contact:0 #contact:0 #pocket:0
+2026-10-07 15:50:32,888 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/data/constraint/constraint_featurizer.py:392] INFO protenix.data.constraint.constraint_featurizer: Loaded constraint feature: #atom contact:0 #contact:0 #pocket:0
+2026-10-07 15:50:33,117 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/data/constraint/constraint_featurizer.py:392] INFO protenix.data.constraint.constraint_featurizer: Loaded constraint feature: #atom contact:0 #contact:0 #pocket:0
+2026-10-07 15:50:33,344 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/data/constraint/constraint_featurizer.py:392] INFO protenix.data.constraint.constraint_featurizer: Loaded constraint feature: #atom contact:0 #contact:0 #pocket:0
+2026-10-07 15:50:33,567 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/data/constraint/constraint_featurizer.py:392] INFO protenix.data.constraint.constraint_featurizer: Loaded constraint feature: #atom contact:0 #contact:0 #pocket:0
+2026-10-07 15:50:33,791 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/data/constraint/constraint_featurizer.py:392] INFO protenix.data.constraint.constraint_featurizer: Loaded constraint feature: #atom contact:0 #contact:0 #pocket:0
+2026-10-07 15:50:34,014 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/data/constraint/constraint_featurizer.py:392] INFO protenix.data.constraint.constraint_featurizer: Loaded constraint feature: #atom contact:0 #contact:0 #pocket:0
+2026-10-07 15:50:34,244 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/data/constraint/constraint_featurizer.py:392] INFO protenix.data.constraint.constraint_featurizer: Loaded constraint feature: #atom contact:0 #contact:0 #pocket:0
+2026-10-07 15:50:34,485 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/data/constraint/constraint_featurizer.py:392] INFO protenix.data.constraint.constraint_featurizer: Loaded constraint feature: #atom contact:0 #contact:0 #pocket:0
+2026-10-07 15:50:34,714 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/data/constraint/constraint_featurizer.py:392] INFO protenix.data.constraint.constraint_featurizer: Loaded constraint feature: #atom contact:0 #contact:0 #pocket:0
+2026-10-07 15:50:34,950 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/data/constraint/constraint_featurizer.py:392] INFO protenix.data.constraint.constraint_featurizer: Loaded constraint feature: #atom contact:0 #contact:0 #pocket:0
+2026-10-07 15:50:35,185 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/data/constraint/constraint_featurizer.py:392] INFO protenix.data.constraint.constraint_featurizer: Loaded constraint feature: #atom contact:0 #contact:0 #pocket:0
+2026-10-07 15:50:35,420 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/data/constraint/constraint_featurizer.py:392] INFO protenix.data.constraint.constraint_featurizer: Loaded constraint feature: #atom contact:0 #contact:0 #pocket:0
+2026-10-07 15:50:35,652 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/data/constraint/constraint_featurizer.py:392] INFO protenix.data.constraint.constraint_featurizer: Loaded constraint feature: #atom contact:0 #contact:0 #pocket:0
+2026-10-07 15:50:35,889 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/data/constraint/constraint_featurizer.py:392] INFO protenix.data.constraint.constraint_featurizer: Loaded constraint feature: #atom contact:0 #contact:0 #pocket:0
+2026-10-07 15:50:36,123 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/data/constraint/constraint_featurizer.py:392] INFO protenix.data.constraint.constraint_featurizer: Loaded constraint feature: #atom contact:0 #contact:0 #pocket:0
+2026-10-07 15:50:36,362 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/data/constraint/constraint_featurizer.py:392] INFO protenix.data.constraint.constraint_featurizer: Loaded constraint feature: #atom contact:0 #contact:0 #pocket:0
+2026-10-07 15:50:36,602 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/data/constraint/constraint_featurizer.py:392] INFO protenix.data.constraint.constraint_featurizer: Loaded constraint feature: #atom contact:0 #contact:0 #pocket:0
+2026-10-07 15:50:36,837 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/data/constraint/constraint_featurizer.py:392] INFO protenix.data.constraint.constraint_featurizer: Loaded constraint feature: #atom contact:0 #contact:0 #pocket:0
+2026-10-07 15:50:37,072 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/data/constraint/constraint_featurizer.py:392] INFO protenix.data.constraint.constraint_featurizer: Loaded constraint feature: #atom contact:0 #contact:0 #pocket:0
+2026-10-07 15:50:37,309 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/data/constraint/constraint_featurizer.py:392] INFO protenix.data.constraint.constraint_featurizer: Loaded constraint feature: #atom contact:0 #contact:0 #pocket:0
+2026-10-07 15:50:37,541 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/data/constraint/constraint_featurizer.py:392] INFO protenix.data.constraint.constraint_featurizer: Loaded constraint feature: #atom contact:0 #contact:0 #pocket:0
+2026-10-07 15:50:37,776 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/data/constraint/constraint_featurizer.py:392] INFO protenix.data.constraint.constraint_featurizer: Loaded constraint feature: #atom contact:0 #contact:0 #pocket:0
+2026-10-07 15:50:38,017 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/data/constraint/constraint_featurizer.py:392] INFO protenix.data.constraint.constraint_featurizer: Loaded constraint feature: #atom contact:0 #contact:0 #pocket:0
+2026-10-07 15:50:38,256 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/data/constraint/constraint_featurizer.py:392] INFO protenix.data.constraint.constraint_featurizer: Loaded constraint feature: #atom contact:0 #contact:0 #pocket:0
+2026-10-07 15:50:38,496 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/data/constraint/constraint_featurizer.py:392] INFO protenix.data.constraint.constraint_featurizer: Loaded constraint feature: #atom contact:0 #contact:0 #pocket:0
+2026-10-07 15:50:38,731 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/data/constraint/constraint_featurizer.py:392] INFO protenix.data.constraint.constraint_featurizer: Loaded constraint feature: #atom contact:0 #contact:0 #pocket:0
+2026-10-07 15:50:38,960 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/data/constraint/constraint_featurizer.py:392] INFO protenix.data.constraint.constraint_featurizer: Loaded constraint feature: #atom contact:0 #contact:0 #pocket:0
+2026-10-07 15:50:39,191 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/data/constraint/constraint_featurizer.py:392] INFO protenix.data.constraint.constraint_featurizer: Loaded constraint feature: #atom contact:0 #contact:0 #pocket:0
+2026-10-07 15:50:39,415 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/data/constraint/constraint_featurizer.py:392] INFO protenix.data.constraint.constraint_featurizer: Loaded constraint feature: #atom contact:0 #contact:0 #pocket:0
+2026-10-07 15:50:39,640 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/data/constraint/constraint_featurizer.py:392] INFO protenix.data.constraint.constraint_featurizer: Loaded constraint feature: #atom contact:0 #contact:0 #pocket:0
+2026-10-07 15:50:39,866 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/data/constraint/constraint_featurizer.py:392] INFO protenix.data.constraint.constraint_featurizer: Loaded constraint feature: #atom contact:0 #contact:0 #pocket:0
+2026-10-07 15:50:40,094 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/data/constraint/constraint_featurizer.py:392] INFO protenix.data.constraint.constraint_featurizer: Loaded constraint feature: #atom contact:0 #contact:0 #pocket:0
+2026-10-07 15:50:40,374 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/data/constraint/constraint_featurizer.py:392] INFO protenix.data.constraint.constraint_featurizer: Loaded constraint feature: #atom contact:0 #contact:0 #pocket:0
+2026-10-07 15:50:40,597 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/data/constraint/constraint_featurizer.py:392] INFO protenix.data.constraint.constraint_featurizer: Loaded constraint feature: #atom contact:0 #contact:0 #pocket:0
+2026-10-07 15:50:40,839 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/data/constraint/constraint_featurizer.py:392] INFO protenix.data.constraint.constraint_featurizer: Loaded constraint feature: #atom contact:0 #contact:0 #pocket:0
+2026-10-07 15:50:41,066 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/data/constraint/constraint_featurizer.py:392] INFO protenix.data.constraint.constraint_featurizer: Loaded constraint feature: #atom contact:0 #contact:0 #pocket:0
+2026-10-07 15:50:41,290 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/data/constraint/constraint_featurizer.py:392] INFO protenix.data.constraint.constraint_featurizer: Loaded constraint feature: #atom contact:0 #contact:0 #pocket:0
+2026-10-07 15:50:41,520 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/data/constraint/constraint_featurizer.py:392] INFO protenix.data.constraint.constraint_featurizer: Loaded constraint feature: #atom contact:0 #contact:0 #pocket:0
+2026-10-07 15:50:41,750 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/data/constraint/constraint_featurizer.py:392] INFO protenix.data.constraint.constraint_featurizer: Loaded constraint feature: #atom contact:0 #contact:0 #pocket:0
+2026-10-07 15:50:41,983 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/data/constraint/constraint_featurizer.py:392] INFO protenix.data.constraint.constraint_featurizer: Loaded constraint feature: #atom contact:0 #contact:0 #pocket:0
+2026-10-07 15:50:42,208 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/data/constraint/constraint_featurizer.py:392] INFO protenix.data.constraint.constraint_featurizer: Loaded constraint feature: #atom contact:0 #contact:0 #pocket:0
+2026-10-07 15:50:42,437 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/data/constraint/constraint_featurizer.py:392] INFO protenix.data.constraint.constraint_featurizer: Loaded constraint feature: #atom contact:0 #contact:0 #pocket:0
+2026-10-07 15:50:42,673 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/data/constraint/constraint_featurizer.py:392] INFO protenix.data.constraint.constraint_featurizer: Loaded constraint feature: #atom contact:0 #contact:0 #pocket:0
+2026-10-07 15:50:42,907 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/protenix/data/constraint/constraint_featurizer.py:392] INFO protenix.data.constraint.constraint_featurizer: Loaded constraint feature: #atom contact:0 #contact:0 #pocket:0
+PREFLIGHT complete 95 {'c4': 0, 'input_embedder': 0, 's1': 386, 'updates': 0}
+EVALUATE 271001 0 {'c4': 0, 'input_embedder': 0, 's1': 577, 'updates': 0}
+TRAIN 271001 32 0.00726836733520031
+TRAIN 271001 64 0.004006489645689726
+TRAIN 271001 96 0.010802226141095161
+TRAIN 271001 128 0.004528050310909748
+EVALUATE 271001 128 {'c4': 0, 'input_embedder': 0, 's1': 1024, 'updates': 128}
+TRAIN 271001 160 0.003703407011926174
+TRAIN 271001 192 0.006164291873574257
+TRAIN 271001 224 0.0036433334462344646
+TRAIN 271001 256 0.003073445986956358
+TRAIN 271001 288 0.0032010949216783047
+TRAIN 271001 320 0.012899179011583328
+TRAIN 271001 352 0.004426855128258467
+TRAIN 271001 384 0.005045287311077118
+TRAIN 271001 416 0.003083635587245226
+TRAIN 271001 448 0.00675602862611413
+TRAIN 271001 480 0.007861007004976273
+TRAIN 271001 512 0.009067961946129799
+EVALUATE 271001 512 {'c4': 0, 'input_embedder': 0, 's1': 1983, 'updates': 512}
+EVALUATE 271003 0 {'c4': 0, 'input_embedder': 0, 's1': 2288, 'updates': 512}
+TRAIN 271003 32 0.008217397145926952
+TRAIN 271003 64 0.004000496119260788
+TRAIN 271003 96 0.010579492896795273
+TRAIN 271003 128 0.004579729400575161
+EVALUATE 271003 128 {'c4': 0, 'input_embedder': 0, 's1': 2735, 'updates': 640}
+TRAIN 271003 160 0.0035979035310447216
+TRAIN 271003 192 0.0061819786205887794
+TRAIN 271003 224 0.0036293279845267534
+TRAIN 271003 256 0.003148013260215521
+TRAIN 271003 288 0.0029340567998588085
+TRAIN 271003 320 0.0032971478067338467
+TRAIN 271003 352 0.004294711165130138
+TRAIN 271003 384 0.004807043820619583
+TRAIN 271003 416 0.0030899662524461746
+TRAIN 271003 448 0.006431461311876774
+TRAIN 271003 480 0.008375064469873905
+TRAIN 271003 512 0.009618856012821198
+EVALUATE 271003 512 {'c4': 0, 'input_embedder': 0, 's1': 3694, 'updates': 1024}

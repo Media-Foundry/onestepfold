@@ -1,0 +1,41 @@
+{
+  "source": "Standalone debug_reference_order.py terminal output, before revision",
+  "seed": 271001,
+  "reference": "1W53 WT",
+  "dtype": "float32",
+  "raw_max_abs": [
+    9.58837890625,
+    1768.3363037109375,
+    1290.2552490234375
+  ],
+  "permutation_max_abs": [
+    4.76837158203125e-07,
+    0.0001220703125,
+    1.52587890625e-05
+  ],
+  "block_max_abs": [
+    [
+      1.2665987014770508e-06,
+      1.430511474609375e-06
+    ],
+    [
+      1.9073486328125e-06,
+      1.5795230865478516e-06
+    ],
+    [
+      2.1457672119140625e-06,
+      1.9073486328125e-06
+    ],
+    [
+      2.6226043701171875e-06,
+      2.1457672119140625e-06
+    ]
+  ],
+  "fixed_order_repeat_max": [
+    0.0,
+    0.0,
+    0.0
+  ],
+  "updates_before_failure": 0,
+  "interpretation": "Batched floating reassociation with one-ULP single-state difference; initial absolute tolerance retained via serial candidate kernel shapes."
+}

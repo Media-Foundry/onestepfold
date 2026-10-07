@@ -1,3 +1,32 @@
+## 2026-10-07 — Mini reference-editor engineering pilot CLOSED, no promotion
+
+User explicitly retains MINI (not Base) and authorizes architecture prototype.
+PublicMini135.22M/referenceESM+C4 andS1 frozen;9.352387M new editor,width256,
+32workspace,4blocks,8heads,dense latepairwrite. Predicts ALLs_inputs/s/z from
+WT memory+hard edits; nooracle target s. Rawreferencecache reused;trainable
+projections parameter-versioned. Native candidate chemistry rebuilt outside timers.
+Two trainingcontexts1W53T37/1JHGA2,19AA each;2seeds×512updates,batch2 sameparent;
+structure+distance+geometryloss,oldnoise230201;230211evaluationonly THISpilot.
+Held1W53Y84/1JHGN25 and4PT4L10 aredevelopment,notindependentconfirmation.
+Initialroot interrupted by hostreboot15:41:38;retry1 passed95exactreplays then
+failedpretrainingpermutation1e-4gate(oneULP1.2207e-4 onnative s~1768).
+v1a preservesgate,serialcandidatekernelshapeswithsharedcache;no parallelclaim.
+Success486.33s/3808S1/1024updates/zeroC4/zeroinputencoder;3conditioningheads
+andmemory/query branchesnonzerogradients;Mini no gradients. Allcache/noedit/
+orderchecksbitwise;6checkpointreplays12S1bitwise;8localtests;weightsunchanged.
+TwonoisemeanscoreSpearman reference_only→seed1/2:train.4228→.7342/.7132;
+sameproteinnewsite−.0289→.1921/.2316;newprotein.6456→.2491/.2228.
+AllterminalaggregateTop1zero. Trainoldselectnewregret.1261→.06055/.14417;
+newprotein.03368→.03962both. Sameprotein~6Astructuretailpersists.
+Reference_only=ALLWTconditioning+targetchemistry,NOToldoracle-s WT-z.
+Projectedcache~11ms,19edits223–239ms,19S1413–428ms on1W53;referenceESM/C4
+costNOTmeasured. Noend-to-endspeedup;frozen rawcache excludesencoder memory.
+Decision:full no-oracle structure/gradient/cachepathworks;limitedtraining
+functionalimprovement,transferunestablished. Noautomaticlongertraining,Diff
+attention,decoderunfreezeornewdata.512updatesnotconvergenceorimpossibilityproof.
+Docs mini_reference_editor_v1.md,mini_reference_editor_findings_2026-10-07.md;
+reports/mini_reference_editor_2026-10-07;runtime reference_editor_v1a_20261007.
+
 ## 2026-10-07 — Base delta window/cost audit CLOSED
 
 Bounded follow-up to60d6a307 completed; Base FP32 C4/query-only MSA,3development
