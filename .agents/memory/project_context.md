@@ -1,3 +1,48 @@
+## 2026-10-08 — Mini compensated last recycle CLOSED, no promotion
+
+Both seeds272001/272003 completed8208updates,32exposures/AA/site; independent
+scoring and all6checkpoint two-noise replays passed. Controller13445.44s.
+21remote files/79349266bytes SHAverified;864site-arm ranks/regrets independently
+recomputed.16416trainupdates/49922nativecycles/59120S1 including audits/timing;
+4discarded dryupdates separate. No targetfinals/z in model inputs;cached candidate
+s_inputs legitimate, NOTWT-only. Mini frozen;noESM/MSApreparation/inputencoder.
+Training correctAA correspondence established: rho .69725/.72374 vs disabled
+.56363 and wrong .56637/.55333; centeredresponseRMSE .29683/.29945 vs disabled
+.41115 and wrong .49707/.50419. Trainingresponse intervals favorcorrect.
+Held9parents/18sites: disabled rho .54142,regret .04631,centerRMSE .44818;
+correct rho .54123/.52807,regret .19816/.03934,centerRMSE .46956/.46595.
+Seed2 regret/Top1 positive but not stable acrossseeds. Correctvswrong has some
+held identitysignal, not reliable netgain overdisabled. All correct-vs-disabled
+held primary bootstrapintervals crosszero. No universal-impossibility claim.
+Heldgeometry395/397passes vs432disabled,49/46newfailures and12/11repairs;
+P95worse though max and>1Acounts improve slightly. Seed1 T45V→I regret
+.06648→2.00195;A30D→P 0→.69692. Teachergeometry438/684 is notchemicaltruth.
+Serialcached1W53L84/19candidateS1 timing cold6.211/6.180s vscompensated2.250/
+2.229s,2.76/2.77x; adapter+2.29/1.78%overdisabled. Narrowmodel-only boundary,
+noESMprep/load/scoring andnoquality-qualified speedup. NotearlierADLT+2V66panel.
+Closefixedbatch, noautomaticextension/sweep/newarchitecture. Fullreport
+ docs/mini_compensated_recycle_findings_2026-10-08.md; evidence inreports/
+mini_compensated_recycle_2026-10-07. User explicitly authorized origin/main;
+implementationfda8f488 pushed successfully; earlier approval-service blockresolved.
+
+## 2026-10-07 — Mini compensated recycle preflight PASSED; workers STARTED
+
+Implementation fda8f488; frozen execution compensated_recycle_v1d_20261007.
+727.749s native preflight passed:24WT and912hard mutant cached-input C4 states
+and two-noise Exact coordinates bitwise. WT3 prefix and RNG restored; unadapted
+WT3→Target1 baseline saved for912candidates.4668native cycle passes/3704S1.
+Inherited c4=0 counter is NOT zero trunk work; explicit recycle count is used.
+1420160 trainable compensator params. Both seeds' head gradients nonzero;
+AA/relation gradients nonzero after1dryupdate. Four dry updates discarded.
+Mini135.22M frozen,weights unchanged;no inputencoder/ESM/MSA preparation.
+10localtests pass. Two fixed runs272001/272003 launched, full48site zero-checkpoint
+replay beforeactualupdates.8208updates/seed,32candidateexposures. Controller
+6h/run,failedseedsretained,CPUcoordinateaudit and serialreplaytiming scheduled.
+No trainedquality or speedclaim. Cachednativecandidateinputs means NOTWT-only.
+Initial5-file429609byte evidence snapshot SHAverified; status doc
+docs/mini_compensated_recycle_status_2026-10-07.md and reports/
+mini_compensated_recycle_2026-10-07. Localcommit exists;pushorigin/main rejected
+byautomaticapproval review pendingexplicituserauthorization. Experimentsunaffected.
 ## 2026-10-07 — Mini compensated last recycle LOCKED
 
 User explicitly retains a native final recycle and approves continuation.
