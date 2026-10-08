@@ -1,17 +1,25 @@
 # Mini internal final-recycle adaptation — launch status
 
-Implementation f81493ff, with pre-outcome gradient-gate correction in this commit.
+Implementation f81493ff; pre-outcome gradient-gate correction72c93314. Both pushed.
 The independent protocol is [mini_recycle_lora_v1.md](mini_recycle_lora_v1.md).
 Current frozen execution: `recycle_lora_v1d_20261008`,1116 code files,
 lock SHA256 `cf5477c1377817fd1754887083104184ba4c0b01fb3ce1f18194f28105c7f698`.
 
 ## Current status
 
-Preflight running; formal training has not yet started at this snapshot. Controller
-will start both fresh8208update seeds only after full zero replay and gradient
-checks. No quality, migration or speed conclusion.13localtests passed. Only
-candidate-native transition output weight residuals are trainable;original Mini,
-WT cache and S1 remain fixed. No external compensation head.
+Preflight PASSED in412.684seconds;controller launched both fresh runs on HIP0/1.
+Both seeds independently replayed912candidates×2noises bitwise:1824candidate
+replays/3648coordinate outputs. Native scope/weight/cache/gradient checks passed;
+655360 trainable parameters per bank. Four dry updates discarded, zero formal
+updates during preflight. Counts1884nativecycles/3656S1;the inherited c4=0 counter
+means the old forbidden entry was not called, NOT that no trunk work occurred.
+Peak allocated4952169472bytes(4.61GiB).13localtests passed.
+
+Each fixed run performs initial evaluation,8208updates and checkpoints4104/8208;
+then independent CPU scoring and serial GPU replay/timing. At this snapshot workers
+are running;no trained outcome, migration or speed conclusion. Only candidate-native
+transition output weight residuals are trainable;original Mini,WT cache and S1
+remain fixed. No external compensation head.
 
 ## Preserved pre-outcome failures
 

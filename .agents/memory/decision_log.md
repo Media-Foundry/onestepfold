@@ -1,3 +1,17 @@
+## 2026-10-08 — Mini internal LoRA preflight PASSED, runs STARTED
+
+Execution recycle_lora_v1d_20261008. Both seeds independently passed912hardAA
+candidate×two-noise zero-init replays;1824candidate replays/3648coordinateoutputs.
+Gradientactivity gate,disabled replay afterdryupdate,24WT continuation perseed,
+order/cacheimmutability/nativeweights checks passed.655360trainable params/bank.
+412.684s;1884nativecycle passes/3656S1;4discarded dryupdates,0formalupdates.
+Peak4952169472bytes(4.61GiB). NoESM/MSAprep/inputembedder.13localtests pass.
+Controller launchedseed272001HIP0/272003HIP1,8208updates each;initialevaluation
+thenfixed4104/8208checkpoints,independentCPUaudit+serialreplay/timingqueued.
+Implementationf81493ff andgatecorrection72c93314 pushedorigin/main.
+11SHAverifiedstatusartifacts176065bytes;reports/mini_recycle_lora_2026-10-08;
+status docs/mini_recycle_lora_status_2026-10-08.md. Noquality/speedclaimyet.
+
 ## 2026-10-08 — Mini LoRA dormant-input gradient diagnosis
 
 v1c passed912candidate/two-noise zero replay for first seed, then stopped before

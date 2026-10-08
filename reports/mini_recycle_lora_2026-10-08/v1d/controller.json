@@ -1,12 +1,24 @@
 {
   "complete": false,
-  "phase": "preflight",
+  "phase": "training_and_scoring",
   "jobs": {
     "prepare": {
       "pid": 394741,
+      "status": "complete",
+      "hip": 0,
+      "exit_code": 0,
+      "seconds": 425.01077103799616
+    },
+    "train_272001": {
+      "pid": 395676,
       "status": "running",
       "hip": 0
+    },
+    "train_272003": {
+      "pid": 395677,
+      "status": "running",
+      "hip": 1
     }
   },
-  "seconds": 0.0014687869988847524
+  "seconds": 425.01814334299706
 }

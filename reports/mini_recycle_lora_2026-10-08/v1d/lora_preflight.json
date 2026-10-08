@@ -1,0 +1,901 @@
+{
+  "complete": true,
+  "counts": {
+    "c4": 0,
+    "input_embedder": 0,
+    "recycle": 1884,
+    "s1": 3656,
+    "updates": 0
+  },
+  "discarded_dry_updates": 4,
+  "peak_allocated_bytes": 4952169472,
+  "runtime": {
+    "cuda_visible": null,
+    "device": "AMD Instinct MI250X / MI250",
+    "hip": "7.14.60850",
+    "hip_visible": "0",
+    "management_gcd": 2,
+    "pci_bus_id": "0000:32:00.0",
+    "physical_mapping_verified": true,
+    "rocr_visible": null,
+    "torch": "2.12.0a0+git78258b9"
+  },
+  "seconds": 412.68358646999695,
+  "seeds": [
+    {
+      "gradients": [
+        {
+          "activity": [
+            {
+              "input_nonzero": 3612672,
+              "output_gradient_norm": 0.004596819169819355
+            },
+            {
+              "input_nonzero": 8568,
+              "output_gradient_norm": 0.015903811901807785
+            },
+            {
+              "input_nonzero": 3612672,
+              "output_gradient_norm": 0.004696016199886799
+            },
+            {
+              "input_nonzero": 252,
+              "output_gradient_norm": 0.01567363739013672
+            },
+            {
+              "input_nonzero": 3612672,
+              "output_gradient_norm": 0.005084947217255831
+            },
+            {
+              "input_nonzero": 1596,
+              "output_gradient_norm": 0.014141335152089596
+            },
+            {
+              "input_nonzero": 3612672,
+              "output_gradient_norm": 0.0048225149512290955
+            },
+            {
+              "input_nonzero": 924,
+              "output_gradient_norm": 0.013162440620362759
+            },
+            {
+              "input_nonzero": 3612672,
+              "output_gradient_norm": 0.0050575342029333115
+            },
+            {
+              "input_nonzero": 1596,
+              "output_gradient_norm": 0.012313752435147762
+            },
+            {
+              "input_nonzero": 3612672,
+              "output_gradient_norm": 0.004807861987501383
+            },
+            {
+              "input_nonzero": 3192,
+              "output_gradient_norm": 0.009993137791752815
+            },
+            {
+              "input_nonzero": 3612672,
+              "output_gradient_norm": 0.0046484204940497875
+            },
+            {
+              "input_nonzero": 3108,
+              "output_gradient_norm": 0.006936476565897465
+            },
+            {
+              "input_nonzero": 3612672,
+              "output_gradient_norm": 0.004466463811695576
+            },
+            {
+              "input_nonzero": 1764,
+              "output_gradient_norm": 0.003213258692994714
+            },
+            {
+              "input_nonzero": 3612672,
+              "output_gradient_norm": 0.004263707902282476
+            },
+            {
+              "input_nonzero": 672,
+              "output_gradient_norm": 0.0032153050415217876
+            },
+            {
+              "input_nonzero": 3612672,
+              "output_gradient_norm": 0.004338961560279131
+            },
+            {
+              "input_nonzero": 168,
+              "output_gradient_norm": 0.0021482298616319895
+            },
+            {
+              "input_nonzero": 3612672,
+              "output_gradient_norm": 0.004480131436139345
+            },
+            {
+              "input_nonzero": 504,
+              "output_gradient_norm": 0.0021396810188889503
+            },
+            {
+              "input_nonzero": 3612672,
+              "output_gradient_norm": 0.004528690129518509
+            },
+            {
+              "input_nonzero": 336,
+              "output_gradient_norm": 0.0021113157272338867
+            },
+            {
+              "input_nonzero": 3612672,
+              "output_gradient_norm": 0.004296290688216686
+            },
+            {
+              "input_nonzero": 0,
+              "output_gradient_norm": 0.0021113157272338867
+            },
+            {
+              "input_nonzero": 3612672,
+              "output_gradient_norm": 0.0033123057801276445
+            },
+            {
+              "input_nonzero": 0,
+              "output_gradient_norm": 0.0021113157272338867
+            },
+            {
+              "input_nonzero": 3612672,
+              "output_gradient_norm": 0.0022456441074609756
+            },
+            {
+              "input_nonzero": 168,
+              "output_gradient_norm": 0.002104401122778654
+            },
+            {
+              "input_nonzero": 3612672,
+              "output_gradient_norm": 0.0018171555129811168
+            },
+            {
+              "input_nonzero": 252,
+              "output_gradient_norm": 0.0021043114829808474
+            }
+          ],
+          "norms": {
+            "adapters.0.down.weight": 0.0,
+            "adapters.0.up.weight": 0.007701514754444361,
+            "adapters.1.down.weight": 0.0,
+            "adapters.1.up.weight": 0.019014254212379456,
+            "adapters.10.down.weight": 0.0,
+            "adapters.10.up.weight": 0.007459571585059166,
+            "adapters.11.down.weight": 0.0,
+            "adapters.11.up.weight": 0.005529852118343115,
+            "adapters.12.down.weight": 0.0,
+            "adapters.12.up.weight": 0.007930682972073555,
+            "adapters.13.down.weight": 0.0,
+            "adapters.13.up.weight": 0.0044322144240140915,
+            "adapters.14.down.weight": 0.0,
+            "adapters.14.up.weight": 0.01011290866881609,
+            "adapters.15.down.weight": 0.0,
+            "adapters.15.up.weight": 0.0027323439717292786,
+            "adapters.16.down.weight": 0.0,
+            "adapters.16.up.weight": 0.009318252094089985,
+            "adapters.17.down.weight": 0.0,
+            "adapters.17.up.weight": 0.00013701450370717794,
+            "adapters.18.down.weight": 0.0,
+            "adapters.18.up.weight": 0.010229210369288921,
+            "adapters.19.down.weight": 0.0,
+            "adapters.19.up.weight": 0.0002923990541603416,
+            "adapters.2.down.weight": 0.0,
+            "adapters.2.up.weight": 0.006990901660174131,
+            "adapters.20.down.weight": 0.0,
+            "adapters.20.up.weight": 0.013147770427167416,
+            "adapters.21.down.weight": 0.0,
+            "adapters.21.up.weight": 0.00015658000484108925,
+            "adapters.22.down.weight": 0.0,
+            "adapters.22.up.weight": 0.015034070238471031,
+            "adapters.23.down.weight": 0.0,
+            "adapters.23.up.weight": 0.011833496391773224,
+            "adapters.24.down.weight": 0.0,
+            "adapters.24.up.weight": 0.01515877153724432,
+            "adapters.25.down.weight": 0.0,
+            "adapters.25.up.weight": 0.0,
+            "adapters.26.down.weight": 0.0,
+            "adapters.26.up.weight": 0.01482886727899313,
+            "adapters.27.down.weight": 0.0,
+            "adapters.27.up.weight": 0.0,
+            "adapters.28.down.weight": 0.0,
+            "adapters.28.up.weight": 0.01380971074104309,
+            "adapters.29.down.weight": 0.0,
+            "adapters.29.up.weight": 0.013418248854577541,
+            "adapters.3.down.weight": 0.0,
+            "adapters.3.up.weight": 0.00570538779720664,
+            "adapters.30.down.weight": 0.0,
+            "adapters.30.up.weight": 0.018819697201251984,
+            "adapters.31.down.weight": 0.0,
+            "adapters.31.up.weight": 0.00022836618882138282,
+            "adapters.4.down.weight": 0.0,
+            "adapters.4.up.weight": 0.00687339436262846,
+            "adapters.5.down.weight": 0.0,
+            "adapters.5.up.weight": 0.006307567004114389,
+            "adapters.6.down.weight": 0.0,
+            "adapters.6.up.weight": 0.006568449083715677,
+            "adapters.7.down.weight": 0.0,
+            "adapters.7.up.weight": 0.005800092592835426,
+            "adapters.8.down.weight": 0.0,
+            "adapters.8.up.weight": 0.0069507453590631485,
+            "adapters.9.down.weight": 0.0,
+            "adapters.9.up.weight": 0.004294602666050196
+          }
+        },
+        {
+          "activity": [
+            {
+              "input_nonzero": 3612672,
+              "output_gradient_norm": 0.004557336680591106
+            },
+            {
+              "input_nonzero": 8568,
+              "output_gradient_norm": 0.015723593533039093
+            },
+            {
+              "input_nonzero": 3612672,
+              "output_gradient_norm": 0.004655663855373859
+            },
+            {
+              "input_nonzero": 252,
+              "output_gradient_norm": 0.015494702383875847
+            },
+            {
+              "input_nonzero": 3612672,
+              "output_gradient_norm": 0.00504013616591692
+            },
+            {
+              "input_nonzero": 1596,
+              "output_gradient_norm": 0.013979332521557808
+            },
+            {
+              "input_nonzero": 3612672,
+              "output_gradient_norm": 0.004782777279615402
+            },
+            {
+              "input_nonzero": 924,
+              "output_gradient_norm": 0.013010993599891663
+            },
+            {
+              "input_nonzero": 3612672,
+              "output_gradient_norm": 0.005015196744352579
+            },
+            {
+              "input_nonzero": 1596,
+              "output_gradient_norm": 0.012171800248324871
+            },
+            {
+              "input_nonzero": 3612672,
+              "output_gradient_norm": 0.00476912222802639
+            },
+            {
+              "input_nonzero": 3192,
+              "output_gradient_norm": 0.009878204204142094
+            },
+            {
+              "input_nonzero": 3612672,
+              "output_gradient_norm": 0.004611941520124674
+            },
+            {
+              "input_nonzero": 3108,
+              "output_gradient_norm": 0.006857242435216904
+            },
+            {
+              "input_nonzero": 3612672,
+              "output_gradient_norm": 0.004432071465998888
+            },
+            {
+              "input_nonzero": 1764,
+              "output_gradient_norm": 0.0031739682890474796
+            },
+            {
+              "input_nonzero": 3612672,
+              "output_gradient_norm": 0.00423084944486618
+            },
+            {
+              "input_nonzero": 672,
+              "output_gradient_norm": 0.0031759149860590696
+            },
+            {
+              "input_nonzero": 3612672,
+              "output_gradient_norm": 0.004304938483983278
+            },
+            {
+              "input_nonzero": 168,
+              "output_gradient_norm": 0.0021228715777397156
+            },
+            {
+              "input_nonzero": 3612672,
+              "output_gradient_norm": 0.004446011036634445
+            },
+            {
+              "input_nonzero": 504,
+              "output_gradient_norm": 0.002114445436745882
+            },
+            {
+              "input_nonzero": 3612672,
+              "output_gradient_norm": 0.004493288230150938
+            },
+            {
+              "input_nonzero": 336,
+              "output_gradient_norm": 0.002086367690935731
+            },
+            {
+              "input_nonzero": 3612672,
+              "output_gradient_norm": 0.004261642228811979
+            },
+            {
+              "input_nonzero": 0,
+              "output_gradient_norm": 0.002086367690935731
+            },
+            {
+              "input_nonzero": 3612672,
+              "output_gradient_norm": 0.003284888342022896
+            },
+            {
+              "input_nonzero": 0,
+              "output_gradient_norm": 0.002086367690935731
+            },
+            {
+              "input_nonzero": 3612672,
+              "output_gradient_norm": 0.002226353157311678
+            },
+            {
+              "input_nonzero": 168,
+              "output_gradient_norm": 0.0020795613527297974
+            },
+            {
+              "input_nonzero": 3612672,
+              "output_gradient_norm": 0.0018011349020525813
+            },
+            {
+              "input_nonzero": 252,
+              "output_gradient_norm": 0.00207947357557714
+            }
+          ],
+          "norms": {
+            "adapters.0.down.weight": 7.651609485037625e-05,
+            "adapters.0.up.weight": 0.007633706089109182,
+            "adapters.1.down.weight": 0.0006111979600973427,
+            "adapters.1.up.weight": 0.01879843883216381,
+            "adapters.10.down.weight": 5.535134914680384e-05,
+            "adapters.10.up.weight": 0.007401459384709597,
+            "adapters.11.down.weight": 0.00020095492072869092,
+            "adapters.11.up.weight": 0.005464340094476938,
+            "adapters.12.down.weight": 5.105666787130758e-05,
+            "adapters.12.up.weight": 0.007871367037296295,
+            "adapters.13.down.weight": 0.00016533516463823617,
+            "adapters.13.up.weight": 0.004381048027426004,
+            "adapters.14.down.weight": 0.00011690846440615132,
+            "adapters.14.up.weight": 0.010032101534307003,
+            "adapters.15.down.weight": 0.0001396737206960097,
+            "adapters.15.up.weight": 0.002701755380257964,
+            "adapters.16.down.weight": 6.818057590862736e-05,
+            "adapters.16.up.weight": 0.009249884635210037,
+            "adapters.17.down.weight": 5.542236522160238e-06,
+            "adapters.17.up.weight": 0.00013522467634174973,
+            "adapters.18.down.weight": 7.285084575414658e-05,
+            "adapters.18.up.weight": 0.010154585354030132,
+            "adapters.19.down.weight": 1.19468222692376e-05,
+            "adapters.19.up.weight": 0.00028798883431591094,
+            "adapters.2.down.weight": 5.370078724808991e-05,
+            "adapters.2.up.weight": 0.006936940830200911,
+            "adapters.20.down.weight": 9.716087515698746e-05,
+            "adapters.20.up.weight": 0.013048876076936722,
+            "adapters.21.down.weight": 7.355902198469266e-06,
+            "adapters.21.up.weight": 0.00015481094305869192,
+            "adapters.22.down.weight": 0.00011095914669567719,
+            "adapters.22.up.weight": 0.014916119165718555,
+            "adapters.23.down.weight": 0.0006498369621112943,
+            "adapters.23.up.weight": 0.011681958101689816,
+            "adapters.24.down.weight": 0.00011560771963559091,
+            "adapters.24.up.weight": 0.015034602023661137,
+            "adapters.25.down.weight": 0.0,
+            "adapters.25.up.weight": 0.0,
+            "adapters.26.down.weight": 0.00012974601122550666,
+            "adapters.26.up.weight": 0.014697007834911346,
+            "adapters.27.down.weight": 0.0,
+            "adapters.27.up.weight": 0.0,
+            "adapters.28.down.weight": 0.00016781606245785952,
+            "adapters.28.up.weight": 0.013670583255589008,
+            "adapters.29.down.weight": 0.0007183339912444353,
+            "adapters.29.up.weight": 0.013247199356555939,
+            "adapters.3.down.weight": 0.0003965442883782089,
+            "adapters.3.up.weight": 0.005646601319313049,
+            "adapters.30.down.weight": 0.00048377623897977173,
+            "adapters.30.up.weight": 0.018589172512292862,
+            "adapters.31.down.weight": 1.2436667020665482e-05,
+            "adapters.31.up.weight": 0.000225684474571608,
+            "adapters.4.down.weight": 5.305120430421084e-05,
+            "adapters.4.up.weight": 0.006816556211560965,
+            "adapters.5.down.weight": 0.00020053607295267284,
+            "adapters.5.up.weight": 0.006232125218957663,
+            "adapters.6.down.weight": 4.654696385841817e-05,
+            "adapters.6.up.weight": 0.006518212147057056,
+            "adapters.7.down.weight": 0.00024167988158296794,
+            "adapters.7.up.weight": 0.005732120014727116,
+            "adapters.8.down.weight": 4.86781973449979e-05,
+            "adapters.8.up.weight": 0.006897570565342903,
+            "adapters.9.down.weight": 0.00014344221563078463,
+            "adapters.9.up.weight": 0.004244586452841759
+          }
+        }
+      ],
+      "initial_sha256": "44addcba3bfedda3fa7d256db9f0be18ddf016fe6ca628ada2e8dc926866ca95",
+      "parameters": 655360,
+      "paths": [
+        "blocks.0.pair_transition.linear_no_bias",
+        "blocks.0.single_transition.linear_no_bias",
+        "blocks.1.pair_transition.linear_no_bias",
+        "blocks.1.single_transition.linear_no_bias",
+        "blocks.2.pair_transition.linear_no_bias",
+        "blocks.2.single_transition.linear_no_bias",
+        "blocks.3.pair_transition.linear_no_bias",
+        "blocks.3.single_transition.linear_no_bias",
+        "blocks.4.pair_transition.linear_no_bias",
+        "blocks.4.single_transition.linear_no_bias",
+        "blocks.5.pair_transition.linear_no_bias",
+        "blocks.5.single_transition.linear_no_bias",
+        "blocks.6.pair_transition.linear_no_bias",
+        "blocks.6.single_transition.linear_no_bias",
+        "blocks.7.pair_transition.linear_no_bias",
+        "blocks.7.single_transition.linear_no_bias",
+        "blocks.8.pair_transition.linear_no_bias",
+        "blocks.8.single_transition.linear_no_bias",
+        "blocks.9.pair_transition.linear_no_bias",
+        "blocks.9.single_transition.linear_no_bias",
+        "blocks.10.pair_transition.linear_no_bias",
+        "blocks.10.single_transition.linear_no_bias",
+        "blocks.11.pair_transition.linear_no_bias",
+        "blocks.11.single_transition.linear_no_bias",
+        "blocks.12.pair_transition.linear_no_bias",
+        "blocks.12.single_transition.linear_no_bias",
+        "blocks.13.pair_transition.linear_no_bias",
+        "blocks.13.single_transition.linear_no_bias",
+        "blocks.14.pair_transition.linear_no_bias",
+        "blocks.14.single_transition.linear_no_bias",
+        "blocks.15.pair_transition.linear_no_bias",
+        "blocks.15.single_transition.linear_no_bias"
+      ],
+      "seed": 272001
+    },
+    {
+      "gradients": [
+        {
+          "activity": [
+            {
+              "input_nonzero": 3612672,
+              "output_gradient_norm": 0.004596819169819355
+            },
+            {
+              "input_nonzero": 8568,
+              "output_gradient_norm": 0.015903811901807785
+            },
+            {
+              "input_nonzero": 3612672,
+              "output_gradient_norm": 0.004696016199886799
+            },
+            {
+              "input_nonzero": 252,
+              "output_gradient_norm": 0.01567363739013672
+            },
+            {
+              "input_nonzero": 3612672,
+              "output_gradient_norm": 0.005084947217255831
+            },
+            {
+              "input_nonzero": 1596,
+              "output_gradient_norm": 0.014141335152089596
+            },
+            {
+              "input_nonzero": 3612672,
+              "output_gradient_norm": 0.0048225149512290955
+            },
+            {
+              "input_nonzero": 924,
+              "output_gradient_norm": 0.013162440620362759
+            },
+            {
+              "input_nonzero": 3612672,
+              "output_gradient_norm": 0.0050575342029333115
+            },
+            {
+              "input_nonzero": 1596,
+              "output_gradient_norm": 0.012313752435147762
+            },
+            {
+              "input_nonzero": 3612672,
+              "output_gradient_norm": 0.004807861987501383
+            },
+            {
+              "input_nonzero": 3192,
+              "output_gradient_norm": 0.009993137791752815
+            },
+            {
+              "input_nonzero": 3612672,
+              "output_gradient_norm": 0.0046484204940497875
+            },
+            {
+              "input_nonzero": 3108,
+              "output_gradient_norm": 0.006936476565897465
+            },
+            {
+              "input_nonzero": 3612672,
+              "output_gradient_norm": 0.004466463811695576
+            },
+            {
+              "input_nonzero": 1764,
+              "output_gradient_norm": 0.003213258692994714
+            },
+            {
+              "input_nonzero": 3612672,
+              "output_gradient_norm": 0.004263707902282476
+            },
+            {
+              "input_nonzero": 672,
+              "output_gradient_norm": 0.0032153050415217876
+            },
+            {
+              "input_nonzero": 3612672,
+              "output_gradient_norm": 0.004338961560279131
+            },
+            {
+              "input_nonzero": 168,
+              "output_gradient_norm": 0.0021482298616319895
+            },
+            {
+              "input_nonzero": 3612672,
+              "output_gradient_norm": 0.004480131436139345
+            },
+            {
+              "input_nonzero": 504,
+              "output_gradient_norm": 0.0021396810188889503
+            },
+            {
+              "input_nonzero": 3612672,
+              "output_gradient_norm": 0.004528690129518509
+            },
+            {
+              "input_nonzero": 336,
+              "output_gradient_norm": 0.0021113157272338867
+            },
+            {
+              "input_nonzero": 3612672,
+              "output_gradient_norm": 0.004296290688216686
+            },
+            {
+              "input_nonzero": 0,
+              "output_gradient_norm": 0.0021113157272338867
+            },
+            {
+              "input_nonzero": 3612672,
+              "output_gradient_norm": 0.0033123057801276445
+            },
+            {
+              "input_nonzero": 0,
+              "output_gradient_norm": 0.0021113157272338867
+            },
+            {
+              "input_nonzero": 3612672,
+              "output_gradient_norm": 0.0022456441074609756
+            },
+            {
+              "input_nonzero": 168,
+              "output_gradient_norm": 0.002104401122778654
+            },
+            {
+              "input_nonzero": 3612672,
+              "output_gradient_norm": 0.0018171555129811168
+            },
+            {
+              "input_nonzero": 252,
+              "output_gradient_norm": 0.0021043114829808474
+            }
+          ],
+          "norms": {
+            "adapters.0.down.weight": 0.0,
+            "adapters.0.up.weight": 0.008450929075479507,
+            "adapters.1.down.weight": 0.0,
+            "adapters.1.up.weight": 0.01655547134578228,
+            "adapters.10.down.weight": 0.0,
+            "adapters.10.up.weight": 0.007665356621146202,
+            "adapters.11.down.weight": 0.0,
+            "adapters.11.up.weight": 0.005667880643159151,
+            "adapters.12.down.weight": 0.0,
+            "adapters.12.up.weight": 0.0074083865620195866,
+            "adapters.13.down.weight": 0.0,
+            "adapters.13.up.weight": 0.0047311638481915,
+            "adapters.14.down.weight": 0.0,
+            "adapters.14.up.weight": 0.008994018658995628,
+            "adapters.15.down.weight": 0.0,
+            "adapters.15.up.weight": 0.002801627153530717,
+            "adapters.16.down.weight": 0.0,
+            "adapters.16.up.weight": 0.009753856807947159,
+            "adapters.17.down.weight": 0.0,
+            "adapters.17.up.weight": 0.00011285392247373238,
+            "adapters.18.down.weight": 0.0,
+            "adapters.18.up.weight": 0.010450264438986778,
+            "adapters.19.down.weight": 0.0,
+            "adapters.19.up.weight": 0.00021438352996483445,
+            "adapters.2.down.weight": 0.0,
+            "adapters.2.up.weight": 0.006841124966740608,
+            "adapters.20.down.weight": 0.0,
+            "adapters.20.up.weight": 0.013447027653455734,
+            "adapters.21.down.weight": 0.0,
+            "adapters.21.up.weight": 0.00017001845117192715,
+            "adapters.22.down.weight": 0.0,
+            "adapters.22.up.weight": 0.014661568216979504,
+            "adapters.23.down.weight": 0.0,
+            "adapters.23.up.weight": 0.012389260344207287,
+            "adapters.24.down.weight": 0.0,
+            "adapters.24.up.weight": 0.016330527141690254,
+            "adapters.25.down.weight": 0.0,
+            "adapters.25.up.weight": 0.0,
+            "adapters.26.down.weight": 0.0,
+            "adapters.26.up.weight": 0.014308048412203789,
+            "adapters.27.down.weight": 0.0,
+            "adapters.27.up.weight": 0.0,
+            "adapters.28.down.weight": 0.0,
+            "adapters.28.up.weight": 0.013740677386522293,
+            "adapters.29.down.weight": 0.0,
+            "adapters.29.up.weight": 0.013989109545946121,
+            "adapters.3.down.weight": 0.0,
+            "adapters.3.up.weight": 0.004969972651451826,
+            "adapters.30.down.weight": 0.0,
+            "adapters.30.up.weight": 0.022568007931113243,
+            "adapters.31.down.weight": 0.0,
+            "adapters.31.up.weight": 0.0002555058745201677,
+            "adapters.4.down.weight": 0.0,
+            "adapters.4.up.weight": 0.007198302540928125,
+            "adapters.5.down.weight": 0.0,
+            "adapters.5.up.weight": 0.006118440069258213,
+            "adapters.6.down.weight": 0.0,
+            "adapters.6.up.weight": 0.006780137307941914,
+            "adapters.7.down.weight": 0.0,
+            "adapters.7.up.weight": 0.005222212988883257,
+            "adapters.8.down.weight": 0.0,
+            "adapters.8.up.weight": 0.0067098187282681465,
+            "adapters.9.down.weight": 0.0,
+            "adapters.9.up.weight": 0.00432753749191761
+          }
+        },
+        {
+          "activity": [
+            {
+              "input_nonzero": 3612672,
+              "output_gradient_norm": 0.004557221662253141
+            },
+            {
+              "input_nonzero": 8568,
+              "output_gradient_norm": 0.015721343457698822
+            },
+            {
+              "input_nonzero": 3612672,
+              "output_gradient_norm": 0.004655563738197088
+            },
+            {
+              "input_nonzero": 252,
+              "output_gradient_norm": 0.015492480248212814
+            },
+            {
+              "input_nonzero": 3612672,
+              "output_gradient_norm": 0.005039986688643694
+            },
+            {
+              "input_nonzero": 1596,
+              "output_gradient_norm": 0.01397727057337761
+            },
+            {
+              "input_nonzero": 3612672,
+              "output_gradient_norm": 0.004782792180776596
+            },
+            {
+              "input_nonzero": 924,
+              "output_gradient_norm": 0.013009066693484783
+            },
+            {
+              "input_nonzero": 3612672,
+              "output_gradient_norm": 0.005015190225094557
+            },
+            {
+              "input_nonzero": 1596,
+              "output_gradient_norm": 0.012170081026852131
+            },
+            {
+              "input_nonzero": 3612672,
+              "output_gradient_norm": 0.004769191145896912
+            },
+            {
+              "input_nonzero": 3192,
+              "output_gradient_norm": 0.009876823984086514
+            },
+            {
+              "input_nonzero": 3612672,
+              "output_gradient_norm": 0.0046120695769786835
+            },
+            {
+              "input_nonzero": 3108,
+              "output_gradient_norm": 0.006856181193143129
+            },
+            {
+              "input_nonzero": 3612672,
+              "output_gradient_norm": 0.004432191606611013
+            },
+            {
+              "input_nonzero": 1764,
+              "output_gradient_norm": 0.003173253033310175
+            },
+            {
+              "input_nonzero": 3612672,
+              "output_gradient_norm": 0.0042309146374464035
+            },
+            {
+              "input_nonzero": 672,
+              "output_gradient_norm": 0.003175201592966914
+            },
+            {
+              "input_nonzero": 3612672,
+              "output_gradient_norm": 0.004304942209273577
+            },
+            {
+              "input_nonzero": 168,
+              "output_gradient_norm": 0.0021224103402346373
+            },
+            {
+              "input_nonzero": 3612672,
+              "output_gradient_norm": 0.004446018021553755
+            },
+            {
+              "input_nonzero": 504,
+              "output_gradient_norm": 0.0021139858290553093
+            },
+            {
+              "input_nonzero": 3612672,
+              "output_gradient_norm": 0.004493221174925566
+            },
+            {
+              "input_nonzero": 336,
+              "output_gradient_norm": 0.002085917629301548
+            },
+            {
+              "input_nonzero": 3612672,
+              "output_gradient_norm": 0.0042615472339093685
+            },
+            {
+              "input_nonzero": 0,
+              "output_gradient_norm": 0.002085917629301548
+            },
+            {
+              "input_nonzero": 3612672,
+              "output_gradient_norm": 0.0032847963739186525
+            },
+            {
+              "input_nonzero": 0,
+              "output_gradient_norm": 0.002085917629301548
+            },
+            {
+              "input_nonzero": 3612672,
+              "output_gradient_norm": 0.0022262390702962875
+            },
+            {
+              "input_nonzero": 168,
+              "output_gradient_norm": 0.002079118276014924
+            },
+            {
+              "input_nonzero": 3612672,
+              "output_gradient_norm": 0.0018009935738518834
+            },
+            {
+              "input_nonzero": 252,
+              "output_gradient_norm": 0.0020790304988622665
+            }
+          ],
+          "norms": {
+            "adapters.0.down.weight": 8.602591697126627e-05,
+            "adapters.0.up.weight": 0.008381335996091366,
+            "adapters.1.down.weight": 0.0005761304055340588,
+            "adapters.1.up.weight": 0.016360947862267494,
+            "adapters.10.down.weight": 5.313041401677765e-05,
+            "adapters.10.up.weight": 0.007606995292007923,
+            "adapters.11.down.weight": 0.00022344694298226386,
+            "adapters.11.up.weight": 0.0055984752252697945,
+            "adapters.12.down.weight": 5.143792805029079e-05,
+            "adapters.12.up.weight": 0.007353831082582474,
+            "adapters.13.down.weight": 0.0001582009717822075,
+            "adapters.13.up.weight": 0.004676727578043938,
+            "adapters.14.down.weight": 0.00010119261423824355,
+            "adapters.14.up.weight": 0.008924434892833233,
+            "adapters.15.down.weight": 0.0001414448779541999,
+            "adapters.15.up.weight": 0.0027649139519780874,
+            "adapters.16.down.weight": 6.787409074604511e-05,
+            "adapters.16.up.weight": 0.009680644609034061,
+            "adapters.17.down.weight": 5.435039838630473e-06,
+            "adapters.17.up.weight": 0.00011132476356578991,
+            "adapters.18.down.weight": 7.718301640124992e-05,
+            "adapters.18.up.weight": 0.010375424288213253,
+            "adapters.19.down.weight": 1.246333613380557e-05,
+            "adapters.19.up.weight": 0.0002114561211783439,
+            "adapters.2.down.weight": 5.073038482805714e-05,
+            "adapters.2.up.weight": 0.00678593572229147,
+            "adapters.20.down.weight": 0.00010140181984752417,
+            "adapters.20.up.weight": 0.013345476239919662,
+            "adapters.21.down.weight": 7.233970791276079e-06,
+            "adapters.21.up.weight": 0.00016828499792609364,
+            "adapters.22.down.weight": 9.991877595894039e-05,
+            "adapters.22.up.weight": 0.014545721933245659,
+            "adapters.23.down.weight": 0.0006750241736881435,
+            "adapters.23.up.weight": 0.012237686663866043,
+            "adapters.24.down.weight": 0.0001231434434885159,
+            "adapters.24.up.weight": 0.01620113104581833,
+            "adapters.25.down.weight": 0.0,
+            "adapters.25.up.weight": 0.0,
+            "adapters.26.down.weight": 0.00013784205657429993,
+            "adapters.26.up.weight": 0.014171421527862549,
+            "adapters.27.down.weight": 0.0,
+            "adapters.27.up.weight": 0.0,
+            "adapters.28.down.weight": 0.00016573723405599594,
+            "adapters.28.up.weight": 0.01359533704817295,
+            "adapters.29.down.weight": 0.0007185522117651999,
+            "adapters.29.up.weight": 0.013804947026073933,
+            "adapters.3.down.weight": 0.0003917648282367736,
+            "adapters.3.up.weight": 0.00491836853325367,
+            "adapters.30.down.weight": 0.0004892903380095959,
+            "adapters.30.up.weight": 0.022280637174844742,
+            "adapters.31.down.weight": 1.2492764653870836e-05,
+            "adapters.31.up.weight": 0.00025242625270038843,
+            "adapters.4.down.weight": 5.921995762037113e-05,
+            "adapters.4.up.weight": 0.00713376933708787,
+            "adapters.5.down.weight": 0.00021961706806905568,
+            "adapters.5.up.weight": 0.006045204121619463,
+            "adapters.6.down.weight": 4.5563581807073206e-05,
+            "adapters.6.up.weight": 0.006725935265421867,
+            "adapters.7.down.weight": 0.00023356915335170925,
+            "adapters.7.up.weight": 0.005158120300620794,
+            "adapters.8.down.weight": 4.8349513235734776e-05,
+            "adapters.8.up.weight": 0.006656585726886988,
+            "adapters.9.down.weight": 0.00014807601110078394,
+            "adapters.9.up.weight": 0.004276635590940714
+          }
+        }
+      ],
+      "initial_sha256": "953ae6776efcfd71b2e297e453ef69ced100350cc8de5e9a1ed8746d499645a2",
+      "parameters": 655360,
+      "paths": [
+        "blocks.0.pair_transition.linear_no_bias",
+        "blocks.0.single_transition.linear_no_bias",
+        "blocks.1.pair_transition.linear_no_bias",
+        "blocks.1.single_transition.linear_no_bias",
+        "blocks.2.pair_transition.linear_no_bias",
+        "blocks.2.single_transition.linear_no_bias",
+        "blocks.3.pair_transition.linear_no_bias",
+        "blocks.3.single_transition.linear_no_bias",
+        "blocks.4.pair_transition.linear_no_bias",
+        "blocks.4.single_transition.linear_no_bias",
+        "blocks.5.pair_transition.linear_no_bias",
+        "blocks.5.single_transition.linear_no_bias",
+        "blocks.6.pair_transition.linear_no_bias",
+        "blocks.6.single_transition.linear_no_bias",
+        "blocks.7.pair_transition.linear_no_bias",
+        "blocks.7.single_transition.linear_no_bias",
+        "blocks.8.pair_transition.linear_no_bias",
+        "blocks.8.single_transition.linear_no_bias",
+        "blocks.9.pair_transition.linear_no_bias",
+        "blocks.9.single_transition.linear_no_bias",
+        "blocks.10.pair_transition.linear_no_bias",
+        "blocks.10.single_transition.linear_no_bias",
+        "blocks.11.pair_transition.linear_no_bias",
+        "blocks.11.single_transition.linear_no_bias",
+        "blocks.12.pair_transition.linear_no_bias",
+        "blocks.12.single_transition.linear_no_bias",
+        "blocks.13.pair_transition.linear_no_bias",
+        "blocks.13.single_transition.linear_no_bias",
+        "blocks.14.pair_transition.linear_no_bias",
+        "blocks.14.single_transition.linear_no_bias",
+        "blocks.15.pair_transition.linear_no_bias",
+        "blocks.15.single_transition.linear_no_bias"
+      ],
+      "seed": 272003
+    }
+  ],
+  "zero_replays": 1824
+}
