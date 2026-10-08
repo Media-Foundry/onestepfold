@@ -1,0 +1,1269 @@
+{
+  "272001": {
+    "train": {
+      "4104_adapted": {
+        "counts": {
+          "new": 23,
+          "fixed": 88,
+          "baseline_severe_pairs": 10360,
+          "adapted_severe_pairs": 9555,
+          "baseline_checked_chirality_wrong": 853,
+          "adapted_checked_chirality_wrong": 1116,
+          "clash": 13,
+          "exact_already_failed": 7,
+          "also_failed_at_4104": 23,
+          "chirality": 10
+        },
+        "by_site": {
+          "1W53 T37": {
+            "new": 3,
+            "fixed": 0
+          },
+          "1JHG A2": {
+            "new": 4,
+            "fixed": 0
+          },
+          "1A7G N65": {
+            "new": 6,
+            "fixed": 0
+          },
+          "2P7T A44": {
+            "new": 0,
+            "fixed": 1
+          },
+          "2P7T T86": {
+            "new": 0,
+            "fixed": 0
+          },
+          "2DP9 L49": {
+            "new": 0,
+            "fixed": 18
+          },
+          "2DP9 Q52": {
+            "new": 0,
+            "fixed": 13
+          },
+          "5GPE A11": {
+            "new": 0,
+            "fixed": 0
+          },
+          "5GPE D72": {
+            "new": 0,
+            "fixed": 0
+          },
+          "1QVC D95": {
+            "new": 0,
+            "fixed": 0
+          },
+          "1QVC G107": {
+            "new": 0,
+            "fixed": 0
+          },
+          "4AKD I6": {
+            "new": 4,
+            "fixed": 2
+          },
+          "4AKD V8": {
+            "new": 0,
+            "fixed": 8
+          },
+          "5MH3 P13": {
+            "new": 0,
+            "fixed": 4
+          },
+          "5MH3 E66": {
+            "new": 0,
+            "fixed": 15
+          },
+          "1DZR L13": {
+            "new": 0,
+            "fixed": 0
+          },
+          "1DZR A179": {
+            "new": 1,
+            "fixed": 0
+          },
+          "2ED6 T90": {
+            "new": 0,
+            "fixed": 0
+          },
+          "2ED6 V137": {
+            "new": 0,
+            "fixed": 0
+          },
+          "2ARC E100": {
+            "new": 3,
+            "fixed": 10
+          },
+          "2ARC G112": {
+            "new": 0,
+            "fixed": 17
+          },
+          "1M4I D23": {
+            "new": 0,
+            "fixed": 0
+          },
+          "1M4I S128": {
+            "new": 0,
+            "fixed": 0
+          },
+          "4HUT I25": {
+            "new": 0,
+            "fixed": 0
+          },
+          "4HUT A44": {
+            "new": 0,
+            "fixed": 0
+          },
+          "4HGR L68": {
+            "new": 0,
+            "fixed": 0
+          },
+          "4HGR V148": {
+            "new": 2,
+            "fixed": 0
+          }
+        },
+        "centers": {
+          "1JHG:100:CA": 3,
+          "4AKD:2:CA": 3,
+          "4AKD:94:CB": 1,
+          "2ARC:1:CA": 1,
+          "4HGR:133:CB": 2
+        },
+        "noise": {
+          "230201": {
+            "new": 12,
+            "fixed": 73
+          },
+          "230211": {
+            "new": 11,
+            "fixed": 15
+          }
+        },
+        "baseline_flip_ratio_quantiles": [
+          0.0011038375118526936,
+          0.004886489405216042,
+          0.008146510101378275,
+          0.01308480016709646,
+          0.04488516536307581
+        ],
+        "baseline_flip_ratio_below_01": 10
+      },
+      "8208_adapted": {
+        "counts": {
+          "new": 20,
+          "fixed": 109,
+          "baseline_severe_pairs": 10360,
+          "adapted_severe_pairs": 8439,
+          "baseline_checked_chirality_wrong": 853,
+          "adapted_checked_chirality_wrong": 1099,
+          "clash": 9,
+          "exact_already_failed": 5,
+          "also_failed_at_4104": 14,
+          "chirality": 11
+        },
+        "by_site": {
+          "1W53 T37": {
+            "new": 2,
+            "fixed": 0
+          },
+          "1JHG A2": {
+            "new": 5,
+            "fixed": 3
+          },
+          "1A7G N65": {
+            "new": 4,
+            "fixed": 0
+          },
+          "2P7T A44": {
+            "new": 0,
+            "fixed": 1
+          },
+          "2P7T T86": {
+            "new": 0,
+            "fixed": 0
+          },
+          "2DP9 L49": {
+            "new": 0,
+            "fixed": 14
+          },
+          "2DP9 Q52": {
+            "new": 0,
+            "fixed": 11
+          },
+          "5GPE A11": {
+            "new": 0,
+            "fixed": 0
+          },
+          "5GPE D72": {
+            "new": 0,
+            "fixed": 0
+          },
+          "1QVC D95": {
+            "new": 0,
+            "fixed": 0
+          },
+          "1QVC G107": {
+            "new": 0,
+            "fixed": 0
+          },
+          "4AKD I6": {
+            "new": 5,
+            "fixed": 1
+          },
+          "4AKD V8": {
+            "new": 2,
+            "fixed": 6
+          },
+          "5MH3 P13": {
+            "new": 0,
+            "fixed": 14
+          },
+          "5MH3 E66": {
+            "new": 0,
+            "fixed": 27
+          },
+          "1DZR L13": {
+            "new": 0,
+            "fixed": 0
+          },
+          "1DZR A179": {
+            "new": 0,
+            "fixed": 0
+          },
+          "2ED6 T90": {
+            "new": 0,
+            "fixed": 0
+          },
+          "2ED6 V137": {
+            "new": 0,
+            "fixed": 0
+          },
+          "2ARC E100": {
+            "new": 1,
+            "fixed": 14
+          },
+          "2ARC G112": {
+            "new": 0,
+            "fixed": 18
+          },
+          "1M4I D23": {
+            "new": 0,
+            "fixed": 0
+          },
+          "1M4I S128": {
+            "new": 0,
+            "fixed": 0
+          },
+          "4HUT I25": {
+            "new": 0,
+            "fixed": 0
+          },
+          "4HUT A44": {
+            "new": 0,
+            "fixed": 0
+          },
+          "4HGR L68": {
+            "new": 0,
+            "fixed": 0
+          },
+          "4HGR V148": {
+            "new": 1,
+            "fixed": 0
+          }
+        },
+        "centers": {
+          "1JHG:100:CA": 3,
+          "4AKD:2:CA": 6,
+          "4AKD:94:CB": 1,
+          "4AKD:92:CB": 1,
+          "4HGR:133:CB": 1
+        },
+        "noise": {
+          "230201": {
+            "new": 13,
+            "fixed": 66
+          },
+          "230211": {
+            "new": 7,
+            "fixed": 43
+          }
+        },
+        "baseline_flip_ratio_quantiles": [
+          0.0012887833875633219,
+          0.005255877277384564,
+          0.008146510101378275,
+          0.016492702539202125,
+          0.04488516536307581
+        ],
+        "baseline_flip_ratio_below_01": 12
+      }
+    },
+    "dev_new_site": {
+      "4104_adapted": {
+        "counts": {
+          "new": 5,
+          "fixed": 2,
+          "baseline_severe_pairs": 71,
+          "adapted_severe_pairs": 93,
+          "baseline_checked_chirality_wrong": 33,
+          "adapted_checked_chirality_wrong": 37,
+          "clash": 2,
+          "exact_already_failed": 2,
+          "also_failed_at_4104": 5,
+          "chirality": 3
+        },
+        "by_site": {
+          "1W53 Y84": {
+            "new": 1,
+            "fixed": 1
+          },
+          "1JHG N25": {
+            "new": 3,
+            "fixed": 0
+          },
+          "1A7G S34": {
+            "new": 1,
+            "fixed": 1
+          }
+        },
+        "centers": {
+          "1JHG:100:CA": 3
+        },
+        "noise": {
+          "230201": {
+            "new": 3,
+            "fixed": 1
+          },
+          "230211": {
+            "new": 2,
+            "fixed": 1
+          }
+        },
+        "baseline_flip_ratio_quantiles": [
+          0.014906347571922636,
+          0.015583401758257322,
+          0.01626045594459201,
+          0.019465092711600664,
+          0.022669729478609315
+        ],
+        "baseline_flip_ratio_below_01": 3
+      },
+      "8208_adapted": {
+        "counts": {
+          "new": 2,
+          "fixed": 1,
+          "baseline_severe_pairs": 71,
+          "adapted_severe_pairs": 87,
+          "baseline_checked_chirality_wrong": 33,
+          "adapted_checked_chirality_wrong": 37,
+          "both": 1,
+          "exact_already_failed": 2,
+          "also_failed_at_4104": 2,
+          "clash": 1
+        },
+        "by_site": {
+          "1W53 Y84": {
+            "new": 1,
+            "fixed": 0
+          },
+          "1JHG N25": {
+            "new": 0,
+            "fixed": 0
+          },
+          "1A7G S34": {
+            "new": 1,
+            "fixed": 1
+          }
+        },
+        "centers": {
+          "1W53:25:CB": 1
+        },
+        "noise": {
+          "230201": {
+            "new": 0,
+            "fixed": 1
+          },
+          "230211": {
+            "new": 2,
+            "fixed": 0
+          }
+        },
+        "baseline_flip_ratio_quantiles": [
+          0.015193063969831989,
+          0.015193063969831989,
+          0.015193063969831989,
+          0.015193063969831989,
+          0.015193063969831989
+        ],
+        "baseline_flip_ratio_below_01": 1
+      }
+    },
+    "dev_unseen_protein": {
+      "4104_adapted": {
+        "counts": {
+          "new": 63,
+          "fixed": 9,
+          "baseline_severe_pairs": 2282,
+          "adapted_severe_pairs": 2581,
+          "baseline_checked_chirality_wrong": 324,
+          "adapted_checked_chirality_wrong": 377,
+          "chirality": 12,
+          "exact_already_failed": 27,
+          "also_failed_at_4104": 63,
+          "clash": 29,
+          "both": 22
+        },
+        "by_site": {
+          "6AHP Y48": {
+            "new": 1,
+            "fixed": 0
+          },
+          "6AHP L58": {
+            "new": 2,
+            "fixed": 0
+          },
+          "1X8D I25": {
+            "new": 1,
+            "fixed": 1
+          },
+          "1X8D K78": {
+            "new": 4,
+            "fixed": 0
+          },
+          "2EBE A30": {
+            "new": 8,
+            "fixed": 0
+          },
+          "2EBE E47": {
+            "new": 16,
+            "fixed": 0
+          },
+          "4PT4 L10": {
+            "new": 0,
+            "fixed": 0
+          },
+          "4PT4 D17": {
+            "new": 0,
+            "fixed": 0
+          },
+          "3SXZ R101": {
+            "new": 0,
+            "fixed": 0
+          },
+          "3SXZ E108": {
+            "new": 0,
+            "fixed": 0
+          },
+          "4PQL L42": {
+            "new": 0,
+            "fixed": 2
+          },
+          "4PQL E89": {
+            "new": 3,
+            "fixed": 1
+          },
+          "6ZRW T45": {
+            "new": 0,
+            "fixed": 0
+          },
+          "6ZRW P80": {
+            "new": 0,
+            "fixed": 0
+          },
+          "1YSB V5": {
+            "new": 3,
+            "fixed": 2
+          },
+          "1YSB V110": {
+            "new": 4,
+            "fixed": 3
+          },
+          "2FKZ E44": {
+            "new": 6,
+            "fixed": 0
+          },
+          "2FKZ Q137": {
+            "new": 15,
+            "fixed": 0
+          }
+        },
+        "centers": {
+          "6AHP:1:CA": 3,
+          "1X8D:2:CB": 5,
+          "2EBE:16:CA": 17,
+          "2EBE:14:CA": 4,
+          "2EBE:53:CA": 1,
+          "2EBE:50:CB": 2,
+          "4PQL:1:CA": 1,
+          "1YSB:2:CA": 3
+        },
+        "noise": {
+          "230201": {
+            "new": 13,
+            "fixed": 5
+          },
+          "230211": {
+            "new": 50,
+            "fixed": 4
+          }
+        },
+        "baseline_flip_ratio_quantiles": [
+          0.0005800114181293361,
+          0.010243291247742837,
+          0.1494631357185856,
+          0.4070026533230251,
+          0.893163812420861
+        ],
+        "baseline_flip_ratio_below_01": 16
+      },
+      "8208_adapted": {
+        "counts": {
+          "new": 79,
+          "fixed": 17,
+          "baseline_severe_pairs": 2282,
+          "adapted_severe_pairs": 2502,
+          "baseline_checked_chirality_wrong": 324,
+          "adapted_checked_chirality_wrong": 401,
+          "chirality": 9,
+          "exact_already_failed": 27,
+          "also_failed_at_4104": 58,
+          "clash": 47,
+          "both": 23
+        },
+        "by_site": {
+          "6AHP Y48": {
+            "new": 0,
+            "fixed": 0
+          },
+          "6AHP L58": {
+            "new": 2,
+            "fixed": 0
+          },
+          "1X8D I25": {
+            "new": 0,
+            "fixed": 0
+          },
+          "1X8D K78": {
+            "new": 3,
+            "fixed": 0
+          },
+          "2EBE A30": {
+            "new": 9,
+            "fixed": 0
+          },
+          "2EBE E47": {
+            "new": 16,
+            "fixed": 0
+          },
+          "4PT4 L10": {
+            "new": 0,
+            "fixed": 0
+          },
+          "4PT4 D17": {
+            "new": 0,
+            "fixed": 0
+          },
+          "3SXZ R101": {
+            "new": 0,
+            "fixed": 0
+          },
+          "3SXZ E108": {
+            "new": 0,
+            "fixed": 0
+          },
+          "4PQL L42": {
+            "new": 1,
+            "fixed": 7
+          },
+          "4PQL E89": {
+            "new": 2,
+            "fixed": 1
+          },
+          "6ZRW T45": {
+            "new": 0,
+            "fixed": 0
+          },
+          "6ZRW P80": {
+            "new": 0,
+            "fixed": 0
+          },
+          "1YSB V5": {
+            "new": 6,
+            "fixed": 3
+          },
+          "1YSB V110": {
+            "new": 4,
+            "fixed": 6
+          },
+          "2FKZ E44": {
+            "new": 17,
+            "fixed": 0
+          },
+          "2FKZ Q137": {
+            "new": 19,
+            "fixed": 0
+          }
+        },
+        "centers": {
+          "6AHP:1:CA": 2,
+          "1X8D:2:CB": 3,
+          "2EBE:16:CA": 21,
+          "2EBE:53:CA": 4,
+          "2EBE:50:CB": 2,
+          "1YSB:2:CA": 4
+        },
+        "noise": {
+          "230201": {
+            "new": 11,
+            "fixed": 8
+          },
+          "230211": {
+            "new": 68,
+            "fixed": 9
+          }
+        },
+        "baseline_flip_ratio_quantiles": [
+          0.0005800114181293361,
+          0.011983024838193707,
+          0.21134263386546115,
+          0.4680805151937998,
+          0.7671038695839832
+        ],
+        "baseline_flip_ratio_below_01": 13
+      }
+    }
+  },
+  "272003": {
+    "train": {
+      "4104_adapted": {
+        "counts": {
+          "new": 20,
+          "fixed": 91,
+          "baseline_severe_pairs": 10360,
+          "adapted_severe_pairs": 11063,
+          "baseline_checked_chirality_wrong": 853,
+          "adapted_checked_chirality_wrong": 1071,
+          "clash": 12,
+          "exact_already_failed": 7,
+          "also_failed_at_4104": 20,
+          "chirality": 8
+        },
+        "by_site": {
+          "1W53 T37": {
+            "new": 3,
+            "fixed": 0
+          },
+          "1JHG A2": {
+            "new": 5,
+            "fixed": 3
+          },
+          "1A7G N65": {
+            "new": 6,
+            "fixed": 0
+          },
+          "2P7T A44": {
+            "new": 0,
+            "fixed": 1
+          },
+          "2P7T T86": {
+            "new": 0,
+            "fixed": 0
+          },
+          "2DP9 L49": {
+            "new": 0,
+            "fixed": 18
+          },
+          "2DP9 Q52": {
+            "new": 0,
+            "fixed": 13
+          },
+          "5GPE A11": {
+            "new": 0,
+            "fixed": 0
+          },
+          "5GPE D72": {
+            "new": 0,
+            "fixed": 0
+          },
+          "1QVC D95": {
+            "new": 0,
+            "fixed": 0
+          },
+          "1QVC G107": {
+            "new": 0,
+            "fixed": 0
+          },
+          "4AKD I6": {
+            "new": 2,
+            "fixed": 2
+          },
+          "4AKD V8": {
+            "new": 0,
+            "fixed": 8
+          },
+          "5MH3 P13": {
+            "new": 0,
+            "fixed": 6
+          },
+          "5MH3 E66": {
+            "new": 0,
+            "fixed": 14
+          },
+          "1DZR L13": {
+            "new": 0,
+            "fixed": 0
+          },
+          "1DZR A179": {
+            "new": 1,
+            "fixed": 0
+          },
+          "2ED6 T90": {
+            "new": 0,
+            "fixed": 0
+          },
+          "2ED6 V137": {
+            "new": 0,
+            "fixed": 0
+          },
+          "2ARC E100": {
+            "new": 2,
+            "fixed": 9
+          },
+          "2ARC G112": {
+            "new": 0,
+            "fixed": 16
+          },
+          "1M4I D23": {
+            "new": 0,
+            "fixed": 1
+          },
+          "1M4I S128": {
+            "new": 0,
+            "fixed": 0
+          },
+          "4HUT I25": {
+            "new": 0,
+            "fixed": 0
+          },
+          "4HUT A44": {
+            "new": 0,
+            "fixed": 0
+          },
+          "4HGR L68": {
+            "new": 0,
+            "fixed": 0
+          },
+          "4HGR V148": {
+            "new": 1,
+            "fixed": 0
+          }
+        },
+        "centers": {
+          "1JHG:100:CA": 3,
+          "1JHG:2:CB": 1,
+          "4AKD:2:CA": 2,
+          "2ARC:1:CA": 1,
+          "4HGR:133:CB": 1
+        },
+        "noise": {
+          "230201": {
+            "new": 10,
+            "fixed": 73
+          },
+          "230211": {
+            "new": 10,
+            "fixed": 18
+          }
+        },
+        "baseline_flip_ratio_quantiles": [
+          0.0016694079597445882,
+          0.007420087931414722,
+          0.008925477607922505,
+          0.015155039994049314,
+          0.037280724671074815
+        ],
+        "baseline_flip_ratio_below_01": 8
+      },
+      "8208_adapted": {
+        "counts": {
+          "new": 14,
+          "fixed": 103,
+          "baseline_severe_pairs": 10360,
+          "adapted_severe_pairs": 9925,
+          "baseline_checked_chirality_wrong": 853,
+          "adapted_checked_chirality_wrong": 1146,
+          "clash": 9,
+          "exact_already_failed": 6,
+          "also_failed_at_4104": 9,
+          "chirality": 5
+        },
+        "by_site": {
+          "1W53 T37": {
+            "new": 2,
+            "fixed": 0
+          },
+          "1JHG A2": {
+            "new": 2,
+            "fixed": 4
+          },
+          "1A7G N65": {
+            "new": 5,
+            "fixed": 0
+          },
+          "2P7T A44": {
+            "new": 0,
+            "fixed": 1
+          },
+          "2P7T T86": {
+            "new": 0,
+            "fixed": 0
+          },
+          "2DP9 L49": {
+            "new": 0,
+            "fixed": 16
+          },
+          "2DP9 Q52": {
+            "new": 0,
+            "fixed": 10
+          },
+          "5GPE A11": {
+            "new": 0,
+            "fixed": 0
+          },
+          "5GPE D72": {
+            "new": 0,
+            "fixed": 0
+          },
+          "1QVC D95": {
+            "new": 0,
+            "fixed": 0
+          },
+          "1QVC G107": {
+            "new": 0,
+            "fixed": 0
+          },
+          "4AKD I6": {
+            "new": 2,
+            "fixed": 1
+          },
+          "4AKD V8": {
+            "new": 1,
+            "fixed": 4
+          },
+          "5MH3 P13": {
+            "new": 0,
+            "fixed": 12
+          },
+          "5MH3 E66": {
+            "new": 0,
+            "fixed": 24
+          },
+          "1DZR L13": {
+            "new": 0,
+            "fixed": 0
+          },
+          "1DZR A179": {
+            "new": 0,
+            "fixed": 0
+          },
+          "2ED6 T90": {
+            "new": 0,
+            "fixed": 0
+          },
+          "2ED6 V137": {
+            "new": 0,
+            "fixed": 0
+          },
+          "2ARC E100": {
+            "new": 1,
+            "fixed": 14
+          },
+          "2ARC G112": {
+            "new": 0,
+            "fixed": 17
+          },
+          "1M4I D23": {
+            "new": 0,
+            "fixed": 0
+          },
+          "1M4I S128": {
+            "new": 0,
+            "fixed": 0
+          },
+          "4HUT I25": {
+            "new": 0,
+            "fixed": 0
+          },
+          "4HUT A44": {
+            "new": 0,
+            "fixed": 0
+          },
+          "4HGR L68": {
+            "new": 0,
+            "fixed": 0
+          },
+          "4HGR V148": {
+            "new": 1,
+            "fixed": 0
+          }
+        },
+        "centers": {
+          "4AKD:2:CA": 2,
+          "4AKD:92:CB": 1,
+          "2ARC:2:CA": 1,
+          "4HGR:133:CB": 1
+        },
+        "noise": {
+          "230201": {
+            "new": 5,
+            "fixed": 65
+          },
+          "230211": {
+            "new": 9,
+            "fixed": 38
+          }
+        },
+        "baseline_flip_ratio_quantiles": [
+          0.0012887833875633219,
+          0.0020922198371355017,
+          0.005718029334297604,
+          0.008213093365359862,
+          0.009637861850485149
+        ],
+        "baseline_flip_ratio_below_01": 5
+      }
+    },
+    "dev_new_site": {
+      "4104_adapted": {
+        "counts": {
+          "new": 5,
+          "fixed": 1,
+          "baseline_severe_pairs": 71,
+          "adapted_severe_pairs": 108,
+          "baseline_checked_chirality_wrong": 33,
+          "adapted_checked_chirality_wrong": 38,
+          "clash": 2,
+          "exact_already_failed": 2,
+          "also_failed_at_4104": 5,
+          "chirality": 3
+        },
+        "by_site": {
+          "1W53 Y84": {
+            "new": 1,
+            "fixed": 1
+          },
+          "1JHG N25": {
+            "new": 3,
+            "fixed": 0
+          },
+          "1A7G S34": {
+            "new": 1,
+            "fixed": 0
+          }
+        },
+        "centers": {
+          "1JHG:100:CA": 3
+        },
+        "noise": {
+          "230201": {
+            "new": 3,
+            "fixed": 0
+          },
+          "230211": {
+            "new": 2,
+            "fixed": 1
+          }
+        },
+        "baseline_flip_ratio_quantiles": [
+          0.014906347571922636,
+          0.015583401758257322,
+          0.01626045594459201,
+          0.019465092711600664,
+          0.022669729478609315
+        ],
+        "baseline_flip_ratio_below_01": 3
+      },
+      "8208_adapted": {
+        "counts": {
+          "new": 2,
+          "fixed": 1,
+          "baseline_severe_pairs": 71,
+          "adapted_severe_pairs": 109,
+          "baseline_checked_chirality_wrong": 33,
+          "adapted_checked_chirality_wrong": 37,
+          "both": 1,
+          "exact_already_failed": 2,
+          "also_failed_at_4104": 2,
+          "clash": 1
+        },
+        "by_site": {
+          "1W53 Y84": {
+            "new": 1,
+            "fixed": 0
+          },
+          "1JHG N25": {
+            "new": 0,
+            "fixed": 0
+          },
+          "1A7G S34": {
+            "new": 1,
+            "fixed": 1
+          }
+        },
+        "centers": {
+          "1W53:25:CB": 1
+        },
+        "noise": {
+          "230201": {
+            "new": 0,
+            "fixed": 1
+          },
+          "230211": {
+            "new": 2,
+            "fixed": 0
+          }
+        },
+        "baseline_flip_ratio_quantiles": [
+          0.015193063969831989,
+          0.015193063969831989,
+          0.015193063969831989,
+          0.015193063969831989,
+          0.015193063969831989
+        ],
+        "baseline_flip_ratio_below_01": 1
+      }
+    },
+    "dev_unseen_protein": {
+      "4104_adapted": {
+        "counts": {
+          "new": 49,
+          "fixed": 16,
+          "baseline_severe_pairs": 2282,
+          "adapted_severe_pairs": 2157,
+          "baseline_checked_chirality_wrong": 324,
+          "adapted_checked_chirality_wrong": 378,
+          "chirality": 13,
+          "exact_already_failed": 20,
+          "also_failed_at_4104": 49,
+          "clash": 25,
+          "both": 11
+        },
+        "by_site": {
+          "6AHP Y48": {
+            "new": 2,
+            "fixed": 0
+          },
+          "6AHP L58": {
+            "new": 2,
+            "fixed": 0
+          },
+          "1X8D I25": {
+            "new": 1,
+            "fixed": 0
+          },
+          "1X8D K78": {
+            "new": 5,
+            "fixed": 0
+          },
+          "2EBE A30": {
+            "new": 3,
+            "fixed": 3
+          },
+          "2EBE E47": {
+            "new": 15,
+            "fixed": 1
+          },
+          "4PT4 L10": {
+            "new": 0,
+            "fixed": 0
+          },
+          "4PT4 D17": {
+            "new": 0,
+            "fixed": 0
+          },
+          "3SXZ R101": {
+            "new": 0,
+            "fixed": 0
+          },
+          "3SXZ E108": {
+            "new": 0,
+            "fixed": 0
+          },
+          "4PQL L42": {
+            "new": 0,
+            "fixed": 2
+          },
+          "4PQL E89": {
+            "new": 0,
+            "fixed": 3
+          },
+          "6ZRW T45": {
+            "new": 0,
+            "fixed": 0
+          },
+          "6ZRW P80": {
+            "new": 0,
+            "fixed": 0
+          },
+          "1YSB V5": {
+            "new": 2,
+            "fixed": 4
+          },
+          "1YSB V110": {
+            "new": 4,
+            "fixed": 3
+          },
+          "2FKZ E44": {
+            "new": 5,
+            "fixed": 0
+          },
+          "2FKZ Q137": {
+            "new": 10,
+            "fixed": 0
+          }
+        },
+        "centers": {
+          "6AHP:1:CA": 4,
+          "1X8D:2:CB": 6,
+          "2EBE:14:CA": 4,
+          "2EBE:16:CA": 7,
+          "2EBE:50:CB": 1,
+          "1YSB:2:CA": 4
+        },
+        "noise": {
+          "230201": {
+            "new": 10,
+            "fixed": 6
+          },
+          "230211": {
+            "new": 39,
+            "fixed": 10
+          }
+        },
+        "baseline_flip_ratio_quantiles": [
+          0.0005800114181293361,
+          0.005223584374389632,
+          0.013273200954441589,
+          0.17837210308235352,
+          0.3532926805425597
+        ],
+        "baseline_flip_ratio_below_01": 16
+      },
+      "8208_adapted": {
+        "counts": {
+          "new": 67,
+          "fixed": 16,
+          "baseline_severe_pairs": 2282,
+          "adapted_severe_pairs": 2110,
+          "baseline_checked_chirality_wrong": 324,
+          "adapted_checked_chirality_wrong": 435,
+          "chirality": 14,
+          "exact_already_failed": 23,
+          "also_failed_at_4104": 41,
+          "both": 18,
+          "clash": 35
+        },
+        "by_site": {
+          "6AHP Y48": {
+            "new": 4,
+            "fixed": 0
+          },
+          "6AHP L58": {
+            "new": 10,
+            "fixed": 0
+          },
+          "1X8D I25": {
+            "new": 0,
+            "fixed": 2
+          },
+          "1X8D K78": {
+            "new": 0,
+            "fixed": 2
+          },
+          "2EBE A30": {
+            "new": 5,
+            "fixed": 0
+          },
+          "2EBE E47": {
+            "new": 13,
+            "fixed": 3
+          },
+          "4PT4 L10": {
+            "new": 0,
+            "fixed": 0
+          },
+          "4PT4 D17": {
+            "new": 0,
+            "fixed": 0
+          },
+          "3SXZ R101": {
+            "new": 0,
+            "fixed": 0
+          },
+          "3SXZ E108": {
+            "new": 0,
+            "fixed": 0
+          },
+          "4PQL L42": {
+            "new": 0,
+            "fixed": 2
+          },
+          "4PQL E89": {
+            "new": 2,
+            "fixed": 1
+          },
+          "6ZRW T45": {
+            "new": 0,
+            "fixed": 0
+          },
+          "6ZRW P80": {
+            "new": 0,
+            "fixed": 0
+          },
+          "1YSB V5": {
+            "new": 5,
+            "fixed": 3
+          },
+          "1YSB V110": {
+            "new": 5,
+            "fixed": 3
+          },
+          "2FKZ E44": {
+            "new": 8,
+            "fixed": 0
+          },
+          "2FKZ Q137": {
+            "new": 15,
+            "fixed": 0
+          }
+        },
+        "centers": {
+          "6AHP:1:CA": 14,
+          "2EBE:16:CA": 10,
+          "2EBE:14:CA": 4,
+          "1YSB:2:CA": 4
+        },
+        "noise": {
+          "230201": {
+            "new": 5,
+            "fixed": 12
+          },
+          "230211": {
+            "new": 62,
+            "fixed": 4
+          }
+        },
+        "baseline_flip_ratio_quantiles": [
+          0.0005800114181293361,
+          0.008443107410617897,
+          0.011879203813007468,
+          0.1980250223563792,
+          0.80228526316022
+        ],
+        "baseline_flip_ratio_below_01": 19
+      }
+    }
+  }
+}

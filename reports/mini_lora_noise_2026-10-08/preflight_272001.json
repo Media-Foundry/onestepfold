@@ -1,0 +1,61 @@
+{
+  "atol": 1e-07,
+  "checks": [
+    {
+      "gradient_max_abs": 0.0,
+      "noise_indices": [
+        0,
+        0
+      ],
+      "parameter_max_abs": 0.0,
+      "step_index": 0
+    },
+    {
+      "gradient_max_abs": 1.401298464324817e-44,
+      "noise_indices": [
+        0,
+        1
+      ],
+      "parameter_max_abs": 0.0,
+      "step_index": 243
+    },
+    {
+      "gradient_max_abs": 1.2611686178923354e-44,
+      "noise_indices": [
+        1,
+        1
+      ],
+      "parameter_max_abs": 0.0,
+      "step_index": 270
+    },
+    {
+      "gradient_max_abs": 1.401298464324817e-44,
+      "noise_indices": [
+        0,
+        0
+      ],
+      "parameter_max_abs": 0.0,
+      "step_index": 513
+    }
+  ],
+  "complete": true,
+  "discarded_updates": 4,
+  "initial_hash": "44addcba3bfedda3fa7d256db9f0be18ddf016fe6ca628ada2e8dc926866ca95",
+  "noise_lock_sha256": "faf7aa71423f61d9115f8e8c7dfcffabb319369c3003624c1542a63c448898c6",
+  "rtol": 1e-05,
+  "runtime": {
+    "authorization": "explicit HIP0..5",
+    "cuda_visible": null,
+    "device": "AMD Instinct MI250X / MI250",
+    "hip": "7.14.60850",
+    "hip_visible": "0",
+    "management_gcd": 2,
+    "pci_bus_id": "0000:32:00.0",
+    "physical_mapping_verified": true,
+    "rocr_visible": null,
+    "torch": "2.12.0a0+git78258b9"
+  },
+  "seconds": 26.413683851002133,
+  "source_checkpoint_sha256": "a4fb387239ff4467ccafe64bd90d5dbd9ebfe7c68b9eb19098daccc17defdcd1",
+  "zero_replay_both_noises": true
+}

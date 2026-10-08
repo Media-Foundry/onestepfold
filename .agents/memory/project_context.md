@@ -1,3 +1,23 @@
+## 2026-10-08 — Mini LoRA noise coverage control LOCKED
+
+User approves single/dual archived-noise supervision control. Four fresh runs:
+single/dual x272001/272003,pairedinitialstep0 weights,8208updates,globalbatch2,
+513TRAINmutants32exposures each;dual16/noise230201/230211. SameMini rank16,
+655360LoRAparams,loss/AdamW/clip/data unchanged. NoESM/MSAprep/newC4/RCSB.
+All-DDPfromzero botharms,oldserial/DDP runhistorical only. HIP0,2 and1,3 train;
+HIP4/5 eval. Counterbalancedarm/device/wave.20focusedtests pass. Newpreflight
+bothseeds two-noisezero replay and4discardedmixed-noise serial/DDPupdates.
+Originalfullzero panel reusedbyhash;fixed4104/8208fullpanels andterminalprimary.
+230211 TRAINnoise in dual,NOTunseen-noise test. No newnoise generated;allpanels
+remain development. Additional pernoise/perparent severe-pair/wrongcentre totals
+includealready-failed outputs,retain2ED6/2EBE/2FKZ. Noautomaticpromotion/sweeps.
+Bothseedpreflightspassed:8serial/DDPparameterupdates exactlyequal,gradientmax
+1.4013e-44;bothnoiseszero replaypassed. Firstsingle/dual272001running,seed272003
+queued,artifactsreports/mini_lora_noise_2026-10-08.
+Immutablelora_noise_v1_20261008 controller training_and_evaluation;
+lockfaf7aa71423f61d9115f8e8c7dfcffabb319369c3003624c1542a63c448898c6,
+1128codefiles. Protocol docs/mini_lora_noise_v1.md. No quality result yet.
+
 ## 2026-10-08 — Paired-DDP infrastructure validated; fixed4104 handoff armed
 
 User requests faster infrastructure/torchrun and explicitly authorizes HIP0..5.

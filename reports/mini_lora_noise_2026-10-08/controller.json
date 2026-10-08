@@ -1,0 +1,30 @@
+{
+  "complete": false,
+  "phase": "training_and_evaluation",
+  "jobs": {
+    "preflight_272001": {
+      "pid": 469360,
+      "status": "complete",
+      "hip": "0,2",
+      "exit_code": 0
+    },
+    "preflight_272003": {
+      "pid": 469551,
+      "status": "complete",
+      "hip": "0,2",
+      "exit_code": 0
+    },
+    "train_single_272001": {
+      "pid": 469852,
+      "status": "running",
+      "hip": "0,2"
+    },
+    "train_dual_272001": {
+      "pid": 469853,
+      "status": "running",
+      "hip": "1,3"
+    }
+  },
+  "noise_lock_sha256": "faf7aa71423f61d9115f8e8c7dfcffabb319369c3003624c1542a63c448898c6",
+  "seconds": 150.39730919701105
+}
