@@ -1,3 +1,38 @@
+## 2026-10-08 — Mini LoRA execution correction before outcomes
+
+Initial v1 preflight stopped before any native cycle: native Pairformer had
+activation checkpointing enabled. Scoped LoRA hooks cannot be removed before
+backward recomputation. New runtime explicitly disables Pairformer checkpointing;
+no-grad inference already disables it, forward parity remains a mandatory gate.
+v1b stopped before model load on existing preparation work directory. New runtime
+uses absolute per-bundle work paths; old failures are preserved, no seed outcomes.
+Current immutable1116file bundle recycle_lora_v1c_20261008,lockSHA
+c15a2a02ab506b8a9b0e7a6c6548629023d8844f5237777245d24103817fc7e0.
+Full zero-replay preflight now advancing.12localtests pass;graphall/staged complete,
+32newstagedsymbols/15flows HIGH reviewed;existing native/old experiment codeunchanged.
+
+## 2026-10-08 — Mini candidate final-recycle LoRA LOCKED
+
+User approves candidate-native adaptation after external compensation closure.
+New independent experiment: original WT3 cache + actual archived candidate inputs
++ one native last recycle with rank16 LoRA on all16 pair/single transition output
+projections + frozen S1.655360 trainable weights;original Mini unchanged. Temporary
+candidate-only hooks;no weight merging,reference/S1 adaptation or external head.
+Zero-init full912candidate/two-noise replay for both seeds precedes training;
+all adapter gradients,scope restoration,native hashes and cache immutability gated.
+Native checkpointing must be None to avoid backward reexecution without hooks.
+No-edit explicitly bypasses adaptation;no claim learned delta vanishes onWT.
+No separate AAquery, so adapted-versus-disabled primary, no transplanted wrongquery.
+Same15parents27sites513variants,3same-parent new sites,9heldparents18sites;
+all reused development. Seeds272001/272003,fresh8208updates,32exposures/AA,
+0/4104/8208checkpoints,terminal primary. Same structure/geometry loss and optimizer.
+No ESM/MSA preparation/newteachers;cached candidate s_inputs legitimate,NOTWT-only.
+12localtests pass. Frozen1116file bundle recycle_lora_v1_20261008 launchedpreflight;
+lockSHA afc40a87cc980bd297931ae4f8a5e64b7d1d93feb9ba9c080eb48519379fbbbb.
+Controller only starts fixedtwo seeds after integrity/gradient gate; independentCPU
+coordinate scoring and serialreplay/timing follow. Noquality orspeedclaim yet.
+Protocol docs/mini_recycle_lora_v1.md. Noautomatic sweeps/extensions/promotion.
+
 ## 2026-10-08 — Mini compensated last recycle CLOSED, no promotion
 
 Both seeds272001/272003 completed8208updates,32exposures/AA/site; independent
