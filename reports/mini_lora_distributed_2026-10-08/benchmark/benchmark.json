@@ -1,0 +1,65 @@
+{
+  "atol": 1e-07,
+  "complete": true,
+  "discarded_updates_per_arm": 112,
+  "equivalence": [
+    {
+      "gradient_max_abs": 0.0,
+      "parameter_max_abs": 0.0,
+      "step": 0
+    },
+    {
+      "gradient_max_abs": 1.1210387714598537e-44,
+      "parameter_max_abs": 0.0,
+      "step": 1
+    },
+    {
+      "gradient_max_abs": 1.1210387714598537e-44,
+      "parameter_max_abs": 0.0,
+      "step": 2
+    },
+    {
+      "gradient_max_abs": 1.8216880036222622e-44,
+      "parameter_max_abs": 0.0,
+      "step": 3
+    }
+  ],
+  "peak_allocated_bytes": 20688183808,
+  "rtol": 1e-05,
+  "runtime": {
+    "authorization": "explicit HIP0..5",
+    "cuda_visible": null,
+    "device": "AMD Instinct MI250X / MI250",
+    "hip": "7.14.60850",
+    "hip_visible": "2",
+    "management_gcd": 0,
+    "pci_bus_id": "0000:11:00.0",
+    "physical_mapping_verified": true,
+    "rocr_visible": null,
+    "torch": "2.12.0a0+git78258b9"
+  },
+  "source_checkpoint_sha256": "a4fb387239ff4467ccafe64bd90d5dbd9ebfe7c68b9eb19098daccc17defdcd1",
+  "timing": [
+    {
+      "mode": "parallel",
+      "seconds": 33.588518032003776,
+      "updates": 54
+    },
+    {
+      "mode": "serial",
+      "seconds": 56.13140857599501,
+      "updates": 54
+    },
+    {
+      "mode": "serial",
+      "seconds": 49.58815498799959,
+      "updates": 54
+    },
+    {
+      "mode": "parallel",
+      "seconds": 24.803605426001013,
+      "updates": 54
+    }
+  ],
+  "world_size": 2
+}

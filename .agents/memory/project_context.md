@@ -1,3 +1,24 @@
+## 2026-10-08 — Paired-DDP infrastructure validated; fixed4104 handoff armed
+
+User requests faster infrastructure/torchrun and explicitly authorizes HIP0..5.
+Locked globalbatch2 preserved:two ranks each evaluateone candidate,DDPaverage,
+clip1 thenAdamW. Two seeds useHIP0,2 andHIP1,3;HIP4,5 independent eval shards.
+Original Mini external/frozen,only655360LoRA params synchronized. NoLR/batch/data/
+loss/exposure change. Resource opt-in verifiesactualHIP→PCI;olddefault preserved.
+Native benchmark HIP2/3:4steps updatedparameters exactlyequal toserial,gradient
+maxdiff1.821688e-44.108updates/arm over27sites:serial105.7196s,DDP58.3921s,
+1.81051x throughput. Otheroldworkers active;notpipeline/inference speedclaim.
+HIP4/5 fixedT37A/twonoise zero-checkpoint replaybitwise.18focusedtests pass.
+Controller lora_distributed_v3_20261008 waitingforimmutable4104checkpoint+eval/
+exposure manifests perseed. Eachseed migratesindependently withAdamWstate;
+anypostcheckpoint discardedupdates recorded. Originalfiles preserved. Latest
+atomiccheckpoint each128updates,replicahash/exposure audits,shardedterminaleval,
+independentCPUscore andserialreplay/timing remain. No scientificoutcome selected.
+Code manifest383d8d672320e03527a4cd69b7ec7431ac10b04df5a88a17f41876688fcbfd16.
+Docs mini_lora_distributed_v1.md;evidence reports/mini_lora_distributed_2026-10-08.
+Incremental graphindex producedsymbolIDmismatch;fullreindex resolved. No native
+foldingcode edits. Current originaltraining stillrunning pendingfixedhandoff.
+
 ## 2026-10-08 — Mini internal LoRA preflight PASSED, runs STARTED
 
 Execution recycle_lora_v1d_20261008. Both seeds independently passed912hardAA
