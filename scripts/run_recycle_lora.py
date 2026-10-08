@@ -1,6 +1,6 @@
 """Fixed-budget Mini candidate last-recycle adaptation, no external compensator."""
 import argparse
-from contextlib import nullcontext
+from contextlib import contextmanager, nullcontext
 import json
 from pathlib import Path
 import time
@@ -58,6 +58,24 @@ class LoRARuntime:
                 assert not getattr(block,kind).linear_no_bias._forward_hooks
 
 
+@contextmanager
+def observe_projection_activity(bank):
+    """Distinguish zero native activations from a disconnected backward path."""
+    records=[dict(input_nonzero=0,output_gradient_norm=0.) for _ in bank.adapters]
+    handles=[]
+    try:
+        for i,adapter in enumerate(bank.adapters):
+            def observe(module,args,output,i=i):
+                records[i]['input_nonzero']+=int(torch.count_nonzero(args[0]))
+                def backward(gradient):
+                    records[i]['output_gradient_norm']+=float(gradient.norm())
+                output.register_hook(backward)
+            handles.append(adapter.register_forward_hook(observe))
+        yield records
+    finally:
+        for handle in handles: handle.remove()
+
+
 def check_lora_preflight(root):
     begin=time.monotonic();rt=LoRARuntime(root,'lora_prepare_work');b=rt.base
     result=dict(complete=False,seeds=[],zero_replays=0)
@@ -79,13 +97,23 @@ def check_lora_preflight(root):
         opt=torch.optim.AdamW(bank.parameters(),lr=1e-4,weight_decay=1e-4,eps=1e-8)
         site=b.sites['p3_s37'];aa=site['candidates'][0];gradients=[]
         for step in range(2):
-            opt.zero_grad(set_to_none=True);item,c=rt.conditioning(bank,site,aa)
-            loss=coordinate_objective(b.decode(item,c,0),item['teacher'][0],item['ca'],item['labels'])[0]
-            loss.backward()
+            opt.zero_grad(set_to_none=True)
+            with observe_projection_activity(bank) as activity:
+                item,c=rt.conditioning(bank,site,aa)
+                loss=coordinate_objective(b.decode(item,c,0),item['teacher'][0],item['ca'],item['labels'])[0]
+                loss.backward()
             norms={n:float(p.grad.norm()) if p.grad is not None else None for n,p in bank.named_parameters()}
             assert all(v is not None and np.isfinite(v) for v in norms.values())
-            assert all(v>0 for n,v in norms.items() if '.up.' in n or step==1),norms
-            gradients.append(norms);torch.nn.utils.clip_grad_norm_(bank.parameters(),1.,error_if_nonfinite=True);opt.step()
+            for i,record in enumerate(activity):
+                assert record['output_gradient_norm']>0, (i,record)
+                up=norms[f'adapters.{i}.up.weight'];down=norms[f'adapters.{i}.down.weight']
+                if record['input_nonzero']==0:
+                    # Observed dormant native single transitions, not a detached graph.
+                    assert i in (25,27) and up==down==0, (i,record)
+                else:
+                    assert up>0 and (step==0 or down>0), (i,record,norms)
+            gradients.append(dict(norms=norms,activity=activity))
+            torch.nn.utils.clip_grad_norm_(bank.parameters(),1.,error_if_nonfinite=True);opt.step()
         with torch.no_grad():
             item,c=rt.conditioning(None,site,aa)
             expected=np.load(Path(rt.lock['native_root'])/rt.preflight['baseline'][item['label']]['path'])['coordinates']

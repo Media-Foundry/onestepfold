@@ -61,3 +61,13 @@ def test_exception_nested_and_checkpoint_fail_closed():
     with pytest.raises(ValueError): RecycleLoRA(stack, 2, 2)
     with pytest.raises(RuntimeError):
         with bank.candidate(stack): pass
+
+
+def test_zero_native_input_has_zero_weight_gradient_but_connected_output():
+    from fastglycan.models.recycle_lora import LowRankProjection
+    adapter=LowRankProjection(8,8,2)
+    output=adapter(torch.zeros(3,8));output.retain_grad()
+    output.sum().backward()
+    assert output.grad.norm()>0
+    assert adapter.up.weight.grad is not None and adapter.up.weight.grad.norm()==0
+    assert adapter.down.weight.grad is not None and adapter.down.weight.grad.norm()==0

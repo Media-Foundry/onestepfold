@@ -30,6 +30,13 @@ any cycle, gradient or quality output; the corrected bundle preserves that failu
 A second bundle stopped on the old runtime work-directory collision before model
 load; each new bundle now owns its absolute work directory. Neither failure
 produced a trained outcome or changed any experimental setting.
+v1c completed the first seed's full912candidate zero replay, then stopped at the
+overstrict all-projections-nonzero-gradient gate. A fixed TRAIN T37A probe found
+native block12/13 single-transition output weights AND inputs exactly zero;
+their output gradients were nonzero(.0021113), so the backward path was connected.
+Those two locations remain in the unchanged bank; the gate now records activation
+and output gradients, permitting zero weight gradients ONLY at those two locations
+when their measured inputs are exactly zero. All active projections must pass.
 All original parameter hashes, requires_grad flags and empty gradients are checked.
 No-edit dispatch bypasses adaptation and returns original WT continuation. This is
 an explicit inference rule, not evidence that learned updates vanish on WT inputs.
@@ -57,8 +64,10 @@ compensation results are historical context, not parameter-matched causal contro
 
 Existing24WT/912target split replay audit is reused via source hashes. Before any
 formal training: both zero-init banks must reproduce all912candidates×2noise
-unadapted coordinates bitwise. Each bank's all up gradients must be finite/nonzero;
-after one discarded update, down gradients too. Disabled native replay after a
+unadapted coordinates bitwise. All weight gradients must be finite and present;
+every projection output must receive nonzero gradient. Active up gradients must
+be nonzero;after one discarded update, active down gradients too. The two proven
+dormant-input locations follow the explicit check above. Disabled native replay after a
 nonzero update, candidate order, WT24 continuation, immutable caches and native
 weights must pass. Local tests cover exception-safe hooks and no native gradients.
 No changed numeric tolerance following results. If preflight fails, stop and retain

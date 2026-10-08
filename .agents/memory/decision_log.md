@@ -1,3 +1,18 @@
+## 2026-10-08 — Mini LoRA dormant-input gradient diagnosis
+
+v1c passed912candidate/two-noise zero replay for first seed, then stopped before
+any optimizer update at two zero up gradients. Fixed TRAIN T37A probe found
+blocks12/13 single-transition output weights and activations exactlyzero, but
+output gradients .0021113157:connected backward, notmissing hooks. Original probe
+observer on frozen output failed;corrected read-only adapter-output observer saved.
+Same32LoRA locations retained. Revised gate records inputactivity/outputgradient,
+allowszero weightgradient ONLYindices25/27 withzero input/nonzero outputgradient;
+all active branches nonzero up and postupdate down required.13localtests pass.
+No trained outcomes read. Newfrozen1116file recycle_lora_v1d_20261008 preflight,
+lock cf5477c1377817fd1754887083104184ba4c0b01fb3ce1f18194f28105c7f698.
+Historicalpreflights and diagnostic archivedreports/mini_recycle_lora_2026-10-08.
+Status docs/mini_recycle_lora_status_2026-10-08.md. Noquality/speedclaimyet.
+
 ## 2026-10-08 — Mini LoRA execution correction before outcomes
 
 Initial v1 preflight stopped before any native cycle: native Pairformer had
