@@ -1,0 +1,23 @@
+2026-10-10 02:02:21,616 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/runner/batch_inference.py:403] INFO runner.batch_inference: Inference by Protenix: model_size: mini, with_feature: esm, model_version: v0.5.0, dtype: bf16
+2026-10-10 02:02:21,617 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/runner/batch_inference.py:408] INFO runner.batch_inference: Triangle_multiplicative kernel: torch, Triangle_attention kernel: torch
+2026-10-10 02:02:21,617 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/runner/batch_inference.py:412] INFO runner.batch_inference: enable_diffusion_shared_vars_cache: True, enable_efficient_fusion: True, enable_tf32: False
+2026-10-10 02:02:21,617 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/runner/inference.py:246] INFO runner.inference: Distributed environment: world size: 1, global rank: 0, local rank: 0
+2026-10-10 02:02:21,618 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/runner/inference.py:98] INFO root: LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+2026-10-10 02:02:21,618 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/runner/inference.py:127] INFO root: Finished environment initialization.
+train scheduler 16.0
+inference scheduler 16.0
+Diffusion Module has 16.0
+2026-10-10 02:02:39,698 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/runner/inference.py:246] INFO runner.inference: Loading from /data/user/shuang886/Folding/protenix_stage0_pkg/v1_1/runtime/checkpoint/protenix_mini_esm_v0.5.0.pt, strict: False
+2026-10-10 02:02:40,177 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/runner/inference.py:246] INFO runner.inference: Sampled key: module.input_embedder.atom_attention_encoder.linear_no_bias_ref_pos.weight
+2026-10-10 02:02:40,216 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/runner/inference.py:246] INFO runner.inference: Finish loading checkpoint.
+2026-10-10 02:02:40,219 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/runner/inference.py:246] INFO runner.inference: Model parameters: 135.22M
+PROBE_BATCH p18_s179 ['M', 'N'] checkpoint /data/user/shuang886/Folding/stage_pair_recovery_v1_20261010/n15/runs/final/272001/checkpoints/4104.pt
+FORWARD_BEGIN M [183, 183, 128]
+FORWARD_END M 1.3284159349859692
+BACKWARD_BEGIN M 0.3395065367221832
+BACKWARD_END M 2.1282702279859222
+FORWARD_BEGIN N [183, 183, 128]
+FORWARD_END N 0.01933220899081789
+BACKWARD_BEGIN N 2.0898265838623047
+BACKWARD_END N 0.05829322198405862
+PROBE_COMPLETE {'c4': 0, 'input_embedder': 0, 's1': 0, 'updates': 0, 'recycle': 0}

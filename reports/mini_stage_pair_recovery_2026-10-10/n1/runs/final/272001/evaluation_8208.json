@@ -1,0 +1,376 @@
+{
+  "checkpoint": "checkpoints/8208.pt",
+  "complete": true,
+  "exposure": {
+    "p3_s37": {
+      "A": 864,
+      "C": 864,
+      "D": 864,
+      "E": 864,
+      "F": 864,
+      "G": 864,
+      "H": 864,
+      "I": 864,
+      "K": 864,
+      "L": 864,
+      "M": 864,
+      "N": 864,
+      "P": 864,
+      "Q": 864,
+      "R": 864,
+      "S": 864,
+      "V": 864,
+      "W": 864,
+      "Y": 864
+    }
+  },
+  "latent": [
+    {
+      "hint_moments": {
+        "candidates": 19,
+        "centered": {
+          "cosine": 0.36992742344748086,
+          "energy_ratio": 0.1298994284448766,
+          "error_energy": 17023023.118328545,
+          "nmse": 0.8632441755407645,
+          "predicted_energy": 2561593.852735328,
+          "target_energy": 19719823.89300775
+        },
+        "common": {
+          "cosine": 0.4391941334463353,
+          "energy_ratio": 1.4508151339124784,
+          "error_energy": 8046060.455056357,
+          "nmse": 1.3927983319094193,
+          "predicted_energy": 8381217.875646955,
+          "target_energy": 5776902.707821188
+        },
+        "raw": {
+          "cosine": 0.34036207418950354,
+          "energy_ratio": 0.42918496557226743,
+          "error_energy": 25069083.573384907,
+          "nmse": 0.9832275321401402,
+          "predicted_energy": 10942811.728382284,
+          "target_energy": 25496726.60082894
+        }
+      },
+      "mismatch": {
+        "candidates": 19,
+        "centered": {
+          "cosine": 0.007938927146139146,
+          "energy_ratio": 0.3683792996040779,
+          "error_energy": 29279325.170107935,
+          "nmse": 1.3587423537002914,
+          "predicted_energy": 7938147.559521459,
+          "target_energy": 21548842.64141096
+        },
+        "common": {
+          "cosine": 0.8761427907375383,
+          "energy_ratio": 0.9439257583707721,
+          "error_energy": 1628003.1714052558,
+          "nmse": 0.24147795204511593,
+          "predicted_energy": 6363786.4872715995,
+          "target_energy": 6741829.461519915
+        },
+        "raw": {
+          "cosine": 0.290462471338731,
+          "energy_ratio": 0.5055353225528847,
+          "error_energy": 30907328.341513194,
+          "nmse": 1.0924918372056363,
+          "predicted_energy": 14301934.046793059,
+          "target_energy": 28290672.102930877
+        }
+      },
+      "moments": {
+        "candidates": 19,
+        "centered": {
+          "cosine": 0.6380980101034549,
+          "energy_ratio": 0.3683792996088346,
+          "error_energy": 12795737.025538169,
+          "nmse": 0.5938015901117711,
+          "predicted_energy": 7938147.5596239595,
+          "target_energy": 21548842.64141096
+        },
+        "common": {
+          "cosine": 0.87614279072711,
+          "energy_ratio": 0.9439257584221291,
+          "error_energy": 1628003.1715758725,
+          "nmse": 0.2414779520704231,
+          "predicted_energy": 6363786.48761784,
+          "target_energy": 6741829.461519915
+        },
+        "raw": {
+          "cosine": 0.7001971672130335,
+          "energy_ratio": 0.5055353225687466,
+          "error_energy": 14423740.197114045,
+          "nmse": 0.509840845938042,
+          "predicted_energy": 14301934.047241801,
+          "target_energy": 28290672.102930877
+        }
+      },
+      "parent": 3,
+      "pdb": "1W53",
+      "role": "train",
+      "site": "p3_s37"
+    }
+  ],
+  "parameter_movement_squared": {
+    "aa": 18.92268598787884,
+    "blocks.0": 723.2302066723593,
+    "blocks.1": 1396.5463814441136,
+    "left": 8.644731308460074,
+    "node": 225.14551918176315,
+    "right": 7.073295126357012
+  },
+  "predictions": [
+    {
+      "arm": "correct",
+      "label": "p3_s37_A",
+      "path": "coordinates/8208_correct_p3_s37_A.npz",
+      "sha256": "4de1b9c12d6aa18e34c73177184fc037904b7884a7ce86cdeb45946f695d8aa8"
+    },
+    {
+      "arm": "correct",
+      "label": "p3_s37_C",
+      "path": "coordinates/8208_correct_p3_s37_C.npz",
+      "sha256": "bf9d70f0cfea16388cbf88e589fe38c88f273f958f5c38fa78a223e32b46a3dd"
+    },
+    {
+      "arm": "correct",
+      "label": "p3_s37_D",
+      "path": "coordinates/8208_correct_p3_s37_D.npz",
+      "sha256": "d66c611f6c7e6d59e6bd5b59161a08cc534aa1c64b82ab4eaf302357a21482da"
+    },
+    {
+      "arm": "correct",
+      "label": "p3_s37_E",
+      "path": "coordinates/8208_correct_p3_s37_E.npz",
+      "sha256": "84f0c70e8998b1f0db97f35995ee1fb9fcb31160947227551c959282d1dacecd"
+    },
+    {
+      "arm": "correct",
+      "label": "p3_s37_F",
+      "path": "coordinates/8208_correct_p3_s37_F.npz",
+      "sha256": "2c529bd2d12f411a783be5c7cfea86bdc3a64adf913c26110306beaf91b81475"
+    },
+    {
+      "arm": "correct",
+      "label": "p3_s37_G",
+      "path": "coordinates/8208_correct_p3_s37_G.npz",
+      "sha256": "9e0cf001aa0710071e73f602b10f7abb5cfa596299cad1e2365db293198a3954"
+    },
+    {
+      "arm": "correct",
+      "label": "p3_s37_H",
+      "path": "coordinates/8208_correct_p3_s37_H.npz",
+      "sha256": "fb532e328422d5565ecb9ce9090a2f5bdb5bb6dc57969308f910a9b3d9fd35de"
+    },
+    {
+      "arm": "correct",
+      "label": "p3_s37_I",
+      "path": "coordinates/8208_correct_p3_s37_I.npz",
+      "sha256": "8f18b2b79ea7fb470938b6075e53997c62dbeb7a6c2fc1cadd71896b8b586bfd"
+    },
+    {
+      "arm": "correct",
+      "label": "p3_s37_K",
+      "path": "coordinates/8208_correct_p3_s37_K.npz",
+      "sha256": "a54058aa4ac2b6bbbd5646e743aff65f064e19c150c1ffa44e555b648e4a1d71"
+    },
+    {
+      "arm": "correct",
+      "label": "p3_s37_L",
+      "path": "coordinates/8208_correct_p3_s37_L.npz",
+      "sha256": "088087209c320f98ae1df6e5a260c6d0d863752a908465e55f61c075a76b6dad"
+    },
+    {
+      "arm": "correct",
+      "label": "p3_s37_M",
+      "path": "coordinates/8208_correct_p3_s37_M.npz",
+      "sha256": "3345097f4d9e5fee0e361e8054a9341fb5a7233f8364740d86bf327df0c79ffa"
+    },
+    {
+      "arm": "correct",
+      "label": "p3_s37_N",
+      "path": "coordinates/8208_correct_p3_s37_N.npz",
+      "sha256": "3ded719b0d7679e23ea035501e6eaf0e192e396000534186ace8acfbdac3b470"
+    },
+    {
+      "arm": "correct",
+      "label": "p3_s37_P",
+      "path": "coordinates/8208_correct_p3_s37_P.npz",
+      "sha256": "ea64d610a2897473df2290738d63e4a37efd9633e1d644a927bc28668799e46f"
+    },
+    {
+      "arm": "correct",
+      "label": "p3_s37_Q",
+      "path": "coordinates/8208_correct_p3_s37_Q.npz",
+      "sha256": "60eeebc98b8be02956dbe89a08f5c7ec4eb4816c2bab46bd3a4e43a57130b5bd"
+    },
+    {
+      "arm": "correct",
+      "label": "p3_s37_R",
+      "path": "coordinates/8208_correct_p3_s37_R.npz",
+      "sha256": "9122d0782ab30812adfd1d084d292b2cfdb1d963946c22281359b83c82877d54"
+    },
+    {
+      "arm": "correct",
+      "label": "p3_s37_S",
+      "path": "coordinates/8208_correct_p3_s37_S.npz",
+      "sha256": "a67f5af3ea289cd4a85904ac7720c224c37f9b474f9ac8ddf605456cb4399460"
+    },
+    {
+      "arm": "correct",
+      "label": "p3_s37_V",
+      "path": "coordinates/8208_correct_p3_s37_V.npz",
+      "sha256": "a80c6dbc49b8b6c8434c8a2a6269bc4e7d8828733e17579db148d6ddf649be45"
+    },
+    {
+      "arm": "correct",
+      "label": "p3_s37_W",
+      "path": "coordinates/8208_correct_p3_s37_W.npz",
+      "sha256": "5b6c43f861b1c906dee9ca8a8b96447c1df88b5d930ca00fff4774ce240348c5"
+    },
+    {
+      "arm": "correct",
+      "label": "p3_s37_Y",
+      "path": "coordinates/8208_correct_p3_s37_Y.npz",
+      "sha256": "85f27e23987d10831e6bf19ad34160a75e26ba6135e5bb9d7e624d6edf552dec"
+    },
+    {
+      "arm": "mismatched",
+      "donor": "C",
+      "label": "p3_s37_A",
+      "path": "coordinates/8208_mismatched_p3_s37_A.npz",
+      "sha256": "f120c1f05bc988e9a7e2217331b3015795ede3a440025f0464b6c4aacae08b66"
+    },
+    {
+      "arm": "mismatched",
+      "donor": "D",
+      "label": "p3_s37_C",
+      "path": "coordinates/8208_mismatched_p3_s37_C.npz",
+      "sha256": "ce7f8fe70de92895c5d45b2fd0a60ab62158761ea9a1dafd9d8b88de3bbee30c"
+    },
+    {
+      "arm": "mismatched",
+      "donor": "E",
+      "label": "p3_s37_D",
+      "path": "coordinates/8208_mismatched_p3_s37_D.npz",
+      "sha256": "b327e795375204b38a524f8cc66d43765c391a12d8f6499ad3dc91088c59285b"
+    },
+    {
+      "arm": "mismatched",
+      "donor": "F",
+      "label": "p3_s37_E",
+      "path": "coordinates/8208_mismatched_p3_s37_E.npz",
+      "sha256": "6761fb087647e8ae0af1e8d0d042be5806c63965f892e39f187cb50033e795af"
+    },
+    {
+      "arm": "mismatched",
+      "donor": "G",
+      "label": "p3_s37_F",
+      "path": "coordinates/8208_mismatched_p3_s37_F.npz",
+      "sha256": "96420e644ade726aadb0b6eb5c956609ed3543e8a670549079e5dd802c7c7e0d"
+    },
+    {
+      "arm": "mismatched",
+      "donor": "H",
+      "label": "p3_s37_G",
+      "path": "coordinates/8208_mismatched_p3_s37_G.npz",
+      "sha256": "4d4d69b25523808608c6deeb97e3fb4ebfcbabc9a3202f69f2ed72f9051bf09f"
+    },
+    {
+      "arm": "mismatched",
+      "donor": "I",
+      "label": "p3_s37_H",
+      "path": "coordinates/8208_mismatched_p3_s37_H.npz",
+      "sha256": "9d1e0a2d017c82545e11eda8d50c432b5e1585d1203e20e12625e9cd7a7c13e6"
+    },
+    {
+      "arm": "mismatched",
+      "donor": "K",
+      "label": "p3_s37_I",
+      "path": "coordinates/8208_mismatched_p3_s37_I.npz",
+      "sha256": "b38751164a2af216124c60f50823f80a9994bca0195f6f26decee7326d37a944"
+    },
+    {
+      "arm": "mismatched",
+      "donor": "L",
+      "label": "p3_s37_K",
+      "path": "coordinates/8208_mismatched_p3_s37_K.npz",
+      "sha256": "02451e5861cd193da6b0592cbb213f99c289b7285236619a561e6a4d455c0daa"
+    },
+    {
+      "arm": "mismatched",
+      "donor": "M",
+      "label": "p3_s37_L",
+      "path": "coordinates/8208_mismatched_p3_s37_L.npz",
+      "sha256": "0cb2c06707c18cb1cb81d9ca3ac022768d0a594cfbf8918be013ad7676112b48"
+    },
+    {
+      "arm": "mismatched",
+      "donor": "N",
+      "label": "p3_s37_M",
+      "path": "coordinates/8208_mismatched_p3_s37_M.npz",
+      "sha256": "dce6d501878de9678a07b6bf744f4ff1d84fce8fc7d397932bf6fb4bd2c51ddb"
+    },
+    {
+      "arm": "mismatched",
+      "donor": "P",
+      "label": "p3_s37_N",
+      "path": "coordinates/8208_mismatched_p3_s37_N.npz",
+      "sha256": "8bc54b13a9aa945ddc5d9a8848aef64f6a780ab5d451f1a9b2e5365a5344d127"
+    },
+    {
+      "arm": "mismatched",
+      "donor": "Q",
+      "label": "p3_s37_P",
+      "path": "coordinates/8208_mismatched_p3_s37_P.npz",
+      "sha256": "e6a1e3484e52183abf98250fc532b53eeb2625265a2682be17e701317a7de509"
+    },
+    {
+      "arm": "mismatched",
+      "donor": "R",
+      "label": "p3_s37_Q",
+      "path": "coordinates/8208_mismatched_p3_s37_Q.npz",
+      "sha256": "6905f2a17a31ed4415cc4039ac06bb14fd38cf86b1524d09590ea86cb659c67e"
+    },
+    {
+      "arm": "mismatched",
+      "donor": "S",
+      "label": "p3_s37_R",
+      "path": "coordinates/8208_mismatched_p3_s37_R.npz",
+      "sha256": "b8297a0c2469f0aa9cb21185d9ef16c7bdd3d65b7e1ce19e5fd375c3489c485f"
+    },
+    {
+      "arm": "mismatched",
+      "donor": "V",
+      "label": "p3_s37_S",
+      "path": "coordinates/8208_mismatched_p3_s37_S.npz",
+      "sha256": "8e2d0d381735c4a367071b1a369dbd60e97a36193e50f9bff800101efb57e9d9"
+    },
+    {
+      "arm": "mismatched",
+      "donor": "W",
+      "label": "p3_s37_V",
+      "path": "coordinates/8208_mismatched_p3_s37_V.npz",
+      "sha256": "e7019aaa7735ad8d3c82e75a48f9959148595d5c6bf9f59f9f8b9943d1ed27e2"
+    },
+    {
+      "arm": "mismatched",
+      "donor": "Y",
+      "label": "p3_s37_W",
+      "path": "coordinates/8208_mismatched_p3_s37_W.npz",
+      "sha256": "3a366f92ec70234ef1b29b5e57e071901addb913688cc06c9e1b55ba6b19c409"
+    },
+    {
+      "arm": "mismatched",
+      "donor": "A",
+      "label": "p3_s37_Y",
+      "path": "coordinates/8208_mismatched_p3_s37_Y.npz",
+      "sha256": "ef3ef88de3bc84ba9a8f3de60af54d76347f9acb6a2008aee7a4c2d215471435"
+    }
+  ],
+  "seconds": 2.368954695004504,
+  "sha256": "2d1eb7dca943967e8e18ebb6e231f880cab4368bb10c83d1f897eb9206ed467f",
+  "step": 8208
+}

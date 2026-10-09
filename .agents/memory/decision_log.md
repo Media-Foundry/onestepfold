@@ -1,3 +1,67 @@
+## 2026-10-10 — Stage-aligned recovery: n1 COMPLETE, n15 still pending
+
+New architecture keeps native blocks14/15 at their real candidate block13 input,
+without new terminalLN/readout.1315332params, fewer than old1331972; package
+comparison changes depth/output/initialization, not a capacity-only intervention.
+Four n1 runs all8208steps/864exposures and all5nodes completed and verified.
+Final AAresidual NMSE .593802/.592038; Hint .590240/.595565, versus prior appended
+.723-.739. Correct donor mismatch becomes1.35-1.36. Final responseRMSE .166355/
+.166679vsB .423960, rho .877193 both, selectS matching Exact old noise; Hint
+response .180139/.181505, selectsI/regret .068644vsB .167167. Intermediate hint
+improves block14 AA .862->.781-.786 but no consistent final residual advantage.
+Geometry12/12/12/13 vsB19/38;6-7newfailures and60-68severeclashes vsB10.
+No promotion or claim of transfer; single fit still incomplete, loss declining.
+Six local/remote tests;825frozen source hashes and115exported evidence hashes;
+20independent checkpoint replays,252rho/84regrets/60controls/3192outputrecords
+verified.32832n1updates/912S1 plus1824preparationS1,440extra auditforwards.
+
+n15 four workers remain at the predeclared8208budget, no quality-based restart.
+At interim export three training runs complete; Final/272003 still at lastwritten
+step1420, pythonPID715286 (proot715283), abnormal long nextupdate. Controller
+PID701960 stilln15, six-hourphasecap; scoring and verification queuePID711844
+remain active. Old roots/jobs unchanged. A separate2candidate no-update probe
+onHIP4 using savedFinal0014104 reproduced samep18_s179M/Nbatch successfully;
+zero native/S1/optimizer calls. TinyHIP2operation also succeeded. Different
+checkpoint/device means no unique runtime/root-cause conclusion. Nonblocking
+py-spy0.4.2failedonprootloader missingBSS; no process was altered. Keep all logs.
+Only a local timed-outSSH probe and unreachable diagnostic installer were
+terminated; scientific workers not stopped, moved, resumed or extended.
+
+Interim evidence reports/mini_stage_pair_recovery_2026-10-10 has separate
+interim_manifest/analysis_interim/verification_interim and explicitly
+scientific_experiment_complete=false. Full825source lock remains dd033f050b734f2c
+39efb8a8653fc410b5eaf283be4656374a01854c1fc2279a (concatenate lines).
+Report docs/mini_stage_pair_recovery_findings_2026-10-10.md. Goal remains ACTIVE;
+finish/diagnose n15, collect all fixed terminal scores and independent replays,
+then full export/verification and paired report. Do not call current interim a
+closed8runexperiment or choose among the3completed joint runs.
+
+## 2026-10-10 — Native-stage-aligned pair recovery LOCKED
+
+Active goal authorizes further model improvement after single-site fit closed.
+Prior goal turn is progress (981076f4); prior processes verified terminal/missing.
+New hypothesis: keep pretrained blocks14/15 at their native input depth using
+actual candidate warm block13 boundary, instead of appending them after finalz.
+New StagePairRecovery copies pair-only native weights, zero row/column edit heads,
+no finalLN/readout; initial output must equalB_z. FinalB_inputs/B_s frozen.
+Teacher block14 is TRAIN-only auxiliarylabel, never an inference input.
+Paired objectivesfinal versusmean(final,block14), same originalq/AdamW/batch2;
+newnode seeds272001/272003, matchedinitialhash. Two predeclared cohorts:
+n1T37 and n15original15parents27sites,8208updates each;8fresh runs total.
+n1 nodes0/304/1216/4104/8208; n15nodes0/4104/8208 all48sites. Always terminal
+main andfixed donorresidual; all development, no newconfirmation/modelpromotion.
+Cache preparation912warmrecycles+2052TRAINteacherrecycles=2964, all old final
+states replay;1824baselineS1. Main total65664updates/131328candidateforwards,
+30096S1 pluspreparation1824=31920. NoESM/MSAprep, noS1backward or oracleinputs.
+FourHIP0..3 workers, HIP5otherjob untouched;6hour cap/phase, no budgetextension.
+Native suffix prediction adds two pair blocks after computingB_s; notfree depth.
+Protocol docs/mini_stage_pair_recovery_v1.md. Rootstage_pair_recovery_v1_20261010;
+lock dd033f050b734f2c39efb8a8653fc410b5eaf283be4656374a01854c1fc2279a.
+Six local tests and compilation pass. GitNexus981076f4 current, native step/train
+entry impactLOW; PairRecoveryUNKNOWN confirmedtextcaller and leftunchanged.
+No priorruntime/modelcode modified. Stagealignment is apackage intervention;
+withinarchitecture final/hint isolates statedobjective, not everypackagedchange.
+
 ## 2026-10-10 — Single-site pair candidate fit CLOSED, partial recovery
 
 Four fresh unchanged two-block models onTRAIN1W53T37,8208updates each; all

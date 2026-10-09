@@ -1,0 +1,217 @@
+{
+  "checkpoint": "checkpoints/1216.pt",
+  "complete": true,
+  "exposure": {
+    "p3_s37": {
+      "A": 128,
+      "C": 128,
+      "D": 128,
+      "E": 128,
+      "F": 128,
+      "G": 128,
+      "H": 128,
+      "I": 128,
+      "K": 128,
+      "L": 128,
+      "M": 128,
+      "N": 128,
+      "P": 128,
+      "Q": 128,
+      "R": 128,
+      "S": 128,
+      "V": 128,
+      "W": 128,
+      "Y": 128
+    }
+  },
+  "latent": [
+    {
+      "hint_moments": {
+        "candidates": 19,
+        "centered": {
+          "cosine": 0.20323567560986697,
+          "energy_ratio": 0.014117968460755519,
+          "error_energy": 19045828.42388525,
+          "nmse": 0.9658214255472388,
+          "predicted_energy": 278403.8517731365,
+          "target_energy": 19719823.89300775
+        },
+        "common": {
+          "cosine": 0.7136666255548606,
+          "energy_ratio": 0.37331062910498775,
+          "error_energy": 2895511.4585418217,
+          "nmse": 0.5012221262825959,
+          "predicted_energy": 2156579.1841350347,
+          "target_energy": 5776902.707821188
+        },
+        "raw": {
+          "cosine": 0.380131142380313,
+          "energy_ratio": 0.09550179025055734,
+          "error_energy": 21941339.88242707,
+          "nmse": 0.8605551695296337,
+          "predicted_energy": 2434983.0359081714,
+          "target_energy": 25496726.60082894
+        }
+      },
+      "mismatch": null,
+      "moments": {
+        "candidates": 19,
+        "centered": {
+          "cosine": 0.30876438599652245,
+          "energy_ratio": 0.04388860112854143,
+          "error_energy": 19706820.712899294,
+          "nmse": 0.9145187535514409,
+          "predicted_energy": 945748.5594705908,
+          "target_energy": 21548842.64141096
+        },
+        "common": {
+          "cosine": 0.844370708413282,
+          "energy_ratio": 0.6094580337787879,
+          "error_energy": 1962512.014613983,
+          "nmse": 0.2910948765191019,
+          "predicted_energy": 4108862.1276898324,
+          "target_energy": 6741829.461519915
+        },
+        "raw": {
+          "cosine": 0.48819884205928765,
+          "energy_ratio": 0.1786670415170791,
+          "error_energy": 21669332.727513276,
+          "nmse": 0.7659532671642806,
+          "predicted_energy": 5054610.687160423,
+          "target_energy": 28290672.102930877
+        }
+      },
+      "parent": 3,
+      "pdb": "1W53",
+      "role": "train",
+      "site": "p3_s37"
+    }
+  ],
+  "parameter_movement_squared": {
+    "aa": 1.130758560924974,
+    "blocks.0": 92.88414645419576,
+    "blocks.1": 80.19097911596587,
+    "left": 1.3052510690102535,
+    "node": 57.02461865902428,
+    "right": 0.7671442493849103
+  },
+  "predictions": [
+    {
+      "arm": "correct",
+      "label": "p3_s37_A",
+      "path": "coordinates/1216_correct_p3_s37_A.npz",
+      "sha256": "2bb296d3623271d24c2a2d2699d9b188a78d5c69887124751313d95698b7647b"
+    },
+    {
+      "arm": "correct",
+      "label": "p3_s37_C",
+      "path": "coordinates/1216_correct_p3_s37_C.npz",
+      "sha256": "55116fc1a2e337dd00645f034f62f374f2d52213eb240dce844065b62583a6d6"
+    },
+    {
+      "arm": "correct",
+      "label": "p3_s37_D",
+      "path": "coordinates/1216_correct_p3_s37_D.npz",
+      "sha256": "76b614d7fc54149cbcb1ea600a2e9a79a21dcbdc9423d5808acb7d3e93338563"
+    },
+    {
+      "arm": "correct",
+      "label": "p3_s37_E",
+      "path": "coordinates/1216_correct_p3_s37_E.npz",
+      "sha256": "69b7b6310ac2bf906510a5be2e9c75e0d8fe9e330eda535e18df436f7e908d89"
+    },
+    {
+      "arm": "correct",
+      "label": "p3_s37_F",
+      "path": "coordinates/1216_correct_p3_s37_F.npz",
+      "sha256": "ca74080406ee87048149f5afd870db6220320dfcfdb53050d69b5cc20636f44f"
+    },
+    {
+      "arm": "correct",
+      "label": "p3_s37_G",
+      "path": "coordinates/1216_correct_p3_s37_G.npz",
+      "sha256": "720610f724dffda0e0d5b3298dead2f8dd507f369a843170e5b8c3bdfe05030a"
+    },
+    {
+      "arm": "correct",
+      "label": "p3_s37_H",
+      "path": "coordinates/1216_correct_p3_s37_H.npz",
+      "sha256": "ddafe4060b8beeeddee540b90705988432be1210bbe844404e96fdeed113896e"
+    },
+    {
+      "arm": "correct",
+      "label": "p3_s37_I",
+      "path": "coordinates/1216_correct_p3_s37_I.npz",
+      "sha256": "5d059b19fe68fa0fde8d678e4ed18c104146466039f1d95f7d5dec26e3d3b696"
+    },
+    {
+      "arm": "correct",
+      "label": "p3_s37_K",
+      "path": "coordinates/1216_correct_p3_s37_K.npz",
+      "sha256": "081390f05ef8140e7c1963a1eae0cde9b2e5e86af2819772c69752c706d4c9ba"
+    },
+    {
+      "arm": "correct",
+      "label": "p3_s37_L",
+      "path": "coordinates/1216_correct_p3_s37_L.npz",
+      "sha256": "cdc9d2b1f0f09bc82466de5e7b7e55ddc220df3f206e07dc2cc4b9defc73c92c"
+    },
+    {
+      "arm": "correct",
+      "label": "p3_s37_M",
+      "path": "coordinates/1216_correct_p3_s37_M.npz",
+      "sha256": "a5f3dc4fd632882cedd815eba101fb540e834509dc10456c5bb4ffe3550403f2"
+    },
+    {
+      "arm": "correct",
+      "label": "p3_s37_N",
+      "path": "coordinates/1216_correct_p3_s37_N.npz",
+      "sha256": "adf16482f74ba9a5c7ce14e519266bb96c1198717dad7e67a7ed3ee2efdba621"
+    },
+    {
+      "arm": "correct",
+      "label": "p3_s37_P",
+      "path": "coordinates/1216_correct_p3_s37_P.npz",
+      "sha256": "34f5c4e5641e89cbe1df4dbdebbe213933e6f76748d4f02f00d2ff868a58e78c"
+    },
+    {
+      "arm": "correct",
+      "label": "p3_s37_Q",
+      "path": "coordinates/1216_correct_p3_s37_Q.npz",
+      "sha256": "78ab6e4e87ee4699332d59b41205cf9cb37b2e9fa8fd3be600b984d4489bf04a"
+    },
+    {
+      "arm": "correct",
+      "label": "p3_s37_R",
+      "path": "coordinates/1216_correct_p3_s37_R.npz",
+      "sha256": "c00dbe1369e36c980ace30d860fd6c0eb55c69b679d3c79789f43b83a4aa3eeb"
+    },
+    {
+      "arm": "correct",
+      "label": "p3_s37_S",
+      "path": "coordinates/1216_correct_p3_s37_S.npz",
+      "sha256": "e2c5f0decff034f80a1dceeaaa89188a4fbbd4d0496313c38cb7880a4e6c3853"
+    },
+    {
+      "arm": "correct",
+      "label": "p3_s37_V",
+      "path": "coordinates/1216_correct_p3_s37_V.npz",
+      "sha256": "abbd12d0293943dfc025837e6c7653caea89ec7b93e7cb26f4f5884efe96bb65"
+    },
+    {
+      "arm": "correct",
+      "label": "p3_s37_W",
+      "path": "coordinates/1216_correct_p3_s37_W.npz",
+      "sha256": "852d3e1994368002edcdab4e04ebb23a53c11de69ebd71f5203345584d6caaef"
+    },
+    {
+      "arm": "correct",
+      "label": "p3_s37_Y",
+      "path": "coordinates/1216_correct_p3_s37_Y.npz",
+      "sha256": "ce34aa8b5784b7d08963aebf5cb8c9fb542298209da8bf2a11f97c6f136b0efd"
+    }
+  ],
+  "seconds": 1.2287224380124826,
+  "sha256": "c44448cf03bab5504a6fd348850f028a87da7c04c1b6521f6f0442ea15a7e70e",
+  "step": 1216
+}

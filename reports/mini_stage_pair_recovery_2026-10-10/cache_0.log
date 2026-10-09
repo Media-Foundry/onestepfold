@@ -1,0 +1,25 @@
+2026-10-10 01:28:16,930 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/runner/batch_inference.py:403] INFO runner.batch_inference: Inference by Protenix: model_size: mini, with_feature: esm, model_version: v0.5.0, dtype: bf16
+2026-10-10 01:28:16,930 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/runner/batch_inference.py:408] INFO runner.batch_inference: Triangle_multiplicative kernel: torch, Triangle_attention kernel: torch
+2026-10-10 01:28:16,930 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/runner/batch_inference.py:412] INFO runner.batch_inference: enable_diffusion_shared_vars_cache: True, enable_efficient_fusion: True, enable_tf32: False
+2026-10-10 01:28:16,931 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/runner/inference.py:246] INFO runner.inference: Distributed environment: world size: 1, global rank: 0, local rank: 0
+2026-10-10 01:28:16,931 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/runner/inference.py:98] INFO root: LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+2026-10-10 01:28:16,931 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/runner/inference.py:127] INFO root: Finished environment initialization.
+train scheduler 16.0
+inference scheduler 16.0
+Diffusion Module has 16.0
+2026-10-10 01:28:33,355 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/runner/inference.py:246] INFO runner.inference: Loading from /data/user/shuang886/Folding/protenix_stage0_pkg/v1_1/runtime/checkpoint/protenix_mini_esm_v0.5.0.pt, strict: False
+2026-10-10 01:28:33,826 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/runner/inference.py:246] INFO runner.inference: Sampled key: module.input_embedder.atom_attention_encoder.linear_no_bias_ref_pos.weight
+2026-10-10 01:28:33,867 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/runner/inference.py:246] INFO runner.inference: Finish loading checkpoint.
+2026-10-10 01:28:33,870 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/runner/inference.py:246] INFO runner.inference: Model parameters: 135.22M
+STAGE_CACHE_SITE 0 p0_s48 45.10027856301167
+STAGE_CACHE_SITE 0 p2_s30 49.516994976002024
+STAGE_CACHE_SITE 0 p4_s2 60.453821008995874
+STAGE_CACHE_SITE 0 p6_s10 64.53356971300673
+STAGE_CACHE_SITE 0 p8_s101 70.4963225889951
+STAGE_CACHE_SITE 0 p10_s45 75.37351888499688
+STAGE_CACHE_SITE 0 p12_s11 88.02316837399849
+STAGE_CACHE_SITE 0 p14_s6 103.13583585098968
+STAGE_CACHE_SITE 0 p16_s5 109.86623426500591
+STAGE_CACHE_SITE 0 p18_s13 131.0875678420125
+STAGE_CACHE_SITE 0 p20_s100 148.67501482900116
+STAGE_CACHE_SITE 0 p22_s25 171.52517953599454
