@@ -1,3 +1,17 @@
+## 2026-10-09 — Mini recycle response audit CLOSED
+
+Read-only 48-site/24-parent/912-mutant diagnostic, HIP0–5. Missing target3
+was reconstructed from existing candidate inputs, then target4 and two-noise
+S1 replayed bitwise. 8208 native recycle calls, 10944 S1 outputs, zero updates.
+All 4560 disabled/LoRA candidate replays matched prior archived coordinates.
+Held centered s NMSE .06454 native vs ~.06685–.06689 adapted; centered z
+.62547 native vs .61683–.61857 adapted. Weak z improvements cover 7–8/9 held
+parents; adapted increments remove only ~1.4–1.8% normalized held z residual.
+Common component dominates LoRA increment energy: s >99.6%, z >97.8%.
+This is not proof common shifts are harmful; decoder sensitivity untested.
+No promotion or automatic training/rank/loss search. All panels development.
+Report: docs/mini_recycle_response_findings_2026-10-09.md.
+
 ## 2026-10-09 — Mini LoRA noise control CLOSED, no promotion
 
 All4fresh single/dual x272001/272003 runs8208updates,all eval/replay complete.
