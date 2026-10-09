@@ -1,3 +1,80 @@
+## 2026-10-10 — Original runtime terminal; identical retry passed stalled prefix
+
+Originalproot715283 andPython715286 are actuallygone afterSIGTERM. proot
+returned0, so originalcontroller briefly markedtraining complete and launched
+CPUscore769596; score then failed onmissing4104checkpoint. Originalcontroller
+terminalfailed is preserved, never treatedas completeexperiment. This exposes
+why processcode0 alone is insufficient; verified reports/checkpoints remain the
+gates. Readyqueue exited with originalfailure after seven successful audits.
+
+One unchanged retry launchedcontroller772199, workerproot772206 onHIP0;
+rootruntime_retry_v1. RecoverylockSHA1a19de91032b33d225d358d29186e3209c284a717eea8d458aec25d8edc75e53.
+Absolute deadline1791589329.1015267 unchanged. It passedupdate1421 and all1420
+recordedprefix loss/gradient vectors matchedexactly again. No secondretry.
+Observer periodicstack logs work. Final scientificresult remainspending until
+8208, allfixedscore nodes and independenttensorverification complete.
+
+Exporter nowmaps acceptedfinal272003 to retryroot explicitly and archives the
+incompleteoriginal, diagnosticreplay and extraaccounting. Offline verifier
+independently recomputes prefix comparisons and recordedcosts. Threefocused
+operationaltests pass: incompleteexport rejection, original/replaceprovenance,
+observerargument/Main/exit-code preservation. Existingfrozen825sources untouched.
+Also reconstruct frozenTRAINobjectives from savedfull-fieldmoments, originalq
+andlength: distinctfrom moving-parameter historylosses. Descriptiveonly, no new
+weights/labels/hyperparameterselection. Fullreport awaits allfourjointterminals.
+
+## 2026-10-10 — Runtime replay COMPLETE; one unchanged operational retry LOCKED
+
+Bounded1421-update replay completed in233.019sec onHIP0; all1420 prefix
+updates exactly matched the original two losses and preclip gradient norm
+(4260scalars,maxabs/maxrel0), and nextupdate1421 completed. Initialcheckpoint
+SHA1e7132008575445fe894491b918ff8f2fef8781c7b54bc77a9ecb29b69d51a3a.
+This does not prove every unobserved original parameter bit or identify a hang
+rootcause. OriginalFinal272003 remained live, lastrecord1420 for~58min;
+all other scientific train/score jobs and seven checkpoint audits now complete.
+
+Operational recovery only: preserve original attempt/controller and replay;
+terminate confirmed process group715283 only after state validation and observe
+terminal failure. ONE fresh Final272003 run onfreeHIP0, frozen825sources and
+identical model/loss/AdamW/schedule/data/8208budget; separate runtime_retry_v1.
+No resumed diagnostic weights, no quality-based seed/checkpoint search. Original
+n15 lock mtime+21600sec remains absolute deadline for train/score/verification.
+Stdlib faulthandler observer adds stack logging only. No HIP5/otherjobs touched.
+
+Protocol docs/mini_stage_pair_runtime_recovery_v1.md; original controller may
+remainfailed, separate execution_recovery records assembled completion. Export
+source-provider map and all failures. On success total acceptedupdates65664;
+plus1421diagnostic and1420recordeddiscarded gives68505recordedupdates, with
+unobserved nextupdate partial work explicitly unknown. Initialfailed evaluation
+adds1824S1 to31920scientific/prep =33744. No-update probe and checkpoint
+verification forwards separate. Scientific quality/transfer still notqualified.
+
+## 2026-10-10 — Bounded runtime replay LOCKED; original scientific run unchanged
+
+Previous goal turn made progress (2c63ad13 pushed); active goal is not complete.
+Revalidated originalcontroller701960, stalledworker715286/proot715283 live,
+n15Final272003 lastwritten1420 for>30min. All other scientific training done;
+scoring continues. Do not call the live run stopped or classify it by quality.
+Fixed readonly verifierqueue's head-of-line wait: oldsupervisor711844 had no
+child, terminated only it, newreadyqueue751338 verifies completed hints onHIP4.
+No scientific worker/code/parameter/budget changed; oldlogs/source retained.
+
+Observer-only proot bind reveals correctPythonbinary for py-spy; next read is
+OSpermissiondenied. sudo-n requirespassword; no privilege/securitysetting
+changed. perfuser sampling denied byperf_event_paranoid4. No claimed hangroot.
+These limitations do not block independent completed-run verification.
+
+New bounded execution diagnostic only: originalFinal272003 checkpoint0 and
+AdamWstate, original27site/twoAAschedule/loss/q/clip; replay1421updates onfreeHIP0.
+Compare all recordedlosses/gradnorms through1420, save1420/1421, phase logs near
+suspectstep.15mincap; extra<=1421updates/2842trainingforwards separatelycounted,
+zero native/S1/heldevaluation. Preserveoriginal process; noautomatic8208
+continuation or substitution. Protocol docs/mini_stage_pair_runtime_replay_v1.md;
+script scripts/replay_stage_pair_prefix.py uses immutable existingmodelhelpers.
+Initialdigest/source/cpSHA mustmatch. Scalartrajectoryequality is not fullstate
+bit-equality proof. Any runtime recovery must be separately recorded with all
+failedattempts and repeatedwork, never chosen by heldquality.
+
 ## 2026-10-10 — Stage-aligned recovery: n1 COMPLETE, n15 still pending
 
 New architecture keeps native blocks14/15 at their real candidate block13 input,

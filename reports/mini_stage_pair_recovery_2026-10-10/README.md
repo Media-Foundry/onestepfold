@@ -3,10 +3,23 @@
 Current snapshot: **n1 complete; n15 pending**, not a closed full experiment.
 `interim_manifest.json` hashes the completed single-site evidence and a controller
 snapshot. `analysis_interim.json` and `verification_interim.json` explicitly set
-`scientific_experiment_complete=false`. Once the full controller and all eight
-independent replays finish, the full export uses a separate `manifest.json`.
-The final/272003 joint run has an anomalously long update; do not select the
-other three runs or classify this unresolved runtime state as model quality.
+`scientific_experiment_complete=false`. A separate final `manifest.json` will be produced only after all eight accepted
+runs and their independent checks complete. The original controller is now failed:
+one n15 worker stalled after1420, a separately locked prefix replay succeeded,
+and exactly one unchanged operational retry is running under the original absolute
+deadline. Do not select the other three models or treat a runtime failure as quality.
+
+`runtime_snapshot/manifest.json` is a later, explicitly incomplete operational
+snapshot (retry observed at4104). `verify_runtime_snapshot.py` independently checks
+its72file hashes, failed-attempt preservation and4260identical prefix scalars.
+`runtime_snapshot_verification.json` is NOT completion of the scientific trial.
+The original115-file interim manifest still describes the earlier committed raw
+snapshot. It is not silently replaced by the later runtime state.
+
+`diagnose_objective.py` reconstructs the fixed TRAIN objectives using saved full-
+field moments, originalq and lengths. It separates frozen-checkpoint objectives
+from moving-parameter optimizer-history means; it does not select new weights or
+hyperparameters. The optional n1-only output is descriptive and already available.
 
 Two predeclared cohorts (one historical TRAIN site; original15TRAINparents),
 two objectives (final; equal-weight corresponding block14 and final labels),

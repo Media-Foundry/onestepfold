@@ -98,9 +98,52 @@ def verify_stage_results(root, *, interim=False):
                 checks['runs']+=1;checks['updates']+=8208;checks['s1']+=report['counts']['s1']
     assert checks['runs']==(4 if interim else 8)
     assert checks['updates']==(32832 if interim else 65664) and checks['s1']==(2736 if interim else 31920)
+    operational=None
+    if not interim and manifest.get('operational_recovery'):
+        read=lambda name:json.loads((root/name).read_text())
+        original=read('controller.json');recovery=read('execution_recovery.json');rl=read('runtime_recovery_lock.json')
+        assert not original['complete'] and original['phase']=='failed'
+        assert recovery['complete'] and recovery['phase']=='closed' and recovery['one_retry_only']
+        assert hashlib.sha256((root/'runtime_recovery_lock.json').read_bytes()).hexdigest()==recovery['recovery_lock_sha256']
+        assert recovery['deadline_unix']==rl['deadline_unix']
+        assert all(j['status']=='complete' and j['exit_code']==0 for j in recovery['jobs'].values())
+        assert (root/'runtime_retry_v1/training_lock.json').read_bytes()==(root/'n15/training_lock.json').read_bytes()
+        providers=manifest['source_provider_map'];assert len(providers)==8
+        assert providers['n15/runs/final/272003'].endswith('/runtime_retry_v1/runs/final/272003')
+        for key,value in providers.items():
+            if key!='n15/runs/final/272003':assert value==manifest['source']+'/'+key
+        failed=root/'failed_attempt/n15_final_272003'
+        oldrows=[json.loads(s) for s in (failed/'history.jsonl').read_text().splitlines()]
+        replayrows=[json.loads(s) for s in (root/'runtime_replay_v1/history.jsonl').read_text().splitlines()]
+        retryrows=[json.loads(s) for s in (root/'n15/runs/final/272003/history.jsonl').read_text().splitlines()]
+        diagnostic=read('runtime_replay_v1/result.json');dl=read('runtime_replay_v1/replay_lock.json')
+        assert len(oldrows)==1420 and len(replayrows)==1421 and len(retryrows)==8208
+        assert oldrows==dl['original_history'] and diagnostic['counts']['updates']==1421
+        assert diagnostic['training_forwards']==2842 and not diagnostic['scientific_replacement']
+        assert diagnostic['next_update_completed'] and diagnostic['complete']
+        assert not json.loads((failed/'report.json').read_text())['complete']
+        exact_retry=0;maximum=0.
+        for a,b,c in zip(oldrows,replayrows,retryrows):
+            for key in ('step','site','aa'):assert a[key]==b[key]==c[key]
+            v=lambda row:row['loss']+[row['gradient_norm']]
+            assert v(a)==v(b)
+            exact_retry+=v(a)==v(c);maximum=max(maximum,max(abs(x-y) for x,y in zip(v(a),v(c))))
+        assert diagnostic['exact_updates']==1420 and diagnostic['max_absolute']==diagnostic['max_relative']==0.
+        failed_s1=2*len(json.loads((failed/'evaluation_0.json').read_text())['predictions'])
+        extra=manifest['operational_extra_accounting']
+        assert extra['recorded_discarded_updates']==len(oldrows) and extra['diagnostic_updates']==len(replayrows)
+        assert extra['failed_attempt_s1']==failed_s1==1824 and extra['unobserved_partial_next_update']
+        operational=dict(recorded_total_updates=checks['updates']+len(oldrows)+len(replayrows),
+                         s1_with_failed_attempt=checks['s1']+failed_s1,
+                         unobserved_partial_update=True,unobserved_additional_update_upper_bound=1,
+                         exact_diagnostic_prefix_scalars=3*len(oldrows),
+                         retry_exact_prefix_updates=exact_retry,retry_prefix_max_abs=maximum,
+                         no_update_probe_forwards=2,no_update_probe_backwards=2)
+        assert operational['recorded_total_updates']==68505 and operational['s1_with_failed_attempt']==33744
     result=dict(complete=True,source_files_sha_verified=len(manifest['files']),checks=checks,
                 all_panels_development=True,checkpoint_forward_reverified=True,
-                verified_cohorts=['n1'] if interim else ['n1','n15'],scientific_experiment_complete=not interim)
+                verified_cohorts=['n1'] if interim else ['n1','n15'],scientific_experiment_complete=not interim,
+                operational_recovery=operational)
     (root/('verification_interim.json' if interim else 'verification.json')).write_text(json.dumps(result,indent=2)+'\n');print(json.dumps(result))
 
 

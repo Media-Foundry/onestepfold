@@ -1,0 +1,9 @@
+Traceback (most recent call last):
+  File "/media/IntelSSD/onestepfold/hpc3_mirror_20261001/Folding/stage_pair_recovery_v1_20261010/code/scripts/control_stage_pair_recovery.py", line 96, in <module>
+    control_stage_recovery(p.parse_args().root)
+  File "/media/IntelSSD/onestepfold/hpc3_mirror_20261001/Folding/stage_pair_recovery_v1_20261010/code/scripts/control_stage_pair_recovery.py", line 73, in control_stage_recovery
+    poll()
+  File "/media/IntelSSD/onestepfold/hpc3_mirror_20261001/Folding/stage_pair_recovery_v1_20261010/code/scripts/control_stage_pair_recovery.py", line 33, in poll
+    if code:raise RuntimeError(f'{key} exited {code}')
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: n15_score_final_272003 exited 1

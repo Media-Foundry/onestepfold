@@ -1,0 +1,153 @@
+{
+  "version": 1,
+  "time": 1791571897.5400665,
+  "deadline_unix": 1791589329.1015267,
+  "deadline_source": "original n15/training_lock.json mtime +21600",
+  "source_controller": {
+    "complete": false,
+    "phase": "n15",
+    "jobs": {
+      "cache_0": {
+        "pid": 702017,
+        "hip": 0,
+        "status": "complete",
+        "exit_code": 0
+      },
+      "cache_1": {
+        "pid": 702018,
+        "hip": 1,
+        "status": "complete",
+        "exit_code": 0
+      },
+      "cache_2": {
+        "pid": 702021,
+        "hip": 2,
+        "status": "complete",
+        "exit_code": 0
+      },
+      "cache_3": {
+        "pid": 702022,
+        "hip": 3,
+        "status": "complete",
+        "exit_code": 0
+      },
+      "n1_train_final_272001": {
+        "pid": 706826,
+        "hip": 0,
+        "status": "complete",
+        "exit_code": 0
+      },
+      "n1_train_hint_272001": {
+        "pid": 706827,
+        "hip": 1,
+        "status": "complete",
+        "exit_code": 0
+      },
+      "n1_train_final_272003": {
+        "pid": 706828,
+        "hip": 2,
+        "status": "complete",
+        "exit_code": 0
+      },
+      "n1_train_hint_272003": {
+        "pid": 706831,
+        "hip": 3,
+        "status": "complete",
+        "exit_code": 0
+      },
+      "n1_score_final_272003": {
+        "pid": 712646,
+        "hip": 4,
+        "status": "complete",
+        "exit_code": 0
+      },
+      "n1_score_final_272001": {
+        "pid": 712759,
+        "hip": 4,
+        "status": "complete",
+        "exit_code": 0
+      },
+      "n1_score_hint_272003": {
+        "pid": 712878,
+        "hip": 4,
+        "status": "complete",
+        "exit_code": 0
+      },
+      "n1_score_hint_272001": {
+        "pid": 713350,
+        "hip": 4,
+        "status": "complete",
+        "exit_code": 0
+      },
+      "n15_train_final_272001": {
+        "pid": 715280,
+        "hip": 0,
+        "status": "complete",
+        "exit_code": 0
+      },
+      "n15_train_hint_272001": {
+        "pid": 715281,
+        "hip": 1,
+        "status": "complete",
+        "exit_code": 0
+      },
+      "n15_train_final_272003": {
+        "pid": 715283,
+        "hip": 2,
+        "status": "running"
+      },
+      "n15_train_hint_272003": {
+        "pid": 715285,
+        "hip": 3,
+        "status": "complete",
+        "exit_code": 0
+      },
+      "n15_score_hint_272003": {
+        "pid": 730313,
+        "hip": 4,
+        "status": "complete",
+        "exit_code": 0
+      },
+      "n15_score_final_272001": {
+        "pid": 736594,
+        "hip": 4,
+        "status": "complete",
+        "exit_code": 0
+      },
+      "n15_score_hint_272001": {
+        "pid": 739795,
+        "hip": 4,
+        "status": "complete",
+        "exit_code": 0
+      }
+    },
+    "seconds": 5024.220175594994
+  },
+  "original_process_cmdline": {
+    "715283": "/media/IntelSSD/onestepfold/diamondhill_migration_20261001/tools/proot/usr/bin/proot -b /media/IntelSSD/onestepfold/hpc3_mirror_20261001/Folding:/data/user/shuang886/Folding /home/pc/anaconda3/envs/fold/bin/python -u /data/user/shuang886/Folding/stage_pair_recovery_v1_20261010/code/scripts/run_stage_pair_recovery.py --root /data/user/shuang886/Folding/stage_pair_recovery_v1_20261010/n15 --arm final --seed 272003 ",
+    "715286": "/home/pc/anaconda3/envs/fold/bin/python -u /data/user/shuang886/Folding/stage_pair_recovery_v1_20261010/code/scripts/run_stage_pair_recovery.py --root /data/user/shuang886/Folding/stage_pair_recovery_v1_20261010/n15 --arm final --seed 272003 "
+  },
+  "original_pgid": 715283,
+  "recorded_discarded_updates": 1420,
+  "unobserved_next_update_partial": true,
+  "replay_updates": 1421,
+  "replay_exact_prefix_scalars": 4260,
+  "one_retry_only": true,
+  "retry_seed": 272003,
+  "retry_arm": "final",
+  "hip": 0,
+  "files": {
+    "build_lock.json": "dd033f050b734f2c39efb8a8653fc410b5eaf283be4656374a01854c1fc2279a",
+    "runtime_recovery_protocol.md": "24af5af89cf2147f832b492a4a9e0553ad1f54f14382973aebb868cf9311f079",
+    "verification_code/control_stage_pair_retry.py": "5a577a69908fe8fc5aede92706e7a8a48ea5cbb0d71c05adfd6fcf0f1b220441",
+    "verification_code/observe_stage_retry.py": "1ab50c4d991b41468ccbde6725829985de292068ef05c099d5e95fd503e87fb0",
+    "runtime_replay_v1/result.json": "ac9dc4812054f2d1d7d2f125deb66e889b43a97c5c829cdaf87be4c07d3f438e",
+    "runtime_replay_v1/replay_lock.json": "bdca70299548972f869a046449f16e7c108feb427ac0803b500c2a9e61ab69f2",
+    "n15/training_lock.json": "d97e49b873d0ce0beccddcd42ece5f455187f9e663b2bede3a4e53506cdf317f",
+    "n15/runs/final/272003/report.json": "8e838a257a570b408617f01879a450e83303d93c8f8498716611341d826651e3",
+    "n15/runs/final/272003/history.jsonl": "04f1e44cc3cd7c97b814275159fa84c23978aa8718d52cdb1b6ccac69d790b5e",
+    "n15/runs/final/272003/evaluation_0.json": "343be6d3dfa7c19660754568337f1c07064fe4d07538c0ede49e92f8410f7773",
+    "runtime_replay_v1/1420.pt": "3ed92be766a60d599574855fd7f05a688758f5b82efc7fb8f9e2ba769ddd01ad",
+    "runtime_replay_v1/1421.pt": "212c005267374fc9c2c2fdb9d29abafdc94d6ce38e8a35f2e023bafc4e1c7228"
+  }
+}
