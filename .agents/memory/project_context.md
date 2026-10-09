@@ -1,3 +1,30 @@
+## 2026-10-09 — Fixed-single oracle-pair diagnostic CLOSED, positive feasibility
+
+All48sites/912mutants completed:912native last recycles,5472S1,zero updates/input
+encoding. Exact/disabled controls all bitwise replay;16source files SHAverified,
+432rho/144regret/384historical site checks pass,17focused tests. HIP0–5 only.
+Held9parents: oracle z withB_s rho .988986 vsB .541423;AA-responseRMSE .037607
+vs .448182;regret .010270 vs .046314 (Exact .008366);Top1 16/18 vs6/18.
+All9parents improve rho/response. >1A1/684 vs141,remainingE47Q1.069A.
+Geometry434/684 vsExact438:11newfail/7repairs;Exact not chemical truth.
+2EBEA30 keepsD;E47 choosesW vsExactN,sole extra held regret .034266/18.
+Strong oracle recovery space supports fixed-single pair-recovery research,
+NOT learned predictor/deployment/speed/strict mathematical ceiling. No training
+automatically launched;allpanelsdevelopment. Report
+ docs/mini_oracle_pair_findings_2026-10-09.md; evidence reports/mini_oracle_pair_2026-10-09.
+
+## 2026-10-09 — Fixed-single oracle-pair diagnostic LOCKED
+
+User authorizes oracle feasibility only. Keep actual candidate B_inputs/B_s,
+replace z by archived native target_C4_z. Exact and disabled are untouched
+replay controls; noLoRA,training,newteacher,inputencoder/ESM/MSAprep.48sites,
+912mutants,two existing noises;912native last recycles/5472S1planned,HIP0–5.
+Oracle success not residual learnability/deployment/speed; failure not a strict
+mathematical bound on all possible z with fixed B_s. Three strata and unchanged
+ranking/regret/response/geometry/tails, all development, noautomatictraining.
+Protocol docs/mini_oracle_pair_v1.md. Immutable oracle_pair_audit_v1_20261009,
+lock5d7ac9544224d58bba0f53a9cf93f6b43caa31ed4506db8596caf58c7589f179.
+
 ## 2026-10-09 — Mini terminal pair split CLOSED, no promotion
 
 All48sites/912mutants, four endpoints and five conditions completed.4560native
