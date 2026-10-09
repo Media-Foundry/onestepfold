@@ -1,3 +1,32 @@
+## 2026-10-09 — Mini terminal pair split CLOSED, no promotion
+
+All48sites/912mutants, four endpoints and five conditions completed.4560native
+last recycles,31008S1+6transfer checks,zero updates. All full/disabled coordinates
+bitwise replayed.16remote artifacts SHAverified;2592rho/864regret/576historical
+site comparisons independently checked;all32832output metrics retained compactly.
+Held AA-only improves responseRMSE .448182→.446818/.447628/.446556/.445986 and
+rho .541423→.557310/.548733/.560721/.559844;regret worsens to .085032/.065070/
+.051291/.051291 vs .046314. Dual AA-only both change only2EBEA30 D→E.
+Pair-only retainingB_s raises geometry passes vsfull26/35/11/14 but regret
+worsens inall4. Common andAA effects differ;no removable-harm-only conclusion.
+Weak distributeddecoder response gain exists, reliable selection not established.
+Allpanelsdevelopment;noautomatictrain/rank/scalesearch. Report
+ docs/mini_pair_split_findings_2026-10-09.md; evidence reports/mini_pair_split_2026-10-09.
+
+## 2026-10-09 — Mini terminal pair split LOCKED
+
+User authorizes decoder intervention, not new training. Four fixed8208 endpoints,
+48sites/912mutants, disabled/full/pair/common/AA-centered-pair conditions.
+Actual candidate inputs/chemistry/noises retained. Common mean uses19 student
+pair increments only, CPUFP64 accumulation thenFP32. Endpoint tensors untouched;
+full/disabled must replay old coordinates bitwise. Native末轮4560calls and
+31008S1 outputs +6 transfer-audit calls planned. HIP0–5 only, noESM/MSAprep.
+TRAIN/same-parent-new/held-parent separate; all panels development. Fixed
+response/ranking/regret/geometry/tail criteria, no automatic training/promotion.
+Immutable DiamondHill pair_split_audit_v1_20261009, lock
+f947cb42aff6d652a8904a942dd1400e73f4f94c8518ec2e9982be585f33686d.
+Protocol docs/mini_pair_split_v1.md. First-site endpoint gates before six workers.
+
 ## 2026-10-09 — Mini recycle response audit CLOSED
 
 Read-only 48-site/24-parent/912-mutant diagnostic, HIP0–5. Missing target3
