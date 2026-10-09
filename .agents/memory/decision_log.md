@@ -1,3 +1,60 @@
+## 2026-10-10 — Single-site pair candidate fit CLOSED, partial recovery
+
+Four fresh unchanged two-block models onTRAIN1W53T37,8208updates each; all
+0/304/1216/4104/8208 nodes and terminal donor mismatch complete. Same32AA
+exposure node304 centeredNMSE .99808/.99807/.99995/.99996 is not better than
+historical joint same-site .99680/.99656/.99621/.99628. End864exposures (27xold)
+centeredNMSE .73926/.73938/.72335/.73618; raw .70008/.69960/.66204/.67229.
+Correct-vs-donor centeredNMSE1.17-1.22 supports learned identity here. Final
+rho .73509/.75965/.75789/.72281 vsB .44211; AAstructureRMSE .27980/.27680/
+.25125/.27033 vsB .42396 (34%-41%better). AllstillchooseR, regret .167167
+unchanged vsB; Exact/oracle chooseS/regret .092423. No transfer evaluation.
+All19candidates improve rawresidual; commonincrement fraction33%-43% vs
+teacher23.8%. Substantialpartiallearning, notnearcompletefit. Finalwindowloss
+still declines; no expressivity bound or unique capacity/optimization diagnosis.
+>1A becomes0vsB2,max .525-.705vs1.054;geometry16-19/38vsB19,severeclashes
+25-41vsB10;2-4newfailures each. No qualitypromotion or autoextension.
+32832updates/65664trainingforwards/396evaluationforwards/912S1,zero native
+recycle/inputencoder/C4/S1backward. Earlygroupgradients and parameter movement
+present;pretrainedclip631/654,random42/21,notone universalcliprootcause.
+11local/6remote tests,90sourceSHA,20fulltensorreconstructions,252rho/84regrets,
+60historicalcontrols/3192outputrecords verified.560.10seccontroller,489.71-
+524.16secworkers,1.881GiBpeak. Failedv1 test packaging retained (zeroupdates).
+Report docs/mini_pair_candidate_fit_findings_2026-10-10.md; evidence
+reports/mini_pair_candidate_fit_2026-10-10. Boundedsinglecase only; preserve
+oracleinterface and alloldnegative results. No process-supervision redesign run.
+
+## 2026-10-10 — Candidate-fit v1b packaging correction
+
+Initial v1 preflight stopped before any model construction or training because
+two existing tests were absent from the copied archive. Failed snapshot retained.
+v1b includes the unchanged tests, same model/data/seeds/loss/budget. Root
+pair_candidate_fit_v1b_20261010; lock
+9764033bf2bba560b612206337938b18508bdb5554fbc68997e850a1cf0ec3f0.
+
+## 2026-10-10 — Single-site pair-recovery candidate fit LOCKED
+
+User authorizes the proposed candidate-fit diagnostic after4625c230; no process-
+supervision redesign. Fixed historical first TRAIN/preflight site1W53T37(p3_s37),
+19mutants, unchanged PairRecovery and loss/q/AdamW/batch2. Four fresh matched
+pretrained/random x272001/272003 initial hashes,8208updates/run; nodes
+0/304/1216/4104/8208 give0/32/128/432/864exposures perAA.304matches previous
+joint endpoint exposure;8208matches totalupdates, not exposure. Both comparisons
+confound optimizer history/interleaving; no unique cause or transfer inference.
+Full/common/AA residual and every-node two-noiseS1; fixed terminal donor residual.
+Single-site only, no held evaluation/bootstrap, no newteacher/inputprep/native
+recycle/S1 backward. FrozenB_inputs/B_s preserved. Early/periodic branch gradients,
+movement, all19 initialS1 replay, tensors saved for independent full-field checks.
+HIP0..3 four independent runs, onlyHIP_VISIBLE_DEVICES;HIP5 currently occupied
+by another job and untouched.32832updates/65664trainingforwards/912S1 planned.
+Six-hour cap/no scientific restart or extension. Protocol
+ docs/mini_pair_candidate_fit_v1.md. Immutable remote pair_candidate_fit_v1_20261010;
+lock ebc1c8d1a3395c742806afdabcc3069a53c23d8b2904fde8f84b9fd4f516ed80.
+Six focused local tests and script compilation pass before launch. GitNexus bound
+onestepfold4625c230 current; training/scoring impactLOW, PairRecoveryUNKNOWN
+resolved by text calls (model unchanged). Only scorer optional TRAIN filter and
+no-bootstrap option alter shared code; default full-panel behavior preserved.
+
 ## 2026-10-09 — Frozen pair readout diagnostic CLOSED, no promotion
 
 Four fixed8208 checkpoints, eight TRAIN-only shared fits complete. All11,552,513

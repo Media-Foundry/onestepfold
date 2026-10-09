@@ -18,7 +18,7 @@ from fastglycan.functional_response_rank import (
 from fastglycan.reference_editor_metrics import distance_response_summary, summarize_editor_sites, paired_parent_interval
 
 
-def score_pair_recovery(root,arm,seed,step):
+def score_pair_recovery(root,arm,seed,step,site_keys=None,paired_intervals=True):
     begin=time.monotonic();torch.set_num_threads(1)
     initialization=arm
     lock=json.loads((root/'training_lock.json').read_text())
@@ -28,6 +28,11 @@ def score_pair_recovery(root,arm,seed,step):
     source=Path(lora['source_root'])
     for name,digest in lora['source_files'].items(): assert sha256(source/name)==digest,name
     plan=json.loads((source/'plan.json').read_text());old_lock=json.loads((source/'lock.json').read_text())
+    if site_keys is not None:
+        selected=set(site_keys)
+        assert len(selected)==len(site_keys) and selected<=set(lock['train_sites'])
+        plan['sites']=[s for s in plan['sites'] if s['site_key'] in selected]
+        assert {s['site_key'] for s in plan['sites']}==selected
     old_preflight=json.loads((source/'preflight.json').read_text())
     for r in old_preflight['baseline']: assert sha256(source/r['path'])==r['sha256']
     folder=root/'runs'/arm/str(seed)
@@ -104,7 +109,7 @@ def score_pair_recovery(root,arm,seed,step):
                                 response=[distance_response_summary(distances['exact'][ni],distances[arm][ni],rd[ni]) for ni in range(2)]))
         outputs.extend(site_outputs)
         print('SCORE_RECOVERY_SITE',seed,step,site['site_key'],flush=True)
-    assert len(records)==48*len(arms) and len(outputs)==1824*len(arms)
+    assert len(records)==len(plan['sites'])*len(arms) and len(outputs)==38*len(plan['sites'])*len(arms)
     summary={};contrasts={}
     for role in sorted({s['role_n15'] for s in plan['sites']}):
         summary[role]={}
@@ -116,7 +121,7 @@ def score_pair_recovery(root,arm,seed,step):
             value['wrong_centres']=sum(r['geometry']['checked_chirality_wrong'] for r in oo)
             summary[role][name]=value
         contrasts[role]={}
-        for ref in ('disabled','oracle_pair')+ (('mismatched',) if step==8208 else ()):
+        for ref in (('disabled','oracle_pair')+ (('mismatched',) if step==8208 else ())) if paired_intervals else ():
             contrasts[role]['correct-'+ref]={f:paired_parent_interval(summary[role]['correct']['parent_summaries'],summary[role][ref]['parent_summaries'],f) for f in ('spearman','regret','centered_response_rmse')}
     result=dict(complete=True,initialization=initialization,seed=seed,step=step,sites=records,outputs=outputs,summary=summary,contrasts=contrasts,
         seconds=time.monotonic()-begin,scorer_sha256=sha256(Path(__file__)),evaluation_sha256=sha256(folder/f'evaluation_{step}.json'),promoted=False,independent_confirmation=False)

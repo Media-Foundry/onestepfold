@@ -1,0 +1,82 @@
+2026-10-10 00:59:50,361 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/runner/batch_inference.py:403] INFO runner.batch_inference: Inference by Protenix: model_size: mini, with_feature: esm, model_version: v0.5.0, dtype: bf16
+2026-10-10 00:59:50,362 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/runner/batch_inference.py:408] INFO runner.batch_inference: Triangle_multiplicative kernel: torch, Triangle_attention kernel: torch
+2026-10-10 00:59:50,362 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/runner/batch_inference.py:412] INFO runner.batch_inference: enable_diffusion_shared_vars_cache: True, enable_efficient_fusion: True, enable_tf32: False
+2026-10-10 00:59:50,362 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/runner/inference.py:246] INFO runner.inference: Distributed environment: world size: 1, global rank: 0, local rank: 0
+2026-10-10 00:59:50,362 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/runner/inference.py:98] INFO root: LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+2026-10-10 00:59:50,363 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/runner/inference.py:127] INFO root: Finished environment initialization.
+train scheduler 16.0
+inference scheduler 16.0
+Diffusion Module has 16.0
+2026-10-10 01:00:06,901 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/runner/inference.py:246] INFO runner.inference: Loading from /data/user/shuang886/Folding/protenix_stage0_pkg/v1_1/runtime/checkpoint/protenix_mini_esm_v0.5.0.pt, strict: False
+2026-10-10 01:00:07,382 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/runner/inference.py:246] INFO runner.inference: Sampled key: module.input_embedder.atom_attention_encoder.linear_no_bias_ref_pos.weight
+2026-10-10 01:00:07,421 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/runner/inference.py:246] INFO runner.inference: Finish loading checkpoint.
+2026-10-10 01:00:07,424 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/runner/inference.py:246] INFO runner.inference: Model parameters: 135.22M
+FIT_EVAL pretrained 272001 0 {'raw': {'target_energy': 28290672.102930877, 'predicted_energy': 0.0, 'error_energy': 28290672.102930877, 'nmse': 1.0, 'energy_ratio': 0.0, 'cosine': None}, 'centered': {'target_energy': 21548842.64141096, 'predicted_energy': 0.0, 'error_energy': 21548842.64141096, 'nmse': 1.0, 'energy_ratio': 0.0, 'cosine': None}, 'common': {'target_energy': 6741829.461519915, 'predicted_energy': 0.0, 'error_energy': 6741829.461519915, 'nmse': 1.0, 'energy_ratio': 0.0, 'cosine': None}, 'candidates': 19}
+FIT_TRAIN pretrained 272001 128 51.14582418900682
+FIT_TRAIN pretrained 272001 256 58.0968973840063
+FIT_EVAL pretrained 272001 304 {'raw': {'target_energy': 28290672.102930877, 'predicted_energy': 192827.74693127573, 'error_energy': 27877353.535073966, 'nmse': 0.9853902881362053, 'energy_ratio': 0.006815947893698115, 'cosine': 0.1297600718860353}, 'centered': {'target_energy': 21548842.64141096, 'predicted_energy': 27463.571278936473, 'error_energy': 21507528.631616887, 'nmse': 0.9980827736096285, 'energy_ratio': 0.0012744801071663601, 'cosine': 0.04470194516703429}, 'common': {'target_energy': 6741829.461519915, 'predicted_energy': 165364.17565233927, 'error_energy': 6369824.903457077, 'nmse': 0.9448214227034198, 'energy_ratio': 0.0245280864187061, 'cosine': 0.2544677804371979}, 'candidates': 19}
+FIT_TRAIN pretrained 272001 384 66.54873633000534
+FIT_TRAIN pretrained 272001 512 73.35891828799504
+FIT_TRAIN pretrained 272001 640 80.18718979798723
+FIT_TRAIN pretrained 272001 768 86.94528252299642
+FIT_TRAIN pretrained 272001 896 93.76441032599541
+FIT_TRAIN pretrained 272001 1024 100.76674992300104
+FIT_TRAIN pretrained 272001 1152 107.77608737099217
+FIT_EVAL pretrained 272001 1216 {'raw': {'target_energy': 28290672.102930877, 'predicted_energy': 1427082.2821219363, 'error_energy': 26009197.897821493, 'nmse': 0.9193559560264731, 'energy_ratio': 0.05044356234909288, 'cosine': 0.2918292124056891}, 'centered': {'target_energy': 21548842.64141096, 'predicted_energy': 643641.82949416, 'error_energy': 20494175.952623606, 'nmse': 0.9510569218803159, 'energy_ratio': 0.029868974413375545, 'cosine': 0.2280092610363361}, 'common': {'target_energy': 6741829.461519915, 'predicted_energy': 783440.4526277764, 'error_energy': 5515021.945197887, 'nmse': 0.8180304732826258, 'energy_ratio': 0.11620591370627065, 'cosine': 0.4373486183222873}, 'candidates': 19}
+FIT_TRAIN pretrained 272001 1280 116.02350998600014
+FIT_TRAIN pretrained 272001 1408 123.01233274900005
+FIT_TRAIN pretrained 272001 1536 130.02037193998694
+FIT_TRAIN pretrained 272001 1664 137.0682548249897
+FIT_TRAIN pretrained 272001 1792 144.08039014801034
+FIT_TRAIN pretrained 272001 1920 150.96478125298745
+FIT_TRAIN pretrained 272001 2048 158.20266670998535
+FIT_TRAIN pretrained 272001 2176 165.12817015498877
+FIT_TRAIN pretrained 272001 2304 172.0174234919832
+FIT_TRAIN pretrained 272001 2432 178.84502976300428
+FIT_TRAIN pretrained 272001 2560 185.68691558900173
+FIT_TRAIN pretrained 272001 2688 192.43212960698293
+FIT_TRAIN pretrained 272001 2816 199.5756360249943
+FIT_TRAIN pretrained 272001 2944 206.80334775100346
+FIT_TRAIN pretrained 272001 3072 214.0156127169903
+FIT_TRAIN pretrained 272001 3200 220.84392267698422
+FIT_TRAIN pretrained 272001 3328 227.66285007598344
+FIT_TRAIN pretrained 272001 3456 234.9063178949873
+FIT_TRAIN pretrained 272001 3584 241.99867971299682
+FIT_TRAIN pretrained 272001 3712 248.8780423020071
+FIT_TRAIN pretrained 272001 3840 255.6456412480038
+FIT_TRAIN pretrained 272001 3968 262.45237603000714
+FIT_TRAIN pretrained 272001 4096 269.22777460698853
+FIT_EVAL pretrained 272001 4104 {'raw': {'target_energy': 28290672.102930877, 'predicted_energy': 4523618.661132001, 'error_energy': 22692367.92373746, 'nmse': 0.8021148398728413, 'energy_ratio': 0.15989788594182464, 'cosine': 0.4473715895228028}, 'centered': {'target_energy': 21548842.64141096, 'predicted_energy': 2817913.8533158666, 'error_energy': 18096578.91736454, 'nmse': 0.8397935433705327, 'energy_ratio': 0.13076868675539027, 'cosine': 0.4023222153550276}, 'common': {'target_energy': 6741829.461519915, 'predicted_energy': 1705704.8078161348, 'error_energy': 4595789.006372918, 'nmse': 0.6816827735860317, 'energy_ratio': 0.2530032563937907, 'cosine': 0.5679194510402804}, 'candidates': 19}
+FIT_TRAIN pretrained 272001 4224 277.74954963399796
+FIT_TRAIN pretrained 272001 4352 285.23606891901
+FIT_TRAIN pretrained 272001 4480 292.39835320899147
+FIT_TRAIN pretrained 272001 4608 299.64894142898265
+FIT_TRAIN pretrained 272001 4736 306.62758779898286
+FIT_TRAIN pretrained 272001 4864 313.4010136309953
+FIT_TRAIN pretrained 272001 4992 320.19029531700653
+FIT_TRAIN pretrained 272001 5120 326.95482907400583
+FIT_TRAIN pretrained 272001 5248 333.73741874299594
+FIT_TRAIN pretrained 272001 5376 340.56974560499657
+FIT_TRAIN pretrained 272001 5504 347.7188799249998
+FIT_TRAIN pretrained 272001 5632 354.87603259898606
+FIT_TRAIN pretrained 272001 5760 361.9936361529981
+FIT_TRAIN pretrained 272001 5888 369.2236401370028
+FIT_TRAIN pretrained 272001 6016 376.2423658139887
+FIT_TRAIN pretrained 272001 6144 383.37041076199966
+FIT_TRAIN pretrained 272001 6272 390.3950171349861
+FIT_TRAIN pretrained 272001 6400 397.27386336700874
+FIT_TRAIN pretrained 272001 6528 404.1951390460017
+FIT_TRAIN pretrained 272001 6656 411.351557839982
+FIT_TRAIN pretrained 272001 6784 418.43623696800205
+FIT_TRAIN pretrained 272001 6912 425.3844882150006
+FIT_TRAIN pretrained 272001 7040 432.4678650069982
+FIT_TRAIN pretrained 272001 7168 439.28106211000704
+FIT_TRAIN pretrained 272001 7296 446.13217755398364
+FIT_TRAIN pretrained 272001 7424 453.0457055029983
+FIT_TRAIN pretrained 272001 7552 459.9260414839955
+FIT_TRAIN pretrained 272001 7680 466.9683264050109
+FIT_TRAIN pretrained 272001 7808 474.0321708639967
+FIT_TRAIN pretrained 272001 7936 481.056757326005
+FIT_TRAIN pretrained 272001 8064 488.01714594999794
+FIT_TRAIN pretrained 272001 8192 495.2766460540006
+FIT_EVAL pretrained 272001 8208 {'raw': {'target_energy': 28290672.102930877, 'predicted_energy': 7122387.444465211, 'error_energy': 19805675.27722171, 'nmse': 0.7000779339975408, 'energy_ratio': 0.2517574491886087, 'cosine': 0.5497505818285895}, 'centered': {'target_energy': 21548842.64141096, 'predicted_energy': 4781695.081231618, 'error_energy': 15930154.349208271, 'nmse': 0.7392580016615317, 'energy_ratio': 0.2219003201611632, 'cosine': 0.5122906606083111}, 'common': {'target_energy': 6741829.461519915, 'predicted_energy': 2340692.3632335924, 'error_energy': 3875520.9280134407, 'nmse': 0.5748470723167362, 'energy_ratio': 0.34718949457168463, 'cosine': 0.6553851646092255}, 'candidates': 19}

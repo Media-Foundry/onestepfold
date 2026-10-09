@@ -1,0 +1,82 @@
+2026-10-10 00:59:50,480 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/runner/batch_inference.py:403] INFO runner.batch_inference: Inference by Protenix: model_size: mini, with_feature: esm, model_version: v0.5.0, dtype: bf16
+2026-10-10 00:59:50,480 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/runner/batch_inference.py:408] INFO runner.batch_inference: Triangle_multiplicative kernel: torch, Triangle_attention kernel: torch
+2026-10-10 00:59:50,480 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/runner/batch_inference.py:412] INFO runner.batch_inference: enable_diffusion_shared_vars_cache: True, enable_efficient_fusion: True, enable_tf32: False
+2026-10-10 00:59:50,480 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/runner/inference.py:246] INFO runner.inference: Distributed environment: world size: 1, global rank: 0, local rank: 0
+2026-10-10 00:59:50,480 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/runner/inference.py:98] INFO root: LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+2026-10-10 00:59:50,481 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/runner/inference.py:127] INFO root: Finished environment initialization.
+train scheduler 16.0
+inference scheduler 16.0
+Diffusion Module has 16.0
+2026-10-10 01:00:07,041 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/runner/inference.py:246] INFO runner.inference: Loading from /data/user/shuang886/Folding/protenix_stage0_pkg/v1_1/runtime/checkpoint/protenix_mini_esm_v0.5.0.pt, strict: False
+2026-10-10 01:00:07,515 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/runner/inference.py:246] INFO runner.inference: Sampled key: module.input_embedder.atom_attention_encoder.linear_no_bias_ref_pos.weight
+2026-10-10 01:00:07,557 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/runner/inference.py:246] INFO runner.inference: Finish loading checkpoint.
+2026-10-10 01:00:07,561 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/runner/inference.py:246] INFO runner.inference: Model parameters: 135.22M
+FIT_EVAL random 272001 0 {'raw': {'target_energy': 28290672.102930877, 'predicted_energy': 0.0, 'error_energy': 28290672.102930877, 'nmse': 1.0, 'energy_ratio': 0.0, 'cosine': None}, 'centered': {'target_energy': 21548842.64141096, 'predicted_energy': 0.0, 'error_energy': 21548842.64141096, 'nmse': 1.0, 'energy_ratio': 0.0, 'cosine': None}, 'common': {'target_energy': 6741829.461519915, 'predicted_energy': 0.0, 'error_energy': 6741829.461519915, 'nmse': 1.0, 'energy_ratio': 0.0, 'cosine': None}, 'candidates': 19}
+FIT_TRAIN random 272001 128 51.64697239699308
+FIT_TRAIN random 272001 256 59.03574401201331
+FIT_EVAL random 272001 304 {'raw': {'target_energy': 28290672.102930877, 'predicted_energy': 158699.2420515353, 'error_energy': 27843110.497845076, 'nmse': 0.9841798878634829, 'energy_ratio': 0.005609596034839138, 'cosine': 0.14306074011360173}, 'centered': {'target_energy': 21548842.64141096, 'predicted_energy': 3418.3413273887463, 'error_energy': 21547866.06027646, 'nmse': 0.9999546805760869, 'energy_ratio': 0.00015863224695045257, 'cosine': 0.008096578557733937}, 'common': {'target_energy': 6741829.461519915, 'predicted_energy': 155280.90072414654, 'error_energy': 6295244.437568618, 'nmse': 0.9337590743728756, 'energy_ratio': 0.0230324575266161, 'cosine': 0.294118172079333}, 'candidates': 19}
+FIT_TRAIN random 272001 384 70.1050197200093
+FIT_TRAIN random 272001 512 78.00343506300123
+FIT_TRAIN random 272001 640 85.54419385001529
+FIT_TRAIN random 272001 768 92.8355926980148
+FIT_TRAIN random 272001 896 100.54515758299385
+FIT_TRAIN random 272001 1024 108.36524317401927
+FIT_TRAIN random 272001 1152 115.81038787600119
+FIT_EVAL random 272001 1216 {'raw': {'target_energy': 28290672.102930877, 'predicted_energy': 965247.7673153083, 'error_energy': 26559918.783371914, 'nmse': 0.9388224743031235, 'energy_ratio': 0.034118940822735346, 'cosine': 0.2579580182562631}, 'centered': {'target_energy': 21548842.64141096, 'predicted_energy': 34097.26723322488, 'error_energy': 21431738.45649804, 'nmse': 0.9945656392381892, 'energy_ratio': 0.0015823247587180987, 'cosine': 0.0881970796076634}, 'common': {'target_energy': 6741829.461519915, 'predicted_energy': 931150.5000820834, 'error_energy': 5128180.326873873, 'nmse': 0.7606511490899902, 'energy_ratio': 0.13811540404526337, 'cosine': 0.5078375108268607}, 'candidates': 19}
+FIT_TRAIN random 272001 1280 124.32219127501594
+FIT_TRAIN random 272001 1408 131.292776332004
+FIT_TRAIN random 272001 1536 138.31075182100176
+FIT_TRAIN random 272001 1664 145.2134371919965
+FIT_TRAIN random 272001 1792 152.27849665799295
+FIT_TRAIN random 272001 1920 159.21766597000533
+FIT_TRAIN random 272001 2048 166.7935299689998
+FIT_TRAIN random 272001 2176 173.67598836799152
+FIT_TRAIN random 272001 2304 180.49299095201422
+FIT_TRAIN random 272001 2432 187.30012468001223
+FIT_TRAIN random 272001 2560 194.0904456799908
+FIT_TRAIN random 272001 2688 200.86156274200766
+FIT_TRAIN random 272001 2816 207.78096210799413
+FIT_TRAIN random 272001 2944 214.60631835099775
+FIT_TRAIN random 272001 3072 221.70448093299638
+FIT_TRAIN random 272001 3200 228.70674837901606
+FIT_TRAIN random 272001 3328 235.6779115429963
+FIT_TRAIN random 272001 3456 242.449515351007
+FIT_TRAIN random 272001 3584 249.68316160299582
+FIT_TRAIN random 272001 3712 256.5408884930075
+FIT_TRAIN random 272001 3840 263.3746770239959
+FIT_TRAIN random 272001 3968 270.49952272101655
+FIT_TRAIN random 272001 4096 277.7972876300046
+FIT_EVAL random 272001 4104 {'raw': {'target_energy': 28290672.102930877, 'predicted_energy': 3970791.4397787466, 'error_energy': 23075356.92237054, 'nmse': 0.8156524821472857, 'energy_ratio': 0.14035691429781824, 'cosine': 0.4333525087638021}, 'centered': {'target_energy': 21548842.64141096, 'predicted_energy': 1557298.8637078833, 'error_energy': 19151194.815084223, 'nmse': 0.8887342644695396, 'energy_ratio': 0.072268329655681, 'cosine': 0.3413600394003006}, 'common': {'target_energy': 6741829.461519915, 'predicted_energy': 2413492.5760708638, 'error_energy': 3924162.107286319, 'nmse': 0.5820619061464118, 'energy_ratio': 0.35798778207699616, 'cosine': 0.6484196048075339}, 'candidates': 19}
+FIT_TRAIN random 272001 4224 286.1374192520161
+FIT_TRAIN random 272001 4352 292.88300805399194
+FIT_TRAIN random 272001 4480 300.3209811330016
+FIT_TRAIN random 272001 4608 307.9612439520133
+FIT_TRAIN random 272001 4736 315.7151095280133
+FIT_TRAIN random 272001 4864 323.38379745400744
+FIT_TRAIN random 272001 4992 331.2740995399945
+FIT_TRAIN random 272001 5120 339.42334906899487
+FIT_TRAIN random 272001 5248 347.3522217129939
+FIT_TRAIN random 272001 5376 354.364841572009
+FIT_TRAIN random 272001 5504 361.6207420999999
+FIT_TRAIN random 272001 5632 369.68465388700133
+FIT_TRAIN random 272001 5760 377.9969576089934
+FIT_TRAIN random 272001 5888 386.1948796060169
+FIT_TRAIN random 272001 6016 393.25552225401043
+FIT_TRAIN random 272001 6144 400.38034576000064
+FIT_TRAIN random 272001 6272 407.66316534599173
+FIT_TRAIN random 272001 6400 414.6149968190002
+FIT_TRAIN random 272001 6528 421.48424995699315
+FIT_TRAIN random 272001 6656 428.63144941200153
+FIT_TRAIN random 272001 6784 435.74247982999077
+FIT_TRAIN random 272001 6912 442.7310619280033
+FIT_TRAIN random 272001 7040 449.6772062779928
+FIT_TRAIN random 272001 7168 456.6243772910093
+FIT_TRAIN random 272001 7296 463.66549631700036
+FIT_TRAIN random 272001 7424 471.0424677770061
+FIT_TRAIN random 272001 7552 478.2002410980058
+FIT_TRAIN random 272001 7680 485.3654757059994
+FIT_TRAIN random 272001 7808 492.3701062909968
+FIT_TRAIN random 272001 7936 499.8570533900056
+FIT_TRAIN random 272001 8064 507.18367855099496
+FIT_TRAIN random 272001 8192 514.2797127450176
+FIT_EVAL random 272001 8208 {'raw': {'target_energy': 28290672.102930877, 'predicted_energy': 7916736.127988351, 'error_energy': 18729600.12316264, 'nmse': 0.6620415398763989, 'energy_ratio': 0.2798355620249894, 'cosine': 0.5839319705466581}, 'centered': {'target_energy': 21548842.64141096, 'predicted_energy': 4633916.061032576, 'error_energy': 15587400.80508084, 'nmse': 0.7233521105734994, 'energy_ratio': 0.21504245671772, 'cosine': 0.5301509931232956}, 'common': {'target_energy': 6741829.461519915, 'predicted_energy': 3282820.066955775, 'error_energy': 3142199.318081797, 'nmse': 0.46607517084441386, 'energy_ratio': 0.48693312189117255, 'cosine': 0.731476977282024}, 'candidates': 19}

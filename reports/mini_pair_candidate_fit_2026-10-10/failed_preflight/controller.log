@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/media/IntelSSD/onestepfold/hpc3_mirror_20261001/Folding/pair_candidate_fit_v1_20261010/code/scripts/control_pair_candidate_fit.py", line 91, in <module>
+    control_candidate_fit(parser.parse_args().root)
+  File "/media/IntelSSD/onestepfold/hpc3_mirror_20261001/Folding/pair_candidate_fit_v1_20261010/code/scripts/control_pair_candidate_fit.py", line 29, in control_candidate_fit
+    subprocess.run(prefix + ['-m', 'pytest', '-q', str(virtual / 'code/tests/test_pair_candidate_fit.py'),
+  File "/home/pc/anaconda3/envs/fold/lib/python3.12/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/media/IntelSSD/onestepfold/diamondhill_migration_20261001/tools/proot/usr/bin/proot', '-b', '/media/IntelSSD/onestepfold/hpc3_mirror_20261001/Folding:/data/user/shuang886/Folding', '/home/pc/anaconda3/envs/fold/bin/python', '-u', '-m', 'pytest', '-q', '/data/user/shuang886/Folding/pair_candidate_fit_v1_20261010/code/tests/test_pair_candidate_fit.py', '/data/user/shuang886/Folding/pair_candidate_fit_v1_20261010/code/tests/test_pair_recovery.py', '/data/user/shuang886/Folding/pair_candidate_fit_v1_20261010/code/tests/test_response_moments.py']' returned non-zero exit status 4.
