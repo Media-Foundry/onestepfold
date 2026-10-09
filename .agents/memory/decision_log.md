@@ -1,3 +1,43 @@
+## 2026-10-09 — Frozen pair readout diagnostic CLOSED, no promotion
+
+Four fixed8208 checkpoints, eight TRAIN-only shared fits complete. All11,552,513
+rows/head, original site/length weighting, FP64 QR/SVD rcond1e-6. Full rank128,
+centered127 (LayerNorm near-null), second-pass objectives and independent solve
+match. No AdamW/native recycle/input encoding;5704feature forwards/14984S1.
+TRAIN AA NMSE old~.977 -> full .9727-.9741, centered fit .9603-.9702; even
+specialized centered regression leaves96%-97% error. Held centered fit .9990-
+1.0059; full rawNMSE worsens1.0178-1.0214. Last linear head alone cannot explain
+main fit gap; no claim input information absent/all nonlinear reads impossible.
+Held full-head rho .51589/.51228 pretrained, .54698/.53402 random. Pretrained
+regret .102320/.100765 vs old .081398/.079843: sole new E47 D->L adds .376601/18.
+Random all18choices stay old, regret .044135 unchanged (B .046314); prior V110
+benefit retained, no new choicegain. Correct vs mismatch response intervals all
+favorable but tiny vsB and geometry mixed; wrongcentres all increase vsold.
+Center-fit latent-only, common output not identified, no automatic decoding.
+9local/4remote tests;43sourceSHA,8independent solutions,3456rho/1152regret,
+768historicalcontrols/192latent replays/43776outputrecords verified. Controller
+825.15sec, workers466-475sec, peak7.93GiB; no newfoldspeedclaim. Initial CPU
+LAPACK preflight failure retained, SciPy implementation fixed before realfit.
+Report docs/mini_pair_readout_findings_2026-10-09.md; evidence
+reports/mini_pair_readout_2026-10-09. All development; no further head/architecture
+search authorized. Oracle fixed-single recovery space remains valid.
+
+## 2026-10-09 — Frozen pair readout diagnostic LOCKED
+
+User authorizes four fixed8208 recovery endpoints, two shared TRAIN-only head
+fits each (full / AA-centered). Frozen features include LayerNorm; exact prior
+site scales and1/L^2 row weights. All11,552,513 TRAIN rows perhead, FP64 streaming
+QR+SVD, rcond1e-6 fixed, retain original head in discarded directions. No AdamW,
+new data/input prep/native recycle/backbone change. Centered head latent-only;
+full heads all decode correct and fixed donor residual with B_inputs/B_s frozen.
+48development sites, planned14984S1 including392old replays, no promotion.
+Initial synthetic preflight found remote torch CPU LAPACK unavailable; v1 snapshot
+and failedtests retained, no realdata fit started. SciPy LAPACK passes4remote/9local
+tests; same numerical thresholds and objective. Four independent HIP0..3 workers.
+Root pair_readout_v1b_20261009; lock
+111cb5045bfdee0599a0b4d8739b473eeac0c5d6e69197642987345916179f3f.
+Protocol docs/mini_pair_readout_v1.md. Fits are new label use, not zero-training.
+
 ## 2026-10-09 — Post-recycle pair recovery v1b CLOSED, no promotion
 
 Four fresh pretrained/random x272001/272003 runs8208updates, all4104/8208

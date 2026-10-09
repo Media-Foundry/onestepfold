@@ -1,0 +1,109 @@
+FFF.                                                                     [100%]
+=================================== FAILURES ===================================
+_________ test_streamed_weighted_fit_matches_dense_svd_and_site_means __________
+
+    def test_streamed_weighted_fit_matches_dense_svd_and_site_means():
+        torch.manual_seed(83)
+        xs, ys, weights = [], [], []
+        stream = WeightedReadoutQR(5, 3, chunk_rows=7)
+        for length, scale in ((2, .2), (5, 4.)):
+            x, y = torch.randn(3 * length ** 2, 5, dtype=torch.float64), torch.randn(3 * length ** 2, 3, dtype=torch.float64)
+            w = site_row_weight(length, scale, sites=2, candidates=3, channels=3)
+>           stream.add(x, y, w)
+
+/media/IntelSSD/onestepfold/hpc3_mirror_20261001/Folding/pair_readout_v1_20261009/code/tests/test_pair_readout.py:14: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <fastglycan.pair_readout.WeightedReadoutQR object at 0x750c52093d70>
+features = tensor([[-0.6532, -0.1190, -0.5337, -1.2839, -0.0114],
+        [ 0.2603,  0.1642,  0.5682, -0.8203,  0.9987],
+        ...3796,  0.3056, -0.2813,  1.4843, -0.1901],
+        [ 0.0567, -0.5101,  1.0439, -1.1111, -1.3029]], dtype=torch.float64)
+targets = tensor([[-0.8492, -0.6328,  0.3696],
+        [-1.0237, -0.5530, -1.3737],
+        [ 0.3940,  1.2085,  1.9664],
+       ...836,  0.4771,  0.6350],
+        [-0.1043, -0.1321, -1.0154],
+        [-1.3994, -0.6538,  1.7158]], dtype=torch.float64)
+weight = 0.06944444444444445
+
+    def add(self, features, targets, weight):
+        if features.ndim != 2 or targets.shape != (features.shape[0], self.outputs):
+            raise ValueError('matched row matrices required')
+        if features.shape[1] != self.features or not math.isfinite(weight) or weight <= 0:
+            raise ValueError('invalid feature dimension or weight')
+        for start in range(0, len(features), self.chunk_rows):
+            x = features[start:start + self.chunk_rows].detach().to('cpu', torch.float64)
+            y = targets[start:start + self.chunk_rows].detach().to('cpu', torch.float64)
+            if not torch.isfinite(x).all() or not torch.isfinite(y).all():
+                raise ValueError('nonfinite regression data')
+            block = torch.cat((x, y), dim=1) * math.sqrt(weight)
+>           self.r = torch.linalg.qr(torch.cat((self.r, block)), mode='r').R
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E           RuntimeError: Calling torch.geqrf on a CPU tensor requires compiling PyTorch with LAPACK. Please use PyTorch built with LAPACK support.
+
+/media/IntelSSD/onestepfold/hpc3_mirror_20261001/Folding/pair_readout_v1_20261009/code/src/fastglycan/pair_readout.py:33: RuntimeError
+________ test_rank_deficiency_preserves_original_unidentified_component ________
+
+    def test_rank_deficiency_preserves_original_unidentified_component():
+        torch.manual_seed(9)
+        x = torch.randn(101, 4, dtype=torch.float64); x[:, 3] = 0
+        y = torch.randn(101, 2, dtype=torch.float64)
+        old = torch.randn(4, 2, dtype=torch.float64)
+>       stream = WeightedReadoutQR(4, 2, 13); stream.add(x, y, .03)
+                                              ^^^^^^^^^^^^^^^^^^^^^
+
+/media/IntelSSD/onestepfold/hpc3_mirror_20261001/Folding/pair_readout_v1_20261009/code/tests/test_pair_readout.py:31: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <fastglycan.pair_readout.WeightedReadoutQR object at 0x750c51a6bfe0>
+features = tensor([[ 0.4259, -1.6682, -0.8576,  0.0000],
+        [-0.2664, -0.8503,  0.0646,  0.0000],
+        [ 0.6197, -0.9338,...000],
+        [-1.2415,  1.8165,  1.1486,  0.0000],
+        [ 1.9210, -0.4562,  0.4861,  0.0000]], dtype=torch.float64)
+targets = tensor([[ 1.4199e+00,  3.0607e-01],
+        [ 1.7517e+00, -7.1172e-01],
+        [-1.4196e+00, -3.2759e-02],
+        [ ...1.0320e+00, -3.9491e-01],
+        [ 2.5846e-01, -1.0582e+00],
+        [-1.9287e+00,  2.5508e-01]], dtype=torch.float64)
+weight = 0.03
+
+    def add(self, features, targets, weight):
+        if features.ndim != 2 or targets.shape != (features.shape[0], self.outputs):
+            raise ValueError('matched row matrices required')
+        if features.shape[1] != self.features or not math.isfinite(weight) or weight <= 0:
+            raise ValueError('invalid feature dimension or weight')
+        for start in range(0, len(features), self.chunk_rows):
+            x = features[start:start + self.chunk_rows].detach().to('cpu', torch.float64)
+            y = targets[start:start + self.chunk_rows].detach().to('cpu', torch.float64)
+            if not torch.isfinite(x).all() or not torch.isfinite(y).all():
+                raise ValueError('nonfinite regression data')
+            block = torch.cat((x, y), dim=1) * math.sqrt(weight)
+>           self.r = torch.linalg.qr(torch.cat((self.r, block)), mode='r').R
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E           RuntimeError: Calling torch.geqrf on a CPU tensor requires compiling PyTorch with LAPACK. Please use PyTorch built with LAPACK support.
+
+/media/IntelSSD/onestepfold/hpc3_mirror_20261001/Folding/pair_readout_v1_20261009/code/src/fastglycan/pair_readout.py:33: RuntimeError
+_ test_centered_layernorm_has_expected_null_direction_and_ignores_common_term __
+
+    def test_centered_layernorm_has_expected_null_direction_and_ignores_common_term():
+        torch.manual_seed(19)
+        x = torch.randn(19, 11, 8, dtype=torch.float64)
+        ln = torch.nn.LayerNorm(8).double()
+        with torch.no_grad():
+            ln.weight.copy_(torch.linspace(.4, 2., 8)); ln.bias.copy_(torch.randn(8))
+        h = ln(x).detach(); centered = aa_center(h)
+        torch.testing.assert_close(centered @ ln.weight.reciprocal(), torch.zeros(19, 11, dtype=torch.float64), atol=2e-14, rtol=0)
+        torch.testing.assert_close(aa_center(h + torch.randn(1, 11, 8)), centered, atol=1e-14, rtol=0)
+>       assert torch.linalg.matrix_rank(centered.flatten(0, 1), atol=1e-10) == 7
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       RuntimeError: svd: LAPACK library not found in compilation
+
+/media/IntelSSD/onestepfold/hpc3_mirror_20261001/Folding/pair_readout_v1_20261009/code/tests/test_pair_readout.py:48: RuntimeError
+=========================== short test summary info ============================
+FAILED ../../media/IntelSSD/onestepfold/hpc3_mirror_20261001/Folding/pair_readout_v1_20261009/code/tests/test_pair_readout.py::test_streamed_weighted_fit_matches_dense_svd_and_site_means
+FAILED ../../media/IntelSSD/onestepfold/hpc3_mirror_20261001/Folding/pair_readout_v1_20261009/code/tests/test_pair_readout.py::test_rank_deficiency_preserves_original_unidentified_component
+FAILED ../../media/IntelSSD/onestepfold/hpc3_mirror_20261001/Folding/pair_readout_v1_20261009/code/tests/test_pair_readout.py::test_centered_layernorm_has_expected_null_direction_and_ignores_common_term
+3 failed, 1 passed in 2.25s
