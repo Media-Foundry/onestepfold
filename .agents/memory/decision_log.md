@@ -1,3 +1,49 @@
+## 2026-10-09 — Post-recycle pair recovery v1b CLOSED, no promotion
+
+Four fresh pretrained/random x272001/272003 runs8208updates, all4104/8208
+full48site evaluations and terminal donor-residual mismatches complete.
+32832mainupdates/21888S1, no native recycle/inputencoder/C4 during training;
+912Bcache generations/1824baseline replay verified separately.64source files
+SHAverified;5184rho/1728regret/1152historical comparisons and65664scored output
+records independently checked;13focused tests pass. Controller1665.4seconds.
+TRAIN residualNMSE .9333-.9373, centered .9767-.9778: fit remains weak.
+Held centeredNMSE pretrained1.0028-1.0030,random .9985-.9989; predicted common
+fraction93.7%-94.9% vs target49.5%(equal-parent mean of site energy ratios).
+Held pretrained rho .51745/.51706,regret .081398/.079843 (B .046314);
+random rho .54493/.54094,regretboth .044135. Random benefit solely1YSBV110.
+Both pretrained worsen6ZRW T45/P80 selections;2EBEA30/E47 stayB choices.
+Correct residual beats mismatched structure response inall4 held descriptive
+intervals, but tinygain vsB(.05%-.20%) does not establish reliable selection.
+Random responsegains cover9/9 and7/9 parents; geometry/marginaltails mixed,
+wrongcentres all increase. Pretraining not superior onthisdevelopmentpanel.
+FrozenB_s interface and bounded training implementation retained; no automatic
+steps/rank/floor/structure-loss continuation. Original oracle feasibility stands;
+this is not a proof all pair recovery or native priors are impossible.
+Initial failed launch retained: SciPy/NumPy RNG fixed, fresh rerun allarms.
+Report docs/mini_pair_recovery_findings_2026-10-09.md; complete evidence
+reports/mini_pair_recovery_2026-10-09. Component timing only, no newfoldspeed claim.
+
+## 2026-10-09 — Post-recycle pair recovery v1b LOCKED and running
+
+User authorizes a bounded pair-recovery learning trial after the fixed-single
+oracle. Freeze candidate native B_inputs/B_s/B_z and S1; learn dense residual
+R=target_C4_z-B_z with two pair-only Mini blocks14/15, copied pretrained versus
+native random initialization, seeds272001/272003. Identical new input/head
+weights perseed;1,331,972 parameters. Predictor uses candidate B and WT3 edit
+rows/columns, never target labels; outputs original inputs/single unchanged.
+TRAIN15parents27sites513mutants;8208updates/batch2/32exposures;4104/8208 full
+S1 evaluation and fixed terminal donor-residual mismatch. All panels development.
+TRAIN-only capped site scale:25thpercentile1.3615748444; no loss/rank/floor sweep.
+No structure backward, new teacher/input preparation or automatic continuation.
+912B caches and1824baselineS1 replays verified. Native preflight checks gradients,
+weight independence, identity and timing. First launch stopped on random-init
+hash mismatch: native SciPy initialization uses NumPy beyond torch RNG; two
+pretrained arms logged15/22updates, no quality evaluation. Failed launch retained;
+all arms restart with seeded/restored NumPy and a repeated-construction check.
+Corrected root pair_recovery_v1b_20261009; lock
+2d0b2a0137cda788e37143fe6ab84b17888b87ac34b6e03a9b43f90834099f9c.
+Protocol docs/mini_pair_recovery_v1.md. No learnability/transfer/speed claim yet.
+
 ## 2026-10-09 — Fixed-single oracle-pair diagnostic CLOSED, positive feasibility
 
 All48sites/912mutants completed:912native last recycles,5472S1,zero updates/input

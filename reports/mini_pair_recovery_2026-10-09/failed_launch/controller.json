@@ -1,0 +1,33 @@
+{
+  "complete": false,
+  "phase": "failed",
+  "jobs": {
+    "train_pretrained_272001": {
+      "pid": 564624,
+      "hip": 0,
+      "status": "running",
+      "kind": "training"
+    },
+    "train_random_272001": {
+      "pid": 564625,
+      "hip": 1,
+      "status": "failed",
+      "kind": "training",
+      "exit_code": 1
+    },
+    "train_pretrained_272003": {
+      "pid": 564626,
+      "hip": 2,
+      "status": "running",
+      "kind": "training"
+    },
+    "train_random_272003": {
+      "pid": 564628,
+      "hip": 3,
+      "status": "running",
+      "kind": "training"
+    }
+  },
+  "seconds": 40.01397771699703,
+  "error": "RuntimeError('train_random_272001 exited with 1')"
+}
