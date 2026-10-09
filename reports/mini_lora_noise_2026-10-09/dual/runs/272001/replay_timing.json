@@ -1,0 +1,156 @@
+{
+  "complete": true,
+  "counts": {
+    "c4": 0,
+    "input_embedder": 0,
+    "recycle": 786,
+    "s1": 444,
+    "updates": 0
+  },
+  "disabled_restored_sites": 48,
+  "excludes": [
+    "ESM/MSA preparation",
+    "cold model load",
+    "disk",
+    "scoring"
+  ],
+  "noedit_bypass_bitwise": true,
+  "peak_allocated_bytes": 1894757888,
+  "replays": [
+    {
+      "bitwise": true,
+      "step": 0
+    },
+    {
+      "bitwise": true,
+      "step": 4104
+    },
+    {
+      "bitwise": true,
+      "step": 8208
+    }
+  ],
+  "runtime": {
+    "authorization": "explicit HIP0..5",
+    "cuda_visible": null,
+    "device": "AMD Instinct MI250X / MI250",
+    "hip": "7.14.60850",
+    "hip_visible": "0",
+    "management_gcd": 2,
+    "pci_bus_id": "0000:32:00.0",
+    "physical_mapping_verified": true,
+    "rocr_visible": null,
+    "torch": "2.12.0a0+git78258b9"
+  },
+  "serial_order_bitwise": true,
+  "timing": [
+    {
+      "arm": "cold_C4",
+      "reference_c4_seconds": 0.0,
+      "repeat": 0,
+      "seconds": 6.370927000010852
+    },
+    {
+      "arm": "disabled",
+      "reference_c4_seconds": 0.3106012229982298,
+      "repeat": 0,
+      "seconds": 2.241248527992866
+    },
+    {
+      "arm": "adapted",
+      "reference_c4_seconds": 0.3111968270095531,
+      "repeat": 0,
+      "seconds": 2.314140247006435
+    },
+    {
+      "arm": "adapted",
+      "reference_c4_seconds": 0.3097100380109623,
+      "repeat": 1,
+      "seconds": 2.3255562679987634
+    },
+    {
+      "arm": "cold_C4",
+      "reference_c4_seconds": 0.0,
+      "repeat": 1,
+      "seconds": 6.359528679997311
+    },
+    {
+      "arm": "disabled",
+      "reference_c4_seconds": 0.3115623530029552,
+      "repeat": 1,
+      "seconds": 2.261198242995306
+    },
+    {
+      "arm": "disabled",
+      "reference_c4_seconds": 0.3165340230043512,
+      "repeat": 2,
+      "seconds": 2.2649129630008247
+    },
+    {
+      "arm": "adapted",
+      "reference_c4_seconds": 0.3092380680027418,
+      "repeat": 2,
+      "seconds": 2.309173996996833
+    },
+    {
+      "arm": "cold_C4",
+      "reference_c4_seconds": 0.0,
+      "repeat": 2,
+      "seconds": 6.3571601349976845
+    },
+    {
+      "arm": "cold_C4",
+      "reference_c4_seconds": 0.0,
+      "repeat": 3,
+      "seconds": 6.3830399779981235
+    },
+    {
+      "arm": "disabled",
+      "reference_c4_seconds": 0.3098393929976737,
+      "repeat": 3,
+      "seconds": 2.249397366991616
+    },
+    {
+      "arm": "adapted",
+      "reference_c4_seconds": 0.31358611398900393,
+      "repeat": 3,
+      "seconds": 2.335605582993594
+    },
+    {
+      "arm": "adapted",
+      "reference_c4_seconds": 0.30754468000668567,
+      "repeat": 4,
+      "seconds": 2.3244909250061028
+    },
+    {
+      "arm": "cold_C4",
+      "reference_c4_seconds": 0.0,
+      "repeat": 4,
+      "seconds": 6.326605272988672
+    },
+    {
+      "arm": "disabled",
+      "reference_c4_seconds": 0.31082384299952537,
+      "repeat": 4,
+      "seconds": 2.2466403859871207
+    },
+    {
+      "arm": "disabled",
+      "reference_c4_seconds": 0.3169036879990017,
+      "repeat": 5,
+      "seconds": 2.23643376500695
+    },
+    {
+      "arm": "adapted",
+      "reference_c4_seconds": 0.31054120100452565,
+      "repeat": 5,
+      "seconds": 2.3098449850076577
+    },
+    {
+      "arm": "cold_C4",
+      "reference_c4_seconds": 0.0,
+      "repeat": 5,
+      "seconds": 6.279657039995072
+    }
+  ]
+}

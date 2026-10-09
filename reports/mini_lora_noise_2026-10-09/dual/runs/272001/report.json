@@ -1,0 +1,31 @@
+{
+  "arm": "dual",
+  "complete": true,
+  "counts": {
+    "c4": 0,
+    "input_embedder": 0,
+    "updates": 8208
+  },
+  "evaluations": [
+    {
+      "checkpoint": "checkpoints/0.pt",
+      "seconds": 381.82904144799977,
+      "sha256": "a4fb387239ff4467ccafe64bd90d5dbd9ebfe7c68b9eb19098daccc17defdcd1",
+      "step": 0
+    },
+    {
+      "checkpoint": "checkpoints/4104.pt",
+      "sha256": "3c5cecff25e263042c42c6eadcbee6a790c2544fccce10c0d7a6da8f8577342d",
+      "step": 4104
+    },
+    {
+      "checkpoint": "checkpoints/8208.pt",
+      "sha256": "be2ec25b70a570a93c31891aceded2a9208dc8ac10bba9bf19761cf56b77dd21",
+      "step": 8208
+    }
+  ],
+  "execution": "paired_DDP_from_zero",
+  "history_sha256": "913dde1be7005d4d8f45be70257a602006ef2e83c0dbdf40f4c28728c583c2c6",
+  "noise_lock_sha256": "faf7aa71423f61d9115f8e8c7dfcffabb319369c3003624c1542a63c448898c6",
+  "seed": 272001
+}

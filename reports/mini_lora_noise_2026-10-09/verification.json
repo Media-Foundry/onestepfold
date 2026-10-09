@@ -1,0 +1,668 @@
+{
+  "complete": true,
+  "verified_source_artifacts": 24,
+  "site_arm_rows_recomputed": 1152,
+  "spearman_checks": 3456,
+  "regret_checks": 1152,
+  "controller_seconds": 14309.580331983001,
+  "dual_seed_same_selected_sites": 18,
+  "dual_seed_compared_sites": 18,
+  "derived": {
+    "single_272001": {
+      "geometry": {
+        "dev_new_site": {
+          "exact": {
+            "outputs": 114,
+            "passed": 56,
+            "new_failures": 6,
+            "repairs": 1,
+            "severe_pairs": 86,
+            "wrong_centres": 36,
+            "already_failed_severe_pairs": 79,
+            "already_failed_wrong_centres": 34
+          },
+          "disabled": {
+            "outputs": 114,
+            "passed": 61,
+            "new_failures": 0,
+            "repairs": 0,
+            "severe_pairs": 71,
+            "wrong_centres": 33,
+            "already_failed_severe_pairs": 71,
+            "already_failed_wrong_centres": 33
+          },
+          "4104_adapted": {
+            "outputs": 114,
+            "passed": 58,
+            "new_failures": 5,
+            "repairs": 2,
+            "severe_pairs": 93,
+            "wrong_centres": 37,
+            "already_failed_severe_pairs": 91,
+            "already_failed_wrong_centres": 34
+          },
+          "8208_adapted": {
+            "outputs": 114,
+            "passed": 60,
+            "new_failures": 2,
+            "repairs": 1,
+            "severe_pairs": 87,
+            "wrong_centres": 37,
+            "already_failed_severe_pairs": 85,
+            "already_failed_wrong_centres": 36
+          }
+        },
+        "dev_unseen_protein": {
+          "exact": {
+            "outputs": 684,
+            "passed": 438,
+            "new_failures": 39,
+            "repairs": 45,
+            "severe_pairs": 2747,
+            "wrong_centres": 304,
+            "already_failed_severe_pairs": 2631,
+            "already_failed_wrong_centres": 281
+          },
+          "disabled": {
+            "outputs": 684,
+            "passed": 432,
+            "new_failures": 0,
+            "repairs": 0,
+            "severe_pairs": 2282,
+            "wrong_centres": 324,
+            "already_failed_severe_pairs": 2282,
+            "already_failed_wrong_centres": 324
+          },
+          "4104_adapted": {
+            "outputs": 684,
+            "passed": 378,
+            "new_failures": 63,
+            "repairs": 9,
+            "severe_pairs": 2581,
+            "wrong_centres": 377,
+            "already_failed_severe_pairs": 2343,
+            "already_failed_wrong_centres": 341
+          },
+          "8208_adapted": {
+            "outputs": 684,
+            "passed": 370,
+            "new_failures": 79,
+            "repairs": 17,
+            "severe_pairs": 2502,
+            "wrong_centres": 401,
+            "already_failed_severe_pairs": 2156,
+            "already_failed_wrong_centres": 365
+          }
+        },
+        "train": {
+          "exact": {
+            "outputs": 1026,
+            "passed": 412,
+            "new_failures": 31,
+            "repairs": 16,
+            "severe_pairs": 12886,
+            "wrong_centres": 1052,
+            "already_failed_severe_pairs": 12806,
+            "already_failed_wrong_centres": 1046
+          },
+          "disabled": {
+            "outputs": 1026,
+            "passed": 427,
+            "new_failures": 0,
+            "repairs": 0,
+            "severe_pairs": 10360,
+            "wrong_centres": 853,
+            "already_failed_severe_pairs": 10360,
+            "already_failed_wrong_centres": 853
+          },
+          "4104_adapted": {
+            "outputs": 1026,
+            "passed": 492,
+            "new_failures": 23,
+            "repairs": 88,
+            "severe_pairs": 9555,
+            "wrong_centres": 1116,
+            "already_failed_severe_pairs": 9542,
+            "already_failed_wrong_centres": 1106
+          },
+          "8208_adapted": {
+            "outputs": 1026,
+            "passed": 516,
+            "new_failures": 20,
+            "repairs": 109,
+            "severe_pairs": 8439,
+            "wrong_centres": 1099,
+            "already_failed_severe_pairs": 8428,
+            "already_failed_wrong_centres": 1087
+          }
+        }
+      },
+      "timing_medians": {
+        "cold_C4": 6.338121687003877,
+        "disabled": 2.2415465754966135,
+        "adapted": 2.3044687775036437
+      },
+      "speedup": 2.750361275829373
+    },
+    "single_272003": {
+      "geometry": {
+        "dev_new_site": {
+          "exact": {
+            "outputs": 114,
+            "passed": 56,
+            "new_failures": 6,
+            "repairs": 1,
+            "severe_pairs": 86,
+            "wrong_centres": 36,
+            "already_failed_severe_pairs": 79,
+            "already_failed_wrong_centres": 34
+          },
+          "disabled": {
+            "outputs": 114,
+            "passed": 61,
+            "new_failures": 0,
+            "repairs": 0,
+            "severe_pairs": 71,
+            "wrong_centres": 33,
+            "already_failed_severe_pairs": 71,
+            "already_failed_wrong_centres": 33
+          },
+          "4104_adapted": {
+            "outputs": 114,
+            "passed": 57,
+            "new_failures": 5,
+            "repairs": 1,
+            "severe_pairs": 108,
+            "wrong_centres": 38,
+            "already_failed_severe_pairs": 106,
+            "already_failed_wrong_centres": 35
+          },
+          "8208_adapted": {
+            "outputs": 114,
+            "passed": 60,
+            "new_failures": 2,
+            "repairs": 1,
+            "severe_pairs": 109,
+            "wrong_centres": 37,
+            "already_failed_severe_pairs": 107,
+            "already_failed_wrong_centres": 36
+          }
+        },
+        "dev_unseen_protein": {
+          "exact": {
+            "outputs": 684,
+            "passed": 438,
+            "new_failures": 39,
+            "repairs": 45,
+            "severe_pairs": 2747,
+            "wrong_centres": 304,
+            "already_failed_severe_pairs": 2631,
+            "already_failed_wrong_centres": 281
+          },
+          "disabled": {
+            "outputs": 684,
+            "passed": 432,
+            "new_failures": 0,
+            "repairs": 0,
+            "severe_pairs": 2282,
+            "wrong_centres": 324,
+            "already_failed_severe_pairs": 2282,
+            "already_failed_wrong_centres": 324
+          },
+          "4104_adapted": {
+            "outputs": 684,
+            "passed": 399,
+            "new_failures": 49,
+            "repairs": 16,
+            "severe_pairs": 2157,
+            "wrong_centres": 378,
+            "already_failed_severe_pairs": 2031,
+            "already_failed_wrong_centres": 352
+          },
+          "8208_adapted": {
+            "outputs": 684,
+            "passed": 381,
+            "new_failures": 67,
+            "repairs": 16,
+            "severe_pairs": 2110,
+            "wrong_centres": 435,
+            "already_failed_severe_pairs": 1895,
+            "already_failed_wrong_centres": 403
+          }
+        },
+        "train": {
+          "exact": {
+            "outputs": 1026,
+            "passed": 412,
+            "new_failures": 31,
+            "repairs": 16,
+            "severe_pairs": 12886,
+            "wrong_centres": 1052,
+            "already_failed_severe_pairs": 12806,
+            "already_failed_wrong_centres": 1046
+          },
+          "disabled": {
+            "outputs": 1026,
+            "passed": 427,
+            "new_failures": 0,
+            "repairs": 0,
+            "severe_pairs": 10360,
+            "wrong_centres": 853,
+            "already_failed_severe_pairs": 10360,
+            "already_failed_wrong_centres": 853
+          },
+          "4104_adapted": {
+            "outputs": 1026,
+            "passed": 498,
+            "new_failures": 20,
+            "repairs": 91,
+            "severe_pairs": 11063,
+            "wrong_centres": 1071,
+            "already_failed_severe_pairs": 11050,
+            "already_failed_wrong_centres": 1063
+          },
+          "8208_adapted": {
+            "outputs": 1026,
+            "passed": 516,
+            "new_failures": 14,
+            "repairs": 103,
+            "severe_pairs": 9925,
+            "wrong_centres": 1146,
+            "already_failed_severe_pairs": 9914,
+            "already_failed_wrong_centres": 1141
+          }
+        }
+      },
+      "timing_medians": {
+        "cold_C4": 6.308153349003987,
+        "disabled": 2.217755396493885,
+        "adapted": 2.2986224420019425
+      },
+      "speedup": 2.7443190468070164
+    },
+    "dual_272001": {
+      "geometry": {
+        "dev_new_site": {
+          "exact": {
+            "outputs": 114,
+            "passed": 56,
+            "new_failures": 6,
+            "repairs": 1,
+            "severe_pairs": 86,
+            "wrong_centres": 36,
+            "already_failed_severe_pairs": 79,
+            "already_failed_wrong_centres": 34
+          },
+          "disabled": {
+            "outputs": 114,
+            "passed": 61,
+            "new_failures": 0,
+            "repairs": 0,
+            "severe_pairs": 71,
+            "wrong_centres": 33,
+            "already_failed_severe_pairs": 71,
+            "already_failed_wrong_centres": 33
+          },
+          "4104_adapted": {
+            "outputs": 114,
+            "passed": 56,
+            "new_failures": 7,
+            "repairs": 2,
+            "severe_pairs": 62,
+            "wrong_centres": 38,
+            "already_failed_severe_pairs": 62,
+            "already_failed_wrong_centres": 30
+          },
+          "8208_adapted": {
+            "outputs": 114,
+            "passed": 58,
+            "new_failures": 9,
+            "repairs": 6,
+            "severe_pairs": 57,
+            "wrong_centres": 37,
+            "already_failed_severe_pairs": 57,
+            "already_failed_wrong_centres": 27
+          }
+        },
+        "dev_unseen_protein": {
+          "exact": {
+            "outputs": 684,
+            "passed": 438,
+            "new_failures": 39,
+            "repairs": 45,
+            "severe_pairs": 2747,
+            "wrong_centres": 304,
+            "already_failed_severe_pairs": 2631,
+            "already_failed_wrong_centres": 281
+          },
+          "disabled": {
+            "outputs": 684,
+            "passed": 432,
+            "new_failures": 0,
+            "repairs": 0,
+            "severe_pairs": 2282,
+            "wrong_centres": 324,
+            "already_failed_severe_pairs": 2282,
+            "already_failed_wrong_centres": 324
+          },
+          "4104_adapted": {
+            "outputs": 684,
+            "passed": 411,
+            "new_failures": 41,
+            "repairs": 20,
+            "severe_pairs": 2846,
+            "wrong_centres": 372,
+            "already_failed_severe_pairs": 2575,
+            "already_failed_wrong_centres": 342
+          },
+          "8208_adapted": {
+            "outputs": 684,
+            "passed": 426,
+            "new_failures": 39,
+            "repairs": 33,
+            "severe_pairs": 2358,
+            "wrong_centres": 371,
+            "already_failed_severe_pairs": 2069,
+            "already_failed_wrong_centres": 337
+          }
+        },
+        "train": {
+          "exact": {
+            "outputs": 1026,
+            "passed": 412,
+            "new_failures": 31,
+            "repairs": 16,
+            "severe_pairs": 12886,
+            "wrong_centres": 1052,
+            "already_failed_severe_pairs": 12806,
+            "already_failed_wrong_centres": 1046
+          },
+          "disabled": {
+            "outputs": 1026,
+            "passed": 427,
+            "new_failures": 0,
+            "repairs": 0,
+            "severe_pairs": 10360,
+            "wrong_centres": 853,
+            "already_failed_severe_pairs": 10360,
+            "already_failed_wrong_centres": 853
+          },
+          "4104_adapted": {
+            "outputs": 1026,
+            "passed": 499,
+            "new_failures": 24,
+            "repairs": 96,
+            "severe_pairs": 8676,
+            "wrong_centres": 1156,
+            "already_failed_severe_pairs": 8660,
+            "already_failed_wrong_centres": 1142
+          },
+          "8208_adapted": {
+            "outputs": 1026,
+            "passed": 506,
+            "new_failures": 28,
+            "repairs": 107,
+            "severe_pairs": 7007,
+            "wrong_centres": 1207,
+            "already_failed_severe_pairs": 7000,
+            "already_failed_wrong_centres": 1185
+          }
+        }
+      },
+      "timing_medians": {
+        "cold_C4": 6.358344407497498,
+        "disabled": 2.2480188764893683,
+        "adapted": 2.319315586006269
+      },
+      "speedup": 2.7414744443839183
+    },
+    "dual_272003": {
+      "geometry": {
+        "dev_new_site": {
+          "exact": {
+            "outputs": 114,
+            "passed": 56,
+            "new_failures": 6,
+            "repairs": 1,
+            "severe_pairs": 86,
+            "wrong_centres": 36,
+            "already_failed_severe_pairs": 79,
+            "already_failed_wrong_centres": 34
+          },
+          "disabled": {
+            "outputs": 114,
+            "passed": 61,
+            "new_failures": 0,
+            "repairs": 0,
+            "severe_pairs": 71,
+            "wrong_centres": 33,
+            "already_failed_severe_pairs": 71,
+            "already_failed_wrong_centres": 33
+          },
+          "4104_adapted": {
+            "outputs": 114,
+            "passed": 55,
+            "new_failures": 10,
+            "repairs": 4,
+            "severe_pairs": 62,
+            "wrong_centres": 39,
+            "already_failed_severe_pairs": 62,
+            "already_failed_wrong_centres": 27
+          },
+          "8208_adapted": {
+            "outputs": 114,
+            "passed": 57,
+            "new_failures": 9,
+            "repairs": 5,
+            "severe_pairs": 55,
+            "wrong_centres": 36,
+            "already_failed_severe_pairs": 55,
+            "already_failed_wrong_centres": 26
+          }
+        },
+        "dev_unseen_protein": {
+          "exact": {
+            "outputs": 684,
+            "passed": 438,
+            "new_failures": 39,
+            "repairs": 45,
+            "severe_pairs": 2747,
+            "wrong_centres": 304,
+            "already_failed_severe_pairs": 2631,
+            "already_failed_wrong_centres": 281
+          },
+          "disabled": {
+            "outputs": 684,
+            "passed": 432,
+            "new_failures": 0,
+            "repairs": 0,
+            "severe_pairs": 2282,
+            "wrong_centres": 324,
+            "already_failed_severe_pairs": 2282,
+            "already_failed_wrong_centres": 324
+          },
+          "4104_adapted": {
+            "outputs": 684,
+            "passed": 422,
+            "new_failures": 36,
+            "repairs": 26,
+            "severe_pairs": 2543,
+            "wrong_centres": 374,
+            "already_failed_severe_pairs": 2329,
+            "already_failed_wrong_centres": 347
+          },
+          "8208_adapted": {
+            "outputs": 684,
+            "passed": 427,
+            "new_failures": 40,
+            "repairs": 35,
+            "severe_pairs": 2170,
+            "wrong_centres": 372,
+            "already_failed_severe_pairs": 1878,
+            "already_failed_wrong_centres": 341
+          }
+        },
+        "train": {
+          "exact": {
+            "outputs": 1026,
+            "passed": 412,
+            "new_failures": 31,
+            "repairs": 16,
+            "severe_pairs": 12886,
+            "wrong_centres": 1052,
+            "already_failed_severe_pairs": 12806,
+            "already_failed_wrong_centres": 1046
+          },
+          "disabled": {
+            "outputs": 1026,
+            "passed": 427,
+            "new_failures": 0,
+            "repairs": 0,
+            "severe_pairs": 10360,
+            "wrong_centres": 853,
+            "already_failed_severe_pairs": 10360,
+            "already_failed_wrong_centres": 853
+          },
+          "4104_adapted": {
+            "outputs": 1026,
+            "passed": 500,
+            "new_failures": 26,
+            "repairs": 99,
+            "severe_pairs": 8804,
+            "wrong_centres": 1084,
+            "already_failed_severe_pairs": 8786,
+            "already_failed_wrong_centres": 1067
+          },
+          "8208_adapted": {
+            "outputs": 1026,
+            "passed": 510,
+            "new_failures": 29,
+            "repairs": 112,
+            "severe_pairs": 6422,
+            "wrong_centres": 1078,
+            "already_failed_severe_pairs": 6416,
+            "already_failed_wrong_centres": 1054
+          }
+        }
+      },
+      "timing_medians": {
+        "cold_C4": 6.19913888850715,
+        "disabled": 2.194374868493469,
+        "adapted": 2.2594921039999463
+      },
+      "speedup": 2.743598385465877
+    }
+  },
+  "held_selection_changes": [
+    {
+      "seed": 272001,
+      "pdb": "1X8D",
+      "site": "I25",
+      "single_selected": "C",
+      "dual_selected": "P",
+      "single_regret": 0.0,
+      "dual_regret": 0.008458195429689855,
+      "delta": 0.008458195429689855
+    },
+    {
+      "seed": 272001,
+      "pdb": "4PT4",
+      "site": "L10",
+      "single_selected": "P",
+      "dual_selected": "Q",
+      "single_regret": 0.04676615152494534,
+      "dual_regret": 0.021896258882323716,
+      "delta": -0.024869892642621627
+    },
+    {
+      "seed": 272001,
+      "pdb": "3SXZ",
+      "site": "R101",
+      "single_selected": "T",
+      "dual_selected": "F",
+      "single_regret": 0.003176046279741357,
+      "dual_regret": 0.0016860648213615909,
+      "delta": -0.001489981458379766
+    },
+    {
+      "seed": 272001,
+      "pdb": "4PQL",
+      "site": "E89",
+      "single_selected": "I",
+      "dual_selected": "L",
+      "single_regret": 0.003045140308021943,
+      "dual_regret": 0.030388643284023464,
+      "delta": 0.02734350297600152
+    },
+    {
+      "seed": 272001,
+      "pdb": "1YSB",
+      "site": "V5",
+      "single_selected": "M",
+      "dual_selected": "E",
+      "single_regret": 0.0,
+      "dual_regret": 0.027993355939931464,
+      "delta": 0.027993355939931464
+    },
+    {
+      "seed": 272003,
+      "pdb": "1X8D",
+      "site": "I25",
+      "single_selected": "C",
+      "dual_selected": "P",
+      "single_regret": 0.0,
+      "dual_regret": 0.008458195429689855,
+      "delta": 0.008458195429689855
+    },
+    {
+      "seed": 272003,
+      "pdb": "2EBE",
+      "site": "E47",
+      "single_selected": "Y",
+      "dual_selected": "D",
+      "single_regret": 0.012229916198306268,
+      "dual_regret": 0.3921395107298623,
+      "delta": 0.37990959453155604
+    },
+    {
+      "seed": 272003,
+      "pdb": "4PT4",
+      "site": "L10",
+      "single_selected": "M",
+      "dual_selected": "Q",
+      "single_regret": 0.006155236635930317,
+      "dual_regret": 0.021896258882323716,
+      "delta": 0.0157410222463934
+    },
+    {
+      "seed": 272003,
+      "pdb": "3SXZ",
+      "site": "R101",
+      "single_selected": "T",
+      "dual_selected": "F",
+      "single_regret": 0.003176046279741357,
+      "dual_regret": 0.0016860648213615909,
+      "delta": -0.001489981458379766
+    },
+    {
+      "seed": 272003,
+      "pdb": "4PQL",
+      "site": "E89",
+      "single_selected": "I",
+      "dual_selected": "L",
+      "single_regret": 0.003045140308021943,
+      "dual_regret": 0.030388643284023464,
+      "delta": 0.02734350297600152
+    },
+    {
+      "seed": 272003,
+      "pdb": "1YSB",
+      "site": "V5",
+      "single_selected": "M",
+      "dual_selected": "E",
+      "single_regret": 0.0,
+      "dual_regret": 0.027993355939931464,
+      "delta": 0.027993355939931464
+    }
+  ]
+}

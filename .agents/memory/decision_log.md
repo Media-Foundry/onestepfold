@@ -1,3 +1,21 @@
+## 2026-10-09 — Mini LoRA noise control CLOSED, no promotion
+
+All4fresh single/dual x272001/272003 runs8208updates,all eval/replay complete.
+Controller14309.58s;24remoteJSONs SHAverified;1152site-arm rows independently
+recomputed3456rho/1152regret. Exposure32 vs16+16,DDPreplica hashes agree.
+Held9parents dual vs single: rho .57651/.57320 vs .57281/.55575;regret
+.06140/.06140 vs .05932/.03596;Top1both6/18 vs8/18. ResponseRMSE tinygains,
+rho/response intervals cross0;seed2regret degradationintervalpositive.
+Heldgeometrypasses426/427 vs370/381 (disabled432);newfailures39/40 vs79/67.
+2FKZnew36→1/23→3 accounts87.5%/74.1%ofnewfailurecountreduction;2EBE25→25/
+18→26. Seed2severepairs2110→2170 despitebetterpasscount. DualselectedsameAA
+atall18heldsites;seed2loses2EBEE47Y→D benefit,regret+.37991.
+TRAINpass516→506/510;wrongcentres1099→1207/1146→1078.Mixedgeometrytradeoff.
+230211isTRAINnoisefordual,NOTunseennoiseconfirmation;allpanelsdevelopment.
+Close/noautonoise/rank/loss/stepsearch. No newtraining. Findings
+ docs/mini_lora_noise_findings_2026-10-09.md;completeevidence
+ reports/mini_lora_noise_2026-10-09. Originalsource/launchsnapshotretained.
+
 ## 2026-10-08 — Mini LoRA noise coverage control LOCKED
 
 User approves single/dual archived-noise supervision control. Four fresh runs:
