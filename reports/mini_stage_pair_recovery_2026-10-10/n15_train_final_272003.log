@@ -1,0 +1,72 @@
+2026-10-10 01:42:27,347 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/runner/batch_inference.py:403] INFO runner.batch_inference: Inference by Protenix: model_size: mini, with_feature: esm, model_version: v0.5.0, dtype: bf16
+2026-10-10 01:42:27,347 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/runner/batch_inference.py:408] INFO runner.batch_inference: Triangle_multiplicative kernel: torch, Triangle_attention kernel: torch
+2026-10-10 01:42:27,347 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/runner/batch_inference.py:412] INFO runner.batch_inference: enable_diffusion_shared_vars_cache: True, enable_efficient_fusion: True, enable_tf32: False
+2026-10-10 01:42:27,348 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/runner/inference.py:246] INFO runner.inference: Distributed environment: world size: 1, global rank: 0, local rank: 0
+2026-10-10 01:42:27,348 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/runner/inference.py:98] INFO root: LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+2026-10-10 01:42:27,348 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/runner/inference.py:127] INFO root: Finished environment initialization.
+train scheduler 16.0
+inference scheduler 16.0
+Diffusion Module has 16.0
+2026-10-10 01:42:44,865 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/runner/inference.py:246] INFO runner.inference: Loading from /data/user/shuang886/Folding/protenix_stage0_pkg/v1_1/runtime/checkpoint/protenix_mini_esm_v0.5.0.pt, strict: False
+2026-10-10 01:42:45,340 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/runner/inference.py:246] INFO runner.inference: Sampled key: module.input_embedder.atom_attention_encoder.linear_no_bias_ref_pos.weight
+2026-10-10 01:42:45,381 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/runner/inference.py:246] INFO runner.inference: Finish loading checkpoint.
+2026-10-10 01:42:45,384 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/runner/inference.py:246] INFO runner.inference: Model parameters: 135.22M
+ALIGNED_EVAL n15 final 272003 0 p0_s48
+ALIGNED_EVAL n15 final 272003 0 p0_s58
+ALIGNED_EVAL n15 final 272003 0 p1_s25
+ALIGNED_EVAL n15 final 272003 0 p1_s78
+ALIGNED_EVAL n15 final 272003 0 p2_s30
+ALIGNED_EVAL n15 final 272003 0 p2_s47
+ALIGNED_EVAL n15 final 272003 0 p3_s37
+ALIGNED_EVAL n15 final 272003 0 p3_s84
+ALIGNED_EVAL n15 final 272003 0 p4_s2
+ALIGNED_EVAL n15 final 272003 0 p4_s25
+ALIGNED_EVAL n15 final 272003 0 p5_s34
+ALIGNED_EVAL n15 final 272003 0 p5_s65
+ALIGNED_EVAL n15 final 272003 0 p6_s10
+ALIGNED_EVAL n15 final 272003 0 p6_s17
+ALIGNED_EVAL n15 final 272003 0 p7_s44
+ALIGNED_EVAL n15 final 272003 0 p7_s86
+ALIGNED_EVAL n15 final 272003 0 p8_s101
+ALIGNED_EVAL n15 final 272003 0 p8_s108
+ALIGNED_EVAL n15 final 272003 0 p9_s42
+ALIGNED_EVAL n15 final 272003 0 p9_s89
+ALIGNED_EVAL n15 final 272003 0 p10_s45
+ALIGNED_EVAL n15 final 272003 0 p10_s80
+ALIGNED_EVAL n15 final 272003 0 p11_s49
+ALIGNED_EVAL n15 final 272003 0 p11_s52
+ALIGNED_EVAL n15 final 272003 0 p12_s11
+ALIGNED_EVAL n15 final 272003 0 p12_s72
+ALIGNED_EVAL n15 final 272003 0 p13_s95
+ALIGNED_EVAL n15 final 272003 0 p13_s107
+ALIGNED_EVAL n15 final 272003 0 p14_s6
+ALIGNED_EVAL n15 final 272003 0 p14_s8
+ALIGNED_EVAL n15 final 272003 0 p15_s13
+ALIGNED_EVAL n15 final 272003 0 p15_s66
+ALIGNED_EVAL n15 final 272003 0 p16_s5
+ALIGNED_EVAL n15 final 272003 0 p16_s110
+ALIGNED_EVAL n15 final 272003 0 p17_s44
+ALIGNED_EVAL n15 final 272003 0 p17_s137
+ALIGNED_EVAL n15 final 272003 0 p18_s13
+ALIGNED_EVAL n15 final 272003 0 p18_s179
+ALIGNED_EVAL n15 final 272003 0 p19_s90
+ALIGNED_EVAL n15 final 272003 0 p19_s137
+ALIGNED_EVAL n15 final 272003 0 p20_s100
+ALIGNED_EVAL n15 final 272003 0 p20_s112
+ALIGNED_EVAL n15 final 272003 0 p21_s23
+ALIGNED_EVAL n15 final 272003 0 p21_s128
+ALIGNED_EVAL n15 final 272003 0 p22_s25
+ALIGNED_EVAL n15 final 272003 0 p22_s44
+ALIGNED_EVAL n15 final 272003 0 p23_s68
+ALIGNED_EVAL n15 final 272003 0 p23_s148
+ALIGNED_TRAIN n15 final 272003 128 241.2343551949889
+ALIGNED_TRAIN n15 final 272003 256 253.88892232699436
+ALIGNED_TRAIN n15 final 272003 384 267.5471140019945
+ALIGNED_TRAIN n15 final 272003 512 282.9787322949851
+ALIGNED_TRAIN n15 final 272003 640 297.906038858986
+ALIGNED_TRAIN n15 final 272003 768 313.054099822999
+ALIGNED_TRAIN n15 final 272003 896 328.51366245700046
+ALIGNED_TRAIN n15 final 272003 1024 543.0040689180023
+ALIGNED_TRAIN n15 final 272003 1152 558.8277160610014
+ALIGNED_TRAIN n15 final 272003 1280 575.3951998740085
+ALIGNED_TRAIN n15 final 272003 1408 594.957078292995

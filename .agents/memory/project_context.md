@@ -1,3 +1,102 @@
+## 2026-10-10 — Stage-aligned pair experiment complete; not promoted
+
+All eight fixed runs, scores and independent checkpoint checks completed. The
+single unchanged operational retry finished under the original deadline;
+execution_recovery is closed, and the original controller remains failed.
+Final export: 212 files, archive SHA256
+0a1b9d04f36f060766f48df5e4b71bb5223d6063d8633dcf1328c5ef1d2ce94a.
+All hashes and 32 checkpoint nodes, 596 site/node replays, 7740 correlations,
+2580 regrets, 1788 historical controls and 98040 output records verified.
+Scientific updates 65664; recorded total with discarded/replay work 68505,
+plus at most one unknown partial update. S1 total including failed initial
+assessment 33744; independent tensor verification adds 11420 forwards.
+
+Single T37 fitting improves: AA residual NMSE .590-.596 versus old .723-.739;
+response RMSE .166-.182 versus B .424, but geometry worsens. Stage Hint improves
+the aligned intermediate state without a consistent final advantage. Joint
+TRAIN AA NMSE .959-.963, development .99465-.99527; full residual NMSE exceeds
+1 on both panels. Complete frozen TRAIN objective improves in two runs and
+worsens in two. High clipping is an observation, not an established cause.
+Equal 32-exposure T37 comparison is nearly equal for Final; do not attribute
+single terminal versus joint gap solely to interference or capacity.
+
+Held B regret .046314 becomes .088710 for both Final seeds and .075122 for
+both Hint seeds. Three selections change: 2EBE E47 and 6ZRW P80 worsen;
+4PT4 L10 improves. The other 15 are unchanged. Correct donor assignment has
+small response advantages over wrong assignment, yet does not improve B.
+Geometry pass rises 432 to 465/471/477/474, chiefly 1X8D/4PQL; chirality counts
+and >1A deviations increase. No combined response/selection/geometry win.
+All panels are development, no new speed result, no NMSE decoding gate.
+
+Full report and analysis/plots/objective reconstruction/tail decomposition are
+complete. Preserve interim snapshot at2c63ad13 and runtime snapshot atfa187177;
+no historical reinterpretation. No additional training or configuration search
+locked. If continuing, first measure how actual updates affect the full fixed
+TRAIN objective, then predeclare a distinct intervention; do not assume more
+capacity, labels, steps or changing clip is the answer. Mini model-only scope,
+fixed B_s, candidate inputs and oracle pair interface retained. Overall goal
+remains ACTIVE: transferable quality-qualified acceleration is not achieved.
+
+## 2026-10-10 — Network recovered; all eight scientific trainings complete
+
+Previousgoalturn classifiedPROGRESS: fa187177operationalrecovery was verified
+andpushed. Currentread-onlySSH succeeds. Recoverycontroller772199 confirmedlive;
+worker772206 actuallyabsent/reportcomplete8208,7296S1,1286.605sec. Scoreprocess
+782666 confirmedlive andprogressingfixed0/4104/8208; independentverification
+stillpending. Do not callfulltrialcomplete before both finish. GoalACTIVE.
+
+Downloaded51-file fixedlatent snapshot to/tmp/stage_final_latent_20261010;
+archiveSHAf6fbc5fd409bd36de634305b1ad236607878b9d51531f65d51536ec293198939.
+Only a print-size TypeError occurredafterarchive/manifestcreation; archivehash
+andallfilehashes verified, no scientificrerun. AllfourjointTRAIN AA NMSE now
+.95887/.95991/.96192/.96272; held .99465/.99527/.99485/.99476. Jointcommon drift
+makesrawTRAIN1.155-1.243,held1.202-1.270. WeakAAimprovement8/9heldparents,
+notfullresponse/qualityrecovery. Jointpredictedcommonfraction95%-96%TRAIN,
+98%held. No data/weight/objectivechange basedonthis analysis.
+
+FrozenfullTRAINobjectives differfrommoving-parameterhistorymeans: Finalinitial
+.868336->.847477/.890758; Hintinitial.787521->.791734/.774481. Two improve,two
+worsen. Reconstructedfromsavedfullfieldmoments/originallength/q. No new labels.
+T37equal32exposures: n1 .96834/.96778/.96962/.96896 versusn15
+.96826/.96871/.97179/.97286. Do notattribute n1terminal.59 versusjoint.96 gap
+entirelytojointinterference: n1terminal864exposures. This is not a causal
+sameoptimizer-historycomparison. No furthertraininglocked; finishfullfunctional
+scores/audit/export/reportfirst. Sourcefamily/data scope remainsMini/modelonly.
+
+## 2026-10-10 — Post-push network retry remains unresolved
+
+After~122sec wait (honoring user network preference), secondSSH ConnectTimeout15
+also returned255 before any remote command ran. Last successful observation remains
+6244updates withfreshhistory andcontrollertrain. Do not infer remotecompletion,
+termination or continuedhealth from transportfailure. Allrecoverycoded/evidence
+is pushedfa187177; scopedworkingfiles clean, unrelatedmemorytail preserved.
+Activegoal remainsunfinished; thisgoalturn made substantialprogress (runtime
+replay,unchanged recovery,verified artifacts,push), not a blockedturn. On next
+turn first retry boundedread-only status, without startingduplicates or altering
+old six-hourdeadline. Fullfinalcollection andqualityconclusion remainrequired.
+
+## 2026-10-10 — Runtime recovery evidence pushed; full model results still pending
+
+Scopedcommitfa187177209108a95daa7a5ab224573f39a5d254 pushedorigin/main;
+originalparent2c63ad13.92files; operationaltools/protocols/tests and72-file
+snapshot verified,4260prefixscalars exact. Newthreefocusedtests pass; complete
+GitNexusall+staged checks (stagedLOW,0knownaffectedprocesses), postcommitgraph
+currentfa187177. Unrelatedwork andmemorytail remainunstaged.
+
+Recoverylastobserved6244updates, liveprogress, originalabsolute deadline
+1791589329.1015267. Controller772199 / workerproot772206 HIP0. No secondretry.
+LatestSSHconnection timedout; this is not a trainingterminalsignal. Honor user's
+networkpreference: wait~120sec before retry, splitwaits<=60sec. GoalremainsACTIVE.
+
+Next: completefixed8208+score+independentverify; rootexecution_recovery must
+complete, originalcontroller staysfailed. Export with newverification_code/
+export_stage_pair_recovery.py, allaccepted8sources; source mapandextraaccounting.
+Downloadfullarchiveonlyaftercreation/checksum; runverify_results/analyze_results/
+diagnose_objective/plot_results andinspect; fullreportpairedtwoobjectives/seeds,
+allroles/choice/geometry/cost andoldmatchedexposure controls. Preserve original
+interimhashsnapshot at2c63ad13 and runtime snapshotfa187177. Do not promote based
+onthreecompletedjointmodels. Goalnotachieved, no new training scope locked.
+
 ## 2026-10-10 — Original runtime terminal; identical retry passed stalled prefix
 
 Originalproot715283 andPython715286 are actuallygone afterSIGTERM. proot

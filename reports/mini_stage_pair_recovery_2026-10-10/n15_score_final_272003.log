@@ -1,0 +1,62 @@
+SCORE_RECOVERY_SITE 272003 0 p0_s48
+SCORE_RECOVERY_SITE 272003 0 p0_s58
+SCORE_RECOVERY_SITE 272003 0 p1_s25
+SCORE_RECOVERY_SITE 272003 0 p1_s78
+SCORE_RECOVERY_SITE 272003 0 p2_s30
+SCORE_RECOVERY_SITE 272003 0 p2_s47
+SCORE_RECOVERY_SITE 272003 0 p3_s37
+SCORE_RECOVERY_SITE 272003 0 p3_s84
+SCORE_RECOVERY_SITE 272003 0 p4_s2
+SCORE_RECOVERY_SITE 272003 0 p4_s25
+SCORE_RECOVERY_SITE 272003 0 p5_s34
+SCORE_RECOVERY_SITE 272003 0 p5_s65
+SCORE_RECOVERY_SITE 272003 0 p6_s10
+SCORE_RECOVERY_SITE 272003 0 p6_s17
+SCORE_RECOVERY_SITE 272003 0 p7_s44
+SCORE_RECOVERY_SITE 272003 0 p7_s86
+SCORE_RECOVERY_SITE 272003 0 p8_s101
+SCORE_RECOVERY_SITE 272003 0 p8_s108
+SCORE_RECOVERY_SITE 272003 0 p9_s42
+SCORE_RECOVERY_SITE 272003 0 p9_s89
+SCORE_RECOVERY_SITE 272003 0 p10_s45
+SCORE_RECOVERY_SITE 272003 0 p10_s80
+SCORE_RECOVERY_SITE 272003 0 p11_s49
+SCORE_RECOVERY_SITE 272003 0 p11_s52
+SCORE_RECOVERY_SITE 272003 0 p12_s11
+SCORE_RECOVERY_SITE 272003 0 p12_s72
+SCORE_RECOVERY_SITE 272003 0 p13_s95
+SCORE_RECOVERY_SITE 272003 0 p13_s107
+SCORE_RECOVERY_SITE 272003 0 p14_s6
+SCORE_RECOVERY_SITE 272003 0 p14_s8
+SCORE_RECOVERY_SITE 272003 0 p15_s13
+SCORE_RECOVERY_SITE 272003 0 p15_s66
+SCORE_RECOVERY_SITE 272003 0 p16_s5
+SCORE_RECOVERY_SITE 272003 0 p16_s110
+SCORE_RECOVERY_SITE 272003 0 p17_s44
+SCORE_RECOVERY_SITE 272003 0 p17_s137
+SCORE_RECOVERY_SITE 272003 0 p18_s13
+SCORE_RECOVERY_SITE 272003 0 p18_s179
+SCORE_RECOVERY_SITE 272003 0 p19_s90
+SCORE_RECOVERY_SITE 272003 0 p19_s137
+SCORE_RECOVERY_SITE 272003 0 p20_s100
+SCORE_RECOVERY_SITE 272003 0 p20_s112
+SCORE_RECOVERY_SITE 272003 0 p21_s23
+SCORE_RECOVERY_SITE 272003 0 p21_s128
+SCORE_RECOVERY_SITE 272003 0 p22_s25
+SCORE_RECOVERY_SITE 272003 0 p22_s44
+SCORE_RECOVERY_SITE 272003 0 p23_s68
+SCORE_RECOVERY_SITE 272003 0 p23_s148
+SCORE_RECOVERY_COMPLETE final 272003 0 225.63812010499532
+Traceback (most recent call last):
+  File "/data/user/shuang886/Folding/stage_pair_recovery_v1_20261010/code/scripts/score_stage_pair_recovery.py", line 9, in <module>
+    score_pair_recovery(a.root,a.arm,a.seed,step,site_keys=lock['eval_sites'] if lock['cohort']=='n1' else None,
+  File "/data/user/shuang886/Folding/stage_pair_recovery_v1_20261010/code/scripts/score_pair_recovery.py", line 39, in score_pair_recovery
+    ev=json.loads((folder/f'evaluation_{step}.json').read_text());assert ev['complete'] and ev['step']==step
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pc/anaconda3/envs/fold/lib/python3.12/pathlib.py", line 1027, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pc/anaconda3/envs/fold/lib/python3.12/pathlib.py", line 1013, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/data/user/shuang886/Folding/stage_pair_recovery_v1_20261010/n15/runs/final/272003/evaluation_4104.json'

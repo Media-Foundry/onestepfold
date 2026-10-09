@@ -1,0 +1,33 @@
+{
+  "complete": true,
+  "source_files_sha_verified": 212,
+  "checks": {
+    "runs": 8,
+    "nodes": 32,
+    "latent_replays": 596,
+    "updates": 65664,
+    "s1": 31920,
+    "correlations": 7740,
+    "regrets": 2580,
+    "controls": 1788,
+    "outputs": 98040
+  },
+  "all_panels_development": true,
+  "checkpoint_forward_reverified": true,
+  "verified_cohorts": [
+    "n1",
+    "n15"
+  ],
+  "scientific_experiment_complete": true,
+  "operational_recovery": {
+    "recorded_total_updates": 68505,
+    "s1_with_failed_attempt": 33744,
+    "unobserved_partial_update": true,
+    "unobserved_additional_update_upper_bound": 1,
+    "exact_diagnostic_prefix_scalars": 4260,
+    "retry_exact_prefix_updates": 1420,
+    "retry_prefix_max_abs": 0.0,
+    "no_update_probe_forwards": 2,
+    "no_update_probe_backwards": 2
+  }
+}

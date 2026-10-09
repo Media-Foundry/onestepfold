@@ -1,0 +1,47 @@
+2026-10-10 02:33:38,314 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/runner/batch_inference.py:403] INFO runner.batch_inference: Inference by Protenix: model_size: mini, with_feature: esm, model_version: v0.5.0, dtype: bf16
+2026-10-10 02:33:38,314 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/runner/batch_inference.py:408] INFO runner.batch_inference: Triangle_multiplicative kernel: torch, Triangle_attention kernel: torch
+2026-10-10 02:33:38,314 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/runner/batch_inference.py:412] INFO runner.batch_inference: enable_diffusion_shared_vars_cache: True, enable_efficient_fusion: True, enable_tf32: False
+2026-10-10 02:33:38,315 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/runner/inference.py:246] INFO runner.inference: Distributed environment: world size: 1, global rank: 0, local rank: 0
+2026-10-10 02:33:38,315 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/runner/inference.py:98] INFO root: LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+2026-10-10 02:33:38,315 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/runner/inference.py:127] INFO root: Finished environment initialization.
+train scheduler 16.0
+inference scheduler 16.0
+Diffusion Module has 16.0
+2026-10-10 02:33:54,196 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/runner/inference.py:246] INFO runner.inference: Loading from /data/user/shuang886/Folding/protenix_stage0_pkg/v1_1/runtime/checkpoint/protenix_mini_esm_v0.5.0.pt, strict: False
+2026-10-10 02:33:54,656 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/runner/inference.py:246] INFO runner.inference: Sampled key: module.input_embedder.atom_attention_encoder.linear_no_bias_ref_pos.weight
+2026-10-10 02:33:54,697 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/runner/inference.py:246] INFO runner.inference: Finish loading checkpoint.
+2026-10-10 02:33:54,700 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/runner/inference.py:246] INFO runner.inference: Model parameters: 135.22M
+REPLAY_UPDATE 128 67.24666983701172
+REPLAY_UPDATE 256 102.42762065900024
+REPLAY_UPDATE 384 117.44000772101572
+REPLAY_UPDATE 512 131.25779275601963
+REPLAY_UPDATE 640 144.3828602800204
+REPLAY_UPDATE 768 157.60156246300903
+REPLAY_UPDATE 896 170.79946640701382
+REPLAY_UPDATE 1024 184.27717091300292
+REPLAY_UPDATE 1152 197.7545284939988
+REPLAY_UPDATE 1280 211.44900122701074
+REPLAY_UPDATE 1408 225.45025977000478
+PHASE 1420 M load 226.4956466720032
+PHASE 1420 M forward 226.5000369080226
+PHASE 1420 M backward 226.51911371501046
+PHASE 1420 M backward_returned 226.5571595549991
+PHASE 1420 N load 226.5577069830033
+PHASE 1420 N forward 226.5618366660201
+PHASE 1420 N backward 226.581083794008
+PHASE 1420 N backward_returned 226.61954799102386
+PHASE 1420 clip 226.62010118801845
+PHASE 1420 optimizer 226.62200089200633
+REPLAY_CHECKPOINT 1420 3ed92be766a60d599574855fd7f05a688758f5b82efc7fb8f9e2ba769ddd01ad
+PHASE 1421 M load 226.68403935301467
+PHASE 1421 M forward 226.68831877800403
+PHASE 1421 M backward 226.7075840170146
+PHASE 1421 M backward_returned 226.7458816510043
+PHASE 1421 N load 226.7464513379964
+PHASE 1421 N forward 226.75080718501704
+PHASE 1421 N backward 226.83030669100117
+PHASE 1421 N backward_returned 226.86867594599607
+PHASE 1421 clip 226.8698634110042
+PHASE 1421 optimizer 226.87174935502117
+REPLAY_CHECKPOINT 1421 212c005267374fc9c2c2fdb9d29abafdc94d6ce38e8a35f2e023bafc4e1c7228
+REPLAY_COMPLETE 233.01958878099686
