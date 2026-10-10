@@ -1,0 +1,981 @@
+{
+  "summary": {
+    "changed_count": 107,
+    "affected_count": 14,
+    "changed_files": 70,
+    "risk_level": "high"
+  },
+  "changed_symbols": [
+    {
+      "id": "Section:AGENTS.md:L1:Repository guidance",
+      "name": "Repository guidance",
+      "type": "Section",
+      "filePath": "AGENTS.md",
+      "change_type": "touched"
+    },
+    {
+      "id": "Section:AGENTS.md:L12:GitNexus — Code Intelligence",
+      "name": "GitNexus — Code Intelligence",
+      "type": "Section",
+      "filePath": "AGENTS.md",
+      "change_type": "touched"
+    },
+    {
+      "id": "Section:AGENTS.md:L18:Always Do",
+      "name": "Always Do",
+      "type": "Section",
+      "filePath": "AGENTS.md",
+      "change_type": "touched"
+    },
+    {
+      "id": "Section:AGENTS.md:L27:Never Do",
+      "name": "Never Do",
+      "type": "Section",
+      "filePath": "AGENTS.md",
+      "change_type": "touched"
+    },
+    {
+      "id": "Section:AGENTS.md:L34:Resources",
+      "name": "Resources",
+      "type": "Section",
+      "filePath": "AGENTS.md",
+      "change_type": "touched"
+    },
+    {
+      "id": "Section:AGENTS.md:L43:CLI",
+      "name": "CLI",
+      "type": "Section",
+      "filePath": "AGENTS.md",
+      "change_type": "touched"
+    },
+    {
+      "id": "Section:docs/esmc_cache_v1.md:L1:ESMC cache v1",
+      "name": "ESMC cache v1",
+      "type": "Section",
+      "filePath": "docs/esmc_cache_v1.md",
+      "change_type": "touched"
+    },
+    {
+      "id": "Section:docs/esmc_cache_v1.md:L9:Pinned contract",
+      "name": "Pinned contract",
+      "type": "Section",
+      "filePath": "docs/esmc_cache_v1.md",
+      "change_type": "touched"
+    },
+    {
+      "id": "Section:docs/mini_backward_gate_v1.md:L1:Mini backward gate v1",
+      "name": "Mini backward gate v1",
+      "type": "Section",
+      "filePath": "docs/mini_backward_gate_v1.md",
+      "change_type": "touched"
+    },
+    {
+      "id": "Section:docs/mini_pair_placement_progress_2026-10-10.md:L1:Mini early/late pair adaptation: native gate and launch record",
+      "name": "Mini early/late pair adaptation: native gate and launch record",
+      "type": "Section",
+      "filePath": "docs/mini_pair_placement_progress_2026-10-10.md",
+      "change_type": "touched"
+    },
+    {
+      "id": "Section:docs/mini_pair_placement_progress_2026-10-10.md:L14:Completed initialization gate",
+      "name": "Completed initialization gate",
+      "type": "Section",
+      "filePath": "docs/mini_pair_placement_progress_2026-10-10.md",
+      "change_type": "touched"
+    },
+    {
+      "id": "Section:docs/mini_pair_placement_progress_2026-10-10.md:L37:Preserved startup failure and current work",
+      "name": "Preserved startup failure and current work",
+      "type": "Section",
+      "filePath": "docs/mini_pair_placement_progress_2026-10-10.md",
+      "change_type": "touched"
+    },
+    {
+      "id": "Section:docs/mini_pair_placement_v1.md:L1:Mini pair adaptation placement: early editable blocks, frozen native suffix",
+      "name": "Mini pair adaptation placement: early editable blocks, frozen native suffix",
+      "type": "Section",
+      "filePath": "docs/mini_pair_placement_v1.md",
+      "change_type": "touched"
+    },
+    {
+      "id": "Section:docs/mini_pair_placement_v1.md:L7:Question and comparison",
+      "name": "Question and comparison",
+      "type": "Section",
+      "filePath": "docs/mini_pair_placement_v1.md",
+      "change_type": "touched"
+    },
+    {
+      "id": "Section:docs/mini_pair_placement_v1.md:L27:Fixed inputs, labels and reference branch",
+      "name": "Fixed inputs, labels and reference branch",
+      "type": "Section",
+      "filePath": "docs/mini_pair_placement_v1.md",
+      "change_type": "touched"
+    },
+    {
+      "id": "Section:docs/mini_pair_placement_v1.md:L46:Engineering gate before learning",
+      "name": "Engineering gate before learning",
+      "type": "Section",
+      "filePath": "docs/mini_pair_placement_v1.md",
+      "change_type": "touched"
+    },
+    {
+      "id": "Section:docs/mini_pair_placement_v1.md:L61:Locked learning comparison",
+      "name": "Locked learning comparison",
+      "type": "Section",
+      "filePath": "docs/mini_pair_placement_v1.md",
+      "change_type": "touched"
+    },
+    {
+      "id": "Section:docs/mini_pair_placement_v1.md:L78:Evaluation and decisions",
+      "name": "Evaluation and decisions",
+      "type": "Section",
+      "filePath": "docs/mini_pair_placement_v1.md",
+      "change_type": "touched"
+    },
+    {
+      "id": "Section:docs/scratch_primary_training_v1.md:L1:随机初始化折叠核心：正式主训练方案草稿",
+      "name": "随机初始化折叠核心：正式主训练方案草稿",
+      "type": "Section",
+      "filePath": "docs/scratch_primary_training_v1.md",
+      "change_type": "touched"
+    },
+    {
+      "id": "Section:docs/scratch_primary_training_v1.md:L5:执行授权更新：8 GCD 从零训练",
+      "name": "执行授权更新：8 GCD 从零训练",
+      "type": "Section",
+      "filePath": "docs/scratch_primary_training_v1.md",
+      "change_type": "touched"
+    },
+    {
+      "id": "Section:docs/scratch_primary_training_v1.md:L37:1. 本轮决定与现有证据",
+      "name": "1. 本轮决定与现有证据",
+      "type": "Section",
+      "filePath": "docs/scratch_primary_training_v1.md",
+      "change_type": "touched"
+    },
+    {
+      "id": "Section:docs/scratch_primary_training_v1.md:L74:3. 开跑前只保留必要检查，并行推进",
+      "name": "3. 开跑前只保留必要检查，并行推进",
+      "type": "Section",
+      "filePath": "docs/scratch_primary_training_v1.md",
+      "change_type": "touched"
+    },
+    {
+      "id": "Section:docs/scratch_primary_training_v1.md:L76:A. 一次TRAIN32学习检查",
+      "name": "A. 一次TRAIN32学习检查",
+      "type": "Section",
+      "filePath": "docs/scratch_primary_training_v1.md",
+      "change_type": "touched"
+    },
+    {
+      "id": "Section:docs/scratch_primary_training_v1.md:L92:C. 长链、并行与恢复检查",
+      "name": "C. 长链、并行与恢复检查",
+      "type": "Section",
+      "filePath": "docs/scratch_primary_training_v1.md",
+      "change_type": "touched"
+    },
+    {
+      "id": "Section:docs/scratch_primary_training_v1.md:L104:4. 正式主训练的数据遍历和并行规则",
+      "name": "4. 正式主训练的数据遍历和并行规则",
+      "type": "Section",
+      "filePath": "docs/scratch_primary_training_v1.md",
+      "change_type": "touched"
+    },
+    {
+      "id": "Section:docs/scratch_primary_training_v1.md:L106:2026-09-27 DiamondHill 执行位置更新",
+      "name": "2026-09-27 DiamondHill 执行位置更新",
+      "type": "Section",
+      "filePath": "docs/scratch_primary_training_v1.md",
+      "change_type": "touched"
+    },
+    {
+      "id": "Section:docs/scratch_primary_training_v1.md:L125:5. 预算、检查点和停止规则",
+      "name": "5. 预算、检查点和停止规则",
+      "type": "Section",
+      "filePath": "docs/scratch_primary_training_v1.md",
+      "change_type": "touched"
+    },
+    {
+      "id": "Function:scripts/build_pair_placement.py:build_pair_placement",
+      "name": "build_pair_placement",
+      "type": "Function",
+      "filePath": "scripts/build_pair_placement.py",
+      "change_type": "touched"
+    },
+    {
+      "id": "Function:scripts/build_pair_placement.py:build_pair_placement.save@40:4",
+      "name": "save",
+      "type": "Function",
+      "filePath": "scripts/build_pair_placement.py",
+      "change_type": "touched"
+    },
+    {
+      "id": "Function:scripts/build_pair_placement.py:build_pair_placement.record@44:4",
+      "name": "record",
+      "type": "Function",
+      "filePath": "scripts/build_pair_placement.py",
+      "change_type": "touched"
+    },
+    {
+      "id": "Function:scripts/control_pair_placement.py:control_pair_placement",
+      "name": "control_pair_placement",
+      "type": "Function",
+      "filePath": "scripts/control_pair_placement.py",
+      "change_type": "touched"
+    },
+    {
+      "id": "Function:scripts/control_pair_placement.py:control_pair_placement.digest@12:4",
+      "name": "digest",
+      "type": "Function",
+      "filePath": "scripts/control_pair_placement.py",
+      "change_type": "touched"
+    },
+    {
+      "id": "Function:scripts/control_pair_placement.py:control_pair_placement.save@24:4",
+      "name": "save",
+      "type": "Function",
+      "filePath": "scripts/control_pair_placement.py",
+      "change_type": "touched"
+    },
+    {
+      "id": "Function:scripts/control_pair_placement.py:control_pair_placement.launch@28:4",
+      "name": "launch",
+      "type": "Function",
+      "filePath": "scripts/control_pair_placement.py",
+      "change_type": "touched"
+    },
+    {
+      "id": "Function:scripts/control_pair_placement.py:control_pair_placement.wait@34:4",
+      "name": "wait",
+      "type": "Function",
+      "filePath": "scripts/control_pair_placement.py",
+      "change_type": "touched"
+    },
+    {
+      "id": "Function:scripts/control_pair_placement.py:control_pair_placement.native@46:4",
+      "name": "native",
+      "type": "Function",
+      "filePath": "scripts/control_pair_placement.py",
+      "change_type": "touched"
+    },
+    {
+      "id": "Function:scripts/control_pair_placement_gate.py:control_pair_placement_gate",
+      "name": "control_pair_placement_gate",
+      "type": "Function",
+      "filePath": "scripts/control_pair_placement_gate.py",
+      "change_type": "touched"
+    },
+    {
+      "id": "Function:scripts/control_pair_placement_gate.py:control_pair_placement_gate.digest@13:4",
+      "name": "digest",
+      "type": "Function",
+      "filePath": "scripts/control_pair_placement_gate.py",
+      "change_type": "touched"
+    },
+    {
+      "id": "Function:scripts/control_pair_placement_gate.py:control_pair_placement_gate.save@24:4",
+      "name": "save",
+      "type": "Function",
+      "filePath": "scripts/control_pair_placement_gate.py",
+      "change_type": "touched"
+    },
+    {
+      "id": "Function:scripts/control_pair_placement_gate.py:control_pair_placement_gate.launch@28:4",
+      "name": "launch",
+      "type": "Function",
+      "filePath": "scripts/control_pair_placement_gate.py",
+      "change_type": "touched"
+    },
+    {
+      "id": "Function:scripts/control_pair_placement_gate.py:control_pair_placement_gate.wait@35:4",
+      "name": "wait",
+      "type": "Function",
+      "filePath": "scripts/control_pair_placement_gate.py",
+      "change_type": "touched"
+    },
+    {
+      "id": "Function:scripts/control_placement_verification.py:control_placement_verification",
+      "name": "control_placement_verification",
+      "type": "Function",
+      "filePath": "scripts/control_placement_verification.py",
+      "change_type": "touched"
+    },
+    {
+      "id": "Function:scripts/control_placement_verification.py:control_placement_verification.digest@13:41",
+      "name": "digest",
+      "type": "Function",
+      "filePath": "scripts/control_placement_verification.py",
+      "change_type": "touched"
+    },
+    {
+      "id": "Function:scripts/control_placement_verification.py:control_placement_verification.save@26:4",
+      "name": "save",
+      "type": "Function",
+      "filePath": "scripts/control_placement_verification.py",
+      "change_type": "touched"
+    },
+    {
+      "id": "Function:scripts/evaluate_stage0.py:evaluate_row",
+      "name": "evaluate_row",
+      "type": "Function",
+      "filePath": "scripts/evaluate_stage0.py",
+      "change_type": "touched"
+    },
+    {
+      "id": "Function:scripts/verify_pair_placement.py:verify_pair_placement",
+      "name": "verify_pair_placement",
+      "type": "Function",
+      "filePath": "scripts/verify_pair_placement.py",
+      "change_type": "touched"
+    },
+    {
+      "id": "Function:src/fastglycan/all_atom_metrics.py:compare_coordinates",
+      "name": "compare_coordinates",
+      "type": "Function",
+      "filePath": "src/fastglycan/all_atom_metrics.py",
+      "change_type": "touched"
+    },
+    {
+      "id": "Function:src/fastglycan/all_atom_metrics.py:compare_coordinates.rmsd@16:4",
+      "name": "rmsd",
+      "type": "Function",
+      "filePath": "src/fastglycan/all_atom_metrics.py",
+      "change_type": "touched"
+    },
+    {
+      "id": "Class:src/fastglycan/models/early_pair_recovery.py:FrozenPairContinuation",
+      "name": "FrozenPairContinuation",
+      "type": "Class",
+      "filePath": "src/fastglycan/models/early_pair_recovery.py",
+      "change_type": "touched"
+    },
+    {
+      "id": "Method:src/fastglycan/models/early_pair_recovery.py:FrozenPairContinuation.__init__#2",
+      "name": "__init__",
+      "type": "Method",
+      "filePath": "src/fastglycan/models/early_pair_recovery.py",
+      "change_type": "touched"
+    },
+    {
+      "id": "Variable:src/fastglycan/models/early_pair_recovery.py:FrozenPairContinuation.__init__.blocks@26:16",
+      "name": "blocks",
+      "type": "Variable",
+      "filePath": "src/fastglycan/models/early_pair_recovery.py",
+      "change_type": "touched"
+    },
+    {
+      "id": "Method:src/fastglycan/models/early_pair_recovery.py:FrozenPairContinuation.__call__#1",
+      "name": "__call__",
+      "type": "Method",
+      "filePath": "src/fastglycan/models/early_pair_recovery.py",
+      "change_type": "touched"
+    },
+    {
+      "id": "Method:src/fastglycan/models/early_pair_recovery.py:FrozenPairContinuation.check_unchanged#0",
+      "name": "check_unchanged",
+      "type": "Method",
+      "filePath": "src/fastglycan/models/early_pair_recovery.py",
+      "change_type": "touched"
+    },
+    {
+      "id": "Class:src/fastglycan/models/early_pair_recovery.py:EarlyPairRecovery",
+      "name": "EarlyPairRecovery",
+      "type": "Class",
+      "filePath": "src/fastglycan/models/early_pair_recovery.py",
+      "change_type": "touched"
+    },
+    {
+      "id": "Method:src/fastglycan/models/early_pair_recovery.py:EarlyPairRecovery.__init__",
+      "name": "__init__",
+      "type": "Method",
+      "filePath": "src/fastglycan/models/early_pair_recovery.py",
+      "change_type": "touched"
+    },
+    {
+      "id": "Method:src/fastglycan/models/early_pair_recovery.py:EarlyPairRecovery.run_pair_suffix#6",
+      "name": "run_pair_suffix",
+      "type": "Method",
+      "filePath": "src/fastglycan/models/early_pair_recovery.py",
+      "change_type": "touched"
+    },
+    {
+      "id": "Function:src/fastglycan/pair_placement.py:placement_lock",
+      "name": "placement_lock",
+      "type": "Function",
+      "filePath": "src/fastglycan/pair_placement.py",
+      "change_type": "touched"
+    },
+    {
+      "id": "Function:src/fastglycan/pair_placement.py:placement_model",
+      "name": "placement_model",
+      "type": "Function",
+      "filePath": "src/fastglycan/pair_placement.py",
+      "change_type": "touched"
+    },
+    {
+      "id": "Class:src/fastglycan/pair_placement.py:PairEntryCapture",
+      "name": "PairEntryCapture",
+      "type": "Class",
+      "filePath": "src/fastglycan/pair_placement.py",
+      "change_type": "touched"
+    },
+    {
+      "id": "Method:src/fastglycan/pair_placement.py:PairEntryCapture.__init__#1",
+      "name": "__init__",
+      "type": "Method",
+      "filePath": "src/fastglycan/pair_placement.py",
+      "change_type": "touched"
+    },
+    {
+      "id": "Method:src/fastglycan/pair_placement.py:PairEntryCapture.__enter__#0",
+      "name": "__enter__",
+      "type": "Method",
+      "filePath": "src/fastglycan/pair_placement.py",
+      "change_type": "touched"
+    },
+    {
+      "id": "Function:src/fastglycan/pair_placement.py:PairEntryCapture.__enter__.observe@45:8#3",
+      "name": "observe",
+      "type": "Function",
+      "filePath": "src/fastglycan/pair_placement.py",
+      "change_type": "touched"
+    },
+    {
+      "id": "Method:src/fastglycan/pair_placement.py:PairEntryCapture.__exit__",
+      "name": "__exit__",
+      "type": "Method",
+      "filePath": "src/fastglycan/pair_placement.py",
+      "change_type": "touched"
+    },
+    {
+      "id": "Class:src/fastglycan/pair_placement.py:PlacementBoundaries",
+      "name": "PlacementBoundaries",
+      "type": "Class",
+      "filePath": "src/fastglycan/pair_placement.py",
+      "change_type": "touched"
+    },
+    {
+      "id": "Method:src/fastglycan/pair_placement.py:PlacementBoundaries.__init__#2",
+      "name": "__init__",
+      "type": "Method",
+      "filePath": "src/fastglycan/pair_placement.py",
+      "change_type": "touched"
+    },
+    {
+      "id": "Method:src/fastglycan/pair_placement.py:PlacementBoundaries.read#1",
+      "name": "read",
+      "type": "Method",
+      "filePath": "src/fastglycan/pair_placement.py",
+      "change_type": "touched"
+    },
+    {
+      "id": "Method:src/fastglycan/pair_placement.py:PlacementBoundaries.candidate#1",
+      "name": "candidate",
+      "type": "Method",
+      "filePath": "src/fastglycan/pair_placement.py",
+      "change_type": "touched"
+    },
+    {
+      "id": "Method:src/fastglycan/pair_placement.py:PlacementBoundaries.reference#2",
+      "name": "reference",
+      "type": "Method",
+      "filePath": "src/fastglycan/pair_placement.py",
+      "change_type": "touched"
+    },
+    {
+      "id": "Function:src/fastglycan/placement_training.py:run_placement",
+      "name": "run_placement",
+      "type": "Function",
+      "filePath": "src/fastglycan/placement_training.py",
+      "change_type": "touched"
+    },
+    {
+      "id": "Function:src/fastglycan/placement_training.py:run_placement.save@43:4",
+      "name": "save",
+      "type": "Function",
+      "filePath": "src/fastglycan/placement_training.py",
+      "change_type": "touched"
+    },
+    {
+      "id": "Function:src/fastglycan/placement_training.py:run_placement.fetch@82:8",
+      "name": "fetch",
+      "type": "Function",
+      "filePath": "src/fastglycan/placement_training.py",
+      "change_type": "touched"
+    },
+    {
+      "id": "Function:src/fastglycan/placement_training.py:run_placement.forbid@86:8",
+      "name": "forbid",
+      "type": "Function",
+      "filePath": "src/fastglycan/placement_training.py",
+      "change_type": "touched"
+    },
+    {
+      "id": "Function:src/fastglycan/placement_training.py:run_placement.decoder_guard@87:8",
+      "name": "decoder_guard",
+      "type": "Function",
+      "filePath": "src/fastglycan/placement_training.py",
+      "change_type": "touched"
+    },
+    {
+      "id": "Function:src/fastglycan/placement_training.py:run_placement.parallel_step@98:8",
+      "name": "parallel_step",
+      "type": "Function",
+      "filePath": "src/fastglycan/placement_training.py",
+      "change_type": "touched"
+    },
+    {
+      "id": "Function:src/fastglycan/placement_training.py:run_placement.optimizer_new@107:8",
+      "name": "optimizer_new",
+      "type": "Function",
+      "filePath": "src/fastglycan/placement_training.py",
+      "change_type": "touched"
+    },
+    {
+      "id": "Function:src/fastglycan/placement_training.py:run_placement.evaluate@146:12",
+      "name": "evaluate",
+      "type": "Function",
+      "filePath": "src/fastglycan/placement_training.py",
+      "change_type": "touched"
+    },
+    {
+      "id": "Function:src/fastglycan/placement_verification.py:verify_parallel_gate",
+      "name": "verify_parallel_gate",
+      "type": "Function",
+      "filePath": "src/fastglycan/placement_verification.py",
+      "change_type": "touched"
+    },
+    {
+      "id": "Function:src/fastglycan/placement_verification.py:verify_training_ledger",
+      "name": "verify_training_ledger",
+      "type": "Function",
+      "filePath": "src/fastglycan/placement_verification.py",
+      "change_type": "touched"
+    },
+    {
+      "id": "Class:src/onestepfold/models/coordinate_refiner.py:CoordinateRefinerConfig",
+      "name": "CoordinateRefinerConfig",
+      "type": "Class",
+      "filePath": "src/onestepfold/models/coordinate_refiner.py",
+      "change_type": "touched"
+    },
+    {
+      "id": "Property:src/onestepfold/models/coordinate_refiner.py:CoordinateRefinerConfig.zero_initialize_output",
+      "name": "zero_initialize_output",
+      "type": "Property",
+      "filePath": "src/onestepfold/models/coordinate_refiner.py",
+      "change_type": "touched"
+    },
+    {
+      "id": "Property:src/onestepfold/models/coordinate_refiner.py:CoordinateRefinerConfig.geometry_features",
+      "name": "geometry_features",
+      "type": "Property",
+      "filePath": "src/onestepfold/models/coordinate_refiner.py",
+      "change_type": "touched"
+    },
+    {
+      "id": "Method:src/onestepfold/models/coordinate_refiner.py:CoordinateRefinerConfig.__post_init__#0",
+      "name": "__post_init__",
+      "type": "Method",
+      "filePath": "src/onestepfold/models/coordinate_refiner.py",
+      "change_type": "touched"
+    },
+    {
+      "id": "Function:src/onestepfold/models/coordinate_refiner.py:backbone_frames",
+      "name": "backbone_frames",
+      "type": "Function",
+      "filePath": "src/onestepfold/models/coordinate_refiner.py",
+      "change_type": "touched"
+    },
+    {
+      "id": "Class:src/onestepfold/models/coordinate_refiner.py:GlobalCoordinateRefiner",
+      "name": "GlobalCoordinateRefiner",
+      "type": "Class",
+      "filePath": "src/onestepfold/models/coordinate_refiner.py",
+      "change_type": "touched"
+    },
+    {
+      "id": "Method:src/onestepfold/models/coordinate_refiner.py:GlobalCoordinateRefiner.__init__#1",
+      "name": "__init__",
+      "type": "Method",
+      "filePath": "src/onestepfold/models/coordinate_refiner.py",
+      "change_type": "touched"
+    },
+    {
+      "id": "Method:src/onestepfold/models/coordinate_refiner.py:GlobalCoordinateRefiner.forward#4",
+      "name": "forward",
+      "type": "Method",
+      "filePath": "src/onestepfold/models/coordinate_refiner.py",
+      "change_type": "touched"
+    },
+    {
+      "id": "Function:tests/test_coordinate_refiner.py:test_refiner_is_rigid_transform_consistent",
+      "name": "test_refiner_is_rigid_transform_consistent",
+      "type": "Function",
+      "filePath": "tests/test_coordinate_refiner.py",
+      "change_type": "touched"
+    },
+    {
+      "id": "Function:tests/test_coordinate_refiner.py:test_refiner_zero_initialization_is_exact_c2_fallback",
+      "name": "test_refiner_zero_initialization_is_exact_c2_fallback",
+      "type": "Function",
+      "filePath": "tests/test_coordinate_refiner.py",
+      "change_type": "touched"
+    },
+    {
+      "id": "Function:tests/test_coordinate_refiner.py:test_geometry_changes_local_correction_and_ignores_padding",
+      "name": "test_geometry_changes_local_correction_and_ignores_padding",
+      "type": "Function",
+      "filePath": "tests/test_coordinate_refiner.py",
+      "change_type": "touched"
+    },
+    {
+      "id": "Function:tests/test_coordinate_refiner.py:test_geometry_branch_learns_after_zero_initialized_first_step",
+      "name": "test_geometry_branch_learns_after_zero_initialized_first_step",
+      "type": "Function",
+      "filePath": "tests/test_coordinate_refiner.py",
+      "change_type": "touched"
+    },
+    {
+      "id": "Function:tests/test_coordinate_refiner.py:test_zero_pair_bias_matches_radial_baseline_initialization_and_inference",
+      "name": "test_zero_pair_bias_matches_radial_baseline_initialization_and_inference",
+      "type": "Function",
+      "filePath": "tests/test_coordinate_refiner.py",
+      "change_type": "touched"
+    },
+    {
+      "id": "Function:tests/test_coordinate_refiner.py:test_geometry_preserves_shared_baseline_initialization",
+      "name": "test_geometry_preserves_shared_baseline_initialization",
+      "type": "Function",
+      "filePath": "tests/test_coordinate_refiner.py",
+      "change_type": "touched"
+    },
+    {
+      "id": "Class:tests/test_early_pair_recovery.py:PairBlock",
+      "name": "PairBlock",
+      "type": "Class",
+      "filePath": "tests/test_early_pair_recovery.py",
+      "change_type": "touched"
+    },
+    {
+      "id": "Method:tests/test_early_pair_recovery.py:PairBlock.__init__#3",
+      "name": "__init__",
+      "type": "Method",
+      "filePath": "tests/test_early_pair_recovery.py",
+      "change_type": "touched"
+    },
+    {
+      "id": "Method:tests/test_early_pair_recovery.py:PairBlock.forward",
+      "name": "forward",
+      "type": "Method",
+      "filePath": "tests/test_early_pair_recovery.py",
+      "change_type": "touched"
+    },
+    {
+      "id": "Function:tests/test_early_pair_recovery.py:make_case",
+      "name": "make_case",
+      "type": "Function",
+      "filePath": "tests/test_early_pair_recovery.py",
+      "change_type": "touched"
+    },
+    {
+      "id": "Function:tests/test_early_pair_recovery.py:test_initial_full_native_identity_equal_budget_and_noedit",
+      "name": "test_initial_full_native_identity_equal_budget_and_noedit",
+      "type": "Function",
+      "filePath": "tests/test_early_pair_recovery.py",
+      "change_type": "touched"
+    },
+    {
+      "id": "Function:tests/test_early_pair_recovery.py:test_frozen_tail_transmits_joint_and_proxy_gradient_and_finite_difference",
+      "name": "test_frozen_tail_transmits_joint_and_proxy_gradient_and_finite_difference",
+      "type": "Function",
+      "filePath": "tests/test_early_pair_recovery.py",
+      "change_type": "touched"
+    },
+    {
+      "id": "Function:tests/test_early_pair_recovery.py:test_frozen_tail_transmits_joint_and_proxy_gradient_and_finite_difference.joint@73:4",
+      "name": "joint",
+      "type": "Function",
+      "filePath": "tests/test_early_pair_recovery.py",
+      "change_type": "touched"
+    },
+    {
+      "id": "Function:tests/test_early_pair_recovery.py:test_optimizer_and_reconstruction_do_not_update_native_tail_or_single",
+      "name": "test_optimizer_and_reconstruction_do_not_update_native_tail_or_single",
+      "type": "Function",
+      "filePath": "tests/test_early_pair_recovery.py",
+      "change_type": "touched"
+    },
+    {
+      "id": "Function:tests/test_early_pair_recovery.py:test_changed_frozen_tail_is_detected",
+      "name": "test_changed_frozen_tail_is_detected",
+      "type": "Function",
+      "filePath": "tests/test_early_pair_recovery.py",
+      "change_type": "touched"
+    },
+    {
+      "id": "Class:tests/test_pair_placement.py:Block",
+      "name": "Block",
+      "type": "Class",
+      "filePath": "tests/test_pair_placement.py",
+      "change_type": "touched"
+    },
+    {
+      "id": "Method:tests/test_pair_placement.py:Block.forward#2",
+      "name": "forward",
+      "type": "Method",
+      "filePath": "tests/test_pair_placement.py",
+      "change_type": "touched"
+    },
+    {
+      "id": "Class:tests/test_pair_placement.py:Stack",
+      "name": "Stack",
+      "type": "Class",
+      "filePath": "tests/test_pair_placement.py",
+      "change_type": "touched"
+    },
+    {
+      "id": "Method:tests/test_pair_placement.py:Stack.__init__#0",
+      "name": "__init__",
+      "type": "Method",
+      "filePath": "tests/test_pair_placement.py",
+      "change_type": "touched"
+    },
+    {
+      "id": "Function:tests/test_pair_placement.py:test_entry_is_owned_snapshot_for_positional_and_keyword_paths",
+      "name": "test_entry_is_owned_snapshot_for_positional_and_keyword_paths",
+      "type": "Function",
+      "filePath": "tests/test_pair_placement.py",
+      "change_type": "touched"
+    },
+    {
+      "id": "Function:tests/test_pair_placement.py:test_repeated_missing_and_failed_capture_remove_hooks",
+      "name": "test_repeated_missing_and_failed_capture_remove_hooks",
+      "type": "Function",
+      "filePath": "tests/test_pair_placement.py",
+      "change_type": "touched"
+    }
+  ],
+  "affected_processes": [
+    {
+      "id": "proc_42_control_pair_placeme",
+      "name": "Control_pair_placement_gate → Save",
+      "process_type": "intra_community",
+      "step_count": 3,
+      "changed_steps": [
+        {
+          "symbol": "save",
+          "step": 3
+        },
+        {
+          "symbol": "control_pair_placement_gate",
+          "step": 1
+        },
+        {
+          "symbol": "launch",
+          "step": 2
+        }
+      ]
+    },
+    {
+      "id": "proc_262_verify_parallel_gate",
+      "name": "Verify_parallel_gate → Sha256",
+      "process_type": "cross_community",
+      "step_count": 3,
+      "changed_steps": [
+        {
+          "symbol": "placement_lock",
+          "step": 2
+        },
+        {
+          "symbol": "verify_parallel_gate",
+          "step": 1
+        }
+      ]
+    },
+    {
+      "id": "proc_263_verify_training_ledg",
+      "name": "Verify_training_ledger → Sha256",
+      "process_type": "cross_community",
+      "step_count": 3,
+      "changed_steps": [
+        {
+          "symbol": "placement_lock",
+          "step": 2
+        },
+        {
+          "symbol": "verify_training_ledger",
+          "step": 1
+        }
+      ]
+    },
+    {
+      "id": "proc_104_forward",
+      "name": "Forward → _normalize",
+      "process_type": "intra_community",
+      "step_count": 3,
+      "changed_steps": [
+        {
+          "symbol": "backbone_frames",
+          "step": 2
+        },
+        {
+          "symbol": "forward",
+          "step": 1
+        }
+      ]
+    },
+    {
+      "id": "proc_248_evaluate",
+      "name": "Evaluate → Sha256",
+      "process_type": "cross_community",
+      "step_count": 4,
+      "changed_steps": [
+        {
+          "symbol": "evaluate",
+          "step": 1
+        },
+        {
+          "symbol": "read",
+          "step": 3
+        },
+        {
+          "symbol": "candidate",
+          "step": 2
+        }
+      ]
+    },
+    {
+      "id": "proc_247_run_placement",
+      "name": "Run_placement → Sha256",
+      "process_type": "cross_community",
+      "step_count": 4,
+      "changed_steps": [
+        {
+          "symbol": "run_placement",
+          "step": 1
+        },
+        {
+          "symbol": "read",
+          "step": 3
+        },
+        {
+          "symbol": "candidate",
+          "step": 2
+        }
+      ]
+    },
+    {
+      "id": "proc_246_verify_pair_placemen",
+      "name": "Verify_pair_placement → Sha256",
+      "process_type": "cross_community",
+      "step_count": 4,
+      "changed_steps": [
+        {
+          "symbol": "verify_pair_placement",
+          "step": 1
+        },
+        {
+          "symbol": "read",
+          "step": 3
+        },
+        {
+          "symbol": "candidate",
+          "step": 2
+        }
+      ]
+    },
+    {
+      "id": "proc_0_build_pair_placement",
+      "name": "Build_pair_placement → Sha256",
+      "process_type": "cross_community",
+      "step_count": 6,
+      "changed_steps": [
+        {
+          "symbol": "build_pair_placement",
+          "step": 1
+        }
+      ]
+    },
+    {
+      "id": "proc_6_build_pair_placement",
+      "name": "Build_pair_placement → Read_lock",
+      "process_type": "cross_community",
+      "step_count": 4,
+      "changed_steps": [
+        {
+          "symbol": "build_pair_placement",
+          "step": 1
+        }
+      ]
+    },
+    {
+      "id": "proc_7_build_pair_placement",
+      "name": "Build_pair_placement → State_hash",
+      "process_type": "cross_community",
+      "step_count": 4,
+      "changed_steps": [
+        {
+          "symbol": "build_pair_placement",
+          "step": 1
+        }
+      ]
+    },
+    {
+      "id": "proc_35_build_pair_placement",
+      "name": "Build_pair_placement → Lora_lock",
+      "process_type": "cross_community",
+      "step_count": 3,
+      "changed_steps": [
+        {
+          "symbol": "build_pair_placement",
+          "step": 1
+        }
+      ]
+    },
+    {
+      "id": "proc_137_build_pair_placement",
+      "name": "Build_pair_placement → Device_tree",
+      "process_type": "cross_community",
+      "step_count": 4,
+      "changed_steps": [
+        {
+          "symbol": "build_pair_placement",
+          "step": 1
+        }
+      ]
+    },
+    {
+      "id": "proc_138_build_pair_placement",
+      "name": "Build_pair_placement → Label",
+      "process_type": "cross_community",
+      "step_count": 4,
+      "changed_steps": [
+        {
+          "symbol": "build_pair_placement",
+          "step": 1
+        }
+      ]
+    },
+    {
+      "id": "proc_41_control_pair_placeme",
+      "name": "Control_pair_placement → Save",
+      "process_type": "intra_community",
+      "step_count": 3,
+      "changed_steps": [
+        {
+          "symbol": "control_pair_placement",
+          "step": 1
+        },
+        {
+          "symbol": "save",
+          "step": 3
+        },
+        {
+          "symbol": "launch",
+          "step": 2
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "/media/IntelSSD/onestepfold/hpc3_mirror_20261001/Folding/pair_placement_training_v1_20261010/code/scripts/control_pair_placement.py", line 84, in <module>
+    control_pair_placement(p.parse_args().root)
+  File "/media/IntelSSD/onestepfold/hpc3_mirror_20261001/Folding/pair_placement_training_v1_20261010/code/scripts/control_pair_placement.py", line 54, in control_pair_placement
+    wait(['tests']);state['phase']='parallel_gate'
+    ^^^^^^^^^^^^^^^
+  File "/media/IntelSSD/onestepfold/hpc3_mirror_20261001/Folding/pair_placement_training_v1_20261010/code/scripts/control_pair_placement.py", line 41, in wait
+    if code:raise RuntimeError(f'{name} failed; no restart')
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: tests failed; no restart

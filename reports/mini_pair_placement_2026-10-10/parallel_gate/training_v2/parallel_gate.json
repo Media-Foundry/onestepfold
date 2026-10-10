@@ -1,0 +1,37 @@
+{
+  "bitwise_steps": [
+    1,
+    2
+  ],
+  "complete": true,
+  "lock_sha256": "e42afe9a85392527056b93afa6efa14f84e6129b0572fda98549670f238cbc6b",
+  "snapshots": {
+    "parallel_1.pt": "1be697de260715887580222152eeef9ba726c7dc9eed873147cc49c546cc9bed",
+    "parallel_2.pt": "05f237e87cd753cd27ed0781401468df79232dda43291ef0b2bb56b72219a2a9",
+    "serial_1.pt": "eb7758b1c8591202b0d83f9e40cd6dcd04c59e44b5758d09021df2b5b64212c8",
+    "serial_2.pt": "a525faed50c5962beaa02c2f12725f62de1e67a3befd6d840a5bda8cf2c86500"
+  },
+  "times": [
+    {
+      "method": "serial",
+      "seconds": 161.7853454760043,
+      "step": 1
+    },
+    {
+      "method": "serial",
+      "seconds": 152.77435060200514,
+      "step": 2
+    },
+    {
+      "method": "parallel",
+      "seconds": 38.97182640398387,
+      "step": 1
+    },
+    {
+      "method": "parallel",
+      "seconds": 28.814557306992356,
+      "step": 2
+    }
+  ],
+  "training_started": false
+}

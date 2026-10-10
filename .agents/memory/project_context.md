@@ -1,3 +1,86 @@
+## 2026-10-10 — Native placement parallel gate passed; four fixed fits launched
+
+Same V2controller1057181 remains live. Nativeaudit1057322 completedexit0;
+independentCPUverifier1058784 exit0. Bothdisposableupdates havebitwiseidentical
+serial/six-rank gradients, weights and completeAdamW state.37CPUtests passed.
+Counts2052candidateand108reference forwards/backwards. These arenot scientific
+updates. Allgateevidence locallyverified atreports/mini_pair_placement_2026-10-10.
+GatearchiveSHA6cfb4bafa3ce006f73b5f3decb28ea817ea4fa221bf5d0caaf7e17214b99f2a0.
+
+Originalfixedscientificqueue began1791624106.835674, deadline1791645706.8356745.
+Firsttorchrun1058788 late272001 loadingatlastcheck; no learnedqualityresultyet.
+Orderlate272001,early272001,late272003,early272003;128updates each, checkpoints
+0/32/128. SixHIP0-5 only. Same V2locke42afe9a85392527056b93afa6efa14f84e6129b0572fda98549670f238cbc6b.
+
+Separateverificationfollower1058272 atpair_placement_verification_v1_20261010
+haspassedCPUimportandwaitsonoriginaltraining/scoring/ledgercompletion. It then
+rebuildsall3checkpoints/all48sitesforeachrunonidleHIP0 withNumPyFP64 checks.
+Followerlockccd6f555d99fd221c90deb8f304f890a557f5fa6fe9603f39125b6b812d95ced.
+Doesnotrestarttraining; originalfailureorfinitewaitingdeadline closesit.
+Monitorbothcontrollers, preserveallattempts; observertimeoutsarenotjobfailures.
+
+Newsource/docs/preflightreport stagedonly; unrelatedmodifiedfilehashessavedin
+/tmp/placement_unrelated_worktree_guard.json. GraphincrementalreviewhademptyIDs
+andspuriouscritical258flowmapping; fullnocacherebuildresolvedincompleteness.
+CompletefreshreviewstillHIGHrisk(13newexperimentflows), userwarned; allpaths
+manuallychecked, oldscientificsourceunchanged. Finalreview/commitpushpending.
+GoalACTIVE; thisturnmadeprogress throughnativeidentity, exactparallelacceptance
+andactualfixedfits. Remain: monitorfits, verification, quality/costanalysis and
+publishfinalresults. No promotion, no transfer/speedclaim, no autoretry/extension.
+
+## 2026-10-10 — Placement native identity passed; six-GPU numerical gate active
+
+Native preparation rootpair_placement_gate_v1_20261010 completed under controller
+1054779, all7jobs exit0. Lockfae3c951ef3cb858d2b824ce65aa092e64a246d3741dff557e29d0df6a11c178.
+Boundarymanifest26fcd6da0ff46b21aabd7f2dde6006066367c8264f34ac58f0cbea36ee8e9e3c.
+936nativewarmrecycles=912candidate+24WT, no newteacher or inputpreparation.
+3648candidateand192reference initializationchecks exact, bothplacements/seeds.
+Boundarytensorarchive9474306071bytes. Frozen2..15digest25647ea2df4f277fd3d4fed393988a8f92afeb14ef93a91a8a5ac21d9c7ca569.
+
+Trainingstartupv1 stoppedbeforeanynativeaudit or fitting: package omitted
+existing tests/test_site_parallel.py, pytestexit4. Preservedrootandlogs. V2only
+adds that unchanged test; all867other/source hashes andscientificsettings kept.
+Active rootpair_placement_training_v2_20261010, controller1057181, nativeaudit
+1057322. Locke42afe9a85392527056b93afa6efa14f84e6129b0572fda98549670f238cbc6b.
+37CPU/Gloo tests passed56.00s. Nativeearly two-update serial/six-rank gate now
+loading/running, NOT yet accepted. Controller independently verifies snapshots
+onCPU, thenruns fixed late272001,early272001,late272003,early272003 with128updates
+and0/32/128eval. Six-hourcapstartsaftergate; no automaticrestart or extension.
+No modelqualityresult or scientificupdate yet. Observeoriginalcontroller; never
+restartdueobserverexpiry. Scientificrootcode mustremainimmutable.
+
+New standalone scripts/verify_pair_placement.py is implementedlocally but not
+intherunningfrozenbundle; checkpointnative replay remains separate pendingwork.
+Controller performs fits, independentcoordinatescores andCPUledgerchecks only.
+Aftertraining, stageverifierseparately, verifyallcheckpoints, analyzematchedlate/
+early andTRAIN/held, reportqualityandactualcost, thenpublishscopedchanges.
+No unverifiedspeedortransferclaim. Activefeaturebranchmini-early-pair-adaptation;
+no newcommit yet; preserveunrelateddirtywork/memorytails. BroadgoalACTIVE.
+
+## 2026-10-10 — New early-versus-late pair adaptation gate in preparation
+
+Branch mini-early-pair-adaptation, base02581ef8. Old candidate fits, stage hints,
+full-gradient optimizers, reference anchors and native parallel audit are closed.
+New hypothesis: keep two trainable native pair blocks and the same node injection,
+but compare blocks0/1 followed by frozen native2..15 with existing blocks14/15.
+Candidate B_inputs/B_s stay immutable; same final pair labels and anchored WT path.
+This changes placement and downstream native propagation, not a new output head.
+Protocol docs/mini_pair_placement_v1.md fixes2placements×2seeds×128full-gradient
+updates, checkpoints0/32/128, with no S1 training or oracle predictor inputs.
+All prior development data remain development; no promotion or speed assumed.
+
+Prototype CPU tests:16passed, remote/tmp/mini_pair_placement_cpu_02581ef8.
+Includes frozen suffix input derivative, finite difference, joint/proxy backward,
+identity, isolation and state reconstruction. Source tarSHA321d36b4f63c5fe9f3bf784d8752fe4de99bc3fee875ca8e8164d89ecfbee95f.
+Native boundary gate code now prepared, not yet confirmed launched. Overlay
+/tmp/mini_pair_placement_gate_overlay_v1.tar SHA192a080c468a648940b424fd40b645f7a4685760c05032c76f34844f7e753f54.
+Gate captures912actual warm pre-block0 candidate boundaries and24WT references,
+checks both placements/seeds against native B exactly. No newtargetC4teacher,
+no ESM/MSA preparation. A later two-update serial/six-rank check must also pass
+before scientific training. No new native job or learning result exists yet.
+HIP0-5 PCI32/35/11/14/AE/B3 idle on last preflight; busyPCI93 is HIP7, untouched.
+Broadgoal ACTIVE; this turn made engineering progress, no external blocker.
+
 ## 2026-10-10 — Native six-device audit completed and independently verified
 
 The same v3 controller1051753 completed both native and independent CPU jobs,
