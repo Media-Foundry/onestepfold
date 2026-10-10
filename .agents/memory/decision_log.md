@@ -1,3 +1,72 @@
+## 2026-10-10 — Full-batch result follower installed; training remains live
+
+This continuation made PROGRESS: added result-only exporter, NumPy/SciPy
+verification, all-node analysis, and a CPU-only automatic follower outside the
+frozen training tree. No scientific source, optimizer, budget, data or native
+execution changed. Export requires all12 original train/score/tensor-verifier
+jobs to complete successfully. Failure is retained; follower does not restart
+or signal training. It checks source/coordinate/checkpoint hashes, charges all
+L-BFGS trials, and reconstructs returned states using the next gradient or fixed
+checkpoint hash. Minimum trial loss is never treated as an accepted model.
+Parent-weighted quality remains separate from site-weighted TRAIN objective.
+
+Local pure CPU tests3/3 pass. Independent arithmetic reproduces the previous
+closed full panel:720 correlations,240 regrets,9,120 outputs. This does not
+regenerate coordinates; full checkpoint/tensor replay is performed separately
+by the already locked verification worker. No new scientific result yet.
+
+FollowerPID955486 was launched1791599089.3353264; lockSHA
+f15edf10922c38bc679f90d9e41a5794bb135f484f05da5a3d8e9480e5fbd791.
+Separate code: runtime/postprocess_code; training remains runtime/code unchanged.
+Follower wait deadline1791654871.6972454 accommodates original queued verification
+caps, not extra training. On success it creates export/ and fullbatch_export.tar.gz;
+on failure inspect postprocess_status.json/log and retain attempts. The local
+reports/mini_stage_fullbatch_2026-10-10 directory is still an INCOMPLETE launch
+record. Do not import absent results or infer completion from this note.
+
+Observed1791599128.462629: same controller947128/workers947531,947532,947534,
+947536 alive, HIP0..3. AdamW272001/272003 have56/24 gradient passes; L-BFGS
+272001/272003 have61/60. Three runs passed32; initially slow AdamW272003 advanced
+10->24 and remains live. No restart was necessary. HIP5 untouched;6/7 unused.
+The goal stays ACTIVE: transferable quality-qualified model acceleration is
+not achieved. Continue polling these actual handles, collect only after gates,
+verify and analyze every0/32/128 node, then decide the next scientific step.
+
+## 2026-10-10 — Full-batch experiment implementation published; jobs remain live
+
+Published787449964a2dd95490181bc678d3319a9dd639f8 to origin/main; ls-remote
+matches exactly, index refreshed (8,346 nodes/14,980 edges). Staged24 files only;
+all-scope/staged graph checks complete, aggregate HIGH warning reviewed rather
+than waived. Unrelated workspace and memory-tail modifications preserved.
+
+Last live observation1791598039.741: controller947128 in training; workers
+947531/947532/947534/947536 alive on HIP0/1/2/3. Gradient passes15/22/4/20;
+changed updates15/10/4/9; no rollback yet. Corresponding Python children are
+947533/947535/947537/947538. All first full gradients exactly match audit0 and
+all full-panel baseline replays passed. AdamW272003 is progressing substantially
+more slowly; it advanced3->4 rather than being terminal. Do not restart because
+of a stale heartbeat; inspect these actual handles/children and the common
+training deadline1791618871.6972454. GPU5 remains outside this experiment.
+
+Published report directory mini_stage_fullbatch_2026-10-10 is an INCOMPLETE
+launch/protocol record, not terminal results. Raw gradient log entries for
+L-BFGS include rejected trial points; last_objective is not necessarily the
+accepted model's loss. Use update records and fixed0/32/128 checkpoints, plus
+independent verifier outputs, to assess actual improvement. No checkpoint
+selection, new hyperparameters, extra data or new budget is authorized by a
+favorable early trace.
+
+The controller will run CPU scoring and sequential HIP4 tensor verification
+after each completed train. There is not yet a new final-results exporter or
+independent score-arithmetic aggregation script; implement/read-only reuse
+these as needed while waiting, keeping frozen scientific source untouched.
+Final collection must require all four reports, scores and tensor checks,
+retain failures and all node/candidate work counts, then analyze full/common/AA,
+functional selection/geometry and tails. No new folding speed claim follows
+from training-cache performance. Existing oracle interface remains valid.
+This turn made PROGRESS (implemented/tested/locked/launched/published); the
+broader model-performance goal remains ACTIVE and unachieved.
+
 ## 2026-10-10 — Full-batch startup integrity passed in all four runs
 
 Observed1791597819.263538: four proot groups947531/947532/947534/947536 and

@@ -31,3 +31,24 @@ the complete initial S1 replay and their first full TRAIN gradients match the
 preceding audit exactly. The snapshot is still not a final scientific result.
 Aggregate graph change risk is HIGH; `graph_review.json` records the reviewed
 execution boundaries and known static-analysis limits.
+
+Result processing is now installed separately from the locked training source.
+`postprocess_lock.json` hashes the CPU-only exporter/verifier/follower;
+`postprocess_launch.json` identifies follower955486. It waits for all twelve
+training/scoring/tensor-verification jobs to succeed, then exports all fixed
+nodes, checks score arithmetic and accepted optimizer states, and builds an
+archive. It never starts, restarts or modifies training. A failed batch remains
+failed. No terminal scientific results are present in this directory yet.
+
+`postprocess_preflight.json` records three focused tests and successful arithmetic
+recalculation of the previous closed panel:720 correlations,240 regrets and9,120
+output summaries. This validates processing, not the new models. The scalar
+verification explicitly relies on the separately recorded full tensor replay;
+it does not pretend to regenerate coordinates from this lightweight export.
+
+`postprocess_startup.json` observed the same four live workers at1791599128.46:
+AdamW gradients56/24 and L-BFGS61/60. The initially slower second AdamW run has
+continued advancing. Treat this as a dated snapshot, not a live dashboard.
+L-BFGS trial evaluations are retained and charged, but the report uses returned
+parameter hashes and the fixed checkpoint measurements for accepted-state
+trajectories. The minimum trial loss is never used to select a model.

@@ -1,0 +1,211 @@
+{
+  "complete": true,
+  "index_revision": "787449964a2dd95490181bc678d3319a9dd639f8 plus current result-only additions",
+  "all_scope": {
+    "summary": {
+      "changed_count": 56,
+      "affected_count": 2,
+      "changed_files": 25,
+      "risk_level": "medium"
+    },
+    "partial": false,
+    "truncated": false
+  },
+  "staged_scope": {
+    "summary": {
+      "changed_count": 21,
+      "affected_count": 1,
+      "changed_files": 14,
+      "risk_level": "medium"
+    },
+    "partial": false,
+    "truncated": false,
+    "changed_symbols": [
+      {
+        "id": "Function:scripts/export_stage_fullbatch.py:export_stage_fullbatch",
+        "name": "export_stage_fullbatch",
+        "type": "Function",
+        "filePath": "scripts/export_stage_fullbatch.py",
+        "change_type": "touched"
+      },
+      {
+        "id": "Function:scripts/export_stage_fullbatch.py:export_stage_fullbatch.read@10:4",
+        "name": "read",
+        "type": "Function",
+        "filePath": "scripts/export_stage_fullbatch.py",
+        "change_type": "touched"
+      },
+      {
+        "id": "Function:scripts/export_stage_fullbatch.py:export_stage_fullbatch.sha@11:4",
+        "name": "sha",
+        "type": "Function",
+        "filePath": "scripts/export_stage_fullbatch.py",
+        "change_type": "touched"
+      },
+      {
+        "id": "Function:scripts/finish_stage_fullbatch.py:finish_stage_fullbatch",
+        "name": "finish_stage_fullbatch",
+        "type": "Function",
+        "filePath": "scripts/finish_stage_fullbatch.py",
+        "change_type": "touched"
+      },
+      {
+        "id": "Function:scripts/finish_stage_fullbatch.py:finish_stage_fullbatch.sha@17:4",
+        "name": "sha",
+        "type": "Function",
+        "filePath": "scripts/finish_stage_fullbatch.py",
+        "change_type": "touched"
+      },
+      {
+        "id": "Function:scripts/finish_stage_fullbatch.py:finish_stage_fullbatch.read@18:4",
+        "name": "read",
+        "type": "Function",
+        "filePath": "scripts/finish_stage_fullbatch.py",
+        "change_type": "touched"
+      },
+      {
+        "id": "Function:scripts/finish_stage_fullbatch.py:finish_stage_fullbatch.save@26:4",
+        "name": "save",
+        "type": "Function",
+        "filePath": "scripts/finish_stage_fullbatch.py",
+        "change_type": "touched"
+      },
+      {
+        "id": "Function:scripts/finish_stage_fullbatch.py:finish_stage_fullbatch.load@32:4",
+        "name": "load",
+        "type": "Function",
+        "filePath": "scripts/finish_stage_fullbatch.py",
+        "change_type": "touched"
+      },
+      {
+        "id": "Function:src/fastglycan/fullbatch_results.py:_json",
+        "name": "_json",
+        "type": "Function",
+        "filePath": "src/fastglycan/fullbatch_results.py",
+        "change_type": "touched"
+      },
+      {
+        "id": "Function:src/fastglycan/fullbatch_results.py:_sha",
+        "name": "_sha",
+        "type": "Function",
+        "filePath": "src/fastglycan/fullbatch_results.py",
+        "change_type": "touched"
+      },
+      {
+        "id": "Function:src/fastglycan/fullbatch_results.py:_close",
+        "name": "_close",
+        "type": "Function",
+        "filePath": "src/fastglycan/fullbatch_results.py",
+        "change_type": "touched"
+      },
+      {
+        "id": "Function:src/fastglycan/fullbatch_results.py:verify_fullbatch_history",
+        "name": "verify_fullbatch_history",
+        "type": "Function",
+        "filePath": "src/fastglycan/fullbatch_results.py",
+        "change_type": "touched"
+      },
+      {
+        "id": "Function:src/fastglycan/fullbatch_results.py:_parent_interval",
+        "name": "_parent_interval",
+        "type": "Function",
+        "filePath": "src/fastglycan/fullbatch_results.py",
+        "change_type": "touched"
+      },
+      {
+        "id": "Function:src/fastglycan/fullbatch_results.py:_check_score",
+        "name": "_check_score",
+        "type": "Function",
+        "filePath": "src/fastglycan/fullbatch_results.py",
+        "change_type": "touched"
+      },
+      {
+        "id": "Function:src/fastglycan/fullbatch_results.py:verify_fullbatch_results",
+        "name": "verify_fullbatch_results",
+        "type": "Function",
+        "filePath": "src/fastglycan/fullbatch_results.py",
+        "change_type": "touched"
+      },
+      {
+        "id": "Function:src/fastglycan/fullbatch_results.py:analyze_fullbatch_results",
+        "name": "analyze_fullbatch_results",
+        "type": "Function",
+        "filePath": "src/fastglycan/fullbatch_results.py",
+        "change_type": "touched"
+      },
+      {
+        "id": "Function:tests/test_stage_fullbatch_results.py:_ledger_fixture",
+        "name": "_ledger_fixture",
+        "type": "Function",
+        "filePath": "tests/test_stage_fullbatch_results.py",
+        "change_type": "touched"
+      },
+      {
+        "id": "Function:tests/test_stage_fullbatch_results.py:_ledger_fixture.gradient@12:4",
+        "name": "gradient",
+        "type": "Function",
+        "filePath": "tests/test_stage_fullbatch_results.py",
+        "change_type": "touched"
+      },
+      {
+        "id": "Function:tests/test_stage_fullbatch_results.py:test_fullbatch_ledger_uses_returned_state_and_counts_discarded_trials",
+        "name": "test_fullbatch_ledger_uses_returned_state_and_counts_discarded_trials",
+        "type": "Function",
+        "filePath": "tests/test_stage_fullbatch_results.py",
+        "change_type": "touched"
+      },
+      {
+        "id": "Function:tests/test_stage_fullbatch_results.py:test_fullbatch_ledger_rejects_missing_charged_evaluation",
+        "name": "test_fullbatch_ledger_rejects_missing_charged_evaluation",
+        "type": "Function",
+        "filePath": "tests/test_stage_fullbatch_results.py",
+        "change_type": "touched"
+      },
+      {
+        "id": "Function:tests/test_stage_fullbatch_results.py:test_export_refuses_unfinished_controller_before_creating_directory",
+        "name": "test_export_refuses_unfinished_controller_before_creating_directory",
+        "type": "Function",
+        "filePath": "tests/test_stage_fullbatch_results.py",
+        "change_type": "touched"
+      }
+    ],
+    "affected_processes": [
+      {
+        "id": "proc_96_verify_fullbatch_res",
+        "name": "Verify_fullbatch_results → _close",
+        "process_type": "intra_community",
+        "step_count": 3,
+        "changed_steps": [
+          {
+            "symbol": "verify_fullbatch_results",
+            "step": 1
+          },
+          {
+            "symbol": "verify_fullbatch_history",
+            "step": 2
+          },
+          {
+            "symbol": "_close",
+            "step": 3
+          }
+        ]
+      }
+    ]
+  },
+  "pre_edit_checks": {
+    "new_entries": "UNKNOWN/not found; confirmed new with text searches",
+    "exporter_followup": "LOW; file entry caller; reviewed new follower's dynamic import manually",
+    "verifier_followup": "UNKNOWN/no resolved callers; text confirms report wrapper and dynamic follower calls, not unused"
+  },
+  "limitations": [
+    "Whole repository process enumeration is capped: 259 flows, 805 unranked entry points and other branching limits; absence of a flow is not proof of absence.",
+    "Reports and memory are excluded from portions of graph indexing; wrappers, execution installer and artifact paths were manually reviewed.",
+    "Unrelated ESMC/coordinate-refiner/AGENTS changes appear in all scope but are excluded from this commit."
+  ],
+  "review": [
+    "New result follower only reads existing job state, runs CPU statistics after completion, and writes a new export; it has no restart or signal path.",
+    "Live frozen training code/protocol/labels unchanged; separate postprocess lock binds deployed sources.",
+    "All L-BFGS evaluations are charged; actual returned-state hashes and fixed checkpoint losses define accepted trajectories.",
+    "Three focused tests pass; closed historical panel arithmetic passes; scientific training results remain incomplete."
+  ]
+}
