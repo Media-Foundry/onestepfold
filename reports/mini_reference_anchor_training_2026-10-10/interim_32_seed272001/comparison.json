@@ -1,0 +1,105 @@
+{
+  "complete_interim_node": true,
+  "seed": 272001,
+  "step": 32,
+  "primary_step": 128,
+  "model_tensor_replay_pending": true,
+  "coordinate_scoring_pending": true,
+  "not_a_terminal_result": true,
+  "evaluation_sha256": "c6c6fbf28675ad5f7bc27ec79619b514e57e4057ae33d82ee061a57bd0c4babc",
+  "checkpoint_sha256": "76c83765f301da161c9c2e71f1500f592c3da6218377ed46a2e69701e896db41",
+  "historical_control_sha256": "a5edb0af9e293695b9000804508b4868394258a4ed73701ac9e6db93bce508ef",
+  "decoded_candidate_noise_outputs": 1824,
+  "roles": {
+    "dev_new_site": {
+      "anchor": {
+        "parents": 3,
+        "sites": 3,
+        "raw_nmse": 0.9862189186004929,
+        "common_nmse": 0.9717362662602639,
+        "centered_nmse": 0.9909516123332608,
+        "centered_cosine": 0.06671616209260464,
+        "centered_energy_ratio": 0.01650548215308248,
+        "common_fraction": 0.4113844178119055
+      },
+      "control": {
+        "raw_nmse": 0.9989331767810737,
+        "common_nmse": 0.9872268914354579,
+        "centered_nmse": 0.9999693141085556,
+        "centered_cosine": 0.012381527992084898,
+        "centered_energy_ratio": 6.274130327903292e-05,
+        "common_fraction": 0.9960570331091415
+      },
+      "aa_nmse_improved_parents": 2,
+      "aa_nmse_paired_interval": {
+        "parents": 3,
+        "mean": -0.009017701775294743,
+        "interval": [
+          -0.028896140269810577,
+          0.0033511944682680372
+        ],
+        "descriptive": true
+      }
+    },
+    "dev_unseen_protein": {
+      "anchor": {
+        "parents": 9,
+        "sites": 18,
+        "raw_nmse": 0.9731330026731373,
+        "common_nmse": 0.9615850286155876,
+        "centered_nmse": 0.9863524962303042,
+        "centered_cosine": 0.11074802538824441,
+        "centered_energy_ratio": 0.023161665524652115,
+        "common_fraction": 0.5163055285687543
+      },
+      "control": {
+        "raw_nmse": 1.0017119261095058,
+        "common_nmse": 1.0092117088704444,
+        "centered_nmse": 0.9992788779088291,
+        "centered_cosine": 0.04262472832439841,
+        "centered_energy_ratio": 0.0001548782862724907,
+        "common_fraction": 0.990710864761843
+      },
+      "aa_nmse_improved_parents": 6,
+      "aa_nmse_paired_interval": {
+        "parents": 9,
+        "mean": -0.012926381678524716,
+        "interval": [
+          -0.023522117558214966,
+          -0.0015124064724454538
+        ],
+        "descriptive": true
+      }
+    },
+    "train": {
+      "anchor": {
+        "parents": 15,
+        "sites": 27,
+        "raw_nmse": 0.9326866904638765,
+        "common_nmse": 0.9040078949425074,
+        "centered_nmse": 0.9561880256639183,
+        "centered_cosine": 0.18708016636710625,
+        "centered_energy_ratio": 0.0316937092215478,
+        "common_fraction": 0.558244636461806
+      },
+      "control": {
+        "raw_nmse": 0.9821468127302053,
+        "common_nmse": 0.9567968749318296,
+        "centered_nmse": 0.9967817158018899,
+        "centered_cosine": 0.11239000846283528,
+        "centered_energy_ratio": 0.00022464294936880676,
+        "common_fraction": 0.9893287559487304
+      },
+      "aa_nmse_improved_parents": 14,
+      "aa_nmse_paired_interval": {
+        "parents": 15,
+        "mean": -0.04059369013797174,
+        "interval": [
+          -0.06361459999130498,
+          -0.021186536250296956
+        ],
+        "descriptive": true
+      }
+    }
+  }
+}

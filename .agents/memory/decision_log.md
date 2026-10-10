@@ -1,3 +1,85 @@
+## 2026-10-10 — First locked anchor checkpoint32 has a positive latent signal
+
+Seed272001 fixed32 checkpoint completed all1,824 S1 outputs; observer8665
+finished normally. CopiedevaluationSHAc6c6fbf28675ad5f7bc27ec79619b514e57e4057ae33d82ee061a57bd0c4babc;
+remotecheckpointSHA76c83765f301da161c9c2e71f1500f592c3da6218377ed46a2e69701e896db41
+independently matched savedrecord. Aggregation/interval arithmetic locally
+recomputed; fulltensorreplay and coordinate scoring still pending. No quality
+or geometry claim, checkpoint selection, additional sampling or optimizerwork.
+
+Samebudget oldAdamW272001/32 vs anchor32, proteinweightedAAresidualNMSE:
+TRAIN.9967817->.9561880 (14/15parents improve), sameproteinnewsites.9999693->
+.9909516(2/3), newprotein.9992789->.9863525(6/9). Newproteinpairedinterval
+[-.0235221,-.0015124];TRAIN[-.0636146,-.0211865];newsitecrosseszero. Oneinterim
+seed, repeateddevelopmentdata. RemainingAAresidual still95.6%/98.6%; positive
+learning signal is not solvedinterface or usableacceleration. Commonenergy
+fraction falls partly by construction; do not treat it as independentproof.
+Docs mini_reference_anchor_interim_2026-10-10.md and separateinterimrecord.
+
+Observed1791610069.915: samePIDseed1at38, seed2at10; controllertraining and
+followerwaiting. Primary128 and allsix terminaljobs unchanged. No outstanding
+observer session now. Continue actualworkers; collectfullarchive onlyafter
+controller/follower success; then verify and render using newreportCLI.
+The broad goal remains ACTIVE/unachieved. This turn made PROGRESS: completed
+reportingtools and obtainedprelocked evidence that changes the scientific
+assessment of learning, while preserving quality/transfer boundaries.
+
+## 2026-10-10 — Verified live anchor wait; completed-result reporting added
+
+Previous goal turn was PROGRESS: audited a new graph, launched/tested paired
+training and published5b9e4f3f. This turn revalidated actualcontroller1015577,
+proot1015702/1015703, Python1015704/1015705 and follower1017339. No restart.
+Observed1791609844.45: seed272001 reached32 fullgradients and is executing its
+prelocked full-panel S1 evaluation; seed272003 at9 with live progress. Its
+updates have large time variation. Host has898GBavailable and zero swap;
+no additional KFD application process shares these two runtime devices in the
+read-only snapshot. HIP and rocm-smi ordinals differ: do not equate idleSMI0/1
+with absent HIP0/1work. No unique slowdown cause established, no affinity/clock
+or recipe changes. Deadline and allworkloads remain unchanged.
+
+Added CPU-only completed-result renderer, outside the frozen scientific and
+follower trees: src/fastglycan/anchor_reporting.py and scripts/render_anchor_report.py.
+It verifies the exportedmanifest, generatedanalysis hashes and completion,
+then emits fixed-node metrics, detailedold-choice/new-teacher-regret CSVs and
+threePNG/PDF figures (optimization,latentAA,heldquality). Terminal128 remains
+primary, developmentrolelabels preserved, reference overhead explicit.
+A focused noise-choice test plus2existingresulttests pass. Full rendering tested
+using closedhistoricalAdamW duplicated into bothmethodslots in/tmp ONLY; this
+fixture produces90metricrows/1536selectionrows and all6images, and is explicitly
+not evidence of currentanchor quality. Recordrenderer_contract_check.json.
+
+Graphquery/context used first. render_anchor_report impactUNKNOWN (newentry
+callnotresolved); sourceconfirms the only productioncaller is newCLIscript.
+Existingtraining/analysiscode unchanged. Do not deploychanges into lockedtrees.
+After finalcollection run renderer on verifiedexport and inspect plots before
+reporting actualresults. Read-only observation session8665 waits for the same
+seed1evaluation32 checkpoint with hash verification; its900sdeadline is an
+observation cap only, not permission to restart. Broadgoal ACTIVE; noquality
+promotion or next scientific training authorized by an intermediate metric.
+
+## 2026-10-10 — Anchor audit and live trial published as5b9e4f3f
+
+Pushed5b9e4f3f2d93f39d8a473dc6b3b499c06ef7710d to origin/main; ls-remote
+confirmed exact equality.63scopedfiles, no bulkgradientarrays or unrelated
+workspacechanges. Complete final fresh-backend checks: all113symbols/11flows,
+staged78symbols/10flows, HIGH; no partial/truncated results. Postcommit index
+refreshed. Persistent MCP connection had stale references; prefer freshCLI.
+
+Lastobserved1791609338.072: samecontroller1015577, workers1015702/1015703
+(HIP0/1), Pythonchildren1015704/1015705. Seed27200114/128fullgradients,
+J.838581679; seed2720036/128,J.854543456. Both initial gradients and full
+baselineS1replays pass. Both actualruns progressing; varying runtimes are not
+convergence or failure evidence. CPUfollower1017339 waiting, scientific lock
+13cda88bacb0bca93f93c59fad801428d120b37f124bcdc022d915127c4cdeff unchanged.
+No outstanding exec sessions. Do not restart or duplicate these runs.
+
+Nextgoalturn: poll controller/follower and actualPIDs, inspect fixed32/128
+only as prelocked, wait for all6jobs and follower success, collect archive,
+verifySHA and rerun local arithmetic, compareTRAINAA and heldquality against
+matchedoldAdamW/disabled/oracle/wrongassignment. Trainingterminaldata not yet
+available; do not infer performance from gradientalignment or earlyloss.
+Broadgoal remains ACTIVE and unachieved; this turn made PROGRESS, not blocked.
+
 ## 2026-10-10 — Both anchor runs passed initial replay; publication review complete
 
 Observed1791609204.860: same controller1015577, prootworkers1015702/1015703
