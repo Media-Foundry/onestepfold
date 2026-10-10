@@ -1,3 +1,66 @@
+## 2026-10-10 — CPU site-parallel equivalence prototype passed
+
+Added an unlaunched engineering prototype in src/fastglycan/site_parallel.py.
+It distributes complete sites, preserves candidate order and WT reference VJP,
+collects FP64 gradients in canonical site order, and runs one root AdamW update.
+Replica hashes, site coverage/order and gradient parameter versions are checked.
+Existing scientific code and the current locked runs are unchanged.
+
+Five tests passed in 53.32 seconds on the remote known runtime with HIP hidden:
+three real Gloo processes, two/ five sites (empty/uneven shards), FP32 and FP64,
+three updates with bitwise serial agreement for full gradients, objectives,
+parameters and AdamW moments; stale gradients and worker failures are rejected.
+Toy pair blocks and three candidates per site only: no native Mini multi-GPU
+correctness or speed claim. The native 27-site gradient payload alone is
+284,111,712 bytes per update. No production launcher/restart path was added.
+Evidence: reports/mini_site_parallel_2026-10-10/cpu_equivalence.json and .log;
+source and log hashes were checked after collection. The first FP64-only test
+also passed and remains in remote /tmp/anchor_site_parallel_c9cb9ba2; the final
+five-test snapshot is /tmp/anchor_site_parallel_c9cb9ba2_v2.
+
+Current work remains the locked anchor trial, not a new scientific configuration.
+Observed 1791611553.3296: original workers 1015704/1015705 alive, seed272001 at
+91/128 (J=0.7661691567), seed272003 at18/128 (J=0.8325082540). Slow second worker
+still advances; no cause established or runtime setting changed. Controller
+1015577, follower1017339; observer exec session9037 remains live. Its one-hour
+observation cap is not a training failure/restart instruction. All tests/index
+sessions have ended. Scientific lock13cda88b and six-hour cap1791630010.9576044
+remain fixed. Wait for both128 runs and all scoring/verification before export.
+
+First seed's fixed32 latent evidence is already published as c9cb9ba2; no new
+functional result yet. This goal turn made PROGRESS through the tested parallel
+infrastructure. The broad performance goal remains ACTIVE and unachieved.
+Native serial/distributed validation and measured costs are prerequisites for
+using this prototype in a future separately locked run; do not migrate live fits.
+
+## 2026-10-10 — First fixed anchor node and reporting published as c9cb9ba2
+
+Pushedc9cb9ba2 to origin/main, ls-remote verified (fullhash in git).10scopedfiles;
+completeall43symbols/2flows, staged8symbols/1flow, MEDIUM, no partial/truncated
+newbackendchecks. Reportingtests3pass and fullhistorical-format rendercheck
+passes; no syntheticfigures published as scientificresults. Postcommitindex
+refreshed. Otherworkspacefiles/memorytails preserved. Report docs/
+mini_reference_anchor_interim_2026-10-10.md includes fixed32seed1 evidence,
+explicitly pendingtensorreplay/coordinate scoring and secondseed/terminal128.
+
+Latest1791610306.170: existingcontroller1015577 remains training. ActualPython
+1015704/1015705 live, seed27200147/128 J.7991046365;27200311/128 J.8438655548.
+Follower1017339 waiting. No restarts/migrations/budget/sourcechanges. Observer
+8665 finished normally at checkpoint32; no outstanding tool sessions. HIP0/1
+runtimeIDs, HIP5untouched, no6/7. Slowersecondseed stillmoves; donot inferterminal
+failure from an observation timeout or unevenheartbeats. Sixhourcap remains
+1791630010.9576044; controller owns it.
+
+Next: pollsamehandles, do not start duplicatejobs. Waitforboth128plusallCPU
+scores/serialHIP4verifiers and followerexport. Collectarchiveonlyafterfull
+success, verifySHA/manifests, rerun anchor_results local, then run
+scripts/render_anchor_report.py on verifiedexport and inspectactualplots.
+Currentfirst32latentgain is smallbutrealpointestimate, notfunctionalpromotion;
+keep TRAINvsheld and selection/geometry separate. This goalturn madePROGRESS
+(reportingpipeline, verifiedfixednodeevidence, publication), notblocked.
+Broadgoal ACTIVEandunachieved; completion requiresreliablequality-qualified
+modelperformance, notjustbetterlatentfit or a greeninfrastructurecheck.
+
 ## 2026-10-10 — First locked anchor checkpoint32 has a positive latent signal
 
 Seed272001 fixed32 checkpoint completed all1,824 S1 outputs; observer8665
