@@ -1,0 +1,67 @@
+2026-10-10 12:41:49,545 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/runner/batch_inference.py:403] INFO runner.batch_inference: Inference by Protenix: model_size: mini, with_feature: esm, model_version: v0.5.0, dtype: bf16
+2026-10-10 12:41:49,545 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/runner/batch_inference.py:408] INFO runner.batch_inference: Triangle_multiplicative kernel: torch, Triangle_attention kernel: torch
+2026-10-10 12:41:49,545 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/runner/batch_inference.py:412] INFO runner.batch_inference: enable_diffusion_shared_vars_cache: True, enable_efficient_fusion: True, enable_tf32: False
+2026-10-10 12:41:49,546 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/runner/inference.py:246] INFO runner.inference: Distributed environment: world size: 1, global rank: 0, local rank: 0
+2026-10-10 12:41:49,546 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/runner/inference.py:98] INFO root: LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+2026-10-10 12:41:49,546 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/runner/inference.py:127] INFO root: Finished environment initialization.
+train scheduler 16.0
+inference scheduler 16.0
+Diffusion Module has 16.0
+2026-10-10 12:42:05,214 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/runner/inference.py:246] INFO runner.inference: Loading from /data/user/shuang886/Folding/protenix_stage0_pkg/v1_1/runtime/checkpoint/protenix_mini_esm_v0.5.0.pt, strict: False
+2026-10-10 12:42:05,633 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/runner/inference.py:246] INFO runner.inference: Sampled key: module.input_embedder.atom_attention_encoder.linear_no_bias_ref_pos.weight
+2026-10-10 12:42:05,670 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/runner/inference.py:246] INFO runner.inference: Finish loading checkpoint.
+2026-10-10 12:42:05,673 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/runner/inference.py:246] INFO runner.inference: Model parameters: 135.22M
+ANCHOR_GRADIENT_SITE 272001 p3_s37
+ANCHOR_GRADIENT_SITE 272001 p4_s2
+ANCHOR_GRADIENT_SITE 272001 p5_s65
+ANCHOR_GRADIENT_SITE 272001 p7_s44
+ANCHOR_GRADIENT_SITE 272001 p7_s86
+ANCHOR_GRADIENT_SITE 272001 p11_s49
+ANCHOR_GRADIENT_SITE 272001 p11_s52
+ANCHOR_GRADIENT_SITE 272001 p12_s11
+ANCHOR_GRADIENT_SITE 272001 p12_s72
+ANCHOR_GRADIENT_SITE 272001 p13_s95
+ANCHOR_GRADIENT_SITE 272001 p13_s107
+ANCHOR_GRADIENT_SITE 272001 p14_s6
+ANCHOR_GRADIENT_SITE 272001 p14_s8
+ANCHOR_GRADIENT_SITE 272001 p15_s13
+ANCHOR_GRADIENT_SITE 272001 p15_s66
+ANCHOR_GRADIENT_SITE 272001 p18_s13
+ANCHOR_GRADIENT_SITE 272001 p18_s179
+ANCHOR_GRADIENT_SITE 272001 p19_s90
+ANCHOR_GRADIENT_SITE 272001 p19_s137
+ANCHOR_GRADIENT_SITE 272001 p20_s100
+ANCHOR_GRADIENT_SITE 272001 p20_s112
+ANCHOR_GRADIENT_SITE 272001 p21_s23
+ANCHOR_GRADIENT_SITE 272001 p21_s128
+ANCHOR_GRADIENT_SITE 272001 p22_s25
+ANCHOR_GRADIENT_SITE 272001 p22_s44
+ANCHOR_GRADIENT_SITE 272001 p23_s68
+ANCHOR_GRADIENT_SITE 272001 p23_s148
+ANCHOR_GRADIENT_SITE 272003 p3_s37
+ANCHOR_GRADIENT_SITE 272003 p4_s2
+ANCHOR_GRADIENT_SITE 272003 p5_s65
+ANCHOR_GRADIENT_SITE 272003 p7_s44
+ANCHOR_GRADIENT_SITE 272003 p7_s86
+ANCHOR_GRADIENT_SITE 272003 p11_s49
+ANCHOR_GRADIENT_SITE 272003 p11_s52
+ANCHOR_GRADIENT_SITE 272003 p12_s11
+ANCHOR_GRADIENT_SITE 272003 p12_s72
+ANCHOR_GRADIENT_SITE 272003 p13_s95
+ANCHOR_GRADIENT_SITE 272003 p13_s107
+ANCHOR_GRADIENT_SITE 272003 p14_s6
+ANCHOR_GRADIENT_SITE 272003 p14_s8
+ANCHOR_GRADIENT_SITE 272003 p15_s13
+ANCHOR_GRADIENT_SITE 272003 p15_s66
+ANCHOR_GRADIENT_SITE 272003 p18_s13
+ANCHOR_GRADIENT_SITE 272003 p18_s179
+ANCHOR_GRADIENT_SITE 272003 p19_s90
+ANCHOR_GRADIENT_SITE 272003 p19_s137
+ANCHOR_GRADIENT_SITE 272003 p20_s100
+ANCHOR_GRADIENT_SITE 272003 p20_s112
+ANCHOR_GRADIENT_SITE 272003 p21_s23
+ANCHOR_GRADIENT_SITE 272003 p21_s128
+ANCHOR_GRADIENT_SITE 272003 p22_s25
+ANCHOR_GRADIENT_SITE 272003 p22_s44
+ANCHOR_GRADIENT_SITE 272003 p23_s68
+ANCHOR_GRADIENT_SITE 272003 p23_s148

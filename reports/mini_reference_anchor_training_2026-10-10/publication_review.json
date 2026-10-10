@@ -1,0 +1,35 @@
+{
+  "complete": true,
+  "risk": "high",
+  "partial": false,
+  "truncated": false,
+  "graph_rebuilt": true,
+  "persistent_mcp_connection_stale": true,
+  "fresh_cli_backend_used": true,
+  "changed_symbols": 78,
+  "affected_processes": 10,
+  "global_process_catalogue_capped": true,
+  "reviewed": [
+    "Reference gradient proxy versus joint graph and finite differences",
+    "Three AdamW steps agree with joint fullbatch graph",
+    "Reference version, identity and mutation guards",
+    "All initial candidate outputs versus legacy class bitwise",
+    "All initial S1 coordinates versus archived baseline",
+    "Both first full-TRAIN gradients match audited anchored vectors",
+    "Controller exclusive directories, finite budgets and no automatic restart",
+    "CPU follower completeness, immutable-source and historical-control gates",
+    "Dependency-only postprocessor repair preserves original failure",
+    "Only original class body extraction; unchanged parameter names and no-edit behavior"
+  ],
+  "tests": {
+    "training_cpu": 17,
+    "result_cpu": 2,
+    "historical_node_summaries_exact": 6
+  },
+  "limitations": [
+    "PyTorch implicit calls and subprocess entrypoints manually checked",
+    "Reports and large tensors are excluded from graph",
+    "Training terminal quality not yet available",
+    "Nine held proteins are development data"
+  ]
+}

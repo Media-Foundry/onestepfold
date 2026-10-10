@@ -1,0 +1,1337 @@
+{
+  "audit_lock_sha256": "4ce5a10e7c1d2f3fc62a5fc1e6eec56277cf6291a41765d80fcb5958698d6171",
+  "complete": true,
+  "counts": {
+    "comparison_candidate_backward_branches": 76,
+    "comparison_reference_backward_branches": 4,
+    "comparison_reference_forwards": 4,
+    "gradient_candidate_backwards": 2052,
+    "gradient_candidate_forwards": 1026,
+    "gradient_reference_backwards": 54,
+    "gradient_reference_forwards": 54,
+    "identity_candidate_forwards": 1824,
+    "identity_reference_forwards": 96,
+    "joint_autograd_calls": 2,
+    "joint_candidate_forwards": 38,
+    "legacy_candidate_forwards": 1824,
+    "proxy_backward_calls": 40,
+    "proxy_candidate_forwards": 38,
+    "trained_state_forwards": 40
+  },
+  "native_counts": {
+    "c4": 0,
+    "input_embedder": 0,
+    "recycle": 24,
+    "s1": 0,
+    "updates": 0
+  },
+  "new_training_started": false,
+  "parameter_updates": 0,
+  "peak_allocated_bytes": 11790952448,
+  "phase": "closed",
+  "promoted": false,
+  "reference_cache_bytes": 473680104,
+  "reference_records": [
+    {
+      "bytes": 12391989,
+      "parent": 0,
+      "path": "reference_cache/0.pt",
+      "sha256": "0d2e1949ac391c0081060d4fcd774f5a924cd747581a172884e72888052d00e2"
+    },
+    {
+      "bytes": 11077173,
+      "parent": 1,
+      "path": "reference_cache/1.pt",
+      "sha256": "ccd0e8d9f5c7ad8e43ebe3672f77f6d99f2dfa34dc6be7a0b9ebe195e79a69a4"
+    },
+    {
+      "bytes": 11507253,
+      "parent": 2,
+      "path": "reference_cache/2.pt",
+      "sha256": "738ecef721fbcfb0687a2ab7cd1fdc7c51b7be5dd0d937b93bd4e45348b83400"
+    },
+    {
+      "bytes": 7226933,
+      "parent": 3,
+      "path": "reference_cache/3.pt",
+      "sha256": "fe583137d615f5c1a7496e8d6f4501ee8ed71539c5ea967b3a4e2e0bf1de908f"
+    },
+    {
+      "bytes": 10447413,
+      "parent": 4,
+      "path": "reference_cache/4.pt",
+      "sha256": "7d62c4b8aa7319d36c6d67ecdeb3e7a39a6532d5ccda5d54abf51b051c6b5438"
+    },
+    {
+      "bytes": 6886965,
+      "parent": 5,
+      "path": "reference_cache/5.pt",
+      "sha256": "03ea6c8048b037b2efd0aa7d65a0b7871c9f05d020c070f18798ec84cf9dafe2"
+    },
+    {
+      "bytes": 10037813,
+      "parent": 6,
+      "path": "reference_cache/6.pt",
+      "sha256": "c86a4799a7130514ca6b3e5fb66ecec9458e409d9ffe6f606869a5e16b55ea0e"
+    },
+    {
+      "bytes": 10865205,
+      "parent": 7,
+      "path": "reference_cache/7.pt",
+      "sha256": "86dc48206b963b43d7a961e68a087702c1495b2325c947d28241ea9ed05ebb3e"
+    },
+    {
+      "bytes": 20071989,
+      "parent": 8,
+      "path": "reference_cache/8.pt",
+      "sha256": "3e022e6447552d0842e0bbe7de47985dc1da6475e246215a0e7fcf9a304c8c58"
+    },
+    {
+      "bytes": 17574453,
+      "parent": 9,
+      "path": "reference_cache/9.pt",
+      "sha256": "3ae2ecc882d118eb2761d3ab3970f14c55206c891c90bd359e46feaa64921fce"
+    },
+    {
+      "bytes": 16258685,
+      "parent": 10,
+      "path": "reference_cache/10.pt",
+      "sha256": "135662e9c88254a43e1d601097702ca88c493469bec647358f94ea025104a64f"
+    },
+    {
+      "bytes": 15746685,
+      "parent": 11,
+      "path": "reference_cache/11.pt",
+      "sha256": "bbd70cf64e33e5a2cf35ac6369cf7daf3d266fdf44a55b4117a233f202f0d00d"
+    },
+    {
+      "bytes": 17042045,
+      "parent": 12,
+      "path": "reference_cache/12.pt",
+      "sha256": "e38e261219483c43d6ba36809975dee79360acf4a824b919c3f89c364244b489"
+    },
+    {
+      "bytes": 21531261,
+      "parent": 13,
+      "path": "reference_cache/13.pt",
+      "sha256": "7529e33b6605fd2dd051b8a88f55402539909e6a31eb571c992d3b3b6af8a631"
+    },
+    {
+      "bytes": 23041661,
+      "parent": 14,
+      "path": "reference_cache/14.pt",
+      "sha256": "13951e27e32869e5709097f816007fbfe597beda10710f34620e3ab2af706fa9"
+    },
+    {
+      "bytes": 20941437,
+      "parent": 15,
+      "path": "reference_cache/15.pt",
+      "sha256": "23eac26b9474d44cbd73ffe043f142fa6851e6838ed5698751f14fd591778fc8"
+    },
+    {
+      "bytes": 26544765,
+      "parent": 16,
+      "path": "reference_cache/16.pt",
+      "sha256": "7322a13df6bd23969952c8bfa4da0df2f677f47cd166fbf144195e3d823d7f05"
+    },
+    {
+      "bytes": 24603261,
+      "parent": 17,
+      "path": "reference_cache/17.pt",
+      "sha256": "494b983928dce5c5e4c823e2ca586a49272c90d61711537a4c7fe0802909375b"
+    },
+    {
+      "bytes": 34294397,
+      "parent": 18,
+      "path": "reference_cache/18.pt",
+      "sha256": "7c871dcc05db1ae7390aec46d0e1791f1c821ce8fd9f41d36c95b3ddc3bed403"
+    },
+    {
+      "bytes": 29595261,
+      "parent": 19,
+      "path": "reference_cache/19.pt",
+      "sha256": "03decc668149f996896ac6328a3fb57b7d00423fbc4e250d93b82f24d398bad6"
+    },
+    {
+      "bytes": 27543165,
+      "parent": 20,
+      "path": "reference_cache/20.pt",
+      "sha256": "932ce9a8eff31e46b0bf2d0139741347d5172555ce00279f6acd1fa204187349"
+    },
+    {
+      "bytes": 33548925,
+      "parent": 21,
+      "path": "reference_cache/21.pt",
+      "sha256": "67107d1ffbc14e485998e95898989060620d2df3b110f66bf182ba644cf83495"
+    },
+    {
+      "bytes": 37358205,
+      "parent": 22,
+      "path": "reference_cache/22.pt",
+      "sha256": "a4014203e3da7cce599d70e8173b04cdd86aa6de398a523438727e9fb09c0923"
+    },
+    {
+      "bytes": 27543165,
+      "parent": 23,
+      "path": "reference_cache/23.pt",
+      "sha256": "d42893b809e9a8766f3fba548aa5b09a7c36b9aa2a1002eb80fdf1e6103e7b04"
+    }
+  ],
+  "seconds": 230.99300497598597,
+  "seeds": [
+    {
+      "full": {
+        "anchored_aa_cosine": 0.882849050824523,
+        "anchored_common_aa_cosine": 0.7726119381852782,
+        "anchored_common_cosine": 0.9802747812773159,
+        "common_aa_cosine": 0.06684724774818554,
+        "norms": {
+          "aa": 0.06341820235614666,
+          "anchored": 0.2037187253228666,
+          "anchored_common": 0.15070266866935003,
+          "common": 3.0198481066868808,
+          "raw": 3.024749367302553,
+          "reference": 3.0483682154322382
+        },
+        "raw_aa_cosine": 0.08770536156598746,
+        "raw_common_cosine": 0.9997811625855436
+      },
+      "full_objective": 0.8683360244777337,
+      "gradient_reference_relative_error": 0.0,
+      "initial_sha256": "b6817c4bd32619ee0ebbaf7b93290686ab6d21eb2016fe051de4b4cf0da3f7e2",
+      "pullback": {
+        "joint_norm": 0.15149540702479783,
+        "max_abs": 1.1920928955078125e-07,
+        "proxy_norm": 0.1514954746877432,
+        "relative": 1.4898228197994828e-06,
+        "site": "p3_s37"
+      },
+      "seed": 272001,
+      "sites": [
+        {
+          "anchored_aa_cosine": 0.7947854562362251,
+          "anchored_common_aa_cosine": 0.3969995273667565,
+          "anchored_common_cosine": 0.8725449690722024,
+          "centered": 0.761694263128198,
+          "common": 0.238305736845037,
+          "common_aa_cosine": 0.172362510555843,
+          "norms": {
+            "aa": 0.08063753696578439,
+            "anchored": 0.15149545035018966,
+            "anchored_common": 0.10017352897696712,
+            "common": 1.4627346154392957,
+            "raw": 1.4787683177852717,
+            "reference": 1.5023306739664164
+          },
+          "raw": 0.999999999973235,
+          "raw_aa_cosine": 0.22502385502700725,
+          "raw_common_cosine": 0.9985563566625847,
+          "site": "p3_s37"
+        },
+        {
+          "anchored_aa_cosine": 0.9306693285079882,
+          "anchored_common_aa_cosine": 0.7503924106832299,
+          "anchored_common_cosine": 0.9401989159091952,
+          "centered": 0.08924143628287484,
+          "common": 0.052554504560984684,
+          "common_aa_cosine": -0.1891327030435737,
+          "norms": {
+            "aa": 0.07930767849988596,
+            "anchored": 0.15389842803071624,
+            "anchored_common": 0.08518325513940574,
+            "common": 2.442790920699804,
+            "raw": 2.429039943547853,
+            "reference": 2.454045236301918
+          },
+          "raw": 0.14179594084385952,
+          "raw_aa_cosine": -0.15755359327002127,
+          "raw_common_cosine": 0.9994859292214278,
+          "site": "p4_s2"
+        },
+        {
+          "anchored_aa_cosine": 0.9472530107280205,
+          "anchored_common_aa_cosine": 0.25798679094007065,
+          "anchored_common_cosine": 0.5540165041983234,
+          "centered": 0.8681886573237303,
+          "common": 0.1318113425135498,
+          "common_aa_cosine": 0.06819449631663192,
+          "norms": {
+            "aa": 0.022480738782693657,
+            "anchored": 0.026089588603935173,
+            "anchored_common": 0.008654329017813768,
+            "common": 1.6948015169634367,
+            "raw": 1.696482843813923,
+            "reference": 1.697718596570499
+          },
+          "raw": 0.9999999998372802,
+          "raw_aa_cosine": 0.08137829102845448,
+          "raw_common_cosine": 0.9999126049562399,
+          "site": "p5_s65"
+        },
+        {
+          "anchored_aa_cosine": 0.6786179598457301,
+          "anchored_common_aa_cosine": 0.3919895532306515,
+          "anchored_common_cosine": 0.9417209903465863,
+          "centered": 0.7062316745022452,
+          "common": 0.2937683256238966,
+          "common_aa_cosine": 0.25841569959791677,
+          "norms": {
+            "aa": 0.1252869691865489,
+            "anchored": 0.3426335750534665,
+            "anchored_common": 0.27355404654831333,
+            "common": 4.341559817364787,
+            "raw": 4.3756101510388605,
+            "reference": 4.341043858653458
+          },
+          "raw": 1.0000000001261418,
+          "raw_aa_cosine": 0.28503777614668263,
+          "raw_common_cosine": 0.9996173759033705,
+          "site": "p7_s44"
+        },
+        {
+          "anchored_aa_cosine": 0.9884425854144134,
+          "anchored_common_aa_cosine": 0.8169899657633598,
+          "anchored_common_cosine": 0.8949656183479341,
+          "centered": 0.796983790214775,
+          "common": 0.20301620978920293,
+          "common_aa_cosine": 0.1833698898821565,
+          "norms": {
+            "aa": 0.5338532429621342,
+            "anchored": 0.6900319372845808,
+            "anchored_common": 0.1814021167414516,
+            "common": 8.016999957652187,
+            "raw": 8.131844668491983,
+            "reference": 8.044997613230542
+          },
+          "raw": 1.000000000003978,
+          "raw_aa_cosine": 0.24642989679161847,
+          "raw_common_cosine": 0.9979153437927188,
+          "site": "p7_s86"
+        },
+        {
+          "anchored_aa_cosine": 0.8809629914569225,
+          "anchored_common_aa_cosine": 0.753416205063352,
+          "anchored_common_cosine": 0.974871832657629,
+          "centered": 0.5432126931162299,
+          "common": 0.45678730696275693,
+          "common_aa_cosine": 0.43031898618440906,
+          "norms": {
+            "aa": 0.1623663345588982,
+            "anchored": 0.4792596817184212,
+            "anchored_common": 0.344887336622397,
+            "common": 2.5204221762285943,
+            "raw": 2.594434644079592,
+            "reference": 2.5051801507191462
+          },
+          "raw": 1.0000000000789868,
+          "raw_aa_cosine": 0.4806256550095374,
+          "raw_common_cosine": 0.9984030619609027,
+          "site": "p11_s49"
+        },
+        {
+          "anchored_aa_cosine": 0.42751777835557003,
+          "anchored_common_aa_cosine": 0.06859661273760961,
+          "anchored_common_cosine": 0.9312038042471374,
+          "centered": 0.5483210841178343,
+          "common": 0.4516789159203962,
+          "common_aa_cosine": 0.2098041069997727,
+          "norms": {
+            "aa": 0.08964664094047974,
+            "anchored": 0.24536553410052014,
+            "anchored_common": 0.22233586287373416,
+            "common": 2.3584563503550457,
+            "raw": 2.378879919624146,
+            "reference": 2.3602904114775254
+          },
+          "raw": 1.0000000000382305,
+          "raw_aa_cosine": 0.24568725163605243,
+          "raw_common_cosine": 0.9993209679026924,
+          "site": "p11_s52"
+        },
+        {
+          "anchored_aa_cosine": 0.8714414870556708,
+          "anchored_common_aa_cosine": 0.6869383807138455,
+          "anchored_common_cosine": 0.9550802570409428,
+          "centered": 0.5885676999643121,
+          "common": 0.4114323000097346,
+          "common_aa_cosine": 0.09133607976938699,
+          "norms": {
+            "aa": 0.161383841363565,
+            "anchored": 0.39575248048521233,
+            "anchored_common": 0.2671146261267648,
+            "common": 6.483196389488917,
+            "raw": 6.499923612564945,
+            "reference": 6.46831112730077
+          },
+          "raw": 0.9999999999740468,
+          "raw_aa_cosine": 0.11592960607995713,
+          "raw_common_cosine": 0.9996942955353771,
+          "site": "p12_s11"
+        },
+        {
+          "anchored_aa_cosine": 0.6630015405235413,
+          "anchored_common_aa_cosine": 0.579491681705115,
+          "anchored_common_cosine": 0.9943112188455892,
+          "centered": 0.21943389240397426,
+          "common": 0.7805661075319178,
+          "common_aa_cosine": 0.02442061616293916,
+          "norms": {
+            "aa": 0.09345813396956096,
+            "anchored": 0.7150838882688175,
+            "anchored_common": 0.6568577212984785,
+            "common": 2.5823491006426305,
+            "raw": 2.586319531311556,
+            "reference": 2.7525940225308725
+          },
+          "raw": 0.9999999999358921,
+          "raw_aa_cosine": 0.06051869780980482,
+          "raw_common_cosine": 0.9993472865855911,
+          "site": "p12_s72"
+        },
+        {
+          "anchored_aa_cosine": 0.6355444875639292,
+          "anchored_common_aa_cosine": 0.37765206621622643,
+          "anchored_common_cosine": 0.9549057100345602,
+          "centered": 0.17204707328700566,
+          "common": 0.1437827381049996,
+          "common_aa_cosine": -0.09571750633154481,
+          "norms": {
+            "aa": 0.040981562740769764,
+            "anchored": 0.12780599656223432,
+            "anchored_common": 0.10656590404813554,
+            "common": 2.716748767611879,
+            "raw": 2.7131328071892193,
+            "reference": 2.728502313992381
+          },
+          "raw": 0.3158298113920053,
+          "raw_aa_cosine": -0.08074018862765914,
+          "raw_common_cosine": 0.9998869599867239,
+          "site": "p13_s95"
+        },
+        {
+          "anchored_aa_cosine": 0.8587905781527699,
+          "anchored_common_aa_cosine": 0.6576098675437482,
+          "anchored_common_cosine": 0.9507149817542068,
+          "centered": 0.5269705459895545,
+          "common": 0.4730294540597103,
+          "common_aa_cosine": 0.05493500357839566,
+          "norms": {
+            "aa": 0.14196197606504105,
+            "anchored": 0.3449208495384379,
+            "anchored_common": 0.23456582289922345,
+            "common": 1.3906055825184334,
+            "raw": 1.405569944646582,
+            "reference": 1.3924982371942394
+          },
+          "raw": 1.0000000000492648,
+          "raw_aa_cosine": 0.1553497209786385,
+          "raw_common_cosine": 0.9949019396065445,
+          "site": "p13_s107"
+        },
+        {
+          "anchored_aa_cosine": 0.9461801183596193,
+          "anchored_common_aa_cosine": 0.8692186251128026,
+          "anchored_common_cosine": 0.9824542932393773,
+          "centered": 0.4230794786768434,
+          "common": 0.3001379558784784,
+          "common_aa_cosine": 0.21709720882401476,
+          "norms": {
+            "aa": 0.1891754811180975,
+            "anchored": 0.5015114137180526,
+            "anchored_common": 0.32827718991336785,
+            "common": 23.213853349182646,
+            "raw": 23.25565599886832,
+            "reference": 23.206242711748295
+          },
+          "raw": 0.7232174345553218,
+          "raw_aa_cosine": 0.22484157185375128,
+          "raw_common_cosine": 0.999968473013353,
+          "site": "p14_s6"
+        },
+        {
+          "anchored_aa_cosine": 0.9748602340302349,
+          "anchored_common_aa_cosine": 0.8319531836819725,
+          "anchored_common_cosine": 0.9346672949081234,
+          "centered": 0.41718958586912025,
+          "common": 0.17902700981119968,
+          "common_aa_cosine": -0.07495627382411231,
+          "norms": {
+            "aa": 0.19060674911249129,
+            "anchored": 0.2974692914805039,
+            "anchored_common": 0.1194589262309437,
+            "common": 15.9519074396676,
+            "raw": 15.938753609242063,
+            "reference": 15.962914192345723
+          },
+          "raw": 0.5962165956803199,
+          "raw_aa_cosine": -0.06305943473330478,
+          "raw_common_cosine": 0.999928893984954,
+          "site": "p14_s8"
+        },
+        {
+          "anchored_aa_cosine": 0.21436241259060976,
+          "anchored_common_aa_cosine": -0.09965522031487757,
+          "anchored_common_cosine": 0.950529606229979,
+          "centered": 0.5046564906542732,
+          "common": 0.4953435092617608,
+          "common_aa_cosine": 0.18358949560568544,
+          "norms": {
+            "aa": 0.04501708794688652,
+            "anchored": 0.14419863078898854,
+            "anchored_common": 0.14155125556006082,
+            "common": 2.348384600630915,
+            "raw": 2.3570646983543346,
+            "reference": 2.388365049361838
+          },
+          "raw": 0.9999999999160339,
+          "raw_aa_cosine": 0.20201220297317568,
+          "raw_common_cosine": 0.9998237497452044,
+          "site": "p15_s13"
+        },
+        {
+          "anchored_aa_cosine": 0.9343467791322857,
+          "anchored_common_aa_cosine": 0.6724816546848891,
+          "anchored_common_cosine": 0.8920818056192866,
+          "centered": 0.21032714989553206,
+          "common": 0.14106322860987922,
+          "common_aa_cosine": -0.17661779233485925,
+          "norms": {
+            "aa": 0.09487010937956349,
+            "anchored": 0.1553855424676221,
+            "anchored_common": 0.07481820715595357,
+            "common": 2.073169885173163,
+            "raw": 2.0585331381429617,
+            "reference": 2.078136317980161
+          },
+          "raw": 0.35139037850541127,
+          "raw_aa_cosine": -0.1317873265424219,
+          "raw_common_cosine": 0.998970625146764,
+          "site": "p15_s66"
+        },
+        {
+          "anchored_aa_cosine": 0.6711666611169606,
+          "anchored_common_aa_cosine": 0.48438664585510055,
+          "anchored_common_cosine": 0.9736391400414117,
+          "centered": 0.4834823478052638,
+          "common": 0.5165176521788665,
+          "common_aa_cosine": 0.06440395478488632,
+          "norms": {
+            "aa": 0.11714870677960287,
+            "anchored": 0.4493238121437443,
+            "anchored_common": 0.38073398091257044,
+            "common": 4.720211211490977,
+            "raw": 4.729201219808284,
+            "reference": 4.810829329524304
+          },
+          "raw": 0.9999999999841303,
+          "raw_aa_cosine": 0.08905287735602226,
+          "raw_common_cosine": 0.9996944159836338,
+          "site": "p18_s13"
+        },
+        {
+          "anchored_aa_cosine": 0.7050541330497007,
+          "anchored_common_aa_cosine": 0.4322449362361888,
+          "anchored_common_cosine": 0.9442396611547822,
+          "centered": 0.6077959703304696,
+          "common": 0.3922040295693439,
+          "common_aa_cosine": 0.25421299758617116,
+          "norms": {
+            "aa": 0.1068580077337347,
+            "anchored": 0.29265680541141137,
+            "anchored_common": 0.23014933003713872,
+            "common": 1.6939362427628468,
+            "raw": 1.7242010176624114,
+            "reference": 1.6460263419691665
+          },
+          "raw": 0.9999999998998136,
+          "raw_aa_cosine": 0.3117261921437573,
+          "raw_common_cosine": 0.9982020191347883,
+          "site": "p18_s179"
+        },
+        {
+          "anchored_aa_cosine": 0.6428106993078562,
+          "anchored_common_aa_cosine": 0.3426913472622178,
+          "anchored_common_cosine": 0.9399264217545228,
+          "centered": 0.34506865974430057,
+          "common": 0.6549313402780942,
+          "common_aa_cosine": 0.23486634740418522,
+          "norms": {
+            "aa": 0.013617296504107581,
+            "anchored": 0.037473933692939415,
+            "anchored_common": 0.03055621072001616,
+            "common": 2.4713492430765944,
+            "raw": 2.474582888329682,
+            "reference": 2.4678742714793565
+          },
+          "raw": 1.0000000000223948,
+          "raw_aa_cosine": 0.24006230269640852,
+          "raw_common_cosine": 0.9999856943318314,
+          "site": "p19_s90"
+        },
+        {
+          "anchored_aa_cosine": 0.8022725651032406,
+          "anchored_common_aa_cosine": 0.39816310064427884,
+          "anchored_common_cosine": 0.867033549712645,
+          "centered": 0.26839529051929756,
+          "common": 0.7316047094737685,
+          "common_aa_cosine": 0.11441115081237653,
+          "norms": {
+            "aa": 0.02612736695989953,
+            "anchored": 0.048102413840535804,
+            "anchored_common": 0.03130345318149123,
+            "common": 3.4505938331905464,
+            "raw": 3.4536806308403714,
+            "reference": 3.4498280307165543
+          },
+          "raw": 0.9999999999930661,
+          "raw_aa_cosine": 0.12187397255051254,
+          "raw_common_cosine": 0.9999717589613396,
+          "site": "p19_s137"
+        },
+        {
+          "anchored_aa_cosine": 0.7636090620128073,
+          "anchored_common_aa_cosine": 0.5658457111549132,
+          "anchored_common_cosine": 0.9644543365378014,
+          "centered": 0.2270869184733537,
+          "common": 0.1653003649156731,
+          "common_aa_cosine": -0.09847997991048373,
+          "norms": {
+            "aa": 0.03269036740706437,
+            "anchored": 0.10200044149315472,
+            "anchored_common": 0.07987706393349835,
+            "common": 3.188838436413642,
+            "raw": 3.1857851905791126,
+            "reference": 3.1992292994805402
+          },
+          "raw": 0.3923872833890268,
+          "raw_aa_cosine": -0.08831304087317153,
+          "raw_common_cosine": 0.9999478618673141,
+          "site": "p20_s100"
+        },
+        {
+          "anchored_aa_cosine": 0.8858267715577095,
+          "anchored_common_aa_cosine": 0.8244280785761967,
+          "anchored_common_cosine": 0.9929181333021078,
+          "centered": 0.25497414883463065,
+          "common": 0.7450258512439627,
+          "common_aa_cosine": 0.180075811494811,
+          "norms": {
+            "aa": 0.0720849866127804,
+            "anchored": 0.3434133101034837,
+            "anchored_common": 0.28155241581171037,
+            "common": 4.725377523809693,
+            "raw": 4.738888793184503,
+            "reference": 4.673752771961191
+          },
+          "raw": 1.0000000000785934,
+          "raw_aa_cosine": 0.19477375796612803,
+          "raw_common_cosine": 0.9998880524660397,
+          "site": "p20_s112"
+        },
+        {
+          "anchored_aa_cosine": 0.9400312767316885,
+          "anchored_common_aa_cosine": 0.7877512486958572,
+          "anchored_common_cosine": 0.9506189549750084,
+          "centered": 0.6804747137219131,
+          "common": 0.31952528643931405,
+          "common_aa_cosine": -0.06206722782164855,
+          "norms": {
+            "aa": 0.04086352307299926,
+            "anchored": 0.08110461472090102,
+            "anchored_common": 0.04490929276277847,
+            "common": 3.922140441933195,
+            "raw": 3.9198163397214967,
+            "reference": 3.9297832645218
+          },
+          "raw": 1.0000000001612273,
+          "raw_aa_cosine": -0.051679171606125965,
+          "raw_common_cosine": 0.999945869049446,
+          "site": "p21_s23"
+        },
+        {
+          "anchored_aa_cosine": 0.9278259349147944,
+          "anchored_common_aa_cosine": 0.48785872146948345,
+          "anchored_common_cosine": 0.7782598461763597,
+          "centered": 0.7754811382314314,
+          "common": 0.22451886200164753,
+          "common_aa_cosine": -0.3043923192061315,
+          "norms": {
+            "aa": 0.03680257718337394,
+            "anchored": 0.05116043012756975,
+            "anchored_common": 0.021861650229941593,
+            "common": 0.8512155512845432,
+            "raw": 0.8407443089922063,
+            "reference": 0.8620720299895761
+          },
+          "raw": 1.000000000233079,
+          "raw_aa_cosine": -0.264409638267943,
+          "raw_common_cosine": 0.999130318788388,
+          "site": "p21_s128"
+        },
+        {
+          "anchored_aa_cosine": 0.3680208350200254,
+          "anchored_common_aa_cosine": 0.26188486480676965,
+          "anchored_common_cosine": 0.9937451829956577,
+          "centered": 0.29878885815254264,
+          "common": 0.7012111418706255,
+          "common_aa_cosine": 0.340472936123026,
+          "norms": {
+            "aa": 0.09793888771553425,
+            "anchored": 0.8464181331932924,
+            "anchored_common": 0.8154752302923375,
+            "common": 4.949524766822829,
+            "raw": 4.983721160122234,
+            "reference": 4.942396535732082
+          },
+          "raw": 1.0000000000231681,
+          "raw_aa_cosine": 0.3577884998376716,
+          "raw_common_cosine": 0.9998292736268635,
+          "site": "p22_s25"
+        },
+        {
+          "anchored_aa_cosine": 0.5551125771565091,
+          "anchored_common_aa_cosine": 0.25171304491388824,
+          "anchored_common_cosine": 0.9447227321220548,
+          "centered": 0.48731547172158285,
+          "common": 0.5126845282905865,
+          "common_aa_cosine": 0.31602440796355485,
+          "norms": {
+            "aa": 0.10143668600335752,
+            "anchored": 0.2994190294082021,
+            "anchored_common": 0.25733502641198835,
+            "common": 2.2470734102992194,
+            "raw": 2.281160842456997,
+            "reference": 2.2569846555717565
+          },
+          "raw": 1.0000000000121694,
+          "raw_aa_cosine": 0.35576918340823516,
+          "raw_common_cosine": 0.9991096798260697,
+          "site": "p22_s44"
+        },
+        {
+          "anchored_aa_cosine": 0.8021183226910514,
+          "anchored_common_aa_cosine": 0.42092109103447994,
+          "anchored_common_cosine": 0.8793153743807066,
+          "centered": 0.5117900424134361,
+          "common": 0.41244517368517614,
+          "common_aa_cosine": -0.024178395311437974,
+          "norms": {
+            "aa": 0.1772107425083122,
+            "anchored": 0.33753443998104515,
+            "anchored_common": 0.22220748337873603,
+            "common": 7.821460781874436,
+            "raw": 7.819183309735475,
+            "reference": 7.871086880692951
+          },
+          "raw": 0.9242352160986121,
+          "raw_aa_cosine": -0.0015218505203742317,
+          "raw_common_cosine": 0.9997432980955873,
+          "site": "p23_s68"
+        },
+        {
+          "anchored_aa_cosine": 0.903358579102144,
+          "anchored_common_aa_cosine": 0.5513267083387711,
+          "anchored_common_cosine": 0.8558608447807785,
+          "centered": 0.6754722524382688,
+          "common": 0.3245277476552524,
+          "common_aa_cosine": 0.019497399224793023,
+          "norms": {
+            "aa": 0.1670543513214124,
+            "anchored": 0.2694702624527127,
+            "anchored_common": 0.13852752083840802,
+            "common": 3.1368285841677106,
+            "raw": 3.144524576265099,
+            "reference": 3.160372288145543
+          },
+          "raw": 1.0000000000935212,
+          "raw_aa_cosine": 0.07257515245681556,
+          "raw_common_cosine": 0.9985883822467054,
+          "site": "p23_s148"
+        }
+      ],
+      "vector_path": "vectors_272001.pt",
+      "vector_sha256": "58840310825b59af8304df0eaa46ee645ccd708984d559cc15521000d70a48d2"
+    },
+    {
+      "full": {
+        "anchored_aa_cosine": 0.8828427315807551,
+        "anchored_common_aa_cosine": 0.7726116765645221,
+        "anchored_common_cosine": 0.9802773589604848,
+        "common_aa_cosine": 0.06681526378848356,
+        "norms": {
+          "aa": 0.06340722744546881,
+          "anchored": 0.20369675005684662,
+          "anchored_common": 0.1506901478715998,
+          "common": 3.01977101047431,
+          "raw": 3.024669300688099,
+          "reference": 3.048289203464966
+        },
+        "raw_aa_cosine": 0.08767041872340475,
+        "raw_common_cosine": 0.9997812258068459
+      },
+      "full_objective": 0.8683360244777337,
+      "gradient_reference_relative_error": 0.0,
+      "initial_sha256": "ca3aa4880ac929d84a6ff404a6ab21a83300a5799d775b1bb2278d6d1d005c3f",
+      "pullback": {
+        "joint_norm": 0.15146450839367726,
+        "max_abs": 1.1920928955078125e-07,
+        "proxy_norm": 0.15146457606574798,
+        "relative": 1.4900158835147426e-06,
+        "site": "p3_s37"
+      },
+      "seed": 272003,
+      "sites": [
+        {
+          "anchored_aa_cosine": 0.7947530442337423,
+          "anchored_common_aa_cosine": 0.39698380573435604,
+          "anchored_common_cosine": 0.8725626903192384,
+          "centered": 0.761694263128198,
+          "common": 0.238305736845037,
+          "common_aa_cosine": 0.1722588298524357,
+          "norms": {
+            "aa": 0.08061526957434904,
+            "anchored": 0.15146455172395903,
+            "anchored_common": 0.10015936022434617,
+            "common": 1.4626416903409027,
+            "raw": 1.478662248570326,
+            "reference": 1.5022369083665366
+          },
+          "raw": 0.999999999973235,
+          "raw_aa_cosine": 0.22491154823721188,
+          "raw_common_cosine": 0.9985568940936925,
+          "site": "p3_s37"
+        },
+        {
+          "anchored_aa_cosine": 0.9306650522509956,
+          "anchored_common_aa_cosine": 0.7503787478083389,
+          "anchored_common_cosine": 0.9401958563753307,
+          "centered": 0.08924143628287484,
+          "common": 0.052554504560984684,
+          "common_aa_cosine": -0.1891358088341597,
+          "norms": {
+            "aa": 0.07930251635435458,
+            "anchored": 0.15388820660637625,
+            "anchored_common": 0.08517813127633184,
+            "common": 2.442753524793213,
+            "raw": 2.429003132491847,
+            "reference": 2.454007519282261
+          },
+          "raw": 0.14179594084385952,
+          "raw_aa_cosine": -0.15755831773971365,
+          "raw_common_cosine": 0.9994859812013752,
+          "site": "p4_s2"
+        },
+        {
+          "anchored_aa_cosine": 0.9472528839441593,
+          "anchored_common_aa_cosine": 0.2580586651273594,
+          "anchored_common_cosine": 0.5540787647710728,
+          "centered": 0.8681886573237303,
+          "common": 0.1318113425135498,
+          "common_aa_cosine": 0.06812064536051674,
+          "norms": {
+            "aa": 0.02247737680559449,
+            "anchored": 0.02608646707371255,
+            "anchored_common": 0.008653475599425822,
+            "common": 1.6947205091628752,
+            "raw": 1.6963999111710084,
+            "reference": 1.697637181172257
+          },
+          "raw": 0.9999999998372802,
+          "raw_aa_cosine": 0.08130325325250534,
+          "raw_common_cosine": 0.9999126216683066,
+          "site": "p5_s65"
+        },
+        {
+          "anchored_aa_cosine": 0.6786088905721348,
+          "anchored_common_aa_cosine": 0.39198012094726636,
+          "anchored_common_cosine": 0.9417216950325964,
+          "centered": 0.7062316745022452,
+          "common": 0.2937683256238966,
+          "common_aa_cosine": 0.258372000089607,
+          "norms": {
+            "aa": 0.1252655423860762,
+            "anchored": 0.34257848281065656,
+            "anchored_common": 0.27351198705915675,
+            "common": 4.341433289398591,
+            "raw": 4.375472132616827,
+            "reference": 4.3409272651291
+          },
+          "raw": 1.0000000001261418,
+          "raw_aa_cosine": 0.2849910379563341,
+          "raw_common_cosine": 0.9996174733974023,
+          "site": "p7_s44"
+        },
+        {
+          "anchored_aa_cosine": 0.9884412091178088,
+          "anchored_common_aa_cosine": 0.8169832949682662,
+          "anchored_common_cosine": 0.8949645076508074,
+          "centered": 0.796983790214775,
+          "common": 0.20301620978920293,
+          "common_aa_cosine": 0.18334777205889696,
+          "norms": {
+            "aa": 0.5337674180695451,
+            "anchored": 0.6899288660258146,
+            "anchored_common": 0.18138278393573787,
+            "common": 8.016134908116554,
+            "raw": 8.130948633453114,
+            "reference": 8.044138515506571
+          },
+          "raw": 1.000000000003978,
+          "raw_aa_cosine": 0.2464051839846982,
+          "raw_common_cosine": 0.9979155373868244,
+          "site": "p7_s86"
+        },
+        {
+          "anchored_aa_cosine": 0.8809251882301177,
+          "anchored_common_aa_cosine": 0.7533407860831942,
+          "anchored_common_cosine": 0.9748640785824505,
+          "centered": 0.5432126931162299,
+          "common": 0.45678730696275693,
+          "common_aa_cosine": 0.43023466667844956,
+          "norms": {
+            "aa": 0.16232826271685818,
+            "anchored": 0.4791372874325282,
+            "anchored_common": 0.34480522918882867,
+            "common": 2.5201213282545476,
+            "raw": 2.594102681236848,
+            "reference": 2.504928815701727
+          },
+          "raw": 1.0000000000789868,
+          "raw_aa_cosine": 0.48054066301386733,
+          "raw_common_cosine": 0.9984032602064175,
+          "site": "p11_s49"
+        },
+        {
+          "anchored_aa_cosine": 0.42748903092303603,
+          "anchored_common_aa_cosine": 0.06857576009756229,
+          "anchored_common_cosine": 0.9312077764699469,
+          "centered": 0.5483210841178343,
+          "common": 0.4516789159203962,
+          "common_aa_cosine": 0.20976294561336145,
+          "norms": {
+            "aa": 0.08963577305081873,
+            "anchored": 0.24534297161924137,
+            "anchored_common": 0.22231844180521126,
+            "common": 2.358401089332543,
+            "raw": 2.3788183681760864,
+            "reference": 2.360239253988042
+          },
+          "raw": 1.0000000000382305,
+          "raw_aa_cosine": 0.24564335819173758,
+          "raw_common_cosine": 0.999321085175022,
+          "site": "p11_s52"
+        },
+        {
+          "anchored_aa_cosine": 0.8714341131101447,
+          "anchored_common_aa_cosine": 0.6869225574498167,
+          "anchored_common_cosine": 0.9550782596095532,
+          "centered": 0.5885676999643121,
+          "common": 0.4114323000097346,
+          "common_aa_cosine": 0.09134679478416521,
+          "norms": {
+            "aa": 0.1613673898954178,
+            "anchored": 0.39571168605037227,
+            "anchored_common": 0.26708872826421465,
+            "common": 6.483151760442942,
+            "raw": 6.499878814572484,
+            "reference": 6.4682658567101585
+          },
+          "raw": 0.9999999999740468,
+          "raw_aa_cosine": 0.11593793435373526,
+          "raw_common_cosine": 0.9996943542584559,
+          "site": "p12_s11"
+        },
+        {
+          "anchored_aa_cosine": 0.6629944381694768,
+          "anchored_common_aa_cosine": 0.5794896655023942,
+          "anchored_common_cosine": 0.9943119658362658,
+          "centered": 0.21943389240397426,
+          "common": 0.7805661075319178,
+          "common_aa_cosine": 0.024390980993435438,
+          "norms": {
+            "aa": 0.09344663477722713,
+            "anchored": 0.7150439749468276,
+            "anchored_common": 0.6568254212594881,
+            "common": 2.5821210759264566,
+            "raw": 2.5860881944588554,
+            "reference": 2.752384095259797
+          },
+          "raw": 0.9999999999358921,
+          "raw_aa_cosine": 0.060487921950243335,
+          "raw_common_cosine": 0.9993473295136072,
+          "site": "p12_s72"
+        },
+        {
+          "anchored_aa_cosine": 0.6355340383450228,
+          "anchored_common_aa_cosine": 0.37763199751606835,
+          "anchored_common_cosine": 0.9549032932991491,
+          "centered": 0.17204707328700566,
+          "common": 0.1437827381049996,
+          "common_aa_cosine": -0.09571374562308181,
+          "norms": {
+            "aa": 0.04097970849648682,
+            "anchored": 0.12779799806572212,
+            "anchored_common": 0.10655948005286409,
+            "common": 2.7166605102307213,
+            "raw": 2.713044863814886,
+            "reference": 2.7284121493576574
+          },
+          "raw": 0.3158298113920053,
+          "raw_aa_cosine": -0.08073660979421383,
+          "raw_common_cosine": 0.9998869628058559,
+          "site": "p13_s95"
+        },
+        {
+          "anchored_aa_cosine": 0.8588144717317125,
+          "anchored_common_aa_cosine": 0.6576693697025086,
+          "anchored_common_cosine": 0.9507250106668854,
+          "centered": 0.5269705459895545,
+          "common": 0.4730294540597103,
+          "common_aa_cosine": 0.05493745325992022,
+          "norms": {
+            "aa": 0.14195018175895277,
+            "anchored": 0.34490262012241396,
+            "anchored_common": 0.23455126062837406,
+            "common": 1.390529001111255,
+            "raw": 1.405492265450091,
+            "reference": 1.3924218141142766
+          },
+          "raw": 1.0000000000492648,
+          "raw_aa_cosine": 0.1553493456572832,
+          "raw_common_cosine": 0.9949022253345965,
+          "site": "p13_s107"
+        },
+        {
+          "anchored_aa_cosine": 0.9461853796903058,
+          "anchored_common_aa_cosine": 0.8692301808822418,
+          "anchored_common_cosine": 0.9824556202581413,
+          "centered": 0.4230794786768434,
+          "common": 0.3001379558784784,
+          "common_aa_cosine": 0.2171126879716251,
+          "norms": {
+            "aa": 0.18915996011926953,
+            "anchored": 0.501468457746729,
+            "anchored_common": 0.3282469583453492,
+            "common": 23.213637481619898,
+            "raw": 23.25543957112125,
+            "reference": 23.206019635037705
+          },
+          "raw": 0.7232174345553218,
+          "raw_aa_cosine": 0.22485643306636185,
+          "raw_common_cosine": 0.9999684778221387,
+          "site": "p14_s6"
+        },
+        {
+          "anchored_aa_cosine": 0.9748559908369112,
+          "anchored_common_aa_cosine": 0.8319263785647147,
+          "anchored_common_cosine": 0.9346568895428522,
+          "centered": 0.41718958586912025,
+          "common": 0.17902700981119968,
+          "common_aa_cosine": -0.07497425248087623,
+          "norms": {
+            "aa": 0.19058696771757458,
+            "anchored": 0.2974370796206566,
+            "anchored_common": 0.11944728981807405,
+            "common": 15.951701640259959,
+            "raw": 15.938545642555345,
+            "reference": 15.962709701796356
+          },
+          "raw": 0.5962165956803199,
+          "raw_aa_cosine": -0.06307852429613493,
+          "raw_common_cosine": 0.9999289070810905,
+          "site": "p14_s8"
+        },
+        {
+          "anchored_aa_cosine": 0.21433401670037236,
+          "anchored_common_aa_cosine": -0.09968213404090717,
+          "anchored_common_cosine": 0.9505302346975839,
+          "centered": 0.5046564906542732,
+          "common": 0.4953435092617608,
+          "common_aa_cosine": 0.18359085282279713,
+          "norms": {
+            "aa": 0.04501433081157768,
+            "anchored": 0.14419030114094333,
+            "anchored_common": 0.14154436534235787,
+            "common": 2.3483066901062988,
+            "raw": 2.356986305456056,
+            "reference": 2.3882862335734
+          },
+          "raw": 0.9999999999160339,
+          "raw_aa_cosine": 0.20201303572934062,
+          "raw_common_cosine": 0.9998237597028493,
+          "site": "p15_s13"
+        },
+        {
+          "anchored_aa_cosine": 0.9343529846295396,
+          "anchored_common_aa_cosine": 0.6724970258321331,
+          "anchored_common_cosine": 0.892083321702187,
+          "centered": 0.21032714989553206,
+          "common": 0.14106322860987922,
+          "common_aa_cosine": -0.1766244576612497,
+          "norms": {
+            "aa": 0.09486747407400457,
+            "anchored": 0.15537932310902278,
+            "anchored_common": 0.07481320851996948,
+            "common": 2.073070558797145,
+            "raw": 2.0584336244929164,
+            "reference": 2.078039203077861
+          },
+          "raw": 0.35139037850541127,
+          "raw_aa_cosine": -0.13179316828050938,
+          "raw_common_cosine": 0.9989705852894428,
+          "site": "p15_s66"
+        },
+        {
+          "anchored_aa_cosine": 0.6711507533993206,
+          "anchored_common_aa_cosine": 0.484370212320745,
+          "anchored_common_cosine": 0.9736397500984794,
+          "centered": 0.4834823478052638,
+          "common": 0.5165176521788665,
+          "common_aa_cosine": 0.06437559985838721,
+          "norms": {
+            "aa": 0.11714020581172838,
+            "anchored": 0.449301008982943,
+            "anchored_common": 0.38071809574486565,
+            "common": 4.72007023687062,
+            "raw": 4.729056216045126,
+            "reference": 4.810695308113528
+          },
+          "raw": 0.9999999999841303,
+          "raw_aa_cosine": 0.0890235893698105,
+          "raw_common_cosine": 0.9996944404777589,
+          "site": "p18_s13"
+        },
+        {
+          "anchored_aa_cosine": 0.7050245799244212,
+          "anchored_common_aa_cosine": 0.4321777127032477,
+          "anchored_common_cosine": 0.9442288368919941,
+          "centered": 0.6077959703304696,
+          "common": 0.3922040295693439,
+          "common_aa_cosine": 0.2541794906351777,
+          "norms": {
+            "aa": 0.10684308008940803,
+            "anchored": 0.2925987936789774,
+            "anchored_common": 0.23010502066031188,
+            "common": 1.693900660556018,
+            "raw": 1.724157328977832,
+            "reference": 1.6460026372778143
+          },
+          "raw": 0.9999999998998136,
+          "raw_aa_cosine": 0.31168726782879225,
+          "raw_common_cosine": 0.9982023979513043,
+          "site": "p18_s179"
+        },
+        {
+          "anchored_aa_cosine": 0.6427333806110187,
+          "anchored_common_aa_cosine": 0.34254846543844814,
+          "anchored_common_cosine": 0.9399089569158412,
+          "centered": 0.34506865974430057,
+          "common": 0.6549313402780942,
+          "common_aa_cosine": 0.23485763317699396,
+          "norms": {
+            "aa": 0.013615034113933921,
+            "anchored": 0.03746450909328925,
+            "anchored_common": 0.030549418620624463,
+            "common": 2.4713242058591924,
+            "raw": 2.474557189867229,
+            "reference": 2.4678497865003233
+          },
+          "raw": 1.0000000000223948,
+          "raw_aa_cosine": 0.2400528023144448,
+          "raw_common_cosine": 0.9999856987259913,
+          "site": "p19_s90"
+        },
+        {
+          "anchored_aa_cosine": 0.8022527451245043,
+          "anchored_common_aa_cosine": 0.39808770825726836,
+          "anchored_common_cosine": 0.8670091415180526,
+          "centered": 0.26839529051929756,
+          "common": 0.7316047094737685,
+          "common_aa_cosine": 0.11441042242559947,
+          "norms": {
+            "aa": 0.026123121451540637,
+            "anchored": 0.04809221361159281,
+            "anchored_common": 0.031297095285928896,
+            "common": 3.4505753850197447,
+            "raw": 3.453661646765268,
+            "reference": 3.4498092649756504
+          },
+          "raw": 0.9999999999930661,
+          "raw_aa_cosine": 0.12187207431197127,
+          "raw_common_cosine": 0.9999717678235103,
+          "site": "p19_s137"
+        },
+        {
+          "anchored_aa_cosine": 0.7635948404891733,
+          "anchored_common_aa_cosine": 0.5658266972089012,
+          "anchored_common_cosine": 0.9644540629637407,
+          "centered": 0.2270869184733537,
+          "common": 0.1653003649156731,
+          "common_aa_cosine": -0.09849912135259106,
+          "norms": {
+            "aa": 0.03268770589981959,
+            "anchored": 0.10199336578315732,
+            "anchored_common": 0.07987233935630292,
+            "common": 3.1887131058477003,
+            "raw": 3.185659475304239,
+            "reference": 3.1991038726313206
+          },
+          "raw": 0.3923872833890268,
+          "raw_aa_cosine": -0.08833264680457559,
+          "raw_common_cosine": 0.9999478664408482,
+          "site": "p20_s100"
+        },
+        {
+          "anchored_aa_cosine": 0.8858042063494056,
+          "anchored_common_aa_cosine": 0.8243929701165293,
+          "anchored_common_cosine": 0.9929165410529728,
+          "centered": 0.25497414883463065,
+          "common": 0.7450258512439627,
+          "common_aa_cosine": 0.18006477258815404,
+          "norms": {
+            "aa": 0.07207434049107081,
+            "anchored": 0.3433551568390239,
+            "anchored_common": 0.2815054350547076,
+            "common": 4.7252308032977774,
+            "raw": 4.738739222165807,
+            "reference": 4.673619069173538
+          },
+          "raw": 1.0000000000785934,
+          "raw_aa_cosine": 0.1947610761521445,
+          "raw_common_cosine": 0.9998880780069579,
+          "site": "p20_s112"
+        },
+        {
+          "anchored_aa_cosine": 0.940030841870134,
+          "anchored_common_aa_cosine": 0.7877514760677106,
+          "anchored_common_cosine": 0.9506194652173836,
+          "centered": 0.6804747137219131,
+          "common": 0.31952528643931405,
+          "common_aa_cosine": -0.062079967481337976,
+          "norms": {
+            "aa": 0.04086114592466757,
+            "anchored": 0.08110026673966012,
+            "anchored_common": 0.04490706418107987,
+            "common": 3.9220667667034976,
+            "raw": 3.919742270463534,
+            "reference": 3.929709057661147
+          },
+          "raw": 1.0000000001612273,
+          "raw_aa_cosine": -0.05169233521773226,
+          "raw_common_cosine": 0.9999458733876747,
+          "site": "p21_s23"
+        },
+        {
+          "anchored_aa_cosine": 0.9278217899024751,
+          "anchored_common_aa_cosine": 0.4878679522419155,
+          "anchored_common_cosine": 0.7782734639724965,
+          "centered": 0.7754811382314314,
+          "common": 0.22451886200164753,
+          "common_aa_cosine": -0.3043973147622384,
+          "norms": {
+            "aa": 0.036797710911789905,
+            "anchored": 0.05115473800342414,
+            "anchored_common": 0.02185995127481103,
+            "common": 0.8511644854468859,
+            "raw": 0.8406943881441818,
+            "reference": 0.8620202954822316
+          },
+          "raw": 1.000000000233079,
+          "raw_aa_cosine": -0.26441769567409995,
+          "raw_common_cosine": 0.999130448473811,
+          "site": "p21_s128"
+        },
+        {
+          "anchored_aa_cosine": 0.3680084973512295,
+          "anchored_common_aa_cosine": 0.2618781370062588,
+          "anchored_common_cosine": 0.9937458862589783,
+          "centered": 0.29878885815254264,
+          "common": 0.7012111418706255,
+          "common_aa_cosine": 0.34045442120713754,
+          "norms": {
+            "aa": 0.09792161298864435,
+            "anchored": 0.8463178706422441,
+            "anchored_common": 0.8153813728361083,
+            "common": 4.949448138907174,
+            "raw": 4.983636564039487,
+            "reference": 4.942327814552205
+          },
+          "raw": 1.0000000000231681,
+          "raw_aa_cosine": 0.3577674839454769,
+          "raw_common_cosine": 0.9998293256244148,
+          "site": "p22_s25"
+        },
+        {
+          "anchored_aa_cosine": 0.5550897139660308,
+          "anchored_common_aa_cosine": 0.2516981173277777,
+          "anchored_common_cosine": 0.9447266870826255,
+          "centered": 0.48731547172158285,
+          "common": 0.5126845282905865,
+          "common_aa_cosine": 0.3160055311957401,
+          "norms": {
+            "aa": 0.10141118120369488,
+            "anchored": 0.2993553505066701,
+            "anchored_common": 0.25728398515968587,
+            "common": 2.246760621641488,
+            "raw": 2.2808373727705886,
+            "reference": 2.2566843186430123
+          },
+          "raw": 1.0000000000121694,
+          "raw_aa_cosine": 0.3557465230103233,
+          "raw_common_cosine": 0.9991098633475078,
+          "site": "p22_s44"
+        },
+        {
+          "anchored_aa_cosine": 0.8021173831571484,
+          "anchored_common_aa_cosine": 0.4209245744471439,
+          "anchored_common_cosine": 0.8793179524930244,
+          "centered": 0.5117900424134361,
+          "common": 0.41244517368517614,
+          "common_aa_cosine": -0.02422506346151047,
+          "norms": {
+            "aa": 0.17719877843771853,
+            "anchored": 0.33751442407605164,
+            "anchored_common": 0.2221951719090161,
+            "common": 7.821099850345524,
+            "raw": 7.818814217114618,
+            "reference": 7.870727712530332
+          },
+          "raw": 0.9242352160986121,
+          "raw_aa_cosine": -0.0015690181957418077,
+          "raw_common_cosine": 0.9997433091046746,
+          "site": "p23_s68"
+        },
+        {
+          "anchored_aa_cosine": 0.9033382039840968,
+          "anchored_common_aa_cosine": 0.5512714394404397,
+          "anchored_common_cosine": 0.8558511519095943,
+          "centered": 0.6754722524382688,
+          "common": 0.3245277476552524,
+          "common_aa_cosine": 0.01951900316405462,
+          "norms": {
+            "aa": 0.16702930646083775,
+            "anchored": 0.269433302158755,
+            "anchored_common": 0.1385163158140051,
+            "common": 3.1367982674555277,
+            "raw": 3.144496084460145,
+            "reference": 3.160338574036409
+          },
+          "raw": 1.0000000000935212,
+          "raw_aa_cosine": 0.07258920845737389,
+          "raw_common_cosine": 0.998588781374116,
+          "site": "p23_s148"
+        }
+      ],
+      "vector_path": "vectors_272003.pt",
+      "vector_sha256": "e96c3a7a399fcef37a171010a13a444b902f8d5ee6974ad7b7ddfb7447a01edf"
+    }
+  ],
+  "trained_state_check": {
+    "anchor_norm": 709.1891479492188,
+    "centered_max_abs": 6.424753291867091e-05,
+    "fp32_rounding_bound": 0.00030899993726052344,
+    "no_edit_exact": true,
+    "order_independent": true,
+    "site": "p3_s37"
+  }
+}

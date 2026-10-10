@@ -1,3 +1,135 @@
+## 2026-10-10 — Both anchor runs passed initial replay; publication review complete
+
+Observed1791609204.860: same controller1015577, prootworkers1015702/1015703
+and Pythonchildren1015704/1015705 all live. Seed272001 at13 gradients;272003
+at4. Both baselineall48x19x2 S1 coordinates reproduced bitwise; both initial
+fullgradients passed at5.68672e-7/5.68715e-7 relative error. No terminal quality
+result yet. CPUfollower1017339 remains waiting; its dependency-only repaired
+package passes2tests/imports. Continue these handles; no duplicate starts.
+
+GitNexus persistent MCP connection returned stale/corrupt symbol associations
+and CRITICAL risk (249flows) after incremental index update. Full forced no-cache
+rebuild plus a fresh CLI LocalBackend gives complete all113symbols/11flows and
+staged78symbols/10flows, HIGH. Full JSON has partial=false/truncated=false and
+listed counts equal totals. The persistent MCP still returns old associations;
+use a fresh CLI backend for this checkout until that connection is refreshed.
+Originalclass impact LOW4 upstream symbols, existing dynamiccallers checked.
+All10 affected scientific/controller/result flows reviewed;17trainingtests,
+2resulttests,6historicalnodeaggregate checks and actualMini replays/gradients
+supply regression evidence. Global flow discovery remains capped; graph is not
+complete proof of absence. Reports/implicitcalls manually inspected. HIGH is
+retained, not waived using shared axes. Unrelated edits excluded from staging.
+
+Publication includes auditclosure plus live trial, never terminal training
+claims. BulkgradientNPZfiles stay local/remote with manifest/SHA; sourcecommit
+includes text evidence only. Broad goal ACTIVE, this turn PROGRESS. Preserve
+all running jobs and collect only after controller and follower complete.
+
+## 2026-10-10 — Reference anchor audited; fixed-budget training now live
+
+The no-update audit completed successfully. All1,824 initial predictions match
+legacy and unadapted outputs exactly;24 WT-only continuation caches replay WT4
+bitwise. No target teacher/input/ESM/MSA/S1 or optimizer work in the audit.
+TRAIN initial full/AA gradient cosine0.087705/0.087670 ->0.882849/0.882843;
+common norms3.019848/3.019771 ->0.150703/0.150690. All27 sites improve alignment
+in both seeds. Raw gradient matches old audit exactly; shared proxy vs joint
+relative error1.49e-6. AA gradient itself is unchanged. This changes common/full
+training gradients, not centered-AA capacity or post-hoc response correctness.
+Native initial weights are shared across seeds; not independent confirmations.
+Audit12tests pass, archiveSHAa6f1298f01f7e400044abe6b29032a76507f3b9e297b4ef911c34654e1530ec1
+locally verified with NumPy. Reference cache473680104bytes; audit230.993s.
+Findings docs/mini_reference_anchor_audit_findings_2026-10-10.md. Bulk gradient
+NPZ arrays retained locally/remote, not staged; manifest documents full archive.
+
+Separate training protocol docs/mini_reference_anchor_training_v1.md locked:
+root reference_anchor_training_v1_20261010, lockSHA
+13cda88bacb0bca93f93c59fad801428d120b37f124bcdc022d915127c4cdeff.
+Same15refs/27sites/513mutants and originalq/Final objective. Two seeds272001/272003,
+128full-gradient AdamW updates, lr1e-4/wd1e-4/eps1e-8/defaultbetas/clip1. Matched
+old AdamW controls reused with bound hashes. Extra3456WTsuffix forward/backward
+per run explicitly charged, not equal compute. NativeB_inputs/B_s fixed, no
+newC4/recycle/ESM/MSA. Every0/32/128 node decoded, terminalfixedwrongAAassignment.
+No NMSEgate, step selection, new loss weighting or claimed quality improvement.
+Newtrainer17preflighttests pass, including jointgradient/threeAdamstep equivalence.
+
+Controller1015577; sameprootworkers1015702(HIP0),1015703(HIP1). Deadline
+1791630010.9576044. Lastobservation1791608824.825: seed1gradient8/128, J.8498572,
+firstgradientrelative5.68672e-7, baselinefullpanel replaypassed. Seed2 still
+initialevaluation (live; slower); inspect actuallogprogress/children before any
+failure inference. No restart. HIP5unrelated100%work untouched;6/7unused.
+
+CPUfollower1017339 waiting, postprocesslockSHA
+c82688ab304f74053b317352844afa2484524ef3c5111f6615cd145ec512df3f.
+First postprocessor import preflight failed before launch due missing
+fastglycan.glycoshape package dependency. Originalpackage files/log/attempt
+retained; added only missing files from frozen scientific package, two tests
+and imports pass, newlockrecordsall. Scientificcode/params/budgets unchanged.
+Localnewaggregation reproduces all6 historical AdamW node summaries exactly.
+Follower never controls training: waits for all6jobs then exports, verifies and
+compares fixednodes, with archiveSHA. Do not treat launch directory as results.
+
+Next: poll these same controller/follower/PIDs, do not start duplicates. Confirm
+seed2initialgradient and allbaselinecheckpoints, then collect only after full
+success, verify published archive/local independent arithmetic, analyze TRAIN
+AAfit versus heldresponse/selection/geometry separately. Referenceanchoring
+might aid learning but cannot be promoted on its gradient alignment alone.
+Broad goal remains ACTIVE, not achieved. This turn made PROGRESS, not blocked.
+Preserve unrelated workspace/memorytails and original failures. Origin/main push
+authorization persists; stage only owned files and owned memory prefixes.
+
+## 2026-10-10 — Paired-reference suffix audit authorized under active research goal
+
+Next bounded question after c12a2681: use a trainable native WT suffix as an
+anchor, predicting U_theta(candidate) - [U_theta(WT,site)-WT_C4_pair]. Same
+parameters, frozen candidate inputs/single, original Final labels and scales.
+This is a training-graph hypothesis, not a postprocessing AA repair: at fixed
+parameters centered AA predictions/gradients are unchanged in real arithmetic;
+only common/full gradients change via the reference VJP. No capacity gain or
+performance improvement is assumed. No decoder/selection result will be inferred.
+
+Protocol docs/mini_reference_anchor_audit_v1.md: no optimizer updates. Prepare
+24 WT-only last-recycle boundaries from existing WT3/RNG; replay WT4 exactly;
+no new mutant teacher, C4, ESM/MSA or S1. All48sites/19AAs/twoseeds initial
+identity versus frozen legacy class. TRAIN-only27site gradient decomposition
+and match original full-gradient vectors, plus actual joint/proxy pullback check
+on T37 and fixed historical checkpoint centering/order/noedit check. HIP4 only,
+two-hour cap, preserve failures, no automatic retry. This audit must finish
+before defining a separate training protocol; not an extension of the old batch.
+
+Implementation adds ReferenceAnchoredPairRecovery, explicit versioned/read-only
+reference anchors and reference-gradient proxy with mandatory pullback. The
+legacy StagePairRecovery only extracts its existing body into run_pair_suffix;
+forward/state keys/noedit bypass unchanged. Graph method impact UNKNOWN was
+followed by source search of train/audit/verifier/test call sites; class impact
+LOW, one indexed import; broader dynamic PyTorch usage manually reviewed.
+CLI index matches c12a2681 despite stale MCP metadata. GitNexus refactoring
+skill applied with explicit onestepfold binding. Initial11CPU tests pass in the
+known remote Torch runtime; an additional FP64 common/AA VJP test is now included
+in the locked preflight. No scientific audit or training result yet.
+
+## 2026-10-10 — Full-batch findings published as c12a2681
+
+Pushed c12a2681325a697f504d3244c389f32d2aee6ed7 to origin/main and verified
+exact ls-remote equality.128 scoped files; staged graph25symbols/5processes,
+MEDIUM, no partial/truncated checks. All-workspace HIGH includes unrelated
+unstaged work; warning retained, those files not committed. Postcommit index
+8,407nodes/15,148edges/259flows; known global catalogue limits documented.
+All training/scoring/recovery/collection processes terminal. No outstanding
+exec session. Findings and complete reproducible evidence are now published.
+
+Broad goal remains ACTIVE: quality-qualified transferable acceleration is not
+achieved. This turn made PROGRESS (closed full-batch trial and repaired/verifiably
+published its records), not blocked. No next model/training was launched.
+Next work should examine how candidate-specific features are formed, not repeat
+solver/readout searches or automatically extend128 gradients. Preserve the
+strong fixed-single/oracle-pair evidence and all negative baselines. A possible
+reference-anchored trainable native suffix is only a design hypothesis, not an
+approved/tested protocol: subtracting an AA-independent branch cannot improve
+centered responses at fixed parameters; any benefit must come from changed
+training/feature formation and must include its reference computation cost.
+Do not present that algebra as a postprocessing repair or a known solution.
+Unrelated working edits and memory tails remain intact.
+
 ## 2026-10-10 — Full-batch comparison closed; dependency-only verification repaired
 
 Four128-full-gradient runs complete. AdamW terminal independently replayed J:

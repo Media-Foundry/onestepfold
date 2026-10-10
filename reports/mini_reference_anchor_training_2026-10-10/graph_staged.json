@@ -1,0 +1,718 @@
+{
+  "summary": {
+    "changed_count": 78,
+    "affected_count": 10,
+    "changed_files": 59,
+    "risk_level": "high"
+  },
+  "changed_symbols": [
+    {
+      "id": "Section:docs/mini_reference_anchor_audit_findings_2026-10-10.md:L1:Reference-anchor audit: implementation passed; learning untested",
+      "name": "Reference-anchor audit: implementation passed; learning untested",
+      "type": "Section",
+      "filePath": "docs/mini_reference_anchor_audit_findings_2026-10-10.md",
+      "change_type": "touched"
+    },
+    {
+      "id": "Section:docs/mini_reference_anchor_audit_v1.md:L1:Paired-reference native suffix: implementation and gradient audit",
+      "name": "Paired-reference native suffix: implementation and gradient audit",
+      "type": "Section",
+      "filePath": "docs/mini_reference_anchor_audit_v1.md",
+      "change_type": "touched"
+    },
+    {
+      "id": "Section:docs/mini_reference_anchor_training_v1.md:L1:Reference-anchored native pair suffix: fixed-budget training",
+      "name": "Reference-anchored native pair suffix: fixed-budget training",
+      "type": "Section",
+      "filePath": "docs/mini_reference_anchor_training_v1.md",
+      "change_type": "touched"
+    },
+    {
+      "id": "Function:scripts/audit_reference_anchor.py:audit_reference_anchor",
+      "name": "audit_reference_anchor",
+      "type": "Function",
+      "filePath": "scripts/audit_reference_anchor.py",
+      "change_type": "touched"
+    },
+    {
+      "id": "Function:scripts/audit_reference_anchor.py:audit_reference_anchor.save@52:4",
+      "name": "save",
+      "type": "Function",
+      "filePath": "scripts/audit_reference_anchor.py",
+      "change_type": "touched"
+    },
+    {
+      "id": "Function:scripts/audit_reference_anchor.py:audit_reference_anchor.forbid@75:4",
+      "name": "forbid",
+      "type": "Function",
+      "filePath": "scripts/audit_reference_anchor.py",
+      "change_type": "touched"
+    },
+    {
+      "id": "Function:scripts/audit_reference_anchor.py:audit_reference_anchor.fetch@79:4",
+      "name": "fetch",
+      "type": "Function",
+      "filePath": "scripts/audit_reference_anchor.py",
+      "change_type": "touched"
+    },
+    {
+      "id": "Function:scripts/control_anchor_training.py:control_anchor_training",
+      "name": "control_anchor_training",
+      "type": "Function",
+      "filePath": "scripts/control_anchor_training.py",
+      "change_type": "touched"
+    },
+    {
+      "id": "Function:scripts/control_anchor_training.py:control_anchor_training.digest@12:4",
+      "name": "digest",
+      "type": "Function",
+      "filePath": "scripts/control_anchor_training.py",
+      "change_type": "touched"
+    },
+    {
+      "id": "Function:scripts/control_anchor_training.py:control_anchor_training.save@28:4",
+      "name": "save",
+      "type": "Function",
+      "filePath": "scripts/control_anchor_training.py",
+      "change_type": "touched"
+    },
+    {
+      "id": "Function:scripts/control_anchor_training.py:control_anchor_training.launch@32:4",
+      "name": "launch",
+      "type": "Function",
+      "filePath": "scripts/control_anchor_training.py",
+      "change_type": "touched"
+    },
+    {
+      "id": "Function:scripts/control_reference_anchor_audit.py:control_reference_anchor_audit",
+      "name": "control_reference_anchor_audit",
+      "type": "Function",
+      "filePath": "scripts/control_reference_anchor_audit.py",
+      "change_type": "touched"
+    },
+    {
+      "id": "Function:scripts/control_reference_anchor_audit.py:control_reference_anchor_audit.read@12:4",
+      "name": "read",
+      "type": "Function",
+      "filePath": "scripts/control_reference_anchor_audit.py",
+      "change_type": "touched"
+    },
+    {
+      "id": "Function:scripts/control_reference_anchor_audit.py:control_reference_anchor_audit.sha@13:4",
+      "name": "sha",
+      "type": "Function",
+      "filePath": "scripts/control_reference_anchor_audit.py",
+      "change_type": "touched"
+    },
+    {
+      "id": "Function:scripts/control_reference_anchor_audit.py:control_reference_anchor_audit.save@26:4",
+      "name": "save",
+      "type": "Function",
+      "filePath": "scripts/control_reference_anchor_audit.py",
+      "change_type": "touched"
+    },
+    {
+      "id": "Function:scripts/export_anchor_training.py:export_anchor_training",
+      "name": "export_anchor_training",
+      "type": "Function",
+      "filePath": "scripts/export_anchor_training.py",
+      "change_type": "touched"
+    },
+    {
+      "id": "Function:scripts/export_anchor_training.py:export_anchor_training.sha@9:30",
+      "name": "sha",
+      "type": "Function",
+      "filePath": "scripts/export_anchor_training.py",
+      "change_type": "touched"
+    },
+    {
+      "id": "Function:scripts/export_anchor_training.py:export_anchor_training.read@10:4",
+      "name": "read",
+      "type": "Function",
+      "filePath": "scripts/export_anchor_training.py",
+      "change_type": "touched"
+    },
+    {
+      "id": "Function:scripts/export_reference_anchor_audit.py:export_reference_anchor_audit",
+      "name": "export_reference_anchor_audit",
+      "type": "Function",
+      "filePath": "scripts/export_reference_anchor_audit.py",
+      "change_type": "touched"
+    },
+    {
+      "id": "Function:scripts/export_reference_anchor_audit.py:export_reference_anchor_audit.read@13:4",
+      "name": "read",
+      "type": "Function",
+      "filePath": "scripts/export_reference_anchor_audit.py",
+      "change_type": "touched"
+    },
+    {
+      "id": "Function:scripts/export_reference_anchor_audit.py:export_reference_anchor_audit.sha@14:4",
+      "name": "sha",
+      "type": "Function",
+      "filePath": "scripts/export_reference_anchor_audit.py",
+      "change_type": "touched"
+    },
+    {
+      "id": "Function:scripts/finish_anchor_training.py:finish_anchor_training",
+      "name": "finish_anchor_training",
+      "type": "Function",
+      "filePath": "scripts/finish_anchor_training.py",
+      "change_type": "touched"
+    },
+    {
+      "id": "Function:scripts/finish_anchor_training.py:finish_anchor_training.sha@14:30",
+      "name": "sha",
+      "type": "Function",
+      "filePath": "scripts/finish_anchor_training.py",
+      "change_type": "touched"
+    },
+    {
+      "id": "Function:scripts/finish_anchor_training.py:finish_anchor_training.save@19:4",
+      "name": "save",
+      "type": "Function",
+      "filePath": "scripts/finish_anchor_training.py",
+      "change_type": "touched"
+    },
+    {
+      "id": "Function:scripts/run_anchor_training.py:run_anchor_training",
+      "name": "run_anchor_training",
+      "type": "Function",
+      "filePath": "scripts/run_anchor_training.py",
+      "change_type": "touched"
+    },
+    {
+      "id": "Function:scripts/run_anchor_training.py:run_anchor_training.heartbeat@45:4",
+      "name": "heartbeat",
+      "type": "Function",
+      "filePath": "scripts/run_anchor_training.py",
+      "change_type": "touched"
+    },
+    {
+      "id": "Function:scripts/run_anchor_training.py:run_anchor_training.forbid_native@50:4",
+      "name": "forbid_native",
+      "type": "Function",
+      "filePath": "scripts/run_anchor_training.py",
+      "change_type": "touched"
+    },
+    {
+      "id": "Function:scripts/run_anchor_training.py:run_anchor_training.guard_decoder@53:4",
+      "name": "guard_decoder",
+      "type": "Function",
+      "filePath": "scripts/run_anchor_training.py",
+      "change_type": "touched"
+    },
+    {
+      "id": "Function:scripts/run_anchor_training.py:run_anchor_training.fetch@77:4",
+      "name": "fetch",
+      "type": "Function",
+      "filePath": "scripts/run_anchor_training.py",
+      "change_type": "touched"
+    },
+    {
+      "id": "Function:scripts/run_anchor_training.py:run_anchor_training.reference@87:4",
+      "name": "reference",
+      "type": "Function",
+      "filePath": "scripts/run_anchor_training.py",
+      "change_type": "touched"
+    },
+    {
+      "id": "Function:scripts/run_anchor_training.py:run_anchor_training.predict@92:4",
+      "name": "predict",
+      "type": "Function",
+      "filePath": "scripts/run_anchor_training.py",
+      "change_type": "touched"
+    },
+    {
+      "id": "Function:scripts/run_anchor_training.py:run_anchor_training.isolation@101:4",
+      "name": "isolation",
+      "type": "Function",
+      "filePath": "scripts/run_anchor_training.py",
+      "change_type": "touched"
+    },
+    {
+      "id": "Function:scripts/run_anchor_training.py:run_anchor_training.evaluate@113:4",
+      "name": "evaluate",
+      "type": "Function",
+      "filePath": "scripts/run_anchor_training.py",
+      "change_type": "touched"
+    },
+    {
+      "id": "Function:scripts/verify_anchor_training.py:verify_anchor_training",
+      "name": "verify_anchor_training",
+      "type": "Function",
+      "filePath": "scripts/verify_anchor_training.py",
+      "change_type": "touched"
+    },
+    {
+      "id": "Function:src/fastglycan/anchor_gradients.py:flat_gradients",
+      "name": "flat_gradients",
+      "type": "Function",
+      "filePath": "src/fastglycan/anchor_gradients.py",
+      "change_type": "touched"
+    },
+    {
+      "id": "Function:src/fastglycan/anchor_gradients.py:gradient_alignment",
+      "name": "gradient_alignment",
+      "type": "Function",
+      "filePath": "src/fastglycan/anchor_gradients.py",
+      "change_type": "touched"
+    },
+    {
+      "id": "Function:src/fastglycan/anchor_gradients.py:gradient_description",
+      "name": "gradient_description",
+      "type": "Function",
+      "filePath": "src/fastglycan/anchor_gradients.py",
+      "change_type": "touched"
+    },
+    {
+      "id": "Function:src/fastglycan/anchor_gradients.py:initial_site_gradients",
+      "name": "initial_site_gradients",
+      "type": "Function",
+      "filePath": "src/fastglycan/anchor_gradients.py",
+      "change_type": "touched"
+    },
+    {
+      "id": "Function:src/fastglycan/anchor_results.py:verify_anchor_results",
+      "name": "verify_anchor_results",
+      "type": "Function",
+      "filePath": "src/fastglycan/anchor_results.py",
+      "change_type": "touched"
+    },
+    {
+      "id": "Function:src/fastglycan/anchor_results.py:pool_anchor_latent",
+      "name": "pool_anchor_latent",
+      "type": "Function",
+      "filePath": "src/fastglycan/anchor_results.py",
+      "change_type": "touched"
+    },
+    {
+      "id": "Function:src/fastglycan/anchor_results.py:analyze_anchor_results",
+      "name": "analyze_anchor_results",
+      "type": "Function",
+      "filePath": "src/fastglycan/anchor_results.py",
+      "change_type": "touched"
+    },
+    {
+      "id": "Function:src/fastglycan/anchor_training.py:load_anchor_boundaries",
+      "name": "load_anchor_boundaries",
+      "type": "Function",
+      "filePath": "src/fastglycan/anchor_training.py",
+      "change_type": "touched"
+    },
+    {
+      "id": "Class:src/fastglycan/anchor_training.py:AnchoredFullBatchTrainer",
+      "name": "AnchoredFullBatchTrainer",
+      "type": "Class",
+      "filePath": "src/fastglycan/anchor_training.py",
+      "change_type": "touched"
+    },
+    {
+      "id": "Method:src/fastglycan/anchor_training.py:AnchoredFullBatchTrainer.__init__#8",
+      "name": "__init__",
+      "type": "Method",
+      "filePath": "src/fastglycan/anchor_training.py",
+      "change_type": "touched"
+    },
+    {
+      "id": "Method:src/fastglycan/anchor_training.py:AnchoredFullBatchTrainer.objective#1",
+      "name": "objective",
+      "type": "Method",
+      "filePath": "src/fastglycan/anchor_training.py",
+      "change_type": "touched"
+    },
+    {
+      "id": "Function:src/fastglycan/models/anchored_pair_recovery.py:_reference_signature",
+      "name": "_reference_signature",
+      "type": "Function",
+      "filePath": "src/fastglycan/models/anchored_pair_recovery.py",
+      "change_type": "touched"
+    },
+    {
+      "id": "Class:src/fastglycan/models/anchored_pair_recovery.py:ReferencePairAnchor",
+      "name": "ReferencePairAnchor",
+      "type": "Class",
+      "filePath": "src/fastglycan/models/anchored_pair_recovery.py",
+      "change_type": "touched"
+    },
+    {
+      "id": "Property:src/fastglycan/models/anchored_pair_recovery.py:ReferencePairAnchor.drift",
+      "name": "drift",
+      "type": "Property",
+      "filePath": "src/fastglycan/models/anchored_pair_recovery.py",
+      "change_type": "touched"
+    },
+    {
+      "id": "Property:src/fastglycan/models/anchored_pair_recovery.py:ReferencePairAnchor.position",
+      "name": "position",
+      "type": "Property",
+      "filePath": "src/fastglycan/models/anchored_pair_recovery.py",
+      "change_type": "touched"
+    },
+    {
+      "id": "Property:src/fastglycan/models/anchored_pair_recovery.py:ReferencePairAnchor.original",
+      "name": "original",
+      "type": "Property",
+      "filePath": "src/fastglycan/models/anchored_pair_recovery.py",
+      "change_type": "touched"
+    },
+    {
+      "id": "Property:src/fastglycan/models/anchored_pair_recovery.py:ReferencePairAnchor.owner",
+      "name": "owner",
+      "type": "Property",
+      "filePath": "src/fastglycan/models/anchored_pair_recovery.py",
+      "change_type": "touched"
+    },
+    {
+      "id": "Property:src/fastglycan/models/anchored_pair_recovery.py:ReferencePairAnchor.parameter_versions",
+      "name": "parameter_versions",
+      "type": "Property",
+      "filePath": "src/fastglycan/models/anchored_pair_recovery.py",
+      "change_type": "touched"
+    },
+    {
+      "id": "Property:src/fastglycan/models/anchored_pair_recovery.py:ReferencePairAnchor.reference_signature",
+      "name": "reference_signature",
+      "type": "Property",
+      "filePath": "src/fastglycan/models/anchored_pair_recovery.py",
+      "change_type": "touched"
+    },
+    {
+      "id": "Property:src/fastglycan/models/anchored_pair_recovery.py:ReferencePairAnchor.drift_version",
+      "name": "drift_version",
+      "type": "Property",
+      "filePath": "src/fastglycan/models/anchored_pair_recovery.py",
+      "change_type": "touched"
+    },
+    {
+      "id": "Class:src/fastglycan/models/anchored_pair_recovery.py:ReferenceAnchoredPairRecovery",
+      "name": "ReferenceAnchoredPairRecovery",
+      "type": "Class",
+      "filePath": "src/fastglycan/models/anchored_pair_recovery.py",
+      "change_type": "touched"
+    },
+    {
+      "id": "Method:src/fastglycan/models/anchored_pair_recovery.py:ReferenceAnchoredPairRecovery.prepare_reference#5",
+      "name": "prepare_reference",
+      "type": "Method",
+      "filePath": "src/fastglycan/models/anchored_pair_recovery.py",
+      "change_type": "touched"
+    },
+    {
+      "id": "Method:src/fastglycan/models/anchored_pair_recovery.py:ReferenceAnchoredPairRecovery.forward#7",
+      "name": "forward",
+      "type": "Method",
+      "filePath": "src/fastglycan/models/anchored_pair_recovery.py",
+      "change_type": "touched"
+    },
+    {
+      "id": "Function:src/fastglycan/models/anchored_pair_recovery.py:reference_gradient_proxy",
+      "name": "reference_gradient_proxy",
+      "type": "Function",
+      "filePath": "src/fastglycan/models/anchored_pair_recovery.py",
+      "change_type": "touched"
+    },
+    {
+      "id": "Function:src/fastglycan/models/anchored_pair_recovery.py:backward_reference_proxy",
+      "name": "backward_reference_proxy",
+      "type": "Function",
+      "filePath": "src/fastglycan/models/anchored_pair_recovery.py",
+      "change_type": "touched"
+    },
+    {
+      "id": "Class:src/fastglycan/models/stage_pair_recovery.py:StagePairRecovery",
+      "name": "StagePairRecovery",
+      "type": "Class",
+      "filePath": "src/fastglycan/models/stage_pair_recovery.py",
+      "change_type": "touched"
+    },
+    {
+      "id": "Method:src/fastglycan/models/stage_pair_recovery.py:StagePairRecovery.forward#6",
+      "name": "forward",
+      "type": "Method",
+      "filePath": "src/fastglycan/models/stage_pair_recovery.py",
+      "change_type": "touched"
+    },
+    {
+      "id": "Method:src/fastglycan/models/stage_pair_recovery.py:StagePairRecovery.run_pair_suffix#6",
+      "name": "run_pair_suffix",
+      "type": "Method",
+      "filePath": "src/fastglycan/models/stage_pair_recovery.py",
+      "change_type": "touched"
+    },
+    {
+      "id": "Function:tests/test_anchor_results.py:test_incomplete_anchor_training_cannot_export",
+      "name": "test_incomplete_anchor_training_cannot_export",
+      "type": "Function",
+      "filePath": "tests/test_anchor_results.py",
+      "change_type": "touched"
+    },
+    {
+      "id": "Function:tests/test_anchor_results.py:test_latent_pool_weights_proteins_not_pair_rows_or_sites",
+      "name": "test_latent_pool_weights_proteins_not_pair_rows_or_sites",
+      "type": "Function",
+      "filePath": "tests/test_anchor_results.py",
+      "change_type": "touched"
+    },
+    {
+      "id": "Function:tests/test_anchor_results.py:test_latent_pool_weights_proteins_not_pair_rows_or_sites.row@21:4",
+      "name": "row",
+      "type": "Function",
+      "filePath": "tests/test_anchor_results.py",
+      "change_type": "touched"
+    },
+    {
+      "id": "Function:tests/test_anchor_training.py:test_fullbatch_anchor_gradient_and_adam_match_joint_graph",
+      "name": "test_fullbatch_anchor_gradient_and_adam_match_joint_graph",
+      "type": "Function",
+      "filePath": "tests/test_anchor_training.py",
+      "change_type": "touched"
+    },
+    {
+      "id": "Function:tests/test_anchor_training.py:test_fullbatch_anchor_gradient_and_adam_match_joint_graph.fetch@21:4",
+      "name": "fetch",
+      "type": "Function",
+      "filePath": "tests/test_anchor_training.py",
+      "change_type": "touched"
+    },
+    {
+      "id": "Class:tests/test_anchored_pair_recovery.py:PairBlock",
+      "name": "PairBlock",
+      "type": "Class",
+      "filePath": "tests/test_anchored_pair_recovery.py",
+      "change_type": "touched"
+    },
+    {
+      "id": "Method:tests/test_anchored_pair_recovery.py:PairBlock.__init__#3",
+      "name": "__init__",
+      "type": "Method",
+      "filePath": "tests/test_anchored_pair_recovery.py",
+      "change_type": "touched"
+    },
+    {
+      "id": "Method:tests/test_anchored_pair_recovery.py:PairBlock.forward",
+      "name": "forward",
+      "type": "Method",
+      "filePath": "tests/test_anchored_pair_recovery.py",
+      "change_type": "touched"
+    },
+    {
+      "id": "Function:tests/test_anchored_pair_recovery.py:_case",
+      "name": "_case",
+      "type": "Function",
+      "filePath": "tests/test_anchored_pair_recovery.py",
+      "change_type": "touched"
+    },
+    {
+      "id": "Function:tests/test_anchored_pair_recovery.py:_case.datum@29:4",
+      "name": "datum",
+      "type": "Function",
+      "filePath": "tests/test_anchored_pair_recovery.py",
+      "change_type": "touched"
+    },
+    {
+      "id": "Function:tests/test_anchored_pair_recovery.py:test_initial_native_identity_no_edit_and_read_only_reference",
+      "name": "test_initial_native_identity_no_edit_and_read_only_reference",
+      "type": "Function",
+      "filePath": "tests/test_anchored_pair_recovery.py",
+      "change_type": "touched"
+    },
+    {
+      "id": "Function:tests/test_anchored_pair_recovery.py:test_proxy_pullback_matches_joint_autograd_and_finite_difference",
+      "name": "test_proxy_pullback_matches_joint_autograd_and_finite_difference",
+      "type": "Function",
+      "filePath": "tests/test_anchored_pair_recovery.py",
+      "change_type": "touched"
+    },
+    {
+      "id": "Function:tests/test_anchored_pair_recovery.py:test_proxy_pullback_matches_joint_autograd_and_finite_difference.joint@57:4",
+      "name": "joint",
+      "type": "Function",
+      "filePath": "tests/test_anchored_pair_recovery.py",
+      "change_type": "touched"
+    },
+    {
+      "id": "Function:tests/test_anchored_pair_recovery.py:test_anchor_reuse_order_and_fixed_parameter_centering",
+      "name": "test_anchor_reuse_order_and_fixed_parameter_centering",
+      "type": "Function",
+      "filePath": "tests/test_anchored_pair_recovery.py",
+      "change_type": "touched"
+    },
+    {
+      "id": "Function:tests/test_anchored_pair_recovery.py:test_stale_or_unrelated_anchor_is_rejected",
+      "name": "test_stale_or_unrelated_anchor_is_rejected",
+      "type": "Function",
+      "filePath": "tests/test_anchored_pair_recovery.py",
+      "change_type": "touched"
+    },
+    {
+      "id": "Function:tests/test_anchored_pair_recovery.py:test_reference_vjp_decomposition_matches_explicit_centered_losses",
+      "name": "test_reference_vjp_decomposition_matches_explicit_centered_losses",
+      "type": "Function",
+      "filePath": "tests/test_anchored_pair_recovery.py",
+      "change_type": "touched"
+    }
+  ],
+  "affected_processes": [
+    {
+      "id": "proc_36_control_anchor_train",
+      "name": "Control_anchor_training → Save",
+      "process_type": "intra_community",
+      "step_count": 3,
+      "changed_steps": [
+        {
+          "symbol": "launch",
+          "step": 2
+        },
+        {
+          "symbol": "save",
+          "step": 3
+        },
+        {
+          "symbol": "control_anchor_training",
+          "step": 1
+        }
+      ]
+    },
+    {
+      "id": "proc_44_finish_anchor_traini",
+      "name": "Finish_anchor_training → Read",
+      "process_type": "intra_community",
+      "step_count": 3,
+      "changed_steps": [
+        {
+          "symbol": "finish_anchor_training",
+          "step": 1
+        },
+        {
+          "symbol": "read",
+          "step": 3
+        },
+        {
+          "symbol": "export_anchor_training",
+          "step": 2
+        }
+      ]
+    },
+    {
+      "id": "proc_45_finish_anchor_traini",
+      "name": "Finish_anchor_training → Sha",
+      "process_type": "intra_community",
+      "step_count": 3,
+      "changed_steps": [
+        {
+          "symbol": "finish_anchor_training",
+          "step": 1
+        },
+        {
+          "symbol": "sha",
+          "step": 3
+        },
+        {
+          "symbol": "export_anchor_training",
+          "step": 2
+        }
+      ]
+    },
+    {
+      "id": "proc_55_run_anchor_training",
+      "name": "Run_anchor_training → Backward_reference_proxy",
+      "process_type": "cross_community",
+      "step_count": 3,
+      "changed_steps": [
+        {
+          "symbol": "objective",
+          "step": 2
+        },
+        {
+          "symbol": "run_anchor_training",
+          "step": 1
+        },
+        {
+          "symbol": "backward_reference_proxy",
+          "step": 3
+        }
+      ]
+    },
+    {
+      "id": "proc_56_run_anchor_training",
+      "name": "Run_anchor_training → Reference_gradient_proxy",
+      "process_type": "cross_community",
+      "step_count": 3,
+      "changed_steps": [
+        {
+          "symbol": "objective",
+          "step": 2
+        },
+        {
+          "symbol": "run_anchor_training",
+          "step": 1
+        },
+        {
+          "symbol": "reference_gradient_proxy",
+          "step": 3
+        }
+      ]
+    },
+    {
+      "id": "proc_87_verify_anchor_result",
+      "name": "Verify_anchor_results → _close",
+      "process_type": "intra_community",
+      "step_count": 3,
+      "changed_steps": [
+        {
+          "symbol": "verify_anchor_results",
+          "step": 1
+        }
+      ]
+    },
+    {
+      "id": "proc_246_audit_reference_anch",
+      "name": "Audit_reference_anchor → Sha256",
+      "process_type": "cross_community",
+      "step_count": 3,
+      "changed_steps": [
+        {
+          "symbol": "audit_reference_anchor",
+          "step": 1
+        }
+      ]
+    },
+    {
+      "id": "proc_248_run_anchor_training",
+      "name": "Run_anchor_training → Sha256",
+      "process_type": "cross_community",
+      "step_count": 3,
+      "changed_steps": [
+        {
+          "symbol": "run_anchor_training",
+          "step": 1
+        }
+      ]
+    },
+    {
+      "id": "proc_249_evaluate",
+      "name": "Evaluate → Sha256",
+      "process_type": "cross_community",
+      "step_count": 3,
+      "changed_steps": [
+        {
+          "symbol": "evaluate",
+          "step": 1
+        }
+      ]
+    },
+    {
+      "id": "proc_253_verify_anchor_traini",
+      "name": "Verify_anchor_training → Sha256",
+      "process_type": "cross_community",
+      "step_count": 3,
+      "changed_steps": [
+        {
+          "symbol": "verify_anchor_training",
+          "step": 1
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+
+==================================== ERRORS ====================================
+___________________ ERROR collecting test_anchor_results.py ____________________
+ImportError while importing test module '/media/IntelSSD/onestepfold/hpc3_mirror_20261001/Folding/reference_anchor_training_v1_20261010/postprocess_code/tests/test_anchor_results.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+anaconda3/envs/fold/lib/python3.12/importlib/__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/media/IntelSSD/onestepfold/hpc3_mirror_20261001/Folding/reference_anchor_training_v1_20261010/postprocess_code/tests/test_anchor_results.py:8: in <module>
+    from fastglycan.anchor_results import pool_anchor_latent
+/media/IntelSSD/onestepfold/hpc3_mirror_20261001/Folding/reference_anchor_training_v1_20261010/postprocess_code/src/fastglycan/__init__.py:3: in <module>
+    from .glycoshape import (
+E   ModuleNotFoundError: No module named 'fastglycan.glycoshape'
+=========================== short test summary info ============================
+ERROR ../../media/IntelSSD/onestepfold/hpc3_mirror_20261001/Folding/reference_anchor_training_v1_20261010/postprocess_code/tests/test_anchor_results.py
+!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!
+1 error in 0.19s

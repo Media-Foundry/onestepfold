@@ -1,0 +1,84 @@
+{
+  "observed_unix": 1791609204.8601294,
+  "controller": {
+    "complete": false,
+    "phase": "training",
+    "started_unix": 1791608397.6955187,
+    "jobs": {
+      "train_anchor_272001": {
+        "pid": 1015702,
+        "hip": 0,
+        "status": "running",
+        "started_unix": 1791608410.9594316
+      },
+      "train_anchor_272003": {
+        "pid": 1015703,
+        "hip": 1,
+        "status": "running",
+        "started_unix": 1791608410.9616878
+      }
+    },
+    "lock_sha256": "13cda88bacb0bca93f93c59fad801428d120b37f124bcdc022d915127c4cdeff",
+    "observed_unix": 1791609201.0968955,
+    "training_deadline_unix": 1791630010.9576044
+  },
+  "runs": {
+    "272001": {
+      "phase": "training",
+      "gradient_passes": 13,
+      "seconds": 577.3173340680078,
+      "initial_gradient_relative_error": 5.686720170903197e-07,
+      "last_objective": 0.840244696131813,
+      "last_centered_error": 0.471323208658529,
+      "checkpoints": [
+        0
+      ],
+      "evaluation_forwards": 912,
+      "evaluation_reference_forwards": 48
+    },
+    "272003": {
+      "phase": "training",
+      "gradient_passes": 4,
+      "seconds": 714.7858716030023,
+      "initial_gradient_relative_error": 5.687145689300235e-07,
+      "last_objective": 0.8596901084496847,
+      "last_centered_error": 0.4781907294317052,
+      "checkpoints": [
+        0
+      ],
+      "evaluation_forwards": 912,
+      "evaluation_reference_forwards": 48
+    }
+  },
+  "processes": {
+    "1015577": {
+      "exists": true,
+      "children": "1015702 1015703"
+    },
+    "1015702": {
+      "exists": true,
+      "children": "1015704"
+    },
+    "1015703": {
+      "exists": true,
+      "children": "1015705"
+    },
+    "1017339": {
+      "exists": true,
+      "children": ""
+    }
+  },
+  "postprocess_status.json": {
+    "complete": false,
+    "phase": "waiting",
+    "started_unix": 1791608795.6618392,
+    "postprocess_lock_sha256": "c82688ab304f74053b317352844afa2484524ef3c5111f6615cd145ec512df3f",
+    "observed_unix": 1791609185.6739407,
+    "controller_phase": "training"
+  },
+  "postprocess_launch.json": {
+    "pid": 1017339,
+    "started_unix": 1791608795.0316715,
+    "postprocess_lock_sha256": "c82688ab304f74053b317352844afa2484524ef3c5111f6615cd145ec512df3f"
+  }
+}
