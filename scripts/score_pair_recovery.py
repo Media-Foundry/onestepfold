@@ -18,7 +18,7 @@ from fastglycan.functional_response_rank import (
 from fastglycan.reference_editor_metrics import distance_response_summary, summarize_editor_sites, paired_parent_interval
 
 
-def score_pair_recovery(root,arm,seed,step,site_keys=None,paired_intervals=True):
+def score_pair_recovery(root,arm,seed,step,site_keys=None,paired_intervals=True,terminal_step=8208):
     begin=time.monotonic();torch.set_num_threads(1)
     initialization=arm
     lock=json.loads((root/'training_lock.json').read_text())
@@ -42,7 +42,7 @@ def score_pair_recovery(root,arm,seed,step,site_keys=None,paired_intervals=True)
     oracle=Path(lock['oracle_root']);assert sha256(oracle/'audit_lock.json')==lock['oracle_lock_sha256']
     refs={(r['arm'],r['label']):r for r in json.loads((oracle/'results.json').read_text())['rows']}
     store=FactorTeacherStore(old_lock['teachers'])
-    arms=['exact','disabled','oracle_pair','correct']+(['mismatched'] if step==8208 else [])
+    arms=['exact','disabled','oracle_pair','correct']+(['mismatched'] if step==terminal_step else [])
     records=[];outputs=[]
     for index,site in enumerate(plan['sites']):
         pi,pos=site['parent_index'],site['position_zero_based'];choices=site['candidates']
@@ -121,7 +121,7 @@ def score_pair_recovery(root,arm,seed,step,site_keys=None,paired_intervals=True)
             value['wrong_centres']=sum(r['geometry']['checked_chirality_wrong'] for r in oo)
             summary[role][name]=value
         contrasts[role]={}
-        for ref in (('disabled','oracle_pair')+ (('mismatched',) if step==8208 else ())) if paired_intervals else ():
+        for ref in (('disabled','oracle_pair')+ (('mismatched',) if step==terminal_step else ())) if paired_intervals else ():
             contrasts[role]['correct-'+ref]={f:paired_parent_interval(summary[role]['correct']['parent_summaries'],summary[role][ref]['parent_summaries'],f) for f in ('spearman','regret','centered_response_rmse')}
     result=dict(complete=True,initialization=initialization,seed=seed,step=step,sites=records,outputs=outputs,summary=summary,contrasts=contrasts,
         seconds=time.monotonic()-begin,scorer_sha256=sha256(Path(__file__)),evaluation_sha256=sha256(folder/f'evaluation_{step}.json'),promoted=False,independent_confirmation=False)

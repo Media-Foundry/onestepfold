@@ -1,0 +1,13 @@
+{
+  "local_cpu_tests": "Two attempts stalled in amddrm_sched_entity_flush during optimizer initialization, including with empty HIP visibility; only task-owned PIDs were terminated. No stale test PID remains.",
+  "local_syntax": "Seven implementation/test Python files parsed successfully without torch import.",
+  "isolated_remote_package_tests": "Two collection failures in a partial /tmp package; first lacked package boundaries, second lacked package dependencies. No scientific model instantiated or training started.",
+  "complete_runtime_tests": {
+    "passed": 3,
+    "failed": 0,
+    "seconds": 2.73,
+    "gpu_visibility": "HIP4",
+    "tensor_device": "CPU"
+  },
+  "source_boundary": "The actual runtime copies all825 declared original files plus seven additions and one explicit scorer compatibility replacement; derived pytest caches are excluded."
+}

@@ -1,0 +1,190 @@
+{
+  "observed_unix": 1791597661.9925106,
+  "controller": {
+    "complete": false,
+    "phase": "training",
+    "started_unix": 1791597263.66214,
+    "jobs": {
+      "train_adamw_272001": {
+        "pid": 947531,
+        "hip": 0,
+        "status": "running",
+        "started_unix": 1791597271.6992714
+      },
+      "train_lbfgs_272001": {
+        "pid": 947532,
+        "hip": 1,
+        "status": "running",
+        "started_unix": 1791597271.7013648
+      },
+      "train_adamw_272003": {
+        "pid": 947534,
+        "hip": 2,
+        "status": "running",
+        "started_unix": 1791597271.7031012
+      },
+      "train_lbfgs_272003": {
+        "pid": 947536,
+        "hip": 3,
+        "status": "running",
+        "started_unix": 1791597271.704171
+      }
+    },
+    "lock_sha256": "ed09b10002eaa7d04a4f2ea5843bf33657188a64cfd04836934aa47679993eed",
+    "observed_unix": 1791597661.7644434,
+    "training_deadline_unix": 1791618871.6972454
+  },
+  "controller_pid": 947128,
+  "runs": {
+    "train_adamw_272001": {
+      "pid": 947531,
+      "proc_exists": true,
+      "report": {
+        "arm": "adamw",
+        "cache_bytes": 17995422956,
+        "cache_seconds": 46.24641708700801,
+        "changed_updates": 0,
+        "checkpoints": [
+          0
+        ],
+        "complete": false,
+        "evaluation_forwards": 912,
+        "gradient_passes": 0,
+        "initial_sha256": "b6817c4bd32619ee0ebbaf7b93290686ab6d21eb2016fe051de4b4cf0da3f7e2",
+        "isolation_forwards": 3,
+        "native_counts": {
+          "c4": 0,
+          "input_embedder": 0,
+          "recycle": 0,
+          "s1": 1824,
+          "updates": 0
+        },
+        "optimizer_calls": 0,
+        "phase": "training",
+        "rollbacks": 0,
+        "seconds": 383.98432840101304,
+        "seed": 272001,
+        "training_lock_sha256": "ed09b10002eaa7d04a4f2ea5843bf33657188a64cfd04836934aa47679993eed"
+      }
+    },
+    "train_lbfgs_272001": {
+      "pid": 947532,
+      "proc_exists": true,
+      "report": {
+        "arm": "lbfgs",
+        "cache_bytes": 17995422956,
+        "cache_seconds": 41.33064497000305,
+        "changed_updates": 2,
+        "checkpoints": [
+          0
+        ],
+        "complete": false,
+        "evaluation_forwards": 912,
+        "gradient_passes": 7,
+        "initial_gradient_relative_error": 0.0,
+        "initial_sha256": "b6817c4bd32619ee0ebbaf7b93290686ab6d21eb2016fe051de4b4cf0da3f7e2",
+        "isolation_forwards": 3,
+        "last_centered_error": 0.4811951396005743,
+        "last_objective": 0.8677190066682448,
+        "native_counts": {
+          "c4": 0,
+          "input_embedder": 0,
+          "recycle": 0,
+          "s1": 1824,
+          "updates": 0
+        },
+        "optimizer_calls": 2,
+        "phase": "training",
+        "rollbacks": 0,
+        "seconds": 376.47916263199295,
+        "seed": 272001,
+        "training_counts": {
+          "backwards": 3591,
+          "forwards": 3591,
+          "gradient_passes": 7
+        },
+        "training_lock_sha256": "ed09b10002eaa7d04a4f2ea5843bf33657188a64cfd04836934aa47679993eed"
+      }
+    },
+    "train_adamw_272003": {
+      "pid": 947534,
+      "proc_exists": true,
+      "report": {
+        "arm": "adamw",
+        "cache_bytes": 17995422956,
+        "cache_seconds": 45.884232100012014,
+        "changed_updates": 2,
+        "checkpoints": [
+          0
+        ],
+        "complete": false,
+        "evaluation_forwards": 912,
+        "gradient_passes": 2,
+        "initial_gradient_relative_error": 0.0,
+        "initial_sha256": "ca3aa4880ac929d84a6ff404a6ab21a83300a5799d775b1bb2278d6d1d005c3f",
+        "isolation_forwards": 3,
+        "last_centered_error": 0.480986826933793,
+        "last_objective": 0.9511571185661547,
+        "native_counts": {
+          "c4": 0,
+          "input_embedder": 0,
+          "recycle": 0,
+          "s1": 1824,
+          "updates": 0
+        },
+        "optimizer_calls": 2,
+        "phase": "training",
+        "rollbacks": 0,
+        "seconds": 294.08988664799836,
+        "seed": 272003,
+        "training_counts": {
+          "backwards": 1026,
+          "forwards": 1026,
+          "gradient_passes": 2
+        },
+        "training_lock_sha256": "ed09b10002eaa7d04a4f2ea5843bf33657188a64cfd04836934aa47679993eed"
+      }
+    },
+    "train_lbfgs_272003": {
+      "pid": 947536,
+      "proc_exists": true,
+      "report": {
+        "arm": "lbfgs",
+        "cache_bytes": 17995422956,
+        "cache_seconds": 45.76046155500808,
+        "changed_updates": 1,
+        "checkpoints": [
+          0
+        ],
+        "complete": false,
+        "evaluation_forwards": 912,
+        "gradient_passes": 5,
+        "initial_gradient_relative_error": 0.0,
+        "initial_sha256": "ca3aa4880ac929d84a6ff404a6ab21a83300a5799d775b1bb2278d6d1d005c3f",
+        "isolation_forwards": 3,
+        "last_centered_error": 0.4811945454688101,
+        "last_objective": 0.868027157722384,
+        "native_counts": {
+          "c4": 0,
+          "input_embedder": 0,
+          "recycle": 0,
+          "s1": 1824,
+          "updates": 0
+        },
+        "optimizer_calls": 1,
+        "phase": "training",
+        "rollbacks": 0,
+        "seconds": 370.047227033996,
+        "seed": 272003,
+        "training_counts": {
+          "backwards": 2565,
+          "forwards": 2565,
+          "gradient_passes": 5
+        },
+        "training_lock_sha256": "ed09b10002eaa7d04a4f2ea5843bf33657188a64cfd04836934aa47679993eed"
+      }
+    }
+  },
+  "scientific_complete": false,
+  "processes": "    PID    PPID STAT     ELAPSED %CPU COMMAND\n 947128       1 Ss         06:38  0.0 /home/pc/anaconda3/envs/fold/bin/python -u /media/IntelSSD/onestepfold/hpc3_mirror_20261001/Folding/stage_fullbatch_v1_20261010/code/scripts/control_stage_fullbatch.py --root /media/IntelSSD/onestepfold/hpc3_mirror_20261001/Folding/stage_fullbatch_v1_20261010\n 947531  947128 Ss         06:30  4.9 /media/IntelSSD/onestepfold/diamondhill_migration_20261001/tools/proot/usr/bin/proot -b /media/IntelSSD/onestepfold/hpc3_mirror_20261001/Folding:/data/user/shuang886/Folding /home/pc/anaconda3/envs/fold/bin/python -u /data/user/shuang886/Folding/stage_fullbatch_v1_20261010/code/scripts/run_stage_fullbatch.py --root /data/user/shuang886/Folding/stage_fullbatch_v1_20261010 --arm adamw --seed 272001\n 947532  947128 Ss         06:30  5.3 /media/IntelSSD/onestepfold/diamondhill_migration_20261001/tools/proot/usr/bin/proot -b /media/IntelSSD/onestepfold/hpc3_mirror_20261001/Folding:/data/user/shuang886/Folding /home/pc/anaconda3/envs/fold/bin/python -u /data/user/shuang886/Folding/stage_fullbatch_v1_20261010/code/scripts/run_stage_fullbatch.py --root /data/user/shuang886/Folding/stage_fullbatch_v1_20261010 --arm lbfgs --seed 272001\n 947534  947128 Ss         06:30  5.3 /media/IntelSSD/onestepfold/diamondhill_migration_20261001/tools/proot/usr/bin/proot -b /media/IntelSSD/onestepfold/hpc3_mirror_20261001/Folding:/data/user/shuang886/Folding /home/pc/anaconda3/envs/fold/bin/python -u /data/user/shuang886/Folding/stage_fullbatch_v1_20261010/code/scripts/run_stage_fullbatch.py --root /data/user/shuang886/Folding/stage_fullbatch_v1_20261010 --arm adamw --seed 272003\n 947536  947128 Ss         06:30  5.5 /media/IntelSSD/onestepfold/diamondhill_migration_20261001/tools/proot/usr/bin/proot -b /media/IntelSSD/onestepfold/hpc3_mirror_20261001/Folding:/data/user/shuang886/Folding /home/pc/anaconda3/envs/fold/bin/python -u /data/user/shuang886/Folding/stage_fullbatch_v1_20261010/code/scripts/run_stage_fullbatch.py --root /data/user/shuang886/Folding/stage_fullbatch_v1_20261010 --arm lbfgs --seed 272003\n"
+}

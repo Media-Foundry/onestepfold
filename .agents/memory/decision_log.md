@@ -1,3 +1,80 @@
+## 2026-10-10 — Full-batch startup integrity passed in all four runs
+
+Observed1791597819.263538: four proot groups947531/947532/947534/947536 and
+Python children947533/947535/947537/947538 live. Every child exposes only its
+assigned HIP0/1/2/3; CUDA/ROCR/HSA visibility variables are absent. All four
+completed the full48-site baseline S1 replay and matched the saved full TRAIN
+gradient with relative error exactly0. Resident tensors17,995,422,956 bytes
+(16.76GiB) per worker. Snapshot gradient counts6/13/3/11, respectively; unequal
+progress is observed, not a reason to restart. No result is terminal or promoted.
+Actual-runtime frozen-source tests passed3/3. Snapshot SHA8e8c427518d3bfe08f7197aaaabf422096e284e1e1c4d8bdb629159db8691e7c.
+
+Precommit graph review marks aggregate staged change HIGH (36 symbols, seven
+training/evaluation/verification flows), complete with no partial/truncated.
+This warning was reported, affected flows read through context and source;
+new optimizer callback UNKNOWN caller boundary resolved with text search.
+Original scorer optional terminal_step has LOW pre-edit impact and unchanged
+historical default8208. Frozen model/data/native code remains unchanged.
+All unrelated modifications excluded. Current goal turn is PROGRESS: built,
+tested, locked and actually launched the full-data optimization experiment.
+Keep goal ACTIVE and poll these same handles; do not turn early loss values
+into a quality/transfer/speed conclusion or modify the locked recipes.
+
+## 2026-10-10 — Full-batch feature optimization locked and launched
+
+Previous goal turn was PROGRESS: published the12-state audit d1ed39a8. It
+identified real finite-step/history issues without proving capacity limits.
+New protocol docs/mini_stage_fullbatch_v1.md keeps StagePairRecovery, native
+candidate B_s/inputs,27 TRAIN sites/513 mutants, Final loss and q fixed. Four
+fresh paired runs: full-batch AdamW originallr/clip/decay versus standard
+L-BFGS strong-Wolfe with bounded transactional rollback, two seeds each.
+These are whole optimizer recipes (clip/decay/history differ), not a single-
+factor proof about curvature.128 complete gradients per run, fixed0/32/128
+checkpoints;65,664 candidate backwards per run. Every rejected/repeated trial
+is counted. No held data enters optimization, no new teacher/ESM/MSA/recycle.
+
+GPU-resident TRAIN tensors have a fixed32GiB cap and keep exact FP32 values.
+All three nodes decode the original48-site development panel; terminal adds
+fixed AA mismatch. No NMSE gate, no checkpoint/seed selection. Full/common/AA
+errors, raw regret, geometry transitions/severity/tails remain distinct.
+Six-hour common training cap; each scoring/verification worker two-hour cap.
+
+Actual DiamondHill complete-source prelock tests3/3 pass (2.73s), and frozen
+controller tests3/3 pass (6.97s). Local CPU tests stalled in AMD driver init,
+including with empty HIP visibility, and only task-owned test PIDs were stopped;
+no local test success claimed. Two minimal-package preflight import failures
+were resolved by copying the full832-file scientific source tree. No scientific
+model training occurred in those partial test packages.
+
+Runtime /media/IntelSSD/onestepfold/hpc3_mirror_20261001/Folding/stage_fullbatch_v1_20261010
+LockSHAed09b10002eaa7d04a4f2ea5843bf33657188a64cfd04836934aa47679993eed.
+Controller947128 and workers947531/947532/947534/947536 were observed live at
+1791597300.97, HIP0/1/2/3 respectively. Deadline1791618871.6972454.
+HIP4 tests/queued verification only; HIP5 other workload untouched,6/7 unused.
+No training result yet at that observation (model startup). Do not infer failure
+from missing report before initialization completes; poll the same actual PIDs.
+All eight local overlay hashes match the frozen remote lock. Existing runs,
+source artifacts and unrelated workspace modifications remain untouched.
+Goal remains ACTIVE: quality-qualified transferable acceleration is not achieved.
+
+## 2026-10-10 — Update audit published; broader goal remains active
+
+Committed101 scoped files as d1ed39a8b886f6d3c8addcde2ff5dff96821bede and pushed
+origin/main; ls-remote confirms exact equality. All-scope and staged GitNexus
+change checks complete without partial/truncated results; staged risk medium,
+28 diagnostic symbols and three diagnostic processes. Unrelated medium-risk
+workspace changes excluded. Global process catalogue remains capped and manual
+review covers audit controls and graph-excluded evidence. Postcommit index
+completed at this revision. Four terminal-blank-line warnings retained to keep
+executed source hashes identical; all other whitespace checks pass. Focused
+tests2 local/2 remote; full independent audit verification already complete.
+No audit worker, verifier or postprocessor remains running. No new optimization
+training is locked or launched. Next goal turn may design a bounded feature-
+learning optimization comparison that verifies actual complete-TRAIN descent
+and AA-specific recovery, without treating diagnostic fraction0.1 as chosen lr,
+removing clip by default, or claiming transfer from training-loss descent.
+Pair-only quality/transfer/cost objective remains ACTIVE and unmet.
+
 ## 2026-10-10 — Fixed-state update audit complete and verified
 
 All12 predeclared states (Final/Hint x2 seeds x0/4104/8208) completed. Controller

@@ -1,0 +1,240 @@
+{
+  "observed_unix": 1791597819.263538,
+  "controller": {
+    "complete": false,
+    "phase": "training",
+    "started_unix": 1791597263.66214,
+    "jobs": {
+      "train_adamw_272001": {
+        "pid": 947531,
+        "hip": 0,
+        "status": "running",
+        "started_unix": 1791597271.6992714
+      },
+      "train_lbfgs_272001": {
+        "pid": 947532,
+        "hip": 1,
+        "status": "running",
+        "started_unix": 1791597271.7013648
+      },
+      "train_adamw_272003": {
+        "pid": 947534,
+        "hip": 2,
+        "status": "running",
+        "started_unix": 1791597271.7031012
+      },
+      "train_lbfgs_272003": {
+        "pid": 947536,
+        "hip": 3,
+        "status": "running",
+        "started_unix": 1791597271.704171
+      }
+    },
+    "lock_sha256": "ed09b10002eaa7d04a4f2ea5843bf33657188a64cfd04836934aa47679993eed",
+    "observed_unix": 1791597816.7900229,
+    "training_deadline_unix": 1791618871.6972454
+  },
+  "runs": {
+    "train_adamw_272001": {
+      "report": {
+        "arm": "adamw",
+        "cache_bytes": 17995422956,
+        "cache_seconds": 46.24641708700801,
+        "changed_updates": 6,
+        "checkpoints": [
+          0
+        ],
+        "complete": false,
+        "evaluation_forwards": 912,
+        "gradient_passes": 6,
+        "initial_gradient_relative_error": 0.0,
+        "initial_sha256": "b6817c4bd32619ee0ebbaf7b93290686ab6d21eb2016fe051de4b4cf0da3f7e2",
+        "isolation_forwards": 3,
+        "last_centered_error": 0.4808556372928031,
+        "last_objective": 0.8814506783468694,
+        "native_counts": {
+          "c4": 0,
+          "input_embedder": 0,
+          "recycle": 0,
+          "s1": 1824,
+          "updates": 0
+        },
+        "optimizer_calls": 6,
+        "phase": "training",
+        "rollbacks": 0,
+        "seconds": 531.9427617480105,
+        "seed": 272001,
+        "training_counts": {
+          "backwards": 3078,
+          "forwards": 3078,
+          "gradient_passes": 6
+        },
+        "training_lock_sha256": "ed09b10002eaa7d04a4f2ea5843bf33657188a64cfd04836934aa47679993eed"
+      },
+      "process_group_pid": 947531,
+      "children": [
+        "947533"
+      ],
+      "visibility": {
+        "947531": [
+          "HIP_VISIBLE_DEVICES=0"
+        ],
+        "947533": [
+          "HIP_VISIBLE_DEVICES=0"
+        ]
+      }
+    },
+    "train_lbfgs_272001": {
+      "report": {
+        "arm": "lbfgs",
+        "cache_bytes": 17995422956,
+        "cache_seconds": 41.33064497000305,
+        "changed_updates": 5,
+        "checkpoints": [
+          0
+        ],
+        "complete": false,
+        "evaluation_forwards": 912,
+        "gradient_passes": 13,
+        "initial_gradient_relative_error": 0.0,
+        "initial_sha256": "b6817c4bd32619ee0ebbaf7b93290686ab6d21eb2016fe051de4b4cf0da3f7e2",
+        "isolation_forwards": 3,
+        "last_centered_error": 0.4811498290232346,
+        "last_objective": 0.8662559071223553,
+        "native_counts": {
+          "c4": 0,
+          "input_embedder": 0,
+          "recycle": 0,
+          "s1": 1824,
+          "updates": 0
+        },
+        "optimizer_calls": 5,
+        "phase": "training",
+        "rollbacks": 0,
+        "seconds": 515.9434680639824,
+        "seed": 272001,
+        "training_counts": {
+          "backwards": 6669,
+          "forwards": 6669,
+          "gradient_passes": 13
+        },
+        "training_lock_sha256": "ed09b10002eaa7d04a4f2ea5843bf33657188a64cfd04836934aa47679993eed"
+      },
+      "process_group_pid": 947532,
+      "children": [
+        "947535"
+      ],
+      "visibility": {
+        "947532": [
+          "HIP_VISIBLE_DEVICES=1"
+        ],
+        "947535": [
+          "HIP_VISIBLE_DEVICES=1"
+        ]
+      }
+    },
+    "train_adamw_272003": {
+      "report": {
+        "arm": "adamw",
+        "cache_bytes": 17995422956,
+        "cache_seconds": 45.884232100012014,
+        "changed_updates": 3,
+        "checkpoints": [
+          0
+        ],
+        "complete": false,
+        "evaluation_forwards": 912,
+        "gradient_passes": 3,
+        "initial_gradient_relative_error": 0.0,
+        "initial_sha256": "ca3aa4880ac929d84a6ff404a6ab21a83300a5799d775b1bb2278d6d1d005c3f",
+        "isolation_forwards": 3,
+        "last_centered_error": 0.4809616339859793,
+        "last_objective": 0.954618457031662,
+        "native_counts": {
+          "c4": 0,
+          "input_embedder": 0,
+          "recycle": 0,
+          "s1": 1824,
+          "updates": 0
+        },
+        "optimizer_calls": 3,
+        "phase": "training",
+        "rollbacks": 0,
+        "seconds": 397.6361069550039,
+        "seed": 272003,
+        "training_counts": {
+          "backwards": 1539,
+          "forwards": 1539,
+          "gradient_passes": 3
+        },
+        "training_lock_sha256": "ed09b10002eaa7d04a4f2ea5843bf33657188a64cfd04836934aa47679993eed"
+      },
+      "process_group_pid": 947534,
+      "children": [
+        "947537"
+      ],
+      "visibility": {
+        "947534": [
+          "HIP_VISIBLE_DEVICES=2"
+        ],
+        "947537": [
+          "HIP_VISIBLE_DEVICES=2"
+        ]
+      }
+    },
+    "train_lbfgs_272003": {
+      "report": {
+        "arm": "lbfgs",
+        "cache_bytes": 17995422956,
+        "cache_seconds": 45.76046155500808,
+        "changed_updates": 4,
+        "checkpoints": [
+          0
+        ],
+        "complete": false,
+        "evaluation_forwards": 912,
+        "gradient_passes": 11,
+        "initial_gradient_relative_error": 0.0,
+        "initial_sha256": "ca3aa4880ac929d84a6ff404a6ab21a83300a5799d775b1bb2278d6d1d005c3f",
+        "isolation_forwards": 3,
+        "last_centered_error": 0.48116562327591444,
+        "last_objective": 0.8665064860521412,
+        "native_counts": {
+          "c4": 0,
+          "input_embedder": 0,
+          "recycle": 0,
+          "s1": 1824,
+          "updates": 0
+        },
+        "optimizer_calls": 4,
+        "phase": "training",
+        "rollbacks": 0,
+        "seconds": 525.5122705179965,
+        "seed": 272003,
+        "training_counts": {
+          "backwards": 5643,
+          "forwards": 5643,
+          "gradient_passes": 11
+        },
+        "training_lock_sha256": "ed09b10002eaa7d04a4f2ea5843bf33657188a64cfd04836934aa47679993eed"
+      },
+      "process_group_pid": 947536,
+      "children": [
+        "947538"
+      ],
+      "visibility": {
+        "947536": [
+          "HIP_VISIBLE_DEVICES=3"
+        ],
+        "947538": [
+          "HIP_VISIBLE_DEVICES=3"
+        ]
+      }
+    }
+  },
+  "scientific_complete": false,
+  "full_initial_replay_passed_all_four": true,
+  "initial_full_gradient_exact_all_four": true,
+  "proof": "All gradients are reachable only after frozen all-candidate baseline replay assertions; all reported gradient relative errors are exactly0.",
+  "processes": "    PID    PPID STAT     ELAPSED %CPU COMMAND\n 947531  947128 Ss         09:07  4.0 /media/IntelSSD/onestepfold/diamondhill_migration_20261001/tools/proot/usr/bin/proot -b /media/IntelSSD/onestepfold/hpc3_mirror_20261001/Folding:/data/user/shuang886/Folding /home/pc/anaconda3/envs/fold/bin/python -u /data/user/shuang886/Folding/stage_fullbatch_v1_20261010/code/scripts/run_stage_fullbatch.py --root /data/user/shuang886/Folding/stage_fullbatch_v1_20261010 --arm adamw --seed 272001\n 947532  947128 Ss         09:07  4.2 /media/IntelSSD/onestepfold/diamondhill_migration_20261001/tools/proot/usr/bin/proot -b /media/IntelSSD/onestepfold/hpc3_mirror_20261001/Folding:/data/user/shuang886/Folding /home/pc/anaconda3/envs/fold/bin/python -u /data/user/shuang886/Folding/stage_fullbatch_v1_20261010/code/scripts/run_stage_fullbatch.py --root /data/user/shuang886/Folding/stage_fullbatch_v1_20261010 --arm lbfgs --seed 272001\n 947533  947531 Rl         09:07  186 /home/pc/anaconda3/envs/fold/bin/python -u /data/user/shuang886/Folding/stage_fullbatch_v1_20261010/code/scripts/run_stage_fullbatch.py --root /data/user/shuang886/Folding/stage_fullbatch_v1_20261010 --arm adamw --seed 272001\n 947534  947128 Ss         09:07  3.8 /media/IntelSSD/onestepfold/diamondhill_migration_20261001/tools/proot/usr/bin/proot -b /media/IntelSSD/onestepfold/hpc3_mirror_20261001/Folding:/data/user/shuang886/Folding /home/pc/anaconda3/envs/fold/bin/python -u /data/user/shuang886/Folding/stage_fullbatch_v1_20261010/code/scripts/run_stage_fullbatch.py --root /data/user/shuang886/Folding/stage_fullbatch_v1_20261010 --arm adamw --seed 272003\n 947535  947532 Rl         09:07  186 /home/pc/anaconda3/envs/fold/bin/python -u /data/user/shuang886/Folding/stage_fullbatch_v1_20261010/code/scripts/run_stage_fullbatch.py --root /data/user/shuang886/Folding/stage_fullbatch_v1_20261010 --arm lbfgs --seed 272001\n 947536  947128 Ss         09:07  4.4 /media/IntelSSD/onestepfold/diamondhill_migration_20261001/tools/proot/usr/bin/proot -b /media/IntelSSD/onestepfold/hpc3_mirror_20261001/Folding:/data/user/shuang886/Folding /home/pc/anaconda3/envs/fold/bin/python -u /data/user/shuang886/Folding/stage_fullbatch_v1_20261010/code/scripts/run_stage_fullbatch.py --root /data/user/shuang886/Folding/stage_fullbatch_v1_20261010 --arm lbfgs --seed 272003\n 947537  947534 Rl         09:07  186 /home/pc/anaconda3/envs/fold/bin/python -u /data/user/shuang886/Folding/stage_fullbatch_v1_20261010/code/scripts/run_stage_fullbatch.py --root /data/user/shuang886/Folding/stage_fullbatch_v1_20261010 --arm adamw --seed 272003\n 947538  947536 Rl         09:07  185 /home/pc/anaconda3/envs/fold/bin/python -u /data/user/shuang886/Folding/stage_fullbatch_v1_20261010/code/scripts/run_stage_fullbatch.py --root /data/user/shuang886/Folding/stage_fullbatch_v1_20261010 --arm lbfgs --seed 272003\n"
+}
