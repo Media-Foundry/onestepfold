@@ -1,4 +1,10 @@
-# Reference-anchor training — execution record, results pending
+# Reference-anchor training — completed paired comparison
+
+Both original runs and all score/tensor-verification jobs have now completed.
+See [terminal evidence](terminal/README.md) and the
+[final report](../../docs/mini_reference_anchor_training_findings_2026-10-10.md).
+The launch and interim records below are retained for provenance. TRAIN fitting
+and weak decoded-response gains reproduced, but choice risk prevents promotion.
 
 Two runs on HIP0/1, seeds272001/272003, fixed128 complete TRAIN gradient passes.
 Protocol: `docs/mini_reference_anchor_training_v1.md`. Existing unanchored AdamW
@@ -14,12 +20,12 @@ Training deadline Unix1791630010.9576044. The controller scores completed runs
 on CPU and verifies tensors serially on HIP4. No automatic restarts or extension.
 
 Seventeen preflight tests passed both before installation and in the frozen
-runtime. This directory is initially a launch record. It must not be read as
-a completed result or promotion. Recheck the remote controller and actual PIDs
-before reporting progress; launch success alone is not training success.
+runtime. This directory originally recorded the launch. Its original process
+IDs and deadlines are historical provenance, not active-job instructions.
+The completed controller and independent checks are in `terminal/`.
 
-The separately locked CPU follower waits for all six train/score/verify jobs,
-checks hashes and arithmetic, compares every fixed node with its matched old
-control, and exports results. It never modifies training code, parameters or
+The separately locked CPU follower waited for all six train/score/verify jobs,
+checked hashes and arithmetic, compared every fixed node with its matched old
+control, and exported results. It did not modify training code, parameters or
 budget. Both held and training metrics remain required; nine repeatedly used
 held proteins are development data.

@@ -1,3 +1,126 @@
+## 2026-10-10 — Reference-anchor paired trial completed; no promotion
+
+Both original seeds finished128 updates, all0/32/128 coordinate scoring and
+independent HIP4 tensor verification. All six controller jobs exited0, follower
+completed without restart or budget/source changes. Observer81739 ended normally.
+No active scientific task remains in this batch. The broad performance goal
+remains ACTIVE: reliable transferable accelerated folding is still unachieved.
+
+Full archive SHA f71a111886df535642c6b3ea0e50bdb37a06734db336d01dd2aa18cf9c9782d4,
+247838833 bytes, safely extracted at /tmp/anchor_paired_terminal_20261010/export.
+Separate local_recheck recomputed76 manifest hashes,3744correlations,1248regrets,
+47424 scored rows across6nodes. Verification,optimization ledger and analysis
+exactly match remote outputs. No local coordinate rescoring. Original remote
+root reference_anchor_training_v1_20261010 and lock13cda88b remain immutable.
+All three actual PNG/PDF figures rendered and inspected; compact terminal
+bundle is reports/mini_reference_anchor_training_2026-10-10/terminal.
+
+TRAIN AA residualNMSE anchors .900734/.900649 versus old .985223/.985946;
+14/15proteins improve. HeldAA .986180/.986105 versus .995856/.995959, improves
+6/9parents but paired intervals cross0. Helddecodedresponse .445450/.445408 Å
+versus old .448367/.448365, improves9/9, intervals below0; versus unadapted
+.448182 only0.610%/0.619%. Correct assignment improvesresponse over wrong.
+
+Both anchors make identical18 heldchoices. Relative to old128 only6ZRW P80
+C->S changes, regret .155223->.566614; mean .044933->.067788. Versusunadapted
+.046314 this is46.4%worse, despite4PT4L10 P->Q benefit already seen in old128.
+P80Exact choosesQ atbothnoises; studentmargin~.00288 is not an Exact tie.
+Geometry433/684 versus432, from9lost/10repaired; local>1Å157vs141,
+clashes2331vs2282, wrongcentres343vs324. P95slightlybetter,max>7Åworse.
+
+Decision: close this fixed-budget graph comparison without promotion, seed
+selection, scaling search or automatic extension. Keep real fitting and small
+decoded-response gains. Fixed-parameter AA functionclass was not enlarged;
+this does not establish capacity limits, convergence or independent transfer.
+No new speed claim: anchorreferencework isadditional; worker4259/7523sec are
+concurrentexecution records, not controlled performance measurements.
+
+Final report docs/mini_reference_anchor_training_findings_2026-10-10.md.
+Publication pending scoped graph checks/staging/push; no analysis/training code
+was edited. CPU siteparallelprototype remains unchanged and unlaunched on
+native Mini; a separate immutable native equivalence/time check is needed
+before any future scientific run adopts it. Teacherblock14hints, single-site
+fits, solver swaps and stage alignment were already tested and closed; do not
+present them as new fixes. Existing panels remain development data.
+
+## 2026-10-10 — First anchor seed fully verified; second original fit continues
+
+Previous turn made PROGRESS via fixed32 coordinate analysis/publication d2ca7012.
+This turn made PROGRESS: original seed272001 completed training, all three CPU
+scores and independent HIP4 tensor replay, exit0 for all three jobs. Controller
+1015577 and follower1017339 remain the same; second Python1015705 is still live.
+No training restart, recipe/budget/source change or checkpoint selection.
+
+First verifier1034786/1034787 ended normally: 144 site/checkpoint checks,
+2,736 candidate and144 reference forwards, no C4/input_embedder/recycle/S1/update.
+Local ledger verifies128 gradients/AdamW updates, no rollback, final independently
+measured objective.7440514031 (distinct from last pre-update .7445917204).
+First node0/32/128 scores locally checked:1872 correlations,624 regrets,
+23712 output records. Controller's fixed32 summary/sites/outputs/contrasts
+match the independent interim scoring exactly. Old observer9037 ended normally
+at first-seed verification completion, NOT an experiment failure.
+
+First terminal128 TRAIN AA residualNMSE .900734 vs oldmatched .985223;
+held .986180 vs .995856 (held paired interval crosses zero). Held response
+RMSE .445450 vs unadapted .448182 / oldmatched .448367; Spearman .572515.
+Held regret .067788 vs unadapted .046314 / oldmatched .044933. Only changed
+held choice versus old128 is6ZRW P80 C->S (.155223->.566614 regret). Geometry
+433/684 vs unadapted432; local>1Å157 vs141, max7.062Å. No quality promotion.
+Second fixed32 latent improvement also reproduced: TRAIN .956238, held .986305.
+All development panels are reused; both terminal seeds still needed.
+
+Collected first-seed data in /tmp/anchor_terminal_seed272001_pending_quality
+(directory name is historical; first-seed quality/arithmetic now verified).
+13 source file hashes verified in collection_hashes.json; ledger and
+single_seed_arithmetic.json complete. Compact review artifact (not yet committed):
+reports/mini_reference_anchor_training_2026-10-10/first_seed_verified.json.
+Full two-seed export/verification/report remains incomplete. No fake manifest.
+
+Network interruption caused a read-only SSH timeout and first collection12731
+failed while opening scores32; data0 had arrived fully and was verified locally.
+Waited two60s sleeps as user requested. Reconnection confirmed original jobs
+alive. Retried only missing files with bounded SSH and atomic hash verification;
+retry74018 and localcheck19324 completed normally. No active transfer sessions.
+Other temporary analysis: /tmp/anchor_seed272003_fixed32_pending_quality.
+
+Active read-only observer exec81739 (started1791613800, one-hour observation
+cap only) follows original second fit through scoring/verification/follower.
+Latest sample1791614550.284: second80/128 J.7734382809; process1015705 live,
+follower waiting. Scientific six-hour cap1791630010.9576044 unchanged. On an
+observer timeout revalidate original handles, never restart scientific work.
+Next: continue81739; wait for second128 and original CPU scorer/HIP4 verifier,
+then collect the follower archive, verifySHA, run full local anchor_results and
+renderer and inspect figures. Publish the complete two-seed analysis together.
+Broad goal remains ACTIVE and unachieved; this is progress, not a blocker.
+
+## 2026-10-10 — Interim coordinate evidence published; seed1 at fixed128
+
+Pushed d2ca7012ce459336b35442c071bebed229a91f2d to origin/main; remote hash
+verified.14 scoped files, no duplicate20MBscore blob or unrelated changes.
+Complete fresh graph checks: all37 symbols/one flow (medium), staged2 symbols/
+zero flows (low). Reports are outside the symbol index; their standalone
+analysis/plot scripts were manually reviewed and executed successfully. Source
+training/scoring helpers remain unchanged. Actual figure inspected. Index
+refreshed after commit. No additional model performance claim or promotion.
+
+Explicit process check1791612629.8855: original controller1015577, workers
+1015704/1015705, follower1017339 all live. Seed272001 has executed128 updates
+and is in terminal evaluation (last logp15_s13); terminal checkpoint record was
+not yet complete. Last logged objective.7445917204 is pre-update diagnostic,
+not a newly measured post128 loss. Seed272003 at29/128, J.8179159494. Existing
+observer exec9037 remains live. All separate CPU scoring, collection, analysis,
+plotting and publication sessions ended; no stray scientific reruns. Original
+lock13cda88b, cap1791630010.9576044 and all six controller jobs remain unchanged.
+
+Continue the same observer/actual processes. When seed1's scorer finishes,
+compare its fixed32 summary/sites/outputs with the independently scored interim
+snapshot (gzip bytes and timing differ). Wait for both terminal seeds, serial
+HIP4 verifiers and follower before full export/verification/rendering. Second
+seed's slow progress is not terminal failure; never restart due an observation
+window expiring. Existing9-protein panel remains development. This turn made
+PROGRESS through new functional evidence and publication. Broad goal ACTIVE;
+quality-qualified transferable acceleration remains unproven.
+
 ## 2026-10-10 — Fixed32 coordinate scoring shows a quality tradeoff
 
 Analyzed seed272001 checkpoint32's existing1,824 S1 coordinates using the

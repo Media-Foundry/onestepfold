@@ -1,0 +1,37 @@
+{
+  "complete": true,
+  "remote_export_unchanged": true,
+  "local_matches_remote": {
+    "verification.json": true,
+    "optimization_ledger.json": true,
+    "analysis.json": true
+  },
+  "verification": {
+    "complete": true,
+    "checks": {
+      "correlations": 3744,
+      "regrets": 1248,
+      "outputs": 47424,
+      "nodes": 6,
+      "runs": 2,
+      "training_forwards": 131328,
+      "training_backwards": 131328,
+      "training_reference_forwards": 6912,
+      "training_reference_backwards": 6912,
+      "s1": 14592,
+      "fixed_prediction_forwards": 5472,
+      "evaluation_reference_forwards": 288,
+      "isolation_forwards": 12,
+      "isolation_reference_forwards": 4,
+      "verification_forwards": 5472,
+      "verification_reference_forwards": 288
+    },
+    "files_sha_verified": 76,
+    "coordinate_scoring_recomputed": false,
+    "score_arithmetic_recomputed": true,
+    "tensor_replay_verified": true,
+    "all_panels_development": true,
+    "promoted": false,
+    "lock_sha256": "13cda88bacb0bca93f93c59fad801428d120b37f124bcdc022d915127c4cdeff"
+  }
+}

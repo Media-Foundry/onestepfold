@@ -1,0 +1,46 @@
+{
+  "complete": true,
+  "terminal_copies_match_archive": true,
+  "doc_terminal_latent_values_checked": true,
+  "figures_visually_reviewed": [
+    "optimization.png",
+    "latent_aa_recovery.png",
+    "held_quality.png"
+  ],
+  "frozen_source_unchanged": [
+    "src/fastglycan/anchor_results.py",
+    "src/fastglycan/anchor_reporting.py",
+    "src/fastglycan/anchor_training.py",
+    "scripts/run_anchor_training.py",
+    "scripts/finish_anchor_training.py"
+  ],
+  "all_panels_development": true,
+  "promoted": false,
+  "report_entry_impact": {
+    "risk": "UNKNOWN",
+    "resolved_callers": [],
+    "text_confirmed_caller": "scripts/render_anchor_report.py:11",
+    "indexed_flow": "Render_anchor_report -> _close",
+    "edited_code_symbols": []
+  },
+  "published_bundle_files": 41,
+  "whitespace_check": {
+    "passed": true,
+    "csv_standard_crlf_preserved": true,
+    "command": [
+      "git",
+      "-c",
+      "core.whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol",
+      "diff",
+      "--cached",
+      "--check"
+    ]
+  },
+  "graph_review": {
+    "all": "graph_all.json",
+    "staged": "graph_staged.json",
+    "partial_or_truncated_change_results": false,
+    "global_process_catalogue_capped": true,
+    "note": "Change-result coverage is complete; the global process catalogue is capped at258 flows. Report artifacts are excluded from symbol indexing and were reviewed separately."
+  }
+}
