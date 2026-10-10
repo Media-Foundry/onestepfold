@@ -1,3 +1,67 @@
+## 2026-10-10 — Fixed32 coordinate scoring shows a quality tradeoff
+
+Analyzed seed272001 checkpoint32's existing1,824 S1 coordinates using the
+unchanged frozen scorer in /tmp/anchor_interim_score_272001_32_6e5f0183. HIP
+hidden, no model forwards or training updates; actual training directories not
+written. Scorer finished normally (239.15s scoring), original PID1030002 ended.
+All source/checkpoint/coordinate hashes passed. Collected SHA-bound evidence;
+local recomputation verifies summaries, every choice/regret and geometry count.
+All Exact/disabled/oracle site/output rows equal the closed matched control.
+
+Held9-protein/18-site anchored32 vs unanchored AdamW32: Spearman .565107 vs
+.545322; centered AA distance RMSE .446796 vs .448327 Å (8/9 parents improve,
+paired descriptive interval[-.002774,-.000253]). Mean regret worsens .046314->
+.067788, interval[-.004145,.068565]. Only two choices change: 4PT4 L10 P->Q
+improves .046766->.021896; 6ZRW P80 C->S worsens .155223->.566614 and outweighs
+that benefit. Geometry passes434->429 (8 lost,3 gained), local>1Å138->150,
+max6.935->7.008Å. Relative to disabled,6 lost/3 gained; no promotion. TRAIN
+response improves14/15 parents, same-protein new sites are mixed. All are
+interim, repeated development data, one seed; native tensor replay still pending.
+
+Updated docs/mini_reference_anchor_interim_2026-10-10.md with balanced tables
+and inspected two-panel per-protein figure. Evidence/recompute/plot scripts and
+summaries live under reports/mini_reference_anchor_training_2026-10-10/
+interim_32_seed272001/coordinates_scored. Full20MBscores_32.json.gz is retained
+local/remote, SHA69bfd1fc1295968d549422ea343fadfa43f3d0458911ebdd2109bfeef4d570f2,
+not duplicated in Git. README states this explicitly. When the final controller
+rescoring arrives, compare exact summary/sites/outputs; timing/gzip bytes can
+differ. The full two-seed export is not complete or replaced by this snapshot.
+
+Last observer sample1791612453.3453: originalseed272001123/128, seed27200325/128;
+controller1015577 and follower1017339 continue, observer session9037 live.
+Training/source/budget/selection policy unchanged. Previous turn was PROGRESS
+(CPU parallel prototype). This turn is PROGRESS (new decoded-quality evidence,
+independent arithmetic and report), not blocked. Broad model-performance goal
+remains ACTIVE and unachieved. Do not react to this intermediate node by changing
+floor, weights, seeds or training length. Wait for both fixed128 endpoints and
+original verification/follower, then finish the complete quality comparison.
+
+## 2026-10-10 — Site-parallel prototype published as 6e5f0183
+
+Pushed 6e5f01832227aed91a3618135bc3c64d044db21a to origin/main and verified
+ls-remote equality. Seven scoped files; unrelated working files and memory tails
+preserved. Complete fresh-backend graph checks: all43 symbols/one affected flow,
+staged8 symbols/zero flows, medium/low summary risks. The new distributed entry
+has UNKNOWN upstream coverage; text inspection confirms its only caller is the
+new test worker, and no existing scientific runner imports it. Global graph
+process catalogue remains capped; absence of flows is not a safety proof.
+Five CPU/Gloo tests passed; native Mini multi-GPU equivalence and speed pending.
+
+Latest explicit controller check1791611681.730: same original controller1015577,
+Python workers1015704/1015705 and follower1017339 all live. Training lock still
+13cda88bacb0bca93f93c59fad801428d120b37f124bcdc022d915127c4cdeff; follower waiting.
+Last observer sample1791611653.331: seed27200195/128 J.7636538396;27200318/128
+J.8325082540. Observer exec9037 remains running; continue that handle, do not
+start new training. All prototype test and push sessions completed. No running
+native experiment, budget, device assignment or frozen source was changed.
+
+Next: wait for original terminal128 training and controller's CPU scoring /
+serialHIP4 verification, then follower export. Hash-check archive and run local
+anchor_results verification/analysis before actual renderer. The fixed32 positive
+latent signal is interim; no functional or usable-acceleration conclusion yet.
+This turn made PROGRESS (parallel prototype, equivalence tests and publication).
+Broad goal remains ACTIVE; no completion or blocker claim is warranted.
+
 ## 2026-10-10 — CPU site-parallel equivalence prototype passed
 
 Added an unlaunched engineering prototype in src/fastglycan/site_parallel.py.

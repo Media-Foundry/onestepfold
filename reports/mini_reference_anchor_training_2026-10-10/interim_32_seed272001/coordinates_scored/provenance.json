@@ -1,0 +1,32 @@
+{
+  "complete": true,
+  "kind": "read-only analysis of an existing fixed checkpoint",
+  "seed": 272001,
+  "step": 32,
+  "full_experiment_complete": false,
+  "native_tensor_verification_pending": true,
+  "training_source": "/media/IntelSSD/onestepfold/hpc3_mirror_20261001/Folding/reference_anchor_training_v1_20261010",
+  "source_lock_sha256": "13cda88bacb0bca93f93c59fad801428d120b37f124bcdc022d915127c4cdeff",
+  "evaluation_sha256": "c6c6fbf28675ad5f7bc27ec79619b514e57e4057ae33d82ee061a57bd0c4babc",
+  "checkpoint_sha256": "76c83765f301da161c9c2e71f1500f592c3da6218377ed46a2e69701e896db41",
+  "runner_sha256": "1576ba9cb231ac03085b33dc1e4ffad1e14d8d874eff7cb7906549b709b0c932",
+  "hip_visible_devices": "",
+  "started_unix": 1791611896.8795922,
+  "new_model_forwards": 0,
+  "pid": 1030002,
+  "command": [
+    "/media/IntelSSD/onestepfold/diamondhill_migration_20261001/tools/proot/usr/bin/proot",
+    "-b",
+    "/media/IntelSSD/onestepfold/hpc3_mirror_20261001/Folding:/data/user/shuang886/Folding",
+    "/home/pc/anaconda3/envs/fold/bin/python",
+    "-u",
+    "/tmp/anchor_interim_score_272001_32_6e5f0183/score_interim.py"
+  ],
+  "exit_code": 0,
+  "finished_unix": 1791612153.4991608,
+  "outputs": {
+    "scoring.log": "b625ebfdc96ea4021dad88447b28ba036d09fbc6c4dba7c1958fccd6aea36154",
+    "runs/anchor/272001/scores_32.json.gz": "69bfd1fc1295968d549422ea343fadfa43f3d0458911ebdd2109bfeef4d570f2",
+    "runs/anchor/272001/summary_32.json": "9efec3c74f1c63edc152b70f52f11567815b6a09720b07a6c5ca5c91528e6493"
+  }
+}
