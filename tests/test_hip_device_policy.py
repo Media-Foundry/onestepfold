@@ -22,3 +22,20 @@ def test_explicit_six_hip_authorization_is_scoped_and_mapping_checked():
     for selector in ['6','7','0,1']:
         with pytest.raises(RuntimeError):
             validate_selected_device({'HIP_VISIBLE_DEVICES':selector,'FASTGLYCAN_AUTHORIZED_HIP_0_5':'1'},'0000:32:00.0')
+
+
+def test_explicit_eight_device_authorization_keeps_mapping_and_selector_guards():
+    from fastglycan.hip_device_policy import EIGHT_HIP_PCI
+    for hip,pci in EIGHT_HIP_PCI.items():
+        env={'HIP_VISIBLE_DEVICES':str(hip),'FASTGLYCAN_AUTHORIZED_HIP_0_7':'1'}
+        result=validate_selected_device(env,pci.upper())
+        assert result['authorization']=='explicit HIP0..7'
+        assert result['management_gcd']==[2,3,0,1,6,7,4,5][hip]
+        with pytest.raises(RuntimeError):
+            validate_selected_device(env,EIGHT_HIP_PCI[(hip+1)%8])
+        with pytest.raises(RuntimeError):
+            validate_selected_device(dict(env,CUDA_VISIBLE_DEVICES=''),pci)
+    for selector in ['8','-1','0,1','']:
+        with pytest.raises(RuntimeError):
+            validate_selected_device({'HIP_VISIBLE_DEVICES':selector,
+                                      'FASTGLYCAN_AUTHORIZED_HIP_0_7':'1'},EIGHT_HIP_PCI[0])

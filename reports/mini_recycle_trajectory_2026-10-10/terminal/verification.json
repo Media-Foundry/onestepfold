@@ -1,0 +1,52 @@
+{
+  "complete": true,
+  "files_sha_verified": 19,
+  "correlations_independently_recomputed": 432,
+  "regrets_independently_recomputed": 144,
+  "scored_outputs_checked": 5472,
+  "coordinate_scoring_recomputed_locally": false,
+  "summary_recomputed_exactly": true,
+  "saved_native_replay_checks": 912,
+  "candidate_isolation_checks": 24,
+  "references": 24,
+  "individual_error_amplification": {
+    "dev_new_site": {
+      "s": {
+        "candidates": 57,
+        "after_mse_greater": 5,
+        "maximum_error_norm_gain": 1.8305602901523563
+      },
+      "z": {
+        "candidates": 57,
+        "after_mse_greater": 12,
+        "maximum_error_norm_gain": 2.4115402059110904
+      }
+    },
+    "dev_unseen_protein": {
+      "s": {
+        "candidates": 342,
+        "after_mse_greater": 45,
+        "maximum_error_norm_gain": 1.596416700075063
+      },
+      "z": {
+        "candidates": 342,
+        "after_mse_greater": 22,
+        "maximum_error_norm_gain": 1.611170665935364
+      }
+    },
+    "train": {
+      "s": {
+        "candidates": 513,
+        "after_mse_greater": 9,
+        "maximum_error_norm_gain": 2.035509548387764
+      },
+      "z": {
+        "candidates": 513,
+        "after_mse_greater": 34,
+        "maximum_error_norm_gain": 2.2085763907195277
+      }
+    }
+  },
+  "training_updates": 0,
+  "promoted": false
+}

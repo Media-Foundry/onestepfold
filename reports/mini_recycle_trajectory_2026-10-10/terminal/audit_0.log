@@ -1,0 +1,37 @@
+2026-10-10 21:32:59,142 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/runner/batch_inference.py:403] INFO runner.batch_inference: Inference by Protenix: model_size: mini, with_feature: esm, model_version: v0.5.0, dtype: bf16
+2026-10-10 21:32:59,142 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/runner/batch_inference.py:408] INFO runner.batch_inference: Triangle_multiplicative kernel: torch, Triangle_attention kernel: torch
+2026-10-10 21:32:59,142 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/runner/batch_inference.py:412] INFO runner.batch_inference: enable_diffusion_shared_vars_cache: True, enable_efficient_fusion: True, enable_tf32: False
+2026-10-10 21:32:59,143 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/runner/inference.py:246] INFO runner.inference: Distributed environment: world size: 1, global rank: 0, local rank: 0
+2026-10-10 21:32:59,143 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/runner/inference.py:98] INFO root: LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+2026-10-10 21:32:59,143 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/runner/inference.py:127] INFO root: Finished environment initialization.
+train scheduler 16.0
+inference scheduler 16.0
+Diffusion Module has 16.0
+2026-10-10 21:33:14,856 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/runner/inference.py:246] INFO runner.inference: Loading from /data/user/shuang886/Folding/protenix_stage0_pkg/v1_1/runtime/checkpoint/protenix_mini_esm_v0.5.0.pt, strict: False
+2026-10-10 21:33:15,357 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/runner/inference.py:246] INFO runner.inference: Sampled key: module.input_embedder.atom_attention_encoder.linear_no_bias_ref_pos.weight
+2026-10-10 21:33:15,399 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/runner/inference.py:246] INFO runner.inference: Finish loading checkpoint.
+2026-10-10 21:33:15,402 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/runner/inference.py:246] INFO runner.inference: Model parameters: 135.22M
+TRAJECTORY_SITE 0 p0_s48 {'c4': 0, 'input_embedder': 0, 's1': 140, 'updates': 0, 'recycle': 211}
+TRAJECTORY_SITE 0 p0_s58 {'c4': 0, 'input_embedder': 0, 's1': 254, 'updates': 0, 'recycle': 325}
+TRAJECTORY_SITE 0 p2_s30 {'c4': 0, 'input_embedder': 0, 's1': 370, 'updates': 0, 'recycle': 440}
+TRAJECTORY_SITE 0 p2_s47 {'c4': 0, 'input_embedder': 0, 's1': 484, 'updates': 0, 'recycle': 554}
+TRAJECTORY_SITE 0 p4_s2 {'c4': 0, 'input_embedder': 0, 's1': 600, 'updates': 0, 'recycle': 669}
+TRAJECTORY_SITE 0 p4_s25 {'c4': 0, 'input_embedder': 0, 's1': 714, 'updates': 0, 'recycle': 783}
+TRAJECTORY_SITE 0 p6_s10 {'c4': 0, 'input_embedder': 0, 's1': 830, 'updates': 0, 'recycle': 898}
+TRAJECTORY_SITE 0 p6_s17 {'c4': 0, 'input_embedder': 0, 's1': 944, 'updates': 0, 'recycle': 1012}
+TRAJECTORY_SITE 0 p8_s101 {'c4': 0, 'input_embedder': 0, 's1': 1060, 'updates': 0, 'recycle': 1127}
+TRAJECTORY_SITE 0 p8_s108 {'c4': 0, 'input_embedder': 0, 's1': 1174, 'updates': 0, 'recycle': 1241}
+TRAJECTORY_SITE 0 p10_s45 {'c4': 0, 'input_embedder': 0, 's1': 1290, 'updates': 0, 'recycle': 1356}
+TRAJECTORY_SITE 0 p10_s80 {'c4': 0, 'input_embedder': 0, 's1': 1404, 'updates': 0, 'recycle': 1470}
+TRAJECTORY_SITE 0 p12_s11 {'c4': 0, 'input_embedder': 0, 's1': 1520, 'updates': 0, 'recycle': 1585}
+TRAJECTORY_SITE 0 p12_s72 {'c4': 0, 'input_embedder': 0, 's1': 1634, 'updates': 0, 'recycle': 1699}
+TRAJECTORY_SITE 0 p14_s6 {'c4': 0, 'input_embedder': 0, 's1': 1750, 'updates': 0, 'recycle': 1814}
+TRAJECTORY_SITE 0 p14_s8 {'c4': 0, 'input_embedder': 0, 's1': 1864, 'updates': 0, 'recycle': 1928}
+TRAJECTORY_SITE 0 p16_s5 {'c4': 0, 'input_embedder': 0, 's1': 1980, 'updates': 0, 'recycle': 2043}
+TRAJECTORY_SITE 0 p16_s110 {'c4': 0, 'input_embedder': 0, 's1': 2094, 'updates': 0, 'recycle': 2157}
+TRAJECTORY_SITE 0 p18_s13 {'c4': 0, 'input_embedder': 0, 's1': 2210, 'updates': 0, 'recycle': 2272}
+TRAJECTORY_SITE 0 p18_s179 {'c4': 0, 'input_embedder': 0, 's1': 2324, 'updates': 0, 'recycle': 2386}
+TRAJECTORY_SITE 0 p20_s100 {'c4': 0, 'input_embedder': 0, 's1': 2440, 'updates': 0, 'recycle': 2501}
+TRAJECTORY_SITE 0 p20_s112 {'c4': 0, 'input_embedder': 0, 's1': 2554, 'updates': 0, 'recycle': 2615}
+TRAJECTORY_SITE 0 p22_s25 {'c4': 0, 'input_embedder': 0, 's1': 2670, 'updates': 0, 'recycle': 2730}
+TRAJECTORY_SITE 0 p22_s44 {'c4': 0, 'input_embedder': 0, 's1': 2784, 'updates': 0, 'recycle': 2844}

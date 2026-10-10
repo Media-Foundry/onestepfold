@@ -1,0 +1,18 @@
+{
+  "stage": "prepared_locally",
+  "date": "2026-10-10",
+  "git_base": "4f33fcc94c5babc4d6de05f2e05ccd668581e388",
+  "test_command": "HIP_VISIBLE_DEVICES='' PYTHONPATH=src:scripts OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 python3 -m pytest -q -p no:cacheprovider tests/test_recycle_trajectory.py tests/test_hip_device_policy.py tests/test_trajectory_controller.py tests/test_prefix_recycle.py tests/test_compensated_recycle.py",
+  "tests_passed": 24,
+  "test_exit_code": 0,
+  "gpu_used": false,
+  "ast_check": "passed",
+  "overlay_files": 11,
+  "overlay_bytes": 81920,
+  "overlay_sha256": "3cfda31857cd7bb145e218fc9d67e14cfa3df3f1e597128aa6c1aa1987fef7c5",
+  "native_audit_executed": false,
+  "remote_deployed": false,
+  "queued": false,
+  "promotion": false,
+  "pending": "Explicit authorization for source upload to verified DiamondHill, required by automatic approval review. Existing experiment continues."
+}

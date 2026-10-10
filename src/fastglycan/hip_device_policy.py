@@ -9,11 +9,19 @@ SAFE_PCI_TO_GCD={'0000:11:00.0':0,'0000:14:00.0':1,'0000:32:00.0':2,'0000:35:00.
 RESERVED_PCI={'0000:ae:00.0','0000:b3:00.0'}
 SIX_HIP_PCI={0:'0000:32:00.0',1:'0000:35:00.0',2:'0000:11:00.0',
              3:'0000:14:00.0',4:'0000:ae:00.0',5:'0000:b3:00.0'}
+EIGHT_HIP_PCI={**SIX_HIP_PCI,6:'0000:8e:00.0',7:'0000:93:00.0'}
 
 
 def validate_selected_device(environment,pci):
     if any(k in environment for k in ['CUDA_VISIBLE_DEVICES','ROCR_VISIBLE_DEVICES','GPU_DEVICE_ORDINAL','HSA_VISIBLE_DEVICES']):raise RuntimeError('only HIP_VISIBLE_DEVICES may select devices')
     hip=environment.get('HIP_VISIBLE_DEVICES','')
+    if environment.get('FASTGLYCAN_AUTHORIZED_HIP_0_7')=='1':
+        if hip not in tuple(map(str,EIGHT_HIP_PCI)) or pci.lower()!=EIGHT_HIP_PCI[int(hip)]:
+            raise RuntimeError('eight-device authorization requires verified single HIP0..7 mapping')
+        gcd={**SAFE_PCI_TO_GCD,'0000:ae:00.0':6,'0000:b3:00.0':7,
+             '0000:8e:00.0':4,'0000:93:00.0':5}[pci.lower()]
+        return dict(hip_visible=hip,cuda_visible=None,rocr_visible=None,pci_bus_id=pci.lower(),
+                    management_gcd=gcd,physical_mapping_verified=True,authorization='explicit HIP0..7')
     if environment.get('FASTGLYCAN_AUTHORIZED_HIP_0_5')=='1':
         if hip not in tuple(map(str,SIX_HIP_PCI)) or pci.lower()!=SIX_HIP_PCI[int(hip)]:
             raise RuntimeError('six-device authorization requires verified single HIP0..5 mapping')
@@ -29,7 +37,8 @@ def validate_selected_device(environment,pci):
 def guarded_hip_runtime():
     # Check selectors BEFORE importing torch or initializing the HIP runtime.
     env=os.environ;hip=env.get('HIP_VISIBLE_DEVICES','')
-    allowed=SIX_HIP_PCI if env.get('FASTGLYCAN_AUTHORIZED_HIP_0_5')=='1' else SAFE_HIP_ORDINALS
+    allowed=(EIGHT_HIP_PCI if env.get('FASTGLYCAN_AUTHORIZED_HIP_0_7')=='1' else
+             SIX_HIP_PCI if env.get('FASTGLYCAN_AUTHORIZED_HIP_0_5')=='1' else SAFE_HIP_ORDINALS)
     if hip not in tuple(map(str,allowed)) or any(k in env for k in ['CUDA_VISIBLE_DEVICES','ROCR_VISIBLE_DEVICES','GPU_DEVICE_ORDINAL','HSA_VISIBLE_DEVICES']):raise RuntimeError('invalid HIP-only resource policy')
     import torch
     paths={line.split()[-1] for line in Path('/proc/self/maps').read_text().splitlines() if 'libamdhip64.so' in line and line.split()[-1].startswith('/')}

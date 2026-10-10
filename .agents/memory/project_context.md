@@ -1,3 +1,47 @@
+## 2026-10-10 — Both placement seeds verified; trajectory audit also complete
+
+The user requests reviewing both seeds and pushing origin/main. All four fixed
+placement fits, all 0/32/128 evaluations, the ledger and independent native
+checkpoint replay completed. Primary endpoint remains 128; no promotion.
+Training AA residual NMSE: late 0.900734/0.900649, early 0.747253/0.746928.
+Held development AA residual NMSE: late 0.986180/0.986105, early 1.077657/1.077262.
+Held regret: unadapted 0.046314, late 0.067788 both, early 0.150037 both.
+Geometry passes: unadapted 432, late 433 both, early 420 both, out of 684.
+Early repairs 2EBE E47 but worsens 6ZRW T45 (0.066483 to 2.001953 regret).
+Preserve both outcomes and all fixed nodes; do not select the earlier node or
+infer an inference speedup from training wall time. Frozen suffix work is real.
+
+Local verification checks all 976 exported hashes, 7488 correlations, 2496 regrets
+and 94848 output-record accounting checks. Tensor replay is a separate completed
+remote check; coordinates were not rescored locally. Report and compact artifacts:
+reports/mini_pair_placement_2026-10-10/README.md and terminal/.
+Full metadata/source/scoring archive SHA256:
+e1a9697631199359ea0d4cbb97d846a14895aa04ce6ab231a3fa043e0a1ef57b.
+
+The explicitly authorized candidate-first trajectory audit started only after
+placement plus verification, and is also complete. Protocol remains Mini with
+prepared candidate inputs, P3=W3+(M1-W1), followed by one native candidate update.
+No learner was trained. All eight HIP devices are user-authorized; this audit
+used HIP6/7 with physical PCI checks. Native work: 5688 recycle calls, 5568 S1,
+zero input-encoder calls and zero updates. Native split/no-edit/RNG/archive and
+candidate isolation checks passed. Local verification checks 19 archive hashes,
+432 correlations, 144 regrets, 5472 output records and exact summary reproduction.
+Held C2 versus transport: Spearman 0.68616 to 0.74298, AA response RMSE 0.43361 to
+0.40680 Angstrom, geometry passes 296 to 405; regret worsens 0.024324 to 0.030820,
+mean-score Top1 11/18 to 5/18. Same-protein S34 is a retained high-cost failure.
+The native last update reduces average state errors but amplifies errors for
+some candidates. Not promoted, no speed claim, no automatic learned follow-up.
+Separate report: reports/mini_recycle_trajectory_2026-10-10/README.md.
+Full metadata/scoring archive SHA256:
+267c10bf864fb9f87b8dec0be387dd54cfa5be01d0f35b8ea03bfc185b38196f.
+
+Both archives are hash-verified under DiamondHill's Folding/publication_archives_20261010/.
+Raw checkpoints/tensors remain at experiment roots; compact publication includes
+locks, provenance, source, tables and verification boundaries. Nine held proteins
+remain development data. Preserve earlier setup-only failures and closed baselines.
+No controller from these two batches remains pending; do not launch duplicates.
+The broader goal remains paused; this status/publishing task does not change it.
+
 ## 2026-10-10 — Native placement parallel gate passed; four fixed fits launched
 
 Same V2controller1057181 remains live. Nativeaudit1057322 completedexit0;
