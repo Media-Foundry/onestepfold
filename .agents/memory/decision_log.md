@@ -1,3 +1,66 @@
+## 2026-10-11 — Normalized transport completed; no quality promotion
+
+Controller1080552 and all six native/scoring shards plus summary completed with
+exit0. No failure retry, source change, label fitting or quality-selected variant.
+All24 no-edit,24 raw replays and24 normalized isolation checks passed.984native
+recycles,1968S1,0input-encoder calls,0updates.9focused CPU tests passed on both
+machines. Local checks verified1834archive hashes,912coordinate NPZs,576rank
+correlations,192regrets and7296output records; coordinates not rescored locally.
+
+Held raw→normalized: receiver-centered pair NMSE1.23571→1.29850, cosine
+0.37497→0.37634. Receiver single NMSE0.21291→0.21487 despite raw carried
+single NMSE0.10675→0.46853. Raw state error and receiver error are different.
+Raw channel-mean error energy fractions: single0.225%,pair2.046%; these are
+across channels within each vector, not the across-AA common component.
+Simple normalization transport does not recover missing pair-direction evolution.
+This does not identify unique capacity/data/optimization causes.
+
+Held decoded responseRMSE0.406803→0.409965Angstrom, regret0.030820→0.032646,
+geometry405→403/684 (4new failures,2repairs), P952.2627→2.4084Angstrom.
+Only two old-noise selections change:1YSBV5 R→P worsens0.014105→0.050158;
+2FKZE44 P→M improves0.003173→0. All other16 choices and known2EBE failures
+persist. Mean-scoreTop1 improves5→6; severeclashes2632→2582 andwrongcentres
+342→340, so not every metric worsens. Main paired intervals crosszero.
+Same-protein S34 failure persists. Close this single rule; no coefficient grid,
+automatic learner, decoder unfreezing or additional raw-prefix variants.
+
+Report: reports/mini_transport_normalization_2026-10-11/README.md. Full44,085,988
+byte archive (source,controls,scores,912newcoordinate NPZs) lives atDiamondHill
+Folding/publication_archives_20261011/transport_normalization_terminal_20261011.tar.gz.
+SHA256 b2384139976bb2b39cf6b1b5509dbdb4a8ad9944b430073c62f23fa583c23cbe.
+Existing experiments remain unchanged; all panels are development, no speed claim.
+Broader paused goal unchanged; this bounded diagnostic is finished.
+
+## 2026-10-11 — Fixed normalization-coordinate transport diagnostic
+
+User authorizes diagnosing and trying a targeted change after61464f87. Native
+last recycle first applies per-vector LayerNorm plus a linear projection to the
+carried s/z; raw state error and receiver-space error should be distinguished.
+This is a candidate hypothesis, not an identified root cause. New locked formula:
+P3 = W3 + sigma(W3) * (n(M1)-n(W1)), independently over channels of s/z;
+sigma/n use each native normalization epsilon. No teacher input, fitted scale,
+new head, noise change or loss change; no-edit exactly returns W3. Evaluate one
+unchanged native last candidate recycle and S1, retaining cold C2/raw transport.
+
+Protocol: docs/mini_transport_normalization_v1.md. Six disjoint parent shards,
+HIP0..5, same24parents/48sites/912mutants, same two decoder noises, no upstream
+ESM/MSA preparation. Frozen8-file61,440-byte overlay uploaded within authorized
+DiamondHill experiment workspace; SHA53b7d0665119ec3cde09328a0509fd1ec545731bf1929c0b372435a42022069f.
+Remote885-file snapshot retains all877 prior file hashes.9CPUtests and import/
+lock preflight passed. Controller1080552 launched at1791651892.9851282, root
+recycle_transport_normalization_v1_20261011. Lock SHA256
+37428d2d7f75ed4fe2d048eec8178059844a8811a9197cd99d584283fa825d91.
+
+Expected new work984native cycles/1968S1/0updates; cached M1/M3 loading charged.
+Native no-edit24, raw replay24 and candidate isolation24 gate correctness. All
+outputs decode regardless of NMSE. Raw/receiver-space common and AA statistics,
+channel-mean error fraction, reference scales, error amplification, selection
+risk and geometry are measured separately. Nine held proteins remain development
+only. Two-hour cap, no automatic scientific retry or normalization/coefficient
+search. No new speed result or claim that this resolves transfer. Follow the
+original controller; do not duplicate. Earlier placement/trajectory results stay
+closed. Broad goal-tool pause is unchanged by this concrete authorized task.
+
 ## 2026-10-10 — Both placement seeds verified; trajectory audit also complete
 
 The user requests reviewing both seeds and pushing origin/main. All four fixed
