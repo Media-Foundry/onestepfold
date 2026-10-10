@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/media/IntelSSD/onestepfold/hpc3_mirror_20261001/Folding/native_site_parallel_v2_20261010/code/scripts/control_native_site_parallel.py", line 87, in <module>
+    control_native_site_parallel(parser.parse_args().root)
+  File "/media/IntelSSD/onestepfold/hpc3_mirror_20261001/Folding/native_site_parallel_v2_20261010/code/scripts/control_native_site_parallel.py", line 73, in control_native_site_parallel
+    run('native', prefix+['-m','torch.distributed.run','--standalone','--nproc-per-node=6',
+  File "/media/IntelSSD/onestepfold/hpc3_mirror_20261001/Folding/native_site_parallel_v2_20261010/code/scripts/control_native_site_parallel.py", line 58, in run
+    raise RuntimeError(f'{name} exited {process.returncode}; no retry')
+RuntimeError: native exited 1; no retry

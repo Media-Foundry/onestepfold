@@ -1,0 +1,73 @@
+{
+  "aggregate_speedup": 4.164932907055538,
+  "all_ranks_peak_bytes": [
+    25563141632,
+    8802924032,
+    8719425024,
+    9714401792,
+    9714401792,
+    10387079168
+  ],
+  "audit_lock_sha256": "627d1ff1be72cba0559d66fa79a42ebcc4d290e148b6f9f717c2a4c9bd0f923e",
+  "bitwise_pairs": [
+    {
+      "bitwise": true,
+      "order": 0,
+      "step": 1
+    },
+    {
+      "bitwise": true,
+      "order": 0,
+      "step": 2
+    },
+    {
+      "bitwise": true,
+      "order": 0,
+      "step": 3
+    },
+    {
+      "bitwise": true,
+      "order": 1,
+      "step": 1
+    },
+    {
+      "bitwise": true,
+      "order": 1,
+      "step": 2
+    },
+    {
+      "bitwise": true,
+      "order": 1,
+      "step": 3
+    }
+  ],
+  "complete": true,
+  "counts": {
+    "backwards": 7182,
+    "forwards": 7182,
+    "reference_backwards": 378,
+    "reference_forwards": 378
+  },
+  "inference_speedup_measured": false,
+  "model_quality_measured": false,
+  "orders": [
+    {
+      "order": [
+        "serial",
+        "parallel"
+      ],
+      "parallel": 17.684825474047102,
+      "serial": 75.38802916900022,
+      "speedup": 4.262865318045345
+    },
+    {
+      "order": [
+        "parallel",
+        "serial"
+      ],
+      "parallel": 18.41258577699773,
+      "serial": 74.95526680999319,
+      "speedup": 4.070871289769222
+    }
+  ]
+}

@@ -1,0 +1,113 @@
+NATIVE_PARALLEL_AUDIT 5 failed 0
+[rank5]: Traceback (most recent call last):
+[rank5]:   File "/data/user/shuang886/Folding/native_site_parallel_v1_20261010/code/scripts/audit_native_site_parallel.py", line 18, in <module>
+[rank5]:     native_parallel_audit(args.root, LoRARuntime, devices)
+[rank5]:   File "/data/user/shuang886/Folding/native_site_parallel_v1_20261010/code/src/fastglycan/native_parallel_audit.py", line 101, in native_parallel_audit
+[rank5]:     rt = runtime_factory(Path(training['source']), str(folder/'runtime'))
+[rank5]:          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank5]:   File "/data/user/shuang886/Folding/native_site_parallel_v1_20261010/code/scripts/run_recycle_lora.py", line 33, in __init__
+[rank5]:     self.native = CompensationRuntime(Path(self.lock['native_root']), str(root/name))
+[rank5]:                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank5]:   File "/data/user/shuang886/Folding/native_site_parallel_v1_20261010/code/scripts/run_compensated_recycle.py", line 37, in __init__
+[rank5]:     self.base = MiniEditorRuntime(root, name)
+[rank5]:                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank5]:   File "/data/user/shuang886/Folding/native_site_parallel_v1_20261010/code/src/fastglycan/reference_editor_runtime.py", line 24, in __init__
+[rank5]:     self.runtime = guarded_hip_runtime()
+[rank5]:                    ^^^^^^^^^^^^^^^^^^^^^
+[rank5]:   File "/data/user/shuang886/Folding/native_site_parallel_v1_20261010/code/src/fastglycan/hip_device_policy.py", line 33, in guarded_hip_runtime
+[rank5]:     if hip not in tuple(map(str,allowed)) or any(k in env for k in ['CUDA_VISIBLE_DEVICES','ROCR_VISIBLE_DEVICES','GPU_DEVICE_ORDINAL','HSA_VISIBLE_DEVICES']):raise RuntimeError('invalid HIP-only resource policy')
+[rank5]:                                                                                                                                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank5]: RuntimeError: invalid HIP-only resource policy
+NATIVE_PARALLEL_AUDIT 4 failed 0
+[rank4]: Traceback (most recent call last):
+[rank4]:   File "/data/user/shuang886/Folding/native_site_parallel_v1_20261010/code/scripts/audit_native_site_parallel.py", line 18, in <module>
+[rank4]:     native_parallel_audit(args.root, LoRARuntime, devices)
+[rank4]:   File "/data/user/shuang886/Folding/native_site_parallel_v1_20261010/code/src/fastglycan/native_parallel_audit.py", line 101, in native_parallel_audit
+[rank4]:     rt = runtime_factory(Path(training['source']), str(folder/'runtime'))
+[rank4]:          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank4]:   File "/data/user/shuang886/Folding/native_site_parallel_v1_20261010/code/scripts/run_recycle_lora.py", line 33, in __init__
+[rank4]:     self.native = CompensationRuntime(Path(self.lock['native_root']), str(root/name))
+[rank4]:                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank4]:   File "/data/user/shuang886/Folding/native_site_parallel_v1_20261010/code/scripts/run_compensated_recycle.py", line 37, in __init__
+[rank4]:     self.base = MiniEditorRuntime(root, name)
+[rank4]:                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank4]:   File "/data/user/shuang886/Folding/native_site_parallel_v1_20261010/code/src/fastglycan/reference_editor_runtime.py", line 24, in __init__
+[rank4]:     self.runtime = guarded_hip_runtime()
+[rank4]:                    ^^^^^^^^^^^^^^^^^^^^^
+[rank4]:   File "/data/user/shuang886/Folding/native_site_parallel_v1_20261010/code/src/fastglycan/hip_device_policy.py", line 33, in guarded_hip_runtime
+[rank4]:     if hip not in tuple(map(str,allowed)) or any(k in env for k in ['CUDA_VISIBLE_DEVICES','ROCR_VISIBLE_DEVICES','GPU_DEVICE_ORDINAL','HSA_VISIBLE_DEVICES']):raise RuntimeError('invalid HIP-only resource policy')
+[rank4]:                                                                                                                                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank4]: RuntimeError: invalid HIP-only resource policy
+W1010 16:01:57.015000 1048983 site-packages/torch/distributed/elastic/multiprocessing/api.py:1014] Sending process 1048994 closing signal SIGTERM
+W1010 16:01:57.017000 1048983 site-packages/torch/distributed/elastic/multiprocessing/api.py:1014] Sending process 1048995 closing signal SIGTERM
+W1010 16:01:57.017000 1048983 site-packages/torch/distributed/elastic/multiprocessing/api.py:1014] Sending process 1048996 closing signal SIGTERM
+W1010 16:01:57.017000 1048983 site-packages/torch/distributed/elastic/multiprocessing/api.py:1014] Sending process 1048997 closing signal SIGTERM
+W1010 16:01:57.018000 1048983 site-packages/torch/distributed/elastic/multiprocessing/api.py:1014] Sending process 1048998 closing signal SIGTERM
+E1010 16:01:57.134000 1048983 site-packages/torch/distributed/elastic/multiprocessing/api.py:988] failed (exitcode: 1) local_rank: 5 (pid: 1048999) of binary: /home/pc/anaconda3/envs/fold/bin/python
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/torch/distributed/run.py", line 1020, in <module>
+    main()
+  File "/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 367, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/torch/distributed/run.py", line 1016, in main
+    run(args)
+  File "/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/torch/distributed/run.py", line 1007, in run
+    elastic_launch(
+  File "/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/torch/distributed/launcher/api.py", line 191, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/torch/distributed/launcher/api.py", line 371, in launch_agent
+    raise ChildFailedError(
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+============================================================
+/data/user/shuang886/Folding/native_site_parallel_v1_20261010/code/scripts/audit_native_site_parallel.py FAILED
+------------------------------------------------------------
+Failures:
+[1]:
+  time      : 2026-10-10_16:01:57
+  host      : DiamondHill
+  rank      : 0 (local_rank: 0)
+  exitcode  : -15 (pid: 1048994)  (SIGTERM)
+  error_file: <N/A>
+  traceback : Signal 15 (SIGTERM) received by PID 1048994
+[2]:
+  time      : 2026-10-10_16:01:57
+  host      : DiamondHill
+  rank      : 1 (local_rank: 1)
+  exitcode  : -15 (pid: 1048995)  (SIGTERM)
+  error_file: <N/A>
+  traceback : Signal 15 (SIGTERM) received by PID 1048995
+[3]:
+  time      : 2026-10-10_16:01:57
+  host      : DiamondHill
+  rank      : 2 (local_rank: 2)
+  exitcode  : -15 (pid: 1048996)  (SIGTERM)
+  error_file: <N/A>
+  traceback : Signal 15 (SIGTERM) received by PID 1048996
+[4]:
+  time      : 2026-10-10_16:01:57
+  host      : DiamondHill
+  rank      : 3 (local_rank: 3)
+  exitcode  : -15 (pid: 1048997)  (SIGTERM)
+  error_file: <N/A>
+  traceback : Signal 15 (SIGTERM) received by PID 1048997
+[5]:
+  time      : 2026-10-10_16:01:57
+  host      : DiamondHill
+  rank      : 4 (local_rank: 4)
+  exitcode  : -15 (pid: 1048998)  (SIGTERM)
+  error_file: <N/A>
+  traceback : Signal 15 (SIGTERM) received by PID 1048998
+------------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2026-10-10_16:01:57
+  host      : DiamondHill
+  rank      : 5 (local_rank: 5)
+  exitcode  : 1 (pid: 1048999) 
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+============================================================

@@ -1,3 +1,43 @@
+## 2026-10-10 — Native six-device audit completed and independently verified
+
+The same v3 controller1051753 completed both native and independent CPU jobs,
+exit0; observer68413 ended normally. No active audit/training worker remains.
+Lock627d1ff1be72cba0559d66fa79a42ebcc4d290e148b6f9f717c2a4c9bd0f923e.
+All six paired steps: FP64 gradient, objective, parameter tensors and complete
+AdamW state bytewise identical.15preflight tests pass. Historical gradient
+relative5.687e-7 is below old5e-5; serial/parallel gradient differences are0.
+
+Mean full update25.057216s serial vs6.016235s onHIP0-5, aggregate4.164933x.
+Order ratios4.262865x/4.070871x. Includes transfers/reduction/clip/update/
+broadcast/checks/barriers; excludes loading,warmup,snapshotserialization.
+Rootpeak23.808GiB retainsall27sites; others8.121-9.674GiB. Reserveddevice-time
+ratio6/speedup1.4406, notlowerFLOPs/inference/modelquality claim.7,182candidate
+and378reference forward/backwards include repeatedverification/warmups.
+
+Fullarchive324208640bytes SHA38b693d14e603a10bbf1dd7466ba0bd75cf030eca4088167e15567a088ca92f8;
+local extracted/tmp/native_parallel_terminal_v3_20261010.885files verified.
+Independent local stdlib checker confirms6pairs of alltensorstoragebytes and
+decoded metadata. Initial local rawpickle comparison rejected differing string
+memoization; actual tensorbytes matched. Repaired only offlinechecker, no
+scientific/numerical tolerance or run change. Bothfailedv1/v2launches preserved.
+
+Report docs/mini_native_site_parallel_findings_2026-10-10.md and evidence
+reports/mini_native_site_parallel_2026-10-10. Publication pendingcommit/push;
+userauthorizationfororigin/mainpersists. Preserve unrelateddirtywork/memorytails.
+Incrementalgraphreview produced empty IDs and spuriouscritical253-flow mapping.
+Full --force --no-parse-cache rebuild resolvedit: all58symbols/5flows medium;
+staged23symbols/4flows medium, partial=false/truncated=false, allIDsnonempty.
+Fourflows cover thisnewcontroller andnativeaudit. Reports excludedfromindex
+were manually/arithmeticallyreviewed; rawlogwhitespacepreservedbyhash.
+MCPtransportclosed; usedthesameinstalledCLIbackendforcompletestructuredchecks.
+
+This turn madePROGRESS: nativeparallel infrastructure now has finite measured
+equivalence/throughput evidence. BroadgoalremainsACTIVE andunachieved. No
+scientificrun reopened; oldanchorresults3a4b1d58remainclosedwithoutpromotion.
+Useinfrastructureonlyina separatelylockedfuturetrainingprotocol; do not
+assume3-stepcheckproveslong-runorcheckpointresumeequivalence. Nextquality
+questionmustchangefeaturelearningonnewbasis, notoldhead/ridge/hint/scalings.
+
 ## 2026-10-10 — Reference-anchor paired trial completed; no promotion
 
 Both original seeds finished128 updates, all0/32/128 coordinate scoring and

@@ -1,0 +1,19 @@
+{
+  "complete": true,
+  "exit_code": 0,
+  "seconds": 8.084032773971558,
+  "log_sha256": "8b102ef61545b971ef088a6eb870397d7c50218e66a513a0a5f1dbee00485a1b",
+  "command": [
+    "/media/IntelSSD/onestepfold/diamondhill_migration_20261001/tools/proot/usr/bin/proot",
+    "-b",
+    "/media/IntelSSD/onestepfold/hpc3_mirror_20261001/Folding:/data/user/shuang886/Folding",
+    "/home/pc/anaconda3/envs/fold/bin/python",
+    "-m",
+    "pytest",
+    "-q",
+    "-p",
+    "no:cacheprovider",
+    "/data/user/shuang886/Folding/native_site_parallel_v3_20261010/code/tests/test_native_parallel_audit.py",
+    "/data/user/shuang886/Folding/native_site_parallel_v3_20261010/code/tests/test_hip_device_policy.py"
+  ]
+}
