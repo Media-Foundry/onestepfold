@@ -5,6 +5,8 @@ import json
 from pathlib import Path
 import shutil
 
+from fastglycan.fullbatch_recovery import verify_fullbatch_completion
+
 
 def export_stage_fullbatch(root):
     root = Path(root).resolve()
@@ -12,13 +14,7 @@ def export_stage_fullbatch(root):
     sha = lambda path: hashlib.sha256(path.read_bytes()).hexdigest()
     lock = read(root / 'training_lock.json')
     controller = read(root / 'controller.json')
-    expected_jobs = {f'{kind}_{arm}_{seed}' for kind in ('train', 'score', 'verify')
-                     for arm in ('adamw', 'lbfgs') for seed in (272001, 272003)}
-    if not (controller['complete'] and controller['phase'] == 'closed'
-            and set(controller['jobs']) == expected_jobs
-            and all(j['status'] == 'complete' and j['exit_code'] == 0
-                    and not j.get('timeout') for j in controller['jobs'].values())):
-        raise ValueError('batch is incomplete; do not export it as a finished experiment')
+    recovered = verify_fullbatch_completion(root)
     assert controller['lock_sha256'] == sha(root / 'training_lock.json')
     assert lock['arms'] == ['adamw', 'lbfgs'] and lock['seeds'] == [272001, 272003]
     assert lock['checkpoints'] == [0, 32, 128] and lock['gradient_budget'] == 128
@@ -35,6 +31,11 @@ def export_stage_fullbatch(root):
         'training_lock.json', 'protocol.md', 'source_selection.json',
         'controller.json', 'controller.log', 'preflight_tests.log', 'prelock_tests.log')}
     wanted.update({p.name: p for p in root.glob('*.log') if not p.name.startswith('postprocess')})
+    if recovered:
+        recovery = root / 'verification_recovery'
+        recovery_lock = read(recovery / 'lock.json')
+        wanted.update({n: root / n for n in recovery_lock['protected_files']})
+        wanted.update({str(p.relative_to(root)): p for p in recovery.rglob('*') if p.is_file()})
     wanted['source_stage_manifest.json'] = stage / 'stage_manifest.json'
     wanted['source_training_lock.json'] = stage / 'n15/training_lock.json'
     wanted['controls/scores_8208.json.gz'] = stage / 'n15/runs/final/272001/scores_8208.json.gz'
@@ -43,7 +44,10 @@ def export_stage_fullbatch(root):
         'src/fastglycan/reference_editor_metrics.py',
         'src/fastglycan/response_moments.py', 'scripts/verify_stage_pair_recovery.py']
     for name in selected:
-        wanted['scientific_code/' + name] = root / 'code' / name
+        if recovered and name == 'scripts/verify_stage_pair_recovery.py':
+            wanted['scientific_code/' + name] = root / 'verification_recovery/code/verify_stage_pair_recovery.py'
+        else:
+            wanted['scientific_code/' + name] = root / 'code' / name
     for arm in lock['arms']:
         for seed in lock['seeds']:
             relative = Path('runs') / arm / str(seed)
@@ -81,7 +85,7 @@ def export_stage_fullbatch(root):
         shutil.copy2(path, target)
         assert sha(target) == digests[name]
     manifest = dict(source=str(root), files=digests, scientific_experiment_complete=True,
-                    source_snapshot_verified=len(lock['code']), operational_recovery=False,
+                    source_snapshot_verified=len(lock['code']), operational_recovery=recovered,
                     exporter_sha256=sha(Path(__file__)), bulk_tensors_exported=False)
     (partial / 'manifest.json').write_text(json.dumps(manifest, indent=2, sort_keys=True) + '\n')
     partial.rename(dest)

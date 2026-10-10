@@ -13,6 +13,8 @@ from pathlib import Path
 import numpy as np
 from scipy.stats import spearmanr
 
+from fastglycan.fullbatch_recovery import verify_fullbatch_completion
+
 
 def _json(path):
     return json.loads(Path(path).read_text())
@@ -213,18 +215,17 @@ def _check_score(score, ev, historical):
 def verify_fullbatch_results(root):
     root = Path(root)
     manifest, lock = _json(root / 'manifest.json'), _json(root / 'training_lock.json')
-    assert manifest['scientific_experiment_complete'] and not manifest['operational_recovery']
+    assert manifest['scientific_experiment_complete']
     for name, digest in manifest['files'].items():
         assert _sha(root / name) == digest, name
     assert _sha(root / 'protocol.md') == lock['protocol_sha256']
     assert lock['arms'] == ['adamw', 'lbfgs'] and lock['seeds'] == [272001, 272003]
     controller = _json(root / 'controller.json')
-    assert controller['complete'] and controller['phase'] == 'closed'
+    recovered = verify_fullbatch_completion(root)
+    assert manifest['operational_recovery'] is recovered
     assert controller['lock_sha256'] == _sha(root / 'training_lock.json')
     assert set(controller['jobs']) == {f'{kind}_{arm}_{seed}' for kind in ('train', 'score', 'verify')
                                       for arm in lock['arms'] for seed in lock['seeds']}
-    assert all(j['status'] == 'complete' and j['exit_code'] == 0 and not j.get('timeout')
-               for j in controller['jobs'].values())
     assert _sha(root / 'source_stage_manifest.json') == lock['stage_manifest_sha256']
     old = _json(root / 'source_training_lock.json')
     assert _sha(root / 'source_training_lock.json') == lock['source_training_lock_sha256']
@@ -286,6 +287,7 @@ def verify_fullbatch_results(root):
                           verification_forwards=2736, latent_replays=144)
     assert checks['runs'] == 4 and checks['nodes'] == 12
     result = dict(complete=True, scientific_experiment_complete=True, checks=dict(checks),
+                  operational_recovery=recovered, original_controller_phase=controller['phase'],
                   files_sha_verified=len(manifest['files']), all_panels_development=True,
                   coordinate_scoring_recomputed=False, score_arithmetic_recomputed=True,
                   tensor_replay_verified=True, promoted=False, verifier_sha256=_sha(Path(__file__)),

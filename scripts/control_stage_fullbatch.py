@@ -48,6 +48,11 @@ def control_stage_fullbatch(root):
         with (root/'preflight_tests.log').open('x') as output:
             subprocess.run(prefix+['-m','pytest','-q','-p','no:cacheprovider',str(virtual/'code/tests/test_stage_fullbatch.py')],
                 env=dict(env,HIP_VISIBLE_DEVICES='4'),stdout=output,stderr=subprocess.STDOUT,check=True,timeout=180)
+        # A source snapshot may pass optimizer tests yet omit a verifier import.
+        # Catch this before spending any training budget. No model is constructed.
+        with (root/'preflight_imports.log').open('x') as output:
+            subprocess.run(prefix+['-c', 'import run_stage_fullbatch, score_stage_fullbatch, verify_stage_fullbatch'],
+                env=dict(env,HIP_VISIBLE_DEVICES=''),stdout=output,stderr=subprocess.STDOUT,check=True,timeout=120)
         configurations = [(arm, seed) for seed in lock['seeds'] for arm in lock['arms']]
         state['training_deadline_unix'] = time.time()+6*3600
         for hip, (arm, seed) in enumerate(configurations):

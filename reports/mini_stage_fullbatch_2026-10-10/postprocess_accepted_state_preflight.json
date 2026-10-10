@@ -1,0 +1,67 @@
+{
+  "complete": true,
+  "observed_unix": 1791601357.255648,
+  "rows": [
+    {
+      "seed": 272001,
+      "checkpoints": [
+        {
+          "step": 0,
+          "parameter_sha256": "f75aefa092f46c904a238609d1e526fe3a1be8080c60a43ffb138b459f9d0899",
+          "objective": 0.8683360244777337
+        },
+        {
+          "step": 32,
+          "parameter_sha256": "9b6ee5364b316f984a0e3a742c16b93378bf6f1e0dda593f0859417279b33136",
+          "objective": 0.862681314889313
+        },
+        {
+          "step": 128,
+          "parameter_sha256": "6d8420ad375426eeedaeb16baf93d04831b71f961ff942c05194e171bdaec88f",
+          "objective": 0.8515630412301216
+        }
+      ],
+      "evaluations": 128,
+      "changed_updates": 61,
+      "status_counts": {
+        "accepted": 61
+      },
+      "final_accepted_loss": 0.8515630412301216
+    },
+    {
+      "seed": 272003,
+      "checkpoints": [
+        {
+          "step": 0,
+          "parameter_sha256": "f94f91c3f0788fb4cc6e7b6fd6c90c02fea2345612d3ea58de8403bd4e71a2a2",
+          "objective": 0.8683360244777337
+        },
+        {
+          "step": 32,
+          "parameter_sha256": "4e6b5c6883754cac5cbcf82c396cdd16bee3e1d8116e08381de2055e0ba8158e",
+          "objective": 0.8626774832018692
+        },
+        {
+          "step": 128,
+          "parameter_sha256": "ce11f55fd1985a5a53b291c369999a65a757dacd25768a10dc76a333e1a60bb1",
+          "objective": 0.8517897893862107
+        }
+      ],
+      "evaluations": 128,
+      "changed_updates": 60,
+      "status_counts": {
+        "accepted": 60,
+        "budget_rollback": 1
+      },
+      "final_accepted_loss": 0.8517897893862107
+    }
+  ],
+  "model_forwards": 0,
+  "model_backwards": 0,
+  "new_parameter_updates": 0,
+  "checkpoint_bytes_bound_to_log": true,
+  "independent_objective_recomputed": false,
+  "full_tensor_verification_still_required": true,
+  "result_module_sha256": "74c6b81969d1830041ab72be5880fe1615d3aec44ce75f3bd64bfc9f6976d68c",
+  "training_lock_sha256": "ed09b10002eaa7d04a4f2ea5843bf33657188a64cfd04836934aa47679993eed"
+}

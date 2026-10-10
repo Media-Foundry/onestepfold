@@ -1,0 +1,31 @@
+{
+  "observed_unix": 1791604792.5837536,
+  "tests": 9,
+  "passed": true,
+  "training_source_changed": false,
+  "existing_symbols": [
+    "export_stage_fullbatch",
+    "verify_fullbatch_results"
+  ],
+  "graph_before_edit": {
+    "export_stage_fullbatch": "LOW, one direct caller; unresolved dynamic caller inspected",
+    "verify_fullbatch_results": "UNKNOWN, no indexed callers; text search found finish wrapper and report wrapper",
+    "control_stage_fullbatch": "LOW; one CLI caller; launch wrapper inspected"
+  },
+  "reviewed_dynamic_callers": [
+    "scripts/finish_stage_fullbatch.py",
+    "reports/mini_stage_fullbatch_2026-10-10/verify_results.py"
+  ],
+  "missing_dependency_sha256": "1671f75acb7ec3b190ec61aa34d326eb45fbde7a85663ab2f8dd1b8395081e2e",
+  "recovery_pid": 1004972,
+  "recovery_lock_sha256": "8898d3c57041cd3e89730dbc78bff6988cbdc37ee8b9e7dd823afa4b8c082f86",
+  "future_import_gate": "Actual frozen package fails before training; supplemental committed dependency makes identical triplet imports pass; no model constructed",
+  "graph_catalogue_limits": "Index reports 259 flows; 809 entry candidates omitted, 496 callees skipped, 4 walks budget-cut. No absent flow is treated as unused. Manual review includes dynamic wrappers and report execution scripts.",
+  "tensor_recovery_complete": true,
+  "verified_nodes": 12,
+  "verified_site_nodes": 576,
+  "verification_forwards": 10944,
+  "protected_files_verified": 75,
+  "original_controller_retained": "closed_with_failures",
+  "training_source_files_verified": 832
+}

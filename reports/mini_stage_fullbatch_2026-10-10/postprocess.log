@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "/media/IntelSSD/onestepfold/hpc3_mirror_20261001/Folding/stage_fullbatch_v1_20261010/postprocess_code/finish_stage_fullbatch.py", line 87, in <module>
+    finish_stage_fullbatch(parser.parse_args().root)
+  File "/media/IntelSSD/onestepfold/hpc3_mirror_20261001/Folding/stage_fullbatch_v1_20261010/postprocess_code/finish_stage_fullbatch.py", line 50, in finish_stage_fullbatch
+    raise RuntimeError('scientific controller failed; preserve all attempts, do not restart')
+RuntimeError: scientific controller failed; preserve all attempts, do not restart

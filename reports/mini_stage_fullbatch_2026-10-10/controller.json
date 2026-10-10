@@ -1,0 +1,94 @@
+{
+  "complete": false,
+  "phase": "closed_with_failures",
+  "started_unix": 1791597263.66214,
+  "jobs": {
+    "train_adamw_272001": {
+      "pid": 947531,
+      "hip": 0,
+      "status": "complete",
+      "started_unix": 1791597271.6992714,
+      "exit_code": 0
+    },
+    "train_lbfgs_272001": {
+      "pid": 947532,
+      "hip": 1,
+      "status": "complete",
+      "started_unix": 1791597271.7013648,
+      "exit_code": 0
+    },
+    "train_adamw_272003": {
+      "pid": 947534,
+      "hip": 2,
+      "status": "complete",
+      "started_unix": 1791597271.7031012,
+      "exit_code": 0
+    },
+    "train_lbfgs_272003": {
+      "pid": 947536,
+      "hip": 3,
+      "status": "complete",
+      "started_unix": 1791597271.704171,
+      "exit_code": 0
+    },
+    "score_lbfgs_272003": {
+      "pid": 978418,
+      "hip": 4,
+      "status": "complete",
+      "started_unix": 1791600952.2814999,
+      "exit_code": 0
+    },
+    "score_lbfgs_272001": {
+      "pid": 979371,
+      "hip": 4,
+      "status": "complete",
+      "started_unix": 1791601082.310624,
+      "exit_code": 0
+    },
+    "score_adamw_272001": {
+      "pid": 981238,
+      "hip": 4,
+      "status": "complete",
+      "started_unix": 1791601102.3154247,
+      "exit_code": 0
+    },
+    "verify_lbfgs_272003": {
+      "pid": 989621,
+      "hip": 4,
+      "status": "failed",
+      "started_unix": 1791601792.4240108,
+      "exit_code": 1
+    },
+    "verify_adamw_272001": {
+      "pid": 990020,
+      "hip": 4,
+      "status": "failed",
+      "started_unix": 1791601872.4437397,
+      "exit_code": 1
+    },
+    "verify_lbfgs_272001": {
+      "pid": 990235,
+      "hip": 4,
+      "status": "failed",
+      "started_unix": 1791601912.4551146,
+      "exit_code": 1
+    },
+    "score_adamw_272003": {
+      "pid": 990399,
+      "hip": 4,
+      "status": "complete",
+      "started_unix": 1791601942.4639664,
+      "exit_code": 0
+    },
+    "verify_adamw_272003": {
+      "pid": 997853,
+      "hip": 4,
+      "status": "failed",
+      "started_unix": 1791602697.6014144,
+      "exit_code": 1
+    }
+  },
+  "lock_sha256": "ed09b10002eaa7d04a4f2ea5843bf33657188a64cfd04836934aa47679993eed",
+  "observed_unix": 1791602707.6047528,
+  "training_deadline_unix": 1791618871.6972454
+}

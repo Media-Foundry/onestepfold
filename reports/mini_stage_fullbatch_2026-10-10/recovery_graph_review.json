@@ -1,0 +1,818 @@
+{
+  "all": {
+    "summary": {
+      "changed_count": 60,
+      "affected_count": 6,
+      "changed_files": 138,
+      "risk_level": "high"
+    },
+    "changed_symbols": [
+      {
+        "id": "Section:AGENTS.md:L1:Repository guidance",
+        "name": "Repository guidance",
+        "type": "Section",
+        "filePath": "AGENTS.md",
+        "change_type": "touched"
+      },
+      {
+        "id": "Section:AGENTS.md:L12:GitNexus \u2014 Code Intelligence",
+        "name": "GitNexus \u2014 Code Intelligence",
+        "type": "Section",
+        "filePath": "AGENTS.md",
+        "change_type": "touched"
+      },
+      {
+        "id": "Section:AGENTS.md:L18:Always Do",
+        "name": "Always Do",
+        "type": "Section",
+        "filePath": "AGENTS.md",
+        "change_type": "touched"
+      },
+      {
+        "id": "Section:AGENTS.md:L27:Never Do",
+        "name": "Never Do",
+        "type": "Section",
+        "filePath": "AGENTS.md",
+        "change_type": "touched"
+      },
+      {
+        "id": "Section:AGENTS.md:L34:Resources",
+        "name": "Resources",
+        "type": "Section",
+        "filePath": "AGENTS.md",
+        "change_type": "touched"
+      },
+      {
+        "id": "Section:AGENTS.md:L43:CLI",
+        "name": "CLI",
+        "type": "Section",
+        "filePath": "AGENTS.md",
+        "change_type": "touched"
+      },
+      {
+        "id": "Section:docs/esmc_cache_v1.md:L1:ESMC cache v1",
+        "name": "ESMC cache v1",
+        "type": "Section",
+        "filePath": "docs/esmc_cache_v1.md",
+        "change_type": "touched"
+      },
+      {
+        "id": "Section:docs/esmc_cache_v1.md:L9:Pinned contract",
+        "name": "Pinned contract",
+        "type": "Section",
+        "filePath": "docs/esmc_cache_v1.md",
+        "change_type": "touched"
+      },
+      {
+        "id": "Section:docs/mini_backward_gate_v1.md:L1:Mini backward gate v1",
+        "name": "Mini backward gate v1",
+        "type": "Section",
+        "filePath": "docs/mini_backward_gate_v1.md",
+        "change_type": "touched"
+      },
+      {
+        "id": "Section:docs/mini_stage_fullbatch_findings_2026-10-10.md:L1:Mini \u5019\u9009 pair \u62df\u5408\uff1a\u5b8c\u6574 TRAIN \u68af\u5ea6\u4f18\u5316\u5bf9\u7167",
+        "name": "Mini \u5019\u9009 pair \u62df\u5408\uff1a\u5b8c\u6574 TRAIN \u68af\u5ea6\u4f18\u5316\u5bf9\u7167",
+        "type": "Section",
+        "filePath": "docs/mini_stage_fullbatch_findings_2026-10-10.md",
+        "change_type": "touched"
+      },
+      {
+        "id": "Section:docs/mini_stage_fullbatch_findings_2026-10-10.md:L14:1. \u6bd4\u8f83\u4e86\u4ec0\u4e48",
+        "name": "1. \u6bd4\u8f83\u4e86\u4ec0\u4e48",
+        "type": "Section",
+        "filePath": "docs/mini_stage_fullbatch_findings_2026-10-10.md",
+        "change_type": "touched"
+      },
+      {
+        "id": "Section:docs/mini_stage_fullbatch_findings_2026-10-10.md:L42:2. AA \u7279\u5f02\u6062\u590d\u4ecd\u5f88\u6709\u9650",
+        "name": "2. AA \u7279\u5f02\u6062\u590d\u4ecd\u5f88\u6709\u9650",
+        "type": "Section",
+        "filePath": "docs/mini_stage_fullbatch_findings_2026-10-10.md",
+        "change_type": "touched"
+      },
+      {
+        "id": "Section:docs/mini_stage_fullbatch_findings_2026-10-10.md:L64:3. \u6709\u5c40\u90e8\u9009\u62e9\u6536\u76ca\uff0c\u6ca1\u6709\u6574\u4f53\u54cd\u5e94\u6062\u590d",
+        "name": "3. \u6709\u5c40\u90e8\u9009\u62e9\u6536\u76ca\uff0c\u6ca1\u6709\u6574\u4f53\u54cd\u5e94\u6062\u590d",
+        "type": "Section",
+        "filePath": "docs/mini_stage_fullbatch_findings_2026-10-10.md",
+        "change_type": "touched"
+      },
+      {
+        "id": "Section:docs/mini_stage_fullbatch_findings_2026-10-10.md:L103:4. \u672c\u6279\u4e0d\u80fd\u56de\u7b54\u7684\u56e0\u679c\u95ee\u9898",
+        "name": "4. \u672c\u6279\u4e0d\u80fd\u56de\u7b54\u7684\u56e0\u679c\u95ee\u9898",
+        "type": "Section",
+        "filePath": "docs/mini_stage_fullbatch_findings_2026-10-10.md",
+        "change_type": "touched"
+      },
+      {
+        "id": "Section:docs/mini_stage_fullbatch_findings_2026-10-10.md:L119:5. \u5b8c\u6574\u6027\u3001\u5931\u8d25\u8bb0\u5f55\u4e0e\u6210\u672c",
+        "name": "5. \u5b8c\u6574\u6027\u3001\u5931\u8d25\u8bb0\u5f55\u4e0e\u6210\u672c",
+        "type": "Section",
+        "filePath": "docs/mini_stage_fullbatch_findings_2026-10-10.md",
+        "change_type": "touched"
+      },
+      {
+        "id": "Section:docs/mini_stage_fullbatch_verification_recovery_2026-10-10.md:L1:Verification-only recovery of the full-batch experiment",
+        "name": "Verification-only recovery of the full-batch experiment",
+        "type": "Section",
+        "filePath": "docs/mini_stage_fullbatch_verification_recovery_2026-10-10.md",
+        "change_type": "touched"
+      },
+      {
+        "id": "Section:docs/scratch_primary_training_v1.md:L1:\u968f\u673a\u521d\u59cb\u5316\u6298\u53e0\u6838\u5fc3\uff1a\u6b63\u5f0f\u4e3b\u8bad\u7ec3\u65b9\u6848\u8349\u7a3f",
+        "name": "\u968f\u673a\u521d\u59cb\u5316\u6298\u53e0\u6838\u5fc3\uff1a\u6b63\u5f0f\u4e3b\u8bad\u7ec3\u65b9\u6848\u8349\u7a3f",
+        "type": "Section",
+        "filePath": "docs/scratch_primary_training_v1.md",
+        "change_type": "touched"
+      },
+      {
+        "id": "Section:docs/scratch_primary_training_v1.md:L5:\u6267\u884c\u6388\u6743\u66f4\u65b0\uff1a8 GCD \u4ece\u96f6\u8bad\u7ec3",
+        "name": "\u6267\u884c\u6388\u6743\u66f4\u65b0\uff1a8 GCD \u4ece\u96f6\u8bad\u7ec3",
+        "type": "Section",
+        "filePath": "docs/scratch_primary_training_v1.md",
+        "change_type": "touched"
+      },
+      {
+        "id": "Section:docs/scratch_primary_training_v1.md:L37:1. \u672c\u8f6e\u51b3\u5b9a\u4e0e\u73b0\u6709\u8bc1\u636e",
+        "name": "1. \u672c\u8f6e\u51b3\u5b9a\u4e0e\u73b0\u6709\u8bc1\u636e",
+        "type": "Section",
+        "filePath": "docs/scratch_primary_training_v1.md",
+        "change_type": "touched"
+      },
+      {
+        "id": "Section:docs/scratch_primary_training_v1.md:L74:3. \u5f00\u8dd1\u524d\u53ea\u4fdd\u7559\u5fc5\u8981\u68c0\u67e5\uff0c\u5e76\u884c\u63a8\u8fdb",
+        "name": "3. \u5f00\u8dd1\u524d\u53ea\u4fdd\u7559\u5fc5\u8981\u68c0\u67e5\uff0c\u5e76\u884c\u63a8\u8fdb",
+        "type": "Section",
+        "filePath": "docs/scratch_primary_training_v1.md",
+        "change_type": "touched"
+      },
+      {
+        "id": "Section:docs/scratch_primary_training_v1.md:L76:A. \u4e00\u6b21TRAIN32\u5b66\u4e60\u68c0\u67e5",
+        "name": "A. \u4e00\u6b21TRAIN32\u5b66\u4e60\u68c0\u67e5",
+        "type": "Section",
+        "filePath": "docs/scratch_primary_training_v1.md",
+        "change_type": "touched"
+      },
+      {
+        "id": "Section:docs/scratch_primary_training_v1.md:L92:C. \u957f\u94fe\u3001\u5e76\u884c\u4e0e\u6062\u590d\u68c0\u67e5",
+        "name": "C. \u957f\u94fe\u3001\u5e76\u884c\u4e0e\u6062\u590d\u68c0\u67e5",
+        "type": "Section",
+        "filePath": "docs/scratch_primary_training_v1.md",
+        "change_type": "touched"
+      },
+      {
+        "id": "Section:docs/scratch_primary_training_v1.md:L104:4. \u6b63\u5f0f\u4e3b\u8bad\u7ec3\u7684\u6570\u636e\u904d\u5386\u548c\u5e76\u884c\u89c4\u5219",
+        "name": "4. \u6b63\u5f0f\u4e3b\u8bad\u7ec3\u7684\u6570\u636e\u904d\u5386\u548c\u5e76\u884c\u89c4\u5219",
+        "type": "Section",
+        "filePath": "docs/scratch_primary_training_v1.md",
+        "change_type": "touched"
+      },
+      {
+        "id": "Section:docs/scratch_primary_training_v1.md:L106:2026-09-27 DiamondHill \u6267\u884c\u4f4d\u7f6e\u66f4\u65b0",
+        "name": "2026-09-27 DiamondHill \u6267\u884c\u4f4d\u7f6e\u66f4\u65b0",
+        "type": "Section",
+        "filePath": "docs/scratch_primary_training_v1.md",
+        "change_type": "touched"
+      },
+      {
+        "id": "Section:docs/scratch_primary_training_v1.md:L125:5. \u9884\u7b97\u3001\u68c0\u67e5\u70b9\u548c\u505c\u6b62\u89c4\u5219",
+        "name": "5. \u9884\u7b97\u3001\u68c0\u67e5\u70b9\u548c\u505c\u6b62\u89c4\u5219",
+        "type": "Section",
+        "filePath": "docs/scratch_primary_training_v1.md",
+        "change_type": "touched"
+      },
+      {
+        "id": "Function:scripts/control_stage_fullbatch.py:control_stage_fullbatch",
+        "name": "control_stage_fullbatch",
+        "type": "Function",
+        "filePath": "scripts/control_stage_fullbatch.py",
+        "change_type": "touched"
+      },
+      {
+        "id": "Function:scripts/evaluate_stage0.py:evaluate_row",
+        "name": "evaluate_row",
+        "type": "Function",
+        "filePath": "scripts/evaluate_stage0.py",
+        "change_type": "touched"
+      },
+      {
+        "id": "Function:scripts/export_stage_fullbatch.py:export_stage_fullbatch",
+        "name": "export_stage_fullbatch",
+        "type": "Function",
+        "filePath": "scripts/export_stage_fullbatch.py",
+        "change_type": "touched"
+      },
+      {
+        "id": "Function:scripts/recover_stage_fullbatch_verification.py:recover_stage_fullbatch_verification",
+        "name": "recover_stage_fullbatch_verification",
+        "type": "Function",
+        "filePath": "scripts/recover_stage_fullbatch_verification.py",
+        "change_type": "touched"
+      },
+      {
+        "id": "Function:scripts/recover_stage_fullbatch_verification.py:recover_stage_fullbatch_verification.sha@18:4",
+        "name": "sha",
+        "type": "Function",
+        "filePath": "scripts/recover_stage_fullbatch_verification.py",
+        "change_type": "touched"
+      },
+      {
+        "id": "Function:scripts/recover_stage_fullbatch_verification.py:recover_stage_fullbatch_verification.read@19:4",
+        "name": "read",
+        "type": "Function",
+        "filePath": "scripts/recover_stage_fullbatch_verification.py",
+        "change_type": "touched"
+      },
+      {
+        "id": "Function:scripts/recover_stage_fullbatch_verification.py:recover_stage_fullbatch_verification.protect@26:4",
+        "name": "protect",
+        "type": "Function",
+        "filePath": "scripts/recover_stage_fullbatch_verification.py",
+        "change_type": "touched"
+      },
+      {
+        "id": "Function:scripts/recover_stage_fullbatch_verification.py:recover_stage_fullbatch_verification.save@49:4",
+        "name": "save",
+        "type": "Function",
+        "filePath": "scripts/recover_stage_fullbatch_verification.py",
+        "change_type": "touched"
+      },
+      {
+        "id": "Function:src/fastglycan/all_atom_metrics.py:compare_coordinates",
+        "name": "compare_coordinates",
+        "type": "Function",
+        "filePath": "src/fastglycan/all_atom_metrics.py",
+        "change_type": "touched"
+      },
+      {
+        "id": "Function:src/fastglycan/all_atom_metrics.py:compare_coordinates.rmsd@16:4",
+        "name": "rmsd",
+        "type": "Function",
+        "filePath": "src/fastglycan/all_atom_metrics.py",
+        "change_type": "touched"
+      },
+      {
+        "id": "Variable:src/fastglycan/fullbatch_recovery.py:DEPENDENCY_SHA256",
+        "name": "DEPENDENCY_SHA256",
+        "type": "Variable",
+        "filePath": "src/fastglycan/fullbatch_recovery.py",
+        "change_type": "touched"
+      },
+      {
+        "id": "Function:src/fastglycan/fullbatch_recovery.py:verify_fullbatch_completion",
+        "name": "verify_fullbatch_completion",
+        "type": "Function",
+        "filePath": "src/fastglycan/fullbatch_recovery.py",
+        "change_type": "touched"
+      },
+      {
+        "id": "Function:src/fastglycan/fullbatch_recovery.py:verify_fullbatch_completion.read@16:4",
+        "name": "read",
+        "type": "Function",
+        "filePath": "src/fastglycan/fullbatch_recovery.py",
+        "change_type": "touched"
+      },
+      {
+        "id": "Function:src/fastglycan/fullbatch_recovery.py:verify_fullbatch_completion.sha@17:4",
+        "name": "sha",
+        "type": "Function",
+        "filePath": "src/fastglycan/fullbatch_recovery.py",
+        "change_type": "touched"
+      },
+      {
+        "id": "Function:src/fastglycan/fullbatch_recovery.py:verify_fullbatch_completion.good@23:4",
+        "name": "good",
+        "type": "Function",
+        "filePath": "src/fastglycan/fullbatch_recovery.py",
+        "change_type": "touched"
+      },
+      {
+        "id": "Function:src/fastglycan/fullbatch_results.py:verify_fullbatch_results",
+        "name": "verify_fullbatch_results",
+        "type": "Function",
+        "filePath": "src/fastglycan/fullbatch_results.py",
+        "change_type": "touched"
+      },
+      {
+        "id": "Class:src/onestepfold/models/coordinate_refiner.py:CoordinateRefinerConfig",
+        "name": "CoordinateRefinerConfig",
+        "type": "Class",
+        "filePath": "src/onestepfold/models/coordinate_refiner.py",
+        "change_type": "touched"
+      },
+      {
+        "id": "Property:src/onestepfold/models/coordinate_refiner.py:CoordinateRefinerConfig.zero_initialize_output",
+        "name": "zero_initialize_output",
+        "type": "Property",
+        "filePath": "src/onestepfold/models/coordinate_refiner.py",
+        "change_type": "touched"
+      },
+      {
+        "id": "Property:src/onestepfold/models/coordinate_refiner.py:CoordinateRefinerConfig.geometry_features",
+        "name": "geometry_features",
+        "type": "Property",
+        "filePath": "src/onestepfold/models/coordinate_refiner.py",
+        "change_type": "touched"
+      },
+      {
+        "id": "Method:src/onestepfold/models/coordinate_refiner.py:CoordinateRefinerConfig.__post_init__#0",
+        "name": "__post_init__",
+        "type": "Method",
+        "filePath": "src/onestepfold/models/coordinate_refiner.py",
+        "change_type": "touched"
+      },
+      {
+        "id": "Function:src/onestepfold/models/coordinate_refiner.py:backbone_frames",
+        "name": "backbone_frames",
+        "type": "Function",
+        "filePath": "src/onestepfold/models/coordinate_refiner.py",
+        "change_type": "touched"
+      },
+      {
+        "id": "Class:src/onestepfold/models/coordinate_refiner.py:GlobalCoordinateRefiner",
+        "name": "GlobalCoordinateRefiner",
+        "type": "Class",
+        "filePath": "src/onestepfold/models/coordinate_refiner.py",
+        "change_type": "touched"
+      },
+      {
+        "id": "Method:src/onestepfold/models/coordinate_refiner.py:GlobalCoordinateRefiner.__init__#1",
+        "name": "__init__",
+        "type": "Method",
+        "filePath": "src/onestepfold/models/coordinate_refiner.py",
+        "change_type": "touched"
+      },
+      {
+        "id": "Method:src/onestepfold/models/coordinate_refiner.py:GlobalCoordinateRefiner.forward#4",
+        "name": "forward",
+        "type": "Method",
+        "filePath": "src/onestepfold/models/coordinate_refiner.py",
+        "change_type": "touched"
+      },
+      {
+        "id": "Function:tests/test_coordinate_refiner.py:test_refiner_is_rigid_transform_consistent",
+        "name": "test_refiner_is_rigid_transform_consistent",
+        "type": "Function",
+        "filePath": "tests/test_coordinate_refiner.py",
+        "change_type": "touched"
+      },
+      {
+        "id": "Function:tests/test_coordinate_refiner.py:test_refiner_zero_initialization_is_exact_c2_fallback",
+        "name": "test_refiner_zero_initialization_is_exact_c2_fallback",
+        "type": "Function",
+        "filePath": "tests/test_coordinate_refiner.py",
+        "change_type": "touched"
+      },
+      {
+        "id": "Function:tests/test_coordinate_refiner.py:test_geometry_changes_local_correction_and_ignores_padding",
+        "name": "test_geometry_changes_local_correction_and_ignores_padding",
+        "type": "Function",
+        "filePath": "tests/test_coordinate_refiner.py",
+        "change_type": "touched"
+      },
+      {
+        "id": "Function:tests/test_coordinate_refiner.py:test_geometry_branch_learns_after_zero_initialized_first_step",
+        "name": "test_geometry_branch_learns_after_zero_initialized_first_step",
+        "type": "Function",
+        "filePath": "tests/test_coordinate_refiner.py",
+        "change_type": "touched"
+      },
+      {
+        "id": "Function:tests/test_coordinate_refiner.py:test_zero_pair_bias_matches_radial_baseline_initialization_and_inference",
+        "name": "test_zero_pair_bias_matches_radial_baseline_initialization_and_inference",
+        "type": "Function",
+        "filePath": "tests/test_coordinate_refiner.py",
+        "change_type": "touched"
+      },
+      {
+        "id": "Function:tests/test_coordinate_refiner.py:test_geometry_preserves_shared_baseline_initialization",
+        "name": "test_geometry_preserves_shared_baseline_initialization",
+        "type": "Function",
+        "filePath": "tests/test_coordinate_refiner.py",
+        "change_type": "touched"
+      },
+      {
+        "id": "Function:tests/test_stage_fullbatch_recovery.py:_write",
+        "name": "_write",
+        "type": "Function",
+        "filePath": "tests/test_stage_fullbatch_recovery.py",
+        "change_type": "touched"
+      },
+      {
+        "id": "Function:tests/test_stage_fullbatch_recovery.py:_completed_recovery",
+        "name": "_completed_recovery",
+        "type": "Function",
+        "filePath": "tests/test_stage_fullbatch_recovery.py",
+        "change_type": "touched"
+      },
+      {
+        "id": "Function:tests/test_stage_fullbatch_recovery.py:_completed_recovery.sha@17:4",
+        "name": "sha",
+        "type": "Function",
+        "filePath": "tests/test_stage_fullbatch_recovery.py",
+        "change_type": "touched"
+      },
+      {
+        "id": "Function:tests/test_stage_fullbatch_recovery.py:test_recovery_keeps_original_failure_and_binds_successful_replays",
+        "name": "test_recovery_keeps_original_failure_and_binds_successful_replays",
+        "type": "Function",
+        "filePath": "tests/test_stage_fullbatch_recovery.py",
+        "change_type": "touched"
+      },
+      {
+        "id": "Function:tests/test_stage_fullbatch_recovery.py:test_recovery_does_not_waive_failed_or_changed_evidence",
+        "name": "test_recovery_does_not_waive_failed_or_changed_evidence",
+        "type": "Function",
+        "filePath": "tests/test_stage_fullbatch_recovery.py",
+        "change_type": "touched"
+      }
+    ],
+    "affected_processes": [
+      {
+        "id": "proc_44_control_stage_fullba",
+        "name": "Control_stage_fullbatch \u2192 Save",
+        "process_type": "intra_community",
+        "step_count": 3,
+        "changed_steps": [
+          {
+            "symbol": "control_stage_fullbatch",
+            "step": 1
+          }
+        ]
+      },
+      {
+        "id": "proc_55_recover_stage_fullba",
+        "name": "Recover_stage_fullbatch_verification \u2192 Sha",
+        "process_type": "intra_community",
+        "step_count": 3,
+        "changed_steps": [
+          {
+            "symbol": "protect",
+            "step": 2
+          },
+          {
+            "symbol": "sha",
+            "step": 3
+          },
+          {
+            "symbol": "recover_stage_fullbatch_verification",
+            "step": 1
+          }
+        ]
+      },
+      {
+        "id": "proc_97_verify_fullbatch_res",
+        "name": "Verify_fullbatch_results \u2192 Good",
+        "process_type": "cross_community",
+        "step_count": 3,
+        "changed_steps": [
+          {
+            "symbol": "good",
+            "step": 3
+          },
+          {
+            "symbol": "verify_fullbatch_completion",
+            "step": 2
+          },
+          {
+            "symbol": "verify_fullbatch_results",
+            "step": 1
+          }
+        ]
+      },
+      {
+        "id": "proc_98_verify_fullbatch_res",
+        "name": "Verify_fullbatch_results \u2192 Read",
+        "process_type": "cross_community",
+        "step_count": 3,
+        "changed_steps": [
+          {
+            "symbol": "read",
+            "step": 3
+          },
+          {
+            "symbol": "verify_fullbatch_completion",
+            "step": 2
+          },
+          {
+            "symbol": "verify_fullbatch_results",
+            "step": 1
+          }
+        ]
+      },
+      {
+        "id": "proc_99_verify_fullbatch_res",
+        "name": "Verify_fullbatch_results \u2192 _close",
+        "process_type": "intra_community",
+        "step_count": 3,
+        "changed_steps": [
+          {
+            "symbol": "verify_fullbatch_results",
+            "step": 1
+          }
+        ]
+      },
+      {
+        "id": "proc_110_forward",
+        "name": "Forward \u2192 _normalize",
+        "process_type": "intra_community",
+        "step_count": 3,
+        "changed_steps": [
+          {
+            "symbol": "forward",
+            "step": 1
+          },
+          {
+            "symbol": "backbone_frames",
+            "step": 2
+          }
+        ]
+      }
+    ]
+  },
+  "staged": {
+    "summary": {
+      "changed_count": 25,
+      "affected_count": 5,
+      "changed_files": 127,
+      "risk_level": "medium"
+    },
+    "changed_symbols": [
+      {
+        "id": "Section:docs/mini_stage_fullbatch_findings_2026-10-10.md:L1:Mini \u5019\u9009 pair \u62df\u5408\uff1a\u5b8c\u6574 TRAIN \u68af\u5ea6\u4f18\u5316\u5bf9\u7167",
+        "name": "Mini \u5019\u9009 pair \u62df\u5408\uff1a\u5b8c\u6574 TRAIN \u68af\u5ea6\u4f18\u5316\u5bf9\u7167",
+        "type": "Section",
+        "filePath": "docs/mini_stage_fullbatch_findings_2026-10-10.md",
+        "change_type": "touched"
+      },
+      {
+        "id": "Section:docs/mini_stage_fullbatch_findings_2026-10-10.md:L14:1. \u6bd4\u8f83\u4e86\u4ec0\u4e48",
+        "name": "1. \u6bd4\u8f83\u4e86\u4ec0\u4e48",
+        "type": "Section",
+        "filePath": "docs/mini_stage_fullbatch_findings_2026-10-10.md",
+        "change_type": "touched"
+      },
+      {
+        "id": "Section:docs/mini_stage_fullbatch_findings_2026-10-10.md:L42:2. AA \u7279\u5f02\u6062\u590d\u4ecd\u5f88\u6709\u9650",
+        "name": "2. AA \u7279\u5f02\u6062\u590d\u4ecd\u5f88\u6709\u9650",
+        "type": "Section",
+        "filePath": "docs/mini_stage_fullbatch_findings_2026-10-10.md",
+        "change_type": "touched"
+      },
+      {
+        "id": "Section:docs/mini_stage_fullbatch_findings_2026-10-10.md:L64:3. \u6709\u5c40\u90e8\u9009\u62e9\u6536\u76ca\uff0c\u6ca1\u6709\u6574\u4f53\u54cd\u5e94\u6062\u590d",
+        "name": "3. \u6709\u5c40\u90e8\u9009\u62e9\u6536\u76ca\uff0c\u6ca1\u6709\u6574\u4f53\u54cd\u5e94\u6062\u590d",
+        "type": "Section",
+        "filePath": "docs/mini_stage_fullbatch_findings_2026-10-10.md",
+        "change_type": "touched"
+      },
+      {
+        "id": "Section:docs/mini_stage_fullbatch_findings_2026-10-10.md:L103:4. \u672c\u6279\u4e0d\u80fd\u56de\u7b54\u7684\u56e0\u679c\u95ee\u9898",
+        "name": "4. \u672c\u6279\u4e0d\u80fd\u56de\u7b54\u7684\u56e0\u679c\u95ee\u9898",
+        "type": "Section",
+        "filePath": "docs/mini_stage_fullbatch_findings_2026-10-10.md",
+        "change_type": "touched"
+      },
+      {
+        "id": "Section:docs/mini_stage_fullbatch_findings_2026-10-10.md:L119:5. \u5b8c\u6574\u6027\u3001\u5931\u8d25\u8bb0\u5f55\u4e0e\u6210\u672c",
+        "name": "5. \u5b8c\u6574\u6027\u3001\u5931\u8d25\u8bb0\u5f55\u4e0e\u6210\u672c",
+        "type": "Section",
+        "filePath": "docs/mini_stage_fullbatch_findings_2026-10-10.md",
+        "change_type": "touched"
+      },
+      {
+        "id": "Section:docs/mini_stage_fullbatch_verification_recovery_2026-10-10.md:L1:Verification-only recovery of the full-batch experiment",
+        "name": "Verification-only recovery of the full-batch experiment",
+        "type": "Section",
+        "filePath": "docs/mini_stage_fullbatch_verification_recovery_2026-10-10.md",
+        "change_type": "touched"
+      },
+      {
+        "id": "Function:scripts/control_stage_fullbatch.py:control_stage_fullbatch",
+        "name": "control_stage_fullbatch",
+        "type": "Function",
+        "filePath": "scripts/control_stage_fullbatch.py",
+        "change_type": "touched"
+      },
+      {
+        "id": "Function:scripts/export_stage_fullbatch.py:export_stage_fullbatch",
+        "name": "export_stage_fullbatch",
+        "type": "Function",
+        "filePath": "scripts/export_stage_fullbatch.py",
+        "change_type": "touched"
+      },
+      {
+        "id": "Function:scripts/recover_stage_fullbatch_verification.py:recover_stage_fullbatch_verification",
+        "name": "recover_stage_fullbatch_verification",
+        "type": "Function",
+        "filePath": "scripts/recover_stage_fullbatch_verification.py",
+        "change_type": "touched"
+      },
+      {
+        "id": "Function:scripts/recover_stage_fullbatch_verification.py:recover_stage_fullbatch_verification.sha@18:4",
+        "name": "sha",
+        "type": "Function",
+        "filePath": "scripts/recover_stage_fullbatch_verification.py",
+        "change_type": "touched"
+      },
+      {
+        "id": "Function:scripts/recover_stage_fullbatch_verification.py:recover_stage_fullbatch_verification.read@19:4",
+        "name": "read",
+        "type": "Function",
+        "filePath": "scripts/recover_stage_fullbatch_verification.py",
+        "change_type": "touched"
+      },
+      {
+        "id": "Function:scripts/recover_stage_fullbatch_verification.py:recover_stage_fullbatch_verification.protect@26:4",
+        "name": "protect",
+        "type": "Function",
+        "filePath": "scripts/recover_stage_fullbatch_verification.py",
+        "change_type": "touched"
+      },
+      {
+        "id": "Function:scripts/recover_stage_fullbatch_verification.py:recover_stage_fullbatch_verification.save@49:4",
+        "name": "save",
+        "type": "Function",
+        "filePath": "scripts/recover_stage_fullbatch_verification.py",
+        "change_type": "touched"
+      },
+      {
+        "id": "Variable:src/fastglycan/fullbatch_recovery.py:DEPENDENCY_SHA256",
+        "name": "DEPENDENCY_SHA256",
+        "type": "Variable",
+        "filePath": "src/fastglycan/fullbatch_recovery.py",
+        "change_type": "touched"
+      },
+      {
+        "id": "Function:src/fastglycan/fullbatch_recovery.py:verify_fullbatch_completion",
+        "name": "verify_fullbatch_completion",
+        "type": "Function",
+        "filePath": "src/fastglycan/fullbatch_recovery.py",
+        "change_type": "touched"
+      },
+      {
+        "id": "Function:src/fastglycan/fullbatch_recovery.py:verify_fullbatch_completion.read@16:4",
+        "name": "read",
+        "type": "Function",
+        "filePath": "src/fastglycan/fullbatch_recovery.py",
+        "change_type": "touched"
+      },
+      {
+        "id": "Function:src/fastglycan/fullbatch_recovery.py:verify_fullbatch_completion.sha@17:4",
+        "name": "sha",
+        "type": "Function",
+        "filePath": "src/fastglycan/fullbatch_recovery.py",
+        "change_type": "touched"
+      },
+      {
+        "id": "Function:src/fastglycan/fullbatch_recovery.py:verify_fullbatch_completion.good@23:4",
+        "name": "good",
+        "type": "Function",
+        "filePath": "src/fastglycan/fullbatch_recovery.py",
+        "change_type": "touched"
+      },
+      {
+        "id": "Function:src/fastglycan/fullbatch_results.py:verify_fullbatch_results",
+        "name": "verify_fullbatch_results",
+        "type": "Function",
+        "filePath": "src/fastglycan/fullbatch_results.py",
+        "change_type": "touched"
+      },
+      {
+        "id": "Function:tests/test_stage_fullbatch_recovery.py:_write",
+        "name": "_write",
+        "type": "Function",
+        "filePath": "tests/test_stage_fullbatch_recovery.py",
+        "change_type": "touched"
+      },
+      {
+        "id": "Function:tests/test_stage_fullbatch_recovery.py:_completed_recovery",
+        "name": "_completed_recovery",
+        "type": "Function",
+        "filePath": "tests/test_stage_fullbatch_recovery.py",
+        "change_type": "touched"
+      },
+      {
+        "id": "Function:tests/test_stage_fullbatch_recovery.py:_completed_recovery.sha@17:4",
+        "name": "sha",
+        "type": "Function",
+        "filePath": "tests/test_stage_fullbatch_recovery.py",
+        "change_type": "touched"
+      },
+      {
+        "id": "Function:tests/test_stage_fullbatch_recovery.py:test_recovery_keeps_original_failure_and_binds_successful_replays",
+        "name": "test_recovery_keeps_original_failure_and_binds_successful_replays",
+        "type": "Function",
+        "filePath": "tests/test_stage_fullbatch_recovery.py",
+        "change_type": "touched"
+      },
+      {
+        "id": "Function:tests/test_stage_fullbatch_recovery.py:test_recovery_does_not_waive_failed_or_changed_evidence",
+        "name": "test_recovery_does_not_waive_failed_or_changed_evidence",
+        "type": "Function",
+        "filePath": "tests/test_stage_fullbatch_recovery.py",
+        "change_type": "touched"
+      }
+    ],
+    "affected_processes": [
+      {
+        "id": "proc_44_control_stage_fullba",
+        "name": "Control_stage_fullbatch \u2192 Save",
+        "process_type": "intra_community",
+        "step_count": 3,
+        "changed_steps": [
+          {
+            "symbol": "control_stage_fullbatch",
+            "step": 1
+          }
+        ]
+      },
+      {
+        "id": "proc_55_recover_stage_fullba",
+        "name": "Recover_stage_fullbatch_verification \u2192 Sha",
+        "process_type": "intra_community",
+        "step_count": 3,
+        "changed_steps": [
+          {
+            "symbol": "protect",
+            "step": 2
+          },
+          {
+            "symbol": "sha",
+            "step": 3
+          },
+          {
+            "symbol": "recover_stage_fullbatch_verification",
+            "step": 1
+          }
+        ]
+      },
+      {
+        "id": "proc_97_verify_fullbatch_res",
+        "name": "Verify_fullbatch_results \u2192 Good",
+        "process_type": "cross_community",
+        "step_count": 3,
+        "changed_steps": [
+          {
+            "symbol": "good",
+            "step": 3
+          },
+          {
+            "symbol": "verify_fullbatch_completion",
+            "step": 2
+          },
+          {
+            "symbol": "verify_fullbatch_results",
+            "step": 1
+          }
+        ]
+      },
+      {
+        "id": "proc_98_verify_fullbatch_res",
+        "name": "Verify_fullbatch_results \u2192 Read",
+        "process_type": "cross_community",
+        "step_count": 3,
+        "changed_steps": [
+          {
+            "symbol": "read",
+            "step": 3
+          },
+          {
+            "symbol": "verify_fullbatch_completion",
+            "step": 2
+          },
+          {
+            "symbol": "verify_fullbatch_results",
+            "step": 1
+          }
+        ]
+      },
+      {
+        "id": "proc_99_verify_fullbatch_res",
+        "name": "Verify_fullbatch_results \u2192 _close",
+        "process_type": "intra_community",
+        "step_count": 3,
+        "changed_steps": [
+          {
+            "symbol": "verify_fullbatch_results",
+            "step": 1
+          }
+        ]
+      }
+    ]
+  },
+  "review": {
+    "all_scope_risk": "HIGH includes unrelated unstaged code; retained as warning, not waived",
+    "staged_scope_risk": "MEDIUM, 25 symbols and 5 processes",
+    "reviewed": [
+      "import preflight precedes any training launch",
+      "recovery launches only unchanged verification with separately hashed dependency",
+      "export gate requires original eight successes plus four new verified results and original failed imports",
+      "all records and source hashes preserved",
+      "local and remote arithmetic agree",
+      "nine focused tests pass"
+    ],
+    "known_catalogue_limits": "Global flow enumeration capped; manual review covers dynamic wrappers and graph-excluded report scripts."
+  }
+}

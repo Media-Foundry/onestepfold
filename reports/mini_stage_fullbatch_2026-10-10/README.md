@@ -1,54 +1,79 @@
 # Full-TRAIN stage optimization comparison
 
-Status: launched, scientific results **incomplete**. This is a new experiment,
-not a continuation or replacement of the closed update audit.
+**Closed, independently verified; not promoted.** All four runs finished the
+locked128 full-gradient evaluations. Total TRAIN loss improved; AA-specific
+residual recovery remained weak and decoded new-protein response did not improve.
 
-The [protocol](../../docs/mini_stage_fullbatch_v1.md) fixes the model, TRAIN data,
-Final target and two paired seeds. AdamW and bounded L-BFGS each receive128
-full-gradient evaluations. Different optimizer recipes, not equal accepted
-updates or equal wall time. No development-based tuning or promotion.
+Read the [scientific findings](../../docs/mini_stage_fullbatch_findings_2026-10-10.md),
+[original protocol](../../docs/mini_stage_fullbatch_v1.md), and
+[verification-recovery protocol](../../docs/mini_stage_fullbatch_verification_recovery_2026-10-10.md).
 
-`training_lock.json` records832 source hashes, the exact labels/initial states,
-installed optimizer implementation and full work/evaluation budget. Its SHA256:
+| Recipe / seed | Final independently replayed J | TRAIN AA NMSE | New-protein AA NMSE |
+|---|---:|---:|---:|
+| AdamW /272001 | 0.811865 | 0.985223 | 0.995856 |
+| AdamW /272003 | 0.828601 | 0.985946 | 0.995959 |
+| L-BFGS /272001 | 0.851563 | 0.996951 | 0.999107 |
+| L-BFGS /272003 | 0.851790 | 0.997032 | 0.999155 |
+
+Initial J=0.868336. J is site-weighted; displayed NMSE is protein-weighted.
+L-BFGS uses61/60 changed updates versus128/128 AdamW updates. Work is matched
+by gradient evaluations, not wall time or accepted steps. No seed/checkpoint
+selection. All four final models change only one held-site selection,4PT4 L10
+P→Q; the shared mean regret benefit is a local observation, not broad recovery.
+
+![Accepted optimization trajectories and AA residual recovery](optimization_and_aa_response.png)
+
+The AA panels deliberately label their zoomed scales. A zero correction has
+residual NMSE1; a small reduction near1 is not close to complete recovery.
+[Vector figure](optimization_and_aa_response.pdf).
+
+## Evidence and operational recovery
+
+`training_lock.json` SHA256:
 `ed09b10002eaa7d04a4f2ea5843bf33657188a64cfd04836934aa47679993eed`.
+The original832-file scientific source remains unchanged.
 
-`launch.json` identifies controller947128. Four independent workers useHIP0–3;
-HIP4 is reserved for tests/verification, HIP5's unrelated workload is untouched.
-Initial live observation was1791597300.97; it is not evidence of later completion.
-Read current process handles and reports before inferring runtime status.
+Original training/scoring succeeded; four tensor verifiers failed at import
+because the deployed package omitted `verify_stage_pair_recovery.py`.
+`controller.json` remains `closed_with_failures`. The original failed follower
+and logs remain intact. No failed attempt executed a model forward.
 
-`preflight_notes.json` retains local driver stalls and partial-package test
-collection failures. The actual complete-source prelock tests pass3/3; the
-controller rechecked the frozen sources and its three tests also pass. No
-scientific results or success claims follow from these implementation tests.
+`verification_recovery/` contains a separate lock, original committed dependency,
+controller, logs and four successful unchanged-verifier replays on HIP4.
+It adds10,944 verification-only forwards, with no training or numerical-rule
+change. The manifest explicitly records `operational_recovery=true`.
+The source checkpoint hashes are bound in protected evaluation records and
+rechecked during tensor replay and export. Training/scoring are not restarted.
 
-The existing nine new-protein contexts remain development data. Correct AA
-response, raw selection risk, geometry and actual folding cost remain separate
-requirements. No new C4/recycle or ESM/MSA preparation is authorized in this batch.
+`verification.json` records locally reproduced arithmetic for12 nodes,
+576 site-node tensor checks,7,488 correlations,2,496 regrets and94,848 scored
+output records. The last count includes repeated controls; it is not a count
+of new teacher labels or new decoding calls. Actual S1 calls total29,184.
+`optimization_ledger.json` distinguishes rejected trials from returned states;
+`analysis.json` includes all fixed nodes, parent-level intervals and choices.
 
-`startup_verified.json` is the later observed-live snapshot: all four runs passed
-the complete initial S1 replay and their first full TRAIN gradients match the
-preceding audit exactly. The snapshot is still not a final scientific result.
-Aggregate graph change risk is HIGH; `graph_review.json` records the reviewed
-execution boundaries and known static-analysis limits.
+`runs/` contains reports, full logs, summaries and scored candidate records.
+`scientific_code/` is the executed source selection; the missing dependency is
+separately identified in the recovery lock. `result_recovery/` records result-only
+processing; `postprocess_manifest.json` binds generated analysis artifacts.
+Bulk checkpoints/coordinates remain on DiamondHill and are SHA-bound, not copied
+into this repository. `collection_receipt.json` binds the downloaded archive.
 
-Result processing is now installed separately from the locked training source.
-`postprocess_lock.json` hashes the CPU-only exporter/verifier/follower;
-`postprocess_launch.json` identifies follower955486. It waits for all twelve
-training/scoring/tensor-verification jobs to succeed, then exports all fixed
-nodes, checks score arithmetic and accepted optimizer states, and builds an
-archive. It never starts, restarts or modifies training. A failed batch remains
-failed. No terminal scientific results are present in this directory yet.
+The old launch/startup JSONs are dated observations, not current status.
+`future_import_preflight.json` demonstrates that the repository's new import gate
+rejects the old incomplete package before training and accepts the completed one.
+Nine focused reporting/recovery tests pass. No new folding speed result is claimed.
 
-`postprocess_preflight.json` records three focused tests and successful arithmetic
-recalculation of the previous closed panel:720 correlations,240 regrets and9,120
-output summaries. This validates processing, not the new models. The scalar
-verification explicitly relies on the separately recorded full tensor replay;
-it does not pretend to regenerate coordinates from this lightweight export.
+## Reproduce the lightweight analysis
 
-`postprocess_startup.json` observed the same four live workers at1791599128.46:
-AdamW gradients56/24 and L-BFGS61/60. The initially slower second AdamW run has
-continued advancing. Treat this as a dated snapshot, not a live dashboard.
-L-BFGS trial evaluations are retained and charged, but the report uses returned
-parameter hashes and the fixed checkpoint measurements for accepted-state
-trajectories. The minimum trial loss is never used to select a model.
+From the repository root, with NumPy/SciPy and Matplotlib available:
+
+```bash
+PYTHONPATH=src python reports/mini_stage_fullbatch_2026-10-10/verify_results.py
+PYTHONPATH=src python reports/mini_stage_fullbatch_2026-10-10/analyze_results.py
+python reports/mini_stage_fullbatch_2026-10-10/plot_results.py
+```
+
+These commands do not reconstruct coordinates or run a model. Full checkpoint
+replay is separately recorded. The nine new-protein contexts remain repeatedly
+used development data; neither transfer nor an end-to-end accelerator is established.

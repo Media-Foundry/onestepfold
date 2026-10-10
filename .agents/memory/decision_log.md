@@ -1,3 +1,74 @@
+## 2026-10-10 — Full-batch comparison closed; dependency-only verification repaired
+
+Four128-full-gradient runs complete. AdamW terminal independently replayed J:
+0.81186454/0.82860057; L-BFGS0.85156304/0.85178979; initial0.86833602.
+Changed updates128/128 vs61/60; one L-BFGS budget rollback retained/charged.
+TRAIN AA residual NMSE0.98522/0.98595 vs0.99695/0.99703; new-protein AA
+0.99586/0.99596 vs0.99911/0.99916. Both recipes still underfit AA response;
+no convergence or capacity-bound claim. TotalJ and protein-weighted AA differ.
+
+All four held Spearman point gains have descriptive paired intervals above
+zero, but decoded response errors are slightly worse than no correction and
+intervals cross zero. AdamW correct-vs-mismatch response intervals support
+small identity information, not net benefit against no correction. All four
+select the same18 AAs; only4PT4 L10 changesP->Q vsbaseline, explaining all
+regret0.046314->0.044933. Median/worst regret and Top1=6/18 unchanged.
+Geometry passes438/439/437/437 vs432, with6/6/2/2 new failures; severe-pair
+and wrong-centre counts increase. No promotion or new speed result.
+
+Original controller947128 remains closed_with_failures: alltrain/score passed,
+verifiers failed on missing verify_stage_pair_recovery import before model
+execution. Original follower955486 also retained as failed. Separate controller
+1004972 completed1791605397.9588: four unchanged verifiers with original
+committed dependency, same tolerances, HIP4 serial. Recovery lockSHA
+8898d3c57041cd3e89730dbc78bff6988cbdc37ee8b9e7dd823afa4b8c082f86.
+All832 sources and75 protected files unchanged; checkpoint hashes bound in
+protected eval records and rechecked in replay/export. No training restart.
+Export operational_recovery=true; original controller never rewritten.
+
+ArchiveSHAcf7e3af22c965b0f58da154c4c53db6e22978f9a81f02b56cdd58ad2779c6ea8
+verified locally. Local CPU analysis exactly reproduces remote12nodes,
+576site-node checks,7488correlations,2496regrets,94848scored records (including
+repeated controls). Training totals262656forwards/backwards;29184S1;
+10944fixed predictions+24isolation;10944verification forwards separately.
+No C4/recycle/ESM/MSA preparation. HIP5 untouched,6/7 unused. All jobs terminal.
+
+Findings:docs/mini_stage_fullbatch_findings_2026-10-10.md; report and figures:
+reports/mini_stage_fullbatch_2026-10-10. Nine focused result/recovery tests pass.
+Future controller now checks entry-point imports before training: actual old
+package fails, supplement passes. Frozen experiment code unchanged. Preserve
+unrelated workspace/memory tails. Publish closure; do not automatically extend
+this batch or search optimizer/readout settings. Next scientific work must
+address candidate feature formation, with fixedsingle/oraclepair/identity
+and full decoding boundaries retained. No next architecture/training launched.
+Broad goal remains ACTIVE, not achieved. This turn made PROGRESS, not blocked.
+
+## 2026-10-10 — Result follower published; four fits remain active
+
+Pushed039c69bec2e3f7b4f613892db7dc2ba4420d64e2 to origin/main; ls-remote
+confirmed exact equality.15 scoped files, staged graph21 symbols/one process,
+MEDIUM risk, complete all/staged checks with no partial/truncated response.
+Postcommit index:8,377 nodes/15,073 edges/259 flows. Global flow catalogue caps
+remain documented; dynamic result-wrapper calls and graph-excluded reports
+were manually reviewed. Unrelated edits and memory tails preserved.
+
+Last observed1791599373.8746386: original controller947128 still training;
+AdamW272001 has66/128 gradients, AdamW272003 has32/128 and is decoding node32;
+L-BFGS272001 has67/128, L-BFGS272003 has70/128. All four live job records still
+use HIP0..3 and original PIDs. No retraining/resume/migration occurred. CPU
+follower955486 is waiting and updating its status. Protocol, lock, original
+scientific source and all budgets remain unchanged. Training deadline remains
+1791618871.6972454. Do not treat report.last_objective as accepted L-BFGS loss.
+
+Next: poll the same controller/follower and actual child processes; once fully
+closed, copy fullbatch_export.tar.gz, validate its published SHA, unpack without
+overwriting differing provenance, rerun local CPU verification/analysis, inspect
+all fixed nodes, then write the scientific finding. If a worker/follower fails,
+retain evidence and diagnose the actual failure; no automatic quality restart.
+No complete terminal quality result exists at this observation. This goal turn
+made PROGRESS (implemented/tested/deployed/published result processing), not a
+blocked turn; the broad performance goal remains ACTIVE and not achieved.
+
 ## 2026-10-10 — Full-batch result follower installed; training remains live
 
 This continuation made PROGRESS: added result-only exporter, NumPy/SciPy
