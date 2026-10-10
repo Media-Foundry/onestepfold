@@ -1,0 +1,7 @@
+Traceback (most recent call last):
+  File "/data/user/shuang886/Folding/stage_update_audit_v1_20261010/code/scripts/audit_stage_updates.py", line 215, in <module>
+    audit_stage_updates(args.root,args.arm,args.seed)
+  File "/data/user/shuang886/Folding/stage_update_audit_v1_20261010/code/scripts/audit_stage_updates.py", line 25, in audit_stage_updates
+    assert sha256(root / 'code' / name) == digest, name
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: tests/.pytest_cache/v/cache/nodeids

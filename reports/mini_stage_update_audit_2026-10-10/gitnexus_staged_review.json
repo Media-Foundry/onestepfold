@@ -1,0 +1,268 @@
+{
+  "summary": {
+    "changed_count": 28,
+    "affected_count": 3,
+    "changed_files": 98,
+    "risk_level": "medium"
+  },
+  "changed_symbols": [
+    {
+      "id": "Section:docs/mini_stage_update_audit_findings_2026-10-10.md:L1:固定TRAIN状态的更新诊断：完整结果",
+      "name": "固定TRAIN状态的更新诊断：完整结果",
+      "type": "Section",
+      "filePath": "docs/mini_stage_update_audit_findings_2026-10-10.md",
+      "change_type": "touched"
+    },
+    {
+      "id": "Section:docs/mini_stage_update_audit_v1.md:L1:TRAIN-only update audit of the closed stage-aligned pair experiment",
+      "name": "TRAIN-only update audit of the closed stage-aligned pair experiment",
+      "type": "Section",
+      "filePath": "docs/mini_stage_update_audit_v1.md",
+      "change_type": "touched"
+    },
+    {
+      "id": "Function:scripts/audit_stage_updates.py:audit_stage_updates",
+      "name": "audit_stage_updates",
+      "type": "Function",
+      "filePath": "scripts/audit_stage_updates.py",
+      "change_type": "touched"
+    },
+    {
+      "id": "Function:scripts/audit_stage_updates.py:audit_stage_updates.forbid_native@41:4",
+      "name": "forbid_native",
+      "type": "Function",
+      "filePath": "scripts/audit_stage_updates.py",
+      "change_type": "touched"
+    },
+    {
+      "id": "Function:scripts/audit_stage_updates.py:audit_stage_updates.heartbeat@50:4",
+      "name": "heartbeat",
+      "type": "Function",
+      "filePath": "scripts/audit_stage_updates.py",
+      "change_type": "touched"
+    },
+    {
+      "id": "Function:scripts/audit_stage_updates.py:audit_stage_updates.forward@55:4",
+      "name": "forward",
+      "type": "Function",
+      "filePath": "scripts/audit_stage_updates.py",
+      "change_type": "touched"
+    },
+    {
+      "id": "Function:scripts/audit_stage_updates.py:audit_stage_updates.full_objective@70:4",
+      "name": "full_objective",
+      "type": "Function",
+      "filePath": "scripts/audit_stage_updates.py",
+      "change_type": "touched"
+    },
+    {
+      "id": "Function:scripts/control_stage_update_audit.py:control_stage_update_audit",
+      "name": "control_stage_update_audit",
+      "type": "Function",
+      "filePath": "scripts/control_stage_update_audit.py",
+      "change_type": "touched"
+    },
+    {
+      "id": "Function:scripts/control_stage_update_audit.py:control_stage_update_audit.save@18:4",
+      "name": "save",
+      "type": "Function",
+      "filePath": "scripts/control_stage_update_audit.py",
+      "change_type": "touched"
+    },
+    {
+      "id": "Function:scripts/export_stage_update_audit.py:export_stage_update_audit",
+      "name": "export_stage_update_audit",
+      "type": "Function",
+      "filePath": "scripts/export_stage_update_audit.py",
+      "change_type": "touched"
+    },
+    {
+      "id": "Function:scripts/export_stage_update_audit.py:export_stage_update_audit.digest@9:4",
+      "name": "digest",
+      "type": "Function",
+      "filePath": "scripts/export_stage_update_audit.py",
+      "change_type": "touched"
+    },
+    {
+      "id": "Function:scripts/export_stage_update_audit.py:export_stage_update_audit.load@10:4",
+      "name": "load",
+      "type": "Function",
+      "filePath": "scripts/export_stage_update_audit.py",
+      "change_type": "touched"
+    },
+    {
+      "id": "Function:scripts/verify_stage_update_audit.py:verify_stage_update_audit",
+      "name": "verify_stage_update_audit",
+      "type": "Function",
+      "filePath": "scripts/verify_stage_update_audit.py",
+      "change_type": "touched"
+    },
+    {
+      "id": "Function:scripts/verify_stage_update_audit.py:verify_stage_update_audit.close@13:4",
+      "name": "close",
+      "type": "Function",
+      "filePath": "scripts/verify_stage_update_audit.py",
+      "change_type": "touched"
+    },
+    {
+      "id": "Function:scripts/verify_stage_update_audit.py:verify_stage_update_audit.comparison@15:4",
+      "name": "comparison",
+      "type": "Function",
+      "filePath": "scripts/verify_stage_update_audit.py",
+      "change_type": "touched"
+    },
+    {
+      "id": "Function:scripts/verify_stage_update_audit.py:verify_stage_update_audit.array@34:16",
+      "name": "array",
+      "type": "Function",
+      "filePath": "scripts/verify_stage_update_audit.py",
+      "change_type": "touched"
+    },
+    {
+      "id": "Class:src/fastglycan/stage_update_diagnostic.py:StageUpdateProbe",
+      "name": "StageUpdateProbe",
+      "type": "Class",
+      "filePath": "src/fastglycan/stage_update_diagnostic.py",
+      "change_type": "touched"
+    },
+    {
+      "id": "Method:src/fastglycan/stage_update_diagnostic.py:StageUpdateProbe.__init__#2",
+      "name": "__init__",
+      "type": "Method",
+      "filePath": "src/fastglycan/stage_update_diagnostic.py",
+      "change_type": "touched"
+    },
+    {
+      "id": "Method:src/fastglycan/stage_update_diagnostic.py:StageUpdateProbe.vector#1",
+      "name": "vector",
+      "type": "Method",
+      "filePath": "src/fastglycan/stage_update_diagnostic.py",
+      "change_type": "touched"
+    },
+    {
+      "id": "Method:src/fastglycan/stage_update_diagnostic.py:StageUpdateProbe.reset#0",
+      "name": "reset",
+      "type": "Method",
+      "filePath": "src/fastglycan/stage_update_diagnostic.py",
+      "change_type": "touched"
+    },
+    {
+      "id": "Method:src/fastglycan/stage_update_diagnostic.py:StageUpdateProbe.assign#2",
+      "name": "assign",
+      "type": "Method",
+      "filePath": "src/fastglycan/stage_update_diagnostic.py",
+      "change_type": "touched"
+    },
+    {
+      "id": "Method:src/fastglycan/stage_update_diagnostic.py:StageUpdateProbe.adam_direction#2",
+      "name": "adam_direction",
+      "type": "Method",
+      "filePath": "src/fastglycan/stage_update_diagnostic.py",
+      "change_type": "touched"
+    },
+    {
+      "id": "Method:src/fastglycan/stage_update_diagnostic.py:StageUpdateProbe.comparison#2",
+      "name": "comparison",
+      "type": "Method",
+      "filePath": "src/fastglycan/stage_update_diagnostic.py",
+      "change_type": "touched"
+    },
+    {
+      "id": "Variable:src/fastglycan/stage_update_diagnostic.py:StageUpdateProbe.comparison.groups@76:8",
+      "name": "groups",
+      "type": "Variable",
+      "filePath": "src/fastglycan/stage_update_diagnostic.py",
+      "change_type": "touched"
+    },
+    {
+      "id": "Function:tests/test_stage_update_diagnostic.py:fixture",
+      "name": "fixture",
+      "type": "Function",
+      "filePath": "tests/test_stage_update_diagnostic.py",
+      "change_type": "touched"
+    },
+    {
+      "id": "Function:tests/test_stage_update_diagnostic.py:test_probes_match_direct_adam_and_do_not_share_history",
+      "name": "test_probes_match_direct_adam_and_do_not_share_history",
+      "type": "Function",
+      "filePath": "tests/test_stage_update_diagnostic.py",
+      "change_type": "touched"
+    },
+    {
+      "id": "Function:tests/test_stage_update_diagnostic.py:test_site_weighting_and_directional_derivative",
+      "name": "test_site_weighting_and_directional_derivative",
+      "type": "Function",
+      "filePath": "tests/test_stage_update_diagnostic.py",
+      "change_type": "touched"
+    },
+    {
+      "id": "Function:tests/test_stage_update_diagnostic.py:test_site_weighting_and_directional_derivative.objective@59:4",
+      "name": "objective",
+      "type": "Function",
+      "filePath": "tests/test_stage_update_diagnostic.py",
+      "change_type": "touched"
+    }
+  ],
+  "affected_processes": [
+    {
+      "id": "proc_34_audit_stage_updates",
+      "name": "Audit_stage_updates → Reset",
+      "process_type": "intra_community",
+      "step_count": 3,
+      "changed_steps": [
+        {
+          "symbol": "audit_stage_updates",
+          "step": 1
+        },
+        {
+          "symbol": "adam_direction",
+          "step": 2
+        },
+        {
+          "symbol": "reset",
+          "step": 3
+        }
+      ]
+    },
+    {
+      "id": "proc_35_audit_stage_updates",
+      "name": "Audit_stage_updates → Vector",
+      "process_type": "intra_community",
+      "step_count": 3,
+      "changed_steps": [
+        {
+          "symbol": "audit_stage_updates",
+          "step": 1
+        },
+        {
+          "symbol": "adam_direction",
+          "step": 2
+        },
+        {
+          "symbol": "vector",
+          "step": 3
+        }
+      ]
+    },
+    {
+      "id": "proc_87_verify_stage_update_",
+      "name": "Verify_stage_update_audit → Close",
+      "process_type": "intra_community",
+      "step_count": 3,
+      "changed_steps": [
+        {
+          "symbol": "comparison",
+          "step": 2
+        },
+        {
+          "symbol": "close",
+          "step": 3
+        },
+        {
+          "symbol": "verify_stage_update_audit",
+          "step": 1
+        }
+      ]
+    }
+  ]
+}

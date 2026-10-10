@@ -1,0 +1,47 @@
+2026-10-10 04:17:51,015 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/runner/batch_inference.py:403] INFO runner.batch_inference: Inference by Protenix: model_size: mini, with_feature: esm, model_version: v0.5.0, dtype: bf16
+2026-10-10 04:17:51,015 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/runner/batch_inference.py:408] INFO runner.batch_inference: Triangle_multiplicative kernel: torch, Triangle_attention kernel: torch
+2026-10-10 04:17:51,015 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/runner/batch_inference.py:412] INFO runner.batch_inference: enable_diffusion_shared_vars_cache: True, enable_efficient_fusion: True, enable_tf32: False
+2026-10-10 04:17:51,016 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/runner/inference.py:246] INFO runner.inference: Distributed environment: world size: 1, global rank: 0, local rank: 0
+2026-10-10 04:17:51,016 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/runner/inference.py:98] INFO root: LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+2026-10-10 04:17:51,016 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/runner/inference.py:127] INFO root: Finished environment initialization.
+train scheduler 16.0
+inference scheduler 16.0
+Diffusion Module has 16.0
+2026-10-10 04:18:08,265 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/runner/inference.py:246] INFO runner.inference: Loading from /data/user/shuang886/Folding/protenix_stage0_pkg/v1_1/runtime/checkpoint/protenix_mini_esm_v0.5.0.pt, strict: False
+2026-10-10 04:18:08,753 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/runner/inference.py:246] INFO runner.inference: Sampled key: module.input_embedder.atom_attention_encoder.linear_no_bias_ref_pos.weight
+2026-10-10 04:18:08,794 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/runner/inference.py:246] INFO runner.inference: Finish loading checkpoint.
+2026-10-10 04:18:08,797 [/home/pc/anaconda3/envs/fold/lib/python3.12/site-packages/runner/inference.py:246] INFO runner.inference: Model parameters: 135.22M
+UPDATE_AUDIT hint 272003 load {'step': 0} 32.50235656899167
+UPDATE_AUDIT hint 272003 full_gradient_complete {'step': 0, 'objective': 0.7875205273322706} 133.97626892398694
+UPDATE_AUDIT hint 272003 finite_probe {'step': 0, 'direction': 'mean_clipped_adam', 'fraction': 0.1, 'loss_change': -0.0005479388019795639} 183.28980814598617
+UPDATE_AUDIT hint 272003 finite_probe {'step': 0, 'direction': 'mean_clipped_adam', 'fraction': 1.0, 'loss_change': 0.001280270597929234} 224.09082760399906
+UPDATE_AUDIT hint 272003 finite_probe {'step': 0, 'direction': 'mean_unclipped_adam', 'fraction': 0.1, 'loss_change': -0.0005479666742355116} 264.8432624019915
+UPDATE_AUDIT hint 272003 finite_probe {'step': 0, 'direction': 'mean_unclipped_adam', 'fraction': 1.0, 'loss_change': 0.0012806205529501957} 305.6228731709998
+UPDATE_AUDIT hint 272003 finite_probe {'step': 0, 'direction': 'full_gradient_adam', 'fraction': 0.1, 'loss_change': -0.0011070035813243173} 346.52359072398394
+UPDATE_AUDIT hint 272003 finite_probe {'step': 0, 'direction': 'full_gradient_adam', 'fraction': 1.0, 'loss_change': 0.039842943931955754} 387.49338852099027
+UPDATE_AUDIT hint 272003 finite_probe {'step': 0, 'direction': 'negative_full_gradient', 'fraction': 0.1, 'loss_change': 0.049289699530926545} 428.52049078198615
+UPDATE_AUDIT hint 272003 finite_probe {'step': 0, 'direction': 'negative_full_gradient', 'fraction': 1.0, 'loss_change': 5.65486992983914} 469.5125023419969
+UPDATE_AUDIT hint 272003 node_complete {'step': 0} 471.1350416709902
+UPDATE_AUDIT hint 272003 load {'step': 4104} 471.30305870599113
+UPDATE_AUDIT hint 272003 full_gradient_complete {'step': 4104, 'objective': 0.7903850668935213} 528.9333523469977
+UPDATE_AUDIT hint 272003 finite_probe {'step': 4104, 'direction': 'mean_clipped_adam', 'fraction': 0.1, 'loss_change': -0.00018150210645750953} 577.8175595770008
+UPDATE_AUDIT hint 272003 finite_probe {'step': 4104, 'direction': 'mean_clipped_adam', 'fraction': 1.0, 'loss_change': 0.0007698985030099026} 619.6527746380016
+UPDATE_AUDIT hint 272003 finite_probe {'step': 4104, 'direction': 'mean_unclipped_adam', 'fraction': 0.1, 'loss_change': -0.003089279463009298} 660.7232425230031
+UPDATE_AUDIT hint 272003 finite_probe {'step': 4104, 'direction': 'mean_unclipped_adam', 'fraction': 1.0, 'loss_change': -0.021702299532884717} 704.3334411380056
+UPDATE_AUDIT hint 272003 finite_probe {'step': 4104, 'direction': 'full_gradient_adam', 'fraction': 0.1, 'loss_change': -0.0003331584502366258} 757.0952591449895
+UPDATE_AUDIT hint 272003 finite_probe {'step': 4104, 'direction': 'full_gradient_adam', 'fraction': 1.0, 'loss_change': -0.0007492808141010832} 815.4613235389988
+UPDATE_AUDIT hint 272003 finite_probe {'step': 4104, 'direction': 'negative_full_gradient', 'fraction': 0.1, 'loss_change': 0.014420037652745243} 1012.3841475060035
+UPDATE_AUDIT hint 272003 finite_probe {'step': 4104, 'direction': 'negative_full_gradient', 'fraction': 1.0, 'loss_change': 3.268029718000582} 1187.8530605770065
+UPDATE_AUDIT hint 272003 node_complete {'step': 4104} 1190.359257603006
+UPDATE_AUDIT hint 272003 load {'step': 8208} 1190.566006373003
+UPDATE_AUDIT hint 272003 full_gradient_complete {'step': 8208, 'objective': 0.7744808275788073} 1506.961603003001
+UPDATE_AUDIT hint 272003 finite_probe {'step': 8208, 'direction': 'mean_clipped_adam', 'fraction': 0.1, 'loss_change': -0.00047629781761904244} 1623.6180895660073
+UPDATE_AUDIT hint 272003 finite_probe {'step': 8208, 'direction': 'mean_clipped_adam', 'fraction': 1.0, 'loss_change': -0.0037203947112747215} 1672.403261398984
+UPDATE_AUDIT hint 272003 finite_probe {'step': 8208, 'direction': 'mean_unclipped_adam', 'fraction': 0.1, 'loss_change': -0.003320493199348795} 1747.059676445002
+UPDATE_AUDIT hint 272003 finite_probe {'step': 8208, 'direction': 'mean_unclipped_adam', 'fraction': 1.0, 'loss_change': -0.01710639167782846} 1786.1976336429943
+UPDATE_AUDIT hint 272003 finite_probe {'step': 8208, 'direction': 'full_gradient_adam', 'fraction': 0.1, 'loss_change': -0.0005807867224018048} 1838.1849967140006
+UPDATE_AUDIT hint 272003 finite_probe {'step': 8208, 'direction': 'full_gradient_adam', 'fraction': 1.0, 'loss_change': -0.004563432996433692} 1881.8560466509953
+UPDATE_AUDIT hint 272003 finite_probe {'step': 8208, 'direction': 'negative_full_gradient', 'fraction': 0.1, 'loss_change': 0.012124158794946216} 1934.113295174
+UPDATE_AUDIT hint 272003 finite_probe {'step': 8208, 'direction': 'negative_full_gradient', 'fraction': 1.0, 'loss_change': 2.7871577010687565} 1973.7115629519976
+UPDATE_AUDIT hint 272003 node_complete {'step': 8208} 1975.6304701560002
+UPDATE_AUDIT hint 272003 complete {} 1981.4727960019954

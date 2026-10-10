@@ -1,0 +1,106 @@
+{
+  "scope": "fixed-state TRAIN update diagnostic closeout only",
+  "all_scope": {
+    "changed_count": 63,
+    "affected_count": 4,
+    "changed_files": 109,
+    "risk_level": "medium"
+  },
+  "staged_scope": {
+    "changed_count": 28,
+    "affected_count": 3,
+    "changed_files": 98,
+    "risk_level": "medium"
+  },
+  "partial": false,
+  "truncated": false,
+  "affected_processes_reviewed": [
+    {
+      "id": "proc_34_audit_stage_updates",
+      "name": "Audit_stage_updates → Reset",
+      "process_type": "intra_community",
+      "step_count": 3,
+      "changed_steps": [
+        {
+          "symbol": "audit_stage_updates",
+          "step": 1
+        },
+        {
+          "symbol": "adam_direction",
+          "step": 2
+        },
+        {
+          "symbol": "reset",
+          "step": 3
+        }
+      ]
+    },
+    {
+      "id": "proc_35_audit_stage_updates",
+      "name": "Audit_stage_updates → Vector",
+      "process_type": "intra_community",
+      "step_count": 3,
+      "changed_steps": [
+        {
+          "symbol": "audit_stage_updates",
+          "step": 1
+        },
+        {
+          "symbol": "adam_direction",
+          "step": 2
+        },
+        {
+          "symbol": "vector",
+          "step": 3
+        }
+      ]
+    },
+    {
+      "id": "proc_87_verify_stage_update_",
+      "name": "Verify_stage_update_audit → Close",
+      "process_type": "intra_community",
+      "step_count": 3,
+      "changed_steps": [
+        {
+          "symbol": "comparison",
+          "step": 2
+        },
+        {
+          "symbol": "close",
+          "step": 3
+        },
+        {
+          "symbol": "verify_stage_update_audit",
+          "step": 1
+        }
+      ]
+    }
+  ],
+  "review_conclusion": "Only new audit helpers, controller/verifier/export scripts, tests, evidence and task-specific memory prefixes are staged. Existing folding, recovery and training implementation files are unchanged by this commit.",
+  "index_limits": [
+    "The global process catalogue is capped: 788 of 988 candidate entry points were not selected, 433 callees skipped, and four walks budget-limited. Absence from process results does not establish absence of a dependency.",
+    "Callable-value candidate sets exceeded 32 in unrelated legacy scripts; dynamic paths remain a graph boundary.",
+    "Report evidence directories and their standalone analysis scripts are not fully covered by the code index; they were reviewed directly."
+  ],
+  "supplementary_checks": [
+    "Frozen scientific sources are byte-identical to executed archived copies.",
+    "All 41 exported files pass independent local SHA256 and size checks.",
+    "Original saved next-step losses and gradient norms replay exactly at all eight planned checks.",
+    "Two focused tests pass locally and two on DiamondHill; independent NumPy verifier covers all 12 states.",
+    "Only TRAIN labels are admitted; native folding/input/S1 calls are guarded and recorded as zero.",
+    "All counterfactual updates restore original parameters and isolate saved AdamW histories.",
+    "Evidence includes every prespecified direction/fraction, initial integrity failure, and terminal records; no selected model or hyperparameter."
+  ],
+  "whitespace": {
+    "standard_diff_check": "Four blank-line-at-EOF warnings, no other findings.",
+    "preserved_files": [
+      "src/fastglycan/stage_update_diagnostic.py",
+      "tests/test_stage_update_diagnostic.py",
+      "reports/mini_stage_update_audit_2026-10-10/verification_code/src/fastglycan/stage_update_diagnostic.py",
+      "reports/mini_stage_update_audit_2026-10-10/verification_code/tests/test_stage_update_diagnostic.py"
+    ],
+    "reason": "Preserve exact hashes of the executed scientific source and archived copies.",
+    "diff_check_excluding_blank_at_eof": "passed"
+  },
+  "unrelated_workspace_changes": "Preserved and excluded, including coordinate_refiner, all_atom_metrics, previous experiment documents, AGENTS.md and existing untracked archives."
+}

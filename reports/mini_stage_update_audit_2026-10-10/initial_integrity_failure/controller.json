@@ -1,0 +1,41 @@
+{
+  "complete": false,
+  "phase": "failed",
+  "jobs": [
+    {
+      "arm": "final",
+      "seed": 272001,
+      "hip": 0,
+      "pid": 827602,
+      "status": "failed",
+      "exit_code": 1
+    },
+    {
+      "arm": "final",
+      "seed": 272003,
+      "hip": 1,
+      "pid": 827603,
+      "status": "terminated_after_audit_failure",
+      "exit_code": 1
+    },
+    {
+      "arm": "hint",
+      "seed": 272001,
+      "hip": 2,
+      "pid": 827605,
+      "status": "terminated_after_audit_failure",
+      "exit_code": 1
+    },
+    {
+      "arm": "hint",
+      "seed": 272003,
+      "hip": 3,
+      "pid": 827607,
+      "status": "terminated_after_audit_failure",
+      "exit_code": 1
+    }
+  ],
+  "deadline_unix": 1791598416.4427438,
+  "seconds": 10.008319021988427,
+  "error": "RuntimeError(\"Incomplete audit {'arm': 'final', 'seed': 272001, 'hip': 0, 'pid': 827602, 'status': 'failed', 'exit_code': 1}\")"
+}

@@ -1,3 +1,106 @@
+## 2026-10-10 — Fixed-state update audit complete and verified
+
+All12 predeclared states (Final/Hint x2 seeds x0/4104/8208) completed. Controller
+and all workers, CPU verifier and postprocessor were observed terminal/absent.
+ArchiveSHAbe884fe2dc148733e5b64ff1633ab70b8dfcbfd3ac9205b5c046b25073b40829;
+41 exported files locally hash-verified. Independent NumPy checks2112 derivative
+records and2916 site objectives. All eight historical next-step loss/gradient
+comparisons are bitwise exact. Baseline full-objective replay maxerror1.42e-11.
+Work56052 forwards/6804 backwards/660 isolated AdamW counterfactual steps;
+zero accepted training updates, native folding or S1 calls. Packaging failure
+remains recorded, with zero model computation; original deadline preserved.
+
+Mean scheduled two-AA gradient vs full19-AA gradient cosine .9938-.99992;
+after per-batch clip .97162-.99911. This is one schedule phase, not proof that
+AA sampling is complete. At all four initial states mean clipped Adam direction
+is first-order descent, but full displacement raisesJ and tenth displacement
+lowersJ. Full-gradient Adam shows the same initial finite-step problem.
+Terminal Final272003 is first-order ascent even with fullG plus saved Adam
+history: dot+.001992, Jchanges+.000273/+.009337. Mean clipped direction dot
++.004698, Jchanges+.000551/+.012776;23/27 batch updates ascend fullJ to first
+order. Do not uniquely attribute this to momentum or weight decay without a
+separate decomposition. Other terminal directions can descend.
+
+Removing clip only for the current step helps three terminal mean directions
+but harms Final272001; original clipped-history moments remain, so this is not
+a no-clip training run. Equal-norm negativeG full steps worsen all12 states;
+parameter Euclidean norm is not functional step size. No inference that negative
+gradients or all SGD are invalid. Lower fullJ can increase final AA-centered
+error: three terminal clipped mean directions show this; common changes dominate.
+No new S1, selection, geometry or transfer result was obtained.
+
+Complete report docs/mini_stage_update_audit_findings_2026-10-10.md and all-state
+heatmap retain every counterexample. Do not select0.1 as a learning rate or
+promote unclipped updates. Next distinct optimization experiment should verify
+actual complete-TRAIN descent, retain AA error tracking, and lock a budget and
+comparison before any training. Curvature/line-search methods may be considered;
+no new method or training budget has yet been locked. Existing pair-only oracle
+space remains valid, capacity/transfer not settled. Broader goal stays ACTIVE.
+
+## 2026-10-10 — Audit source-manifest integrity correction
+
+Initial audit controller827595 terminated all four workers before model
+construction or candidate computation: the installation mistakenly hashed a
+copied tests/.pytest_cache file, then pytest changed it. Failure records remain
+at stage_update_audit_v1_20261010; all worker PIDs verified absent. Counts are
+zero candidate forwards/backwards/virtual steps, no scientific result obtained.
+
+Corrected installation copies exactly825 previously declared scientific files
+and the same6-file overlay (831 hashes), excluding derived caches. No algorithm,
+checkpoint, data, optimizer, fraction or evaluation change. Local and remote
+focused tests already pass; all overlay bytes match the failed attempt. Newroot
+stage_update_audit_v1_20261010_integrity1; lockSHA
+ea9c8f9927047dcfa9f27cf9b5a14c90dba6c806fe1fa4fab45e6b4bc41f7afe.
+The original deadline1791598416.4427438 is retained. This is a packaging correction,
+not a restart based on quality. Preserve both attempts in final evidence.
+
+## 2026-10-10 — TRAIN-only fixed-state update diagnostic locked
+
+Previous goal turn was PROGRESS: completed and pushed4cd73afb. The current graph
+matches that commit. Remote HIP0..4 are free; HIP5 has another job and is untouched.
+Saved stage checkpoints contain AdamW states, so no trajectory replay is needed.
+New protocol docs/mini_stage_update_audit_v1.md audits all four n15 models at
+0/4104/8208, using all27 TRAIN sites and513 candidates. No new native preparation,
+S1, held labels, optimizer trajectory or checkpoint selection. Baseline objectives
+must reproduce the closed report. Actual prior checkpoints remain immutable.
+
+For each state compute full19-AA per-site gradients, then27 scheduled two-AA
+batch gradients. Clone the same optimizer history for every independent clipped
+and unclipped one-step displacement. Evaluate mean displacements, full-gradient
+AdamW and equal-norm negative-full-gradient directions at fixed0.1/1 fractions.
+Record raw/common/AA objective changes, directional derivatives, module and site
+contributions. This is an immediate update diagnostic, not a no-clip trajectory,
+learning-rate search or deployment method. All outcomes retained.
+
+Bounded total56052 candidate forwards/6804 backwards/660 in-memory AdamW step
+calculations; zero accepted training updates or folding/decoder calls. Four
+workers HIP0..3, six-hour cap, unchanged Mini/candidate B_s/input boundaries.
+Two focused tests passed: state-isolated probes match native AdamW and reset
+exactly; site weighting and signed directional derivative match a quadratic.
+New symbols have UNKNOWN graph impact because absent; text search confirms new
+isolated names, no existing model/training code is modified. Full results pending.
+Goal remains ACTIVE; this will guide a distinct future training intervention,
+not claim the optimizer or clipping is already the identified root cause.
+
+## 2026-10-10 — Complete stage-aligned results pushed
+
+Commit4cd73afbc07bf48355982f579f77d3d3ce92a71b pushed origin/main as a normal
+fast-forward fromfa187177. All116 scoped files are committed; unrelated edits
+remain unstaged. Complete all-worktree and staged graph checks passed (staged
+LOW, no known affected indexed process); report scripts/evidence were checked
+manually. Graph refreshed after commit. Local scientific result scope is clean.
+
+This goal turn made PROGRESS: completed eight-run collection, independently
+verified all final evidence, wrote paired functional/objective/tail analysis,
+and published the result. There is no current external blocker. The experiment
+is closed/not promoted; the broader model-performance goal remains ACTIVE.
+No new training is running or locked. Next separate question, if pursuing the
+goal, is why actual updates do not consistently lower the full frozen TRAIN
+objective. Use TRAIN-only evidence and a bounded update-direction audit before
+choosing a new intervention; do not automatically extend runs, tune clip, floor,
+readout or select a seed/checkpoint from development quality. Keep Mini,
+fixed candidate single, model-only inputs, and all prior oracle limits.
+
 ## 2026-10-10 — Stage-aligned pair experiment complete; not promoted
 
 All eight fixed runs, scores and independent checkpoint checks completed. The

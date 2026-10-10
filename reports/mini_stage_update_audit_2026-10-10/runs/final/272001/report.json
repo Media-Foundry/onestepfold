@@ -1,0 +1,44 @@
+{
+  "arm": "final",
+  "audit_lock_sha256": "ea9c8f9927047dcfa9f27cf9b5a14c90dba6c806fe1fa4fab45e6b4bc41f7afe",
+  "complete": true,
+  "counts": {
+    "backwards": 1701,
+    "forwards": 14013,
+    "virtual_adam_steps": 165
+  },
+  "direction": "negative_full_gradient",
+  "fraction": 1.0,
+  "loss_change": 9.466216762026553,
+  "native_counts": {
+    "c4": 0,
+    "input_embedder": 0,
+    "recycle": 0,
+    "s1": 0,
+    "updates": 0
+  },
+  "nodes": [
+    {
+      "path": "node_0.json",
+      "sha256": "a59b8ffb9e44134d95fcb3cca397907a958649aad39f8cff052882c20a8a8273",
+      "step": 0
+    },
+    {
+      "path": "node_4104.json",
+      "sha256": "8554b55d41c726f17822de0e5a9cbefa41d556165216e4f040af1272650fe839",
+      "step": 4104
+    },
+    {
+      "path": "node_8208.json",
+      "sha256": "28a4f077ad295040d0a431e34636162f634eed1995b7fa58c835f3e666240d24",
+      "step": 8208
+    }
+  ],
+  "objective": 0.8474772251068432,
+  "peak_allocated_bytes": 4218625024,
+  "phase": "complete",
+  "seconds": 1417.4424546239898,
+  "seed": 272001,
+  "source": "/data/user/shuang886/Folding/stage_pair_recovery_v1_20261010/n15",
+  "step": 8208
+}
